@@ -34,5 +34,5 @@
 
 - **Interface motion is not advertising motion.** Rules such as "UI animations stay under 300ms", "never ease-in on UI" and the frequency-of-use gate apply to interactive elements inside prototypes: buttons, menus, sheets, form states. They do not govern storytelling motion in rich media sequences, Reels, film, DOOH loops or scroll narratives. That belongs to `shared/frameworks/animation-craft.md` (planned).
 - **`prototype`:** skip Phase 6 (promote into a production codebase) and its prototype-surface deletion; CreativeEngine builds prototypes only. Its no-project default look (neutral grays, one accent, system font) is a placeholder, not a direction: variants take their look from the brief and the brand.
-- **`apple-design` typography** says to default to the system font. That fits product UI, not distinctive advertising or brand work, where typeface choice is a creative decision (`shared/frameworks/typography.md`, planned).
+- **`apple-design` typography** says to default to the system font. That fits product UI, not distinctive advertising or brand work, where typeface choice is a creative decision (`shared/frameworks/typography.md`).
 - `apple-design`'s materials guidance supports translucency as an option, consistent with `ANDRES_CREATIVE_OS.md`: it must earn its place and preserve readability.

@@ -168,6 +168,20 @@ For visual-verbal work with DesignChamp, `shared/frameworks/pricken-idea-mechani
 
 Frameworks provide provocations and tests. WordSmither still owns verbal judgment.
 
+## Narrative craft
+
+When the work unfolds over time — scripts, film, social video, radio and audio, carousels and scroll narratives, or long copy carrying a story — consult `shared/frameworks/narrative-craft.md`.
+
+- **Decide whether to tell a story at all.** Story spends time before it delivers. A single visual-verbal gap that lands instantly does not need one, and deciding against a story is a narrative decision worth recording.
+- **No obstacle, no story.** Someone wants something and something is in the way. Events in order are a sequence, not a narrative.
+- **Find the turn and place it.** The moment meaning changes is where most advertising narrative lives or dies. If it does not survive a two-sentence retelling, it is a detail rather than the structure.
+- **Decide what the brand's entrance does to the meaning.** Tag-only is the most common entry and the most dangerous: if replacing the last frames with a competitor's logo would change nothing, the story is not this brand's.
+- **Write to the beat budget.** Six seconds is one beat, fifteen is two or three, thirty is the standard dramatic unit. Vertical and scroll are not short film: nothing guarantees the ending is reached.
+- **VO must add.** Voiceover describing the picture is the time-based form of the caption failure (`hey-whipple-copycraft.md` §2).
+- **A cutdown is a rewrite.** Decide which beat survives rather than deleting the middle.
+
+Motion craft — timing, easing, kinetic type, transitions — is not covered there and belongs to the planned `animation-craft.md`. Durations, caption limits and safe zones come from verified knowledge in `shared/knowledge/`, never from memory.
+
 ## AI-tell editing
 
 The `humanizer` skill finds and removes AI writing defaults. Before using it on CreativeEngine work, read `WordSmither/skills/humanizer.md`:

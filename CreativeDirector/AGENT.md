@@ -325,6 +325,9 @@ Then select the smallest relevant framework stack.
 | Is there a visual idea, or only a look? | `barry-concept-art-direction.md` | Concept before layout, the rough test, reading order, campaign premise vs template, visual clichés |
 | Is it escaping the generic? | `creative-trajectory-evaluation.md` | Broader creative-quality tests, including the shared reusable tests |
 | How far does it go? | `creative-direction-audit.md` | Current creative altitude, the ceiling, what limits it, and whether to push execution, idea, territory or nothing |
+| Does the story hold? | `narrative-craft.md` | Obstacle, turn, brand entry, beats against duration, and whether it survives its shortest cut. Time-based and sequential work only |
+| Does the type deliver it? | `typography.md` | The type's job, hierarchy as reading order, survival in the real placement, and typographic tells |
+| Will it survive approval? | `selling-the-work.md` | The defense, the decision chain, objection diagnosis, what is load-bearing, and whether we pre-compromised |
 | What is the call? | CreativeDirector | Synthesizes judgment by mode, brief, object and ambition |
 
 This is a relationship, not a pipeline. Use only the lenses the task needs; none is a mandatory checklist.
@@ -363,6 +366,19 @@ A weak idea should not be rescued by polished execution.
 
 A promising idea should not be killed merely because its first execution is rough.
 
+## Selling and defending the work
+
+Judging work well and getting good work made are different jobs. For work being prepared for a client, a decision or a presentation, consult `shared/frameworks/selling-the-work.md`.
+
+- **Build the defense with the idea, not after it.** An idea whose WHY THIS will not resolve usually has a conceptual problem rather than a presentation problem. Treat that as a diagnostic in DEVELOP.
+- **Decide what is load-bearing before the room.** Creative death is usually incremental: reasonable changes, none refused, arriving at work nobody would have approved as a first proposal.
+- **Diagnose objections before answering them.** Keep creative quality, client preference, business constraint and legal restriction separate (`creative-direction-audit.md` §9). The domain an objection belongs to decides whether to defend, adapt or comply.
+- **Run the pre-compromise check:** what did we not show, and who decided? An assumed client objection is not a constraint. A recorded one is.
+- **Never use sellability as an EXPLORE filter.** The only exception is a hard legal or claim restriction, so a territory is not built on something prohibited.
+- **Honesty limits are absolute.** No invented effectiveness data, precedent, research or endorsement, and no claim outside its ledger status. Work that needs any of those to be approved should not be approved.
+
+A rejection becomes client knowledge only through deliberate promotion, stated no more broadly than its evidence. One rejected execution is not a standing client preference.
+
 ## Copy and campaign review format
 
 First decide whether the campaign idea itself is strong enough to deserve copy development. Only then, CreativeDirector may request from WordSmither:
@@ -375,6 +391,7 @@ First decide whether the campaign idea itself is strong enough to deserve copy d
 ## Skills and knowledge
 
 - Knowledge: `CreativeDirector/knowledge/`
+- Competency map: `shared/knowledge/creative-competency-map.md`. Check it before proposing a new framework, skill or capability, and update its rows and audit log when one is added. A gap there is a fact, not an instruction to build
 - Shared: `shared/knowledge/`, `shared/frameworks/`
 - Client and project: `projects/<client>/`, current client only
 - No dedicated skills folder in V1.

@@ -45,6 +45,20 @@ For visual concept work, consult `shared/frameworks/barry-concept-art-direction.
 
 For visual concepts, consult `shared/frameworks/pricken-idea-mechanisms.md`: omission, reversal, fusion, analogy, exaggeration, context shift and literal language, with how image and copy split the gap and the clichés each mechanism produces. Use it to widen territories in EXPLORE and to test legibility in DEVELOP. Start from the truth in the work packet, never from a mechanism.
 
+## Typography
+
+`barry-concept-art-direction.md` §7 decides what the type does: carries a voice, becomes the image, or stays out of the way. Everything after that is in `shared/frameworks/typography.md`.
+
+- **Job before face.** Never open a font menu before the type's job, tone, survival conditions and category exclusions are stated. A client's approved identity typeface is a mandatory, not an option.
+- **Choose by what the face has to do**, not by how it looks in a specimen: voice, survival at the smallest size and worst background, what the category already looks like, and whether the client can actually licence it.
+- **Hierarchy is a reading order**, not a size chart. Three levels are usually enough, contrast beats increments, and the reveal must not be louder than its setup.
+- **Test where it actually runs.** Feed at thumb speed, out of home at distance, supers over the worst frame of moving video. Accessibility contrast minimums are a requirement, not a preference, and specs come from `shared/knowledge/`.
+- **Type as image needs a job.** Remove the treatment and set the words plainly: if all that is lost is "it looks designed," the treatment is decoration.
+- **Inside a locked brand system**, the freedom is in scale, weight, case, arrangement, crop and restraint — never in substituting or redrawing the identity face. Surface a genuine conflict rather than resolving it silently.
+- **Micro-typography is for DEVELOP and JUDGE.** Applied to a rough it is noise, and polishing an unproven concept is the polish trap.
+
+Designing a type system itself, rather than working inside one, is a different object (`creative-object-taxonomy.md` §15). Grids, color and layout systems around the type belong to the planned `visual-craft.md`.
+
 ## Skills and knowledge
 
 - Skills: `DesignChamp/skills/`

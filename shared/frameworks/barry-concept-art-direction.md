@@ -46,13 +46,14 @@ It especially fights:
 | `creative-trajectory-evaluation.md` | Shared 1 + 1 = 3 gate (§10), Post-it idea (§4), divergence (§5) | Active |
 | `creative-object-taxonomy.md` | Hero graphic, key visual and identity criteria. Separates visual identity from key visual | Active |
 | `visual-craft.md` | Detailed hierarchy, grids, color, imagery and generic visual tells | Planned, not implemented |
-| `typography.md` | Detailed type selection, pairing and micro-typography | Planned, not implemented |
+| `typography.md` | Type job, selection and pairing, hierarchy, micro-typography, type as image, legibility in real placements | Active |
 
 Where they overlap, the more specific treatment wins:
 
 - **Which move creates the gap:** `pricken-idea-mechanisms.md`.
 - **Whether the idea is simple enough:** this framework's rough test (§2) is the visual form of the Post-it idea in `creative-trajectory-evaluation.md` §4.
-- **Craft detail** (grids, color systems, kerning): the planned frameworks will own it. Until then, DesignChamp's judgment applies. This framework covers craft only where it decides whether the idea reads.
+- **Type craft** (selection, pairing, hierarchy, micro-typography, legibility in the real placement): `typography.md`.
+- **Remaining craft detail** (grids, color systems, imagery systems): the planned `visual-craft.md` will own it. Until then, DesignChamp's judgment applies. This framework covers craft only where it decides whether the idea reads.
 
 ---
 
@@ -156,7 +157,7 @@ Before choosing a typeface, decide what the type does:
 - **Becomes the image:** scale, crop, arrangement or material is the idea.
 - **Stays out of the way:** the image or the line leads, and type delivers it cleanly.
 
-Each is valid. What is not valid is a dramatic typographic treatment with no job. Detailed selection and craft will belong to the planned `typography.md`.
+Each is valid. What is not valid is a dramatic typographic treatment with no job. Detailed selection, pairing, hierarchy and craft belong to `typography.md`.
 
 ## 8. Campaign: premise, not template
 
