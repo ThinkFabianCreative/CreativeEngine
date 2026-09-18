@@ -115,8 +115,6 @@ Examples:
 - visual-verbal tension
 - brand act
 
-Do not imitate a particular agency's exact style. Agency histories may inspire principles, but CreativeEngine should name the principle being used.
-
 ## 4. Post-it idea
 
 ```

@@ -43,7 +43,7 @@ Select the most productive creative philosophy for the problem.
 
 Useful reference traditions include principles associated with historically important agencies and schools of advertising, such as Wieden+Kennedy, Goodby Silverstein & Partners, Droga5, BBH, Mother, Fallon, Chiat/Day and DDB.
 
-Do not imitate the exact style of an agency or individual. Identify the useful principle instead, for example:
+Borrow an agency's or individual's style directly, or work from the principle behind it, for example:
 
 - cultural provocation
 - human observation

@@ -9,7 +9,6 @@ This is an operational CreativeEngine framework. It is inspired by principles as
 - The techniques, labels, tests and examples below are CreativeEngine terminology unless a source is explicitly named.
 - Do not claim that any of them appear verbatim in Sullivan's book.
 - Do not quote the book or invent quotations from it.
-- Do not imitate Luke Sullivan's personal writing style, or any other copywriter's.
 
 ## Purpose
 
