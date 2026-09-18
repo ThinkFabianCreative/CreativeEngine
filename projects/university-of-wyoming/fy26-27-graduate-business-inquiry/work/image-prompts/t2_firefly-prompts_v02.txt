@@ -240,3 +240,50 @@ corkboard edge in deep shadow, empty. No windows, no light fixtures or bulbs vis
 people, no hands, no faces. No readable text on the rosette, forms or packet. No numbers,
 logos or brand names.
 
+
+====================================================================
+PROPOSED NEW SCENE · P2-D · ONLINE MBA  (Andres, 2026-09-18; not yet in the execution set)
+====================================================================
+Idea (Andres): "an open laptop inside an old pickup truck, 4am before shift opened in the
+parking lot of an OEM plant, backpack, papers, post-its, study card stacks, he's been
+studying for exams from his car."
+Note: this is the first T2 scene with school in it (someone already enrolled). It relaxes
+the T2 "no school items" rule; the question "TOO STUBBORN TO STOP?" reads almost literally
+over it. Week line options (pick one, or write your own):
+  A  SIX A.M. SHIFT. EXAM FRIDAY. PARKING-LOT LIBRARY. SAME WEEK.
+  B  MANDATORY OVERTIME. FINANCE EXAM. TRUCK IN THE SHOP. SAME WEEK.  (echoes P2-B; pick one)
+  C  FOUR A.M. FLASHCARDS. SIX A.M. SHIFT. SAME WEEK.   (two items; breaks the three-item rule)
+
+P2-D · 3:4
+The cab of an old, well-used pickup truck parked in the employee lot of a manufacturing
+plant at four in the morning, before the first shift. The driver's seat is empty; he has
+just walked in to clock on. An open laptop rests on the steering wheel, its screen angled
+away from the camera and set to a warm night mode, casting a soft amber glow across the
+cab. On the dashboard, a row of yellow sticky notes along the bottom of the windshield.
+On the passenger seat, stacks of handwritten study flash cards held with rubber bands, a
+spiral notebook and loose papers, a steel thermos, and a folded high-visibility safety
+vest. A worn canvas backpack in the passenger footwell. Frost creeps in from the edges of
+the windshield; through it, far away and low, the plant's sodium-vapor lot lights make a
+few small warm orange points in the dark. Camera from the passenger door looking across
+the cab toward the driver's side, seated eye height, 35mm lens at f/2.8, focus on the
+flash cards and the laptop edge. Objects fill the lower middle of the frame. The top 40% of
+the frame is the dark cab roof and the upper windshield in near-black night. Warm tungsten
+documentary still-life photograph, 35mm film look, fine grain. Deep warm brown shadows,
+cream and amber highlights, low saturation, no blue light. No people, no hands, no faces.
+No readable text on the screen, cards, notes or papers. No clocks or dashboard numbers,
+no logos or badges on the steering wheel or truck, no brand names, no energy drinks.
+Optional: "In the style of Todd Hido and Gregory Crewdson."
+
+P2-D · 9:16
+Same prompt, Vertical 9:16, and replace the camera sentence with:
+"Camera from the passenger door, one step closer, looking across the cab: the laptop, the
+flash-card stacks and the sticky notes fill the middle band of the frame. The top 40% is
+the dark cab roof and upper windshield; the bottom 30% is the dark seat and footwell."
+
+Carousel crops: card 1 tight on the flash cards and sticky notes; card 2 the whole cab;
+card 3 the dark roof and upper windshield with the far plant lights at the bottom edge.
+
+Real shoot (Laramie): this scene is fully shootable for real: a borrowed older pickup,
+an employee lot with permission, before dawn, the laptop screen as the key light. If the
+T3 Online MBA student (script P2-A, shift worker) actually studies in their truck, this can
+be their truck, which links T2 and T3 directly.
