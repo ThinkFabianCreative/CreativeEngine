@@ -22,7 +22,7 @@ three collisions,   the question              the turn: the "flaw"          anch
 then SAME WEEK.                               renamed as a UW trait         to the program        Apply Now (Meta)
 ```
 
-**T2's week and T3's week are different weeks.** T2 is the prospect's week *now*, before grad school: work, life, one more thing. T3 (`work/copy/…_t3-student-scripts_v01.md`) is a student's week *in* the program. Someone who sees both sees their own week, then someone who added a master's to one like it. So **T2 weeks never contain school items**. The exceptions are the two senior weeks, P1-B and P3-B ("TWO FINALS"), because for undergraduates school is their current life (S5 targets "in college").
+**T2's week and T3's week are different weeks.** T2 is the prospect's week *now*, before grad school: work, life, one more thing. T3 (`work/copy/…_t3-student-scripts_v01.md`) is a student's week *in* the program. Someone who sees both sees their own week, then someone who added a master's to one like it. So **T2 weeks never contain school items**. The exceptions are the two senior weeks, P1-B and P3-B ("TWO FINALS"), because for undergraduates school is their current life (S5 targets "in college"), and P2-D (added 2026-09-18 at Andres's direction), where the prospect is already studying: the question "TOO STUBBORN TO STOP?" reads almost literally over it.
 
 **Week-line rules** (carried from v02): three items, then SAME WEEK.; caps with a full stop after each; no "my" or other possessive pronouns (possessive nouns such as KID'S are fine). One item is usually work, one is life, and one is the thing that makes it absurd.
 
@@ -47,6 +47,7 @@ Three weeks per program. **A** is the approved v02 line. **B** and **C** are new
 | **A** | TWO PEOPLE SHORT. KID'S RECITAL. MOVING DAY. SAME WEEK. | Working parent covering for gaps | Recital costume on a locker, moving boxes (imagery v02 lead) |
 | **B** | DOUBLE SHIFT. SAFETY AUDIT. TRUCK IN THE SHOP. SAME WEEK. | Plant or field worker | Hard hat and audit clipboard on a kitchen table, repair invoice, spare keys |
 | **C** | HOLIDAY RESET. TWO CALL-OUTS. TEE-BALL SIGNUPS. SAME WEEK. | Retail or commerce lead | Store lanyard, shelf-reset planogram, signup form on the fridge |
+| **D** | SIX A.M. SHIFT. EXAM FRIDAY. PARKING-LOT LIBRARY. SAME WEEK. | Plant shift worker already studying | Old pickup cab at 4am in an OEM plant's employee lot: laptop open on the wheel (screen away, warm night mode as the key light), flash-card stacks, sticky notes on the dash, thermos, hi-vis vest, backpack; frost on the windshield, far sodium lot lights. Person-free (he's just clocked on). Andres's scene, 2026-09-18 |
 
 ### P3 · M.S. in Accounting, on campus · accounting graduates, CPA-minded, early-career (S1 p4)
 
@@ -76,7 +77,7 @@ P4-C: the vest is fine and reads as a Western season. No rifles, carcasses or la
 
 P5-C: "Hail claims" touches insurance, which is one of the listed program topics (C45). It's the prospect's work, not a program claim.
 
-**Weeks to shoot:** 15 (A, B and C × five programs). Recommended first flight: the **A** weeks (already approved internally), with **B** and **C** as rotation.
+**Weeks to shoot:** 16 (A, B and C × five programs, plus P2-D). Recommended first flight: the **A** weeks (already approved internally), with **B** and **C** as rotation.
 
 ---
 

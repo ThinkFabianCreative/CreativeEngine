@@ -131,6 +131,7 @@ UPDATED:  2026-09-17
 | 2026-09-17 | M.S. Accounting page (S11): on-campus route confirmed (Laramie, online, hybrid), so P3 stays. New proof: pathway track for non-accounting grads; GRE/GMAT not required. STEM (catalog, unscoped) vs S1 on-campus-only: OPEN | `raw/`, `work/concepts/` |
 | 2026-09-17 | T2 Adobe Firefly prompts (15 person-free week scenes, comps only): photographic style, camera plan, model choice, references and film-stock line | `work/image-prompts/` |
 | 2026-09-18 | T2 still-life set v1 (15 Firefly images) reviewed in conversation: 9 keep, 2 quick fixes, 4 rework/regenerate; P2-A strongest, P3-A grade reference. Fix prompts written (grade to P3-A, 4 Generative Fill fixes, 5 regenerations) | `work/image-prompts/` |
+| 2026-09-18 | Andres's scene added to T2 rotation as P2-D (Online MBA): 4am pickup-truck study in an OEM plant lot. Week line "SIX A.M. SHIFT. EXAM FRIDAY. PARKING-LOT LIBRARY. SAME WEEK." Relaxes the T2 no-school-items rule for this week. 16 weeks total | `work/concepts/`, `work/figma-agent-pack/`, `work/image-prompts/` |
 | 2026-09-14 | User approved word-smither writing five program week lines and five post texts with proof points: Direction 2 week lines and Meta primary text per variant (DEVELOP; claims not cleared) | `work/concepts/` |
 
 ## Client-knowledge candidates (not promoted)
