@@ -5,7 +5,8 @@
 | Source | `github.com/emilkowalski/skills` (MIT), repo state of 2026-08-21 |
 | Owner | DesignChamp |
 | Status | 5 of 12 approved by the user 2026-09-13 |
-| Exposure | Pending: to be copied to `.claude/skills/<name>/` with their supporting files |
+| Exposure | Installed 2026-09-17 in `.claude/skills/<name>/` with supporting files (8 files) copied unchanged from commit `d23d7f88a2` (the reviewed 2026-08-21 state), fetched file by file from GitHub raw URLs. Nothing executed. Sizes matched GitHub's tree listing; security scan repeated with the same result |
+| Upstream after review | HEAD `85e8e23` (2026-09-15) modifies all five approved SKILL.md files and adds `mobile-native`. Those changes are **unreviewed and not installed**. Updating requires a new review against the eight steps and user approval |
 | Reviewed | 2026-09-13 |
 
 ## Approved

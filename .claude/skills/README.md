@@ -11,6 +11,24 @@ This is where Claude discovers CreativeEngine's skills automatically. Each skill
 | `slides` | DesignChamp | `DesignChamp/skills/ui-ux-pro-max.md` (depends on `design-system`) |
 | `design-system` | DesignChamp | `DesignChamp/skills/ui-ux-pro-max.md` |
 | `identity-design` (upstream `design`, renamed) | DesignChamp | `DesignChamp/skills/ui-ux-pro-max.md`. Sends prompts and logos to Gemini, Atlas Cloud or MuAPI: confirm per client job |
+| `design-taste-frontend` | DesignChamp | `DesignChamp/skills/taste-skill.md` (Taste-Skill pack) · runs package installs when building a site: confirm them |
+| `design-taste-frontend-v1` | DesignChamp | `DesignChamp/skills/taste-skill.md` (Taste-Skill pack) |
+| `gpt-taste` | DesignChamp | `DesignChamp/skills/taste-skill.md` (Taste-Skill pack) · prefer real divergent exploration over its simulated randomness |
+| `image-to-code` | DesignChamp | `DesignChamp/skills/taste-skill.md` (Taste-Skill pack) |
+| `imagegen-frontend-web` | DesignChamp | `DesignChamp/skills/taste-skill.md` (Taste-Skill pack) |
+| `imagegen-frontend-mobile` | DesignChamp | `DesignChamp/skills/taste-skill.md` (Taste-Skill pack) |
+| `brandkit` | DesignChamp | `DesignChamp/skills/taste-skill.md` (Taste-Skill pack) |
+| `redesign-existing-projects` | DesignChamp | `DesignChamp/skills/taste-skill.md` (Taste-Skill pack) |
+| `high-end-visual-design` | DesignChamp | `DesignChamp/skills/taste-skill.md` (Taste-Skill pack) |
+| `full-output-enforcement` | DesignChamp | `DesignChamp/skills/taste-skill.md` (Taste-Skill pack) |
+| `minimalist-ui` | DesignChamp | `DesignChamp/skills/taste-skill.md` (Taste-Skill pack) |
+| `industrial-brutalist-ui` | DesignChamp | `DesignChamp/skills/taste-skill.md` (Taste-Skill pack) |
+| `stitch-design-taste` | DesignChamp | `DesignChamp/skills/taste-skill.md` (Taste-Skill pack) · ships `DESIGN.md` |
+| `apple-design` | DesignChamp | `DesignChamp/skills/emil-kowalski-skills.md` (Emil Kowalski) · interface interaction, not ad typography |
+| `animate` | DesignChamp | `DesignChamp/skills/emil-kowalski-skills.md` (Emil Kowalski) · interface motion inside prototypes, not ad motion |
+| `review-animations` | DesignChamp | `DesignChamp/skills/emil-kowalski-skills.md` (Emil Kowalski) · manual only |
+| `animation-vocabulary` | DesignChamp | `DesignChamp/skills/emil-kowalski-skills.md` (Emil Kowalski) |
+| `prototype` | DesignChamp | `DesignChamp/skills/emil-kowalski-skills.md` (Emil Kowalski) · manual only; skip Phase 6 (promote to production) |
 
 ## Before adding a skill
 

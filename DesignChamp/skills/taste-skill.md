@@ -5,7 +5,8 @@
 | Source | `github.com/Leonxlnx/taste-skill` (MIT), repo state of 2026-08-24 |
 | Owner | DesignChamp |
 | Status | Approved by the user 2026-09-13 as a full pack |
-| Exposure | Pending: to be copied to `.claude/skills/<name>/` (the `npx skills add` layout) |
+| Exposure | Installed 2026-09-17 in `.claude/skills/<install name>/`: 14 files copied unchanged from commit `ccbc15639c` (the reviewed 2026-08-24 state), fetched file by file from GitHub raw URLs. Nothing executed. Sizes matched GitHub's tree listing; security scan repeated with the same result |
+| Upstream after review | HEAD `e79ca9e` (2026-09-16) changes only README.md and a sponsor image; no skill file differs from the installed copy |
 | Reviewed | 2026-09-13 |
 
 ## Skills
