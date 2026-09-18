@@ -35,6 +35,7 @@ Read only what the job needs.
 | Meta copy-field recommendations, truncation, hidden fields, safe zones, captions | `shared/knowledge/meta-paid-ads/` (start with its README; never use QUARANTINED records) |
 | Channel, placement, format, goal, CTA, destination | `shared/knowledge/channel-preferences.md` and the work packet |
 | Claims | The packet's proof and claim ledger (`shared/frameworks/brief-normalization.md` §5) |
+| Story structure for scripts, video and sequences (obstacle, the turn, brand entry, beats per duration, VO, sound, cutdowns) | `shared/frameworks/narrative-craft.md`. This skill covers format craft; the framework covers whether there is a story |
 
 A character count in the knowledge base is a **recommendation**, not a hard limit, unless the record says otherwise. Write to the recommendation, and make the meaning survive truncation anyway.
 

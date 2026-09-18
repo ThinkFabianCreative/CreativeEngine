@@ -71,7 +71,7 @@ Follow `shared/knowledge/channel-preferences.md`: channel, placement, creative f
 
 **One focal point, a short reading order.** Decide what is seen first, second and third. Constrained formats rarely afford a fourth.
 
-**Judge type at its real viewing size.** Actual device pixels, arm's length, projection distance, road distance. A comp zoomed to fill a monitor lies.
+**Judge type at its real viewing size.** Actual device pixels, arm's length, projection distance, road distance. A comp zoomed to fill a monitor lies. Type decisions (the type's job, hierarchy as reading order, legibility in the real placement, correct marks in production copy) follow `shared/frameworks/typography.md`. For video and sequential formats, story structure follows `shared/frameworks/narrative-craft.md`.
 
 **Brand is part of the idea, not a tax on it.** Make the brand recognizable early through the mechanism, color, type or product, not only through a logo in the last frame.
 

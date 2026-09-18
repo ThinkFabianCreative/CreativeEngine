@@ -2,6 +2,8 @@
 
 Covers vertical and feed video for social and paid: Reels, Stories and similar short-form placements. Also covers creator-style scripts and cutdowns. Platform-agnostic craft. Durations, ratios, caption support, safe zones and music rules come from the platform's verified record: Meta in `shared/knowledge/meta-paid-ads/video-specs.md` and `production.md`; others UNVERIFIED unless cited.
 
+Story structure (whether there is an obstacle, where the turn falls, what the brand's entrance does, how many beats a duration holds) is judged with `shared/frameworks/narrative-craft.md`. This reference covers how that story is written for the feed.
+
 ## The encounter
 
 A scroll that decides in a moment whether to stay. Often sound off at first, on a phone, with interface over the edges. The viewer did not choose this video; the first frame and first words have to earn the next second.
