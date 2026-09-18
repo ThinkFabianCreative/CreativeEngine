@@ -3,7 +3,7 @@
 ```
 CLIENT:     University of Wyoming (College of Business)
 PROJECT:    FY26–27 Graduate Business Inquiry Campaign (handle)
-OBJECT:     Executions (taxonomy §10) of T2 across five programs: static, 15s video, carousel, post text
+OBJECT:     Executions (taxonomy §10) of T2 across five programs: 5-card carousel or 15s animated video, post text
 MODE:       DEVELOP · internal · 2026-09-17 · word-smither (weeks, post text), design-champ (formats,
             scenes), CreativeDirector pass
 DIRECTION:  Client selected T2; Cowboy approved at territory level. Andres, 2026-09-17: "Cowboy
@@ -17,9 +17,9 @@ STATUS:     For internal review, then UW execution approval. Claims SOURCE-STATE
 ## What stays constant
 
 ```
-THE WEEK                   →  TOO STUBBORN TO STOP?  →  YOU SOUND LIKE A COWBOY.  →  UW + PROGRAM
-three collisions, then        the question              the turn: the "flaw"          logo, program label,
-"SAME WEEK."                                            renamed as a UW trait         Apply Now (Meta button)
+THE WEEK        →  TOO STUBBORN TO STOP?  →  YOU SOUND LIKE A COWBOY.  →  TAGLINE + PROGRAM  →  ONE PROOF LINE
+three collisions,   the question              the turn: the "flaw"          anchors the spot      logo, label;
+then SAME WEEK.                               renamed as a UW trait         to the program        Apply Now (Meta)
 ```
 
 **T2's week and T3's week are different weeks.** T2 is the prospect's week *now*, before grad school: work, life, one more thing. T3 (`work/copy/…_t3-student-scripts_v01.md`) is a student's week *in* the program. Someone who sees both sees their own week, then someone who added a master's to one like it. So **T2 weeks never contain school items**. The exceptions are the two senior weeks, P1-B and P3-B ("TWO FINALS"), because for undergraduates school is their current life (S5 targets "in college").
@@ -80,63 +80,92 @@ P5-C: "Hail claims" touches insurance, which is one of the listed program topics
 
 ---
 
-## Formats per program
+## Format: carousel or animated video
 
-S1 p1's baseline is one static and one 15s video per program. The carousel is offered as an extra (see Flags).
-
-### Static · 4:5 (1440×1800) and 9:16 (1080×1920)
+Andres, 2026-09-17: "social spot can be either a static carousel or an animated video with a camera pan/zoom out" · "its a carousel or a video post" · "feel free to add an extra card". Each program runs as **one post, in one of two forms**, with the same five beats. There is no single-image static.
 
 ```
-WEEK LINE                        top · White · SAME WEEK. White on the static (see below)
-▬                                small Gold rule
-TOO STUBBORN TO STOP?            largest type · STUBBORN in Gold
-YOU SOUND LIKE A COWBOY.         1/2–2/3 of the headline size · COWBOY in Gold
-[LOGO]  PROGRAM LABEL            bottom · label ≥ 32 px on 1080 wide · 9:16 inside safe zones
+1  THE WEEK                                       SAME WEEK. in Gold
+2  TOO STUBBORN TO STOP?                          STUBBORN in Gold
+3  YOU SOUND LIKE A COWBOY.                       COWBOY in Gold
+4  GRADUATE PROGRAMS THAT WORK AS HARD AS YOU DO.  the anchor: program + call to action
+   PROGRAM LABEL
+5  ONE PROOF LINE                                 one fact, one line (pool below)
+   [LOGO]  PROGRAM LABEL                          Apply Now is the Meta button
 ```
 
-- **Gold on the static: STUBBORN and COWBOY only.** The two golds rhyme: one word is the insult, the other is the same trait renamed. SAME WEEK. goes White here. Three gold elements on one frame is the v1.0 deck p14 problem (selling-typography review B1 #1). The carousel keeps one Gold per card, SAME WEEK. included.
-- **Two versions:** TYPE ONLY on flat UW Brown, and PHOTO. The photo is the week's scene from the Laramie shoot, with type on Brown or the darkest area.
-- Headline and answer in Montserrat Bold (Gotham stand-in). Blackhawk is available now (access resolved), so test COWBOY in Blackhawk Italic, lowercase glyph setting, as a third version. That's the only permitted use: single-word emphasis.
-- Fixes carried from reviews: label in the frame, legible at phone size; no pendant-light hotspot; no dotted lines; no gradients; no contour or topographic textures.
+- **One Gold per card.** Cards 4 and 5 carry no Gold word; the Gold rule sits under the proof line. This answers the static three-Gold question: with the single static gone, no frame carries more than one Gold word.
+- **The tagline stays** (Andres: "its what anchors the spot to the individual program and call to action"). It's the bridge from the turn to the offer, so it gets its own card rather than sharing the answer's frame. The answer lands alone first.
+- **Logo and program label on every card.** Cards get seen out of order and one at a time.
+- **Type:** Montserrat Bold (Gotham stand-in), flush left, deadpan, no exclamation marks. Test COWBOY in Blackhawk Italic (lowercase glyph setting) as a variant; Montserrat is the base.
 
-### 15s video · 4:5 and 9:16 master
+### Carousel · 5 cards · 1080×1080 (pack 11; 4:5 if placements allow, Q18)
 
-S1 p6 asks for: 0–3s hook, UW and program name; 3–10s benefit and proof; 10–15s UW and Apply Now; captions; works without sound. There's no dialogue, so the supers are the whole script.
+| Card | Image | Type |
+|---|---|---|
+| 1 | Tight on the week's key object | Week line |
+| 2 | The whole scene (same photo, wider crop) | TOO STUBBORN TO STOP? |
+| 3 | Dark top of the same photo | YOU SOUND LIKE A COWBOY. |
+| 4 | Flat UW Brown | GRADUATE PROGRAMS THAT WORK AS HARD AS YOU DO. · program label |
+| 5 | Online: flat UW Brown. On-campus (P1, P3): campus photo band over Brown (pack 11) | Proof line · logo · program label |
 
-| # | Time | Visual | Super | Sound |
+Type-only version: all five cards on flat Brown.
+
+### Animated video · 15s · 4:5 and 9:16
+
+One continuous camera pull-out on the week's scene, from the first object to the whole room. The supers carry everything, so it works with sound off.
+
+| # | Time | Camera | Super | Sound |
 |---|---|---|---|---|
-| 1 | 0.0–4.5 | Tight on the first object, slow pull to the whole scene. Each item is revealed as its object comes into frame | Week line builds one item at a time: *ITEM.* → *ITEM.* → *ITEM.* → **SAME WEEK.** (Gold). Logo and program label small, bottom, from frame 1 | One diegetic sound per item: shift buzzer, a recital piano note, packing tape |
-| 2 | 4.5–8.0 | Hold on the full scene. Nothing moves | **TOO STUBBORN TO STOP?** (STUBBORN Gold) | Room tone only |
-| 3 | 8.0–8.7 | Hold | none | **Silence.** The beat before the turn |
-| 4 | 8.7–11.5 | Hold | **YOU SOUND LIKE A COWBOY.** (COWBOY Gold) | One warm sound: a door, keys set down. No spurs, whips or whinnies |
-| 5 | 11.5–15.0 | End card. Online programs: flat Brown. On-campus programs: campus photo band above Brown (pack 11) | Logo · PROGRAM LABEL · program fact line (VERBATIM, below) | Out |
+| 1 | 0.0–4.0 | Tight on the first object; slow pull. Each item's object enters as its word appears | Week builds one item at a time, then SAME WEEK. (Gold). Logo and label small from frame 1 | One diegetic sound per item |
+| 2 | 4.0–7.0 | Pull continues to the whole scene | TOO STUBBORN TO STOP? | Room tone |
+| 3 | 7.0–7.6 | Camera stops | none | Silence |
+| 4 | 7.6–10.0 | Hold | YOU SOUND LIKE A COWBOY. | One warm sound. No spurs, whips or whinnies |
+| 5 | 10.0–12.5 | Cut to flat Brown | GRADUATE PROGRAMS THAT WORK AS HARD AS YOU DO. · program label | Out |
+| 6 | 12.5–15.0 | Brown, or the campus band for P1 and P3 | Proof line · logo · program label | — |
 
-- **The turn is the answer line, and the brand arrives inside it.** "Cowboy" *is* UW, so the brand enters as revealed cause, not as a tag (narrative-craft §5). That's why nothing follows it but the end card.
-- **No tagline on the end card.** The deck's "Graduate programs that work as hard as you do" would be a second ending after the turn (narrative-craft §4), and the deck review found it familiar. Recommend dropping it; Andres's call.
-- **Hook timing:** the week needs about 4.5s to read, a little past S1's 3s. The first item and the UW label are on screen from frame 1, which is the part S1 is protecting.
-- **Proof:** S1 wants benefit and proof by 10s. The program fact sits on the end card (11.5–15s), which is a deviation to put to UW with the executions. Squeezing it into 3–10s would land on top of the turn.
-- **Captions:** no speech, so no caption track. All content is on-screen type. Confirm that satisfies S1's caption rule.
-- **Sound-off check:** read only the Visual and Super columns. The idea lands.
+- **Brand enters at the turn.** "Cowboy" is UW, so the answer is where the brand arrives (narrative-craft §5). The tagline then points it at this program.
+- **S1 timing:** the week needs about 4s against S1's 3s, but the first item and the UW label are on screen from frame 1. The proof arrives at 12.5s, not by 10s. Both are deviations to put to UW.
+- **Captions:** no speech, so no caption track. All content is on-screen type.
+- **Sound-off check:** read only the Camera and Super columns. The idea lands.
 
-**Cutdown (6s bumper, if placements need it):** THE WEEK (0–3) → YOU SOUND LIKE A COWBOY. (3–5) → end card (5–6). The question is implied. Script it separately; this is not a trim of the 15s.
+## Proof points: one line on the ad, the rest in post text
 
-### Carousel · 1080×1080 · 4 cards (optional extra)
+Andres, 2026-09-17: "do not make proof point verbose, do not crowd the layout with bulletpoints, choose 1 strong proofpoint per program (these can be dynamic and interchangeable) - the rest we can include in the post text."
 
-Card 1 week (SAME WEEK. Gold, tight crop) · Card 2 question (STUBBORN Gold, whole scene) · Card 3 answer (COWBOY Gold, dark top of the same photo) · Card 4 end card. Logo and program label on cards 1–3 as well; each card has to work if seen alone.
+**One proof line per ad, in a fixed slot on card 5 and the video's last frame.** The slot takes any line from its program's pool, so lines can rotate or be tested without a new layout. Keep every line to one line on the card, about 30 characters or fewer. All are SOURCE-STATED: confirm each before external use. None is worded more broadly than its source.
 
-### End-card fact line (video) and post text (all formats)
-
-| Program | End-card fact line | Ledger | Post text (v02, approved internally) |
+| Program | LEAD proof line | Swappable alternates | Ledger |
 |---|---|---|---|
-| P1 On-Campus MBA | ONE-YEAR, IN-PERSON MBA. | C10 SOURCE-STATED | You already run a full week. The University of Wyoming's in-person MBA is a one-year program. Apply Now. |
-| P2 Online MBA | 100% ONLINE. ASYNCHRONOUS. | C25 SOURCE-STATED | You've never needed a quiet week. The University of Wyoming Online MBA is 100% online and asynchronous. Apply Now. |
-| P3 M.S. Accounting | PREPARES STUDENTS FOR THE CPA EXAM. | C36 SOURCE-STATED | Some people can't let a number go. The University of Wyoming on-campus M.S. in Accounting prepares students for the CPA exam. CPA education and licensing requirements vary by state. Apply Now. |
-| P4 Online M.S. Accounting | 100% ONLINE. ASYNCHRONOUS. | C35 SOURCE-STATED | Some people can't let a number go. The University of Wyoming online M.S. in Accounting prepares students for the CPA exam. CPA education and licensing requirements vary by state. Apply Now. |
-| P5 Online M.S. Finance | none until wording is approved | C45 SOURCE-STATED | Kept the plan. Again. The University of Wyoming M.S. in Finance covers investment management, tax planning, estate planning, insurance and retirement planning. Apply Now. |
+| P1 On-Campus MBA | ONE-YEAR MBA. | IN-PERSON IN LARAMIE. · AACSB-ACCREDITED COLLEGE OF BUSINESS. | C10 · C10 · C01 |
+| P2 Online MBA | 100% ONLINE. ASYNCHRONOUS. | 30 CREDITS. · AS FEW AS THREE SEMESTERS. · AACSB-ACCREDITED COLLEGE OF BUSINESS. | C25 · C25 · C25 ("as few as" kept) · C01 |
+| P3 M.S. Accounting | CPA EXAM PREPARATION. | FULL- OR PART-TIME. · AACSB-ACCREDITED COLLEGE OF BUSINESS. | C36 · C35 · C01 |
+| P4 Online M.S. Accounting | CPA EXAM PREPARATION. | 100% ONLINE. ASYNCHRONOUS. · NO GRE/GMAT REQUIRED. | C36 · C35 · C35 (P4 only) |
+| P5 Online M.S. Finance | CFP BOARD-REGISTERED. | 100% ONLINE. 30 CREDITS. · AACSB-ACCREDITED COLLEGE OF BUSINESS. | C46 · C44 · C01 |
 
-- P3's end card needs the C39 caveat on the video if UW wants it on the asset. Otherwise it lives in post text.
-- P5's post text says "covers", which must be confirmed as no broader than "topics include" (v02 flag). The P5 end card carries only the label until UW approves a short version of C45.
-- Pack 11 keeps program facts off the static image. The end-card fact line is proposed for **video only**, because S1 asks for proof in the video. The static stays as pack 11 says.
+- **Why these leads.** Each answers the question that program's audience asks first. For the one-year on-campus MBA: how long? For working professionals: can I do this around my job? For accountants: does it get me toward the CPA? For the finance audience, which S1 points at the CFP pathway: is it recognized for it?
+- **P3 and P4 leads read "CPA EXAM PREPARATION."**, not "prepares you for" or "built for": a noun phrase no broader than C36's "prepares students for the CPA exam". The C39 state-variation caveat goes in post text on every P3 and P4 post.
+- **P5's lead depends on verification.** C46 needs checking against CFP Board's registration record (brief §15.4) and the name question (Q7). Until then, run the alternate "100% ONLINE. 30 CREDITS." as lead. When C46 runs, post text must carry the C47 caveat: the certificate meets the education requirement and is not CFP certification.
+- **"AACSB-ACCREDITED COLLEGE OF BUSINESS."** keeps S1's College-level wording (C01). Never "AACSB-accredited MBA".
+- **Never in the slot:** tuition or "under $30K" (C27), rankings, outcomes, pass rates (C37), STEM (C24, C32, C34), college-funded CPA materials (C38, pending), industry access (C08), anything from S6.
+- **"Dynamic":** Meta's dynamic creative and asset-customization options for swapping text layers are not verified in `shared/knowledge/meta-paid-ads/`. Until they are, build one version per proof line.
+
+### Post text: everything else
+
+The post text carries the remaining proof, the caveats and Apply Now. Base: v02 post text (approved internally), with the other pool lines added and required caveats kept.
+
+| Program | Post text |
+|---|---|
+| P1 | You already run a full week. The University of Wyoming's in-person MBA is a one-year program in Laramie, with applied case work and real-world problem solving. Apply Now. |
+| P2 | You've never needed a quiet week. The University of Wyoming Online MBA is 100% online and asynchronous: 30 credits, full- or part-time, finished in as few as three semesters. Apply Now. |
+| P3 | Some people can't let a number go. The University of Wyoming on-campus M.S. in Accounting prepares students for the CPA exam, full- or part-time. CPA education and licensing requirements vary by state. Apply Now. |
+| P4 | Some people can't let a number go. The University of Wyoming online M.S. in Accounting is 100% online and asynchronous and prepares students for the CPA exam. No GRE or GMAT required. CPA education and licensing requirements vary by state. Apply Now. |
+| P5 | Kept the plan. Again. The University of Wyoming online M.S. in Finance is 30 credits, 100% online, with topics including investment management, tax planning, estate planning, insurance and retirement planning. Apply Now. |
+
+- P1 adds C12 ("applied case work and real-world problem solving", SOURCE-STATED, exploration status: confirm).
+- P5 carries no CFP line until C46 is verified. Then add: "The program is registered with CFP Board. The CFP graduate certificate meets the education coursework requirement for CFP certification; it is not CFP certification." (C46, C47; exact wording to UW.)
+- P5's program name follows pack 11 until Q7 resolves it.
+- Post text above ~125 characters truncates in feed (Q16 flag from v02). Lead with the line that matters; caveats can sit after the fold only if UW's compliance reviewer accepts that.
 
 ---
 
@@ -158,9 +187,8 @@ T2 is person-free still life. It can share the shoot days with T3's students, bu
 
 ## Flags for execution approval
 
-1. **Carousel:** S1 allows a carousel "only when the idea needs several distinct proof points" (compliance #6). Ours is a narrative sequence. The client saw it (deck p17) and picked the territory, but approve it explicitly as an extra.
-2. **Video timing and proof:** 4.5s week hook and proof on the end card, against S1's 3s and 10s marks.
-3. **Tagline:** recommend dropping it from all T2 executions.
-4. **Facts to confirm before external use:** C10, C25, C35, C36, C45 wording; C39 caveat placement.
-5. **Blackhawk version:** a third static and video version with COWBOY in Blackhawk. Test only; Montserrat is the base.
-6. **Meta placements and specs** still per Q18. 9:16 layouts respect the Stories and Reels safe zones in `shared/knowledge/meta-paid-ads/`.
+1. **Video timing:** week hook about 4s (S1: 3s); proof at 12.5s (S1: by 10s).
+2. **Proof points:** confirm C01, C10, C12, C25, C35, C36, C44 before external use. C46 needs CFP Board verification before P5's lead runs.
+3. **C39 caveat** in P3 and P4 post text: confirm UW doesn't require it on the asset.
+4. **Blackhawk variant:** test only.
+5. **Meta placements, carousel ratio and dynamic text options:** Q18 and verified specs in `shared/knowledge/meta-paid-ads/`.

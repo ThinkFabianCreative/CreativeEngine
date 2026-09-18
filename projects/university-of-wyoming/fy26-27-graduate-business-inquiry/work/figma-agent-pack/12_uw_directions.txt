@@ -10,11 +10,16 @@ too stubborn. That "flaw" is the grit it takes. The ad makes the viewer recognis
 own chaotic week, then flips "stubborn" into a Cowboy trait.
 The reader should think: "That's my week... and yes, I'm too stubborn to stop."
 
-CURRENT COPY (constant question and answer; week line changes per program)
-  Card 1:  WEEK LINE (see below)
-  Card 2:  TOO STUBBORN TO STOP?
-  Card 3:  YOU SOUND LIKE A COWBOY.
-  Card 4:  End card (see 11_uw_campaign.txt)
+CURRENT COPY (client-selected territory; updated 2026-09-17; week line changes per program)
+  Card 1:  WEEK LINE (see below)                          Gold: SAME WEEK.
+  Card 2:  TOO STUBBORN TO STOP?                          Gold: STUBBORN
+  Card 3:  YOU SOUND LIKE A COWBOY.                       Gold: COWBOY
+  Card 4:  GRADUATE PROGRAMS THAT WORK AS HARD AS YOU DO. + program label. No Gold word
+  Card 5:  ONE PROOF LINE (pool in …_t2-executions_v01.md) + logo + program label.
+           Gold rule under the proof line. Never bullets, never more than one line.
+  Logo + program label on EVERY card. One Gold word per card, never more.
+  VIDEO: same five beats as one continuous camera pull-out on the week scene (15s).
+  More week lines per program (A/B/C) are in …_t2-executions_v01.md.
 
 WEEK LINES (use exactly; no possessive pronouns; "SAME WEEK." in Gold)
   ON-CAMPUS MBA               CLOSING SHIFT. PITCH DECK. BEST FRIEND'S WEDDING. SAME WEEK.
@@ -35,15 +40,14 @@ DESIGN RULES
 - PHOTO version: keep the photo in its planned area; set type on the solid UW Brown or
   darkest area only. Grade must stay warm and dark so Brown still dominates.
 - Headline in Montserrat Bold (Gotham stand-in). Line 1 about 1.5x the size of line 2.
-- Emphasis on TWO words only: "STUBBORN" and "COWBOY".
+- Emphasis: one Gold word per card (SAME WEEK. / STUBBORN / COWBOY).
 - Answer line wording follows the client deck (2026-09-14): "YOU SOUND LIKE A COWBOY."
     Version A: those words in UW Gold.
     Version B: headline all White; a rough dry-brush UW Gold underline under those two
     words only, slightly wider than the word, slight tilt, not touching the letters.
 - Deadpan layout: flush left, generous but purposeful space, no exclamation marks.
 - The question mark stays. It turns a statement into a question to the reader.
-- Static (4:5 and 9:16): week line top, small gold rule, headline as the largest type,
-  logo + label bottom.
+- No single-image static. Carousel or animated video only (11_uw_campaign.txt).
 
 DO NOT
 - Re-add old lines ("SAID FRIDAY. FRIDAY.", "TOLD THEM THE REAL NUMBER.",

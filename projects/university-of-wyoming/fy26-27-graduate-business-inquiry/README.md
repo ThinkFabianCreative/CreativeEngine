@@ -124,6 +124,7 @@ UPDATED:  2026-09-17
 | 2026-09-17 | Follow-ups: Blackhawk access resolved; T2 and T3 complement each other; T3 shot in Laramie with current students and alumni supplied by UW. Cowboys language (Q1) still open | `work/reviews/` decision record |
 | 2026-09-17 | T3 lines will be scripted from each student's real experience (user direction). Ten draft scripts (two per program, mixed ages, paths, current and alumni) written as casting specs, with intake questions and a casting request for UW. Draft, not approved | `work/copy/` |
 | 2026-09-17 | Cowboy approved at territory level; executions need approval (user-reported). T2 execution set v01: three weeks per program (A approved v02 + B, C new), static, 15s video beat table, optional carousel, end-card fact lines, post text, Laramie T2 shot list. Pack 12 not yet updated (static Gold rule changes pending Andres) | `work/concepts/` |
+| 2026-09-17 | Andres: tagline stays (anchors program + CTA); each post is a 5-card carousel or a 15s animated pan/zoom-out video, no single static; one short swappable proof line per program on the ad, rest in post text. T2 execution set and Figma packs 11, 12 updated | `work/concepts/`, `work/figma-agent-pack/` |
 | 2026-09-14 | User approved word-smither writing five program week lines and five post texts with proof points: Direction 2 week lines and Meta primary text per variant (DEVELOP; claims not cleared) | `work/concepts/` |
 
 ## Client-knowledge candidates (not promoted)

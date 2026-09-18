@@ -17,7 +17,9 @@ The same creative runs for five programs. Only the program label changes:
   ONLINE M.S. IN FINANCE
 Use "ONLINE MBA" as the sample label in comps unless told otherwise.
 The label is restrained but must be readable at phone size (min 32 px on 1080 wide).
-Program facts and benefits go in the post text, not on the image.
+Program facts go in the post text, EXCEPT one proof line per ad (T2: card 5 / last video
+frame), chosen from the approved pool in work/concepts/…_t2-executions_v01.md. One line,
+about 30 characters max. Never bullet points.
 
 VOICE
 Confident, direct, credible. Never "unlock your potential" or "take your future to the
@@ -36,11 +38,10 @@ DO NOT PUT ON ANY FRAME
   in Colorado). EXCEPTION: On-Campus MBA and M.S. in Accounting (on campus) end cards use a UW
   campus photograph (people in action, no exteriors or landmarks); these two target Wyoming only.
 
-FORMATS
-  Static 4:5   1440 x 1800
-  Stories/Reels 9:16  1080 x 1920 (safe zones per 05_meta_ad_craft.txt)
-  Carousel     1080 x 1080, 3-4 cards, image only
-Placements are not final; build 4:5 and 9:16 for every static.
+FORMATS (Andres, 2026-09-17: each post is a carousel OR an animated video; no single static)
+  Carousel     1080 x 1080, 5 cards (T2)
+  Video 15s    4:5 1440 x 1800 and 9:16 1080 x 1920 (safe zones per 05_meta_ad_craft.txt)
+Placements are not final (Q18).
 
 END CARD (carousel last card, video last frame)
 UW College of Business logo + program label. No button. No typed university name.
