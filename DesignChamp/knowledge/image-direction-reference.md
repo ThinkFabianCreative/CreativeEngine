@@ -155,6 +155,25 @@ Use the names to align the team, build mood boards and brief a photographer or d
 | **Tim Walker** | Fantastical, handmade, theatrical fashion sets | Handmade surreal set, theatrical scale, soft painterly light |
 | **Juergen Teller** | Raw direct flash, anti-glamour | Direct on-camera flash, unretouched, frank, bright against dark falloff |
 
+### 8.2a Fashion photographers
+
+| Reference | Known for | Prompt translation |
+|---|---|---|
+| **Peter Lindbergh** | Natural, unretouched black-and-white fashion with a cinematic, narrative feel | Black and white, natural light, minimal retouching, real skin texture, candid within a story |
+| **Richard Avedon** | Stark subjects against plain white seamless; frank, full-length and close portraits | Plain white seamless background, flat even light, subject isolated and frank, no props |
+| **Tyler Mitchell** | Soft natural light, pastel color, joy and tenderness | Soft daylight, pastel palette, relaxed natural poses, warm and hopeful |
+| **Helmut Newton** | High-contrast black-and-white glamour with strong, confrontational poise | Hard light, high-contrast black and white, strong poses, urban settings |
+| (see also Tim Walker, Juergen Teller in 8.2) | | |
+
+### 8.2b Architectural and interiors photographers
+
+| Reference | Known for | Prompt translation |
+|---|---|---|
+| **Julius Shulman** | Mid-century modern houses at twilight, deep perspective, interior light glowing against dusk | Blue-hour exterior, warm interiors lit, two-point perspective, straight verticals, long view |
+| **Ezra Stoller** | Precise, formal modernist architecture | Corrected verticals, formal symmetry, crisp edges, high clarity, black and white or restrained color |
+| **Iwan Baan** | Buildings in use, with people, context and city around them | Architecture with everyday life around it, context over isolation, natural light |
+| **Hélène Binet** | Light and shadow on architectural fragments, black and white | Close architectural fragment, raking light, deep shadow, black and white, texture of material |
+
 ### 8.3 Directors and cinematographers (color, light, frame)
 
 | Reference | Known for | Prompt translation |
@@ -230,3 +249,97 @@ Use the names to align the team, build mood boards and brief a photographer or d
 | **f/16–22** | Everything sharp; large-format deadpan, landscape |
 
 In prompts, name the lens and aperture as camera facts ("50mm lens at f/2"). Models treat them as a look, not a physics simulation, so check the result, not the number.
+
+## 9. Genre playbooks
+
+One block per genre: what it argues, how it's lit and shot, the grade, references (team only) and a prompt skeleton. Pick the genre from the image argument (Barry §6), not from the category's habit (visual-craft §6).
+
+### 9.1 Product
+
+| | |
+|---|---|
+| **Argues** | This object is worth wanting, trusting or understanding |
+| **Sub-types** | *Packshot* (clean, catalog, e-commerce) · *hero* (one dramatic image of the product) · *lifestyle* (the product in use, in a real place) · *macro / material* (texture, finish, craft) · *liquid and motion* (pour, splash, frozen action) · *deconstructed* (parts arranged to explain) |
+| **Light** | Packshot: large soft sources, controlled reflections, clean gradations. Hero: one shaped key, rim light to separate edges, deep background. Lifestyle: motivated natural or practical light. Macro: raking light for texture. Liquid: hard backlight and short flash duration |
+| **Lens / aperture** | 90–120mm for packshots (little distortion); 100mm macro for material; 35–50mm for lifestyle. f/8–16 for packshot sharpness front to back; f/2–4 for hero and lifestyle isolation |
+| **Angle** | Packshot: eye level with the product or 15–30° above. Hero: slightly low to give stature. Lifestyle: the user's eye level |
+| **Grade** | Accurate product color comes first (brand colors and materials must match reality). Hero may push contrast; lifestyle stays natural |
+| **References** | Irving Penn, Carl Kleiner, Dan Winters (still life) |
+| **Prompt skeleton** | "[Product described physically, no brand name] on [surface], [shot size], [angle], [lens] at [f-stop]. [Light setup]. [Background]. Accurate true-to-life color and materials. [Space for type]. No logos or readable text." |
+| **Clichés** | Product floating on a gradient with light rays (Barry §10); water splash for "fresh"; dramatic smoke for "premium" |
+| **Caution** | A generated product image must not misrepresent the real product (shape, size, features, results). Generated packshots are comps; final product photography is real |
+
+### 9.2 Fashion
+
+| | |
+|---|---|
+| **Argues** | Who you become, or who you belong with, wearing this |
+| **Sub-types** | *Campaign* (the brand's world in a few images) · *editorial* (a story across pages) · *lookbook* (clear, consistent, every garment readable) · *street / candid* (clothes in real life) · *beauty* (face and skin, very close) |
+| **Light** | Campaign and editorial: anything that serves the story (natural, hard sun, flash, cinematic). Lookbook: soft, even, repeatable. Beauty: soft frontal (butterfly, clamshell), very controlled |
+| **Lens / aperture** | 50–85mm full-length and three-quarter; 85–105mm beauty; 35mm for environmental campaign. f/2–4 for editorial mood; f/5.6–8 for lookbooks so fabric reads |
+| **Angle** | Full-length: camera at waist height or lower lengthens the figure. Beauty: eye level. Editorial: free, but deliberate |
+| **Grade** | Garment color must be accurate in lookbooks and e-commerce. Campaigns and editorials take a signature grade (black and white, film stock, flash) |
+| **References** | Peter Lindbergh, Richard Avedon, Tyler Mitchell, Helmut Newton, Tim Walker, Juergen Teller |
+| **Prompt skeleton** | "[Garment described by fabric, cut and color] worn by [person described without identifiable features], [pose and action], [location], [shot size], [lens] at [f-stop], [light], [grade or film stock]." |
+| **Clichés** | Model staring blankly at camera in an empty studio with no idea; wind machine for "freedom"; luxury shorthand (gold, marble, champagne) |
+| **Caution** | Generated people are a risk and are banned where a brief requires real people. Never generate a real, identifiable person. Casting diversity is a real decision, not a prompt setting |
+
+### 9.3 Documentary realism
+
+| | |
+|---|---|
+| **Argues** | This is true; it happened; we didn't stage it |
+| **Sub-types** | *Reportage* (events as they unfold) · *documentary portrait* (a person in their real world) · *documentary still life* (the evidence of a life) · *social documentary* (a condition or community over time) |
+| **Light** | Available and practical only; mixed color temperatures left as they are; no visible fill |
+| **Lens / aperture** | 28–35mm, close to the subject; 50mm for portraits. f/2.8–5.6 so context stays readable |
+| **Angle** | Eye level of the person being photographed; the camera is a participant, not a crane |
+| **Grade** | Natural, slightly muted, fine grain; nothing glossy. Film stocks: Portra, Tri-X for black and white |
+| **References** | Stephen Shore, William Eggleston, Alec Soth, Todd Hido; DPs Harris Savides, Bradford Young |
+| **Prompt skeleton** | "[Place and moment, specific], [what just happened], [objects or person mid-action], [35mm lens at f/4], [practical light source], natural muted color, fine grain, unposed, real." |
+| **Clichés** | Staged "documentary" that's too tidy; sad-filter poverty imagery; the lone figure at a window |
+| **Caution** | Documentary style implies truth. A generated "documentary" image presented as real is deception. Label every generated image, and never generate a documentary scene of real people, places or events as if it happened |
+
+### 9.4 Editorial
+
+| | |
+|---|---|
+| **Argues** | Here is an idea about the subject, not just the subject |
+| **Sub-types** | *Editorial portrait* (a person, with a point of view) · *conceptual editorial* (a visual metaphor for a story) · *editorial still life* (objects arranged to say something) |
+| **Light** | Chosen for the idea: one shaped key for gravity, flash for irreverence, window light for intimacy |
+| **Lens / aperture** | 35–85mm; f/2.8–8 depending on how much the setting carries the idea |
+| **Angle** | Often deliberate and unexpected: frontal deadpan, high angle, tight crop |
+| **Grade** | A consistent point of view across a story; publication or brand signature |
+| **References** | Dan Winters, Platon, Nadav Kander, Irving Penn, Carl Kleiner |
+| **Prompt skeleton** | "[Subject] [doing or placed in a way that expresses the idea], [set or background], [shot size and angle], [lens] at [f-stop], [light setup], [grade]." |
+| **Clichés** | Visual pun that explains itself; headline-caption images (1 + 1 = 1) |
+| **Caution** | The concept must survive without the caption: Barry §2 rough test |
+
+### 9.5 Architectural and interiors
+
+| | |
+|---|---|
+| **Argues** | This space has a character; this is what it feels like to be here |
+| **Sub-types** | *Exterior* · *interior* · *detail and material* · *architecture in use* (with people and life) · *twilight* (inside lights against a blue sky) |
+| **Light** | Soft overcast or low sun for form; twilight (blue hour) to balance interior and exterior; interiors lit by windows and practicals, balanced rather than flash-flat |
+| **Lens / aperture** | 17–24mm for interiors and full exteriors (keep verticals straight: tilt-shift or correction); 35–50mm for details. f/8–11 for front-to-back sharpness |
+| **Angle** | Camera level (no tilting up or down) so verticals stay vertical; chest height for interiors; two-point perspective for exteriors, one-point for symmetrical interiors |
+| **Grade** | Clean, true whites and materials; restrained saturation; no heavy HDR |
+| **References** | Julius Shulman, Ezra Stoller, Iwan Baan, Hélène Binet |
+| **Prompt skeleton** | "[Space type], [materials and furniture], [time of day and light], [camera level at chest height, verticals perfectly straight], [lens] at f/8, [one- or two-point perspective], clean natural color, no HDR." |
+| **Clichés** | Converging verticals from a tilted camera; overcooked HDR; empty showroom rooms with no sign of life |
+| **Caution** | Don't generate a real, identifiable building or place as if photographed, and don't imply a location's features that don't exist. Real locations need property releases when shot |
+
+### 9.6 Cinematic
+
+| | |
+|---|---|
+| **Argues** | A story is happening; this is one frame of it |
+| **Sub-types** | *Film still* (one frozen moment implying before and after) · *tableau* (a staged scene, everything placed) · *night / neon* · *natural-light epic* |
+| **Light** | Motivated sources; mixed temperatures; contrast between a lit subject and a dark world; atmosphere (haze, rain) used sparingly |
+| **Lens / aperture** | 24–50mm for immersive frames; anamorphic look for widescreen; f/1.4–2.8 for shallow cinema focus, f/8 for deep-focus tableaux |
+| **Angle** | Deliberate: one-point perspective, over-the-shoulder, low for stature; camera height as a storytelling choice |
+| **Grade** | A single controlled palette per piece; film-emulation grain; avoid teal-and-orange by default |
+| **References** | Roger Deakins, Bradford Young, Emmanuel Lubezki, Wong Kar-wai with Christopher Doyle, Stanley Kubrick, Gregory Crewdson |
+| **Prompt skeleton** | "Cinematic film still, [widescreen or specific ratio], [scene and moment implying a story], [lens] at [f-stop], [motivated light sources], [palette], [film stock or grain], [atmosphere if any]." |
+| **Clichés** | Teal-and-orange; lens flare as decoration; letterbox bars on a non-cinematic image; "epic" with nothing happening |
+| **Caution** | Widescreen ratios fight vertical placements: frame for 9:16 separately (visual-craft §7 format test) |
