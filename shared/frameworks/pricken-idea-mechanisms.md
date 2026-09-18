@@ -9,7 +9,6 @@ This is an operational CreativeEngine framework. It is inspired by the systemati
 - It was built from a secondary summary supplied by the user, not from the book. The mechanism names, directives, tests and examples below are CreativeEngine terminology.
 - Do not claim that any mechanism, label or example appears in Pricken's book, or that the book organizes its techniques this way.
 - Do not quote the book or invent quotations from it.
-- Do not imitate or recreate specific published ads as if they were ideas for a client.
 
 ## Purpose
 

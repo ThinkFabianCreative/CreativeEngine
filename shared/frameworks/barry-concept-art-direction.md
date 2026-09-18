@@ -9,7 +9,6 @@ This is an operational CreativeEngine framework. It is inspired by the concept-f
 - It was not built from notes on the book or from the book itself. The stages, tests, labels and examples below are CreativeEngine terminology.
 - Do not claim that any test, label or example appears in Barry's book, or that the book structures art direction this way.
 - Do not quote the book or invent quotations from it.
-- Do not imitate or recreate published ads as ideas for a client.
 
 ## Purpose
 

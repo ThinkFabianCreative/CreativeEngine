@@ -7,7 +7,6 @@
 In-house CreativeEngine framework. It is not derived from a single named book, screenwriting method or curriculum, and it reproduces no institution's course material. It synthesizes ordinary professional practice in dramatic writing as it applies to advertising.
 
 - Do not attribute its shapes, beat counts, labels or tests to any named source or author.
-- Do not imitate or recreate specific published commercials as ideas for a client.
 
 ## Purpose
 
