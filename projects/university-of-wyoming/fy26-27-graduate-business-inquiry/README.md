@@ -121,6 +121,7 @@ UPDATED:  2026-09-17
 | 2026-09-15 | Internal measurement split recorded (creative tier Traffik-controlled vs funnel tier shared with UW). Internal only: not proposed to the client, brief success measure unchanged | `work/measurement/` |
 | 2026-09-17 | First live test of selling-the-work and typography frameworks on T2 and the conversion layer. Found a later client deck export ("…Graduate Campaign 2026 1.0.pdf", 20 of 24 pages changed) not covered by deck review v01. Key risks: Cowboys ownability depends on Institutional Marketing approval (Q1, Q16); "this isn't the brief" (S1 vs S8) is the likeliest objection. Type fixes for deck p14/p17 and the conversion-layer build block | `work/reviews/` |
 | 2026-09-17 | Andres confirms deck v1.0 is what UW received (filed in `outputs/review/`). Client picked T2 and T3; T3 approved only with real students, no AI, shot locally; T1 not selected (user-reported). Pack 10 testimonial rule scoped to T2/conversion frames | `work/reviews/`, `outputs/review/` |
+| 2026-09-17 | Follow-ups: Blackhawk access resolved; T2 and T3 complement each other; T3 shot in Laramie with current students and alumni supplied by UW. Cowboys language (Q1) still open | `work/reviews/` decision record |
 | 2026-09-14 | User approved word-smither writing five program week lines and five post texts with proof points: Direction 2 week lines and Meta primary text per variant (DEVELOP; claims not cleared) | `work/concepts/` |
 
 ## Client-knowledge candidates (not promoted)

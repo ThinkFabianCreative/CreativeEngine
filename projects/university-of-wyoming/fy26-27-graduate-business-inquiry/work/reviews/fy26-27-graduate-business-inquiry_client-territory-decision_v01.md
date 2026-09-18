@@ -43,3 +43,17 @@ NEXT VERSION:  none yet
 
 - `work/figma-agent-pack/10_uw_brand_rules.txt`: "testimonials" in the prohibited list was a CreativeEngine production rule written for T2 frames, not a client prohibition. It is now scoped: prohibited on T2 and conversion-layer frames; allowed on T3 only as real, released, approved student words.
 - `normalized-brief.md` §11.4: client selection noted beneath the three-territories record. Q1 and Q37 left OPEN.
+
+## Follow-up answers (Andres, 2026-09-17)
+
+Verbatim: "blackhawk font is not an issue anymore. 2- they complement eachother, 3- well go to laramie to shoot it, 4. both, school to supply"
+
+| Open question | Answer | Status |
+|---|---|---|
+| Blackhawk (part of Q1/Q16/Q17) | "not an issue anymore" | RESOLVED (user-reported). Font file not yet on record |
+| Cowboys language (Q1) | Not addressed | **OPEN.** The ALREADY GONE decision in the selling review still applies |
+| How T2 and T3 relate | "they complement eachother" | ANSWERED. Working reading (DERIVED, confirm): one system, T2 as the prospecting hook, T3 as consideration and retargeting proof |
+| "Shot locally" | Laramie | ANSWERED |
+| Real students | Current students and alumni; UW supplies them | ANSWERED. Who collects releases, and who approves quotes, still to confirm |
+
+**New tension from the answers.** A Laramie shoot has to serve online-program variants too. S1 p6 wants the environment to match delivery format, and pack 11 keeps Laramie and campus imagery off online frames because the Online MBA also runs in Colorado. Working rule (added to pack 10): online-program students are shot in work or home settings, not on campus. Whether UW can supply online students who are in Laramie is a casting question for UW.

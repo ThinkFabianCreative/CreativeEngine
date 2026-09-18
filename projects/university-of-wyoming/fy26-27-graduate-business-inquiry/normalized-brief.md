@@ -607,6 +607,7 @@ Recorded as user direction. It does not substantiate claims or establish client 
   - **T3 students as influencers** (peers; new). Real students or graduates required for external use; testimonial and claim approvals apply (S1 p3 client list; S1 p6 photography; C57–C59).
 - **Status:** territories for client selection, consistent with the rev 3 umbrella direction (alternatives explored before one is selected). No selection; Q1, Q37 open.
 - **Client selection (reported by Andres, 2026-09-17; USER-REPORTED, no written evidence on file).** Verbatim: "they picked territories 02 and 03"; "they approved it 03 if we made it with real students not ai and shot locally". T2 selected; T3 approved on conditions (real students, no AI; shot locally); T1 not selected. Deck: `outputs/review/University of Wyoming  Graduate Campaign 2026 1.0.pdf`. Q1 (Cowboys language, Institutional Marketing) and Q37 remain OPEN; T2/T3 relationship, "locally", student sourcing and T3 claim approvals are OPEN. Record: `work/reviews/…_client-territory-decision_v01.md`.
+- **Follow-up answers (Andres, 2026-09-17; USER-REPORTED).** Verbatim: "blackhawk font is not an issue anymore. 2- they complement eachother, 3- well go to laramie to shoot it, 4. both, school to supply". Blackhawk access resolved. T2 and T3 complement each other (DERIVED reading: one system, T2 prospecting and T3 consideration, per GTM fit review; to confirm). T3 shoot in Laramie. T3 casts current students and alumni, supplied by UW. Cowboys language approval (Q1) not addressed and stays OPEN.
 
 ### 11.5 Brand constraints (S4, S2)
 
@@ -1366,7 +1367,7 @@ Authority is per domain. No blanket newest-file-wins rule applies. "Current" mea
 | R6 | "Final document for Traffik July 2026.docx" | S1 p7 | REFERENCED. **Possibly S3** (metadata title match only; unconfirmed) | SUPPORTING | Q1, Q20 |
 | R7 | UW Institutional Marketing Brand Center (official logos, unit logo policy, photo database, model release form) | S4 p8–10, p17, p19; S4 p5 campaign guidelines download | REFERENCED, NOT AVAILABLE (not opened; no external research) | REQUIRED BEFORE WORK (production) | Q17 |
 | R8 | Campaign gradient color values | S2 p12 | REFERENCED, NOT AVAILABLE | SUPPORTING (production) | Q24 |
-| R9 | Blackhawk font license | S2 p11 | REFERENCED, NOT AVAILABLE | SUPPORTING (production) | Q17 |
+| R9 | Blackhawk font license | S2 p11 | REFERENCED, NOT AVAILABLE. Access reported resolved by Andres, 2026-09-17 ("blackhawk font is not an issue anymore"); font file not on record | SUPPORTING (production) | Q17 |
 | R10 | UW/Canto photography with releases | S1 p6 | REFERENCED, NOT AVAILABLE | REQUIRED BEFORE WORK (production) | Q17 |
 | R11 | UW branded video intro/exit graphics; video brand standards | S4 p19 | REFERENCED, NOT AVAILABLE | SUPPORTING (production) | Q15 |
 | R12 | Program page URLs (P1–P5) | S1 p1 | REFERENCED, NOT AVAILABLE | REQUIRED BEFORE WORK (launch) | Q11 |

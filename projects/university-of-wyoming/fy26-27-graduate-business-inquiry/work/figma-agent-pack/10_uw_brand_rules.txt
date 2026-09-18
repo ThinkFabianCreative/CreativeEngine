@@ -15,8 +15,8 @@ FONTS
   is Montserrat. Do not use Inter, Helvetica, Arial or other lookalikes.
 - Blackhawk Italic is UW's licensed campaign headline font ("The World Needs More Cowboys").
   Use its lowercase glyph setting. Headlines or single-word emphasis only, limited use.
-  Only use it if the font is installed; never substitute a lookalike brush font on
-  client-facing work.
+  Access is no longer an issue (Andres, 2026-09-17). Still use only the real font file;
+  never substitute a lookalike brush font on client-facing work.
 - Script or specialty fonts: limited, for emphasis only.
 
 LOGO
@@ -40,7 +40,10 @@ deadlines, dates or urgency language ("apply by", "last chance", "starts soon")
 
 T3 STUDENTS (client approval 2026-09-17, conditional; user-reported)
 - Real UW students only. No AI-generated people, faces, voices or quotes, ever, on T3.
-- Shot locally (location definition OPEN). Photo/video from that shoot, with releases.
+- Shot in Laramie. Current students and alumni, supplied by UW. Photo/video from that
+  shoot, with releases (who holds releases: confirm with UW).
+- Online-program variants: shoot in work/home settings, not campus exteriors or landmarks
+  (S1 p6 environment matches delivery format; Online MBA also runs in Colorado).
 - Quotes are the student's own words, released and client-approved. No composites.
   No outcome, salary, placement or industry-access claims (C33, C57-C59) without approval.
 - Until the shoot exists, T3 comps use a labeled placeholder frame, not a generated person.
