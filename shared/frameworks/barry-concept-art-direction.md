@@ -91,7 +91,7 @@ A strong visual idea survives as a rough: a thumbnail, a stick-figure sketch, a 
 - Decide the concept and the layout logic in words or simple sketches before generating imagery.
 - Use generation to test whether a decided idea reads, not to browse for one.
 - When an image is generated, judge the idea it shows, not the polish it came with.
-- Before using an image-generation skill on CreativeEngine work, read its department record in `DesignChamp/skills/`. If it has no record, it has not been reviewed for this use.
+- Before using an image-generation skill on CreativeEngine work, read its department record in `DesignChamp/skills/` (the index is `DesignChamp/skills/README.md`; a skill from a pack is covered in the pack's record, for example `identity-design` in `ui-ux-pro-max.md`). Its rules win: for `identity-design`, confirm each generation run on client work, naming the provider and what is sent, and treat the output as EXPLORE material. A skill with no record has not been reviewed for this use.
 
 ## 3. Who carries the idea
 

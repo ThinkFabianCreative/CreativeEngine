@@ -108,7 +108,7 @@ The roles are members of the same creative department, not isolated chat persona
 - `.claude/skills/` is reserved for approved skills that Claude should discover automatically.
 - Department `skills/` folders are for organization, evaluation and ownership.
 - Never confuse installed or plugin agents and skills with CreativeEngine's project agents.
-- An installed skill's department record (`<Department>/skills/<skill>.md`) governs how that skill is used on CreativeEngine work, in any session and by any role, not only inside its owning department. Read the record before relying on the skill; where they conflict, the record wins. Examples: `humanizer` on advertising copy, `frontend-slides` deployment, `identity-design` AI generation.
+- An installed skill's department record (`<Department>/skills/<skill>.md`, or the record of the pack it came from, as listed in that department's `skills/README.md`) governs how that skill is used on CreativeEngine work, in any session and by any role, not only inside its owning department. Read the record before relying on the skill; where they conflict, the record wins. Examples: `humanizer` on advertising copy, `frontend-slides` deployment, `identity-design` AI generation.
 - When referring to CreativeEngine's Creative Director agent, use the exact name `creative-engine-director`.
 
 ## Skills policy
@@ -121,7 +121,7 @@ Each specialist department owns its relevant skills:
 - `DesignChamp/skills/`
 - `WordSmither/skills/`
 
-No third-party skills are installed. Sources to evaluate later include skills.sh, Impeccable, Emil Kowalski, GitHub repositories and our own custom skills.
+Installed skills are listed in `.claude/skills/README.md`, each with its owner and department record. Skills that are approved but not yet installed, and skills awaiting review, are listed in each department's `skills/README.md`. Sources to evaluate later include skills.sh, Impeccable, GitHub repositories and our own custom skills.
 
 Before any third-party skill is added:
 
