@@ -167,6 +167,7 @@ Project-administration questions only. Briefing questions are in [§14](normaliz
   **Superseded, preserved unchanged:** `CP3_ms-accounting-shared-concept_v01.md` (four-concept architecture) and the five `P*_v01.md` packets.
 
 - **`work/reviews/`:**
+  - [`…_t2-still-life-comps-review_v01.md`](work/reviews/fy26-27-graduate-business-inquiry_t2-still-life-comps-review_v01.md): DEVELOP. Review of the 15 Firefly still-life comps v1: 9 keep, 2 fix, 4 regenerate; P3-A grade reference.
   - [`…_client-territory-decision_v01.md`](work/reviews/fy26-27-graduate-business-inquiry_client-territory-decision_v01.md): **client decision record** (user-reported). T2 selected, T3 conditional, T1 out; open questions.
   - [`…_selling-typography-review_v01.md`](work/reviews/fy26-27-graduate-business-inquiry_selling-typography-review_v01.md): JUDGE-leaning DEVELOP. T2 defense, decision chain, objections, load-bearing elements; typography of deck v1.0 and conversion layer v01. No verdicts.
   - [`…_figma-comps-review_v01.md`](work/reviews/fy26-27-graduate-business-inquiry_figma-comps-review_v01.md): DEVELOP review of the client Figma comps from pasted screenshots. No verdicts.

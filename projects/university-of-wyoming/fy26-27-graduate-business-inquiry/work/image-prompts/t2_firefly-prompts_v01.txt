@@ -15,6 +15,13 @@ NEVER GENERATE
 - Mountains, landscapes, windows to the outdoors, cowboy imagery, graduation caps,
   money, glowing screens facing the camera.
 If Firefly adds any of these, regenerate. Do not fix it by retouching.
+- Light fixtures, bulbs, lamps or windows in frame. The light source is always out of frame
+  (lesson from the v1 set: pendant bulbs and doorways landed in the type zone).
+
+FIXES AFTER THE v1 REVIEW (2026-09-18): use t2_firefly-fix-prompts_v01.txt. It has the
+regeneration prompts for P1-B, P1-C, P2-C, P3-B and P5-C (they replace the versions below),
+the Photoshop fixes and the grade match to P3-A. For any new generation, upload P3-A as the
+style reference.
 
 FIREFLY SETTINGS (use what your version offers)
 - Content type: Photo.
@@ -111,7 +118,8 @@ Documentary still-life photograph, 35mm film look, fine grain, real and unposed.
 A single warm practical light from out of frame, low and to the side. Deep warm brown
 shadows, cream highlights, low saturation, no blue or green cast, no pure white. The top
 40% of the frame is dark, plain and low in detail. No people, no hands, no faces. No
-readable text, numbers, logos or brand names. No lens flare, glow or heavy vignette.
+readable text, numbers, logos or brand names. No lens flare, glow or heavy vignette. No
+windows, no light fixtures or bulbs visible in frame. Warm tungsten grade.
 
 ====================================================================
 P1 · ON-CAMPUS MBA
