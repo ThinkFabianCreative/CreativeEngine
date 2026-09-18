@@ -1,0 +1,487 @@
+{
+  "title": "TikTok paid advertising: documented format specifications",
+  "checked_on": "2026-09-16",
+  "version": "1.0",
+  "scope": "Auction In-Feed (Non-Spark), Spark Ads, reservation In-Feed incl. R&F, TopView, Carousel, TikTok Ad Network (Pangle), Global App Bundle video and image. Public official documentation only; not account-tested.",
+  "records": [
+    {
+      "id": "TT-001",
+      "platform": "TikTok",
+      "format": "In-Feed video, Non-Spark (auction)",
+      "placement": "TikTok For You feed",
+      "source_url": "https://ads.tiktok.com/help/article/tiktok-auction-in-feed-ads?lang=en",
+      "source_last_updated": "June 2026",
+      "checked_on": "2026-09-16",
+      "source_access": "Server-rendered public HTML (curl), visible article text",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "account_name_max": "20 characters (10 CJK), one line",
+        "account_name_rules": "No emojis or { }; punctuation counts; leading/trailing spaces not counted; CJK full-width = 2 spaces",
+        "app_name": "Auto-extracted from App Store / Google Play",
+        "profile_photo": "98x98 px 1:1, .jpg/.jpeg/.png, <50 KB; key element in centre 66x66 px",
+        "ad_caption": "White fixed font; no clickable links, @ or hashtags; length limit not stated on this page"
+      },
+      "recommendations": {
+        "aspect_ratio": "9:16 vertical",
+        "creative_basics": "Sound on, 9:16, at least 720p, hook in first 6 s, proposition in first 3 s, 5-10 words/s on-screen text (creative best practices page)"
+      },
+      "technical_requirements": {
+        "aspect_ratios_supported": [
+          "9:16",
+          "16:9",
+          "1:1"
+        ],
+        "minimum_resolution_px": {
+          "9:16": "540x960",
+          "16:9": "960x540",
+          "1:1": "640x640"
+        },
+        "file_types": [
+          ".mp4",
+          ".mov",
+          ".mpeg",
+          ".3gp",
+          ".avi"
+        ],
+        "duration_max": "10 minutes",
+        "file_size_max": "500 MB",
+        "bitrate_min": "516 kbps"
+      },
+      "safe_zone": "Published only as downloadable .zip templates (Standard LTR, with Anchor, Arabic RTL, RTL with Anchor); size varies with ratio, caption length and add-ons. Templates not downloaded; no pixel values recorded.",
+      "notes": "Download card auto-generated for App ads. Best-practice source: https://ads.tiktok.com/help/article/creative-best-practices?lang=en"
+    },
+    {
+      "id": "TT-002",
+      "platform": "TikTok",
+      "format": "Spark Ads",
+      "placement": "TikTok feed (auction and Reach & Frequency)",
+      "source_url": "https://ads.tiktok.com/help/article/spark-ads",
+      "source_last_updated": "June 2026",
+      "checked_on": "2026-09-16",
+      "source_access": "Server-rendered public HTML (curl), visible article text",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "ad_caption": "From organic post; may be blank; @ tags, emoji and hashtags allowed; max 4 lines displayed",
+        "display_name": "From organic account; not editable (Spark push allows text edits)"
+      },
+      "recommendations": {},
+      "technical_requirements": {
+        "ratio_resolution_filetype_bitrate_filesize": "No restrictions",
+        "duration_max": "10 minutes (auction in-feed page says no restrictions)",
+        "spark_ads_per_account_max": 10000,
+        "objectives_auction": [
+          "Reach",
+          "Traffic",
+          "Video Views",
+          "Community interaction",
+          "App promotion",
+          "Conversions",
+          "Lead generation",
+          "Sales"
+        ],
+        "objectives_reach_frequency": [
+          "Reach",
+          "Traffic",
+          "Video Views"
+        ]
+      },
+      "safe_zone": "Not stated for Spark; use In-Feed templates",
+      "notes": "Creator posts require authorization code. Post must be un-authorized before deletion."
+    },
+    {
+      "id": "TT-003",
+      "platform": "TikTok",
+      "format": "In-Feed video, reservation (incl. Reach & Frequency), Non-Spark and Spark Push",
+      "placement": "TikTok feed",
+      "source_url": "https://ads.tiktok.com/help/article/tiktok-reservation-in-feed-ads-reach-frequency?lang=en",
+      "source_last_updated": "July 2025",
+      "checked_on": "2026-09-16",
+      "source_access": "Server-rendered public HTML (curl), visible article text",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "account_name_max": "20 characters (10 CJK), one line",
+        "account_name_rules": "No emojis or { }; punctuation counts; leading/trailing spaces not counted; CJK full-width = 2 spaces",
+        "app_name": "Auto-extracted from App Store / Google Play",
+        "profile_photo": "98x98 px 1:1, .jpg/.jpeg/.png, <50 KB; key element in centre 66x66 px",
+        "account_name_recommended": "4-10 characters (2-5 CJK)",
+        "ad_caption": "Max 4 lines before 'See more'",
+        "ad_caption_characters": "Emojis allowed (v11 only), count as 2; { } not allowed; @ allowed but not clickable on Non-Spark; # only for commercial/sponsored/organic hashtag challenges; no links",
+        "spark_pull_caption": "Page says both 'no caption limit' and 'max 150 characters or blank'",
+        "cta": "Fixed list, no custom text/colour, default Learn more, auto-translated",
+        "cta_options": [
+          "Apply now",
+          "Book now",
+          "Contact us",
+          "Download",
+          "Experience now",
+          "Get quote",
+          "Get showtimes",
+          "Get ticket now",
+          "Install now",
+          "Interested",
+          "Join this hashtag",
+          "Learn more",
+          "Listen now",
+          "Order now",
+          "Play game",
+          "Pre-order now",
+          "Read more",
+          "Shoot with this effect",
+          "Shop now",
+          "Sign up",
+          "Subscribe",
+          "View now",
+          "View video with this effect",
+          "Visit store",
+          "Watch now"
+        ],
+        "cta_app_download": [
+          "Download",
+          "Learn more",
+          "Listen now",
+          "Play game"
+        ]
+      },
+      "recommendations": {
+        "aspect_ratio": "9:16",
+        "duration": "9-15 s",
+        "ad_caption_length": "Within 100 characters (50 CJK) to avoid 'See more'",
+        "background": "Avoid white/transparent backgrounds (white UI text)"
+      },
+      "technical_requirements": {
+        "aspect_ratios_supported": [
+          "9:16",
+          "16:9",
+          "1:1"
+        ],
+        "minimum_resolution_px": {
+          "9:16": "540x960",
+          "16:9": "960x540",
+          "1:1": "640x640"
+        },
+        "file_types": [
+          ".mp4",
+          ".mov",
+          ".mpeg",
+          ".3gp"
+        ],
+        "duration": "5-60 s",
+        "file_size_max": "500 MB",
+        "bitrate_min": "2,500 kbps",
+        "audio": "All video creatives must have sound; Non-Spark music labelled 'Promoted Music'",
+        "other": "No watermarks; must not mimic TikTok UI; assets locked once live; review within 2 days"
+      },
+      "safe_zone": "Published only as downloadable .zip templates (Standard LTR, with Anchor, Arabic RTL, RTL with Anchor); size varies with ratio, caption length and add-ons. Templates not downloaded; no pixel values recorded.",
+      "notes": "Spark Pull caption limit conflicts within the page."
+    },
+    {
+      "id": "TT-004",
+      "platform": "TikTok",
+      "format": "TopView",
+      "placement": "First video on app open (3 s takeover, then in-feed)",
+      "source_url": "https://ads.tiktok.com/help/article/tiktok-reservation-topview",
+      "source_last_updated": "June 2026 (specs); August 2026 (About TopView)",
+      "checked_on": "2026-09-16",
+      "source_access": "Server-rendered public HTML (curl), visible article text",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "account_name_max": "20 characters (10 CJK), one line",
+        "account_name_rules": "No emojis or { }; punctuation counts; leading/trailing spaces not counted; CJK full-width = 2 spaces",
+        "app_name": "Auto-extracted from App Store / Google Play",
+        "profile_photo": "98x98 px 1:1, .jpg/.jpeg/.png, <50 KB; key element in centre 66x66 px",
+        "account_name_recommended": "4-10 characters (2-5 CJK)",
+        "ad_caption_max": "100 characters (Non-Spark / Spark Push)",
+        "ad_caption_characters": "Emojis allowed (v11 only), count as 2; { } not allowed; @ allowed but not clickable on Non-Spark; # only for commercial/sponsored/organic hashtag challenges; no links",
+        "spark_pull_caption": "Page says both 'no caption limit' and 'max 100 characters or blank'",
+        "cta_options": [
+          "Apply now",
+          "Book now",
+          "Contact us",
+          "Download",
+          "Experience now",
+          "Get quote",
+          "Get showtimes",
+          "Get ticket now",
+          "Install now",
+          "Interested",
+          "Join this hashtag",
+          "Learn more",
+          "Listen now",
+          "Order now",
+          "Play game",
+          "Pre-order now",
+          "Read more",
+          "Shoot with this effect",
+          "Shop now",
+          "Sign up",
+          "Subscribe",
+          "View now",
+          "View video with this effect",
+          "Visit store",
+          "Watch now"
+        ],
+        "cta_rules": "'Shoot with this effect' not for Non-Spark; 'Join this hashtag' only for commercial/sponsored challenges"
+      },
+      "recommendations": {
+        "duration": "9-15 s",
+        "ad_caption_length": "Within 100 characters (50 CJK)"
+      },
+      "technical_requirements": {
+        "aspect_ratio": "9:16 only",
+        "minimum_resolution_px": "540x960",
+        "file_types": [
+          ".mp4",
+          ".mov",
+          ".mpeg",
+          ".3gp"
+        ],
+        "duration": "5-60 s",
+        "file_size_max": "500 MB",
+        "bitrate_min": "2,500 kbps",
+        "audio": "Must not be silent; no harsh sounds esp. first 3 s; not pure verbal broadcast; promo sentence max twice in a row",
+        "first_3_seconds": "No plain white; vertical; nothing overlapping TikTok logo, skip button or swipe-up link",
+        "content": "Real people or narrative animation; still pictures not main narrative; no fake UI; no QR/barcodes/phone/address except required disclaimers",
+        "url": "HTTPS web view or TikTok in-app URL; no app store links; no external deeplinks",
+        "exclusivity": "Same creative not in other placements same day, nor day before/after 100% SOV TopView; pre-approval; max 20 ads per ad group"
+      },
+      "safe_zone": "Two-stage templates (open screen first 3 s; in-feed, stricter), LTR and RTL, zip download. Not transcribed.",
+      "notes": "Qualified customers only. Default delivery to TikTok Lite in Japan and Korea for ad groups created from October 2025. Source: https://ads.tiktok.com/help/article/about-topview"
+    },
+    {
+      "id": "TT-005",
+      "platform": "TikTok",
+      "format": "Carousel (image) ads, Standard and VSA",
+      "placement": "TikTok feed; TikTok Ad Network for music note",
+      "source_url": "https://ads.tiktok.com/help/article/specifications-for-carousel-ads",
+      "source_last_updated": "September 2026",
+      "checked_on": "2026-09-16",
+      "source_access": "Server-rendered public HTML (curl), visible article text",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "ad_caption": "One caption for all images",
+        "cta": "One CTA for all images"
+      },
+      "recommendations": {
+        "image_file_size": "<=100 KB suggested (conflicts with 100 MB on Ad Network page)"
+      },
+      "technical_requirements": {
+        "image_count_upload": "2-35",
+        "image_count_shown": "2-20",
+        "file_types": [
+          ".jpg",
+          ".jpeg",
+          ".png"
+        ],
+        "resolution_px": {
+          "horizontal": "1200x628",
+          "square": "640x640",
+          "vertical": "720x1280"
+        },
+        "music": "Required, loops; >=2 s; .mp3 up to 10 MB; Standard: CML or upload; VSA: upload only; CML silent on TikTok Ad Network",
+        "links": "Standard: one URL; VSA: per-product URL via catalog",
+        "objectives": [
+          "Traffic",
+          "Web Conversions",
+          "App Promotion",
+          "Lead Generation",
+          "Product Sales - Catalog",
+          "Brand Auction Reach"
+        ],
+        "spark_support": "Standard: Spark and Non-Spark; VSA: Non-Spark only"
+      },
+      "safe_zone": "—",
+      "notes": "About page: https://ads.tiktok.com/help/article/carousel-ads?lang=en . Automatic placement filters out TikTok Ad Network and Global App Bundle."
+    },
+    {
+      "id": "TT-006",
+      "platform": "TikTok",
+      "format": "TikTok Ad Network (formerly Pangle) assets",
+      "placement": "Third-party apps: Interstitial, Rewarded, App Open, Native, Banner",
+      "source_url": "https://ads.tiktok.com/help/article/specifications-for-pangle-ad-assets",
+      "source_last_updated": "September 2026",
+      "checked_on": "2026-09-16",
+      "source_access": "Server-rendered public HTML (curl), visible article text",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {},
+      "recommendations": {
+        "assets": "Supply all resolutions"
+      },
+      "technical_requirements": {
+        "video": {
+          "resolutions": [
+            "1280x720",
+            "720x1280",
+            "720x720"
+          ],
+          "formats": [
+            "Interstitial",
+            "Rewarded",
+            "App Open",
+            "Native",
+            "Banner"
+          ],
+          "file_types": [
+            ".mp4",
+            ".mov",
+            ".mpeg",
+            ".avi"
+          ],
+          "duration_max": "10 minutes",
+          "file_size_max": "500 MB"
+        },
+        "carousel": {
+          "images_max": 50,
+          "resolutions": [
+            "1200x628",
+            "640x640",
+            "720x1280"
+          ],
+          "formats": [
+            "Interstitial",
+            "Rewarded"
+          ],
+          "file_types": [
+            ".jpg",
+            ".jpeg",
+            ".png"
+          ],
+          "file_size_max": "100 MB"
+        },
+        "playable": {
+          "resolutions": [
+            "1280x720",
+            "720x1280"
+          ],
+          "formats": [
+            "Interstitial",
+            "Rewarded"
+          ],
+          "file_types": [
+            ".zip"
+          ],
+          "file_size_max": "5 MB"
+        },
+        "image": {
+          "resolutions": [
+            "1200x628",
+            "640x640",
+            "720x1280"
+          ],
+          "formats": [
+            "Interstitial",
+            "App Open",
+            "Native",
+            "Banner"
+          ],
+          "file_types": [
+            ".jpg",
+            ".jpeg",
+            ".png"
+          ],
+          "file_size_max": "100 MB"
+        },
+        "image_banner_exclusive": {
+          "resolutions": [
+            "600x500",
+            "640x200",
+            "640x100"
+          ],
+          "formats": [
+            "Banner"
+          ],
+          "file_types": [
+            ".jpg",
+            ".jpeg",
+            ".png"
+          ],
+          "file_size_max": "100 MB"
+        }
+      },
+      "safe_zone": "—",
+      "notes": "Video thumbnail defaults to first frame."
+    },
+    {
+      "id": "TT-007",
+      "platform": "TikTok",
+      "format": "Global App Bundle video",
+      "placement": "CapCut (App Open, In-Feed/2-Column, Banner, Interstitial); Fizzo (App Open, Interstitial, Native)",
+      "source_url": "https://ads.tiktok.com/help/article/global-app-bundle-video-ad-specifications?lang=en",
+      "source_last_updated": "July 2025",
+      "checked_on": "2026-09-16",
+      "source_access": "Server-rendered public HTML (curl), visible article text",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "app_name": "4-40 Latin letters; 2-20 Asian characters",
+        "brand_name": "2-20 Latin letters; 1-10 Asian characters",
+        "ad_description": "1-100 Latin; 1-50 Asian",
+        "restrictions": "No emojis or special characters"
+      },
+      "recommendations": {
+        "aspect_ratio": "9:16",
+        "duration": "21-30 s",
+        "bitrate": ">=516 kbps"
+      },
+      "technical_requirements": {
+        "minimum_resolution_px": {
+          "9:16": "720x1280",
+          "16:9": "1280x720",
+          "1:1": "640x640"
+        },
+        "file_types": [
+          ".mp4",
+          ".mov",
+          ".mpeg",
+          ".avi"
+        ],
+        "duration": "5-60 s",
+        "file_size_max": "500 MB",
+        "profile_image": "1:1, .jpg/.jpeg/.png, <50 KB"
+      },
+      "safe_zone": "—",
+      "notes": "Not the TikTok feed."
+    },
+    {
+      "id": "TT-008",
+      "platform": "TikTok",
+      "format": "Global App Bundle image",
+      "placement": "Same as TT-007",
+      "source_url": "https://ads.tiktok.com/help/article/global-app-bundle-image-ad-specifications?lang=en",
+      "source_last_updated": "September 2026",
+      "checked_on": "2026-09-16",
+      "source_access": "Server-rendered public HTML (curl), visible article text",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "app_name": "4-40 Latin letters; 2-20 Asian characters; no emojis",
+        "brand_name": "2-20 Latin letters; 1-10 Asian characters; no emojis",
+        "ad_description": "1-100 Latin; 1-50 Asian; no emojis, { } or #",
+        "counting": "Punctuation and spaces count; may truncate on some devices"
+      },
+      "recommendations": {
+        "aspect_ratio": "9:16"
+      },
+      "technical_requirements": {
+        "minimum_resolution_px": {
+          "9:16": "720x1280",
+          "16:9": "1280x720",
+          "1:1": "640x640"
+        },
+        "file_types": [
+          "JPG",
+          "JPEG",
+          "PNG"
+        ],
+        "file_size_max": "100 MB"
+      },
+      "safe_zone": "—",
+      "notes": "Resolution field labelled 'Video Resolution' on an image page. This page is the likely origin of copy rules on agency sheets labelled 'TikTok In-Feed'."
+    }
+  ]
+}

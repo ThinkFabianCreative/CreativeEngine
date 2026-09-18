@@ -1,0 +1,811 @@
+{
+  "title": "Nextdoor ad specifications",
+  "checked_on": "2026-09-16",
+  "version": "1.0",
+  "scope": "Nextdoor enterprise Sponsored Posts specs (en-gb page), Nextdoor Ads Manager specs (US page), an alternate about.nextdoor.com specs page, and small-business self-serve / Local Deals specs. Public documentation only; not account-validated.",
+  "records": [
+    {
+      "id": "ND-001",
+      "platform": "Nextdoor",
+      "format": "Display (image) - Sponsored Posts, enterprise",
+      "placement": "Newsfeed (en-gb page)",
+      "source_url": "https://business.nextdoor.com/en-gb/enterprise/creative-specs",
+      "secondary_sources": [],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "advertiser_name": {
+          "label": "Advertiser name",
+          "value": "25 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "subject_line": {
+          "label": "Subject line",
+          "value": "70 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "body_copy_max": {
+          "label": "Body copy",
+          "value": "800 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "body_copy_truncation": {
+          "label": "Body copy before truncation",
+          "value": "90 characters",
+          "classification": "RECOMMENDATION"
+        },
+        "offer_text": {
+          "label": "Offer text",
+          "value": "50 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "cta": {
+          "label": "CTA",
+          "value": "10 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "recommendations": {},
+      "technical_requirements": {
+        "logo": {
+          "label": "Logo",
+          "value": "100 x 100 px",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "image": {
+          "label": "Image",
+          "value": "<1 MB JPEG, PNG or GIF",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "dimensions": {
+          "label": "Dimensions",
+          "value": "1200 x 628 px or '1:91:1' (source typo for 1.91:1)",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "loop": {
+          "label": "Loop",
+          "value": "'30 sec. loop' listed with no field label (probably GIF loop length; not explained)",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "notes": "en-gb enterprise page. The US equivalent URL (/en-us/enterprise/creative-specs) redirects to the Nextdoor Ads Manager (NAM) page with different values (ND-007). No en-ca page found (404)."
+    },
+    {
+      "id": "ND-002",
+      "platform": "Nextdoor",
+      "format": "Video - Sponsored Posts, enterprise",
+      "placement": "Newsfeed (en-gb page)",
+      "source_url": "https://business.nextdoor.com/en-gb/enterprise/creative-specs",
+      "secondary_sources": [],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "advertiser_name": {
+          "label": "Advertiser name",
+          "value": "25 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "subject_line": {
+          "label": "Subject line",
+          "value": "70 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "body_copy_max": {
+          "label": "Body copy",
+          "value": "800 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "body_copy_truncation": {
+          "label": "Body copy before truncation",
+          "value": "90 characters",
+          "classification": "RECOMMENDATION"
+        },
+        "offer_text": {
+          "label": "Offer text",
+          "value": "50 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "cta": {
+          "label": "CTA",
+          "value": "10 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "recommendations": {},
+      "technical_requirements": {
+        "logo": {
+          "label": "Logo",
+          "value": "100 x 100 px",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "file": {
+          "label": "File",
+          "value": "50 MB, MOV or MP4",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "duration": {
+          "label": "Length",
+          "value": "3-120 seconds",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "ratio": {
+          "label": "Aspect ratio",
+          "value": "16:9",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "thumbnail": {
+          "label": "Thumbnail",
+          "value": "1200 x 628 px",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "notes": "Differs from US NAM video (ND-008)."
+    },
+    {
+      "id": "ND-003",
+      "platform": "Nextdoor",
+      "format": "Spotlight - Sponsored Posts, enterprise",
+      "placement": "Newsfeed (en-gb page)",
+      "source_url": "https://business.nextdoor.com/en-gb/enterprise/creative-specs",
+      "secondary_sources": [
+        "https://about.nextdoor.com/press-releases/nextdoor-introduces-ai-driven-ad-performance-optimization-and-new-video-ad-formats"
+      ],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {},
+      "recommendations": {
+        "image_copy": {
+          "label": "Image copy",
+          "value": "<30 characters recommended; keep legible; text is part of the image",
+          "classification": "RECOMMENDATION"
+        }
+      },
+      "technical_requirements": {
+        "logo": {
+          "label": "Logo",
+          "value": "100 x 100 px; minimum 100 x 100 px",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "image": {
+          "label": "Image",
+          "value": "<1 MB JPEG or PNG; 1200 x 1200 px or 1:1",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "sponsored_by": {
+          "label": "Sponsored by + logo",
+          "value": "Logo always preceded by 'Sponsored by [+ logo]'; if Nextdoor is not providing creative assistance, this must be included in the image",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "notes": "Spotlight appears only on the en-gb enterprise page; not listed on the US NAM specs page. The Nov 2025 press release mentions geo-personalized Spotlight creatives (US pilot), so the product exists in some form in the US; current US specs not found."
+    },
+    {
+      "id": "ND-004",
+      "platform": "Nextdoor",
+      "format": "Carousel - Sponsored Posts, enterprise",
+      "placement": "Newsfeed (en-gb page)",
+      "source_url": "https://business.nextdoor.com/en-gb/enterprise/creative-specs",
+      "secondary_sources": [],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "advertiser_name": {
+          "label": "Advertiser name",
+          "value": "25 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "subject_line": {
+          "label": "Subject line",
+          "value": "70 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "body_copy": {
+          "label": "Body copy",
+          "value": "240 characters (90 before truncation); 108 characters iOS",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "offer_text": {
+          "label": "Offer text",
+          "value": "33 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "cta": {
+          "label": "CTA",
+          "value": "10 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "recommendations": {
+        "product_image": {
+          "label": "Product image",
+          "value": "Ideal 464 x 464 px",
+          "classification": "RECOMMENDATION"
+        },
+        "end_card": {
+          "label": "Last card: logo or brand image",
+          "value": "Ideal 264 x 264 px; min 132 x 132 px",
+          "classification": "RECOMMENDATION"
+        }
+      },
+      "technical_requirements": {
+        "logo": {
+          "label": "Logo",
+          "value": "100 x 100 px",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "image": {
+          "label": "Image",
+          "value": "<1 MB JPEG or PNG",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "product_image_min": {
+          "label": "Product image minimum",
+          "value": "232 x 232 px at 1:1",
+          "classification": "REQUIREMENT"
+        },
+        "card_count": {
+          "label": "Images",
+          "value": "Min 1, max 5, excluding end card",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "notes": "Very different from US NAM carousel (ND-009: 2-10 cards, 1200 x 1200 min)."
+    },
+    {
+      "id": "ND-005",
+      "platform": "Nextdoor",
+      "format": "Digest",
+      "placement": "Digest email (en-gb page)",
+      "source_url": "https://business.nextdoor.com/en-gb/enterprise/creative-specs",
+      "secondary_sources": [],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "advertiser_name": {
+          "label": "Advertiser name",
+          "value": "25 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "subject_line": {
+          "label": "Subject line",
+          "value": "50 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "body_copy": {
+          "label": "Body copy",
+          "value": "90 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "cta": {
+          "label": "CTA",
+          "value": "10 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "recommendations": {},
+      "technical_requirements": {
+        "image": {
+          "label": "Image",
+          "value": "<1 MB JPEG or PNG; 250 x 250 px",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "notes": "en-gb only."
+    },
+    {
+      "id": "ND-006",
+      "platform": "Nextdoor",
+      "format": "For Sale & Free",
+      "placement": "For Sale & Free (en-gb page)",
+      "source_url": "https://business.nextdoor.com/en-gb/enterprise/creative-specs",
+      "secondary_sources": [],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "advertiser_name": {
+          "label": "Advertiser name",
+          "value": "25 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "body_copy": {
+          "label": "Body copy",
+          "value": "40 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "offer_text": {
+          "label": "Optional offer text (deal or price)",
+          "value": "13 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "recommendations": {},
+      "technical_requirements": {
+        "logo": {
+          "label": "Logo",
+          "value": "100 x 100 px",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "image": {
+          "label": "Image",
+          "value": "<1 MB JPG or PNG; 178 x 178 px",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "notes": ""
+    },
+    {
+      "id": "ND-007",
+      "platform": "Nextdoor",
+      "format": "Image ad - Nextdoor Ads Manager",
+      "placement": "Newsfeed (US)",
+      "source_url": "https://business.nextdoor.com/en-us/nam/nextdoor-ads-manager/creative-specs",
+      "secondary_sources": [
+        "https://about.nextdoor.com/sp-guidelines"
+      ],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "advertiser_name": {
+          "label": "Advertiser name",
+          "value": "70 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "headline": {
+          "label": "Headline",
+          "value": "70 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "body_copy_max": {
+          "label": "Body copy",
+          "value": "1,700 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "body_copy_truncation": {
+          "label": "Body copy before truncation",
+          "value": "90 characters",
+          "classification": "RECOMMENDATION"
+        },
+        "cta": {
+          "label": "CTA",
+          "value": "45 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "recommendations": {},
+      "technical_requirements": {
+        "logo": {
+          "label": "Logo",
+          "value": "100 x 100 px, cropped circular",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "dimensions": {
+          "label": "Resolution / ratio",
+          "value": "1200 x 628 px (1.91:1) or 1200 x 1200 px (1:1)",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "file": {
+          "label": "File",
+          "value": "Up to 150 MB; JPEG or PNG",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "emoji": {
+          "label": "Emojis / special formatting",
+          "value": "Not supported in ad copy",
+          "classification": "REQUIREMENT"
+        },
+        "quick_create": {
+          "label": "Quick Create",
+          "value": "Ads created in Quick Create mode appear only in Newsfeed",
+          "classification": "SOURCE_NOTE"
+        }
+      },
+      "notes": "about.nextdoor.com/sp-guidelines gives different values for the same NAM product (ND-013)."
+    },
+    {
+      "id": "ND-008",
+      "platform": "Nextdoor",
+      "format": "Video ad - Nextdoor Ads Manager",
+      "placement": "Newsfeed (US)",
+      "source_url": "https://business.nextdoor.com/en-us/nam/nextdoor-ads-manager/creative-specs",
+      "secondary_sources": [
+        "https://about.nextdoor.com/sp-guidelines"
+      ],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "advertiser_name": {
+          "label": "Advertiser name",
+          "value": "70 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "headline": {
+          "label": "Headline",
+          "value": "70 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "body_copy_max": {
+          "label": "Body copy",
+          "value": "1,700 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "body_copy_truncation": {
+          "label": "Body copy before truncation",
+          "value": "90 characters",
+          "classification": "RECOMMENDATION"
+        },
+        "cta": {
+          "label": "CTA",
+          "value": "45 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "recommendations": {
+        "duration": {
+          "label": "Recommended length",
+          "value": "Under 30 seconds, with subtitles",
+          "classification": "RECOMMENDATION"
+        }
+      },
+      "technical_requirements": {
+        "logo": {
+          "label": "Logo",
+          "value": "100 x 100 px, cropped circular",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "duration": {
+          "label": "Length",
+          "value": "2-300 seconds",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "ratio": {
+          "label": "Aspect ratio",
+          "value": "16:9 or 1:1",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "file": {
+          "label": "File",
+          "value": "Up to 500 MB; MOV or MP4",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "thumbnail": {
+          "label": "Thumbnail",
+          "value": "Auto-generated",
+          "classification": "SOURCE_NOTE"
+        }
+      },
+      "notes": ""
+    },
+    {
+      "id": "ND-009",
+      "platform": "Nextdoor",
+      "format": "Carousel ad - Nextdoor Ads Manager",
+      "placement": "Newsfeed (US)",
+      "source_url": "https://business.nextdoor.com/en-us/nam/nextdoor-ads-manager/creative-specs",
+      "secondary_sources": [
+        "https://about.nextdoor.com/press-releases/nextdoor-introduces-ai-driven-ad-performance-optimization-and-new-video-ad-formats"
+      ],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "advertiser_name": {
+          "label": "Advertiser name",
+          "value": "70 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "headline": {
+          "label": "Headline",
+          "value": "70 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "body_copy_max": {
+          "label": "Body copy",
+          "value": "1,700 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "body_copy_truncation": {
+          "label": "Body copy before truncation",
+          "value": "90 characters",
+          "classification": "RECOMMENDATION"
+        },
+        "cta": {
+          "label": "CTA",
+          "value": "30 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "recommendations": {},
+      "technical_requirements": {
+        "logo": {
+          "label": "Logo",
+          "value": "100 x 100 px, cropped circular",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "cards": {
+          "label": "Creative",
+          "value": "Images only; min 2, max 10",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "resolution": {
+          "label": "Resolution",
+          "value": "1200 x 1200 px minimum, 1:1",
+          "classification": "REQUIREMENT"
+        },
+        "file": {
+          "label": "File",
+          "value": "Up to 150 MB; JPEG or PNG",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "multi_destination": {
+          "label": "Multi-destination",
+          "value": "Offer text, CTA and URLs customizable per card",
+          "classification": "SOURCE_NOTE"
+        }
+      },
+      "notes": "Specs page says images only; Nextdoor's 12 Nov 2025 press release says videos can now be used in Carousel ads in all markets (US/CA/UK). Video-card specs not published."
+    },
+    {
+      "id": "ND-010",
+      "platform": "Nextdoor",
+      "format": "Lead Gen ad - Nextdoor Ads Manager",
+      "placement": "Newsfeed (US)",
+      "source_url": "https://business.nextdoor.com/en-us/nam/nextdoor-ads-manager/creative-specs",
+      "secondary_sources": [
+        "https://about.nextdoor.com/sp-guidelines"
+      ],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "advertiser_name": {
+          "label": "Advertiser name",
+          "value": "70 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "headline": {
+          "label": "Headline",
+          "value": "70 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "body_copy_max": {
+          "label": "Body copy",
+          "value": "1,700 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "body_copy_truncation": {
+          "label": "Body copy before truncation",
+          "value": "90 characters",
+          "classification": "RECOMMENDATION"
+        },
+        "cta": {
+          "label": "CTA",
+          "value": "45 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "recommendations": {},
+      "technical_requirements": {
+        "logo": {
+          "label": "Logo",
+          "value": "100 x 100 px, cropped circular",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "creative": {
+          "label": "Creative",
+          "value": "Image or video; 16:9 or 1:1",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "file": {
+          "label": "File",
+          "value": "Image up to 150 MB JPEG/PNG; video up to 500 MB MP4/MOV",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "form_fields": {
+          "label": "Form fields",
+          "value": "Min 2, max 11; prefilled questions, up to 3 custom and up to 3 multiple-choice",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "privacy": {
+          "label": "Privacy policy link",
+          "value": "Advertiser URL required",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "notes": ""
+    },
+    {
+      "id": "ND-011",
+      "platform": "Nextdoor",
+      "format": "For Sale & Free image ad - Nextdoor Ads Manager",
+      "placement": "For Sale & Free (US)",
+      "source_url": "https://business.nextdoor.com/en-us/nam/nextdoor-ads-manager/creative-specs",
+      "secondary_sources": [],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "advertiser_name": {
+          "label": "Advertiser name",
+          "value": "70 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "headline": {
+          "label": "Headline",
+          "value": "70 characters max; renders as 2 lines",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "recommendations": {
+        "image_content": {
+          "label": "Image content",
+          "value": "Product-only images (platform claim: almost double CTR vs products with people)",
+          "classification": "PLATFORM_CLAIM (not a spec)"
+        }
+      },
+      "technical_requirements": {
+        "image": {
+          "label": "Image",
+          "value": "1:1; max 150 MB; JPEG or PNG",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "notes": ""
+    },
+    {
+      "id": "ND-012",
+      "platform": "Nextdoor",
+      "format": "Right Hand Rail image ad - Nextdoor Ads Manager",
+      "placement": "Right Hand Rail, desktop only (US)",
+      "source_url": "https://business.nextdoor.com/en-us/nam/nextdoor-ads-manager/creative-specs",
+      "secondary_sources": [],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "advertiser_name": {
+          "label": "Advertiser name",
+          "value": "70 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "headline": {
+          "label": "Headline",
+          "value": "70 characters max",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "cta": {
+          "label": "CTA",
+          "value": "45 characters",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "recommendations": {
+        "text_in_image": {
+          "label": "Text in image",
+          "value": "Right-hand rail ads should contain no text",
+          "classification": "RECOMMENDATION"
+        }
+      },
+      "technical_requirements": {
+        "image": {
+          "label": "Image",
+          "value": "1:1; max 150 MB; JPEG or PNG",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "notes": ""
+    },
+    {
+      "id": "ND-013",
+      "platform": "Nextdoor",
+      "format": "Nextdoor Ads specs (alternate official page)",
+      "placement": "Newsfeed, For Sale & Free, Right Hand Rail",
+      "source_url": "https://about.nextdoor.com/sp-guidelines",
+      "secondary_sources": [],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "for_sale_free": {
+          "label": "For Sale & Free",
+          "value": "Advertiser name 25; headline 45 (2 lines); 1:1 image",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "right_rail": {
+          "label": "Right Hand Rail",
+          "value": "Advertiser name 25; headline 70; CTA 20; 1:1 image; desktop only",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "recommendations": {},
+      "technical_requirements": {
+        "image": {
+          "label": "Image ad",
+          "value": "1200 x 628 px labeled '16:9 rectangle'; up to 150 MB JPEG/PNG; CTA 20; body 1,500 (90 before truncation)",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "video": {
+          "label": "Video ad",
+          "value": "2-120 s (recommend under 30 s with subtitles); 16:9; up to 500 MB MOV/MP4; CTA 20; body 1,500",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "carousel": {
+          "label": "Carousel ad",
+          "value": "2-10 images; 1200 x 1200 min; 1:1; 150 MB JPG/PNG; body 1,500",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "lead_gen": {
+          "label": "Lead Gen ad",
+          "value": "Image only; 16:9; 150 MB; 2-8 form fields, up to 3 custom; CTA 20; body 1,500",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        }
+      },
+      "notes": "Older-looking duplicate of the NAM specs on about.nextdoor.com. Every overlapping value except logo and carousel image rules conflicts with ND-007..ND-012. 1200 x 628 is 1.91:1, not 16:9."
+    },
+    {
+      "id": "ND-014",
+      "platform": "Nextdoor",
+      "format": "Small-business self-serve ads",
+      "placement": "Newsfeed, For Sale, Right Hand Rail (auto-formatted)",
+      "source_url": "https://business.nextdoor.com/en/en-us/small-business/resources/ads-creative-specs",
+      "secondary_sources": [
+        "https://business.nextdoor.com/en-us/local/localdealstransition"
+      ],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "headline": {
+          "label": "Headline",
+          "value": "120 characters (specs page); Local Deals transition page: 70-character headline for 'Get more messages' and 'Promote a sale or discount'",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "cta": {
+          "label": "CTA",
+          "value": "Select from pulldown",
+          "classification": "SOURCE_NOTE"
+        }
+      },
+      "recommendations": {},
+      "technical_requirements": {
+        "photo_a": {
+          "label": "Photo (first tab)",
+          "value": "1:1; JPG or PNG; max 30 MB; 1080 x 1080",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "photo_b": {
+          "label": "Photo (second tab, labeled Newsfeed)",
+          "value": "2:1; JPG or PNG; max 30 MB; 1080 x 540",
+          "classification": "PUBLISHED_LIMIT (not labeled requirement or recommendation)"
+        },
+        "local_deals": {
+          "label": "Local Deals",
+          "value": "Converted into ads managed in the business account 'Ads' tab; budgets converted to daily, neighborhoods to ZIP codes",
+          "classification": "SOURCE_NOTE"
+        }
+      },
+      "notes": "Tab labels ('Increase website visits', 'Promote a sale or discount') do not map cleanly to the two spec blocks in the retrieved HTML. Headline length conflicts between the two pages."
+    }
+  ]
+}

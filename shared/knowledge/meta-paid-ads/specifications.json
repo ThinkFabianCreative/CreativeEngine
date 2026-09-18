@@ -1,0 +1,1592 @@
+{
+  "title": "Meta paid advertising: documented placement-format specifications",
+  "checked_on": "2026-09-12",
+  "version": "1.0",
+  "scope": "66 observed format-placement entries; not a guarantee of all account availability or all objective variants",
+  "records": [
+    {
+      "id": "META-001",
+      "format": "image",
+      "placement": "Facebook Feed",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/image",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "4:5",
+        "resolution_px": "1440 x 1800",
+        "text_characters_primary_headline_description": "50–150/27/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "30 MB",
+        "minimum_dimensions_px": "600w; 750h at 4:5",
+        "duration": "—",
+        "card_count": "—"
+      },
+      "notes": "3% ratio tolerance."
+    },
+    {
+      "id": "META-002",
+      "format": "image",
+      "placement": "Instagram Feed",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/image/instagram-feed",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "4:5",
+        "resolution_px": "1440 x 1800",
+        "text_characters_primary_headline_description": "125/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "30 MB",
+        "minimum_dimensions_px": "500w",
+        "duration": "—",
+        "card_count": "—"
+      },
+      "notes": "Supported ratio bounds 400:500 to 191:100; 1% tolerance; hashtags 30 in text recommendations."
+    },
+    {
+      "id": "META-003",
+      "format": "image",
+      "placement": "Facebook Stories",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/image/facebook-story",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "9:16",
+        "resolution_px": "1440 x 2560",
+        "text_characters_primary_headline_description": "125/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "30 MB",
+        "minimum_dimensions_px": "500w",
+        "duration": "Display: 8 seconds or swipe",
+        "card_count": "—"
+      },
+      "notes": "1% tolerance; safe zone 14% top / 35% bottom / 6% sides."
+    },
+    {
+      "id": "META-004",
+      "format": "image",
+      "placement": "Instagram Stories",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/image/instagram-story",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "9:16",
+        "resolution_px": "1440 x 2560",
+        "text_characters_primary_headline_description": "125/—/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "30 MB",
+        "minimum_dimensions_px": "500w",
+        "duration": "Display: 5–16 seconds or swipe",
+        "card_count": "—"
+      },
+      "notes": "1% tolerance; safe zone 14% top / 35% bottom / 6% sides."
+    },
+    {
+      "id": "META-005",
+      "format": "image",
+      "placement": "Instagram Reels",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/image/instagram-reels",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "9:16",
+        "resolution_px": "1440 x 2560",
+        "text_characters_primary_headline_description": "44/—/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "30 MB",
+        "minimum_dimensions_px": "500w",
+        "duration": "—",
+        "card_count": "—"
+      },
+      "notes": "1% tolerance; safe zone 14% top / 35% bottom / 6% sides."
+    },
+    {
+      "id": "META-006",
+      "format": "image",
+      "placement": "Facebook Reels",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/image/facebook-facebook-reels",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "9:16",
+        "resolution_px": "1440 x 2560",
+        "text_characters_primary_headline_description": "40/55/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "30 MB",
+        "minimum_dimensions_px": "600w x 600h",
+        "duration": "—",
+        "card_count": "—"
+      },
+      "notes": "3% tolerance. Page contains small-image/no-text advice despite fullscreen dimensions; preview treatment."
+    },
+    {
+      "id": "META-007",
+      "format": "image",
+      "placement": "Facebook Marketplace",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/image/facebook-marketplace",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/40/30"
+      },
+      "technical_requirements": {
+        "file_size_max": "30 MB",
+        "minimum_dimensions_px": "—",
+        "duration": "—",
+        "card_count": "—"
+      },
+      "notes": "Do not import an unpublished minimum from another placement."
+    },
+    {
+      "id": "META-008",
+      "format": "image",
+      "placement": "Facebook Right Column",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/image/facebook-right-hand-column",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Traffic / Website; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "—/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "—",
+        "minimum_dimensions_px": "254w x 133h",
+        "duration": "—",
+        "card_count": "—"
+      },
+      "notes": "Meta discourages image text for the small display. File-size cap not listed in this entry."
+    },
+    {
+      "id": "META-009",
+      "format": "image",
+      "placement": "Instagram Explore home",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/image/instagram-explore-home",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "4:5",
+        "resolution_px": "1440 x 1800",
+        "text_characters_primary_headline_description": "125/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "30 MB",
+        "minimum_dimensions_px": "500w",
+        "duration": "—",
+        "card_count": "—"
+      },
+      "notes": "Supported ratio bounds 400:500 to 191:100; 1% tolerance; hashtags 30 in text recommendations."
+    },
+    {
+      "id": "META-010",
+      "format": "image",
+      "placement": "Facebook Search Results",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/image/facebook-search",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "1.91:1 to 1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/40/30"
+      },
+      "technical_requirements": {
+        "file_size_max": "30 MB",
+        "minimum_dimensions_px": "600w x 600h",
+        "duration": "—",
+        "card_count": "—"
+      },
+      "notes": "3% tolerance. Choose dimensions consistent with actual selected ratio."
+    },
+    {
+      "id": "META-011",
+      "format": "image",
+      "placement": "Facebook Business Explore",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/image/facebook-biz-disco-feed",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "1.91:1 to 1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/27/27"
+      },
+      "technical_requirements": {
+        "file_size_max": "30 MB",
+        "minimum_dimensions_px": "600w x 600h",
+        "duration": "—",
+        "card_count": "—"
+      },
+      "notes": "3% tolerance; current account placement availability untested."
+    },
+    {
+      "id": "META-012",
+      "format": "image",
+      "placement": "Messenger Stories",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/image/messenger-story",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "9:16",
+        "resolution_px": "At least 1080 x 1080 (source wording)",
+        "text_characters_primary_headline_description": "125/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "30 MB",
+        "minimum_dimensions_px": "500w",
+        "duration": "—",
+        "card_count": "—"
+      },
+      "notes": "1% tolerance. Ratio and listed resolution do not specify a coherent exact canvas; see conflicts. Source safe-zone percentages 14% top / 20% bottom."
+    },
+    {
+      "id": "META-013",
+      "format": "image",
+      "placement": "Ads on Facebook Reels (overlay)",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/image/facebook-facebook-reels-overlay",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Traffic / Website; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "60/10/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "30 MB",
+        "minimum_dimensions_px": "300w x 300h",
+        "duration": "—",
+        "card_count": "—"
+      },
+      "notes": "0% tolerance. Distinct from fullscreen Facebook Reels; confirm current delivery."
+    },
+    {
+      "id": "META-014",
+      "format": "image",
+      "placement": "Facebook In-Stream Video",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/image/facebook-instream-video",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "1.91:1 to 1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/40/30"
+      },
+      "technical_requirements": {
+        "file_size_max": "30 MB",
+        "minimum_dimensions_px": "600w x 600h",
+        "duration": "—",
+        "card_count": "—"
+      },
+      "notes": "3% tolerance. Current availability of legacy-labeled placement untested."
+    },
+    {
+      "id": "META-015",
+      "format": "image",
+      "placement": "Facebook video feeds ads",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/image/facebook-video-feeds",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "1.91:1 to 4:5",
+        "resolution_px": "1440 x 1440 at 1:1; 1440 x 1800 at 4:5",
+        "text_characters_primary_headline_description": "50–150/27/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "30 MB",
+        "minimum_dimensions_px": "600w; 600h at 1:1 / 750h at 4:5",
+        "duration": "—",
+        "card_count": "—"
+      },
+      "notes": "3% tolerance. Legacy-labeled menu entry; current delivery untested."
+    },
+    {
+      "id": "META-016",
+      "format": "image",
+      "placement": "Audience Network Native, Banner and Interstitial",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/image/audience-network-native",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "9:16",
+        "resolution_px": "At least 398 x 208 (source wording)",
+        "text_characters_primary_headline_description": "125/40/30"
+      },
+      "technical_requirements": {
+        "file_size_max": "30 MB",
+        "minimum_dimensions_px": "398w x 208h",
+        "duration": "—",
+        "card_count": "—"
+      },
+      "notes": "Grouped placement with conflicting ratio/resolution; do not convert into one universal banner canvas."
+    },
+    {
+      "id": "META-017",
+      "format": "image",
+      "placement": "Audience Network Rewarded Video",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/image/audience-network-rewarded-video",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Traffic / Website; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "QUARANTINED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "4:5",
+        "resolution_px": "1440 x 1800",
+        "text_characters_primary_headline_description": "50–150/27/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "30 MB",
+        "minimum_dimensions_px": "600w; 750h at 4:5",
+        "duration": "—",
+        "card_count": "—"
+      },
+      "notes": "QUARANTINE: description and numbers repeat Facebook Feed despite Rewarded Video heading. Not proof that a standalone image is eligible."
+    },
+    {
+      "id": "META-018",
+      "format": "video",
+      "placement": "Facebook Feed",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/video",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "MP4/MOV/GIF",
+        "aspect_ratio": "4:5",
+        "resolution_px": "1440 x 1800",
+        "text_characters_primary_headline_description": "50–150/27/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "4 GB",
+        "minimum_dimensions_px": "120w x 120h",
+        "duration": "1 second–241 minutes",
+        "card_count": "—"
+      },
+      "notes": "Do not confuse upload duration with a useful ad length. Mobile footer can be hidden by objective/performance-goal configuration; see production notes."
+    },
+    {
+      "id": "META-019",
+      "format": "video",
+      "placement": "Instagram Feed",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/video/instagram-feed",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "MP4/MOV/GIF",
+        "aspect_ratio": "9:16",
+        "resolution_px": "1080 x 1920",
+        "text_characters_primary_headline_description": "125/—/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "4 GB",
+        "minimum_dimensions_px": "250w",
+        "duration": "1 second–60 minutes",
+        "card_count": "—"
+      },
+      "notes": "1% tolerance. Hashtags 30 in text recommendations. 9:16 uses Stories/Reels safe-zone guidance."
+    },
+    {
+      "id": "META-020",
+      "format": "video",
+      "placement": "Facebook Stories",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/video/facebook-story",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "MP4/MOV/GIF",
+        "aspect_ratio": "9:16",
+        "resolution_px": "1440 x 2560",
+        "text_characters_primary_headline_description": "125/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "4 GB",
+        "minimum_dimensions_px": "250w",
+        "duration": "1 second–3 minutes",
+        "card_count": "—"
+      },
+      "notes": "1% tolerance. Source says 14% top / 20% bottom, unlike Facebook image Stories; preview current safe-zone overlay."
+    },
+    {
+      "id": "META-021",
+      "format": "video",
+      "placement": "Instagram Stories",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/video/instagram-story",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "MP4/MOV/GIF",
+        "aspect_ratio": "9:16",
+        "resolution_px": "1440 x 2560",
+        "text_characters_primary_headline_description": "125/—/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "4 GB",
+        "minimum_dimensions_px": "250w",
+        "duration": "1 second–60 minutes",
+        "card_count": "—"
+      },
+      "notes": "1% tolerance; safe zone 14% top / 35% bottom / 6% sides. Upload length is not guaranteed uninterrupted display."
+    },
+    {
+      "id": "META-022",
+      "format": "video",
+      "placement": "Instagram Reels",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/video/instagram-reels",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "recommendations": {
+        "file_types": "MP4/MOV",
+        "aspect_ratio": "9:16",
+        "resolution_px": "1440 x 2560",
+        "text_characters_primary_headline_description": "44/—/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "4 GB",
+        "minimum_dimensions_px": "250w under 30 seconds; 500w at 30 seconds or longer",
+        "duration": "Source: 0 seconds–15 minutes",
+        "card_count": "—"
+      },
+      "notes": "MP4/MOV only in this entry; 0-second lower bound is anomalous, not a usable export. Safe zone 14% top / 35% bottom / 6% sides. Additional restrictions in video notes."
+    },
+    {
+      "id": "META-023",
+      "format": "video",
+      "placement": "Facebook Reels",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/video/facebook-facebook-reels",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "recommendations": {
+        "file_types": "MP4/MOV/GIF",
+        "aspect_ratio": "9:16",
+        "resolution_px": "1440 x 2560",
+        "text_characters_primary_headline_description": "40/55/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "Source: no maximum duration",
+        "card_count": "—"
+      },
+      "notes": "Do not interpret duration wording as a universal account guarantee. Source says no auto-captioning; captions optional/recommended."
+    },
+    {
+      "id": "META-024",
+      "format": "video",
+      "placement": "Facebook In-Stream Video",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/video/facebook-instream-video",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "MP4/MOV/GIF",
+        "aspect_ratio": "16:9 or 1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "Desktop 5–15 seconds; mobile 5 seconds–10 minutes; varies by objective",
+        "card_count": "—"
+      },
+      "notes": "Source describes truncation after first 15 seconds for longer ads and possible skip after 5 seconds. Confirm current placement and format treatment."
+    },
+    {
+      "id": "META-025",
+      "format": "video",
+      "placement": "Facebook Marketplace",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/video/facebook-marketplace",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "MP4/MOV/GIF",
+        "aspect_ratio": "1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "—/25/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "4 GB",
+        "minimum_dimensions_px": "120w x 120h",
+        "duration": "1 second–241 minutes",
+        "card_count": "—"
+      },
+      "notes": "Primary text is not specified in this inspected entry."
+    },
+    {
+      "id": "META-026",
+      "format": "video",
+      "placement": "Facebook Search Results",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/video/facebook-search",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "MP4/MOV/GIF",
+        "aspect_ratio": "1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/40/30"
+      },
+      "technical_requirements": {
+        "file_size_max": "4 GB",
+        "minimum_dimensions_px": "120w x 120h",
+        "duration": "1 second–241 minutes",
+        "card_count": "—"
+      },
+      "notes": "Long upload allowance is not a creative recommendation."
+    },
+    {
+      "id": "META-027",
+      "format": "video",
+      "placement": "Facebook Business Explore",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/video/facebook-biz-disco-feed",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "MP4/MOV/GIF",
+        "aspect_ratio": "1:1 desktop/mobile; 4:5 mobile",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/27/27"
+      },
+      "technical_requirements": {
+        "file_size_max": "4 GB",
+        "minimum_dimensions_px": "120w x 120h",
+        "duration": "1 second–241 minutes",
+        "card_count": "—"
+      },
+      "notes": "Actual account availability untested."
+    },
+    {
+      "id": "META-028",
+      "format": "video",
+      "placement": "Audience Network Native, Banner and Interstitial",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/video/audience-network-native",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "MP4/MOV/GIF",
+        "aspect_ratio": "9:16",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/40/30"
+      },
+      "technical_requirements": {
+        "file_size_max": "4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "1 second–2 minutes",
+        "card_count": "—"
+      },
+      "notes": "Caption tracks not supported per page. Grouped placements; verify actual rendering."
+    },
+    {
+      "id": "META-029",
+      "format": "video",
+      "placement": "Audience Network Rewarded Video",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/video/audience-network-rewarded-video",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Traffic / Website; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "MP4/MOV/GIF",
+        "aspect_ratio": "9:16",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/40/30"
+      },
+      "technical_requirements": {
+        "file_size_max": "4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "3–61 seconds",
+        "card_count": "—"
+      },
+      "notes": "Caption tracks not supported per page; do not replace 61 with a remembered 60-second limit."
+    },
+    {
+      "id": "META-030",
+      "format": "video",
+      "placement": "Messenger Stories",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/video/messenger-story",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "MP4/MOV/GIF",
+        "aspect_ratio": "9:16",
+        "resolution_px": "1080 x 1920",
+        "text_characters_primary_headline_description": "125/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "4 GB",
+        "minimum_dimensions_px": "500w",
+        "duration": "1–60 seconds",
+        "card_count": "—"
+      },
+      "notes": "1% tolerance. Source recommends 14% top and bottom, with approximate pixel examples; use live preview."
+    },
+    {
+      "id": "META-031",
+      "format": "video",
+      "placement": "Instagram Explore home",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/video/instagram-explore-home",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "MP4/MOV/GIF",
+        "aspect_ratio": "9:16",
+        "resolution_px": "1080 x 1920",
+        "text_characters_primary_headline_description": "125/—/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "4 GB",
+        "minimum_dimensions_px": "250w",
+        "duration": "1 second–60 minutes",
+        "card_count": "—"
+      },
+      "notes": "1% tolerance."
+    },
+    {
+      "id": "META-032",
+      "format": "video",
+      "placement": "Ads on Facebook Reels (overlay)",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/video/facebook-facebook-reels-overlay",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "MP4/MOV",
+        "aspect_ratio": "1:1",
+        "resolution_px": "1440 x 1440",
+        "text_characters_primary_headline_description": "60/—/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "4–15 seconds",
+        "card_count": "—"
+      },
+      "notes": "MP4/MOV only in this entry; distinct from fullscreen Reels; confirm current availability."
+    },
+    {
+      "id": "META-033",
+      "format": "video",
+      "placement": "Facebook Right Column",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/video/facebook-right-hand-column",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Traffic / Website; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "QUARANTINED",
+      "recommendations": {
+        "file_types": "MP4/MOV/GIF",
+        "aspect_ratio": "1:1 desktop/mobile; 4:5 mobile",
+        "resolution_px": "1440 x 1440 / 1440 x 1800",
+        "text_characters_primary_headline_description": "50–150/27/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "4 GB",
+        "minimum_dimensions_px": "120w x 120h",
+        "duration": "1 second–241 minutes",
+        "card_count": "—"
+      },
+      "notes": "QUARANTINE: Feed-style description, mobile wording and 360-video section on Right Column route; not confirmed video eligibility."
+    },
+    {
+      "id": "META-034",
+      "format": "video",
+      "placement": "Facebook Groups Feed",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/video/facebook-groups-feed",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "QUARANTINED",
+      "recommendations": {
+        "file_types": "MP4/MOV/GIF",
+        "aspect_ratio": "1:1 desktop/mobile; 4:5 mobile",
+        "resolution_px": "1440 x 1440 / 1440 x 1800",
+        "text_characters_primary_headline_description": "50–150/27/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "4 GB",
+        "minimum_dimensions_px": "120w x 120h",
+        "duration": "1 second–241 minutes",
+        "card_count": "—"
+      },
+      "notes": "QUARANTINE: Feed-style fallback content on legacy-labeled Groups route; current availability unconfirmed."
+    },
+    {
+      "id": "META-035",
+      "format": "carousel",
+      "placement": "Facebook Feed",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/carousel",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV/GIF",
+        "aspect_ratio": "1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "80/20/18"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "Video 1 second–240 minutes",
+        "card_count": "2–10"
+      },
+      "notes": "3% tolerance; landing URL required. Source introduction mistakenly says video format, but carousel-specific fields are present."
+    },
+    {
+      "id": "META-036",
+      "format": "carousel",
+      "placement": "Instagram Feed",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/carousel/instagram-feed",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV/GIF",
+        "aspect_ratio": "4:5 image-only; video-containing: only 1:1 supported (source wording)",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/—/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "Video 1 second–2 minutes",
+        "card_count": "2–10"
+      },
+      "notes": "1% tolerance; landing URL required. Conflict: carousel best-practices help restricts 4:5 to catalog images; verify setup before promising 4:5."
+    },
+    {
+      "id": "META-037",
+      "format": "carousel",
+      "placement": "Facebook Stories",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/carousel/facebook-story",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "1:1 (source wording)",
+        "resolution_px": "At least 1080 x 1920 (source wording)",
+        "text_characters_primary_headline_description": "125/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB",
+        "minimum_dimensions_px": "500w",
+        "duration": "Video not supported",
+        "card_count": "3–10"
+      },
+      "notes": "Images only; URL required. Ratio/resolution conflict. Source safe zone 14% top / 20% bottom; 1–5 cards may show automatically before expansion."
+    },
+    {
+      "id": "META-038",
+      "format": "carousel",
+      "placement": "Instagram Stories",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/carousel/instagram-story",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV/GIF",
+        "aspect_ratio": "9:16",
+        "resolution_px": "At least 1080 x 1920",
+        "text_characters_primary_headline_description": "125/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "Video 1–15 seconds",
+        "card_count": "2–10"
+      },
+      "notes": "1% tolerance; URL required; safe zone 14% top / 35% bottom / 6% sides."
+    },
+    {
+      "id": "META-039",
+      "format": "carousel",
+      "placement": "Facebook Reels",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/carousel/facebook-facebook-reels",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "9:16",
+        "resolution_px": "At least 1080 x 1920",
+        "text_characters_primary_headline_description": "40/—/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB",
+        "minimum_dimensions_px": "500w x 262h",
+        "duration": "Video not specified",
+        "card_count": "2–10"
+      },
+      "notes": "1% tolerance; source describes product tiles and requires Catalog or Advantage+ catalog creative source to enable their links; safe zone 14/35/6."
+    },
+    {
+      "id": "META-040",
+      "format": "carousel",
+      "placement": "Instagram Reels",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/carousel/instagram-reels",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "9:16",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "—/—/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB",
+        "minimum_dimensions_px": "—",
+        "duration": "Video not specified",
+        "card_count": "2–10"
+      },
+      "notes": "1% tolerance; image format documented. Catalog variation uses horizontally swipeable product thumbnails; exact recommended canvas unclear."
+    },
+    {
+      "id": "META-041",
+      "format": "carousel",
+      "placement": "Facebook Marketplace",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/carousel/facebook-marketplace",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV/GIF",
+        "aspect_ratio": "1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/40/20"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "Video 1 second–240 minutes",
+        "card_count": "2–10"
+      },
+      "notes": "3% tolerance; URL required."
+    },
+    {
+      "id": "META-042",
+      "format": "carousel",
+      "placement": "Facebook Search Results",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/carousel/facebook-search",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV/GIF",
+        "aspect_ratio": "1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/40/20"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "Video 1 second–240 minutes",
+        "card_count": "2–10"
+      },
+      "notes": "3% tolerance; URL required."
+    },
+    {
+      "id": "META-043",
+      "format": "carousel",
+      "placement": "Facebook Business Explore",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/carousel/facebook-biz-disco-feed",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV/GIF",
+        "aspect_ratio": "1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/32/18"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "Video 1 second–240 minutes",
+        "card_count": "2–10"
+      },
+      "notes": "3% tolerance; URL required."
+    },
+    {
+      "id": "META-044",
+      "format": "carousel",
+      "placement": "Instagram Explore home",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/carousel/instagram-explore-home",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "4:5",
+        "resolution_px": "1080 x 1080 (source wording)",
+        "text_characters_primary_headline_description": "125/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB",
+        "minimum_dimensions_px": "500w",
+        "duration": "Video specs absent",
+        "card_count": "2–10"
+      },
+      "notes": "1% tolerance; URL required. Description mentions video but specs list only images. Ratio/resolution conflict; verify before exporting."
+    },
+    {
+      "id": "META-045",
+      "format": "carousel",
+      "placement": "Facebook Right Column",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/carousel/facebook-right-hand-column",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Traffic / Website; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV/GIF",
+        "aspect_ratio": "1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "—/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB (source)",
+        "minimum_dimensions_px": "—",
+        "duration": "Video 1 second–240 minutes (source)",
+        "card_count": "2–10"
+      },
+      "notes": "3% tolerance; URL required. Video specs in this entry do not independently establish current Right Column video delivery."
+    },
+    {
+      "id": "META-046",
+      "format": "carousel",
+      "placement": "Facebook In-Stream Video",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/carousel/facebook-instream-video",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "QUARANTINED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/40/30"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 4 GB; video 4 GB (source)",
+        "minimum_dimensions_px": "600w x 600h",
+        "duration": "Video up to 15 seconds",
+        "card_count": "Source says 10"
+      },
+      "notes": "QUARANTINE: anomalous image 4 GB cap and ambiguous card count. Reconfirm specs; do not use this image cap for exports."
+    },
+    {
+      "id": "META-047",
+      "format": "carousel",
+      "placement": "Facebook video feeds ads",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/carousel/facebook-video-feeds",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV/GIF",
+        "aspect_ratio": "1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "80/20/18"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "Video 1 second–240 minutes",
+        "card_count": "2–10"
+      },
+      "notes": "3% tolerance; URL required. Legacy-labeled entry; account availability untested."
+    },
+    {
+      "id": "META-048",
+      "format": "carousel",
+      "placement": "Ads on Facebook Reels (overlay)",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/carousel/facebook-facebook-reels-overlay",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "60/10/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB",
+        "minimum_dimensions_px": "600w x 600h",
+        "duration": "Video not specified",
+        "card_count": "Source says 10"
+      },
+      "notes": "3% tolerance; no minimum card count stated. Do not infer one; distinguish overlay from fullscreen Reels."
+    },
+    {
+      "id": "META-049",
+      "format": "carousel",
+      "placement": "Audience Network Native, Banner and Interstitial",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/carousel/audience-network-native",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV/GIF",
+        "aspect_ratio": "1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/40/20"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "Video 1–240 seconds",
+        "card_count": "2–10"
+      },
+      "notes": "URL required. Duration is seconds, not the Facebook carousel minutes limit."
+    },
+    {
+      "id": "META-050",
+      "format": "carousel",
+      "placement": "Audience Network Rewarded Video",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/carousel/audience-network-rewarded-video",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Traffic / Website; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "QUARANTINED",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV/GIF",
+        "aspect_ratio": "1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "80/20/18"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "Video 1 second–240 minutes (source)",
+        "card_count": "2–10"
+      },
+      "notes": "QUARANTINE: Facebook Feed carousel fallback description; current eligibility not established."
+    },
+    {
+      "id": "META-051",
+      "format": "carousel",
+      "placement": "Messenger Stories",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/carousel/messenger-story",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "QUARANTINED",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV/GIF",
+        "aspect_ratio": "1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "80/20/18"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "Video 1 second–240 minutes (source)",
+        "card_count": "2–10"
+      },
+      "notes": "QUARANTINE: Facebook Feed carousel fallback description; current eligibility not established."
+    },
+    {
+      "id": "META-052",
+      "format": "carousel",
+      "placement": "Facebook Groups Feed",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/carousel/facebook-groups-feed",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "QUARANTINED",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV/GIF",
+        "aspect_ratio": "1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "80/20/18"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "Video 1 second–240 minutes (source)",
+        "card_count": "2–10"
+      },
+      "notes": "QUARANTINE: Facebook Feed carousel fallback description on legacy-labeled route; current eligibility unconfirmed."
+    },
+    {
+      "id": "META-053",
+      "format": "collection",
+      "placement": "Facebook Feed",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/collection",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV/GIF",
+        "aspect_ratio": "1.91:1 to 1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "Not published here",
+        "card_count": "Not a carousel"
+      },
+      "notes": "Instant Experience and landing URL required; cover comes from first Instant Experience media; cover plus 3 product images described."
+    },
+    {
+      "id": "META-054",
+      "format": "collection",
+      "placement": "Instagram Feed",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/collection/instagram-feed",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV/GIF",
+        "aspect_ratio": "1.91:1 to 1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB",
+        "minimum_dimensions_px": "500w x 500h",
+        "duration": "Not published here",
+        "card_count": "Not a carousel"
+      },
+      "notes": "Instant Experience and landing URL required."
+    },
+    {
+      "id": "META-055",
+      "format": "collection",
+      "placement": "Instagram Stories",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/collection/instagram-story",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV/GIF",
+        "aspect_ratio": "1.91:1 to 1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/—/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB",
+        "minimum_dimensions_px": "500w x 500h",
+        "duration": "Not published here",
+        "card_count": "Not a carousel"
+      },
+      "notes": "Instant Experience and landing URL required. These are collection-cover dimensions, not a generic Stories canvas."
+    },
+    {
+      "id": "META-056",
+      "format": "collection",
+      "placement": "Instagram Reels",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/collection/instagram-reels",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV",
+        "aspect_ratio": "Cover 9:16; product image 1:1",
+        "resolution_px": "At least 500 x 888",
+        "text_characters_primary_headline_description": "—/—/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "Not published here",
+        "card_count": "Not a carousel"
+      },
+      "notes": "Instant Experience required; MP4/MOV video (no GIF listed)."
+    },
+    {
+      "id": "META-057",
+      "format": "collection",
+      "placement": "Facebook Reels",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/collection/facebook-facebook-reels",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Traffic / Website; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV/GIF",
+        "aspect_ratio": "9:16 to 1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "72/10/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "Not published here",
+        "card_count": "Not a carousel"
+      },
+      "notes": "Instant Experience and URL required; safe zone 14% top / 35% bottom / 6% sides."
+    },
+    {
+      "id": "META-058",
+      "format": "collection",
+      "placement": "Facebook video feeds ads",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/collection/facebook-video-feeds",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV/GIF",
+        "aspect_ratio": "1.91:1 to 1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "Not published here",
+        "card_count": "Not a carousel"
+      },
+      "notes": "Instant Experience and URL required. Legacy-labeled entry; delivery untested."
+    },
+    {
+      "id": "META-059",
+      "format": "collection",
+      "placement": "Facebook Marketplace",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/collection/facebook-marketplace",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "1:1",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "—/25/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB",
+        "minimum_dimensions_px": "—",
+        "duration": "Video not specified",
+        "card_count": "Not a carousel"
+      },
+      "notes": "JPG/PNG image only documented in inspected entry; Instant Experience required."
+    },
+    {
+      "id": "META-060",
+      "format": "collection",
+      "placement": "Instagram Explore",
+      "source_url": "https://www.facebook.com/business/ads-guide/update/collection/instagram-explore",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; visible main content",
+      "objective_context": "Awareness / On your ad; observed selection, not all variants audited",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "recommendations": {
+        "file_types": "JPG/PNG; MP4/MOV/GIF",
+        "aspect_ratio": "9:16",
+        "resolution_px": "At least 1080 x 1080",
+        "text_characters_primary_headline_description": "125/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Image 30 MB; video 4 GB",
+        "minimum_dimensions_px": "—",
+        "duration": "Not published here",
+        "card_count": "Not a carousel"
+      },
+      "notes": "Instant Experience and URL required; safe zone 14% top / 35% bottom / 6% sides; exact canvas unclear."
+    },
+    {
+      "id": "META-061",
+      "format": "image",
+      "placement": "Threads Feed",
+      "source_url": "https://www.facebook.com/business/help/655859553779869",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; expanded format sections",
+      "objective_context": "Help-center format guidance; consult conversion-location compatibility table",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "1.91:1–9:16 supported; taller than 4:5 center-cropped to 4:5",
+        "resolution_px": "1440 x 1440",
+        "text_characters_primary_headline_description": "80–160/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Not published in inspected section",
+        "minimum_dimensions_px": "No min/max resolution per source",
+        "duration": "—",
+        "card_count": "—"
+      },
+      "notes": "URLs unsupported in primary text; verify CTA rendering. File-size limit not published in inspected section."
+    },
+    {
+      "id": "META-062",
+      "format": "video",
+      "placement": "Threads Feed",
+      "source_url": "https://www.facebook.com/business/help/655859553779869",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; expanded format sections",
+      "objective_context": "Help-center format guidance; consult conversion-location compatibility table",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "MP4/MOV/GIF",
+        "aspect_ratio": "1.91:1–9:16 supported; taller than 4:5 center-cropped to 4:5",
+        "resolution_px": "1440 x 1800",
+        "text_characters_primary_headline_description": "80–160/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Not published in inspected section",
+        "minimum_dimensions_px": "No min/max resolution per source",
+        "duration": "Not published",
+        "card_count": "—"
+      },
+      "notes": "Caption tracks not supported. Source image section contains a video CTA non-rendering statement; preview rather than rely on CTA visibility."
+    },
+    {
+      "id": "META-063",
+      "format": "carousel",
+      "placement": "Threads Feed",
+      "source_url": "https://www.facebook.com/business/help/655859553779869",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; expanded format sections",
+      "objective_context": "Help-center format guidance; consult conversion-location compatibility table",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "1.91:1–9:16 supported; source says outside 4:5 center-cropped to 4:5",
+        "resolution_px": "1440 x 1440",
+        "text_characters_primary_headline_description": "80–160/40/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Not published in inspected section",
+        "minimum_dimensions_px": "No min/max resolution per source",
+        "duration": "Video not supported",
+        "card_count": "2–10"
+      },
+      "notes": "Images only; landing URL required. Crop wording differs from single-image guidance; confirm preview."
+    },
+    {
+      "id": "META-064",
+      "format": "image",
+      "placement": "WhatsApp Status",
+      "source_url": "https://www.facebook.com/business/help/723817683917948",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; expanded format sections",
+      "objective_context": "Help-center format guidance; consult conversion-location compatibility table",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "Native surface 9:16; source accepts aspect ratio smaller than 1.91:1",
+        "resolution_px": "720 x 1280",
+        "text_characters_primary_headline_description": "—/—/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Not published in inspected section",
+        "minimum_dimensions_px": "500w x 320h",
+        "duration": "—",
+        "card_count": "—"
+      },
+      "notes": "Rollout/country-dependent. Do not import Instagram limits; file-size cap unpublished here."
+    },
+    {
+      "id": "META-065",
+      "format": "video",
+      "placement": "WhatsApp Status",
+      "source_url": "https://www.facebook.com/business/help/723817683917948",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; expanded format sections",
+      "objective_context": "Help-center format guidance; consult conversion-location compatibility table",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "MP4/MOV/GIF",
+        "aspect_ratio": "Native surface 9:16; source accepts aspect ratio smaller than 1.91:1",
+        "resolution_px": "720 x 1280",
+        "text_characters_primary_headline_description": "—/—/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Not published in inspected section",
+        "minimum_dimensions_px": "120w x 120h",
+        "duration": "Not published",
+        "card_count": "—"
+      },
+      "notes": "Rollout/country-dependent; captions not supported; duration and file-size cap unpublished here."
+    },
+    {
+      "id": "META-066",
+      "format": "carousel",
+      "placement": "WhatsApp Status",
+      "source_url": "https://www.facebook.com/business/help/723817683917948",
+      "checked_on": "2026-09-12",
+      "source_access": "Live public browser DOM; expanded format sections",
+      "objective_context": "Help-center format guidance; consult conversion-location compatibility table",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "JPG/PNG",
+        "aspect_ratio": "9:16 recommended; source accepts aspect ratio smaller than 1.91:1",
+        "resolution_px": "720 x 1280",
+        "text_characters_primary_headline_description": "—/—/—"
+      },
+      "technical_requirements": {
+        "file_size_max": "Not published in inspected section",
+        "minimum_dimensions_px": "500w x 320h",
+        "duration": "Video not supported",
+        "card_count": "2–10"
+      },
+      "notes": "Images only. Rollout/country-dependent; file-size cap unpublished here."
+    }
+  ]
+}

@@ -1,0 +1,607 @@
+{
+  "title": "CTV and programmatic (DSP) display and video: documented standards and vendor specifications",
+  "checked_on": "2026-09-16",
+  "version": "1.0",
+  "scope": "IAB Tech Lab display, video and CTV guidance plus public specs from Google DV360, The Trade Desk, Amazon DSP, Yahoo DSP, Quantcast, Propensity, StackAdapt (unverified), Amazon Streaming TV/Prime Video, Disney+/Hulu and Roku self-serve. Seller- and DSP-dependent; not a guarantee of any account's acceptance.",
+  "records": [
+    {
+      "id": "IAB-001",
+      "standard_or_vendor": "IAB Tech Lab New Ad Portfolio (industry standard)",
+      "channel": "programmatic display",
+      "format": "fixed-size display units",
+      "source_url": "https://www.iab.com/wp-content/uploads/2019/04/IABNewAdPortfolio_LW_FixedSizeSpec.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Public PDF downloaded; text extracted locally",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "fixed_sizes_px": "970x250; 300x50 or 320x50; 728x90; 970x90; 300x1050; 160x600; 300x250; 120x60; phone interstitial 640x1136, 750x1334 or 1080x1920; feature phone 120x20, 168x28, 216x36",
+        "max_initial_load_kB": "970x250 250; 300x50/320x50 50; 728x90 150; 970x90 200; 300x1050 250; 160x600 150; 300x250 150; 120x60 50; phone interstitial 300; feature phone 5",
+        "max_subload_kB": "970x250 500; 300x50/320x50 100; 728x90 300; 970x90 400; 300x1050 500; 160x600 300; 300x250 300; 120x60 100; phone interstitial 600",
+        "static_image_weight": "Use initial-load max",
+        "density_basis": "Size groups calculated at 2x (double density)"
+      },
+      "technical_requirements": {
+        "file_size_measurement": "gzipped",
+        "initial_load_file_requests_max": "10"
+      },
+      "notes": "IAB guidelines are industry recommendations that publishers may modify. 300x600 is 'In Transition' in the complete portfolio, not in the fixed-size table. 320x480, 480x320, 768x1024, 1024x768 are not IAB fixed-size units."
+    },
+    {
+      "id": "IAB-002",
+      "standard_or_vendor": "IAB Tech Lab New Ad Portfolio (industry standard)",
+      "channel": "programmatic display",
+      "format": "LEAN load, animation and unit status",
+      "source_url": "https://www.iab.com/wp-content/uploads/2019/07/IABNewAdPortfolio_FINAL_0719.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Public PDF downloaded; text extracted locally",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "animation_start": "After page load event; recommended in subload",
+        "slow_connection": "Weights 30% lower for 3G (1.5 Mbps) or slower"
+      },
+      "technical_requirements": {
+        "animation_max": "15 seconds; no looping beyond 15 seconds",
+        "loop_count": "—",
+        "audio": "Muted by default; user-initiated",
+        "shared_libraries_exempt_max": "50 kB combined initial load",
+        "delisted": "Pop-up/floating, auto-expand, UAP, Rich Media units, 970x90, 180x150, 88x31",
+        "in_transition": "300x50/320x50, 970x250, 728x90, 300x1050, 300x600, 300x250, 160x600, 120x60"
+      },
+      "notes": "970x90 appears in the fixed-size table but is 'Delist' in the status table. Guidelines page (iabtechlab.com, dated 2024-02-07) still lists these documents as current."
+    },
+    {
+      "id": "IAB-003",
+      "standard_or_vendor": "IAB Tech Lab Digital Video & CTV Ad Format Guidelines v2.0 (industry standard)",
+      "channel": "programmatic video and CTV",
+      "format": "linear video ready-to-serve files",
+      "source_url": "https://github.com/InteractiveAdvertisingBureau/Ad-Format-Guidelines-for-Digital-Video-CTV/blob/main/v2.0.md",
+      "checked_on": "2026-09-16",
+      "source_access": "Public GitHub markdown (final per iabtechlab.com/standards/ctv-ad-portfolio, 2026-07-22; last commit 2026-06-22)",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "durations_s": "6, 15, 20, 30 (exact; ≤1 s transcode variance); bumpers 3–10; 60 sparingly",
+        "aspect_ratio": "16:9 preferred; native ratio",
+        "renditions": "3–4 ready-to-serve plus mezzanine",
+        "target_bitrate_h264": "≤480p 1.5–3 Mbps; SD 2–4; 720p 2–5; 1080p 4–10; 2160p 15–30 (lower end OLV, upper end CTV)",
+        "frame_rate": "Native; 23.976, 24, 25, 29.97, 30, 50, 59.94, 60; avoid fractional-to-integer conversion unless required",
+        "color": "Rec.709 4:2:0 SDR; HDR10/HLG optional",
+        "audio_bitrate": "Stereo 128–192 kbps",
+        "audio_sample_rate": "48 kHz preferred; 44.1 acceptable",
+        "loudness": "US -24 LKFS ±2 (ATSC A/85); EU -23 LUFS ±1 (EBU R128); true peak ≤ -6 dBTP"
+      },
+      "technical_requirements": {
+        "container_codec": "MP4, H.264 (AVC) High Profile required; HEVC/VP9/AV1 optional in addition",
+        "audio_codec": "AAC-LC required",
+        "scan": "Progressive only",
+        "leaders": "No slate, countdown or black frames"
+      },
+      "notes": "Guidance is a starting point; publishers' specs may differ. Bits-per-pixel formulas not recommended."
+    },
+    {
+      "id": "IAB-004",
+      "standard_or_vendor": "IAB Tech Lab Digital Video & CTV Ad Format Guidelines v2.0 (industry standard)",
+      "channel": "CTV",
+      "format": "mezzanine source file",
+      "source_url": "https://github.com/InteractiveAdvertisingBureau/Ad-Format-Guidelines-for-Digital-Video-CTV/blob/main/v2.0.md",
+      "checked_on": "2026-09-16",
+      "source_access": "Public GitHub markdown",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "container": ".mov preferred, .mp4",
+        "codec": "Apple ProRes preferred; DNxHD/DNxHR; H.264 High if unavailable",
+        "bit_depth": "10-bit preferred, 8-bit minimum",
+        "resolution_ratio_fps": "Native; no upscaling",
+        "audio": "PCM, stereo (5.1 optional), 48 kHz"
+      },
+      "technical_requirements": {
+        "scan": "Progressive only",
+        "slate": "Not permitted"
+      },
+      "notes": "Mezzanine used for platform-side encoding (SSAI/ABR)."
+    },
+    {
+      "id": "IAB-005",
+      "standard_or_vendor": "IAB Tech Lab VAST / VPAID / SIMID (industry standard)",
+      "channel": "programmatic video and CTV",
+      "format": "ad serving templates",
+      "source_url": "https://iabtechlab.com/standards/vast/",
+      "checked_on": "2026-09-16",
+      "source_access": "Live public page; text extracted",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "interactivity": "SIMID",
+        "measurement": "OMID"
+      },
+      "technical_requirements": {
+        "latest_vast": "4.3 (December 2022)",
+        "ctv_addendum": "VAST CTV Addendum 2024 brings SIMID/ACIF support to VAST 2.x/3.x",
+        "vpaid": "Deprecated, replaced with SIMID"
+      },
+      "notes": "Many CTV sellers still require inline VAST 2.0/3.0 and reject VPAID and wrappers. VAST 4.3 PDF: https://iabtechlab.com/wp-content/uploads/2022/09/VAST_4.3.pdf"
+    },
+    {
+      "id": "IAB-006",
+      "standard_or_vendor": "IAB Tech Lab Digital Video & CTV Ad Format Guidelines v2.0 (industry standard)",
+      "channel": "programmatic video",
+      "format": "video companion ads",
+      "source_url": "https://github.com/InteractiveAdvertisingBureau/Ad-Format-Guidelines-for-Digital-Video-CTV/blob/main/v2.0.md",
+      "checked_on": "2026-09-16",
+      "source_access": "Public GitHub markdown",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "sizes_px": "300x250, 468x60, 300x100, 728x90, 300x60",
+        "file_size": "200 kB for most ads"
+      },
+      "technical_requirements": {
+        "content": "No video or audio"
+      },
+      "notes": "Check publisher for requirements."
+    },
+    {
+      "id": "IAB-007",
+      "standard_or_vendor": "IAB Tech Lab CTV Ad Portfolio (industry standard)",
+      "channel": "CTV",
+      "format": "pause, screensaver, menu, in-scene, overlay, squeezeback",
+      "source_url": "https://iabtechlab.com/standards/ctv-ad-portfolio/",
+      "checked_on": "2026-09-16",
+      "source_access": "Live public page; text extracted; plus v2.0 markdown",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "interactivity": "SIMID recommended",
+        "qr_codes": "Burned-in or sell-side generated"
+      },
+      "technical_requirements": {
+        "static_asset_file_size": "Under 350 kB",
+        "video_assets": "Per IAB-003/IAB-004"
+      },
+      "notes": "Final 2026-07-22. Not a replacement for linear :15/:30 commercials."
+    },
+    {
+      "id": "DSP-001",
+      "standard_or_vendor": "Google Display & Video 360 (vendor)",
+      "channel": "programmatic display",
+      "format": "image creatives",
+      "source_url": "https://support.google.com/displayvideo/answer/3017252?hl=en",
+      "checked_on": "2026-09-16",
+      "source_access": "Live public page; text extracted",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "high_density": "Upload up to 2x creative dimensions (e.g. 600x500 for 300x250)",
+        "common_sizes_px": "250x250, 300x250, 320x320, 336x280, 120x600, 160x600, 300x600, 300x1050, 468x60, 728x90, 800x250, 970x90, 970x250, 300x50, 300x100, 320x50, 320x100, 320x480, 360x592, 360x640, 375x667"
+      },
+      "technical_requirements": {
+        "file_types": "JPG, GIF, PNG (RGB)",
+        "max_dimensions_px": "4000x4000",
+        "file_size_max": "10 MB; publishers may require smaller"
+      },
+      "notes": "No ppi requirement stated. Also https://support.google.com/displayvideo/answer/7129060?hl=en"
+    },
+    {
+      "id": "DSP-002",
+      "standard_or_vendor": "Google Display & Video 360 (vendor)",
+      "channel": "programmatic display",
+      "format": "HTML5 display",
+      "source_url": "https://support.google.com/displayvideo/answer/10261241?hl=en",
+      "checked_on": "2026-09-16",
+      "source_access": "Live public page; text extracted",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "zip_size": "No limit; keep small"
+      },
+      "technical_requirements": {
+        "packaging": "ZIP, ≤100 files",
+        "allowed_files": "html, htm, css, js, jpg, jpeg, gif, png, svg, fonts",
+        "click": "clickTag, new tab/window, not minified",
+        "animation_max": "30 seconds",
+        "audio": "No autoplay audio",
+        "download_size_max": "5 MB",
+        "cookies_max": "25",
+        "http_calls_max": "100"
+      },
+      "notes": ""
+    },
+    {
+      "id": "DSP-003",
+      "standard_or_vendor": "Google Display & Video 360 (vendor)",
+      "channel": "programmatic video",
+      "format": "video creatives (non-YouTube)",
+      "source_url": "https://support.google.com/displayvideo/answer/3129957?hl=en",
+      "checked_on": "2026-09-16",
+      "source_access": "Live public page; text extracted",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "dimensions_px": "1280x720, 1920x1080, 1440x1080; 720x1280, 1080x1920, 1080x1440; 720x720, 1080x1080, 1920x1920",
+        "codec": "H.264",
+        "frame_rate": "23.98 or 29.97",
+        "bitrate": "At least 20 Mbps",
+        "length": "15 or 30 seconds",
+        "black_bars": "None; no letterboxing",
+        "audio": "PCM (preferred) or AAC; ≥192 kbps; 16/24-bit; 48 kHz; -24 LKFS ±2",
+        "companions": "Image or HTML5; 300x250, 728x90, 300x60; 20K; 15 s animation; 18–24 fps",
+        "vast_wrappers": "Limit to 2"
+      },
+      "technical_requirements": {
+        "file_types": ".avi .mov .mp4 .m4v .mpeg .mpg .webm .wmv",
+        "file_size_max": "1 GB hosted; transcoded serving files ≤10 MB",
+        "aspect_ratio": "16:9 or 4:3; 9:16 or 3:4",
+        "file_name": "≤50 characters ASCII",
+        "vast": "2.0, 3.0, 4.0",
+        "vpaid": "HTML5 VPAID 2.0 via Studio/CM360 only",
+        "rotation": "Durations within 10% of longest"
+      },
+      "notes": "Inventory buckets <15, 15, 20, 30, 60, ≥90 s; shorter creative can serve into longer slots; most publishers tolerate ~10% over."
+    },
+    {
+      "id": "DSP-004",
+      "standard_or_vendor": "Google Display & Video 360 (vendor)",
+      "channel": "CTV",
+      "format": "Connected TV video",
+      "source_url": "https://support.google.com/displayvideo/answer/14175098?hl=en",
+      "checked_on": "2026-09-16",
+      "source_access": "Live public page; text extracted",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "vast": "VAST 2.0 recommended; 3.0/4.0 limited scale",
+        "resolution_px": "1920x1080 preferred; 1280x720",
+        "bitrate_kbps": "Mezzanine 15,000–30,000; HQ 720p 1,500–2,500, 1080p 2,500–3,500; medium 700–1,500; low 500–700",
+        "frame_rate": "23.98 or 29.97; 25 PAL",
+        "audio": "192 kbps; 48 kHz",
+        "versions": "High, medium, low plus mezzanine",
+        "frames": "Avoid telecine, interlacing, duplicate frames"
+      },
+      "technical_requirements": {
+        "file_format": "MP4 (no FLV/WebM)",
+        "file_size_max": "1 GB (DV360-hosted)",
+        "unsupported": "VPAID, MRAID, tag wrapping on most CTV devices"
+      },
+      "notes": "Non-skippable; SSL required. No loudness value on this page (see DSP-003)."
+    },
+    {
+      "id": "DSP-005",
+      "standard_or_vendor": "The Trade Desk (vendor)",
+      "channel": "programmatic display",
+      "format": "display images",
+      "source_url": "https://www.thetradedesk.com/assets/global/documents/Creative_Specifications-en.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Public PDF downloaded; text extracted locally",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "file_types": "GIF, JPEG, PNG",
+        "file_size": "150 KB or smaller",
+        "top_display_px": "160x600, 300x250, 728x90, 300x600",
+        "top_mobile_px": "1024x768, 768x1024, 336x280, 300x50, 320x50"
+      },
+      "technical_requirements": {
+        "animation": "Max 15 seconds of looping, then static",
+        "mobile_static_file_size": "Phone 40 KB–1 MB; tablet 150 KB–1 MB, depending on supply vendor",
+        "border": "Contrasting border on partly black/white backgrounds",
+        "click": "Opens new page"
+      },
+      "notes": "PDF undated. Long supported-size list includes 320x480, 480x320, 970x250, 300x1050, 468x60. Specs vary by publisher and SSP."
+    },
+    {
+      "id": "DSP-006",
+      "standard_or_vendor": "The Trade Desk (vendor)",
+      "channel": "programmatic display",
+      "format": "HTML5",
+      "source_url": "https://www.thetradedesk.com/assets/global/documents/Creative_Specifications-en.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Public PDF downloaded; text extracted locally",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "recommendations": {
+        "initial_load": "200 KB recommended",
+        "ad_size_meta": "<meta name=\"ad.size\" ...> recommended"
+      },
+      "technical_requirements": {
+        "initial_load_max": "300 KB",
+        "subload_max": "600 KB",
+        "initial_files_max": "10",
+        "subload_files_max": "100",
+        "file_size_max": "5 MB",
+        "zip": "<10 MB compressed, <12 MB uncompressed, ≤100 files",
+        "primary_html": "100 KB (ZIP table); 200 KB single-file",
+        "backup_image": "Required (hosted)",
+        "clicktag": "Case-sensitive; default clickTAG"
+      },
+      "notes": "Individual-file and auto-started video size cells are scrambled in the PDF text layer; confirm on rendered PDF."
+    },
+    {
+      "id": "DSP-007",
+      "standard_or_vendor": "The Trade Desk (vendor)",
+      "channel": "programmatic video",
+      "format": "hosted and third-party video",
+      "source_url": "https://www.thetradedesk.com/assets/global/documents/Creative_Specifications-en.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Public PDF downloaded; text extracted locally",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "hosted_file_size": "200 MB recommended max",
+        "hosted_resolution": "16:9 1920x1080; 4:3 640x480",
+        "hosted_bitrate": "≥2500 kbps",
+        "vertical": "1080x1920, 9:16, min height 400 px",
+        "resolution_tier_bitrates": "≤360p 500–700 kbps; SD 700–1500; 720p 1500–2500; 1080p 2500–3500",
+        "third_party_media": "Include MP4, WebM, FLV"
+      },
+      "technical_requirements": {
+        "hosted_file_types": "MP4, WebM (VP8), MOV, MPG, MPEG",
+        "minimum_resolution": "16:9 640x360; 4:3 480x360",
+        "duration": "5–300 seconds",
+        "third_party_vast": "VAST 2.0; VAST 2.0 + VPAID 2.0 JS; VAST 3.0",
+        "hosted_vast_responses": "2.0, 3.0, 4.1",
+        "companion": "JPG, GIF, PNG; 300x250, 728x90, 320x50, 160x600, 300x600, 300x50, 320x480, 468x60, 970x250"
+      },
+      "notes": "UK CBA: pre-roll over 31 s combined skippable within 6 s; no mid-roll."
+    },
+    {
+      "id": "DSP-008",
+      "standard_or_vendor": "The Trade Desk (vendor)",
+      "channel": "CTV",
+      "format": "CTV video",
+      "source_url": "https://www.thetradedesk.com/assets/global/documents/Creative_Specifications-en.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Public PDF downloaded; text extracted locally",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "recommendations": {
+        "hq_medium_low": "1920x1080 4,000–6,500 kbps; 1280x720 1,200–3,500; 1280x720 500–1,200",
+        "loudness": "Average -24 LKFS",
+        "multiple_bitrates": "Enable multiple bitrates"
+      },
+      "technical_requirements": {
+        "file_format": "MP4 only; WebM unsupported",
+        "tags": "VAST only; VPAID unsupported; VAST 3.0/4.0 typically less scalable",
+        "frame_rate": "Constant; 23.98 or 29.97",
+        "frames": "No telecine, interlacing, duplicate frames",
+        "mezzanine": "1920x1080, ≥15,000 kbps (15,000–30,000), max 10 GB",
+        "audio": "48 kHz; ≥192 kbps",
+        "click_through": "Not supported on CTV devices"
+      },
+      "notes": "Text 'typically minimum 1200–1500 kbps, 1.6–3.2 Mbps preferred' conflicts with mezzanine ≥15,000 kbps. Hulu-hosted min 15,025 kbps cited."
+    },
+    {
+      "id": "DSP-009",
+      "standard_or_vendor": "Amazon DSP (vendor)",
+      "channel": "programmatic display",
+      "format": "desktop and mobile web static display",
+      "source_url": "https://advertising.amazon.com/resources/ad-specs/dsp/desktop",
+      "checked_on": "2026-09-16",
+      "source_access": "Live public page; text extracted",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "billboard_offsite_2x": "Preferred offsite"
+      },
+      "technical_requirements": {
+        "file_format": "JPG / PNG-8",
+        "300x250_728x90_160x600": "200 kb HTML; 40 kb static (50 kb FR, IT, ES, JP)",
+        "300x600": "200 kb HTML; 50 kb static",
+        "970x250": "1940x500 @2x required onsite; 200 kb; 800x250 DE",
+        "mobile_320x50": "640x100 @2x required; 50 kb",
+        "mobile_300x250": "600x500 @2x required; 40 kb",
+        "tablet_728x90": "1456x180 @2x required; 200 kb",
+        "serving": "Site served or third party (iframe only)"
+      },
+      "notes": "GIF not listed. Photoshop templates offered."
+    },
+    {
+      "id": "DSP-010",
+      "standard_or_vendor": "Amazon DSP (vendor)",
+      "channel": "programmatic video",
+      "format": "online video (OLV)",
+      "source_url": "https://advertising.amazon.com/resources/ad-specs/dsp/video/online-video-ads",
+      "checked_on": "2026-09-16",
+      "source_access": "Live public page; text extracted",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "recommendations": {
+        "duration": "Exactly 6, 15, 20, 30 or 60 s",
+        "bitrate": "8 Mbps",
+        "frame_rate": "23.976"
+      },
+      "technical_requirements": {
+        "file_size_max": "500 MB (site served)",
+        "aspect_ratio": "16:9; 9:16 on Twitch and Amazon Publisher Direct only",
+        "duration": "6–120 s",
+        "min_frame": "1920x1080 (640x360 3P); 1080x1920 (360x640 3P)",
+        "min_bitrate": "4 Mbps (2 Mbps 3P)",
+        "frame_rate": "23.976, 24, 25, 29.97; constant",
+        "codecs": "H.264, MPEG-2, MPEG-4; AAC",
+        "audio": "≥192 kbps (128 3P); 44.1/48 kHz; ≥2 channels",
+        "tags": "Inline VAST 2.0/3.0"
+      },
+      "notes": "Page says tags 'may include VPAID 2' and also 'We do not accept VPAID or Wrapper Tags'."
+    },
+    {
+      "id": "DSP-011",
+      "standard_or_vendor": "Yahoo DSP (vendor)",
+      "channel": "CTV",
+      "format": "CTV video",
+      "source_url": "https://adspecs.yahooinc.com/video-ads/video-ctv",
+      "checked_on": "2026-09-16",
+      "source_access": "WebFetch summary of public page; not re-read as raw text",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "resolution": "1920x1080 16:9 preferred"
+      },
+      "technical_requirements": {
+        "alt_resolutions": "1280x720; 1440x1080 (4:3)",
+        "files": "MOV, MP4",
+        "bitrate": "CBR or VBR 15–60 Mbps",
+        "frame_rate": "29.97 or 23.976; constant",
+        "audio": "≥192 kbps; 16/24-bit; 48 kHz",
+        "file_size_max": "300 MB",
+        "color": "4:2:2",
+        "tags": "VAST 2.0 and 3.0; non-skippable; ≤3 wrappers"
+      },
+      "notes": "Re-read before production use."
+    },
+    {
+      "id": "DSP-012",
+      "standard_or_vendor": "StackAdapt (vendor) — probable source of sheet DSP display row",
+      "channel": "programmatic display",
+      "format": "display images",
+      "source_url": "https://support.stackadapt.com/plan/creative-setup/display-ad-specs",
+      "checked_on": "2026-09-16",
+      "source_access": "HTTP 403, redirected to login-restricted page; Academy page registration-gated; values from web-search index extracts only",
+      "account_availability": "NOT_TESTED",
+      "status": "UNVERIFIED",
+      "recommendations": {
+        "jpg_png_optimal": "750 KB",
+        "ppi": "Min 72, recommended 144"
+      },
+      "technical_requirements": {
+        "gif_max": "3.5 MB"
+      },
+      "notes": "Sizes, animation and loop rules not recovered. Confirm on live page or with vendor."
+    },
+    {
+      "id": "DSP-013",
+      "standard_or_vendor": "Quantcast (vendor)",
+      "channel": "CTV",
+      "format": "CTV video",
+      "source_url": "https://help.quantcast.com/docs/creative-specifications-ctv",
+      "checked_on": "2026-09-16",
+      "source_access": "WebFetch summary of public page (updated 2024-05-20)",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "duration": ":15 and :30; under :30 limited inventory"
+      },
+      "technical_requirements": {
+        "ratio_size": "16:9; 1920x1080 minimum",
+        "tags": "3P tags or VAST 2.0/3.0/4.0; no VPAID wrappers",
+        "files": ".mp4 or .mov",
+        "file_size_max": "1 GB Quantcast-hosted; 10 GB 3P",
+        "bitrate": "18,000–30,000 kbps",
+        "frame_rate": "Constant 24, 25 (PAL) or 30 (NTSC)",
+        "audio_sample_rate": "48 kHz"
+      },
+      "notes": ""
+    },
+    {
+      "id": "DSP-014",
+      "standard_or_vendor": "Propensity Display Network (vendor)",
+      "channel": "CTV",
+      "format": "CTV video",
+      "source_url": "https://support.propensity.com/hc/en-us/articles/28306109014043",
+      "checked_on": "2026-09-16",
+      "source_access": "Public Help Center API JSON (web page returned 403); updated 2026-04-03",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "resolution": "1080p",
+        "aspect_ratio": "16:9",
+        "duration": "15 or 30 s; others may have limited scale",
+        "premium_bitrate": "15 Mbps"
+      },
+      "technical_requirements": {
+        "general": "1920x1080; MP4; up to 1 GB; max 60 s",
+        "premium": "10–15 Mbps; H.264; 1920x1080; AAC 48 kHz ≥192 kbps",
+        "premium_frame_rates": "Disney+/Hulu, Paramount, WBD 23.98/24/25/29.97/30; NBCU/Peacock 23.98/25/29.97; DHXP 23.98/29.97",
+        "other": "Raw MP4; no letter/pillarbox; no duplicate/deinterlaced frames; no telecine or 3:2 pulldown"
+      },
+      "notes": "Closest public wording match found for the sheet's CTV duration line, but not an exact match for the bitrate or pull-down lines."
+    },
+    {
+      "id": "CTV-001",
+      "standard_or_vendor": "Amazon Ads (seller/DSP)",
+      "channel": "CTV",
+      "format": "Streaming TV and Prime Video ads",
+      "source_url": "https://advertising.amazon.com/resources/ad-specs/dsp/video/streaming-tv-prime-video-ads",
+      "checked_on": "2026-09-16",
+      "source_access": "Live public page; text extracted",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "bitrate": "50 Mbps (Prime Video)",
+        "frame_rate": "23.976",
+        "bars": "Pillar/letterbox strongly discouraged",
+        "safe_zone": "Action-safe template (image)"
+      },
+      "technical_requirements": {
+        "file_size_max": "500 MB",
+        "aspect_ratio": "16:9",
+        "min_frame": "1920x1080",
+        "min_bitrate": "15 Mbps Prime Video; 8 Mbps Twitch, Fire TV Channels, 3P",
+        "frame_rate": "23.976, 24, 25, 29.97; constant",
+        "codecs": "H.264, MPEG-2, MPEG-4; AAC; MP4 for site serving",
+        "audio": "≥192 kbps; 44.1/48 kHz; ≥2 channels",
+        "durations_us": "Prime Video 15/30/45/60; Twitch 15/30; Fire TV Channels 15/30/45/60/90; 3P STV apps 6/10/15/20/30/45/60/75/90",
+        "tags": "Inline VAST 2.0/3.0; no VPAID or wrappers",
+        "cta": "No click-style CTA in non-interactive ads"
+      },
+      "notes": "Durations vary by market. No loudness value published on this page."
+    },
+    {
+      "id": "CTV-002",
+      "standard_or_vendor": "Disney Advertising (seller) — Disney+ and Hulu",
+      "channel": "CTV",
+      "format": "video commercial",
+      "source_url": "https://products.disneyadvertising.com/video-commercial/",
+      "checked_on": "2026-09-16",
+      "source_access": "Live public page; text extracted",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "recommendations": {
+        "resolution": "1920x1080 preferred",
+        "programmatic_bitrate": "CBR 15–60 Mbps preferred; VBR 20–60 accepted"
+      },
+      "technical_requirements": {
+        "accepted_resolution": "1280x720",
+        "aspect_ratio": "16:9; 1:1 and 9:16 rejected",
+        "bars": "No letter/pillarbox (exception by approval)",
+        "bitrate": "CBR 10–40 Mbps",
+        "profile_color": "MP@ML; 4:2:2; single video track",
+        "files": "MOV, MP4, M4V; ProRes 422 HQ or H.264",
+        "file_weight_max": "1.9 GB partner/VAST/programmatic; 250 MB Hulu-served",
+        "frame_rate": "23.98, 24, 25, 29.97, 30 native; constant; progressive",
+        "audio": "Required; 2 ch; ≥128 kbps CBR; 44.1/48 kHz; AAC or PCM",
+        "tags": "VAST 2.0/3.0 approved vendors; no wrappers; no VPAID",
+        "leaders": "No slates or countdowns",
+        "cta": "No clickable-looking CTA; QR accepted subject to review"
+      },
+      "notes": "MP@ML label conflicts with HD H.264 values; page contains template filler text. Durations and loudness not found on inspected tabs."
+    },
+    {
+      "id": "CTV-003",
+      "standard_or_vendor": "Roku (seller) — self-serve Ads Manager",
+      "channel": "CTV",
+      "format": "streaming video ad",
+      "source_url": "https://help.ads.roku.com/en/articles/7193013-creative-technical-requirements",
+      "checked_on": "2026-09-16",
+      "source_access": "Live public page (dated 2025-03-11)",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "recommendations": {
+        "audio_codec": "PCM preferred"
+      },
+      "technical_requirements": {
+        "files": ".mov or .mp4",
+        "file_size_max": "1 GB",
+        "length": "6–92 s",
+        "aspect_ratio": "16:9",
+        "frame_rate": "23.98, 25.00, 29.97",
+        "codec": "AVC or ProRes 422 HQ",
+        "video_bitrate_min": "6 Mbps",
+        "audio": "AAC accepted; ≥96 kbps; 16/24-bit; stereo; 48 kHz",
+        "action_ads": "Overlay message ≤40 chars; logo PNG ≤150 kb; text ≤236 chars"
+      },
+      "notes": "Self-serve only; managed Roku buys may differ."
+    }
+  ]
+}

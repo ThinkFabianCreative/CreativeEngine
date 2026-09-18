@@ -1,0 +1,82 @@
+FIGMA SLIDES PROMPT · UW GRADUATE BUSINESS · ONE IDEA · v02 (2026-09-14)
+Replaces v01 (two ideas) after the user killed "You don't have to go far to get further".
+Internal work in progress. Not approved. Placeholder imagery.
+
+Build a 4-slide Figma Slides presentation. Before starting, read 00_READ_FIRST.txt,
+01_taste_standard.txt, 02_typography.txt, 03_layout_hierarchy_color.txt, 10_uw_brand_rules.txt
+and 12_uw_directions.txt. Run 06_self_check.txt before replying.
+If a previous version of this deck exists, delete its "Idea 02 / Far Further" slide and rebuild.
+
+DECK DESIGN
+- 1920 x 1080. UW Brown #492F24 backgrounds, White type, UW Gold #FFC425 for one emphasis per slide.
+- Montserrat only (Bold for titles, Regular/Medium for body). No Blackhawk.
+- One big statement per slide. Body copy max 3 short lines per block, min 28 px.
+- Flush-left grid, 120 px margins.
+- No gradients, icons, symbol bullets, shadows, device mockups, stock photos or decorative lines.
+- Use COPIES of the final "Too stubborn to stop?" ad frames as visuals. Never redraw them. Scale proportionally.
+- Do not use any FAR / FURTHER, RUNNER or MARGIN NOTES frames.
+- Footer on every slide, 20 px, 50% White: "UW College of Business · Graduate Meta campaign · Work in progress · Placeholder imagery"
+- Use the copy below exactly. Do not add words.
+
+------------------------------------------------------------
+SLIDE 1 · THE JOB
+------------------------------------------------------------
+Eyebrow (Gold): THE JOB
+Title: One idea. Five programs. First contact.
+Body:
+  Meta ads that drive application starts for five College of Business graduate programs.
+  For many people, this ad is the first time they meet UW.
+  The idea carries the ad. Program details live in the post text.
+Right half, large (Gold on "the hardest part"):
+  "The people who think they have no room for a graduate degree are often the ones already doing the hardest part."
+Small label under it: WORKING INSIGHT
+
+------------------------------------------------------------
+SLIDE 2 · THE IDEA
+------------------------------------------------------------
+Eyebrow (Gold): THE IDEA · NOT FOR EVERYONE
+Title, very large, left half (Gold on "STUBBORN"):
+  TOO STUBBORN
+  TO STOP?
+Second line, about 60% of title size:
+  SOUNDS LIKE A COWBOY.
+Right half:
+  Label: HOW IT WORKS
+  Working adults get told they're doing too much. We turn that "flaw" into the qualification.
+  The ad shows a week where everything collided, then asks a question they already know the answer to.
+  Label: STIMULUS
+  Channel 4's Tokyo Paralympics line: "To be a Paralympian, there's got to be something wrong with you." Reclaim the insult.
+  UW's own brand promise: building grit. And "The World Needs More Cowboys."
+Visual: none. Type is the visual on this slide.
+
+------------------------------------------------------------
+SLIDE 3 · THE WORK
+------------------------------------------------------------
+Eyebrow (Gold): THE WORK
+Title: The swipe is the story.
+Top row: copies of the four carousel cards, equal size, evenly spaced, with a small caption under each (24 px, White 70%):
+  01 The week     02 The question     03 The answer     04 UW + program
+Bottom row: copy of the 4:5 static and the 9:16 static, side by side, bottom-aligned.
+Small captions: FEED 4:5     STORIES AND REELS 9:16
+No body copy.
+
+------------------------------------------------------------
+SLIDE 4 · HOW IT RUNS · WHAT WE NEED
+------------------------------------------------------------
+Eyebrow (Gold): HOW IT RUNS
+Title: Same question. Every program.
+Left half, program labels stacked:
+  ON-CAMPUS MBA
+  ONLINE MBA
+  M.S. IN ACCOUNTING
+  ONLINE M.S. IN ACCOUNTING
+  ONLINE M.S. IN FINANCE
+Under the labels:
+  Each program gets its own collision week. The question stays.
+  4:5 feed · 9:16 Stories and Reels · Carousel · 15-second video
+  Apply Now is Meta's button. Program facts sit in the post text.
+Right half:
+  Label (Gold): DECISIONS NEEDED
+  Approval to use Cowboys language and the Blackhawk font.
+  Access to UW photography, or a shoot with model releases.
+  Confirmed placements and landing pages.

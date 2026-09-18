@@ -1,0 +1,34 @@
+03 · LAYOUT, HIERARCHY AND COLOR
+
+READING ORDER
+Before placing anything, decide: what is seen first, second, third, last.
+Typical ad order: the idea (headline or image) > supporting line > brand > program label.
+The brand logo is never the first thing seen unless the request says so.
+
+COMPOSITION
+- Give the main element real scale. Timid headlines waste the frame.
+- Use space to direct attention toward the idea, not as evenly distributed padding.
+- Align elements to a clear grid or edge. Random offsets look accidental.
+- Group related items tightly; separate unrelated items clearly.
+- One focal point per frame.
+
+COLOR
+- Use the client palette only, in flat fills.
+- Color carries meaning. An accent color should mark the one thing that matters
+  (a key word, a kept promise, a line of progress). If the accent is sprinkled on
+  several unrelated things, it stops meaning anything.
+- Dominant color large, accent color small. Accent covering big areas loses its power.
+- No gradients unless the client supplies an official gradient and the request asks for it.
+
+WHAT TO REMOVE
+- Duplicate branding: if the logo already says the name, do not also type the name.
+- Drawn buttons (fake "Apply Now" buttons) in ad images. Platforms add real buttons.
+- Rules, dots, arrows, frames and dividers that do not separate or point to anything.
+- Arrows in general: they imply direction or travel and often contradict the message.
+- Footer text stacks that nobody can read at phone size.
+
+ILLUSTRATION AND ICONS
+- An illustration must be recognizable in under a second at phone size.
+  If it could be mistaken for something else (a plant that looks like a sun or a hat),
+  it has failed. Add the identifying details or stop and report.
+- Do not add icons to explain the idea. If the idea needs an icon, the idea is unclear.

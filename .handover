@@ -1,0 +1,84 @@
+# CreativeEngine — handover to Claude
+
+Prepared: 2026-09-12 (America/Los_Angeles).
+Workspace: /Users/andresfabian/Documents/AI_Traffik_Projects/CreativeEngine
+
+## Purpose and limits of this handover
+
+The user requested a `.handover` file so Claude can continue editing this project as the current session's resources run low. This session inspected the workspace and wrote this handover only. It did not change the creative work, frameworks, or configuration.
+
+No earlier editing conversation or specific next edit was supplied in this session. The state below is reconstructed from on-disk files, not a claim to remember prior conversation. Preserve any more recent instructions the user provides. The UW campaign is the clearest ongoing assignment recorded in the workspace; that is a continuation lead, not confirmation that the user wants only that assignment edited.
+
+## Start here
+
+1. Read `CLAUDE.md`, the constitution and routing authority.
+2. For system editing, read the affected role's `AGENT.md` and only the relevant frameworks. For client work, read `projects/README.md`, then that client's identity record and the target project's README and normalized brief.
+3. Inspect current files and Git status again before editing: another session may have changed them since this snapshot.
+4. Continue the user's pending edit if their conversation supplies it. If it does not, ask which edit they want next rather than inventing a backlog or treating every OPEN briefing question as a blocker to internal development.
+
+## Repository state
+
+- Branch: `main`.
+- Latest and only commit shown: `28ede6a chore: initialize CreativeEngine`.
+- At inspection, `.claude/`, `CLAUDE.md`, all four role directories, `briefs/`, `outputs/`, `projects/`, `shared/`, and `validation/` were untracked. Most substantive work therefore exists only in the working tree; a normal tracked diff is not an inventory of the project.
+- This handover is also newly created and uncommitted. No staging, commits, cleanup, resets, or publishing were performed.
+- This is primarily a Markdown creative operating system and client-work archive, not a software application. No package manifest or automated application test command was found in the file inventory. Existing validation reports are historical evidence, not tests rerun during this handover.
+
+## Architecture and editing rules
+
+- `CreativeDirector/AGENT.md`: full V1 orchestrator/critic definition.
+- `BriefMachine/AGENT.md`, `DesignChamp/AGENT.md`, `WordSmither/AGENT.md`: the constitution describes these as placeholders to design separately. Inspect their actual content before extending them.
+- `.claude/agents/`: thin wrappers named `brief-machine`, `creative-engine-director`, `design-champ`, and `word-smither`. Keep role detail in the corresponding `AGENT.md`.
+- `.claude/skills/`: discovery location for approved skills; currently the inspected directory contains a README. Department `skills/` folders organize ownership/evaluation. Do not install third-party skills without the review and user approval required by `CLAUDE.md`.
+- Active framework registry lives in `CLAUDE.md`: creative object taxonomy, creative trajectory evaluation, Hey Whipple copycraft, brief normalization, creative direction audit, and optional education enrollment intake. Frameworks are additive and selectively applied; do not replace older methods simply because a newer one exists.
+- Modes: EXPLORE, DEVELOP, JUDGE. Canonical verdicts: KILL, REWORK, ADVANCE, BET THE PITCH. Do not impose judgment gates on rough exploration.
+- Global method stays in role directories and `shared/`. Client facts stay within their own `projects/<client>/` boundary. Do not read other clients' work as evidence for the current assignment.
+- Raw sources are immutable. Normalize before creative work; retain provenance, unresolved conflicts, claim status, and older reviewed versions. Project findings require deliberate user confirmation before promotion to client knowledge.
+- `normalized-brief.md` is the project briefing authority; the project README is an index/summary. Use versioned working files and preserve reviewed versions.
+- Root `briefs/` and `outputs/` are superseded by client workspaces.
+
+## Likely active creative assignment: University of Wyoming
+
+Project directory:
+`projects/university-of-wyoming/fy26-27-graduate-business-inquiry/`
+
+The README records DEVELOP, internal review, normalized brief DRAFT rev 5, with umbrella selection still pending Q1 and Q37. Nothing in this handover constitutes selection or approval.
+
+Read in this order if continuing this campaign:
+
+1. `projects/university-of-wyoming/client/README.md`
+2. Project `README.md` and `normalized-brief.md`, especially user-direction history, claim ledger, deliverable matrix, and question register.
+3. `packets/U1_campaign-umbrella_v01.md`: current concept assignment, ONE umbrella with FIVE program variants.
+4. `packets/P1_on-campus-mba_v02.md` through the corresponding P2–P5 v02 files: program/variant references, not five separate concept assignments. Earlier P*_v01 and CP3 shared-accounting concept architecture are superseded.
+5. `work/reviews/fy26-27-graduate-business-inquiry_brief-readiness-review_v02.md` and its addendum.
+6. `work/concepts/fy26-27-graduate-business-inquiry_restored-directions-development_v01.md`.
+7. `work/concepts/fy26-27-graduate-business-inquiry_rough-executions_v02-meta-native.md`, plus v01 for the variant strips and primary text that v02 carries over.
+
+Latest documented direction:
+
+- Develop both restored territories: “You don't have to go far to get further” and “Not for everyone.” The user corrected earlier judgments against these; do not silently discard them again. See brief rev 5 and the restored-directions file for the aspiration-versus-promise distinction.
+- Six rough master executions exist, three per direction. They are internal, not selected, and not client-facing.
+- User's latest recorded format correction: “this is a meta campaign - not a 60sec campaign.” The v02 executions revise the work around a complete first-frame/static idea, simple motion, sound-off communication, and 15-second videos required by the source brief.
+- Baseline scope in the README: five statics + five 15-second videos, with post text per variant; conditional carousel quantity, placement adaptations, and destination-test variants remain unresolved.
+- Program identity uses restrained labels/end frames/post text; relevant program facts and proof may sit in primary text. Consult brief §11.6 rather than reverting to the earlier treatment.
+- Placements remain OPEN (Q18). The v02 rough proposes 4:5 and 9:16 masters, but do not promote that proposal into confirmed placement requirements. Verify actual specifications against the relevant placement before production.
+- Earlier exploration, ADLOB rounds, and umbrella synthesis remain valuable history, not selected work. The README explains exactly which architecture and judgments were superseded.
+- S6 qualitative context is user-reported and unverified; original materials were unavailable (Q39). Do not turn it into verified research or client-level fact.
+- Consult the actual question register for claim, brand currency, campaign-system, approvals, destination, and measurement restrictions. Do not infer approval from a folder or an internal creative recommendation.
+
+Figma state recorded in the project README (not rechecked during this handover):
+
+- User file “UofW - Meta Ad Campaign”: key `xuiudWnPA3HxBkOZ6DfLhM`, node `325-1456`; connected account previously could not read it due to missing edit access. Folder `645088639` previously did not permit adding files.
+- Internal rough working file “ADLOB Examples (EXPLORE)”: https://www.figma.com/design/r8GkaVShHb3xZLovBhXUxA in TRAFFIK team drafts. These are exploratory comps, not final/client-facing creative. Recheck access if the next task needs Figma.
+
+## Shared knowledge and prior validation
+
+- `shared/knowledge/ANDRES_CREATIVE_OS.md`: available user creative-method reference; read selectively when relevant.
+- `shared/knowledge/channel-preferences.md`: user primarily works with Meta and intended display advertising inside ChatGPT. This is a workflow preference, not a default channel for any brief or proof of platform availability. Keep platform, placement, format, goal, CTA, destination, measured event, and platform objective distinct.
+- `shared/knowledge/meta-paid-ads/README.md`: entry point for the Meta reference library. Includes format-specific references, production guidance, best practices, `specifications.json`, source conflicts, and maintenance instructions.
+- Its `VALIDATION.md`, dated 2026-09-12, reports 66 unique specification records, seven quarantined suspicious source entries, and resolved relative links. It explicitly does not guarantee every objective/market/account combination. Check quarantines and official-source freshness before production; do not treat derived creative guidance as platform requirements.
+- `validation/creative-direction-audit/review.md`, `changes.diff`, `baseline-hashes.json`, and `creative-direction-audit.before.md` preserve a prior audit implementation review and behavioral validation. Read these if continuing audit-framework editing; do not recreate the framework as though it were only planned.
+
+## Practical continuation
+
+Make the smallest relevant edit while preserving user work and source boundaries. For campaign continuation, build from the restored directions and Meta-native v02, retaining prior versions and updating the project index when a new version is created. For system continuation, keep constitution, role definitions, wrappers, and framework registry consistent only where the change requires it. Validate edited Markdown references and any structured data you change; do not report historical checks as fresh checks. No particular new edit, deployment, installation, or final creative selection is authorized by this handover itself.

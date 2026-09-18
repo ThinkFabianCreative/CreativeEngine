@@ -1,0 +1,1511 @@
+{
+  "title": "Digital out-of-home (DOOH): documented creative specifications by source and venue",
+  "checked_on": "2026-09-16",
+  "version": "1.0",
+  "scope": "68 records: a 2023 Vistar venue-type spec snapshot, current platform/SSP guidance, selected US media-owner specs, OpenOOH taxonomy and roadside-billboard regulation context. Screen inventory changes constantly; no record guarantees the spec of any specific network or screen.",
+  "records": [
+    {
+      "id": "DOOH-001",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Transit",
+      "venue_type": "Airports (row 1 of 3)",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":10"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-002",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Transit",
+      "venue_type": "Airports (row 2 of 3)",
+      "canvases_px": [
+        "1920x1080",
+        "1080x1920"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Yes",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Page note: specs vary by screen. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-003",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Transit",
+      "venue_type": "Airports (row 3 of 3)",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Yes",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-004",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Residential",
+      "venue_type": "Apartment Buildings",
+      "canvases_px": [
+        "1920x1080",
+        "1080x1920"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-005",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Entertainment",
+      "venue_type": "Bars",
+      "canvases_px": [
+        "1080x1920",
+        "1920x1080",
+        "1280x960"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Varies",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-006",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Outdoor",
+      "venue_type": "Billboards",
+      "canvases_px": [
+        "1400x400",
+        "840x400",
+        "1000x400",
+        "1600x400",
+        "1200x400",
+        "600x600"
+      ],
+      "static": true,
+      "video": false,
+      "durations": [],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Static only. Design tips on page: avoid white backgrounds on LED; readable text at least 15 px tall; strong focal point; bold colours by day, pastels at night. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-007",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Outdoor",
+      "venue_type": "Bus Shelters",
+      "canvases_px": [
+        "1080x1920"
+      ],
+      "static": true,
+      "video": false,
+      "durations": [],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Static only. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-008",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Transit",
+      "venue_type": "Buses",
+      "canvases_px": [
+        "1280x960"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-009",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Entertainment",
+      "venue_type": "Casual Dining",
+      "canvases_px": [
+        "1920x1080",
+        "1280x960"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Varies",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-010",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Education",
+      "venue_type": "Colleges and Universities",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Varies",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-011",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Retail",
+      "venue_type": "Convenience Stores (row 1 of 2)",
+      "canvases_px": [
+        "1920x1080",
+        "1080x1920"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-012",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Retail",
+      "venue_type": "Convenience Stores (row 2 of 2)",
+      "canvases_px": [
+        "1920x1080",
+        "1080x1920",
+        "1280x960"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-013",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Retail",
+      "venue_type": "Dispensaries",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "OpenOOH 1.1+ label: Cannabis Dispensaries. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-014",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Government",
+      "venue_type": "DMVs",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-015",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Point of Care",
+      "venue_type": "Doctor's Offices (row 1 of 2)",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30",
+        ":60"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Yes",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Page note: specs vary by screen. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-016",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Point of Care",
+      "venue_type": "Doctor's Offices (row 2 of 2)",
+      "canvases_px": [
+        "1366x768"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Yes",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-017",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Retail",
+      "venue_type": "Gas Stations",
+      "canvases_px": [
+        "1280x960",
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Yes",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "OpenOOH label: Fueling Station(s). No :30 in this source. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-018",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Retail",
+      "venue_type": "Grocery (row 1 of 3)",
+      "canvases_px": [
+        "1920x1080",
+        "728x90"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-019",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Retail",
+      "venue_type": "Grocery (row 2 of 3)",
+      "canvases_px": [
+        "1080x1920"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":8"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-020",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Retail",
+      "venue_type": "Grocery (row 3 of 3, audio-only network)",
+      "canvases_px": [],
+      "static": false,
+      "video": false,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Yes",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Audio-only network; MP3/AAC file required. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-021",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Health and Beauty",
+      "venue_type": "Gyms (row 1 of 3)",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Varies",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Page note: specs vary by screen. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-022",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Health and Beauty",
+      "venue_type": "Gyms (row 2 of 3)",
+      "canvases_px": [
+        "1920x1080",
+        "300x250"
+      ],
+      "static": true,
+      "video": false,
+      "durations": [],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Static only. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-023",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Health and Beauty",
+      "venue_type": "Gyms (row 3 of 3)",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-024",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Entertainment",
+      "venue_type": "Hotels",
+      "canvases_px": [
+        "1920x1080",
+        "1600x900"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30",
+        ":60"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Asterisked 1600x900 line carries ':10s - :115s video spots'. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-025",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Retail",
+      "venue_type": "Liquor Stores",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-026",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Retail",
+      "venue_type": "Malls (row 1 of 3)",
+      "canvases_px": [
+        "1920x1080",
+        "1080x1920"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":10",
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Yes",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Page note: specs vary by screen. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-027",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Retail",
+      "venue_type": "Malls (row 2 of 3)",
+      "canvases_px": [
+        "3840x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Yes",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-028",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Retail",
+      "venue_type": "Malls (row 3 of 3)",
+      "canvases_px": [
+        "1080x1920",
+        "728x90",
+        "1024x576"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-029",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Entertainment",
+      "venue_type": "Movie Theatres",
+      "canvases_px": [
+        "1920x1080",
+        "1080x1920",
+        "3840x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Yes",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "3840x1080 accepts :15 only. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-030",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Office Buildings",
+      "venue_type": "Office Buildings",
+      "canvases_px": [
+        "1920x1080",
+        "1080x1920"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "1080x1920 accepts :15 only. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-031",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Retail",
+      "venue_type": "Parking Garages",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Yes",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-032",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Retail",
+      "venue_type": "Pharmacies",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-033",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Entertainment",
+      "venue_type": "Recreational Locations",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Varies",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-034",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Health and Beauty",
+      "venue_type": "Salons",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Yes",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-035",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Entertainment",
+      "venue_type": "Sports Entertainment (row 1 of 3)",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Page note: specs vary by screen. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-036",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Entertainment",
+      "venue_type": "Sports Entertainment (row 2 of 3)",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": true,
+      "video": false,
+      "durations": [],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Static only. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-037",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Entertainment",
+      "venue_type": "Sports Entertainment (row 3 of 3)",
+      "canvases_px": [
+        "1080x1920",
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-038",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Transit",
+      "venue_type": "Subway",
+      "canvases_px": [
+        "1080x1920",
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Duration cell is empty in the extracted PDF; no :6 or :15 stated. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-039",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Transit",
+      "venue_type": "Taxi and Rideshare Top",
+      "canvases_px": [
+        "560x160",
+        "1920x674",
+        "384x124",
+        "384x128"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":8",
+        ":01-:480 (384x128 only)"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "OpenOOH 1.2.1 deprecates Transit > Taxi & Rideshare Top (104) in favour of Outdoor > Car Top (307). Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-040",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Transit",
+      "venue_type": "Taxi and Rideshare TV (row 1 of 2)",
+      "canvases_px": [
+        "1920x1080",
+        "1280x960",
+        "1920x674",
+        "640x360"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Yes",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Static not accepted for 640x360. Page note: specs vary by screen. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-041",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Transit",
+      "venue_type": "Taxi and Rideshare TV (row 2 of 2)",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":10-:30"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Yes",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-042",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Transit",
+      "venue_type": "Train Stations",
+      "canvases_px": [
+        "1920x1080",
+        "1080x1920",
+        "1400x400",
+        "3840x3240",
+        "3600x720",
+        "2480x720",
+        "2400x720",
+        "1680x720",
+        "2160x640",
+        "1280x320"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Asterisked sizes 1920x1080, 1080x1920 and 1400x400 are static only (no video). OpenOOH 1.2.1 label: Train. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-043",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Outdoor",
+      "venue_type": "Urban Panels (row 1 of 2)",
+      "canvases_px": [
+        "1080x1920",
+        "2160x2160"
+      ],
+      "static": true,
+      "video": false,
+      "durations": [],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Static only; 2160x2160 is black and white only. Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-044",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Outdoor",
+      "venue_type": "Urban Panels (row 2 of 2)",
+      "canvases_px": [
+        "1080x1920",
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: No",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-045",
+      "source_owner": "Vistar Media (SSP) — 2023 venue spec list",
+      "venue_group": "Point of Care",
+      "venue_type": "Veterinary Offices",
+      "canvases_px": [
+        "1366x768"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15"
+      ],
+      "file_requirements": "Static JPG; video MOV or MP4; max 10 MB static / 50 MB video; static color space 'RGB and CMYK' (document-level, p.1); video with audio: Yes",
+      "source_url": "https://coegipartners.com/wp-content/uploads/2023/12/DOOH-Vistar-Media-Specifications.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Vistar-branded spec PDF ('DOOH - VISTAR Specifications', PDF created 2023-12-08) hosted on a third-party agency domain; text extracted locally from the public PDF",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Vistar's own help center (updated 2026-05-20) says Deal Desk / Deal Summary Export specs are the source of truth; this 2023 list is a planning snapshot, not network-guaranteed."
+    },
+    {
+      "id": "DOOH-046",
+      "source_owner": "Vistar Media (SSP) — help center",
+      "venue_group": "All",
+      "venue_type": "All",
+      "canvases_px": [
+        "1080x1920",
+        "1280x960",
+        "1920x1080",
+        "840x400",
+        "1400x400"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [],
+      "file_requirements": "Recommendation: JPEG rather than PNG for images; images hosted by the DSP and passed in the bid response; video via VAST only, max one redirect; HTML5 not accepted",
+      "source_url": "https://help.vistarmedia.com/hc/en-us/articles/360059687631-Creatives-Best-Practices",
+      "checked_on": "2026-09-16",
+      "source_access": "Public help-center article, 'Updated May 20, 2026'; read in browser (direct fetch returned 403)",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "notes": "Canvases are Vistar's 'standard' roll-up resolutions (9:16, 4:3, 16:9, Poster, Bulletin); Vistar may resize and letterbox. Pre-RFP overview dashboard is linked but did not load (system error). During RFPs, Deal Desk specs by venue type and media owner are the source of truth. All creatives need media-owner approval."
+    },
+    {
+      "id": "DOOH-047",
+      "source_owner": "OpenOOH Working Group (OAAA-supported)",
+      "venue_group": "All",
+      "venue_type": "Venue taxonomy",
+      "canvases_px": [],
+      "static": null,
+      "video": null,
+      "durations": [],
+      "file_requirements": "—",
+      "source_url": "https://github.com/openooh/venue-taxonomy/blob/main/specification-1.2.md",
+      "checked_on": "2026-09-16",
+      "source_access": "Public GitHub repository; spec 1.2.1 dated 2026-02-02; JSON updated 2026-09-08",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "notes": "Taxonomy only; defines no creative specs. 1.2.1 renames children to singular (e.g. Airport, Train, Fueling Station), deprecates Transit > Taxi & Rideshare Top (104) for Outdoor > Car Top (307), deprecates Billboard children and High-End Dining, and adds venues such as Spectacular, Window Panel, Moving Billboard, EV Charging Station, Hospital, Urgent Care, Casinos, Convention Center, Bank. Repo README still labels v1.1 'Current Version' and the adoption table lists Vistar on 1.0 (parent/child only)."
+    },
+    {
+      "id": "DOOH-048",
+      "source_owner": "OpenOOH Working Group",
+      "venue_group": "All",
+      "venue_type": "All",
+      "canvases_px": [
+        "1920x1080",
+        "1080x1920",
+        "1024x768",
+        "1400x400",
+        "840x400"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":06",
+        ":10",
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "Candidate containers HTML5, JPG, PNG, MP4; video codec H.264; audio AAC/MP3; file size 'up to 5MB?' (open question)",
+      "source_url": "https://github.com/openooh/creative-formats",
+      "checked_on": "2026-09-16",
+      "source_access": "Public GitHub README; marked DRAFT; last commit 2021-03-08",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Draft candidate standards, not adopted requirements. README mislabels 1080x1920 as landscape and 1920x1080 as portrait. Lists 560x160 and 720x208 as downscales of 1400x400. Proposes letterboxing (not cropping) for mismatches and last-frame freeze for short video in a longer slot."
+    },
+    {
+      "id": "DOOH-049",
+      "source_owner": "Place Exchange (SSP)",
+      "venue_group": "Multiple",
+      "venue_type": "Multiple",
+      "canvases_px": [
+        "1920x1080",
+        "1080x1920",
+        "1400x400",
+        "840x400"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15 (standard video); airports typically :10"
+      ],
+      "file_requirements": "Static .jpg/.png at 72 ppi; video .mp4 with even-numbered pixel resolution, standard bitrate <5,000 kbps, 30 fps; RGB; min/max file size varies by publisher",
+      "source_url": "https://www.placeexchange.com/assets/marketing/Spec_Best_Practices_One_Sheet.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Public PDF (created 2026-03-26)",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "notes": "These sizes reach '85%' of PX inventory per the source. 1920x1080/1080x1920 for Entertainment, Health and Beauty, Movie Theaters, Office Buildings, Point of Care, Residential, Retail, Transit, Urban Panels; 1400x400 and 840x400 static for Billboards, Taxi Tops, Transit; 1400x400 video for Taxi Tops and Transit. Spectaculars and some airport inventory are exceptions. Creative ready 3 business days before launch (7 for spectaculars, airports, controlled inventory). VAST only for video tags (no VPAID). Creative file fixed to first bid per DSP creative ID."
+    },
+    {
+      "id": "DOOH-050",
+      "source_owner": "Place Exchange (SSP) — pharma best practices",
+      "venue_group": "Multiple",
+      "venue_type": "Multiple",
+      "canvases_px": [
+        "1920x1080",
+        "1080x1920",
+        "1400x400",
+        "1280x960",
+        "840x400"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        "≤:15 recommended; longer for stationary venues"
+      ],
+      "file_requirements": "—",
+      "source_url": "https://www.placeexchange.com/assets/marketing/PX_Pharma_Best_Practices.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Public PDF (created 2024-03-26)",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Older PX sizing (lists 1280x960 among top display sizes; 2026 one-sheet does not). Recommends text contrast of at least 4.5:1, optimally 7:1; brand/logo on screen throughout; audio 'may be supported in some contexts'. Cites third-party dwell figures (billboard ~5 s average viewing; taxi top 8-15 s) that are attributed to media owners, not verified here."
+    },
+    {
+      "id": "DOOH-051",
+      "source_owner": "The Trade Desk (DSP) — reproducing SSP recommendations",
+      "venue_group": "Multiple",
+      "venue_type": "Multiple",
+      "canvases_px": [
+        "1400x400",
+        "840x400",
+        "1080x1920",
+        "1920x1080",
+        "1280x720",
+        "720x1280",
+        "1366x768",
+        "560x160"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        "Ströer: 5-30 s"
+      ],
+      "file_requirements": "Broadsign: JPG or PNG, 40 KB (750 KB maximum). Ströer: MP4 no audio track, 25/29.97/30 fps, H.264, max 12 Mbps. Hivestack: JPG, PNG, BMP, MP4, MOV, WEBM, FLV, AVI, MPG under 10 MB",
+      "source_url": "https://www.thetradedesk.com/assets/global/documents/Creative_Specifications-en.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Public PDF; HTTP Last-Modified 2025-03-10",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Recommends 1080x1920 ('D6') for reach across DOOH SSPs. Broadsign place-based examples: train stations 1280x720, airports 720x1280, doctors' office 1366x768. Hivestack common sizes 1920x1080, 560x160, 1080x1920, 1280x720, 1366x768. These are third-party restatements inside TTD's document; extraction shows typos ('PG', '1080x192'). Confirm with each SSP."
+    },
+    {
+      "id": "DOOH-052",
+      "source_owner": "Broadsign (SSP/platform) — specs guide",
+      "venue_group": "Multiple",
+      "venue_type": "Multiple",
+      "canvases_px": [
+        "1920x1080",
+        "1080x1920",
+        "1400x400",
+        "1280x960"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":08",
+        ":10",
+        ":15 (default)",
+        ":30"
+      ],
+      "file_requirements": "Static JPG/PNG, 72 ppi, RGB; video MP4, even-numbered resolution, <5,000 kbps, 30 fps; HTML5 dynamic needs publisher pre-approval",
+      "source_url": "https://broadsign.com/blog/dooh-specs-guide-what-media-buyers-and-planners-need-to-know-before-launching-a-campaign/",
+      "checked_on": "2026-09-16",
+      "source_access": "Vendor's own editorial guide, published 2026-06-17",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "notes": "Vendor guidance, not a network-level requirement; publisher file-size limits govern."
+    },
+    {
+      "id": "DOOH-053",
+      "source_owner": "Digital Media Institute (DMI, Germany)",
+      "venue_group": "All",
+      "venue_type": "All",
+      "canvases_px": [
+        "1920x1080",
+        "3840x2160",
+        "1920x1200",
+        "1080x1920",
+        "2160x3840",
+        "1600x1200"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        "5-30 s file-size table"
+      ],
+      "file_requirements": "Video H.264 in MP4, 25 fps progressive, 6-10 Mbit/s VBR (FHD) or 24-40 Mbit/s (UHD); max video size ≈1 MB per second FHD, 4 MB/s UHD; stills uncompressed JPG, 6 MB FHD / 24 MB UHD",
+      "source_url": "https://www.dmi-org.com/download/DMI_Standards_DOOH_Creative_Specs.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Public PDF, Version 2.0 dated 2020-09-09",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "European (German) industry standard from 2020; 25 fps and 16:10 reflect European screens. Notes stills are required for roadside videoboards where moving images are prohibited. Not a US platform rule."
+    },
+    {
+      "id": "DOOH-054",
+      "source_owner": "Lamar Advertising (media owner)",
+      "venue_group": "Outdoor",
+      "venue_type": "Billboards (digital)",
+      "canvases_px": [
+        "1400x400",
+        "840x400"
+      ],
+      "static": true,
+      "video": null,
+      "durations": [
+        "ads rotate every 6-10 s depending on location"
+      ],
+      "file_requirements": "—",
+      "source_url": "https://lamar.com/en/products/programmatic/media-formats",
+      "checked_on": "2026-09-16",
+      "source_access": "Public web page",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "notes": "'Over 90%' of Lamar screens reachable with 1400x400 and 840x400. QR codes can NOT be used on Lamar DOOH. Page does not state file types or motion rules for billboards. Same page: airports 1920x1080 and 1080x1920; NYC urban panels 480x672 static or video."
+    },
+    {
+      "id": "DOOH-055",
+      "source_owner": "Lamar Advertising (media owner) — panel spec sheet example",
+      "venue_group": "Outdoor",
+      "venue_type": "Billboards (digital bulletin)",
+      "canvases_px": [
+        "1400x400"
+      ],
+      "static": true,
+      "video": null,
+      "durations": [],
+      "file_requirements": "72 ppi; RGB (convert PMS to RGB); black R0 G0 B0",
+      "source_url": "https://resources.lamar.com/SMCoreServices/public/materials/pdf/reports/specsheet/424/37202/",
+      "checked_on": "2026-09-16",
+      "source_access": "Public per-panel PDF, 'Updated 9/2026'",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "notes": "One example panel (Reno, NV) eligible for the autoscale bulletin template. Each Lamar panel has its own sheet; do not generalise. Legacy lamargraphics.com templates list JPG/BMP/GIF and 'NO ANIMATED GIFs' (undated/2015), not rechecked as current."
+    },
+    {
+      "id": "DOOH-056",
+      "source_owner": "GSTV (media owner)",
+      "venue_group": "Retail",
+      "venue_type": "Fueling Stations",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": null,
+      "video": true,
+      "durations": [
+        "min 5 s",
+        "max 30 s (longer by approval)"
+      ],
+      "file_requirements": "MP4, H.264, 29.97 fps, target 20 Mbps, max 100 MB; audio AAC, 48 kHz/24-bit min (96 kHz preferred), true peak -2 max, M&E on L / dialogue on R",
+      "source_url": "https://www.gstv.com/editorial-guidelines",
+      "checked_on": "2026-09-16",
+      "source_access": "Public page plus linked 'Creative Best Practices and Video Spec Guide' PDF (static1.squarespace.com upload, 2025-07)",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "notes": "Audio-on video network; title-safe and 4:3 centre-cut safe zone for 4:3 and 16:9 screens; legal copy min 8 pt; QR min 250x250 on 1920x1080 (200x200 floor). Ready-to-air spots 5 business days before air. Static acceptance not stated in the spec guide."
+    },
+    {
+      "id": "DOOH-057",
+      "source_owner": "Firefly (media owner)",
+      "venue_group": "Transit / Outdoor",
+      "venue_type": "Taxi and Rideshare Top (Car Top)",
+      "canvases_px": [
+        "560x160",
+        "1920x674"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":08"
+      ],
+      "file_requirements": "Static PNG, RGB, 72 ppi, max 3 MB; video MP4, 29.974 fps (as published), 8 s, max 5 MB",
+      "source_url": "https://www.fireflyon.com/blog/nyc-taxi-advertising-design-guide",
+      "checked_on": "2026-09-16",
+      "source_access": "Media owner's own guide, published 2026-07-07",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "notes": "1920x674 stated as required for NYC. Seven words or fewer recommended. Creative 3 business days before launch. '29.974 fps' is likely a typo for 29.97."
+    },
+    {
+      "id": "DOOH-058",
+      "source_owner": "Firefly (media owner)",
+      "venue_group": "Transit",
+      "venue_type": "Taxi and Rideshare TV",
+      "canvases_px": [
+        "1280x720 minimum (16:9)"
+      ],
+      "static": null,
+      "video": true,
+      "durations": [],
+      "file_requirements": "MP4, MOV or WMV; bitrate ≥1,200 kbps; optional 120x450 vertical banner ≤100 KB",
+      "source_url": "https://www.fireflyon.com/blog/nyc-taxi-advertising-design-guide",
+      "checked_on": "2026-09-16",
+      "source_access": "Media owner's own guide, published 2026-07-07",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "notes": "Submission 5 business days before launch. Durations not stated."
+    },
+    {
+      "id": "DOOH-059",
+      "source_owner": "OUTFRONT Media (media owner)",
+      "venue_group": "Outdoor / Transit",
+      "venue_type": "Digital billboards and transit",
+      "canvases_px": [],
+      "static": null,
+      "video": null,
+      "durations": [
+        "purchased increments e.g. 8 or 15 s",
+        "billboards 8-10 s; transit 10-15 s"
+      ],
+      "file_requirements": "Must meet OUTFRONT file, format and encoding standards (not published on these pages)",
+      "source_url": "https://www.outfront.com/posting-standards",
+      "checked_on": "2026-09-16",
+      "source_access": "Public posting standards page plus https://www.outfront.com/media/digital-ooh",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Digital copy due at least ten working days before start. Display guarantee 92.5% of contracted time. Pixel sizes and file limits not published on the pages read."
+    },
+    {
+      "id": "DOOH-060",
+      "source_owner": "Clear Channel Outdoor (media owner, US)",
+      "venue_group": "Outdoor",
+      "venue_type": "Billboards (digital)",
+      "canvases_px": [],
+      "static": null,
+      "video": null,
+      "durations": [
+        "typically 8 s per ad"
+      ],
+      "file_requirements": "—",
+      "source_url": "https://clearchanneloutdoor.com/blog/printed-vs-digital-billboards-how-to-choose-the-right-format-for-your-campaign/",
+      "checked_on": "2026-09-16",
+      "source_access": "Media owner's own blog, 2025-02-20",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "No public US pixel/file spec located. Slot length is described as typical, not a rule."
+    },
+    {
+      "id": "DOOH-061",
+      "source_owner": "Bauer Media Outdoor UK (formerly Clear Channel UK)",
+      "venue_group": "Outdoor",
+      "venue_type": "Billboards (roadside digital 48-sheet, UK)",
+      "canvases_px": [
+        "864x432"
+      ],
+      "static": true,
+      "video": false,
+      "durations": [
+        "10 s slot unless agreed"
+      ],
+      "file_requirements": "JPG or PNG; RGB; 1 MB or less (20 MB or less programmatic)",
+      "source_url": "https://www.bauermediaoutdoor.co.uk/resources/specifications/billboard-live-specification",
+      "checked_on": "2026-09-16",
+      "source_access": "Public spec page (clearchannel.co.uk URL redirects here)",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "notes": "UK market, not US. Video not supported. Min text 8 px, 12 px recommended; no content that mimics traffic signs or distracts drivers."
+    },
+    {
+      "id": "DOOH-062",
+      "source_owner": "OAAA — compendium of state laws",
+      "venue_group": "Outdoor",
+      "venue_type": "Billboards (roadside digital)",
+      "canvases_px": [],
+      "static": true,
+      "video": false,
+      "durations": [
+        "state minimum static dwell commonly 6-10 s; some 4 s"
+      ],
+      "file_requirements": "—",
+      "source_url": "https://oaaa.org/wp-content/uploads/2022/11/Changeable-Message-Digital-Technology-Compendium-2019.2.pdf",
+      "checked_on": "2026-09-16",
+      "source_access": "Public PDF (created 2019-04-16)",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "notes": "Legal summary dated 2019; laws and local ordinances change. Examples: Arizona no animation, static at least 8 s, transition ≤2 s; Tennessee static at least 8 s, change ≤2 s; many state rules bar animated, scrolling or full-motion video. Washington listed as prohibiting changeable message technology (2019). Cites FHWA guidance memo of 2007-09-25. Not legal advice."
+    },
+    {
+      "id": "DOOH-063",
+      "source_owner": "OAAA — digital traffic safety brief",
+      "venue_group": "Outdoor",
+      "venue_type": "Billboards (roadside digital)",
+      "canvases_px": [],
+      "static": true,
+      "video": false,
+      "durations": [
+        "typically 6 or 8 s static"
+      ],
+      "file_requirements": "—",
+      "source_url": "https://oaaa.org/policy-advocacy/policy-issue-briefs/digital-traffic-safety/",
+      "checked_on": "2026-09-16",
+      "source_access": "Public policy page (undated; © 2026)",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "notes": "Industry description that digital billboards show static messages typically for 6 or 8 seconds."
+    },
+    {
+      "id": "DOOH-064",
+      "source_owner": "Unsourced (legacy agency spec sheet row)",
+      "venue_group": "Education",
+      "venue_type": "Schools",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15",
+        ":30"
+      ],
+      "file_requirements": "—",
+      "source_url": "—",
+      "checked_on": "2026-09-16",
+      "source_access": "No primary source found",
+      "account_availability": "NOT_TESTED",
+      "status": "UNVERIFIED",
+      "notes": "Not in the 2023 Vistar list or other sources read. OpenOOH has Education > School (601)."
+    },
+    {
+      "id": "DOOH-065",
+      "source_owner": "Unsourced (legacy agency spec sheet row)",
+      "venue_group": "Health and Beauty",
+      "venue_type": "Spas",
+      "canvases_px": [
+        "1920x1080"
+      ],
+      "static": true,
+      "video": true,
+      "durations": [
+        ":15"
+      ],
+      "file_requirements": "—",
+      "source_url": "—",
+      "checked_on": "2026-09-16",
+      "source_access": "No primary source found",
+      "account_availability": "NOT_TESTED",
+      "status": "UNVERIFIED",
+      "notes": "Not in the 2023 Vistar list or other sources read. OpenOOH has Spa (403)."
+    },
+    {
+      "id": "DOOH-066",
+      "source_owner": "Unsourced (legacy agency spec sheet row)",
+      "venue_group": "Outdoor",
+      "venue_type": "Billboards (extra sizes)",
+      "canvases_px": [
+        "990x495",
+        "806x390"
+      ],
+      "static": true,
+      "video": false,
+      "durations": [],
+      "file_requirements": "—",
+      "source_url": "—",
+      "checked_on": "2026-09-16",
+      "source_access": "No primary source found",
+      "account_availability": "NOT_TESTED",
+      "status": "UNVERIFIED",
+      "notes": "Sizes not found in any primary source read."
+    },
+    {
+      "id": "DOOH-067",
+      "source_owner": "Unsourced (legacy agency spec sheet row)",
+      "venue_group": "Transit",
+      "venue_type": "Subway / Train Stations :06",
+      "canvases_px": [],
+      "static": null,
+      "video": null,
+      "durations": [
+        ":06"
+      ],
+      "file_requirements": "—",
+      "source_url": "—",
+      "checked_on": "2026-09-16",
+      "source_access": "No primary source found",
+      "account_availability": "NOT_TESTED",
+      "status": "UNVERIFIED",
+      "notes": "No :06 duration found for these venues in the 2023 Vistar list (Subway duration blank; Train :15). OpenOOH creative-formats draft lists 6 s only as a candidate standard."
+    },
+    {
+      "id": "DOOH-068",
+      "source_owner": "Unsourced (legacy agency spec sheet row)",
+      "venue_group": "Health and Beauty",
+      "venue_type": "Gyms 1080x1920",
+      "canvases_px": [
+        "1080x1920"
+      ],
+      "static": null,
+      "video": null,
+      "durations": [],
+      "file_requirements": "—",
+      "source_url": "—",
+      "checked_on": "2026-09-16",
+      "source_access": "No primary source found",
+      "account_availability": "NOT_TESTED",
+      "status": "UNVERIFIED",
+      "notes": "2023 Vistar Gyms rows list 1920x1080 and 300x250 only."
+    }
+  ]
+}

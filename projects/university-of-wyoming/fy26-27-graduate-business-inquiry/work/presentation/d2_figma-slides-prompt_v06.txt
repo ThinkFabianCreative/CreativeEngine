@@ -1,0 +1,111 @@
+FIGMA SLIDES PROMPT · UW GRADUATE BUSINESS · ONE IDEA · v06 (2026-09-14)
+Adds an audience slide (new slide 2) connecting the audience to the idea, after Andres: "we may need a
+slide to explain the connection between the audience and the idea". Audience from S5 targeting and
+Andres's working-context note (brief §11.4, unverified). 7 slides.
+Earlier: v05 revised v04 from 4 to 6 slides, one thought per slide, after Andres: "do we need more slides? i dont
+want crowded slides". Copy unchanged from v04 except where split across slides.
+Internal work in progress. Not approved. Placeholder imagery.
+
+Rebuild the deck as 7 slides. Before starting, read 00_READ_FIRST.txt, 01_taste_standard.txt,
+02_typography.txt, 03_layout_hierarchy_color.txt, 10_uw_brand_rules.txt and 12_uw_directions.txt.
+Run 06_self_check.txt before replying.
+
+DECK DESIGN
+- 1920 x 1080. UW Brown #492F24 backgrounds, White type, UW Gold #FFC425 for one emphasis per slide.
+- Montserrat only (Bold for titles, Regular/Medium for body). No Blackhawk.
+- ONE thought per slide. Lots of space. Body text 32 px minimum. Never more than 3 lines in a block.
+- Flush-left grid, 120 px margins. Same eyebrow position on every slide (top-left).
+- No gradients, icons, symbol bullets, shadows, device mockups, stock photos or decorative lines.
+- Use COPIES of the final "Too stubborn to stop?" ad frames as visuals. Never redraw them.
+- Do not use any FAR / FURTHER, RUNNER or MARGIN NOTES frames.
+- Footer on every slide, 20 px, 50% White: "UW College of Business · Graduate Meta campaign · Work in progress · Placeholder imagery"
+- Use the copy below exactly. Do not add words.
+
+------------------------------------------------------------
+SLIDE 1 · THE JOB
+------------------------------------------------------------
+Eyebrow (Gold): THE JOB
+Title, large: One idea. Five programs. First contact.
+Body (3 lines, left, below title with generous space):
+  Meta ads that drive application starts for five College of Business graduate programs.
+  For many people, this ad is the first time they meet UW.
+  The idea carries the ad. Program details live in the post text.
+
+------------------------------------------------------------
+SLIDE 2 · WHO WE'RE TALKING TO
+------------------------------------------------------------
+Eyebrow (Gold): WHO WE'RE TALKING TO
+Title, large, left, max 65% width (Gold on "holding it together"):
+  They're not the boss yet. They're the one holding it together.
+Body, lower left (3 lines):
+  21 to 35. Shift work, plant floors, retail, bank branches, 9-to-5 desks. Some still in college.
+  They want the promotion, or to be their own boss.
+  They already cover the extra shift. Nobody calls that leadership.
+Right side, small block, bottom-aligned with the body:
+  Label (White 70%, small caps): THE CONNECTION
+  That everyday grit is what a master's on top of a real life asks for. The idea gives it a name.
+
+------------------------------------------------------------
+SLIDE 3 · THE INSIGHT
+------------------------------------------------------------
+Eyebrow (Gold): WORKING INSIGHT
+One statement only, very large, left-aligned, max 60% of slide width (Gold on "the hardest part"):
+  The people who think they have no room for a graduate degree are often the ones already doing the hardest part.
+Nothing else on the slide.
+
+------------------------------------------------------------
+SLIDE 4 · WHERE IT COMES FROM
+------------------------------------------------------------
+Eyebrow (Gold): WHERE IT COMES FROM
+Title, large (Gold on "who you are"):
+  A Cowboy isn't what you are, but who you are.
+Small attribution under title (24 px, White 70%): UW, "The World Needs More Cowboys"
+Body, lower left (Gold on nothing):
+  We celebrate forging your own path against the odds.
+  That's leadership. That's entrepreneurial. That's the Code of the West.
+  A master's degree on top of a real life takes grit and determination.
+
+------------------------------------------------------------
+SLIDE 5 · THE IDEA
+------------------------------------------------------------
+Eyebrow (Gold): THE IDEA · NOT FOR EVERYONE
+Headline, as large as the slide allows, left half (Gold on "STUBBORN"):
+  TOO STUBBORN
+  TO STOP?
+Second line, about 60% of headline size:
+  SOUNDS LIKE A COWBOY.
+Right side, one short block, vertically centered:
+  The thing they get teased for is the qualification.
+  The people who have that grit rarely call it that.
+
+------------------------------------------------------------
+SLIDE 6 · THE WORK
+------------------------------------------------------------
+Eyebrow (Gold): THE WORK
+Title: The swipe is the story.
+Top row: copies of the four carousel cards, equal size, evenly spaced, caption under each (24 px, White 70%):
+  01 The week     02 The question     03 The answer     04 UW + program
+Bottom row: copy of the 4:5 static and the 9:16 static, side by side, bottom-aligned.
+Small captions: FEED 4:5     STORIES AND REELS 9:16
+Bottom-left, one small line (24 px, White 70%):
+  STIMULUS: Channel 4's Tokyo Paralympics line, "To be a Paralympian, there's got to be something wrong with you." We reclaimed the insult the same way.
+
+------------------------------------------------------------
+SLIDE 7 · HOW IT RUNS · WHAT WE NEED
+------------------------------------------------------------
+Eyebrow (Gold): HOW IT RUNS
+Title: Same question. Every program.
+Left half, program labels stacked:
+  ON-CAMPUS MBA
+  ONLINE MBA
+  M.S. IN ACCOUNTING
+  ONLINE M.S. IN ACCOUNTING
+  ONLINE M.S. IN FINANCE
+Under the labels (2 lines):
+  Each program gets its own collision week. The question stays.
+  4:5 feed · 9:16 Stories and Reels · Carousel · 15-second video
+Right half:
+  Label (Gold): DECISIONS NEEDED
+  Approval to use Cowboys language and the Blackhawk font.
+  Access to UW photography, or a shoot with model releases.
+  Confirmed placements and landing pages.

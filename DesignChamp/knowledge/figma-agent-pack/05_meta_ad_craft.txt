@@ -1,0 +1,30 @@
+05 · META (FACEBOOK / INSTAGRAM) AD CRAFT
+
+THE ENCOUNTER
+A thumb scrolling fast, sound off, for a fraction of a second. The idea must be
+understood before the scroll resumes.
+
+RULES
+- Frame one is the poster. For video, the first frame must work as a static ad.
+  For carousels, card one must work alone as the thumbnail.
+- Carousel is a sequence. Every card must add something new: the next step, a reveal,
+  a contrast. Never repeat the same headline on interchangeable cards.
+  If there is no sequence, make a single image instead of a carousel.
+- Type must be sized for a phone at arm's length. Few words per frame.
+- Native, not generic: the ad can look like it belongs in the feed, but the campaign's
+  idea must still be recognizable.
+- No fake interface: no drawn buttons, play icons, checkboxes or device mockups in the ad.
+
+CANVAS SIZES (verify against the client's placement plan)
+  Feed static         1440 x 1800  (4:5)
+  Stories / Reels     1080 x 1920  (9:16)
+  Carousel card       1080 x 1080  (1:1)  or 1080 x 1350 (4:5) if specified
+
+SAFE ZONES FOR 9:16 (planning guide, check in Ads Manager preview)
+  Keep key text and logos out of the top 14% (about 270 px),
+  the bottom 35% (about 670 px) and 6% on each side (about 65 px).
+  Design the edges knowing they will be covered; do not leave them awkwardly empty.
+
+WHEN ASKED FOR A STATIC, ALSO CONSIDER THE 9:16
+Every 4:5 master should have a 9:16 version unless told otherwise. Re-compose it;
+do not just stretch or pad it.

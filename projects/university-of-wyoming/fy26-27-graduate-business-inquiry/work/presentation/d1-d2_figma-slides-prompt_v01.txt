@@ -1,0 +1,83 @@
+FIGMA SLIDES PROMPT · UW GRADUATE BUSINESS · TWO IDEAS · v01 (2026-09-14)
+Internal work in progress. Not approved. Placeholder imagery. See conversation for context.
+
+Build a 4-slide Figma Slides presentation. Before starting, read 00_READ_FIRST.txt,
+01_taste_standard.txt, 02_typography.txt, 03_layout_hierarchy_color.txt, 10_uw_brand_rules.txt
+and 12_uw_directions.txt. Run 06_self_check.txt before replying.
+
+DECK DESIGN
+- 1920 x 1080. UW Brown #492F24 backgrounds, White type, UW Gold #FFC425 for one emphasis per slide.
+- Montserrat only (Bold for titles, Regular/Medium for body). No Blackhawk.
+- One big statement per slide. Body copy max 3 short lines per block, min 28 px.
+- Flush-left grid, 120 px margins. Visuals on the right half, text on the left half.
+- No gradients, icons, bullets with symbols, shadows, device mockups, stock photos or decorative lines.
+- Use COPIES of existing ad frames as the visuals. Never redraw them. Scale proportionally.
+- Small footer on every slide, 20 px, 50% White: "UW College of Business · Graduate Meta campaign · Work in progress · Placeholder imagery"
+- Use the copy below exactly. Do not add words.
+
+------------------------------------------------------------
+SLIDE 1 · THE JOB
+------------------------------------------------------------
+Eyebrow (small, Gold): THE JOB
+Title: One idea. Five programs. First contact.
+Body:
+  Meta ads that drive application starts for five College of Business graduate programs.
+  For many people, this ad is the first time they meet UW.
+  The idea carries the ad. Program details live in the post text.
+Right half, large (Gold on "the hardest part"):
+  "The people who think they have no room for a graduate degree are often the ones already doing the hardest part."
+Small label under it: WORKING INSIGHT
+Visual: none.
+
+------------------------------------------------------------
+SLIDE 2 · IDEA 01 · NOT FOR EVERYONE
+------------------------------------------------------------
+Eyebrow (Gold): IDEA 01 · NOT FOR EVERYONE
+Title (Gold on "STUBBORN"):
+  TOO STUBBORN TO STOP?
+  SOUNDS LIKE A COWBOY.
+Body:
+  Working adults get told they're doing too much. We turn that "flaw" into the qualification.
+  The ad shows a week where everything collided, then asks a question they already know the answer to.
+How it runs (small caps label + one line):
+  CAROUSEL: The week  ›  The question  ›  The answer  ›  UW + program
+Stimulus (small caps label + two lines):
+  STIMULUS: Channel 4's Tokyo Paralympics line, "To be a Paralympian, there's got to be something wrong with you." Reclaim the insult.
+  UW's own promise: building grit. And "The World Needs More Cowboys."
+Visual (right half): copies of the final 4:5 static and the four carousel cards, cards in a row below the static.
+
+------------------------------------------------------------
+SLIDE 3 · IDEA 02 · YOU DON'T HAVE TO GO FAR TO GET FURTHER
+------------------------------------------------------------
+Eyebrow (Gold): IDEA 02
+Title (Gold on "FURTHER"):
+  YOU DON'T HAVE TO GO FAR
+  TO GET FURTHER.
+Body:
+  Ambition doesn't require leaving. The job, the family and the town stay. The reach grows.
+  "Further" is about where you're headed, not how far you travel.
+Two executions (label + one line each):
+  FAR › FURTHER: "Far" stretches, letter by letter, into "further."
+  MARGIN NOTES: A person's own handwritten questions, drawn over the place they already work.
+Stimulus:
+  STIMULUS: Type that becomes the image. An editor's red-pen notes on a printout.
+Visual (right half): copy of the FAR › FURTHER static. Beside it, an empty frame labelled "MARGIN NOTES · to be shot" in small White text on a slightly lighter brown box. Do not generate an image for it.
+
+------------------------------------------------------------
+SLIDE 4 · HOW IT RUNS · WHAT WE NEED
+------------------------------------------------------------
+Eyebrow (Gold): HOW IT RUNS
+Title: Same idea. Different label.
+Program labels, stacked:
+  ON-CAMPUS MBA
+  ONLINE MBA
+  M.S. IN ACCOUNTING
+  ONLINE M.S. IN ACCOUNTING
+  ONLINE M.S. IN FINANCE
+Formats (one line): 4:5 feed static · 9:16 Stories and Reels · Carousel · 15-second video
+Action (one line): Apply Now is Meta's button. Program facts sit in the post text.
+Right half label (Gold): DECISIONS NEEDED
+  Which idea moves forward.
+  Approval to use Cowboys language and the Blackhawk font.
+  Access to UW photography, or a shoot with model releases.
+Visual: a copy of one 9:16 static, small, bottom-right.

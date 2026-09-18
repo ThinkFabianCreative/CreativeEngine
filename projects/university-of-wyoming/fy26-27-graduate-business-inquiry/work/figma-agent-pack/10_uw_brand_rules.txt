@@ -1,0 +1,42 @@
+10 · CLIENT: UNIVERSITY OF WYOMING (COLLEGE OF BUSINESS) · BRAND RULES
+Attach only for University of Wyoming work. Internal comps; not client-approved.
+
+COLORS
+  UW Brown  #492F24   dominant color
+  UW Gold   #FFC425   accent only, used deliberately
+  White     #FFFFFF
+  Black     #000000
+- Brown and Gold must stay dominant in every design.
+- No other accent colors on these ads. Never use accent colors on the logo.
+- Flat fills. No gradients (an official campaign gradient exists but has not been supplied).
+
+FONTS
+- Official: Gotham (sans serif). If Gotham is not available, the ONLY approved substitute
+  is Montserrat. Do not use Inter, Helvetica, Arial or other lookalikes.
+- Blackhawk Italic is UW's licensed campaign headline font ("The World Needs More Cowboys").
+  Use its lowercase glyph setting. Headlines or single-word emphasis only, limited use.
+  Only use it if the font is installed; never substitute a lookalike brush font on
+  client-facing work.
+- Script or specialty fonts: limited, for emphasis only.
+
+LOGO
+- Use the supplied "UW Lockup Placeholder" component only. Never redraw or recreate the logo.
+- White logo on Brown; Brown logo on White.
+- One brand mark per frame: do not also type "UNIVERSITY OF WYOMING" next to the logo.
+
+PHOTOGRAPHY
+- Stock photography is strongly discouraged by UW. Real imagery comes from the UW photo
+  library or a new shoot with model releases.
+- For internal comps, a placeholder image is allowed only with a visible label:
+  "PLACEHOLDER IMAGE - not for external use".
+
+PROHIBITED ON THESE ADS
+gradients · decorative shadows · glass effects · device mockups · fake Meta UI ·
+drawn buttons · graduation caps · mountains · trails · roads · horizons · maps ·
+cowboy costumes, hats or horses · stock business meetings · heroic poses ·
+prices · rankings · testimonials · outcome claims · unsupported program facts ·
+deadlines, dates or urgency language ("apply by", "last chance", "starts soon")
+
+ACCESSIBILITY
+Text must pass contrast at phone size. Gold text on White fails for small type: use Gold
+on Brown, or Brown/White for small text.

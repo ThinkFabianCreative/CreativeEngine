@@ -1,0 +1,46 @@
+06 · SELF-CHECK BEFORE HANDING BACK
+
+Go through every frame. Fix what you can. Report what you cannot.
+
+IDEA
+[ ] I can say the frame's idea in one sentence, and the design makes it obvious.
+[ ] The biggest element is the one that carries the idea.
+[ ] Nothing on the frame explains the idea in extra words.
+
+TYPE
+[ ] Only client-approved fonts, or a labelled approved stand-in.
+[ ] No text smaller than 32 px (1080 wide) or 40 px (1440 wide).
+[ ] Emphasis on at most one or two meaningful words per line, one method only.
+[ ] Line breaks follow natural reading pauses; no orphans.
+[ ] Viewed at phone size, everything is readable.
+
+COLOR AND DECORATION
+[ ] Client palette only, flat fills, no gradients.
+[ ] Accent color marks one meaningful thing.
+[ ] No shadows, glows, textures, icons, arrows or dividers without a job.
+[ ] No drawn buttons or fake UI.
+
+BRAND
+[ ] Supplied logo component used, not redrawn.
+[ ] Brand name appears once (logo OR typed name, not both).
+[ ] Program or product label present and legible.
+
+FORMAT
+[ ] Correct canvas sizes.
+[ ] 9:16 key content inside the safe zone.
+[ ] Carousel card one works alone; each card adds something new.
+
+COPY
+[ ] Every word matches the supplied copy exactly. Nothing added.
+[ ] No banned ad-speak on any frame I created.
+
+COMMON FAILURES WE HAVE SEEN (do not repeat)
+- The setup word set bigger than the payoff word.
+- A clever type or color mechanism that only works in the designer's head.
+- Carousel cards that repeat the same line in slightly different layouts.
+- Illustrations that read as something else at phone size.
+- Straight lines with dots and arrowheads implying travel in a "stay close" message.
+- Micro, widely tracked footer labels that nobody can read.
+- A gradient background added "for depth" against the brand rules.
+- A fake gold "Apply Now" button.
+- The logo plus the same name typed above it.
