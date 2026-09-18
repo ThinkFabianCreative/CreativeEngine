@@ -55,9 +55,9 @@ Never: overhead flat lay, low angle, worm's eye, Dutch tilt, wide-angle distorti
 Each program's A, B and C weeks mix shot sizes and angles, so its three ads don't look
 like one photo re-dressed.
 
-REFERENCES BEHIND THIS SET (for the team and mood boards; not typed into prompts)
-Why names stay out of the prompt: see DesignChamp/knowledge/image-direction-reference.md
-section 8. The prompts already carry the translation.
+REFERENCES BEHIND THIS SET (names can be added to any prompt)
+Add a line such as "in the style of Stephen Shore and Todd Hido" to push the look. If
+Firefly refuses or ignores a name, the translation below is already in the prompts.
   Reference                   What we borrow                     In the prompt as
   Stephen Shore               deadpan frontal attention to the   "straight-on frontal view,
                               ordinary (P4-C, P5-C)              deadpan", level horizon

@@ -4,7 +4,7 @@
 
 **Order of authority.** The concept (Barry §1) → the image argument (Barry §6) → the client's photography rules → this reference. Generation tests a decided idea; it never finds one (Barry §2). Where a client or brief forbids generated people or imagery, that rule wins everywhere, including internal comps.
 
-**Sources.** In-house synthesis of common professional practice. Reviewed external input: Superside, *The AI Image Prompting Guide* (4 pp., 2026-06), reviewed 2026-09-17. Its formula and workflow informed §5 and §10; its advice to name photographers in prompts was not adopted (§1, §8).
+**Sources.** In-house synthesis of common professional practice. Reviewed external input: Superside, *The AI Image Prompting Guide* (4 pp., 2026-06), reviewed 2026-09-17. Its formula and workflow informed §5 and §10; its advice to name photographers in prompts is adopted (§1, §8).
 
 **Model facts go stale.** Section 6 describes the generation models as they're generally known at the time of writing. Features, terms and quality change often: check the current tool before relying on a capability, and check the provider's terms for commercial use before any generated image goes near client work.
 
@@ -12,7 +12,7 @@
 
 ## 1. Photographic styles
 
-Pick the style for what the image must argue, then describe it in words the model or photographer can act on. Photographers and directors are excellent **references for the team** (section 8), but prompts use the **technical translation** of what makes their work look the way it does: light, lens, aperture, grade, film stock. "In the style of [living artist]" imitates a person's signature work, is blocked or ignored by many models, and produces pastiche.
+Pick the style for what the image must argue, then describe it in words the model or photographer can act on. Photographers and directors can be named directly in prompts ("in the style of [name]"), alone or combined with the genre (user direction, 2026-09-18). Pair the name with its **technical translation** from section 8 (light, lens, aperture, grade, film stock): some models block or ignore certain names, and the translation keeps the look when they do. It also lets you keep only the qualities you want from a reference. Style is fair game; recreating one specific published photograph or film frame is not (see section 8).
 
 | Style | What it argues | Recognizable by | Watch for |
 |---|---|---|---|
@@ -87,8 +87,8 @@ Write the prompt as a shot list, in this order. Short, concrete sentences beat l
                 (visual-craft §1 FEEL): "dramatic shadows, warm late light" tells the model
                 how it should feel, not just what it shows
 6. GRADE        shadow color, highlight color, saturation, grain, film or digital
-7. STYLE        the photographic genre (section 1) and the technical translation of any
-                reference (section 8): light, lens, aperture, grade, film stock
+7. STYLE        the genre (section 1), reference names (section 8) and their technical
+                translation: light, lens, aperture, grade, film stock
 8. EXCLUDE      what must not appear
 9. RATIO        the aspect ratio, set in the tool's settings where possible
 ```
@@ -134,7 +134,7 @@ The same vocabulary briefs a photographer. For each frame, give: the concept sen
 
 ## 8. Reference library: photographers, directors, light, lenses, grades
 
-Use the names to align the team, build mood boards and brief a photographer or director ("this, not that"). Put the **translation** in the prompt. Descriptions are of widely known qualities of each body of work, for reference; they are not claims about any specific image. Don't reproduce a specific published photograph or film frame as a client execution (Barry, attribution rules).
+Use the names in prompts, mood boards and briefs. Add the **translation** alongside the name: it steers the model toward the qualities you want and carries the look if a model refuses or ignores the name. Descriptions are of widely known qualities of each body of work; they are not claims about any specific image. **The one line:** don't recreate a specific published photograph or film frame (its particular composition, subject and moment) as a client execution. That's a copyright problem for the client, not a style reference.
 
 ### 8.1 Photographers (documentary and fine art)
 
