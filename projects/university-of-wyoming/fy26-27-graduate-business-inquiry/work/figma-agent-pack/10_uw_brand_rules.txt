@@ -44,7 +44,9 @@ T3 STUDENTS (client approval 2026-09-17, conditional; user-reported)
   shoot, with releases (who holds releases: confirm with UW).
 - Online-program variants: shoot in work/home settings, not campus exteriors or landmarks
   (S1 p6 environment matches delivery format; Online MBA also runs in Colorado).
-- Quotes are the student's own words, released and client-approved. No composites.
+- Lines are scripted, drawn from THAT student's real experience (Andres, 2026-09-17). Every
+  line must be true for the person saying it; never move a line to another student.
+  Student confirms, UW approves. No composites. Scripts: work/copy/…_t3-student-scripts_v01.md
   No outcome, salary, placement or industry-access claims (C33, C57-C59) without approval.
 - Until the shoot exists, T3 comps use a labeled placeholder frame, not a generated person.
 

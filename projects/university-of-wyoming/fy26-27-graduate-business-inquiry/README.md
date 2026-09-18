@@ -122,6 +122,7 @@ UPDATED:  2026-09-17
 | 2026-09-17 | First live test of selling-the-work and typography frameworks on T2 and the conversion layer. Found a later client deck export ("…Graduate Campaign 2026 1.0.pdf", 20 of 24 pages changed) not covered by deck review v01. Key risks: Cowboys ownability depends on Institutional Marketing approval (Q1, Q16); "this isn't the brief" (S1 vs S8) is the likeliest objection. Type fixes for deck p14/p17 and the conversion-layer build block | `work/reviews/` |
 | 2026-09-17 | Andres confirms deck v1.0 is what UW received (filed in `outputs/review/`). Client picked T2 and T3; T3 approved only with real students, no AI, shot locally; T1 not selected (user-reported). Pack 10 testimonial rule scoped to T2/conversion frames | `work/reviews/`, `outputs/review/` |
 | 2026-09-17 | Follow-ups: Blackhawk access resolved; T2 and T3 complement each other; T3 shot in Laramie with current students and alumni supplied by UW. Cowboys language (Q1) still open | `work/reviews/` decision record |
+| 2026-09-17 | T3 lines will be scripted from each student's real experience (user direction). Ten draft scripts (two per program, mixed ages, paths, current and alumni) written as casting specs, with intake questions and a casting request for UW. Draft, not approved | `work/copy/` |
 | 2026-09-14 | User approved word-smither writing five program week lines and five post texts with proof points: Direction 2 week lines and Meta primary text per variant (DEVELOP; claims not cleared) | `work/concepts/` |
 
 ## Client-knowledge candidates (not promoted)
@@ -163,6 +164,8 @@ Project-administration questions only. Briefing questions are in [§14](normaliz
   - [`…_figma-comps-review_v01.md`](work/reviews/fy26-27-graduate-business-inquiry_figma-comps-review_v01.md): DEVELOP review of the client Figma comps from pasted screenshots. No verdicts.
   - [`…_brief-readiness-review_v02.md`](work/reviews/fy26-27-graduate-business-inquiry_brief-readiness-review_v02.md): current umbrella addendum.
   - `…_brief-readiness-review_v01.md`: its per-concept results are superseded; its gate reasoning still stands.
+- **`work/copy/`:**
+  - [`…_t3-student-scripts_v01.md`](work/copy/fy26-27-graduate-business-inquiry_t3-student-scripts_v01.md): DEVELOP. T3 15s scripts, P1–P5 × 2, each with MUST BE TRUE casting condition, ledger fact super and risks; casting table and intake questions for UW. Draft; claims not cleared.
 - **`work/concepts/`:**
   - **Current:**
     - [`…_conversion-layer-design_v01.md`](work/concepts/fy26-27-graduate-business-inquiry_conversion-layer-design_v01.md): DEVELOP. Conversion layer templates (single stage, steps carousel, deadline window, admitted) with Online MBA Figma build block. Placeholders for client facts.

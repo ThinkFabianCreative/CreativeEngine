@@ -56,4 +56,6 @@ Verbatim: "blackhawk font is not an issue anymore. 2- they complement eachother,
 | "Shot locally" | Laramie | ANSWERED |
 | Real students | Current students and alumni; UW supplies them | ANSWERED. Who collects releases, and who approves quotes, still to confirm |
 
+**Scripted, not verbatim (Andres, 2026-09-17).** Verbatim: "They wont be Real Quotes, theyll act as real quotes drawn from their experiences, we will need small scripts for students across all programs, different ages and background." Working rule: scripted wording is acceptable only where each line is true for the speaker; scripts double as casting specs; student confirms and UW approves. Draft: `work/copy/…_t3-student-scripts_v01.md`.
+
 **New tension from the answers.** A Laramie shoot has to serve online-program variants too. S1 p6 wants the environment to match delivery format, and pack 11 keeps Laramie and campus imagery off online frames because the Online MBA also runs in Colorado. Working rule (added to pack 10): online-program students are shot in work or home settings, not on campus. Whether UW can supply online students who are in Laramie is a casting question for UW.
