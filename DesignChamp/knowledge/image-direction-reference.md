@@ -41,6 +41,7 @@ Viewpoint decides whose experience the picture is.
 | **Over the shoulder** | Behind a person | Their point of view | Scenes with people; not for person-free work |
 | **Dutch tilt** | Rotated horizon | Unease | Almost never in advertising; reads as an error |
 | **Straight-on (frontal)** | Parallel to a wall or object | Order, formality, deadpan | Symmetrical, deadpan compositions |
+| **POV (first person)** | At the eyes or chest of the viewer-character | "This is you"; immersion, participation | POV video and photography (§9.7); hands may enter frame |
 
 **Shot size.** Wide (the whole place), medium (the group of objects and some room), close (one or two objects), detail or macro (a texture, a mark, a single element). A campaign set gets variety by mixing shot sizes across executions, not by changing style.
 
@@ -343,3 +344,52 @@ One block per genre: what it argues, how it's lit and shot, the grade, reference
 | **Prompt skeleton** | "Cinematic film still, [widescreen or specific ratio], [scene and moment implying a story], [lens] at [f-stop], [motivated light sources], [palette], [film stock or grain], [atmosphere if any]." |
 | **Clichés** | Teal-and-orange; lens flare as decoration; letterbox bars on a non-cinematic image; "epic" with nothing happening |
 | **Caution** | Widescreen ratios fight vertical placements: frame for 9:16 separately (visual-craft §7 format test) |
+
+### 9.7 POV: first-person video and photography
+
+| | |
+|---|---|
+| **Argues** | This is you: your hands, your view, your moment. The viewer is inside the ad, not watching it |
+| **Sub-types** | *Eye-level POV* (what I see) · *hands-in-frame POV* (what I'm doing: holding, opening, making, scrolling) · *body-mount POV* (chest or head mount, action) · *over-the-shoulder hybrid* (almost POV) · *object POV* (the camera is a thing: a mug, a dashboard, a locker) |
+| **Camera** | Phone held at the eyes, chest or head mount, or an action camera. Height matches the character's eyes exactly; if it's too high or too low the illusion breaks |
+| **Lens / aperture** | Ultra-wide to wide (roughly 14–24mm equivalent) for immersion; phone main camera (~24–26mm) for everyday POV. Deep focus, since the eye sees near and far sharp |
+| **Movement** | Motivated by the body: a turn of the head, a step, a reach. Stabilized but alive; no drone-smooth glides, no seasickness. Cut on the character's actions |
+| **Light** | Available light of the real place; the POV character shouldn't carry lights |
+| **Sound** | Diegetic sound is half the immersion: breath, footsteps, the object's own sounds |
+| **References** | *Hardcore Henry* (feature film shot entirely in first person on action cameras); *Peep Show* (UK sitcom built on POV shots); *Enter the Void* (Gaspar Noé; floating first-person camera); *Being John Malkovich* (Spike Jonze; the portal POV) |
+| **Prompt / shot skeleton** | "First-person point of view at eye level, [my hands doing X] entering from the bottom of the frame, [place], [wide lens, deep focus], [available light], [slight natural handheld movement for video]." |
+| **Clichés** | POV of scrolling a phone screen; the "unboxing" hands on a white table; fisheye action-cam for no reason |
+| **Caution** | Hands are where generated images fail most (fingers, grip, anatomy). Where a brief bans generated people, generated hands count as people. POV that simulates a real user's experience of a product must not show results or features the product doesn't deliver |
+
+### 9.8 Handheld device (phone) photography
+
+| | |
+|---|---|
+| **Argues** | Real, immediate, one of us. Closeness and credibility over polish |
+| **Sub-types** | *Everyday snapshot* · *UGC-style* (looks like a customer's post) · *selfie / front camera* · *flash-at-night phone* · *brand work shot on a phone, crafted* (phone as a deliberate aesthetic) |
+| **Camera character** | Main camera about 24–26mm equivalent wide; secondary ultra-wide (~13mm) and short telephoto (~48–120mm, varies by model). Small sensor: deep depth of field unless a portrait mode fakes blur (look for its edge errors). Computational HDR: bright skies held, shadows lifted, slightly flat contrast. Noise in low light; harsh direct LED flash |
+| **Framing** | Held at arm's length or eye level; slightly imperfect, subject not perfectly centered, horizon occasionally a touch off; vertical by default |
+| **Light** | Whatever is there: window, overhead, streetlight, the phone's flash |
+| **Grade** | The phone's own processing look: punchy but flat, crisp detail, mild oversharpening. Don't add film grain to a "phone" image; it contradicts itself |
+| **References** | Apple's *Shot on iPhone* campaign (real users' phone photographs used as brand advertising); creator content native to each platform |
+| **Prompt skeleton** | "Candid smartphone photo, shot on a phone's main wide camera, vertical, deep focus, natural HDR look with lifted shadows, [available light or direct phone flash], [slightly imperfect framing], [real, unstyled place], [what's happening]." |
+| **Clichés** | Fake-casual "UGC" that's obviously a production: perfect light, styled props, models; the mirror selfie with the product |
+| **Caution** | **A generated or staged image made to look like a real customer's post is a fake testimonial.** Never present it as real user content. Real UGC needs the creator's permission and the platform's partnership or branded-content disclosure (verify current policy). Crafted brand work in phone style is fine when it doesn't pretend to be someone else's post |
+
+### 9.9 Vertical video (9:16)
+
+| | |
+|---|---|
+| **Argues** | Made for this phone, this feed, this second. Native, not resized |
+| **Sub-types** | *Talking head / creator-style* (to camera) · *POV* (§9.7) · *demo* (product or process, hands and object) · *vertical cinematic* (composed film for 9:16) · *type-led / motion graphic* (kinetic type over image or color) · *still-to-motion* (a push, pull or pan on a still) |
+| **Frame** | Compose for 9:16 from the start; don't crop a 16:9 master. Subject in the middle band, horizontally inside the central ~75% of the width; faces in the upper-middle, never under the interface. Key content, supers and logos inside the platform's safe zone (`shared/knowledge/<platform>/`; Meta: `meta-paid-ads/`). Vertical space is the story: movement up and down (tilt, reveal, fall, rise) reads naturally |
+| **First frame** | The hook is the first frame, not the first three seconds: something is already happening. No logo sting, no fade from black (`.claude/skills/format-copywriting/references/social-video.md`) |
+| **Camera** | Phone or cinema camera in portrait orientation (rotated rig or vertical sensor crop). Handheld for native feel; locked or gimbal for crafted; talking heads at eye level, lens 24–35mm, not closer than arm's length unless it's a selfie |
+| **Light** | Talking head: soft key from a window or large source at 30–45°, not a ring light by default (the ring light's circular eye catchlight is a creator cliché). Match the setting's look |
+| **Pacing** | Cuts on action and on the beat; a new visual idea every 1–3 seconds for most social formats; hold longer when stillness is the point (narrative-craft §6 time budgets) |
+| **Sound** | Designed to work with sound off first (supers and captions carry it), rewarded with sound on. Captions for all speech, in the safe zone |
+| **Loop** | Short verticals replay: an ending that flows into the opening can earn a second view |
+| **References** | Platform-native creator formats; brand work built vertical-first rather than cut down |
+| **Prompt / shot skeleton** | "Vertical 9:16 video, [shot type], subject in the middle band within the central 75% of the frame, top and bottom 15–20% clear, [camera: handheld or locked], [lens], [light], [first-frame action], [duration]." |
+| **Clichés** | Letterboxed 16:9 inside a 9:16 frame; ring-light talking head; captions in the top or bottom UI zone; trending audio with no link to the idea |
+| **Caution** | Durations, safe zones, caption support and music rules differ by platform and placement: cite the verified record, never memory. Trending audio needs rights clearance |
