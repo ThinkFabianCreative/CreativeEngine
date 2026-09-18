@@ -137,6 +137,8 @@ Barry §6 decides what the image argues. This section is how it's made so the ar
 
 **Illustration.** Choose a style by what the idea needs (abstraction, humor, clarity, speed, warmth), not by trend. A style must hold across every execution the campaign needs.
 
+Vocabulary for styles, angles, lenses, apertures, light setups, film stocks, reference photographers and directors (and how to translate them into prompts), and how the main generation models differ: `DesignChamp/knowledge/image-direction-reference.md`.
+
 **Generated imagery.** Use generation to test a decided idea (Barry §2), never to find one. Before any generated image is shown:
 
 - check hands, text, reflections, shadows, physics and repeated faces
