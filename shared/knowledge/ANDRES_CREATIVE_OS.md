@@ -149,7 +149,7 @@ Treat those numbers as a preference for disciplined convergence, not an automati
 
 ## Reference anchors and confidence
 
-The following are user-supplied taste references. Campaign descriptions and explanations below record the supplied calibration, not independently verified histories, credits or effectiveness claims. Do not imitate their surface or import their claims into client work.
+The following are user-supplied taste references. Campaign descriptions and explanations below record the supplied calibration, not independently verified histories, credits or effectiveness claims. Their look and mechanics may be borrowed directly; their claims, credits and results are not imported into client work as facts.
 
 | Reference | Reaction in supplied context | Working hypothesis to test |
 |---|---|---|
