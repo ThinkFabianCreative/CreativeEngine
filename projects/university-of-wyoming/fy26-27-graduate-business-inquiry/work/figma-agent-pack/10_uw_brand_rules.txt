@@ -34,8 +34,16 @@ PROHIBITED ON THESE ADS
 gradients · decorative shadows · glass effects · device mockups · fake Meta UI ·
 drawn buttons · graduation caps · mountains · trails · roads · horizons · maps ·
 cowboy costumes, hats or horses · stock business meetings · heroic poses ·
-prices · rankings · testimonials · outcome claims · unsupported program facts ·
+prices · rankings · testimonials (T2 and conversion frames; see below) · outcome claims ·
+unsupported program facts ·
 deadlines, dates or urgency language ("apply by", "last chance", "starts soon")
+
+T3 STUDENTS (client approval 2026-09-17, conditional; user-reported)
+- Real UW students only. No AI-generated people, faces, voices or quotes, ever, on T3.
+- Shot locally (location definition OPEN). Photo/video from that shoot, with releases.
+- Quotes are the student's own words, released and client-approved. No composites.
+  No outcome, salary, placement or industry-access claims (C33, C57-C59) without approval.
+- Until the shoot exists, T3 comps use a labeled placeholder frame, not a generated person.
 
 ACCESSIBILITY
 Text must pass contrast at phone size. Gold text on White fails for small type: use Gold

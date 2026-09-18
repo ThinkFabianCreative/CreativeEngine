@@ -606,6 +606,7 @@ Recorded as user direction. It does not substantiate claims or establish client 
   - **T2 "Too stubborn to stop? / You sound like a Cowboy."** (perception; Direction 2).
   - **T3 students as influencers** (peers; new). Real students or graduates required for external use; testimonial and claim approvals apply (S1 p3 client list; S1 p6 photography; C57–C59).
 - **Status:** territories for client selection, consistent with the rev 3 umbrella direction (alternatives explored before one is selected). No selection; Q1, Q37 open.
+- **Client selection (reported by Andres, 2026-09-17; USER-REPORTED, no written evidence on file).** Verbatim: "they picked territories 02 and 03"; "they approved it 03 if we made it with real students not ai and shot locally". T2 selected; T3 approved on conditions (real students, no AI; shot locally); T1 not selected. Deck: `outputs/review/University of Wyoming  Graduate Campaign 2026 1.0.pdf`. Q1 (Cowboys language, Institutional Marketing) and Q37 remain OPEN; T2/T3 relationship, "locally", student sourcing and T3 claim approvals are OPEN. Record: `work/reviews/…_client-territory-decision_v01.md`.
 
 ### 11.5 Brand constraints (S4, S2)
 

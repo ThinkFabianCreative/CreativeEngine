@@ -120,7 +120,7 @@ Worth fixing, in roughly this order of impact:
 
 - **Tracking at display size.** Large type almost always needs negative tracking; default spacing was drawn for text size.
 - **All caps needs positive tracking.** Uppercase letterforms were not designed to sit beside each other.
-- **Correct marks.** Typographic quotes and apostrophes, en and em dashes, real ellipses, proper minus signs. A prime standing in for an apostrophe is the most common tell in a generated comp.
+- **Correct marks.** Typographic quotes and apostrophes, en and em dashes, real ellipses, proper minus signs. A prime or straight quote standing in for an apostrophe is the most common tell in a generated comp; an accent (´ or `) standing in for one is its cousin. Fix marks in the copy handed to production, not only in the layout: an instruction not to alter quoted copy preserves its wrong apostrophes.
 - **Widows and orphans in short copy.** In a three-line headline, one word alone on line three is a visible mistake. In running body copy it matters less than people claim.
 - **Headline line breaks are written, not wrapped.** Break for sense and rhythm. Never let a headline break where the container happens to end.
 - **Numerals.** Lining figures in tables and interfaces; oldstyle in running text where the face offers them.
@@ -173,7 +173,7 @@ Retrieved settings rather than decided ones:
 - **Two faces doing the same job** — decoration mistaken for a system.
 - **The mismatched voice** — a wry line set in an earnest face, an urgent line set in something serene. See §11.
 
-Warnings, not bans. A default used knowingly and visibly turned can be the idea.
+Warnings, not bans. A default used knowingly and visibly turned can be the idea. A client's own licensed or mandated face is never a tell, however close it sits to one of these; the question there is only whether it is used within its rules (§10).
 
 ## 10. Working inside a locked brand system
 

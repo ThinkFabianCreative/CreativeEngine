@@ -61,10 +61,10 @@ Meta; placements not supplied. One umbrella delivered as five variants. Baseline
 ## Status and key dates
 
 ```
-STATUS:   DEVELOP (internal): three umbrella territories under one strategy for the client presentation:
-          T1 "go far / further" (restored), T2 "Too stubborn to stop?", T3 students as influencers.
-          No selection; Q1, Q37 open
-UPDATED:  2026-09-14
+STATUS:   CLIENT SELECTION (user-reported 2026-09-17): T2 "Too stubborn to stop?" selected; T3 students
+          as influencers approved on conditions (real students, no AI; shot locally); T1 not selected.
+          Q1 (Cowboys language) and Q37 open. Record: work/reviews/…_client-territory-decision_v01.md
+UPDATED:  2026-09-17
 ```
 
 | Date | Milestone | Source |
@@ -119,6 +119,8 @@ UPDATED:  2026-09-14
 | 2026-09-15 | S8 creative brief pasted by user (retargeting, program × stage, proof-led). Filed verbatim. User then described it as "the original brief"; its relationship to S1 V2 (dated 2026-08-13) is OPEN and must be resolved in normalization (which version governs) | `raw/` |
 | 2026-09-15 | User asked whether the territories are off-brief against S8 and to defend them; CreativeDirector assessment given in conversation | conversation |
 | 2026-09-15 | Internal measurement split recorded (creative tier Traffik-controlled vs funnel tier shared with UW). Internal only: not proposed to the client, brief success measure unchanged | `work/measurement/` |
+| 2026-09-17 | First live test of selling-the-work and typography frameworks on T2 and the conversion layer. Found a later client deck export ("…Graduate Campaign 2026 1.0.pdf", 20 of 24 pages changed) not covered by deck review v01. Key risks: Cowboys ownability depends on Institutional Marketing approval (Q1, Q16); "this isn't the brief" (S1 vs S8) is the likeliest objection. Type fixes for deck p14/p17 and the conversion-layer build block | `work/reviews/` |
+| 2026-09-17 | Andres confirms deck v1.0 is what UW received (filed in `outputs/review/`). Client picked T2 and T3; T3 approved only with real students, no AI, shot locally; T1 not selected (user-reported). Pack 10 testimonial rule scoped to T2/conversion frames | `work/reviews/`, `outputs/review/` |
 | 2026-09-14 | User approved word-smither writing five program week lines and five post texts with proof points: Direction 2 week lines and Meta primary text per variant (DEVELOP; claims not cleared) | `work/concepts/` |
 
 ## Client-knowledge candidates (not promoted)
@@ -155,6 +157,8 @@ Project-administration questions only. Briefing questions are in [§14](normaliz
   **Superseded, preserved unchanged:** `CP3_ms-accounting-shared-concept_v01.md` (four-concept architecture) and the five `P*_v01.md` packets.
 
 - **`work/reviews/`:**
+  - [`…_client-territory-decision_v01.md`](work/reviews/fy26-27-graduate-business-inquiry_client-territory-decision_v01.md): **client decision record** (user-reported). T2 selected, T3 conditional, T1 out; open questions.
+  - [`…_selling-typography-review_v01.md`](work/reviews/fy26-27-graduate-business-inquiry_selling-typography-review_v01.md): JUDGE-leaning DEVELOP. T2 defense, decision chain, objections, load-bearing elements; typography of deck v1.0 and conversion layer v01. No verdicts.
   - [`…_figma-comps-review_v01.md`](work/reviews/fy26-27-graduate-business-inquiry_figma-comps-review_v01.md): DEVELOP review of the client Figma comps from pasted screenshots. No verdicts.
   - [`…_brief-readiness-review_v02.md`](work/reviews/fy26-27-graduate-business-inquiry_brief-readiness-review_v02.md): current umbrella addendum.
   - `…_brief-readiness-review_v01.md`: its per-concept results are superseded; its gate reasoning still stands.

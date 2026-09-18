@@ -65,6 +65,8 @@ Two of these do most of the work.
 
 **WHY THIS** must survive the swap test: replace the brand name with a competitor's. If the answer still holds, the defense is generic, and so, probably, is the idea.
 
+**EVIDENCE** includes its author. A plan, audit or deck the agency wrote is our analysis, however well sourced it is internally. Cite it to the client as our read, not as independent support, and never let it stand in for the client's own data.
+
 **COST OF SAFE** is the argument most often left out. A room evaluating a distinctive idea in isolation is comparing it to nothing, so the risk of the idea is the only risk visible. Naming the alternative — an ad indistinguishable from its category, a message this audience has already learned to skip — puts the real choice back on the table. Do not inflate it. "This will be invisible" is a judgment about attention, and it is offered as a judgment, never dressed as data.
 
 ## 2. Map the decision, not the meeting
@@ -77,11 +79,13 @@ Work is rarely killed by the person it is presented to.
 | **Budget holder** | Spend against outcome | An idea with no stated mechanism for working |
 | **Veto holder** | The brand, or their own judgment | Anything that feels unlike the brand, or unlike their taste |
 | **Legal / compliance** | Claims, rights, regulation | A claim outside its ledger status; a depiction implying something untrue |
+| **Brand owner elsewhere** | A brand asset the client team uses but does not own: a mascot, a master campaign line, a licensed typeface, a parent brand | An idea whose ownability rests on that asset, presented to people who cannot approve it |
 | **The absent stakeholder** | Whatever they will say next week | An idea that reaches them second-hand with no defense attached |
 
-Two consequences:
+Three consequences:
 
 - **Arm the contact.** Whoever presents this internally, without us present, needs the idea in one sentence and one reason. If it cannot travel in that form, it will be reported inaccurately, and the version that gets decided on is the reported one.
+- **Find where the idea's ownability lives.** If it rests on an asset owned by another part of the client organization, the real approver may never be in the room. Decide in advance what happens if permission is refused (§4, ALREADY GONE), and put the permission to the client as a question, not an argument.
 - **Send each objection to its own domain.** A legal objection is answered with the claim ledger, not with creative argument. A budget objection is answered with production options, not with a better rationale.
 
 When the client's real decision chain is unknown, say so. Do not invent stakeholders or motives.
@@ -97,7 +101,8 @@ Objections are rarely literal. Diagnose before answering.
 | "Where's the product / the logo?" | Visibility anxiety, often from an earlier bad experience | Distinguish presence from prominence. Show where the brand enters and why that moment is stronger than an earlier one |
 | "Has anyone done this before?" | Wants the risk transferred to precedent | Precedent is not available for genuinely new work, and saying so is the honest answer. Never invent one |
 | "I don't like it" | Preference, sometimes standing in for an unarticulated concern | Ask what it would have to do differently. If it stays preference, it is preference: record it as client knowledge, not as a creative finding (audit §9) |
-| "Legal will never approve it" | Sometimes true, often a guess | Check the ledger and the approved legal source. An unverified guess is an open question, not a kill |
+| "Legal / brand won't approve it" | Sometimes true, often a guess | Check the ledger, the approved legal source and who owns the brand asset in question. An unverified guess is an open question, not a kill |
+| "This isn't what we briefed" | The work answers a reframed problem without showing the reframe, or the brief itself has changed or conflicts | Not answerable by defending the idea. Show the brief's own words and the bridge from them to the idea. If briefs genuinely conflict or have changed, that is a scope question for the client and for `brief-machine`, not a creative argument. Where the work covers one job and the brief asked for another, show what covers the other job, or concede the gap |
 | "Can we see more options?" | Low confidence in the recommendation, or a presentation that gave no reason to choose | Usually a presentation failure rather than an idea failure. See §5 |
 | "Can we make it clearer?" | Something genuinely is unclear, or they want the strategy stated on the page | Fix real ambiguity. Refuse strategy-as-copy (`hey-whipple-copycraft.md` §14) with a specific reason |
 | "Let's test it" | Risk deferral | Legitimate where real testing exists. Note what testing can and cannot tell you about unfamiliar work |
