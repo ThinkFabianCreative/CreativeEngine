@@ -1,62 +1,149 @@
 12 · CLIENT: UNIVERSITY OF WYOMING · CREATIVE DIRECTIONS (CURRENT)
-Working copy for internal comps. Not approved. Do not change the words.
+Updated 2026-09-17. Working copy for internal comps. Not approved for release.
+Do not change the words. Source of truth: work/concepts/…_t2-executions_v01.md and
+work/copy/…_t3-student-scripts_v01.md. If this file and those disagree, those win.
+
+STATUS
+- UW selected T2 and T3 (Cowboy approved at territory level; each execution still needs
+  UW approval). T1 "go far / further" was not selected.
+- T2 and T3 work together: T2 is the prospect's week now; T3 is a real student who
+  added a master's to a week like it.
 
 ====================================================================
-THE CAMPAIGN · NOT FOR EVERYONE (grit and perseverance)
+T2 · "TOO STUBBORN TO STOP?"
 ====================================================================
 THE IDEA
-Adults who go back to school are often told they are doing too much, or that they are
-too stubborn. That "flaw" is the grit it takes. The ad makes the viewer recognise their
-own chaotic week, then flips "stubborn" into a Cowboy trait.
-The reader should think: "That's my week... and yes, I'm too stubborn to stop."
+The viewer recognises their own impossible week, then "stubborn" is flipped into a
+Cowboy trait. The reader should think: "That's my week... and yes, I'm too stubborn
+to stop."
 
-CURRENT COPY (client-selected territory; updated 2026-09-17; week line changes per program)
-  Card 1:  WEEK LINE (see below)                          Gold: SAME WEEK.
-  Card 2:  TOO STUBBORN TO STOP?                          Gold: STUBBORN
-  Card 3:  YOU SOUND LIKE A COWBOY.                       Gold: COWBOY
-  Card 4:  GRADUATE PROGRAMS THAT WORK AS HARD AS YOU DO. + program label. No Gold word
-  Card 5:  ONE PROOF LINE (pool in …_t2-executions_v01.md) + logo + program label.
-           Gold rule under the proof line. Never bullets, never more than one line.
-  Logo + program label on EVERY card. One Gold word per card, never more.
-  VIDEO: same five beats as one continuous camera pull-out on the week scene (15s).
-  More week lines per program (A/B/C) are in …_t2-executions_v01.md.
+FORMAT: each post is a 5-CARD CAROUSEL or a 15s ANIMATED VIDEO. No single static.
+  Card 1:  WEEK LINE                                        Gold: SAME WEEK.
+  Card 2:  TOO STUBBORN TO STOP?                            Gold: STUBBORN
+  Card 3:  YOU SOUND LIKE A COWBOY.                         Gold: COWBOY
+  Card 4:  GRADUATE PROGRAMS THAT WORK AS HARD AS YOU DO.   No Gold word
+           + program label
+  Card 5:  ONE PROOF LINE (see PROOF LINES) + logo + program label.
+           Gold rule under the proof line. No Gold word.
+- Logo + program label on EVERY card. One Gold word per card, never more.
+- Carousel 1080 x 1080. Card 1 tight on the week's key object, card 2 the whole scene,
+  card 3 the dark top of the same photo, cards 4-5 flat UW Brown (card 5 on-campus
+  programs: campus photo band, see 11_uw_campaign.txt END CARD).
+- VIDEO 15s, 4:5 and 9:16: one continuous camera pull-out on the week scene.
+    0.0-4.0   week builds one item at a time, then SAME WEEK. (logo + label from frame 1)
+    4.0-7.0   TOO STUBBORN TO STOP?
+    7.0-7.6   silence, camera stops
+    7.6-10.0  YOU SOUND LIKE A COWBOY.
+    10.0-12.5 tagline + program label, on flat Brown
+    12.5-15.0 proof line + logo + label
+  No voiceover. All words are on-screen type. Must work with sound off.
 
-WEEK LINES (use exactly; no possessive pronouns; "SAME WEEK." in Gold)
-  ON-CAMPUS MBA               CLOSING SHIFT. PITCH DECK. BEST FRIEND'S WEDDING. SAME WEEK.
-  ONLINE MBA                  TWO PEOPLE SHORT. KID'S RECITAL. MOVING DAY. SAME WEEK.
-  M.S. IN ACCOUNTING          AUDIT INTERNSHIP. VOLUNTEER TAX NIGHT. SOFTBALL PLAYOFFS. SAME WEEK.
-  ONLINE M.S. IN ACCOUNTING   MONTH-END CLOSE. INVENTORY COUNT. REC LEAGUE FINAL. SAME WEEK.
-  ONLINE M.S. IN FINANCE      COVERING THE BRANCH. MARKET DIP. GRANDMA'S 90TH. SAME WEEK.
+WEEK LINES (use exactly; three weeks per program; A is the lead)
+  ON-CAMPUS MBA
+    A  CLOSING SHIFT. PITCH DECK. BEST FRIEND'S WEDDING. SAME WEEK.
+    B  TWO FINALS. CLOSING SHIFT. LEASE RENEWAL. SAME WEEK.
+    C  QUARTER-END. TRAINING THE NEW HIRE. BROTHER'S STATE MEET. SAME WEEK.
+  ONLINE MBA
+    A  TWO PEOPLE SHORT. KID'S RECITAL. MOVING DAY. SAME WEEK.
+    B  DOUBLE SHIFT. SAFETY AUDIT. TRUCK IN THE SHOP. SAME WEEK.
+    C  HOLIDAY RESET. TWO CALL-OUTS. TEE-BALL SIGNUPS. SAME WEEK.
+  M.S. IN ACCOUNTING
+    A  AUDIT INTERNSHIP. VOLUNTEER TAX NIGHT. SOFTBALL PLAYOFFS. SAME WEEK.
+    B  TWO FINALS. PART-TIME TAX PREP. ROOMMATE MOVES OUT. SAME WEEK.
+    C  FIRST BUSY SEASON. BANK RECS DUE. BABY SHOWER. SAME WEEK.
+  ONLINE M.S. IN ACCOUNTING
+    A  MONTH-END CLOSE. INVENTORY COUNT. REC LEAGUE FINAL. SAME WEEK.
+    B  PAYROLL FRIDAY. QUARTERLY FILINGS. SCIENCE FAIR. SAME WEEK.
+    C  YEAR-END AUDIT. SYSTEM CONVERSION. HUNTING OPENER. SAME WEEK.
+  ONLINE M.S. IN FINANCE
+    A  COVERING THE BRANCH. MARKET DIP. GRANDMA'S 90TH. SAME WEEK.
+    B  CLIENT REVIEWS. RATE CUT. CAR WON'T START. SAME WEEK.
+    C  LOAN COMMITTEE. HAIL CLAIMS. COUNTY FAIR. SAME WEEK.
+- Break week lines only at full stops. Use typographic apostrophes (KID’S, WON’T,
+  GRANDMA’S), never straight quotes.
+
+PROOF LINES (card 5 / last video frame; ONE line per ad; any line from its program's list)
+  ON-CAMPUS MBA               ONE-YEAR MBA.
+                              SMALL COHORTS.
+                              IN-PERSON IN LARAMIE.
+                              AACSB-ACCREDITED COLLEGE OF BUSINESS.
+  ONLINE MBA                  100% ONLINE. ASYNCHRONOUS.
+                              NO CAMPUS VISITS REQUIRED.
+                              30 CREDITS.
+                              AACSB-ACCREDITED COLLEGE OF BUSINESS.
+  M.S. IN ACCOUNTING          CPA EXAM PREPARATION.
+                              NON-ACCOUNTING DEGREE? THERE’S A PATHWAY.
+                              GRE/GMAT NOT REQUIRED.
+                              FULL- OR PART-TIME.
+  ONLINE M.S. IN ACCOUNTING   CPA EXAM PREPARATION.
+                              NON-ACCOUNTING DEGREE? THERE’S A PATHWAY.
+                              100% ONLINE. ASYNCHRONOUS.
+                              GRE/GMAT NOT REQUIRED.
+  ONLINE M.S. IN FINANCE      CFP® BOARD REGISTERED.
+                              MASTER’S + CFP® CERTIFICATE.
+                              GRE/GMAT NOT REQUIRED.
+                              100% ONLINE. ASYNCHRONOUS.
+- The first line in each list is the lead. Build the lead first.
+- The proof slot is a fixed text layer: one line only. If "NON-ACCOUNTING DEGREE?
+  THERE’S A PATHWAY." does not fit on one line at the card's proof size, use
+  "PATHWAY FOR NON-ACCOUNTING GRADS." instead.
+- Write CFP® with the ® exactly as shown.
+- Never in the proof slot: STEM, tuition or cost, rankings, job placement, salary,
+  pass rates, duration in semesters or months, "Meets CPA requirements".
 
 PHOTOGRAPHY
-- One photo per program, cropped progressively: card 1 tight on the key object, card 2 the whole
-  scene, card 3 the dark top of the same photo. All current-life scenes are off campus.
-- Placeholder images must carry "PLACEHOLDER IMAGE - not for external use".
+- Person-free still life of the week, shot in Laramie (real props, warm dark grade so
+  Brown dominates). Until the shoot exists, use a placeholder labelled
+  "PLACEHOLDER IMAGE - not for external use".
+- Online programs: work or home settings, never campus. On-campus programs: off-campus
+  week scene; campus appears only on the card 5 photo band.
 
 DESIGN RULES
-- Two versions: TYPE ONLY, and PHOTO (a person-free still life of the week, supplied
-  as an internal placeholder image, labelled "PLACEHOLDER IMAGE - not for external use").
-  Never icons or cowboy imagery.
-- PHOTO version: keep the photo in its planned area; set type on the solid UW Brown or
-  darkest area only. Grade must stay warm and dark so Brown still dominates.
-- Headline in Montserrat Bold (Gotham stand-in). Line 1 about 1.5x the size of line 2.
-- Emphasis: one Gold word per card (SAME WEEK. / STUBBORN / COWBOY).
-- Answer line wording follows the client deck (2026-09-14): "YOU SOUND LIKE A COWBOY."
-    Version A: those words in UW Gold.
-    Version B: headline all White; a rough dry-brush UW Gold underline under those two
-    words only, slightly wider than the word, slight tilt, not touching the letters.
-- Deadpan layout: flush left, generous but purposeful space, no exclamation marks.
-- The question mark stays. It turns a statement into a question to the reader.
-- No single-image static. Carousel or animated video only (11_uw_campaign.txt).
+- Two versions: TYPE ONLY (all cards on flat UW Brown) and PHOTO.
+- Montserrat Bold (Gotham stand-in). Flush left, deadpan, no exclamation marks.
+- The question mark on card 2 stays.
+- Emphasis variants for STUBBORN (card 2) and COWBOY (card 3):
+    Version A: the word in UW Gold.
+    Version B: word in White with a rough dry-brush UW Gold underline, slightly wider
+               than the word, slight tilt, not touching the letters.
+    Version C (test): COWBOY in Blackhawk Italic, lowercase glyph setting, real font only.
+- Never icons or cowboy imagery. No gradients, black fades, contour or topographic
+  textures, dotted lines, drawn buttons.
 
 DO NOT
 - Re-add old lines ("SAID FRIDAY. FRIDAY.", "TOLD THEM THE REAL NUMBER.",
-  "READ THE WHOLE CONTRACT.", "PUT YOUR NAME ON IT.", "REAL COWBOYS NEVER QUIT.").
-- Use gradients or a black fade.
+  "READ THE WHOLE CONTRACT.", "PUT YOUR NAME ON IT.", "REAL COWBOYS NEVER QUIT.",
+  "NOT AFRAID TO FORGE YOUR OWN PATH?", "NOT WAITING ON OTHERS TO MAKE IT HAPPEN?").
 - Make "COWBOY" look like a rodeo poster.
+- Put the tagline and the answer line on the same card.
 
 ====================================================================
-KILLED: "YOU DON'T HAVE TO GO FAR TO GET FURTHER"
+T3 · STUDENTS (REAL UW STUDENTS AND ALUMNI)
 ====================================================================
-This direction and all its executions (FAR -> FURTHER, RUNNER, MARGIN NOTES) are killed.
-Do not build, reference or reuse them. Archive existing frames on a separate page.
+THE IDEA
+T2 asks the question. T3 is someone who already answered it: a real student saying
+their own week, and the thing they thought would rule them out.
+
+FORMAT: 15s video, spoken to camera. 4:5 and 9:16.
+    0-3s    student says their week; super: the week in T2's style
+            (SAME WEEK. in Gold); logo + program label from frame 1
+    3-10s   student's turn line; ONE fact super, about 6-10s (T2 proof list, lead line)
+    10-15s  last line on the student; end frame: logo, program label,
+            FIRST NAME · CURRENT STUDENT or FIRST NAME · ALUM
+- Captions are required (they transcribe the speech). Supers and captions must not collide.
+- No "YOU SOUND LIKE A COWBOY." and no tagline card on T3.
+
+RULES
+- Real students only. NO AI-generated people, faces or voices, ever, including comps.
+  Until the Laramie shoot exists, use a grey frame labelled
+  "STUDENT FOOTAGE - LARAMIE SHOOT - PLACEHOLDER".
+- Spoken lines come from the approved script for THAT student only. Never put a line
+  from one student's script on another student's footage.
+- Online programs: work or home settings, never campus. On-campus programs: campus
+  interiors, people in action, no exteriors or landmarks.
+
+====================================================================
+NOT SELECTED: "YOU DON'T HAVE TO GO FAR TO GET FURTHER" (T1)
+====================================================================
+Not selected by UW. Do not build, reference or reuse it or its executions
+(FAR -> FURTHER, RUNNER, MARGIN NOTES). Keep existing frames archived on a separate page.

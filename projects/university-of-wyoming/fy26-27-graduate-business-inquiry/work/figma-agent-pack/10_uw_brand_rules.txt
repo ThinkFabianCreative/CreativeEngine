@@ -1,4 +1,5 @@
 10 · CLIENT: UNIVERSITY OF WYOMING (COLLEGE OF BUSINESS) · BRAND RULES
+Updated 2026-09-17.
 Attach only for University of Wyoming work. Internal comps; not client-approved.
 
 COLORS
@@ -35,7 +36,7 @@ gradients · decorative shadows · glass effects · device mockups · fake Meta 
 drawn buttons · graduation caps · mountains · trails · roads · horizons · maps ·
 cowboy costumes, hats or horses · stock business meetings · heroic poses ·
 prices · rankings · testimonials (T2 and conversion frames; see below) · outcome claims ·
-unsupported program facts ·
+unsupported program facts · STEM ·
 deadlines, dates or urgency language ("apply by", "last chance", "starts soon")
 
 T3 STUDENTS (client approval 2026-09-17, conditional; user-reported)
@@ -48,7 +49,8 @@ T3 STUDENTS (client approval 2026-09-17, conditional; user-reported)
   line must be true for the person saying it; never move a line to another student.
   Student confirms, UW approves. No composites. Scripts: work/copy/…_t3-student-scripts_v01.md
   No outcome, salary, placement or industry-access claims (C33, C57-C59) without approval.
-- Until the shoot exists, T3 comps use a labeled placeholder frame, not a generated person.
+- Until the shoot exists, T3 comps use a grey frame labelled
+  "STUDENT FOOTAGE - LARAMIE SHOOT - PLACEHOLDER", never a generated person.
 
 ACCESSIBILITY
 Text must pass contrast at phone size. Gold text on White fails for small type: use Gold
