@@ -14,6 +14,12 @@ TYPE
 [ ] Line breaks follow natural reading pauses; no orphans.
 [ ] Viewed at phone size, everything is readable.
 
+COMPOSITION AND STRUCTURE (08_visual_craft.txt)
+[ ] One focal point, first at thumbnail size, and still first in grayscale.
+[ ] A set grid and spacing scale; same margins on every frame of a set.
+[ ] No accidental crops, no elements floating near an edge.
+[ ] No generic tells from the 08 list, unless the request asked for one.
+
 COLOR AND DECORATION
 [ ] Client palette only, flat fills, no gradients.
 [ ] Accent color marks one meaningful thing.

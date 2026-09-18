@@ -208,7 +208,7 @@ Principle 1 still holds: agents own judgment. Frameworks inform it; skills carry
 - Each framework exists to solve a particular class of creative problem.
 - Frameworks complement one another. They are not competing evaluation systems.
 - Frameworks stay modular. They must not gradually collapse into one enormous universal prompt or scorecard.
-- More specialist frameworks are expected, for example brand strategy, briefing, positioning, naming, tagline development, headline development, long copy, humor, visual concepts, typography, art direction, identity systems, film, OOH, social, experiential, guerrilla, brand acts, integrated campaigns, cultural auditing and creative effectiveness. Of these, briefing (`brief-normalization.md`), visual concepts and art direction (`pricken-idea-mechanisms.md`, `barry-concept-art-direction.md`), typography (`typography.md`) and the narrative side of film (`narrative-craft.md`) exist so far. Each remaining one will be added as a new layer and registered below.
+- More specialist frameworks are expected, for example brand strategy, briefing, positioning, naming, tagline development, headline development, long copy, humor, visual concepts, typography, art direction, identity systems, film, OOH, social, experiential, guerrilla, brand acts, integrated campaigns, cultural auditing and creative effectiveness. Of these, briefing (`brief-normalization.md`), visual concepts and art direction (`pricken-idea-mechanisms.md`, `barry-concept-art-direction.md`), typography (`typography.md`), visual craft (`visual-craft.md`) and the narrative side of film (`narrative-craft.md`) exist so far. Each remaining one will be added as a new layer and registered below.
 
 ### Framework registry
 
@@ -229,12 +229,12 @@ This registry is the only source of truth for which framework files exist. Do no
 | `selling-the-work.md` | Will the good work survive the people who approve it, and what does it need in order to? Defense, decision chain, objection diagnosis, load-bearing elements, pre-compromise | `creative-engine-director` (owner); `word-smither` and `design-champ` when preparing work for presentation; `brief-machine` when an objection is really a strategy problem | Mainly JUDGE, when work is being prepared for a client or a decision. Partly DEVELOP, to build the defense alongside the idea. Never in EXPLORE |
 | `narrative-craft.md` | Does the work tell a story or only sequence events? Story shapes, the turn, brand entry, beats against duration, dialogue and VO, sound, cutdowns | `word-smither` (owner); `design-champ` for film, motion and sequential formats; `creative-engine-director` in review | Scripts, film, social video, radio and audio, carousels and scroll narratives, and long copy carrying a narrative. Not for motion craft, which is `animation-craft.md` |
 | `typography.md` | What is the type's job, does this face do it, does the hierarchy deliver the idea, and does it survive where it is actually read? | `design-champ` (owner); `word-smither` when type decides how a line is read; `creative-engine-director` in review | Once a visual concept exists and type has to carry, become or deliver it. Mainly DEVELOP and JUDGE. Type experiments are legitimate in EXPLORE; its craft tests are not |
+| `visual-craft.md` | Does the craft make a decided visual idea land? Composition, grids and spacing, color jobs, imagery craft, visual codes, visual systems, finish, generic visual tells, real-condition checks; a Figma agent brief format. The "DesignChamp visual criteria" in creative object routing | `design-champ` (owner); `creative-engine-director` in review; `word-smither` when image and copy are composed together | Once a concept sentence exists (Barry §1). Mainly DEVELOP and JUDGE; craft tests are not filters in EXPLORE |
 
 **Planned / not yet implemented**
 
 | Framework | Intended purpose |
 |---|---|
-| `visual-craft.md` | Generate, develop and critique visual work: hierarchy, layout and grids, composition, color, imagery and art direction, visual systems, generic visual tells. The "DesignChamp visual criteria" referenced in creative object routing. Owner: `design-champ` |
 | `animation-craft.md` | Motion as storytelling in advertising: beats, reveals, pacing, kinetic type, loops, transitions that carry meaning, sound-off timing and brand motion language. Story structure belongs to `narrative-craft.md`; interface motion feel belongs to reviewed motion skills. Owner: `design-champ` |
 
 When a framework is planned, record it here with its intended purpose. When it is created, move it to Active and record its primary users and when to use it.
@@ -283,7 +283,7 @@ Match the stack to the creative object's job. These are examples, not rigid reci
 | Headline | object taxonomy, copycraft, headline stress test, visual/verbal interaction when applicable |
 | Tagline | object taxonomy, copycraft, compression, memorability, ownability, longevity |
 | Body copy | object taxonomy, copycraft, voice, rhythm, progression, persuasion, compression |
-| Hero graphic | object taxonomy, DesignChamp visual criteria, concept art direction, idea mechanisms, visual concept, hierarchy, stopping power, visual/verbal interaction |
+| Hero graphic | object taxonomy, DesignChamp visual criteria (`visual-craft.md`), concept art direction, idea mechanisms, visual concept, hierarchy, stopping power, visual/verbal interaction |
 | Campaign platform | object taxonomy, BriefMachine strategic foundations, truth + conflict, divergence, generativity, trajectory evaluation, creative-direction audit, red team |
 | Brand platform | object taxonomy, strategic foundations, brand truth, human/cultural truth, distinctiveness, longevity, generativity, creative-direction audit when appropriate |
 | Guerrilla / stunt / brand act | object taxonomy, strategic relevance, contextual intelligence, act-over-ad, authenticity, trajectory evaluation, creative-direction audit, case-study deception test, red team |

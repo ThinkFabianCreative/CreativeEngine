@@ -17,8 +17,9 @@ Frameworks are shared CreativeEngine intellectual infrastructure: how we think a
 | `selling-the-work.md` | Active |
 | `narrative-craft.md` | Active |
 | `typography.md` | Active |
+| `visual-craft.md` | Active |
 
-Two frameworks are planned but unimplemented: `visual-craft.md` and `animation-craft.md`. A planned framework has no file here until it is built, and is never cited, loaded or applied as if it existed. The framework registry in the root `CLAUDE.md` is the source of truth for what is active and what is planned.
+One framework is planned but unimplemented: `animation-craft.md`. A planned framework has no file here until it is built, and is never cited, loaded or applied as if it existed. The framework registry in the root `CLAUDE.md` is the source of truth for what is active and what is planned.
 
 ## Adding a framework
 

@@ -1,0 +1,82 @@
+08 · VISUAL CRAFT
+Derived from shared/frameworks/visual-craft.md (2026-09-17). Read after 03 and 04.
+These are craft rules. The idea, the words and the client's rules always come first.
+
+BEFORE YOU BUILD
+The request must tell you: what is seen first, the one feeling the frame must give,
+the locked brand rules, and every format it must work in. If any of these is missing,
+ask in your report instead of guessing.
+
+COMPOSITION
+- One focal point per frame. Make it first with size, contrast, isolation or position.
+- The biggest element must be the most important one. Never the logo, never a label.
+- Do not center everything by default. Use symmetry only when the request asks for
+  stillness or formality; otherwise place the focal point off-center with purpose.
+- Crop on purpose. Never cut through a head, a hand, a product edge or a word by accident.
+- Keep a clear margin from the frame edge, or bleed off it deliberately. Nothing
+  floating halfway.
+- Empty space must push toward the focal point. Remove space that points nowhere.
+
+GRID AND SPACING
+- Set a grid before placing elements: columns, gutter and outer margin as numbers.
+  Use the values in the request; if none are given, use a 12-column grid with the
+  outer margin equal to 1/15 of the frame width, and state that in your report.
+- Align everything to as few edges as possible (two or three).
+- Use a spacing scale and repeat it: 8, 16, 24, 32, 48, 64, 96 px. No arbitrary gaps.
+- Round and pointed shapes, italics and punctuation may overshoot the grid slightly
+  so they LOOK aligned. Check by eye at real size.
+- The same margins, grid and spacing on every card or frame of a set.
+- Break the grid only once per frame, and only for the focal point.
+
+COLOR
+- Use the palette proportion given. If none is given: dominant color about 70%,
+  secondary about 25%, accent 5% or less.
+- One accent use per frame, on the exact element the request names.
+- Grayscale test: temporarily desaturate the frame. The focal point must still be first.
+  If it is not, fix light/dark contrast, not the hue.
+- Photos must be graded to the palette (warm or cool as the request says). Never leave
+  a photo's own colors fighting the brand color.
+- Text must pass contrast at real size. Small text: dark on light or light on dark only.
+
+IMAGES
+- Use only supplied images or labelled placeholders. Placeholder = flat grey box of the
+  exact image area, labelled "PLACEHOLDER IMAGE - not for external use".
+- Never generate people, faces or voices unless the request explicitly allows it for
+  that client. Some clients forbid AI people even in comps.
+- If you are allowed to generate an image: check hands, text, reflections, shadows and
+  repeated faces; reject anything that looks plastic or evenly lit from nowhere; label it.
+- If type sits on an image, choose or crop the image so the type area is quiet and dark
+  (or light) enough. Do not add strokes, glows or shadows to the type to rescue it.
+- One image style per set: same light, same grade, same distance.
+
+SYSTEMS (sets, carousels, multi-format)
+- Keep constant: palette proportion, grid and margins, type roles, image grade, and the
+  one graphic device if the request has one.
+- Let change: the scene, the crop, the format, the words.
+- Brand-blind test: hide the logo on three frames. They should still look like one family.
+- Format test: rebuild the lead frame in the most different format requested. Recompose
+  it for that canvas; do not just scale it down.
+- A repeated graphic device must mean something. If it only decorates, remove it and say so.
+
+FINISH
+- Consistent corner radii, stroke weights and spacing values across the file.
+- No text colliding with images, edges or safe-zone overlays.
+- Clean cutouts and masks. No stray layers, hidden junk or unlabelled placeholders.
+- Stop when a change only adds ornament.
+
+GENERIC TELLS: REMOVE OR REPORT
+Layout:  centered headline + subline + button stack · card or bento grids by default ·
+         floating 3D objects or blobs · glass panels over nothing · gradient blob backgrounds
+Color:   purple-to-blue "tech" gradient · teal-and-orange grade · neon on near-black ·
+         every color at equal strength
+Images:  sourceless even light · plastic skin · garbled hands or text · same face twice ·
+         eye contact and smile at camera · spotless empty rooms · handshakes and laptop laughs
+If the request asks for one of these on purpose, do it and note it in your report.
+
+REAL SIZE CHECKS (do these before reporting)
+[ ] Shrink each frame to feed-thumbnail size: the focal point is still first.
+[ ] Squint or blur: the composition still reads.
+[ ] Grayscale: the focal point still wins.
+[ ] Mirror the frame: if it suddenly looks better, the balance was accidental. Fix it.
+[ ] 9:16: key content inside the safe zone (05_meta_ad_craft.txt and client files).
+[ ] Dark surroundings: the frame's edges and dark areas do not disappear in a dark feed.

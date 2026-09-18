@@ -37,7 +37,7 @@ It especially fights:
 | `pricken-idea-mechanisms.md` | Omission and literal language often become typographic mechanisms | Active |
 | `hey-whipple-copycraft.md` | §9 compression: the line and its setting are decided together | Active |
 | `narrative-craft.md` | §9 supers are a second script, not a transcript | Active |
-| `visual-craft.md` | Grids, color, imagery and the layout system around the type | Planned, not implemented |
+| `visual-craft.md` | Grids, color, imagery and the layout system around the type | Active |
 
 Where they overlap, the more specific treatment wins. Whether there is a *visual idea* is Barry's question. Whether the *type delivers it* is this framework's.
 

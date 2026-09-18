@@ -45,7 +45,7 @@ It especially fights:
 | `hey-whipple-copycraft.md` | Idea and line craft. Its §12 generativity test applies to visual campaigns | Active |
 | `creative-trajectory-evaluation.md` | Shared 1 + 1 = 3 gate (§10), Post-it idea (§4), divergence (§5) | Active |
 | `creative-object-taxonomy.md` | Hero graphic, key visual and identity criteria. Separates visual identity from key visual | Active |
-| `visual-craft.md` | Detailed hierarchy, grids, color, imagery and generic visual tells | Planned, not implemented |
+| `visual-craft.md` | Composition, grids, color, imagery craft, visual codes, systems and generic visual tells | Active |
 | `typography.md` | Type job, selection and pairing, hierarchy, micro-typography, type as image, legibility in real placements | Active |
 
 Where they overlap, the more specific treatment wins:
@@ -53,7 +53,7 @@ Where they overlap, the more specific treatment wins:
 - **Which move creates the gap:** `pricken-idea-mechanisms.md`.
 - **Whether the idea is simple enough:** this framework's rough test (§2) is the visual form of the Post-it idea in `creative-trajectory-evaluation.md` §4.
 - **Type craft** (selection, pairing, hierarchy, micro-typography, legibility in the real placement): `typography.md`.
-- **Remaining craft detail** (grids, color systems, imagery systems): the planned `visual-craft.md` will own it. Until then, DesignChamp's judgment applies. This framework covers craft only where it decides whether the idea reads.
+- **Remaining craft detail** (composition, grids, color, imagery systems, visual codes, systems, finish): `visual-craft.md`. This framework covers craft only where it decides whether the idea reads.
 
 ---
 
@@ -198,7 +198,7 @@ Watch for work retrieved from visual memory instead of found for the problem:
 - **Trend surface as concept:** a fashionable look (grain, 3D chrome, glassmorphism, Y2K, brutalism) presented as if it were the idea.
 - **AI finish:** everything evenly lit, smooth and detailed, with nothing decided.
 
-These are warnings, not bans. A cliché used knowingly and visibly subverted can be the idea. Detailed generic visual tells will belong to the planned `visual-craft.md`.
+These are warnings, not bans. A cliché used knowingly and visibly subverted can be the idea. Craft-level generic visual tells are in `visual-craft.md` §9.
 
 ## 11. By operating mode
 

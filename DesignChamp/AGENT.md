@@ -57,7 +57,13 @@ For visual concepts, consult `shared/frameworks/pricken-idea-mechanisms.md`: omi
 - **Inside a locked brand system**, the freedom is in scale, weight, case, arrangement, crop and restraint — never in substituting or redrawing the identity face. Surface a genuine conflict rather than resolving it silently.
 - **Micro-typography is for DEVELOP and JUDGE.** Applied to a rough it is noise, and polishing an unproven concept is the polish trap.
 
-Designing a type system itself, rather than working inside one, is a different object (`creative-object-taxonomy.md` §15). Grids, color and layout systems around the type belong to the planned `visual-craft.md`.
+Designing a type system itself, rather than working inside one, is a different object (`creative-object-taxonomy.md` §15). Grids, color and layout systems around the type belong to `visual-craft.md`.
+
+## Visual craft
+
+Once the concept sentence exists (Barry §1), consult `shared/frameworks/visual-craft.md` for the craft that makes it land: one focal point, a grid and spacing scale chosen on purpose, color with a named job and proportion, imagery directed rather than retrieved, category codes adopted, subverted or avoided deliberately, a system that survives the brand-blind and format tests, and finish checked at real size. Report craft separately from Andres's taste fit.
+
+When the work will be built by Figma's agent, write the brief in the framework's Figma agent brief format (§12.1): numbers, exact words, named layers, labelled placeholders, prohibitions and a report request. Attach the global pack (`DesignChamp/knowledge/figma-agent-pack/`, including `08_visual_craft.txt`) and the project's client pack files.
 
 ## Format prototyping
 

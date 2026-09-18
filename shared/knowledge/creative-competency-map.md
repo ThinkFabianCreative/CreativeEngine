@@ -38,7 +38,7 @@ A GAP is a fact, not an instruction. Whether a gap is worth closing is a separat
 | High idea volume under time pressure | Program intros | All | COVERED | "Write wide, show few" (`WordSmither/AGENT.md`); `creative-trajectory-evaluation.md` §5; CD divergence before convergence |
 | Symbolic imagery; layered, contradictory meaning | POP 519 | DesignChamp | COVERED | `pricken-idea-mechanisms.md`; `barry-concept-art-direction.md` §3, §6 |
 | Meaning built from words, image and design together | POP 667 | DesignChamp + WordSmither | COVERED | `hey-whipple-copycraft.md` §2; `creative-trajectory-evaluation.md` §10; `typography.md` §11 |
-| Semiotics: signs, codes, how meaning is read | POP 660 | DesignChamp | GAP | Pricken uses it implicitly. No method for reading category codes or cultural signs |
+| Semiotics: signs, codes, how meaning is read | POP 660 | DesignChamp | PARTIAL | `visual-craft.md` §6 visual codes (map, then adopt, subvert or avoid; check the reading). No deeper sign theory |
 | Pop culture as material: artifacts, merch, packaging, vehicles as media | POP 530 | DesignChamp | PARTIAL | `creative-direction-audit.md` §4.7 asks the question. "Visual culture and cultural auditing" is a DesignChamp responsibility with no method behind it |
 | Concepting away from the computer; analog making | POP 627 | DesignChamp | PARTIAL | `barry-concept-art-direction.md` §2 rough test. No register of analog craft as a deliberate alternative to generated finish |
 
@@ -72,11 +72,11 @@ A GAP is a fact, not an instruction. Whether a gap is worth closing is a separat
 |---|---|---|---|---|
 | Typography: history, selection, pairing, systems, expression | POP 511, 521, 657, 676, 678 | DesignChamp | COVERED | `typography.md` |
 | Type and image together | POP 672 | DesignChamp | COVERED | `typography.md` §7; `barry-concept-art-direction.md` §3, §7 |
-| Design fundamentals: composition, form, color theory, mass, scale | POP 658, 680 | DesignChamp | PLANNED | `visual-craft.md` |
+| Design fundamentals: composition, form, color theory, mass, scale | POP 658, 680 | DesignChamp | COVERED | `visual-craft.md` §2–4 |
 | Design history, modernism, criticism and theory | POP 674 | DesignChamp | GAP | The vocabulary visual taste needs to name a default before avoiding it. Style libraries in `DesignChamp/knowledge/` are references, not history or criticism |
 | Symbol, metaphor and logo design | POP 665 | DesignChamp | PARTIAL | `identity-design` skill (execution, governed by its department record); `creative-object-taxonomy.md` §15. No identity-design framework |
 | Branding systems and design strategy | POP 669, 686 | DesignChamp | PARTIAL | `design-system` and `identity-design` skills; `DesignChamp/knowledge/brand-design-md/` as reference |
-| Photography as concept: light, scale, focus, decisive moment | POP 502 | DesignChamp | PARTIAL | `barry-concept-art-direction.md` §6 image arguments. No photographic direction method |
+| Photography as concept: light, scale, focus, decisive moment | POP 502 | DesignChamp | COVERED | `barry-concept-art-direction.md` §6 image arguments; `visual-craft.md` §5 photography direction |
 | Packaging and three-dimensional form | POP 663, 668 | DesignChamp | GAP | |
 | Publication and editorial design | POP 662 | DesignChamp | GAP | Low priority for current assignments |
 | Information design and data visualization | POP 670 | DesignChamp | GAP | No reviewed skill or framework on CreativeEngine's record |
@@ -132,9 +132,9 @@ By how much closing each would change the work CreativeEngine currently produces
 
 | Rank | Gap | Why | Likely form |
 |---|---|---|---|
-| 1 | Design fundamentals: composition, color, form | Every visual job touches it; already registered | `visual-craft.md` (planned) |
+| — | ~~Design fundamentals: composition, color, form~~ | Closed 2026-09-17 by `visual-craft.md` | — |
 | 2 | Motion | Social video and Reels are core formats | `animation-craft.md` (planned) |
-| 3 | Semiotics, design history and criticism | DesignChamp's "cultural auditing" responsibility has no method, and naming a default is how you avoid it | A visual culture framework, or a section of `visual-craft.md`. Decide before building either |
+| 3 | Design history and criticism | Practical semiotics is now `visual-craft.md` §6 (visual codes). History and criticism, the vocabulary for naming a default, remain uncovered | A section of a future visual culture framework, or DesignChamp knowledge |
 | 4 | Humor | Already listed as an expected framework; a live mechanism with no craft | Framework, WordSmither-owned |
 | 5 | Problem finding, brand architecture | BriefMachine's weakest area against the planning curriculum; `BriefMachine/AGENT.md` is still a placeholder | Belongs in BriefMachine's own design pass |
 | 6 | Long copy | Real, but rare in current social and paid work | Framework, or a section of copycraft |
@@ -145,6 +145,7 @@ By how much closing each would change the work CreativeEngine currently produces
 
 | Date | Change |
 |---|---|
+| 2026-09-17 | `visual-craft.md` added: design fundamentals and photography direction COVERED; semiotics PARTIAL (visual codes). Rank 1 gap closed |
 | 2026-09-17 | Map created against MAS Volume 39. Same day, `selling-the-work.md`, `narrative-craft.md` and `typography.md` were added as Active frameworks; rows reflect them |
 
 ## Maintenance

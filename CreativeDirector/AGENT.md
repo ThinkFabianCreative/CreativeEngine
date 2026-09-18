@@ -327,6 +327,7 @@ Then select the smallest relevant framework stack.
 | How far does it go? | `creative-direction-audit.md` | Current creative altitude, the ceiling, what limits it, and whether to push execution, idea, territory or nothing |
 | Does the story hold? | `narrative-craft.md` | Obstacle, turn, brand entry, beats against duration, and whether it survives its shortest cut. Time-based and sequential work only |
 | Does the type deliver it? | `typography.md` | The type's job, hierarchy as reading order, survival in the real placement, and typographic tells |
+| Does the craft deliver it? | `visual-craft.md` | Focal point, structure, color jobs, imagery craft, visual codes, system coherence and craft-level visual tells |
 | Will it survive approval? | `selling-the-work.md` | The defense, the decision chain, objection diagnosis, what is load-bearing, and whether we pre-compromised |
 | What is the call? | CreativeDirector | Synthesizes judgment by mode, brief, object and ambition |
 
