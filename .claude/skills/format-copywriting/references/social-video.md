@@ -68,6 +68,7 @@ Plan the longest version with its shorter versions in mind:
 - Match the creator's real voice. Corporate copy spoken by a creator reads as an ad and loses the point of using one.
 - Disclosure of paid relationships follows the platform's current policy (verify). Never write it out.
 - **Testimonial truth.** Never script a claim, experience or result the person has not actually had. Testimonials and outcome claims need the claim ledger's support.
+- **A testimonial script is a casting spec.** When real people deliver scripted lines drawn from their own experience, write each script with what must be true of its speaker. Cast to that condition, adjust the wording to the person at intake, and have them confirm the lines are true for them. Never move a line from one person to another, and never assemble composites.
 
 ## Audio and music
 

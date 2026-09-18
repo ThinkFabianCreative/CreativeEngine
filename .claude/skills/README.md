@@ -5,6 +5,8 @@ This is where Claude discovers CreativeEngine's skills automatically. Each skill
 | Skill | Owner | Record |
 |---|---|---|
 | `humanizer` | WordSmither | `WordSmither/skills/humanizer.md` (calibrated for advertising copy) |
+| `format-copywriting` | WordSmither | `WordSmither/skills/format-copywriting.md` (in-house) |
+| `format-prototyping` | DesignChamp | `DesignChamp/skills/format-prototyping.md` (in-house) |
 | `frontend-slides` | DesignChamp | `DesignChamp/skills/frontend-slides.md` |
 | `ui-ux-pro-max` | DesignChamp | `DesignChamp/skills/ui-ux-pro-max.md` |
 | `banner-design` | DesignChamp | `DesignChamp/skills/ui-ux-pro-max.md` |

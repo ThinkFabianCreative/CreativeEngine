@@ -18,7 +18,7 @@ SOURCES:    S7 raw/University of Wyoming_GTM Deck.pptx.pdf pp. 6, 7, 10, 14–17
               goals"); production.md ("Copy and interface behavior"); image-specs.md META-001,
               META-002 (125/40 text recommendations); creative-best-practices.md (education
               consistency paragraph)
-            WordSmither/skills/format-copywriting/references/meta-ads.md ("Policy watch-outs")
+            .claude/skills/format-copywriting/references/meta-ads.md ("Policy watch-outs")
             shared/frameworks/hey-whipple-copycraft.md §9–11
 STATUS:     Rough. Placeholder copy. Claims not cleared (all SOURCE-STATED at best; confirm before
             external use). Not client-facing. No selection made.

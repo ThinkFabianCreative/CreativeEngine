@@ -45,7 +45,10 @@ The references teach craft. They deliberately do not hold platform numbers.
 | Format | Verified source |
 |---|---|
 | Meta | `shared/knowledge/meta-paid-ads/` (dated, source-linked) |
-| Display / rich media, DOOH, email | Not yet in CreativeEngine knowledge. Use the assignment's spec sheet (publisher, ad server, media owner, ESP), or official documentation cited with source and date. Otherwise label the value UNVERIFIED |
+| Display and programmatic video | `shared/knowledge/ctv-programmatic-ads/` (IAB standards plus DSP and seller specs). The ad server, network or publisher spec for the actual buy still governs |
+| Digital OOH | `shared/knowledge/dooh-ads/` (by venue, network and media owner). The media owner's plan spec still governs |
+| Google and YouTube, TikTok, LinkedIn, Snapchat, Nextdoor | The matching `shared/knowledge/<platform>-ads/` module |
+| Email | Not yet in CreativeEngine knowledge. Use the ESP's documentation or the assignment's spec, cited with source and date, or label the value UNVERIFIED |
 
 Follow `shared/knowledge/channel-preferences.md`: channel, placement, creative format, goal, CTA and destination are separate facts. If the placement or format is not supplied and it would change the prototype, raise it. If the user says to proceed, record it as a PROTOTYPE ASSUMPTION on the handoff.
 
@@ -115,9 +118,11 @@ OPEN QUESTIONS: <what would change the work>
 - Figma operations: the Figma plugin skills (`figma-use`, `figma-generate-design`, `figma-use-slides`, `figma-use-motion`). They provide the ability; this skill provides the design decisions.
 - HTML prototypes can be published as private Artifacts for sharing.
 - UX, accessibility, chart and stack checks inside web and app prototypes: `ui-ux-pro-max` (local search). Its generated design-system recipes are keyword matches, not direction (see `DesignChamp/skills/ui-ux-pro-max.md`).
-- Presentations: `frontend-slides` for animated HTML decks (never deploy publicly without confirmation; see `DesignChamp/skills/frontend-slides.md`), the `pptx` skill or the `design` canvas.
+- Presentations: `frontend-slides` for animated HTML decks (never deploy publicly without confirmation; see `DesignChamp/skills/frontend-slides.md`), `slides` (governed by `DesignChamp/skills/ui-ux-pro-max.md`), the `pptx` skill, or a Claude design artifact.
 - Interface motion and interaction feel inside prototypes: `animate`, `apple-design`, `review-animations`, `animation-vocabulary`. Divergent variants in EXPLORE: `prototype`. Their interface-motion rules do not govern storytelling motion in ad formats (see `DesignChamp/skills/emil-kowalski-skills.md`).
-- Web aesthetic direction: `design-taste-frontend`, if installed. Use its design guidance; its production stack rules (Next.js, package installs, performance targets) do not apply to prototypes.
+- Web aesthetic direction: `design-taste-frontend` (Taste-Skill pack, `DesignChamp/skills/taste-skill.md`). Use its design guidance; its production stack rules (Next.js, package installs, performance targets) do not apply to prototypes. Its house look is a method, not a direction.
+- Reference imagery and brand boards: `imagegen-frontend-web`, `imagegen-frontend-mobile`, `brandkit` (same record). Generation tests a decided idea; it doesn't find one (`shared/frameworks/barry-concept-art-direction.md` §2). No generated people where a brief requires real ones, and label every generated image as a placeholder.
+- Display banners: `banner-design` (governed by `DesignChamp/skills/ui-ux-pro-max.md`). Its style presets are options, not the idea.
 
 ## Boundaries
 

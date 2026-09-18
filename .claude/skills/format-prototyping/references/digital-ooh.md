@@ -19,6 +19,8 @@ Be understood at a glance by someone not trying to look, and be remembered as th
 
 ## Specifications
 
+Reference specifications by venue, network and media owner, with roadside and legibility guidance, are in `shared/knowledge/dooh-ads/`. They are network-dependent: the media owner's spec for the actual plan governs.
+
 Screen resolution and ratio, spot length, loop, whether motion or transitions are allowed, file types, brightness and approval rules are set by the media owner and often by local regulation, especially for roadside. They vary widely. Use the media owner's spec sheet and cite it; otherwise label UNVERIFIED.
 
 ## Craft

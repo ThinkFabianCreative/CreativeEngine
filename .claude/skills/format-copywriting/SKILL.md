@@ -26,13 +26,14 @@ Read only what the job needs.
 | Social video: Reels, Stories and vertical video scripts, hooks, supers, VO, cutdowns, creator-style scripts | `references/social-video.md` |
 | Organic social: posts, captions, threads of cards, replies | `references/organic-social.md` |
 
-**Other platforms.** TikTok, YouTube, LinkedIn, X, Pinterest, Snapchat and ChatGPT advertising have no verified specifications in CreativeEngine yet. The craft in `social-video.md` and `organic-social.md` transfers. Field names, character limits, durations, placements and policy do not: use the assignment's spec sheet or current official documentation with source and date, or label the value UNVERIFIED. For ChatGPT, follow `shared/knowledge/channel-preferences.md`: do not describe or write to an assumed ad format.
+**Other platforms.** Source-linked specification modules exist for Google and YouTube, TikTok, LinkedIn, Snapchat, Nextdoor, CTV and programmatic, and digital OOH (`shared/knowledge/`, checked 2026-09-16; each module lists its open source conflicts). The craft in `social-video.md` and `organic-social.md` transfers to them; field names, character limits, durations and policy come from the module. X, Pinterest and ChatGPT advertising have no verified specifications yet: use the assignment's spec sheet or current official documentation with source and date, or label the value UNVERIFIED. For ChatGPT, follow `shared/knowledge/channel-preferences.md`: do not describe or write to an assumed ad format.
 
 ## Specifications come from verified knowledge
 
 | Need | Source |
 |---|---|
 | Meta copy-field recommendations, truncation, hidden fields, safe zones, captions | `shared/knowledge/meta-paid-ads/` (start with its README; never use QUARANTINED records) |
+| Other platforms' copy limits and specs | `shared/knowledge/<platform>-ads/` and `shared/knowledge/<channel>/` modules (README first; open conflicts in each `source-conflicts.md`) |
 | Channel, placement, format, goal, CTA, destination | `shared/knowledge/channel-preferences.md` and the work packet |
 | Claims | The packet's proof and claim ledger (`shared/frameworks/brief-normalization.md` §5) |
 | Story structure for scripts, video and sequences (obstacle, the turn, brand entry, beats per duration, VO, sound, cutdowns) | `shared/frameworks/narrative-craft.md`. This skill covers format craft; the framework covers whether there is a story |
@@ -66,6 +67,8 @@ If placement or format is not supplied and would change the copy, raise it. If t
 **Native, not generic.** Write the way people talk on the platform, in the brand's voice. Native does not mean slang, emoji or trend language the brand would never use.
 
 **Specific beats clever beats generic.** A concrete detail stops the scroll more reliably than wordplay. Wordplay is welcome when it carries the idea.
+
+**Proof on the asset is one line.** When a program fact or proof point appears on the asset, use one short line in a fixed slot, drawn from the claim ledger, never a bullet list. Keep a small pool of approved lines that can swap into the slot; everything else goes in primary text or the caption.
 
 **Sound off first.** Video copy must work without audio: on-screen supers or captions carry the idea, and VO rewards those who listen.
 
@@ -114,4 +117,4 @@ POLICY / CLAIMS:    flags and open questions
 - Not a platform specification library, not a policy authority, not a performance predictor.
 - English only.
 - No client facts. Voice, claims and mandatories come from `projects/<client>/`.
-- Visual composition, safe-zone layout and prototypes belong to DesignChamp (`DesignChamp/skills/format-prototyping/`).
+- Visual composition, safe-zone layout and prototypes belong to DesignChamp (`.claude/skills/format-prototyping/`).

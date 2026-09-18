@@ -12,6 +12,8 @@ Leave an unmistakable branded impression of the idea in a few seconds, and rewar
 
 ## Specifications
 
+Reference standards (IAB display and programmatic video, DSP and seller specs) are in `shared/knowledge/ctv-programmatic-ads/`. They are vendor-dependent: the spec for the actual buy governs.
+
 Sizes, file weight, animation length, loop count, border, click-through and expansion rules are set by the ad server, network and publisher, and they vary. Get the assignment's spec sheet or official documentation (for example IAB guidance, the ad server's HTML5 requirements, the publisher's spec) and cite it. Otherwise label UNVERIFIED. None of these numbers are held in CreativeEngine knowledge yet.
 
 ## Craft

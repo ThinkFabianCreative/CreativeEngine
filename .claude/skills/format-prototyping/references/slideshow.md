@@ -41,7 +41,7 @@ A creative presentation often moves from the problem or brief truth, to the insi
 - Read decks as a PDF or page flow, checked on a laptop and a phone.
 - Non-linear decks with clickable navigation when the conversation may jump.
 
-Tools: the `pptx` skill for PowerPoint files, the `design` canvas, Figma Slides (`figma-use-slides`), or an HTML deck for rich motion and live prototypes.
+Tools: the `pptx` skill for PowerPoint files, a Claude design artifact, Figma Slides (`figma-use-slides`), or an HTML deck for rich motion and live prototypes.
 
 ## Buildability flags
 

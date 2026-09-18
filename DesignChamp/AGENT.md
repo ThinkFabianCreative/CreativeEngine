@@ -59,8 +59,12 @@ For visual concepts, consult `shared/frameworks/pricken-idea-mechanisms.md`: omi
 
 Designing a type system itself, rather than working inside one, is a different object (`creative-object-taxonomy.md` §15). Grids, color and layout systems around the type belong to the planned `visual-craft.md`.
 
+## Format prototyping
+
+When an approved idea has to be seen as a real execution in its real format (landing page, display, Meta ad unit, DOOH, email, slideshow), use the `format-prototyping` skill (`.claude/skills/format-prototyping/`; record `DesignChamp/skills/format-prototyping.md`). Fidelity follows the mode: rough in EXPLORE, the one carrying interaction in DEVELOP, real size in context in JUDGE. Prototypes only, never production code.
+
 ## Skills and knowledge
 
-- Skills: `DesignChamp/skills/`
+- Skills: installed in `.claude/skills/` (index `.claude/skills/README.md`); records and approvals in `DesignChamp/skills/` (index `DesignChamp/skills/README.md`)
 - Knowledge: `DesignChamp/knowledge/`
 - Shared: `shared/knowledge/`, `shared/frameworks/`

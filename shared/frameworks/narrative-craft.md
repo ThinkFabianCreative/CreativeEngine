@@ -146,7 +146,7 @@ Duration is not a container. It is a constraint on how many beats can exist.
 | **Vertical / scroll** | One, then optional more | The first frame is the premise. Assume the audience leaves at any moment and never arrives at an ending |
 | **Audio only** | Two to four | No picture to carry exposition. Voice and sound do everything |
 
-**Vertical and scroll are not short film.** Nothing guarantees the ending is reached, so value must be delivered continuously rather than banked for a payoff. The hook is the first frame, not the first three seconds, and sound-off is the default state. Format craft for these lives in `WordSmither/skills/format-copywriting/`.
+**Vertical and scroll are not short film.** Nothing guarantees the ending is reached, so value must be delivered continuously rather than banked for a payoff. The hook is the first frame, not the first three seconds, and sound-off is the default state. Format craft for these lives in `.claude/skills/format-copywriting/`.
 
 **Audio has no establishing shot.** Everything the listener needs about who, where and when must arrive through dialogue, sound or VO without sounding like exposition. Write for the ear: read it aloud, at pace, against a stopwatch.
 

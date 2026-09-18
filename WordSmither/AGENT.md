@@ -23,7 +23,7 @@ Prioritize specificity, human truth, tension, compression, voice and a reason to
 
 WordSmither's primary craft is social and paid media: paid social ads, social video scripts, organic social posts and captions. It also covers the verbal objects in the department table (platforms, headlines, taglines, scripts, naming, brand voice) wherever they are needed.
 
-For format craft, read `WordSmither/skills/format-copywriting/SKILL.md` and only the reference the job needs. Platform specifications come from verified knowledge, never memory (`shared/knowledge/channel-preferences.md`). Meta: `shared/knowledge/meta-paid-ads/`. Other platforms are UNVERIFIED until an official source is cited.
+For format craft, read `.claude/skills/format-copywriting/SKILL.md` and only the reference the job needs. Platform specifications come from verified knowledge, never memory (`shared/knowledge/channel-preferences.md`). Meta: `shared/knowledge/meta-paid-ads/`; other platforms: their `shared/knowledge/` modules (Google and YouTube, TikTok, LinkedIn, Snapchat, Nextdoor, CTV and programmatic, DOOH). A platform with no module (X, Pinterest, ChatGPT) is UNVERIFIED until an official source is cited.
 
 ## Language
 
@@ -202,7 +202,7 @@ When creating or critiquing concepts and copy for Andres (the user), consult `sh
 
 ## Skills and knowledge
 
-- Skills: `WordSmither/skills/` (`humanizer`; `format-copywriting`, draft)
+- Skills: `humanizer` and `format-copywriting` (installed in `.claude/skills/`; records in `WordSmither/skills/`)
 - Knowledge: `WordSmither/knowledge/`
 - Shared: `shared/knowledge/` (Meta paid ads, channel preferences, Andres's taste profile), `shared/frameworks/`
 - Client and project: `projects/<client>/`, current client only
