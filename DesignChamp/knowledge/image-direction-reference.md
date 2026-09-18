@@ -4,6 +4,8 @@
 
 **Order of authority.** The concept (Barry §1) → the image argument (Barry §6) → the client's photography rules → this reference. Generation tests a decided idea; it never finds one (Barry §2). Where a client or brief forbids generated people or imagery, that rule wins everywhere, including internal comps.
 
+**Sources.** In-house synthesis of common professional practice. Reviewed external input: Superside, *The AI Image Prompting Guide* (4 pp., 2026-06), reviewed 2026-09-17. Its formula and workflow informed §5 and §10; its advice to name photographers in prompts was not adopted (§1, §8).
+
 **Model facts go stale.** Section 6 describes the generation models as they're generally known at the time of writing. Features, terms and quality change often: check the current tool before relying on a capability, and check the provider's terms for commercial use before any generated image goes near client work.
 
 ---
@@ -81,7 +83,9 @@ Write the prompt as a shot list, in this order. Short, concrete sentences beat l
 2. SUBJECT      the key objects (or person), specific and physical
 3. SHOT         shot size, angle, camera height, lens, focus
 4. COMPOSITION  where the subject sits; which area stays empty and dark for type
-5. LIGHT        source, direction, quality, temperature
+5. LIGHT + FEEL source, direction, quality, temperature, and the one feeling it must give
+                (visual-craft §1 FEEL): "dramatic shadows, warm late light" tells the model
+                how it should feel, not just what it shows
 6. GRADE        shadow color, highlight color, saturation, grain, film or digital
 7. STYLE        the photographic genre (section 1) and the technical translation of any
                 reference (section 8): light, lens, aperture, grade, film stock
@@ -95,6 +99,9 @@ Write the prompt as a shot list, in this order. Short, concrete sentences beat l
 - **Exclusions:** most models follow "no X" only partly, and some ignore it. Use the model's own exclusion field or parameter where it has one; otherwise keep exclusions short and specific, and regenerate rather than retouch.
 - **Text never goes in the image.** Set it in design software. Models garble text, and even when they don't, the type decision belongs to `typography.md`.
 - **Generate several, choose one.** Choose by the idea and the empty type zone, not by the prettiest render.
+- **Build in layers for complex images.** Get the scene, composition and light right first with a short prompt; then refine one thing per pass (an object, the grade, the empty type zone) with edits, inpainting or generative fill. Asking for everything at once produces compromises everywhere.
+- **Refining the prompt with a language model is fine**, as long as the result still follows this anatomy and the client's rules. Check it before running: rewrites tend to add adjectives, style names and decoration.
+- **Wardrobe and material are part of SUBJECT.** Name fabrics, finishes and wear ("scuffed white hard hat", "washed navy cotton") rather than "styled, rich textures".
 
 ## 6. Generation models: how they differ
 
@@ -393,3 +400,17 @@ One block per genre: what it argues, how it's lit and shot, the grade, reference
 | **Prompt / shot skeleton** | "Vertical 9:16 video, [shot type], subject in the middle band within the central 75% of the frame, top and bottom 15–20% clear, [camera: handheld or locked], [lens], [light], [first-frame action], [duration]." |
 | **Clichés** | Letterboxed 16:9 inside a 9:16 frame; ring-light talking head; captions in the top or bottom UI zone; trending audio with no link to the idea |
 | **Caution** | Durations, safe zones, caption support and music rules differ by platform and placement: cite the verified record, never memory. Trending audio needs rights clearance |
+
+## 10. After generation: the finishing workflow
+
+A generated image is a raw file, not a finished one.
+
+| Step | Do | Don't |
+|---|---|---|
+| **1. Select** | Choose by the idea, focal point and empty type zone (§5) | Choose the prettiest render |
+| **2. Upscale** | Upscale to the largest output size needed. Two gentle passes (one to keep texture and detail, one to sharpen) usually beat one aggressive pass | Oversharpen: halos and plastic texture are generated-image tells (visual-craft §9) |
+| **3. Clean** | Fix craft artifacts: edges, repeated textures, warped straight lines, melted small objects, extra fingers in the background | **Retouch away content that shouldn't be there.** If the image contains something the brief forbids (people where they're banned, readable text, logos, a misrepresented product), regenerate. Retouching hides the problem; it doesn't remove the risk |
+| **4. Color** | Grade to the brand and campaign system (visual-craft §4): shadow color, highlight color, saturation, contrast. Keep skin tones natural when people appear. Film grain can soften an over-clean render when the look calls for film | Apply a default "bump contrast and vibrance". Add grain to a phone-style image (§9.8). Treat grain as a disguise: a generated image is labelled whatever its grain |
+| **5. Export** | Save high-res, keep the layered file, and record the model, prompt, settings and date with it (§6) | Flatten the only copy, or lose the prompt |
+
+**Labelling travels with the file.** Placeholder, comp or mood: the label stays on every export and in every file name until the image is replaced by real photography or approved for use.
