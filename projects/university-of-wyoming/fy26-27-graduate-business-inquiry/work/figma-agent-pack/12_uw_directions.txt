@@ -1,5 +1,5 @@
 12 · CLIENT: UNIVERSITY OF WYOMING · CREATIVE DIRECTIONS (CURRENT)
-Updated 2026-09-17. Working copy for internal comps. Not approved for release.
+Updated 2026-09-18 (P2-D added). Working copy for internal comps. Not approved for release.
 Do not change the words. Source of truth: work/concepts/…_t2-executions_v01.md and
 work/copy/…_t3-student-scripts_v01.md. If this file and those disagree, those win.
 
@@ -38,7 +38,7 @@ FORMAT: each post is a 5-CARD CAROUSEL or a 15s ANIMATED VIDEO. No single static
     12.5-15.0 proof line + logo + label
   No voiceover. All words are on-screen type. Must work with sound off.
 
-WEEK LINES (use exactly; three weeks per program; A is the lead)
+WEEK LINES (use exactly; three weeks per program, four for Online MBA; A is the lead)
   ON-CAMPUS MBA
     A  CLOSING SHIFT. PITCH DECK. BEST FRIEND'S WEDDING. SAME WEEK.
     B  TWO FINALS. CLOSING SHIFT. LEASE RENEWAL. SAME WEEK.
