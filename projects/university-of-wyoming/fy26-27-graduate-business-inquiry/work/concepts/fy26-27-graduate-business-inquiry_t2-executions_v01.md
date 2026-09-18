@@ -137,15 +137,17 @@ Andres, 2026-09-17: "do not make proof point verbose, do not crowd the layout wi
 
 | Program | LEAD proof line | Swappable alternates | Ledger |
 |---|---|---|---|
-| P1 On-Campus MBA | ONE-YEAR MBA. | IN-PERSON IN LARAMIE. · AACSB-ACCREDITED COLLEGE OF BUSINESS. | C10 · C10 · C01 |
-| P2 Online MBA | 100% ONLINE. ASYNCHRONOUS. | 30 CREDITS. · AS FEW AS THREE SEMESTERS. · AACSB-ACCREDITED COLLEGE OF BUSINESS. | C25 · C25 · C25 ("as few as" kept) · C01 |
+| P1 On-Campus MBA | ONE-YEAR MBA. | SMALL COHORTS. · IN-PERSON IN LARAMIE. · AACSB-ACCREDITED COLLEGE OF BUSINESS. | C10 + S9 W6 · S9 W1 · C10 · C01 + S9 |
+| P2 Online MBA | 100% ONLINE. ASYNCHRONOUS. | NO CAMPUS VISITS REQUIRED. · 30 CREDITS. · AACSB-ACCREDITED COLLEGE OF BUSINESS. | C25 + S9 W3/W4/W6 · S9 W3 · C25 + S9 · C01 + S9 |
 | P3 M.S. Accounting | CPA EXAM PREPARATION. | FULL- OR PART-TIME. · AACSB-ACCREDITED COLLEGE OF BUSINESS. | C36 · C35 · C01 |
 | P4 Online M.S. Accounting | CPA EXAM PREPARATION. | 100% ONLINE. ASYNCHRONOUS. · NO GRE/GMAT REQUIRED. | C36 · C35 · C35 (P4 only) |
-| P5 Online M.S. Finance | CFP BOARD-REGISTERED. | 100% ONLINE. 30 CREDITS. · AACSB-ACCREDITED COLLEGE OF BUSINESS. | C46 · C44 · C01 |
+| P5 Online M.S. Finance | CFP® BOARD REGISTERED. | MASTER'S + CFP® CERTIFICATE. · GRE/GMAT NOT REQUIRED. · 100% ONLINE. ASYNCHRONOUS. | C46 + S10 · S10 F1 · S10 F1 · C44 + S10 |
 
 - **Why these leads.** Each answers the question that program's audience asks first. For the one-year on-campus MBA: how long? For working professionals: can I do this around my job? For accountants: does it get me toward the CPA? For the finance audience, which S1 points at the CFP pathway: is it recognized for it?
 - **P3 and P4 leads read "CPA EXAM PREPARATION."**, not "prepares you for" or "built for": a noun phrase no broader than C36's "prepares students for the CPA exam". The C39 state-variation caveat goes in post text on every P3 and P4 post.
-- **P5's lead depends on verification.** C46 needs checking against CFP Board's registration record (brief §15.4) and the name question (Q7). Until then, run the alternate "100% ONLINE. 30 CREDITS." as lead. When C46 runs, post text must carry the C47 caveat: the certificate meets the education requirement and is not CFP certification.
+- **P5's lead: UW now states it publicly.** S10 F1: "UW's master's program in finance and CFP graduate certificate are also CFP® Board Registered." That corroborates C46. A check against CFP Board's own registered-program list (brief §15.4) is still the safe step before launch, and the mark is written as UW writes it: CFP®. When a CFP line runs, post text carries the caveat that the certificate meets one of the education requirements and is not CFP certification (C47; S10 F1 "one of four 'E' requirements").
+- **"AS FEW AS THREE SEMESTERS." is withdrawn from the P2 pool.** UW's own pages disagree on Online MBA duration: "as few as three semesters" (S9 W3), "typically takes 23-months" (S9 W4), "one year, full-time or … two years, part-time" (S9 W6). Divergence OPEN; no duration claim on P2 until UW settles it.
+- **Pool additions from UW's site (S9, S10):** SMALL COHORTS. (W1 "small cohorts"; W6 "Class sizes are small"), NO CAMPUS VISITS REQUIRED. (W3), GRE/GMAT NOT REQUIRED. and MASTER'S + CFP® CERTIFICATE. (F1). Published by UW; still confirm with UW before external use.
 - **"AACSB-ACCREDITED COLLEGE OF BUSINESS."** keeps S1's College-level wording (C01). Never "AACSB-accredited MBA".
 - **Never in the slot:** tuition or "under $30K" (C27), rankings, outcomes, pass rates (C37), STEM (C24, C32, C34), college-funded CPA materials (C38, pending), industry access (C08), anything from S6.
 - **"Dynamic":** Meta's dynamic creative and asset-customization options for swapping text layers are not verified in `shared/knowledge/meta-paid-ads/`. Until they are, build one version per proof line.
@@ -157,14 +159,14 @@ The post text carries the remaining proof, the caveats and Apply Now. Base: v02 
 | Program | Post text |
 |---|---|
 | P1 | You already run a full week. The University of Wyoming's in-person MBA is a one-year program in Laramie, with applied case work and real-world problem solving. Apply Now. |
-| P2 | You've never needed a quiet week. The University of Wyoming Online MBA is 100% online and asynchronous: 30 credits, full- or part-time, finished in as few as three semesters. Apply Now. |
+| P2 | You've never needed a quiet week. The University of Wyoming Online MBA is 100% online and asynchronous: 30 credits, full- or part-time, with no requirement to visit campus. Apply Now. |
 | P3 | Some people can't let a number go. The University of Wyoming on-campus M.S. in Accounting prepares students for the CPA exam, full- or part-time. CPA education and licensing requirements vary by state. Apply Now. |
 | P4 | Some people can't let a number go. The University of Wyoming online M.S. in Accounting is 100% online and asynchronous and prepares students for the CPA exam. No GRE or GMAT required. CPA education and licensing requirements vary by state. Apply Now. |
-| P5 | Kept the plan. Again. The University of Wyoming online M.S. in Finance is 30 credits, 100% online, with topics including investment management, tax planning, estate planning, insurance and retirement planning. Apply Now. |
+| P5 | Kept the plan. Again. The University of Wyoming online M.S. in Finance is 100% online and asynchronous, with no GRE or GMAT required. Earn the master's and the CFP® graduate certificate at the same time, with courses in tax, investment, insurance and retirement, and estate planning. The certificate meets one of the education requirements for CFP® certification; it is not CFP certification. Apply Now. |
 
 - P1 adds C12 ("applied case work and real-world problem solving", SOURCE-STATED, exploration status: confirm).
-- P5 carries no CFP line until C46 is verified. Then add: "The program is registered with CFP Board. The CFP graduate certificate meets the education coursework requirement for CFP certification; it is not CFP certification." (C46, C47; exact wording to UW.)
-- P5's program name follows pack 11 until Q7 resolves it.
+- P5's CFP sentence follows S10 F1 and C47; exact wording to UW. Course areas match the catalog core (FIN 5070, 5310, 5720, 5780; S10 F2).
+- **P5 name:** UW's catalog and site call it "Finance, M.S." / "M.S. in Finance", offered online (S10). No UW program is named Wealth Management or Financial Planning & Wealth Management; that name appears only in the GTM deck (S7). Label stays "ONLINE M.S. IN FINANCE".
 - Post text above ~125 characters truncates in feed (Q16 flag from v02). Lead with the line that matters; caveats can sit after the fold only if UW's compliance reviewer accepts that.
 
 ---
@@ -188,7 +190,8 @@ T2 is person-free still life. It can share the shoot days with T3's students, bu
 ## Flags for execution approval
 
 1. **Video timing:** week hook about 4s (S1: 3s); proof at 12.5s (S1: by 10s).
-2. **Proof points:** confirm C01, C10, C12, C25, C35, C36, C44 before external use. C46 needs CFP Board verification before P5's lead runs.
-3. **C39 caveat** in P3 and P4 post text: confirm UW doesn't require it on the asset.
-4. **Blackhawk variant:** test only.
-5. **Meta placements, carousel ratio and dynamic text options:** Q18 and verified specs in `shared/knowledge/meta-paid-ads/`.
+2. **Proof points:** confirm C01, C10, C12, C25, C35, C36, C44 and the S9/S10 additions before external use. C46 is now stated on UW's site (S10); a CFP Board list check remains the safe step.
+3. **P3 on-campus M.S. Accounting may not exist.** UW's program finder calls the M.S. in Accounting "a fully online program" (S10 related observation). S1 and the ledger (C34, C35) describe an on-campus route. If there's no on-campus version, the P3 variant (weeks, campus end card, T3 scripts P3-A and P3-B) folds into P4. Check the M.S. Accounting page and ask UW.
+4. **C39 caveat** in P3 and P4 post text: confirm UW doesn't require it on the asset.
+5. **Blackhawk variant:** test only.
+6. **Meta placements, carousel ratio and dynamic text options:** Q18 and verified specs in `shared/knowledge/meta-paid-ads/`.

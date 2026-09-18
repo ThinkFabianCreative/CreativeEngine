@@ -1379,6 +1379,7 @@ Authority is per domain. No blanket newest-file-wins rule applies. "Current" mea
 | R18 | Meta ad account and campaign setup | implied by S1 p5 | NOT SUPPLIED | REQUIRED BEFORE WORK (launch) | Q12, Q18 |
 | R19 | Original materials behind S6: session notes or recordings, participant details, sample, dates, permissions, approved quotations | S6 | REFERENCED, NOT AVAILABLE | REQUIRED BEFORE CLAIM USE | C60–C69; Q39 |
 
+**Website evidence (2026-09-17, S9 and S10, not yet normalized; for BriefMachine).** Q7 program name: UW's catalog and site name the program "Finance, M.S." / "M.S. in Finance", online; no UW program is named Financial Planning & Wealth Management (that name is S7 only). C46: UW states "UW's master's program in finance and CFP graduate certificate are also CFP® Board Registered" (S10 F1). C25 duration: UW pages disagree (S9 W3, W4, W6), OPEN. C34/C35 P3: UW's program finder calls the M.S. in Accounting "a fully online program", OPEN against S1's on-campus route.
 ### 15.4 Later independent verification (not done in this pass)
 
 1. AACSB accreditation of the College (C01).

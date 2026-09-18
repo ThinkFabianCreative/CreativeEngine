@@ -61,7 +61,7 @@ Audience: "recent graduates and early-career professionals seeking an immersive,
 
 **P1-A · "One year. All of it."** · current student, about 22–25
 
-> *Closing shift. Capstone due. Brother's wrestling meet. Same week.*
+> *Closing shift. Strategy case due. Brother's wrestling meet. Same week.*
 > Everybody said take a few years off first.
 > I'd been working since I was sixteen.
 > *(beat)* So I gave it one year. All of it.
