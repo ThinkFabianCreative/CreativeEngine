@@ -51,7 +51,7 @@ Verbatim: "blackhawk font is not an issue anymore. 2- they complement eachother,
 | Open question | Answer | Status |
 |---|---|---|
 | Blackhawk (part of Q1/Q16/Q17) | "not an issue anymore" | RESOLVED (user-reported). Font file not yet on record |
-| Cowboys language (Q1) | Not addressed | **OPEN.** The ALREADY GONE decision in the selling review still applies |
+| Cowboys language (Q1) | "Cowboy approval is territory only, we need executions with weeks and programs" (Andres, 2026-09-17) | **APPROVED AT TERRITORY LEVEL** (user-reported). Each execution still needs approval. The ALREADY GONE risk in the selling review is retired for the territory |
 | How T2 and T3 relate | "they complement eachother" | ANSWERED. Working reading (DERIVED, confirm): one system, T2 as the prospecting hook, T3 as consideration and retargeting proof |
 | "Shot locally" | Laramie | ANSWERED |
 | Real students | Current students and alumni; UW supplies them | ANSWERED. Who collects releases, and who approves quotes, still to confirm |

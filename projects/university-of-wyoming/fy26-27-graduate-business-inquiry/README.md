@@ -123,6 +123,7 @@ UPDATED:  2026-09-17
 | 2026-09-17 | Andres confirms deck v1.0 is what UW received (filed in `outputs/review/`). Client picked T2 and T3; T3 approved only with real students, no AI, shot locally; T1 not selected (user-reported). Pack 10 testimonial rule scoped to T2/conversion frames | `work/reviews/`, `outputs/review/` |
 | 2026-09-17 | Follow-ups: Blackhawk access resolved; T2 and T3 complement each other; T3 shot in Laramie with current students and alumni supplied by UW. Cowboys language (Q1) still open | `work/reviews/` decision record |
 | 2026-09-17 | T3 lines will be scripted from each student's real experience (user direction). Ten draft scripts (two per program, mixed ages, paths, current and alumni) written as casting specs, with intake questions and a casting request for UW. Draft, not approved | `work/copy/` |
+| 2026-09-17 | Cowboy approved at territory level; executions need approval (user-reported). T2 execution set v01: three weeks per program (A approved v02 + B, C new), static, 15s video beat table, optional carousel, end-card fact lines, post text, Laramie T2 shot list. Pack 12 not yet updated (static Gold rule changes pending Andres) | `work/concepts/` |
 | 2026-09-14 | User approved word-smither writing five program week lines and five post texts with proof points: Direction 2 week lines and Meta primary text per variant (DEVELOP; claims not cleared) | `work/concepts/` |
 
 ## Client-knowledge candidates (not promoted)
@@ -168,6 +169,7 @@ Project-administration questions only. Briefing questions are in [§14](normaliz
   - [`…_t3-student-scripts_v01.md`](work/copy/fy26-27-graduate-business-inquiry_t3-student-scripts_v01.md): DEVELOP. T3 15s scripts, P1–P5 × 2, each with MUST BE TRUE casting condition, ledger fact super and risks; casting table and intake questions for UW. Draft; claims not cleared.
 - **`work/concepts/`:**
   - **Current:**
+    - [`…_t2-executions_v01.md`](work/concepts/fy26-27-graduate-business-inquiry_t2-executions_v01.md): DEVELOP. **Current T2 execution set** after client selection: 15 week lines (5 programs × A/B/C), static, 15s video, carousel, fact lines, post text, shot list, flags for UW execution approval. Internal; claims not cleared.
     - [`…_conversion-layer-design_v01.md`](work/concepts/fy26-27-graduate-business-inquiry_conversion-layer-design_v01.md): DEVELOP. Conversion layer templates (single stage, steps carousel, deadline window, admitted) with Online MBA Figma build block. Placeholders for client facts.
     - [`…_conversion-layer-copy_v01.md`](work/concepts/fy26-27-graduate-business-inquiry_conversion-layer-copy_v01.md): DEVELOP. Conversion layer copy for Priority 1 audiences (retargeting and CRM). Placeholder dates and requirements; claims not cleared.
     - [`../image-prompts/d2_program-imagery_v02.md`](work/image-prompts/d2_program-imagery_v02.md): DEVELOP. Current program imagery (supersedes v01): off-campus working-life scenes, face-free comp prompts, campus end cards for P1/P3. Internal.
