@@ -35,4 +35,6 @@ None exists yet. Each is created only when it holds material; the rules are in [
 
 ## Projects
 
-None recorded.
+| Project | Folder | Named by | Status |
+|---|---|---|---|
+| Featherstone Phase 2 (provisional name) | [featherstone-phase-2/](../featherstone-phase-2/README.md) | User, 2026-09-18 | BRIEFING |
