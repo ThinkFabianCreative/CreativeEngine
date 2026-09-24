@@ -30,9 +30,10 @@ When creating or critiquing visual work for Andres (the user), consult `shared/k
 
 ## Visual reference libraries
 
-Two libraries serve as visual reference:
+Three libraries serve as reference:
 
 - **`DesignChamp/knowledge/presentation-style-library.md`** indexes 12 presets and 34 worked design systems from the `frontend-slides` skill. Use it for a visual register, type pairing, palette structure or design-system model.
+- **`shared/knowledge/ad-reference/`** is CreativeEngine's index of real ads, tagged by mechanism, maintained with the `ad-reference` skill (Ads of the World). Use it to find precedents for a visual idea, to borrow a proven move deliberately, and to check whether a concept has been done before it is presented.
 - **`DesignChamp/knowledge/brand-design-md/README.md`** indexes 74 unofficial analyses of real brands' web design systems. Use it to study how a brand turns one idea into a system, and to check category sameness. It is never a client brand source, and never a look to impersonate.
 
 Scan the index, then open only the files the task needs. Use both as stimulus in EXPLORE, as models for systematizing a chosen direction in DEVELOP, and as distinctiveness baselines in JUDGE. They are libraries, not a taste or a default: the brief, the idea and the client's brand come first, and work that could pass for an off-the-shelf template is not yet ownable.
@@ -68,6 +69,18 @@ When the work will be built by Figma's agent, write the brief in the framework's
 ## Format prototyping
 
 When an approved idea has to be seen as a real execution in its real format (landing page, display, Meta ad unit, DOOH, email, slideshow), use the `format-prototyping` skill (`.claude/skills/format-prototyping/`; record `DesignChamp/skills/format-prototyping.md`). Fidelity follows the mode: rough in EXPLORE, the one carrying interaction in DEVELOP, real size in context in JUDGE. Prototypes only, never production code.
+
+## Landing-page production (Instapage)
+
+When an approved landing-page direction has to become a real, client-editable page in Instapage, use the `instapage-production` skill (`.claude/skills/instapage-production/`; record `DesignChamp/skills/instapage-production.md`). It translates the approved Figma spec into native Instapage structure; it makes no creative decisions and never rewrites approved copy. A prototype is never promoted into production.
+
+- **Three layers.** The Instapage Native Kit in Figma is neutral vocabulary (global). Each client's look lives in that client's own library, built from its approved sources. Each page's composition lives in the project spec. No house look, no CreativeEngine-branded blocks, and never a start from another client's library.
+- **Constraints by mode.** Ignore the kit in EXPLORE. In DEVELOP, check that serious directions translate natively (warnings, not kills). In JUDGE, the spec is buildable natively or its gaps are proposed exceptions. In production, Native Authorability is mandatory. Push the native range before asking for an exception.
+- **Constraints come back here.** Production records the platform limit and the native options; DesignChamp chooses, and escalates to CreativeDirector when a choice would change the idea.
+
+## Generated assets (Artlist)
+
+When a decided idea has to be rendered as a still, a motion test, an animatic, a hook variant or a product-in-context shot, use the `artlist-production` skill (`.claude/skills/artlist-production/`; record `DesignChamp/skills/artlist-production.md`). It covers routing against Firefly and Figma Weave, the recipes, models and credits, and how outputs are labelled and logged. Generation executes the concept; it never finds one (Barry §2). Output is for inspiration and pitch only, never commercial use; artists named in prompts are credited in the pitch documentation. Every call spends credits, so quote the batch and get the user's approval first. Client rules on generated people and imagery apply to internal comps too.
 
 ## Skills and knowledge
 

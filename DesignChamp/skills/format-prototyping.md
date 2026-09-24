@@ -19,3 +19,5 @@
 ## Use
 
 DesignChamp owns visual judgment; the skill is method. Copy comes from WordSmither (`format-copywriting`) or is visibly marked as placeholder.
+
+**Boundary with production (2026-09-24).** This skill answers "does the approved idea work convincingly as a landing page?". `instapage-production` (`instapage-production.md`) answers "how do we implement the approved page faithfully with Instapage's own tools?". Prototypes are never promoted into production, and this skill stays prototype-only.

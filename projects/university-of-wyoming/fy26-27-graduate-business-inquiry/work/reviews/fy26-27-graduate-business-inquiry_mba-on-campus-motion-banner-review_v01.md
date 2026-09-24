@@ -37,7 +37,7 @@ Structure tracks pack 12 closely (week 0–5, STUBBORN ~5–7.5, COWBOY ~7.5–1
 | State 03 → 04: same photo (20100823_WTM8827) in two layers, 643:86 at scale 1.0 and 643:125 at 1.035, crossfaded over 1.05 s ease-in-out | One photo layer spanning 9.5–15 s with one continuous move; swap only the type and the band | Mismatched scales on a crossfade = ghosted double image for a full second |
 | Text entrances `cubic-bezier(0.45, 1.45, 0.8, 1)` (back-out overshoot) on every line | `cubic-bezier(0.16, 1, 0.3, 1)` (strong ease-out, no overshoot), 450–600 ms | Bounce on every headline reads template and playful; UW voice is "confident, direct, credible" (pack 11). Save overshoot for nothing, or one deliberate moment |
 | Entry vectors: bullets from ±34 px diagonals, STUBBORN from −90 x, exits −180 x, COWBOY from +180 x, tagline from lower-left, subheading from right | One direction for all type: rise 16–24 px + fade; exits fade only (or fall 12 px) | Six directions in 15 s have no spatial logic; big horizontal whips (180 px) fight the slow pull-out |
-| Week build: 16 animations in 1.6 s (box spring 0.82→1.11→1, text slide, tick draw, strike draw ×4) | Remedial #1: delete the checkbox/tick/strike choreography with the device (carousel review fix 4). If the week stays a list: items appear 400–500 ms apart, one motion each, strike only if the concept keeps it | Busiest moment of the ad is its first 1.6 s, before anyone is reading; and the device itself is off-system |
+| Week build: 16 animations in 1.6 s (box spring 0.82→1.11→1, text slide, tick draw, strike draw ×4) | Checklist kept (decision 2026-09-23). Per item: text appears, then one strike draws; items 400–500 ms apart; no box pop, no tick | Busiest moment of the ad is its first 1.6 s; one gesture per item lets the viewer read each item and see it get done |
 | Text exits `cubic-bezier(0.7, 0, 0.84, 0)` *and* the parent state fading at the same time | Let the state transition carry the exit; drop per-text exits, or exit text only on a hard cut | Double exit: text accelerates away while its frame also fades |
 | STUBBORN solid hold 1.1 s; tagline 1.65 s for 8 words | STUBBORN ≥ 1.5 s; tagline ≥ 2.5 s (take from the week build's dead time 1.7–3.3 s) | Sound-off feed viewers need about 3–4 words/s plus reaction time; the tagline currently ends before a first-time reader finishes it |
 | Tagline exits 12.18–12.93 while MBA enters 12.53 | End the tagline before the end card's type moves | Two text blocks moving in different directions overlap for 0.4 s |
@@ -49,7 +49,7 @@ Structure tracks pack 12 closely (week 0–5, STUBBORN ~5–7.5, COWBOY ~7.5–1
 ## Verdict by tier
 
 1. **Feel-breaking:** crossfade dips through a third image on three transitions; ghosted end-card photo; STUBBORN and COWBOY sitting on frozen images because their camera moves ran while hidden.
-2. **Missed simplifications:** one continuous camera instead of four overlapping zooms; the week-build choreography.
+2. **Missed simplifications:** one continuous camera instead of four overlapping zooms; the week build cut to one strike per item.
 3. **Performance:** none. Only transform, opacity and stroke trim are animated.
 4. **Timing:** holds too short on STUBBORN and the tagline; dead air 1.7–3.3 s; double exits; tagline and end card overlap.
 5. **Cohesion:** overshoot on every line and six entry directions make it read like a template, not UW.

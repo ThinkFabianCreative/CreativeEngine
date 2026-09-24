@@ -80,15 +80,15 @@ A GAP is a fact, not an instruction. Whether a gap is worth closing is a separat
 | Packaging and three-dimensional form | POP 663, 668 | DesignChamp | GAP | |
 | Publication and editorial design | POP 662 | DesignChamp | GAP | Low priority for current assignments |
 | Information design and data visualization | POP 670 | DesignChamp | GAP | No reviewed skill or framework on CreativeEngine's record |
-| Digital imaging, vector tools, software proficiency | POP 505, 513 | — | EXECUTION | |
+| Digital imaging, vector tools, software proficiency | POP 505, 513 | — | EXECUTION | Image generation through Artlist: `artlist-production` skill (governed by its department record) |
 
 ## 5. Time-based work
 
 | Competency | MAS ref | Owner | Status | Where / what's missing |
 |---|---|---|---|---|
-| Video storytelling; short film | POP 504, 516 | WordSmither + DesignChamp | COVERED | Story side: `narrative-craft.md`. Production is EXECUTION |
+| Video storytelling; short film | POP 504, 516 | WordSmither + DesignChamp | COVERED | Story side: `narrative-craft.md`. Production is EXECUTION; animatics, motion tests and generated clips through `artlist-production` |
 | Motion graphics: timing, movement, visual structure | POP 526 | DesignChamp | PLANNED | `animation-craft.md` |
-| Sound and critical listening | POP 542 | WordSmither + DesignChamp | PARTIAL | `narrative-craft.md` §9 covers sound as meaning. Recording and mixing are EXECUTION |
+| Sound and critical listening | POP 542 | WordSmither + DesignChamp | PARTIAL | `narrative-craft.md` §9 covers sound as meaning. Recording and mixing are EXECUTION; temporary and generated voiceover and music through `artlist-production` |
 
 ## 6. Media and channel
 
@@ -99,6 +99,7 @@ A GAP is a fact, not an instruction. Whether a gap is worth closing is a separat
 | Choosing media; online and offline as one ecosystem | POP 515 | CD + BriefMachine | PARTIAL | `barry-concept-art-direction.md` §9 medium as idea; `channel-preferences.md`; spec modules. No channel-strategy method |
 | Mobile as an always-on channel | POP 537 | All | PARTIAL | Through social and paid formats only |
 | Interactive concepting | POP 522 | DesignChamp | PARTIAL | "Behavioral" carrier in `barry-concept-art-direction.md` §3; `format-prototyping` skill (draft, awaiting review) |
+| Landing-page production in a no-code builder (Instapage) | — | DesignChamp | EXECUTION | `instapage-production` skill (governed by its department record): approved Figma spec to a native, client-editable Instapage page; Native Authorability; client-agnostic three-layer model; QA and publish gate. Production method, not creative judgment |
 | User experience and information architecture | POP 517 | DesignChamp | PARTIAL | `ui-ux-pro-max` skill (execution, governed by its department record) |
 | Gaming as a medium | POP 528 | — | GAP | Low priority |
 | Emerging interfaces: voice, face recognition, telepresence | POP 515 | — | GAP | Low priority |
@@ -145,6 +146,10 @@ By how much closing each would change the work CreativeEngine currently produces
 
 | Date | Change |
 |---|---|
+| 2026-09-24 | `instapage-production` skill added, with the Figma "Instapage Native Kit": native Instapage production of approved landing pages (new EXECUTION row under Media and channel). Production method only; no judgment row changes status. The interactive concepting row stays PARTIAL: `format-prototyping` still owns prototypes |
+| 2026-09-24 | `artlist-production` skill added: rendering decided ideas as stills, video, voiceover and music through the Artlist MCP, with a cost gate. Execution only, so no judgment row changes status; the motion craft gap (rank 2) stays open |
+| 2026-09-24 | `ad-reference` skill and `shared/knowledge/ad-reference/` index added: advertising precedent search and a done-before check (Ads of the World). Supports originality review; not design history or criticism, so row POP 674 stays a GAP |
+| 2026-09-23 | `WordSmither/knowledge/writers-room.md` added: four generative lenses (Sullivan, Droga, Wieden+Kennedy, Goodby Silverstein) beside the copycraft framework |
 | 2026-09-17 | `visual-craft.md` added: design fundamentals and photography direction COVERED; semiotics PARTIAL (visual codes). Rank 1 gap closed |
 | 2026-09-17 | Map created against MAS Volume 39. Same day, `selling-the-work.md`, `narrative-craft.md` and `typography.md` were added as Active frameworks; rows reflect them |
 

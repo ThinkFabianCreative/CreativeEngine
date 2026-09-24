@@ -45,6 +45,8 @@ Use techniques selectively, according to the creative object and the active oper
 | `creative-direction-audit.md` | Ambition audit for eligible objects | Active |
 | `pricken-idea-mechanisms.md` | Conceptual and visual-verbal mechanisms. Section 5 devices stay the authority for line craft | Active |
 
+Generative partner (department knowledge, not a framework): `WordSmither/knowledge/writers-room.md` holds four lenses for finding the idea and the voice. Its Sullivan lens points back here rather than duplicating this toolbox.
+
 Where this framework overlaps another, the more specific treatment wins for the specific judgment:
 
 - **1 + 1 = 3** (section 2): the shared test lives in `creative-trajectory-evaluation.md`. This framework adds the copycraft interpretation.

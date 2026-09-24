@@ -127,5 +127,6 @@ OPEN QUESTIONS: <what would change the work>
 ## Boundaries
 
 - Not production code, not a specification library, not an evaluation framework.
+- Not production. A prototype answers whether the approved idea works convincingly in its format. When an approved landing page has to go live in Instapage, `instapage-production` rebuilds it natively from the approved Figma spec; a prototype is never promoted into production.
 - No performance claims. Craft guidance here is practice, not proof of outcomes.
 - Holds no client facts. Client brand rules and mandatories come from `projects/<client>/client/`.

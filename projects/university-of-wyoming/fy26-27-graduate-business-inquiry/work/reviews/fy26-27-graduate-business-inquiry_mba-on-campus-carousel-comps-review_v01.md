@@ -65,3 +65,17 @@ STATUS:    No verdicts. Placeholder imagery (AI) throughout cards 1–3.
 
 - Andres re-cropped card 1 during the review: tight on hands and desk, face-free. Card 1 now works as the close-up and the set reads tight → wide → wider. Fix 2 now applies to cards 2–3 only; fix 5 becomes "card 3 should be the dark top, not the widest crop".
 - The findings above are pinned in Figma as Dev Mode annotations, category **CD review** (orange), on the five card frames and on the card 4–5 photo, headline and "MBA" layers.
+
+## Decision, 2026-09-23: the checklist stays
+
+Andres: "the checklist device visually crossed off telegraphs 'ive got a lot on but im tackling it all'."
+Accepted. All items done sets up "Too stubborn to stop?" (pack 12: "That's my week... and yes, I'm too
+stubborn"). The "no checkboxes" objection came from the internal planner-page system v01, not a client
+rule, and is withdrawn for T2 prospecting. The one-unticked-line version (APPLICATION.) stays available
+as a retargeting variant (conversion layer), where the nudge fits.
+
+Fix 4 is revised. Still open inside the device:
+- Tick **or** strike, not both. Recommended: strike only (a human gesture; a ticked box reads as a to-do app).
+- One gold event: strikes White/ink, Gold only on SAME WEEK.
+- P1 week line verbatim; drop "Mid terms" (it makes the viewer a current student).
+- Real pen strokes over set type, not a script font.

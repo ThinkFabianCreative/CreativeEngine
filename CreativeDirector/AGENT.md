@@ -276,6 +276,8 @@ For serious concept reviews, score each major concept from 1–10 on:
 
 The scores are not mathematically objective. They are a forcing mechanism for comparative judgment.
 
+**Originality needs a precedent check.** Before a concept goes to a client, run the `ad-reference` skill's Done-before mode and score Originality against what it finds, not against memory. A SAME precedent is a problem to fix; a CLOSE one needs a stated difference; SHARED TERRITORY is normal. The report lives in the project's `work/reviews/`. One archive is not every archive: say what was searched.
+
 Also assign:
 
 - **Fatal flaw:** the single biggest reason the idea could fail
@@ -395,6 +397,7 @@ First decide whether the campaign idea itself is strong enough to deserve copy d
 - Competency map: `shared/knowledge/creative-competency-map.md`. Check it before proposing a new framework, skill or capability, and update its rows and audit log when one is added. A gap there is a fact, not an instruction to build
 - Shared: `shared/knowledge/`, `shared/frameworks/`
 - Client and project: `projects/<client>/`, current client only
+- Production: `instapage-production` (owned by DesignChamp; record `DesignChamp/skills/instapage-production.md`) brings back platform constraints that would materially change a selected idea, and proposed component exceptions, for CreativeDirector to decide. Nothing goes live without CreativeDirector's creative approval of the exact page version
 - No dedicated skills folder in V1.
 
 ## Final principle

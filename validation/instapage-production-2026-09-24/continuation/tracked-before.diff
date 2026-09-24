@@ -1,0 +1,362 @@
+diff --git a/.claude/skills/README.md b/.claude/skills/README.md
+index 32f1d64..9a76183 100644
+--- a/.claude/skills/README.md
++++ b/.claude/skills/README.md
+@@ -7,6 +7,9 @@ This is where Claude discovers CreativeEngine's skills automatically. Each skill
+ | `humanizer` | WordSmither | `WordSmither/skills/humanizer.md` (calibrated for advertising copy) |
+ | `format-copywriting` | WordSmither | `WordSmither/skills/format-copywriting.md` (in-house) |
+ | `format-prototyping` | DesignChamp | `DesignChamp/skills/format-prototyping.md` (in-house) |
++| `ad-reference` | DesignChamp (used by WordSmither and CreativeDirector) | `DesignChamp/skills/ad-reference.md` (in-house) · reads Ads of the World; links and our analysis only, never copies |
++| `artlist-production` | DesignChamp (WordSmither supplies scripts, voiceover, hooks and lyrics) | `DesignChamp/skills/artlist-production.md` (in-house) · drives the Artlist MCP; inspiration and pitch only, never commercial; every call spends credits: quote and confirm each batch |
++| `instapage-production` | DesignChamp (WordSmither's copy, BriefMachine's ask and CreativeDirector's approval are inputs) | `DesignChamp/skills/instapage-production.md` (in-house) · native Instapage production through the Instapage MCP; Native Authorability; client-agnostic; never publishes without explicit approval |
+ | `frontend-slides` | DesignChamp | `DesignChamp/skills/frontend-slides.md` |
+ | `ui-ux-pro-max` | DesignChamp | `DesignChamp/skills/ui-ux-pro-max.md` |
+ | `banner-design` | DesignChamp | `DesignChamp/skills/ui-ux-pro-max.md` |
+diff --git a/.claude/skills/format-prototyping/SKILL.md b/.claude/skills/format-prototyping/SKILL.md
+index 28138ad..23c3aad 100644
+--- a/.claude/skills/format-prototyping/SKILL.md
++++ b/.claude/skills/format-prototyping/SKILL.md
+@@ -127,5 +127,6 @@ OPEN QUESTIONS: <what would change the work>
+ ## Boundaries
+ 
+ - Not production code, not a specification library, not an evaluation framework.
++- Not production. A prototype answers whether the approved idea works convincingly in its format. When an approved landing page has to go live in Instapage, `instapage-production` rebuilds it natively from the approved Figma spec; a prototype is never promoted into production.
+ - No performance claims. Craft guidance here is practice, not proof of outcomes.
+ - Holds no client facts. Client brand rules and mandatories come from `projects/<client>/client/`.
+diff --git a/.gitignore b/.gitignore
+index da928c9..e9a315c 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -4,3 +4,9 @@
+ node_modules/
+ __pycache__/
+ *.pyc
++
++# Generated media (Artlist and other generators) stays local.
++# Only the Markdown logs in work/generated/ are committed; they reference the files.
++projects/**/work/generated/**
++!projects/**/work/generated/**/
++!projects/**/work/generated/**/*.md
+diff --git a/CreativeDirector/AGENT.md b/CreativeDirector/AGENT.md
+index 920870f..f1f9b7e 100644
+--- a/CreativeDirector/AGENT.md
++++ b/CreativeDirector/AGENT.md
+@@ -276,6 +276,8 @@ For serious concept reviews, score each major concept from 1–10 on:
+ 
+ The scores are not mathematically objective. They are a forcing mechanism for comparative judgment.
+ 
++**Originality needs a precedent check.** Before a concept goes to a client, run the `ad-reference` skill's Done-before mode and score Originality against what it finds, not against memory. A SAME precedent is a problem to fix; a CLOSE one needs a stated difference; SHARED TERRITORY is normal. The report lives in the project's `work/reviews/`. One archive is not every archive: say what was searched.
++
+ Also assign:
+ 
+ - **Fatal flaw:** the single biggest reason the idea could fail
+@@ -395,6 +397,7 @@ First decide whether the campaign idea itself is strong enough to deserve copy d
+ - Competency map: `shared/knowledge/creative-competency-map.md`. Check it before proposing a new framework, skill or capability, and update its rows and audit log when one is added. A gap there is a fact, not an instruction to build
+ - Shared: `shared/knowledge/`, `shared/frameworks/`
+ - Client and project: `projects/<client>/`, current client only
++- Production: `instapage-production` (owned by DesignChamp; record `DesignChamp/skills/instapage-production.md`) brings back platform constraints that would materially change a selected idea, and proposed component exceptions, for CreativeDirector to decide. Nothing goes live without CreativeDirector's creative approval of the exact page version
+ - No dedicated skills folder in V1.
+ 
+ ## Final principle
+diff --git a/DesignChamp/AGENT.md b/DesignChamp/AGENT.md
+index 579c267..80733b6 100644
+--- a/DesignChamp/AGENT.md
++++ b/DesignChamp/AGENT.md
+@@ -30,9 +30,10 @@ When creating or critiquing visual work for Andres (the user), consult `shared/k
+ 
+ ## Visual reference libraries
+ 
+-Two libraries serve as visual reference:
++Three libraries serve as reference:
+ 
+ - **`DesignChamp/knowledge/presentation-style-library.md`** indexes 12 presets and 34 worked design systems from the `frontend-slides` skill. Use it for a visual register, type pairing, palette structure or design-system model.
++- **`shared/knowledge/ad-reference/`** is CreativeEngine's index of real ads, tagged by mechanism, maintained with the `ad-reference` skill (Ads of the World). Use it to find precedents for a visual idea, to borrow a proven move deliberately, and to check whether a concept has been done before it is presented.
+ - **`DesignChamp/knowledge/brand-design-md/README.md`** indexes 74 unofficial analyses of real brands' web design systems. Use it to study how a brand turns one idea into a system, and to check category sameness. It is never a client brand source, and never a look to impersonate.
+ 
+ Scan the index, then open only the files the task needs. Use both as stimulus in EXPLORE, as models for systematizing a chosen direction in DEVELOP, and as distinctiveness baselines in JUDGE. They are libraries, not a taste or a default: the brief, the idea and the client's brand come first, and work that could pass for an off-the-shelf template is not yet ownable.
+@@ -69,6 +70,18 @@ When the work will be built by Figma's agent, write the brief in the framework's
+ 
+ When an approved idea has to be seen as a real execution in its real format (landing page, display, Meta ad unit, DOOH, email, slideshow), use the `format-prototyping` skill (`.claude/skills/format-prototyping/`; record `DesignChamp/skills/format-prototyping.md`). Fidelity follows the mode: rough in EXPLORE, the one carrying interaction in DEVELOP, real size in context in JUDGE. Prototypes only, never production code.
+ 
++## Landing-page production (Instapage)
++
++When an approved landing-page direction has to become a real, client-editable page in Instapage, use the `instapage-production` skill (`.claude/skills/instapage-production/`; record `DesignChamp/skills/instapage-production.md`). It translates the approved Figma spec into native Instapage structure; it makes no creative decisions and never rewrites approved copy. A prototype is never promoted into production.
++
++- **Three layers.** The Instapage Native Kit in Figma is neutral vocabulary (global). Each client's look lives in that client's own library, built from its approved sources. Each page's composition lives in the project spec. No house look, no CreativeEngine-branded blocks, and never a start from another client's library.
++- **Constraints by mode.** Ignore the kit in EXPLORE. In DEVELOP, check that serious directions translate natively (warnings, not kills). In JUDGE, the spec is buildable natively or its gaps are proposed exceptions. In production, Native Authorability is mandatory. Push the native range before asking for an exception.
++- **Constraints come back here.** Production records the platform limit and the native options; DesignChamp chooses, and escalates to CreativeDirector when a choice would change the idea.
++
++## Generated assets (Artlist)
++
++When a decided idea has to be rendered as a still, a motion test, an animatic, a hook variant or a product-in-context shot, use the `artlist-production` skill (`.claude/skills/artlist-production/`; record `DesignChamp/skills/artlist-production.md`). It covers routing against Firefly and Figma Weave, the recipes, models and credits, and how outputs are labelled and logged. Generation executes the concept; it never finds one (Barry §2). Output is for inspiration and pitch only, never commercial use; artists named in prompts are credited in the pitch documentation. Every call spends credits, so quote the batch and get the user's approval first. Client rules on generated people and imagery apply to internal comps too.
++
+ ## Skills and knowledge
+ 
+ - Skills: installed in `.claude/skills/` (index `.claude/skills/README.md`); records and approvals in `DesignChamp/skills/` (index `DesignChamp/skills/README.md`)
+diff --git a/DesignChamp/knowledge/README.md b/DesignChamp/knowledge/README.md
+index d5a6f69..f648985 100644
+--- a/DesignChamp/knowledge/README.md
++++ b/DesignChamp/knowledge/README.md
+@@ -4,7 +4,7 @@ Reference material specific to DesignChamp.
+ 
+ | Item | What it is |
+ |---|---|
+-| `figma-agent-pack/` | Plain-text export (00–08; 08 added 2026-09-17 from `shared/frameworks/visual-craft.md`) of CreativeEngine visual taste and Meta ad craft for Figma's built-in agent. Derived from `shared/knowledge/ANDRES_CREATIVE_OS.md`, `shared/frameworks/hey-whipple-copycraft.md` §2 and §10, `shared/frameworks/creative-trajectory-evaluation.md` §9–10 and `.claude/skills/format-prototyping/references/meta-ad-units.md` (2026-09-13). Those files remain the source of truth; regenerate the pack when they change. Holds no client facts: client files live in each project's `work/figma-agent-pack/` |
++| `figma-agent-pack/` | Plain-text export (00–09; 08 added 2026-09-17 from `shared/frameworks/visual-craft.md`; 09 added 2026-09-24 from `.claude/skills/instapage-production/references/figma-kit.md` and `platform.md`, read only for landing pages built in Instapage) of CreativeEngine visual taste and Meta ad craft for Figma's built-in agent. Derived from `shared/knowledge/ANDRES_CREATIVE_OS.md`, `shared/frameworks/hey-whipple-copycraft.md` §2 and §10, `shared/frameworks/creative-trajectory-evaluation.md` §9–10 and `.claude/skills/format-prototyping/references/meta-ad-units.md` (2026-09-13). Those files remain the source of truth; regenerate the pack when they change. Holds no client facts: client files live in each project's `work/figma-agent-pack/` |
+ | `image-direction-reference.md` | Photography and image-generation direction: photographic styles, camera angles and height, lenses and apertures, light setups, prompt anatomy, how the main generation models differ, a reference library of photographers, directors, painters, film stocks and grades with prompt translations, and genre playbooks (product, fashion, documentary, editorial, architectural, cinematic, POV, phone photography, vertical video) (names brief the team; prompts use the translation). Supports `visual-craft.md` §5. No client facts. Model facts dated 2026-09-17; verify before relying on them |
+ | `presentation-style-library.md` | Retrieval index for the 12 presets and 34 bold design systems in the `frontend-slides` skill: what each layer holds, how to read it progressively, and how DesignChamp uses it as reference in EXPLORE, DEVELOP and JUDGE. Third-party reference, not taste; the files stay in `.claude/skills/frontend-slides/` |
+ | `brand-design-md/` | 74 unofficial DESIGN.md analyses of real brands' public websites (tokens, type, components, do's and don'ts), from `voltagent/awesome-design-md` (MIT, 2026-07-31). Index, review and guardrails in `brand-design-md/README.md`. Reference and category-sameness baseline only: never a client brand source, never a template to impersonate |
+diff --git a/DesignChamp/knowledge/figma-agent-pack/00_READ_FIRST.txt b/DesignChamp/knowledge/figma-agent-pack/00_READ_FIRST.txt
+index 65a8810..6e1476e 100644
+--- a/DesignChamp/knowledge/figma-agent-pack/00_READ_FIRST.txt
++++ b/DesignChamp/knowledge/figma-agent-pack/00_READ_FIRST.txt
+@@ -7,7 +7,7 @@ has high standards for concept and craft. Your job is to execute layout, type an
+ visual decisions with taste, not to fill frames.
+ 
+ HOW TO USE THESE FILES
+-Global files (01-08) describe how we think about design on every job.
++Global files (01-09) describe how we think about design on every job.
+ Client files (10+) describe one client and one campaign. They are attached only for
+ that client. Never apply one client's rules, colors or copy to another client.
+ 
+@@ -18,6 +18,7 @@ Read in this order before touching a frame:
+   04_image_and_words.txt
+   05_meta_ad_craft.txt
+   08_visual_craft.txt
++  09_instapage_native_kit.txt  ONLY for a landing page that will be built in Instapage
+   then the client files
+   06_self_check.txt before you hand anything back
+   07_how_to_report.txt for your reply
+diff --git a/DesignChamp/knowledge/image-direction-reference.md b/DesignChamp/knowledge/image-direction-reference.md
+index 88aaed5..df5868c 100644
+--- a/DesignChamp/knowledge/image-direction-reference.md
++++ b/DesignChamp/knowledge/image-direction-reference.md
+@@ -12,7 +12,7 @@
+ 
+ ## 1. Photographic styles
+ 
+-Pick the style for what the image must argue, then describe it in words the model or photographer can act on. Photographers and directors can be named directly in prompts ("in the style of [name]"), alone or combined with the genre (user direction, 2026-09-18). Pair the name with its **technical translation** from section 8 (light, lens, aperture, grade, film stock): some models block or ignore certain names, and the translation keeps the look when they do. It also lets you keep only the qualities you want from a reference. Recreating a specific photograph or film frame is allowed; the decision and its clearance sit with the user.
++Pick the style for what the image must argue, then describe it in words the model or photographer can act on. Photographers and directors can be named directly in prompts ("in the style of [name]"), alone or combined with the genre (user direction, 2026-09-18). Pair the name with its **technical translation** from section 8 (light, lens, aperture, grade, film stock): some models block or ignore certain names, and the translation keeps the look when they do. It also lets you keep only the qualities you want from a reference. Recreating a specific photograph or film frame is allowed; the decision and its clearance sit with the user. Name-referenced generations are for inspiration and pitch only, and the pitch documentation credits each referenced artist (user direction, 2026-09-24; credit format in `.claude/skills/artlist-production/references/run-log.md` → Attribution).
+ 
+ | Style | What it argues | Recognizable by | Watch for |
+ |---|---|---|---|
+@@ -116,6 +116,8 @@ At the time of writing. Verify current features, and check the governing skill r
+ | **FLUX** (Black Forest Labs; several versions, some open-weight) | Photorealism, natural light and skin, prompt adherence | Depends heavily on which version and host | Available through third-party services; terms vary by host and version |
+ | **Ideogram** | Typography and text in images | Photographic subtlety | Useful for type exploration only; final type is still set by hand |
+ 
++**Artlist (added 2026-09-24).** Artlist isn't a model. It's one credit account that hosts many of the models above (Nano Banana, GPT-Image, Imagen, FLUX, Ideogram, Seedream) alongside video, voice and music models, and it's reachable from the conversation through its MCP. Use it when stills must become motion, sound or voice in the same set. Its output is for inspiration and pitch only, never commercial use. Routing, models, credits and rules: the `artlist-production` skill and its record `DesignChamp/skills/artlist-production.md`.
++
+ **Choosing a model.** Pick by the job:
+ - a comp where arrangement must be exact → a model that follows prompts closely
+ - a mood or texture study in EXPLORE → a stylized model, labelled as mood
+diff --git a/DesignChamp/skills/README.md b/DesignChamp/skills/README.md
+index e1e879e..b9a4c84 100644
+--- a/DesignChamp/skills/README.md
++++ b/DesignChamp/skills/README.md
+@@ -11,3 +11,6 @@ Third-party skills must pass the review in the root `CLAUDE.md` before they are
+ | `frontend-slides` | `zarazhangrui/frontend-slides` | Approved and installed in `.claude/skills/` 2026-09-14 | [frontend-slides.md](frontend-slides.md) |
+ | UI/UX Pro Max (5 of 7: `ui-ux-pro-max`, `banner-design`, `slides`, `design-system`, `identity-design`) | `nextlevelbuilder/ui-ux-pro-max-skill` | Approved and installed in `.claude/skills/` 2026-09-14 | [ui-ux-pro-max.md](ui-ux-pro-max.md) |
+ | `format-prototyping` | CreativeEngine (in-house) | Approved and installed in `.claude/skills/` 2026-09-17 | [format-prototyping.md](format-prototyping.md) |
++| `ad-reference` | CreativeEngine (in-house) | Built at the user's request and installed in `.claude/skills/` 2026-09-24 | [ad-reference.md](ad-reference.md) |
++| `artlist-production` | CreativeEngine (in-house), for the Artlist MCP connector | Built at the user's request and installed in `.claude/skills/` 2026-09-24. Connector not yet connected | [artlist-production.md](artlist-production.md) |
++| `instapage-production` | CreativeEngine (in-house), for the Instapage MCP and Public API | Built at the user's request and installed in `.claude/skills/` 2026-09-24. Instapage MCP not yet connected; Figma Native Kit built | [instapage-production.md](instapage-production.md) |
+diff --git a/DesignChamp/skills/format-prototyping.md b/DesignChamp/skills/format-prototyping.md
+index 006a7f6..c6c925f 100644
+--- a/DesignChamp/skills/format-prototyping.md
++++ b/DesignChamp/skills/format-prototyping.md
+@@ -19,3 +19,5 @@
+ ## Use
+ 
+ DesignChamp owns visual judgment; the skill is method. Copy comes from WordSmither (`format-copywriting`) or is visibly marked as placeholder.
++
++**Boundary with production (2026-09-24).** This skill answers "does the approved idea work convincingly as a landing page?". `instapage-production` (`instapage-production.md`) answers "how do we implement the approved page faithfully with Instapage's own tools?". Prototypes are never promoted into production, and this skill stays prototype-only.
+diff --git a/WordSmither/AGENT.md b/WordSmither/AGENT.md
+index 5a6dc28..2625159 100644
+--- a/WordSmither/AGENT.md
++++ b/WordSmither/AGENT.md
+@@ -139,6 +139,7 @@ IT BETS ON:        what must be true for it to land
+ RISK:              the biggest way it could fail
+ VISUAL PAIRING:    what DesignChamp's image must do, or "copy carries it"
+ CLAIMS / FLAGS:    claim IDs and statuses, policy or legal questions, UNVERIFIED specs
++LENS:              writers'-room lens that produced it, when one did
+ ```
+ 
+ For several options, keep one block per option, and end with a short recommendation of which WordSmither would back, and why. Verdicts are CreativeDirector's. WordSmither recommends.
+@@ -168,6 +169,18 @@ For visual-verbal work with DesignChamp, `shared/frameworks/pricken-idea-mechani
+ 
+ Frameworks provide provocations and tests. WordSmither still owns verbal judgment.
+ 
++## Writers' room
++
++The copycraft framework mostly tests. `WordSmither/knowledge/writers-room.md` is its generative partner: four lenses for channelling how great writers and agencies attack a brief (Sullivan, Droga, Wieden+Kennedy, Goodby Silverstein). Each lens is a question to put to the brief, a set of moves, a voice and a critic's question.
++
++- **EXPLORE:** run two or three lenses whose question fits the object, each as its own labelled territory, so options differ in mechanism (a line, an act, a voice, a truth). Not all four by default.
++- **DEVELOP:** a voice pass from the idea's own lens, plus the read-aloud check.
++- **JUDGE:** the relevant lenses' critic questions, counted once each under the most precise diagnosis.
++
++Channel the thinking, not the costume. No invented quotes from the people named. The brief, claim ledger and client voice outrank every lens.
++
++For real precedents beyond the lenses' reference shelves, use the `ad-reference` skill: Find mode for ads that use a mechanism well, Done-before mode before a line is presented. The index is `shared/knowledge/ad-reference/`.
++
+ ## Narrative craft
+ 
+ When the work unfolds over time — scripts, film, social video, radio and audio, carousels and scroll narratives, or long copy carrying a story — consult `shared/frameworks/narrative-craft.md`.
+@@ -203,7 +216,9 @@ When creating or critiquing concepts and copy for Andres (the user), consult `sh
+ ## Skills and knowledge
+ 
+ - Skills: `humanizer` and `format-copywriting` (installed in `.claude/skills/`; records in `WordSmither/skills/`)
+-- Knowledge: `WordSmither/knowledge/`
++- Knowledge: `WordSmither/knowledge/` (writers' room: `writers-room.md`); ad reference index `shared/knowledge/ad-reference/` via the `ad-reference` skill (owned by DesignChamp)
++- Generated voiceover, music and hook variants: the `artlist-production` skill (owned by DesignChamp; record `DesignChamp/skills/artlist-production.md`). WordSmither writes the script, voiceover text, hooks and lyrics; its `references/prompting.md` has the voice and music formatting. A synthetic person's lines are never written as a customer testimonial
++- Landing-page production: `instapage-production` (owned by DesignChamp; record `DesignChamp/skills/instapage-production.md`). Approved copy is an immutable input, including form labels, consent text, thank-you message, alt text and search title and description. Copy that does not fit comes back to WordSmither as a constraint; production never rewrites it
+ - Shared: `shared/knowledge/` (Meta paid ads, channel preferences, Andres's taste profile), `shared/frameworks/`
+ - Client and project: `projects/<client>/`, current client only
+ 
+diff --git a/WordSmither/knowledge/README.md b/WordSmither/knowledge/README.md
+index 795d186..6a3cedb 100644
+--- a/WordSmither/knowledge/README.md
++++ b/WordSmither/knowledge/README.md
+@@ -1,5 +1,9 @@
+ # WordSmither knowledge
+ 
+-Reference material specific to WordSmither. Empty in V1.
++Reference material specific to WordSmither.
++
++| File | What it holds | When to use |
++|---|---|---|
++| `writers-room.md` | Four lenses for channelling great writers and agencies: Sullivan, Droga, Wieden+Kennedy, Goodby Silverstein. Question to the brief, moves, voice, kills, critic question, reference shelf | EXPLORE (two or three lenses as separate territories), DEVELOP (voice pass, read-aloud check), JUDGE (critic questions) |
+ 
+ Material useful across departments belongs in `shared/knowledge/`.
+diff --git a/projects/university-of-wyoming/fy26-27-graduate-business-inquiry/README.md b/projects/university-of-wyoming/fy26-27-graduate-business-inquiry/README.md
+index bf5fd52..47c411d 100644
+--- a/projects/university-of-wyoming/fy26-27-graduate-business-inquiry/README.md
++++ b/projects/university-of-wyoming/fy26-27-graduate-business-inquiry/README.md
+@@ -171,6 +171,7 @@ Project-administration questions only. Briefing questions are in [§14](normaliz
+   **Superseded, preserved unchanged:** `CP3_ms-accounting-shared-concept_v01.md` (four-concept architecture) and the five `P*_v01.md` packets.
+ 
+ - **`work/reviews/`:**
++  - [`…_t2-done-before-check_v01.md`](work/reviews/fy26-27-graduate-business-inquiry_t2-done-before-check_v01.md): DEVELOP. First `ad-reference` Done-before run on T2 (Ads of the World): no SAME or CLOSE precedent; nearest is DDB Maputo "Be Stubborn" (2012), SHARED TERRITORY. The week + question + Cowboy combination carries the originality.
+   - [`…_t2-still-life-comps-review_v01.md`](work/reviews/fy26-27-graduate-business-inquiry_t2-still-life-comps-review_v01.md): DEVELOP. Review of the 15 Firefly still-life comps v1: 9 keep, 2 fix, 4 regenerate; P3-A grade reference.
+   - [`…_mba-on-campus-carousel-comps-review_v01.md`](work/reviews/fy26-27-graduate-business-inquiry_mba-on-campus-carousel-comps-review_v01.md): DEVELOP. On-Campus MBA carousel comps (Figma 618-6529), read via connector: student-not-audience, face on placeholder, branding missing on cards 1–3, card 1 drift, Gold-dominant end cards. No verdicts.
+   - [`…_mba-on-campus-motion-banner-review_v01.md`](work/reviews/fy26-27-graduate-business-inquiry_mba-on-campus-motion-banner-review_v01.md): DEVELOP. 15 s Figma Motion banner (643-62), keyframes read via connector; review-animations method, ad-motion calibration. Block: crossfade dips, hidden camera moves, ghosted end card, short holds.
+@@ -180,6 +181,9 @@ Project-administration questions only. Briefing questions are in [§14](normaliz
+   - [`…_brief-readiness-review_v02.md`](work/reviews/fy26-27-graduate-business-inquiry_brief-readiness-review_v02.md): current umbrella addendum.
+   - `…_brief-readiness-review_v01.md`: its per-concept results are superseded; its gate reasoning still stands.
+ - **`work/copy/`:**
++  - [`…_platform-copy-doc_v02.html`](work/copy/fy26-27-graduate-business-inquiry_platform-copy-doc_v02.html): **Campaign & platform copy doc v02** (2026-09-23). Supersedes v01: rationale now states the Cowboy is UW's mascot and a badge of honor in Wyoming (Andres, 2026-09-23, user-stated). Google Doc: https://docs.google.com/document/d/1-TSXyl0jrvY6jyvoTl6YFP2UCsBSGJkPyBBpVqL-oWc/edit. Draft.
++  - [`…_platform-copy-doc_v01.html`](work/copy/fy26-27-graduate-business-inquiry_platform-copy-doc_v01.html): **Campaign & platform copy doc v01** (2026-09-23, word-smither): campaign line, manifesto, rationale, SMP "Your stubbornness is the qualification.", line architecture, bringing it to life (T2 carousel/video, 16 weeks, T3, conversion layer). Google Doc: https://docs.google.com/document/d/1ZhUGrNtL-x_5m0g1tbPI3kMT-BF1pK7hU3i7X_pSLKo/edit. Draft; not client-approved; claims not cleared.
++  - [`…_t2-copy-doc_v01.html`](work/copy/fy26-27-graduate-business-inquiry_t2-copy-doc_v01.html): **T2 copy doc v01** (2026-09-23), compiled from the T2 execution set v01 for UW execution approval: spine, 16 week lines, proof pools, post text with fold counts, rules, UW confirmations. Google Doc: https://docs.google.com/document/d/1VHdrexs-vKO0vDNq9M9XdM1UNvKZak9s37noMWzlOJQ/edit (Drive owner acdfabian@gmail.com). Draft; claims not cleared.
+   - [`…_t3-student-scripts_v01.md`](work/copy/fy26-27-graduate-business-inquiry_t3-student-scripts_v01.md): DEVELOP. T3 15s scripts, P1–P5 × 2, each with MUST BE TRUE casting condition, ledger fact super and risks; casting table and intake questions for UW. Draft; claims not cleared.
+ - **`work/concepts/`:**
+   - **Current:**
+diff --git a/projects/university-of-wyoming/fy26-27-graduate-business-inquiry/work/reviews/fy26-27-graduate-business-inquiry_mba-on-campus-carousel-comps-review_v01.md b/projects/university-of-wyoming/fy26-27-graduate-business-inquiry/work/reviews/fy26-27-graduate-business-inquiry_mba-on-campus-carousel-comps-review_v01.md
+index 50139bc..a17ee3a 100644
+--- a/projects/university-of-wyoming/fy26-27-graduate-business-inquiry/work/reviews/fy26-27-graduate-business-inquiry_mba-on-campus-carousel-comps-review_v01.md
++++ b/projects/university-of-wyoming/fy26-27-graduate-business-inquiry/work/reviews/fy26-27-graduate-business-inquiry_mba-on-campus-carousel-comps-review_v01.md
+@@ -65,3 +65,17 @@ STATUS:    No verdicts. Placeholder imagery (AI) throughout cards 1–3.
+ 
+ - Andres re-cropped card 1 during the review: tight on hands and desk, face-free. Card 1 now works as the close-up and the set reads tight → wide → wider. Fix 2 now applies to cards 2–3 only; fix 5 becomes "card 3 should be the dark top, not the widest crop".
+ - The findings above are pinned in Figma as Dev Mode annotations, category **CD review** (orange), on the five card frames and on the card 4–5 photo, headline and "MBA" layers.
++
++## Decision, 2026-09-23: the checklist stays
++
++Andres: "the checklist device visually crossed off telegraphs 'ive got a lot on but im tackling it all'."
++Accepted. All items done sets up "Too stubborn to stop?" (pack 12: "That's my week... and yes, I'm too
++stubborn"). The "no checkboxes" objection came from the internal planner-page system v01, not a client
++rule, and is withdrawn for T2 prospecting. The one-unticked-line version (APPLICATION.) stays available
++as a retargeting variant (conversion layer), where the nudge fits.
++
++Fix 4 is revised. Still open inside the device:
++- Tick **or** strike, not both. Recommended: strike only (a human gesture; a ticked box reads as a to-do app).
++- One gold event: strikes White/ink, Gold only on SAME WEEK.
++- P1 week line verbatim; drop "Mid terms" (it makes the viewer a current student).
++- Real pen strokes over set type, not a script font.
+diff --git a/projects/university-of-wyoming/fy26-27-graduate-business-inquiry/work/reviews/fy26-27-graduate-business-inquiry_mba-on-campus-motion-banner-review_v01.md b/projects/university-of-wyoming/fy26-27-graduate-business-inquiry/work/reviews/fy26-27-graduate-business-inquiry_mba-on-campus-motion-banner-review_v01.md
+index e3e5c25..281402d 100644
+--- a/projects/university-of-wyoming/fy26-27-graduate-business-inquiry/work/reviews/fy26-27-graduate-business-inquiry_mba-on-campus-motion-banner-review_v01.md
++++ b/projects/university-of-wyoming/fy26-27-graduate-business-inquiry/work/reviews/fy26-27-graduate-business-inquiry_mba-on-campus-motion-banner-review_v01.md
+@@ -37,7 +37,7 @@ Structure tracks pack 12 closely (week 0–5, STUBBORN ~5–7.5, COWBOY ~7.5–1
+ | State 03 → 04: same photo (20100823_WTM8827) in two layers, 643:86 at scale 1.0 and 643:125 at 1.035, crossfaded over 1.05 s ease-in-out | One photo layer spanning 9.5–15 s with one continuous move; swap only the type and the band | Mismatched scales on a crossfade = ghosted double image for a full second |
+ | Text entrances `cubic-bezier(0.45, 1.45, 0.8, 1)` (back-out overshoot) on every line | `cubic-bezier(0.16, 1, 0.3, 1)` (strong ease-out, no overshoot), 450–600 ms | Bounce on every headline reads template and playful; UW voice is "confident, direct, credible" (pack 11). Save overshoot for nothing, or one deliberate moment |
+ | Entry vectors: bullets from ±34 px diagonals, STUBBORN from −90 x, exits −180 x, COWBOY from +180 x, tagline from lower-left, subheading from right | One direction for all type: rise 16–24 px + fade; exits fade only (or fall 12 px) | Six directions in 15 s have no spatial logic; big horizontal whips (180 px) fight the slow pull-out |
+-| Week build: 16 animations in 1.6 s (box spring 0.82→1.11→1, text slide, tick draw, strike draw ×4) | Remedial #1: delete the checkbox/tick/strike choreography with the device (carousel review fix 4). If the week stays a list: items appear 400–500 ms apart, one motion each, strike only if the concept keeps it | Busiest moment of the ad is its first 1.6 s, before anyone is reading; and the device itself is off-system |
++| Week build: 16 animations in 1.6 s (box spring 0.82→1.11→1, text slide, tick draw, strike draw ×4) | Checklist kept (decision 2026-09-23). Per item: text appears, then one strike draws; items 400–500 ms apart; no box pop, no tick | Busiest moment of the ad is its first 1.6 s; one gesture per item lets the viewer read each item and see it get done |
+ | Text exits `cubic-bezier(0.7, 0, 0.84, 0)` *and* the parent state fading at the same time | Let the state transition carry the exit; drop per-text exits, or exit text only on a hard cut | Double exit: text accelerates away while its frame also fades |
+ | STUBBORN solid hold 1.1 s; tagline 1.65 s for 8 words | STUBBORN ≥ 1.5 s; tagline ≥ 2.5 s (take from the week build's dead time 1.7–3.3 s) | Sound-off feed viewers need about 3–4 words/s plus reaction time; the tagline currently ends before a first-time reader finishes it |
+ | Tagline exits 12.18–12.93 while MBA enters 12.53 | End the tagline before the end card's type moves | Two text blocks moving in different directions overlap for 0.4 s |
+@@ -49,7 +49,7 @@ Structure tracks pack 12 closely (week 0–5, STUBBORN ~5–7.5, COWBOY ~7.5–1
+ ## Verdict by tier
+ 
+ 1. **Feel-breaking:** crossfade dips through a third image on three transitions; ghosted end-card photo; STUBBORN and COWBOY sitting on frozen images because their camera moves ran while hidden.
+-2. **Missed simplifications:** one continuous camera instead of four overlapping zooms; the week-build choreography.
++2. **Missed simplifications:** one continuous camera instead of four overlapping zooms; the week build cut to one strike per item.
+ 3. **Performance:** none. Only transform, opacity and stroke trim are animated.
+ 4. **Timing:** holds too short on STUBBORN and the tagline; dead air 1.7–3.3 s; double exits; tagline and end card overlap.
+ 5. **Cohesion:** overshoot on every line and six entry directions make it read like a template, not UW.
+diff --git a/shared/frameworks/hey-whipple-copycraft.md b/shared/frameworks/hey-whipple-copycraft.md
+index 8924847..3ba10a9 100644
+--- a/shared/frameworks/hey-whipple-copycraft.md
++++ b/shared/frameworks/hey-whipple-copycraft.md
+@@ -45,6 +45,8 @@ Use techniques selectively, according to the creative object and the active oper
+ | `creative-direction-audit.md` | Ambition audit for eligible objects | Active |
+ | `pricken-idea-mechanisms.md` | Conceptual and visual-verbal mechanisms. Section 5 devices stay the authority for line craft | Active |
+ 
++Generative partner (department knowledge, not a framework): `WordSmither/knowledge/writers-room.md` holds four lenses for finding the idea and the voice. Its Sullivan lens points back here rather than duplicating this toolbox.
++
+ Where this framework overlaps another, the more specific treatment wins for the specific judgment:
+ 
+ - **1 + 1 = 3** (section 2): the shared test lives in `creative-trajectory-evaluation.md`. This framework adds the copycraft interpretation.
+diff --git a/shared/knowledge/README.md b/shared/knowledge/README.md
+index 8587519..88ddc9c 100644
+--- a/shared/knowledge/README.md
++++ b/shared/knowledge/README.md
+@@ -6,6 +6,7 @@ Material useful across departments.
+ |---|---|
+ | [`ANDRES_CREATIVE_OS.md`](ANDRES_CREATIVE_OS.md) | Andres's creative taste model: concept, visual and verbal craft, typography, interaction, critique, reference hypotheses and calibration. Read for creative development and review for Andres; personal preference, not client evidence or a universal scorecard. Not for filing, source extraction or technical checks. How each role uses it: its `AGENT.md`. |
+ | [`creative-competency-map.md`](creative-competency-map.md) | Audit instrument: which creative competencies CreativeEngine covers, partly covers or lacks, and which file carries each. Referenced against the Miami Ad School 2026 catalog (topic taxonomy only). Read before designing a new framework, skill or capability; update when one is added. Not a framework or a to-do list. |
++| [`ad-reference/README.md`](ad-reference/README.md) | CreativeEngine's ad reference index: ads we have viewed (mainly from Ads of the World), tagged by mechanism, idea type, device, carrier and lens, with our own read. Maintained by the `ad-reference` skill. Links and our words only; no client facts; not evidence. |
+ | `channel-preferences.md` | The user's own channel workflow preference, and the channel / placement / format / goal / CTA / destination / measurement distinctions it must not collapse. Not client evidence, not a default for any assignment. |
+ | [`meta-paid-ads/README.md`](meta-paid-ads/README.md) | Source-linked Meta paid-ad formats, placement specifications, technical requirements, creative practices and explicit gaps. Load only for relevant Meta work; account availability must be verified. |
+ | [`google-youtube-ads/README.md`](google-youtube-ads/README.md) | Source-linked Google Ads (Responsive Search, Responsive Display, Performance Max, Demand Gen) and YouTube video ad specifications, with open conflicts. Checked 2026-09-16. |
+diff --git a/shared/knowledge/creative-competency-map.md b/shared/knowledge/creative-competency-map.md
+index 3fa2df9..7143292 100644
+--- a/shared/knowledge/creative-competency-map.md
++++ b/shared/knowledge/creative-competency-map.md
+@@ -80,15 +80,15 @@ A GAP is a fact, not an instruction. Whether a gap is worth closing is a separat
+ | Packaging and three-dimensional form | POP 663, 668 | DesignChamp | GAP | |
+ | Publication and editorial design | POP 662 | DesignChamp | GAP | Low priority for current assignments |
+ | Information design and data visualization | POP 670 | DesignChamp | GAP | No reviewed skill or framework on CreativeEngine's record |
+-| Digital imaging, vector tools, software proficiency | POP 505, 513 | — | EXECUTION | |
++| Digital imaging, vector tools, software proficiency | POP 505, 513 | — | EXECUTION | Image generation through Artlist: `artlist-production` skill (governed by its department record) |
+ 
+ ## 5. Time-based work
+ 
+ | Competency | MAS ref | Owner | Status | Where / what's missing |
+ |---|---|---|---|---|
+-| Video storytelling; short film | POP 504, 516 | WordSmither + DesignChamp | COVERED | Story side: `narrative-craft.md`. Production is EXECUTION |
++| Video storytelling; short film | POP 504, 516 | WordSmither + DesignChamp | COVERED | Story side: `narrative-craft.md`. Production is EXECUTION; animatics, motion tests and generated clips through `artlist-production` |
+ | Motion graphics: timing, movement, visual structure | POP 526 | DesignChamp | PLANNED | `animation-craft.md` |
+-| Sound and critical listening | POP 542 | WordSmither + DesignChamp | PARTIAL | `narrative-craft.md` §9 covers sound as meaning. Recording and mixing are EXECUTION |
++| Sound and critical listening | POP 542 | WordSmither + DesignChamp | PARTIAL | `narrative-craft.md` §9 covers sound as meaning. Recording and mixing are EXECUTION; temporary and generated voiceover and music through `artlist-production` |
+ 
+ ## 6. Media and channel
+ 
+@@ -99,6 +99,7 @@ A GAP is a fact, not an instruction. Whether a gap is worth closing is a separat
+ | Choosing media; online and offline as one ecosystem | POP 515 | CD + BriefMachine | PARTIAL | `barry-concept-art-direction.md` §9 medium as idea; `channel-preferences.md`; spec modules. No channel-strategy method |
+ | Mobile as an always-on channel | POP 537 | All | PARTIAL | Through social and paid formats only |
+ | Interactive concepting | POP 522 | DesignChamp | PARTIAL | "Behavioral" carrier in `barry-concept-art-direction.md` §3; `format-prototyping` skill (draft, awaiting review) |
++| Landing-page production in a no-code builder (Instapage) | — | DesignChamp | EXECUTION | `instapage-production` skill (governed by its department record): approved Figma spec to a native, client-editable Instapage page; Native Authorability; client-agnostic three-layer model; QA and publish gate. Production method, not creative judgment |
+ | User experience and information architecture | POP 517 | DesignChamp | PARTIAL | `ui-ux-pro-max` skill (execution, governed by its department record) |
+ | Gaming as a medium | POP 528 | — | GAP | Low priority |
+ | Emerging interfaces: voice, face recognition, telepresence | POP 515 | — | GAP | Low priority |
+@@ -145,6 +146,10 @@ By how much closing each would change the work CreativeEngine currently produces
+ 
+ | Date | Change |
+ |---|---|
++| 2026-09-24 | `instapage-production` skill added, with the Figma "Instapage Native Kit": native Instapage production of approved landing pages (new EXECUTION row under Media and channel). Production method only; no judgment row changes status. The interactive concepting row stays PARTIAL: `format-prototyping` still owns prototypes |
++| 2026-09-24 | `artlist-production` skill added: rendering decided ideas as stills, video, voiceover and music through the Artlist MCP, with a cost gate. Execution only, so no judgment row changes status; the motion craft gap (rank 2) stays open |
++| 2026-09-24 | `ad-reference` skill and `shared/knowledge/ad-reference/` index added: advertising precedent search and a done-before check (Ads of the World). Supports originality review; not design history or criticism, so row POP 674 stays a GAP |
++| 2026-09-23 | `WordSmither/knowledge/writers-room.md` added: four generative lenses (Sullivan, Droga, Wieden+Kennedy, Goodby Silverstein) beside the copycraft framework |
+ | 2026-09-17 | `visual-craft.md` added: design fundamentals and photography direction COVERED; semiotics PARTIAL (visual codes). Rank 1 gap closed |
+ | 2026-09-17 | Map created against MAS Volume 39. Same day, `selling-the-work.md`, `narrative-craft.md` and `typography.md` were added as Active frameworks; rows reflect them |
+ 

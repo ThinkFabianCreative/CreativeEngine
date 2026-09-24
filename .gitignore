@@ -4,3 +4,9 @@
 node_modules/
 __pycache__/
 *.pyc
+
+# Generated media (Artlist and other generators) stays local.
+# Only the Markdown logs in work/generated/ are committed; they reference the files.
+projects/**/work/generated/**
+!projects/**/work/generated/**/
+!projects/**/work/generated/**/*.md

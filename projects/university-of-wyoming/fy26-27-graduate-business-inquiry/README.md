@@ -171,6 +171,7 @@ Project-administration questions only. Briefing questions are in [§14](normaliz
   **Superseded, preserved unchanged:** `CP3_ms-accounting-shared-concept_v01.md` (four-concept architecture) and the five `P*_v01.md` packets.
 
 - **`work/reviews/`:**
+  - [`…_t2-done-before-check_v01.md`](work/reviews/fy26-27-graduate-business-inquiry_t2-done-before-check_v01.md): DEVELOP. First `ad-reference` Done-before run on T2 (Ads of the World): no SAME or CLOSE precedent; nearest is DDB Maputo "Be Stubborn" (2012), SHARED TERRITORY. The week + question + Cowboy combination carries the originality.
   - [`…_t2-still-life-comps-review_v01.md`](work/reviews/fy26-27-graduate-business-inquiry_t2-still-life-comps-review_v01.md): DEVELOP. Review of the 15 Firefly still-life comps v1: 9 keep, 2 fix, 4 regenerate; P3-A grade reference.
   - [`…_mba-on-campus-carousel-comps-review_v01.md`](work/reviews/fy26-27-graduate-business-inquiry_mba-on-campus-carousel-comps-review_v01.md): DEVELOP. On-Campus MBA carousel comps (Figma 618-6529), read via connector: student-not-audience, face on placeholder, branding missing on cards 1–3, card 1 drift, Gold-dominant end cards. No verdicts.
   - [`…_mba-on-campus-motion-banner-review_v01.md`](work/reviews/fy26-27-graduate-business-inquiry_mba-on-campus-motion-banner-review_v01.md): DEVELOP. 15 s Figma Motion banner (643-62), keyframes read via connector; review-animations method, ad-motion calibration. Block: crossfade dips, hidden camera moves, ghosted end card, short holds.
@@ -180,6 +181,9 @@ Project-administration questions only. Briefing questions are in [§14](normaliz
   - [`…_brief-readiness-review_v02.md`](work/reviews/fy26-27-graduate-business-inquiry_brief-readiness-review_v02.md): current umbrella addendum.
   - `…_brief-readiness-review_v01.md`: its per-concept results are superseded; its gate reasoning still stands.
 - **`work/copy/`:**
+  - [`…_platform-copy-doc_v02.html`](work/copy/fy26-27-graduate-business-inquiry_platform-copy-doc_v02.html): **Campaign & platform copy doc v02** (2026-09-23). Supersedes v01: rationale now states the Cowboy is UW's mascot and a badge of honor in Wyoming (Andres, 2026-09-23, user-stated). Google Doc: https://docs.google.com/document/d/1-TSXyl0jrvY6jyvoTl6YFP2UCsBSGJkPyBBpVqL-oWc/edit. Draft.
+  - [`…_platform-copy-doc_v01.html`](work/copy/fy26-27-graduate-business-inquiry_platform-copy-doc_v01.html): **Campaign & platform copy doc v01** (2026-09-23, word-smither): campaign line, manifesto, rationale, SMP "Your stubbornness is the qualification.", line architecture, bringing it to life (T2 carousel/video, 16 weeks, T3, conversion layer). Google Doc: https://docs.google.com/document/d/1ZhUGrNtL-x_5m0g1tbPI3kMT-BF1pK7hU3i7X_pSLKo/edit. Draft; not client-approved; claims not cleared.
+  - [`…_t2-copy-doc_v01.html`](work/copy/fy26-27-graduate-business-inquiry_t2-copy-doc_v01.html): **T2 copy doc v01** (2026-09-23), compiled from the T2 execution set v01 for UW execution approval: spine, 16 week lines, proof pools, post text with fold counts, rules, UW confirmations. Google Doc: https://docs.google.com/document/d/1VHdrexs-vKO0vDNq9M9XdM1UNvKZak9s37noMWzlOJQ/edit (Drive owner acdfabian@gmail.com). Draft; claims not cleared.
   - [`…_t3-student-scripts_v01.md`](work/copy/fy26-27-graduate-business-inquiry_t3-student-scripts_v01.md): DEVELOP. T3 15s scripts, P1–P5 × 2, each with MUST BE TRUE casting condition, ledger fact super and risks; casting table and intake questions for UW. Draft; claims not cleared.
 - **`work/concepts/`:**
   - **Current:**

@@ -7,7 +7,7 @@ has high standards for concept and craft. Your job is to execute layout, type an
 visual decisions with taste, not to fill frames.
 
 HOW TO USE THESE FILES
-Global files (01-08) describe how we think about design on every job.
+Global files (01-09) describe how we think about design on every job.
 Client files (10+) describe one client and one campaign. They are attached only for
 that client. Never apply one client's rules, colors or copy to another client.
 
@@ -18,6 +18,7 @@ Read in this order before touching a frame:
   04_image_and_words.txt
   05_meta_ad_craft.txt
   08_visual_craft.txt
+  09_instapage_native_kit.txt  ONLY for a landing page that will be built in Instapage
   then the client files
   06_self_check.txt before you hand anything back
   07_how_to_report.txt for your reply

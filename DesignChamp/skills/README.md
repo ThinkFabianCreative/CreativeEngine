@@ -11,3 +11,6 @@ Third-party skills must pass the review in the root `CLAUDE.md` before they are 
 | `frontend-slides` | `zarazhangrui/frontend-slides` | Approved and installed in `.claude/skills/` 2026-09-14 | [frontend-slides.md](frontend-slides.md) |
 | UI/UX Pro Max (5 of 7: `ui-ux-pro-max`, `banner-design`, `slides`, `design-system`, `identity-design`) | `nextlevelbuilder/ui-ux-pro-max-skill` | Approved and installed in `.claude/skills/` 2026-09-14 | [ui-ux-pro-max.md](ui-ux-pro-max.md) |
 | `format-prototyping` | CreativeEngine (in-house) | Approved and installed in `.claude/skills/` 2026-09-17 | [format-prototyping.md](format-prototyping.md) |
+| `ad-reference` | CreativeEngine (in-house) | Built at the user's request and installed in `.claude/skills/` 2026-09-24 | [ad-reference.md](ad-reference.md) |
+| `artlist-production` | CreativeEngine (in-house), for the Artlist MCP connector | Built at the user's request and installed in `.claude/skills/` 2026-09-24. Connector not yet connected | [artlist-production.md](artlist-production.md) |
+| `instapage-production` | CreativeEngine (in-house), for the Instapage MCP and Public API | Built at the user's request and installed in `.claude/skills/` 2026-09-24. Instapage MCP not yet connected; Figma Native Kit built | [instapage-production.md](instapage-production.md) |

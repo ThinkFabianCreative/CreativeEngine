@@ -1,0 +1,73 @@
+09 · INSTAPAGE NATIVE KIT (LANDING PAGES BUILT IN INSTAPAGE ONLY)
+Derived from .claude/skills/instapage-production/references/figma-kit.md and
+platform.md (verified 2026-09-24). Those files win if anything here disagrees.
+Read only when the request says the landing page will be produced in Instapage.
+
+WHAT THIS IS
+You are drawing a landing-page SPECIFICATION that a person will rebuild natively
+inside Instapage. Everything you draw must have a native Instapage equivalent, so
+the client can keep editing the page without a developer.
+The kit file: "CreativeEngine · Instapage Native Kit"
+https://www.figma.com/design/suQoQdAczG3IZRVMxooqpb
+
+THREE LAYERS: KEEP THEM APART
+Layer 1  The kit's IP primitives. Neutral grey wireframes. They carry structure, not
+         style. Never leave their grey look, mono font or square corners in a spec.
+Layer 2  The client's own library (client files 10+): faces, colors, buttons, forms,
+         imagery, client components named <Client> / <Section> / <Variant>.
+Layer 3  This page: layout, composition, hierarchy, copy placement, mobile order.
+Never use another client's library, colors, fonts, blocks or layouts.
+Never create or reuse a "CreativeEngine" house style.
+Never pick a template because it is close. Build what the request specifies.
+
+HOW TO BUILD THE SPEC
+- Two frames: "Desktop · 1440" (content column 1200) and "Mobile · 400".
+  Same blocks, same IDs, same order in both.
+- Each section is a BLOCK: a full-width frame named "B01 · <section> · Fluid Grid"
+  or "B01 · <section> · Canvas". Number blocks top to bottom.
+- Fluid Grid block = a frame with Figma GRID layout (columns, rows, gaps).
+  Block padding at least 20 px left and right.
+- Inside it, each CONTAINER is an auto-layout frame spanning grid cells, named
+  "B01.C1 · m1" where m1 = its position when stacked on mobile.
+  Container settings you may use: direction, alignment, gap, padding, fill color or
+  image, border, corner radius. Nothing else.
+- Every element is an instance of a kit primitive (IP / Headline, IP / Paragraph,
+  IP / Button, IP / Image, IP / Video, IP / Line, IP / Form, IP / Timer,
+  IP / Accordion, IP / Carousel) or of a client component built from them.
+  Restyle instances with the client's faces and colors.
+- Name elements with IDs: "E01 · Headline h1", "E05 · Image · IMG-01".
+
+LIMITS YOU MUST DESIGN WITHIN
+- Only three font roles per page: headline, paragraph, button. Forms use the
+  paragraph face, and form field text size cannot be changed.
+- At most 14 colors (the client's Instapage palette).
+- No box or circle shapes inside a Fluid Grid block. Use container fill, border and
+  radius, or make that section a Canvas block.
+- Accordion sections: text only. No links or images inside.
+- Timer: counts down to one fixed date only. No labels on mobile.
+- Video: YouTube, Vimeo or Wistia. No uploaded or looping video.
+- Popups are always white.
+- An element cannot move to another block on mobile. If mobile needs it elsewhere,
+  draw a desktop-only copy and a mobile-only copy with the same words.
+- Exactly one h1 on the page.
+- Text must stay real text. Never set copy inside an image to get a look.
+- No custom-code components, embeds, widgets or iframes. If something cannot be drawn
+  with the kit, STOP and report it as a constraint. Do not fake it.
+
+ANNOTATIONS (use Figma annotations, not visible text on the design)
+  IP · Copy       copy ID of the text on this layer (from the approved copy doc)
+  IP · Asset      image asset ID and status (PLACEHOLDER or PRODUCTION-APPROVED)
+  IP · Build      link target, visibility, sticky, form settings, conversion goal
+  IP · Reuse      Page-local / My Block / Global Block (+ reason) on each block
+  IP · Exception  anything that is not native, with the native options
+Reuse tags (IP / Tag) go in the margin beside the block, never inside the design.
+
+IMAGES
+Use only supplied, approved images or labelled placeholders. Never generate an image
+for a production spec. Placeholder label: "PLACEHOLDER IMAGE · <asset ID> · not for
+external use".
+
+REPORT ALSO
+- Any section you could not draw with native primitives, and why.
+- Any copy that does not fit, with the element ID. Do not shorten it.
+- Any place where mobile order differs from desktop order.

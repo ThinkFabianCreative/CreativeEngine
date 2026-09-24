@@ -1,0 +1,17 @@
+{
+  ".claude/skills/instapage-production/SKILL.md": "4daec16d0f8574d9de9706215a66335867c3cef657f5ec8c869f87f3fe39d497",
+  ".claude/skills/instapage-production/references/native-authorability.md": "8c800a8d331df0ca4477d608acb347dc49a49fbc42e19eba93f4a27605ab3c44",
+  ".claude/skills/instapage-production/references/publishing.md": "86198db5e01727ac9d5c16a12a6ff7f93310283dd455d92361554eea626702ec",
+  ".claude/skills/instapage-production/references/platform.md": "68ea56a1379e5ee6c070c710d876d2814bb5ba793444bd4815cb07fbe4f6a59a",
+  ".claude/skills/instapage-production/references/forms-and-tracking.md": "a108f5942b1330659a6b18d17c843abd379ba3b0b658f8c8a768a8e8c7dd7b5c",
+  ".claude/skills/instapage-production/references/qa.md": "849a58e1a5709de2b6d5d9d86caf70483d8851b5f722c43e80d5cdcebcc0251e",
+  ".claude/skills/instapage-production/references/reusable-blocks.md": "0e7af3b13cf2864e01c41a4aedf3a9f88e659e9dd275fb571c8a5c6934d79fc3",
+  ".claude/skills/instapage-production/references/responsive.md": "552c50a9f5d0d46935994652a0119851f55e74915b08e61a62618c8f05954715",
+  ".claude/skills/instapage-production/references/build-sheet.md": "03507e082da5f2e74807e79e9c51ffffdb12c9d922a94cf0e502a5dabb56f8f9",
+  ".claude/skills/instapage-production/references/mcp-and-api.md": "80c5b30b10e0fbea360d3b49a6095c11a0aa8723d9eac33d1dcbf7c944fcc086",
+  ".claude/skills/instapage-production/references/figma-kit.md": "f400497d2fa063e7ab269023768cf9ac4db4f01dc9464cae834b96d8c7400ba2",
+  ".claude/skills/instapage-production/scripts/ip_check.py": "f0d8ef359cb5fbff351b41be27509e13dd5417028eaf13684e66e7600d293c82",
+  ".claude/skills/instapage-production/scripts/tests/test_ip_check.py": "c8824b23cba9fe2811eabaa59254461d27b8048a82aa81f8f1fcbf21043278c7",
+  "DesignChamp/skills/instapage-production.md": "4d41e1d718c793661238de9d98c760b045b33940a5c1c7cace91a16523051d40",
+  "DesignChamp/knowledge/figma-agent-pack/09_instapage_native_kit.txt": "60992982f211bc090344292d63cbf8ef2671e2f582d0ee94a2f0c0189e41d2e8"
+}

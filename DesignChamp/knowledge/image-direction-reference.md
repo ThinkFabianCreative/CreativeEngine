@@ -12,7 +12,7 @@
 
 ## 1. Photographic styles
 
-Pick the style for what the image must argue, then describe it in words the model or photographer can act on. Photographers and directors can be named directly in prompts ("in the style of [name]"), alone or combined with the genre (user direction, 2026-09-18). Pair the name with its **technical translation** from section 8 (light, lens, aperture, grade, film stock): some models block or ignore certain names, and the translation keeps the look when they do. It also lets you keep only the qualities you want from a reference. Recreating a specific photograph or film frame is allowed; the decision and its clearance sit with the user.
+Pick the style for what the image must argue, then describe it in words the model or photographer can act on. Photographers and directors can be named directly in prompts ("in the style of [name]"), alone or combined with the genre (user direction, 2026-09-18). Pair the name with its **technical translation** from section 8 (light, lens, aperture, grade, film stock): some models block or ignore certain names, and the translation keeps the look when they do. It also lets you keep only the qualities you want from a reference. Recreating a specific photograph or film frame is allowed; the decision and its clearance sit with the user. Name-referenced generations are for inspiration and pitch only, and the pitch documentation credits each referenced artist (user direction, 2026-09-24; credit format in `.claude/skills/artlist-production/references/run-log.md` → Attribution).
 
 | Style | What it argues | Recognizable by | Watch for |
 |---|---|---|---|
@@ -115,6 +115,8 @@ At the time of writing. Verify current features, and check the governing skill r
 | **Midjourney** | Aesthetic quality, mood, lighting, texture, stylization | Literal prompt adherence and exact placement; pushes toward its own "beautiful" look | Parameters such as aspect ratio, reduced stylization ("raw" style) and "no" exclusions. Check commercial terms for the plan in use |
 | **FLUX** (Black Forest Labs; several versions, some open-weight) | Photorealism, natural light and skin, prompt adherence | Depends heavily on which version and host | Available through third-party services; terms vary by host and version |
 | **Ideogram** | Typography and text in images | Photographic subtlety | Useful for type exploration only; final type is still set by hand |
+
+**Artlist (added 2026-09-24).** Artlist isn't a model. It's one credit account that hosts many of the models above (Nano Banana, GPT-Image, Imagen, FLUX, Ideogram, Seedream) alongside video, voice and music models, and it's reachable from the conversation through its MCP. Use it when stills must become motion, sound or voice in the same set. Its output is for inspiration and pitch only, never commercial use. Routing, models, credits and rules: the `artlist-production` skill and its record `DesignChamp/skills/artlist-production.md`.
 
 **Choosing a model.** Pick by the job:
 - a comp where arrangement must be exact → a model that follows prompts closely
