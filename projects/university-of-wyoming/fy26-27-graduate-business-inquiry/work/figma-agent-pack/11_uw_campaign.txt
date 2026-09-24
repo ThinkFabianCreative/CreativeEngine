@@ -55,6 +55,8 @@ first name and CURRENT STUDENT or ALUM. No button. No typed university name.
 
 CONVERSION LAYER (retargeting frames)
 - The stage line is the largest type; the prospecting headline is not repeated.
-- Gold marks the task word only (e.g. STARTED, PAPERWORK, DAY ONE). "SAME WEEK." is White.
+- ONE GOLD EVENT PER FRAME. It may be a word (STARTED, PAPERWORK, DAY ONE) or the highlighter stripe
+  under the untouched planner line — never both. When the stripe is in frame, the words stay White.
+  "SAME WEEK." is White.
 - Logo and program label on every carousel card; no separate end card.
 - Never state or imply the viewer's status ("your application", "you started", "admitted").
