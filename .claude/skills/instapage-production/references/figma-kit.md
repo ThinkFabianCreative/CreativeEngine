@@ -48,6 +48,11 @@ Rules that follow:
 | Widgets | `IP / Timer`, `IP / Accordion` (State), `IP / Carousel` |
 | Forms | `IP / Form Field` (8 types), `IP / Form Submit`, `IP / Form` |
 | Page & reuse | `IP / Tag` (8 kinds, margin annotations), `IP / Popup`, `IP / HTML (exception only)` |
+| Molecules & organisms | Neutral starter (added 2026-09-24). Molecules: `IP / Text Group` (eyebrow, title, subtitle, description, each toggleable), `IP / Action` (Primary, Secondary, Tertiary), `IP / Button Group`, `IP / Card` (Color, Image, Image overlay). Organisms, each a Fluid Grid block: `IP / Hero` (Split, Overlay), `IP / Proof · Cards`, `IP / Form Section`, `IP / CTA Band` |
+
+**Semantic tokens.** The collection `Semantic (client fills)` holds semantic names only: `color/surface/*`, `color/text/*` (including eyebrow and inverse), `color/action/primary|secondary|tertiary`, `color/border/default`, `color/overlay/image`, `space/xs…section`, `radius/card|button`, `opacity/overlay`. The text styles `Semantic/Eyebrow|Title|Subtitle|Body|Action` go with them. In the global file every value is a wireframe placeholder, aliased to `wire/*`. A client library duplicates the starter and sets the values, and optionally adds client-specific names, from that client's approved sources. Molecules and organisms bind to these names, so one structure takes any client's look. Colors that end up in Instapage Styles must fit its 14 slots, and the semantic text roles resolve to the three font roles.
+
+**Native notes.** A card is a container with a background, border and radius, all native container settings. An image-overlay tint is documented for block (Instablock) backgrounds, not for containers; otherwise the tint is part of the approved image. Gradients are not a verified native container setting, so the starter has none. Organisms are starting structures for a client library, not layouts to reuse unchanged: DesignChamp composes each page.
 | Spec template | Layer 3 scaffold: spec header, Desktop 1440 and Mobile 400 frames with matching block IDs, margin tags, approved-spec checklist |
 | Validation (SYNTHETIC) | Range test (three synthetic clients, same primitives and words) and the synthetic end-to-end spec (`validation/instapage-production-2026-09-24/`). Fixtures, never templates; move to their own file once the kit is a published library |
 

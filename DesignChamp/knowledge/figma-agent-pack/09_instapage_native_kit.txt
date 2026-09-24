@@ -37,6 +37,15 @@ HOW TO BUILD THE SPEC
   Restyle instances with the client's faces and colors.
 - Name elements with IDs: "E01 · Headline h1", "E05 · Image · IMG-01".
 
+MOLECULES, ORGANISMS AND SEMANTIC TOKENS
+- Molecules: IP / Text Group (eyebrow, title, subtitle, description), IP / Action
+  (Primary, Secondary, Tertiary), IP / Button Group, IP / Card (Color, Image,
+  Image overlay). Organisms: IP / Hero (Split, Overlay), IP / Proof · Cards,
+  IP / Form Section, IP / CTA Band. Use the client's versions when they exist.
+- They bind to the "Semantic (client fills)" tokens and Semantic/* text styles.
+  Set colors, spacing and radius through those tokens. Never hardcode values.
+- No gradients. An image-overlay tint is safe only on a block background.
+
 LIMITS YOU MUST DESIGN WITHIN
 - Only three font roles per page: headline, paragraph, button. Forms use the
   paragraph face, and form field text size cannot be changed.
