@@ -19,7 +19,7 @@
   ".claude/skills/instapage-production/scripts/tests/test_ip_check.py": "efda9a1368ef44227a8fa361a2cbed0f2093787e470602202b30d065efcd9410",
   ".claude/skills/instapage-production/scripts/tests/test_preservation.py": "242e573946f7b52bddbed7d87d9cd2a49148a2293c8fd526793509d3ecf2bb34",
   ".claude/skills/instapage-production/scripts/tests/test_spec_annotations.py": "7a34f8e48fae5dffc90cfd014acb37953236df0c7b466eefcbdb5e6313db5bdb",
-  "validation/instapage-production-2026-09-24/continuation/README.md": "1764a02a2eae48f4f15c070b5ebeea42892e6905b053b1c8dc5a0275913579a0",
+  "validation/instapage-production-2026-09-24/continuation/README.md": "2b3eca32ccaa1ccffc452ae8b6a77becc706c90aef011dba31e0881d4b356507",
   "validation/instapage-production-2026-09-24/continuation/annotation-check.json": "5b203d4c20bd4c7518e45921200444d5ae367eb797706188b4d4220860958be2",
   "validation/instapage-production-2026-09-24/continuation/baseline-hashes.json": "5de42a6282d4f46114eaf6054b0860bf1f96e247fe8d49fe230a7e15c5d7e5d9",
   "validation/instapage-production-2026-09-24/continuation/before/.claude/skills/instapage-production/SKILL.md": "4daec16d0f8574d9de9706215a66335867c3cef657f5ec8c869f87f3fe39d497",

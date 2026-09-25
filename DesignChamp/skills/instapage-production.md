@@ -1,5 +1,10 @@
 # instapage-production
 
+## Authoring restriction — user instruction, 2026-09-25
+
+Build and edit pages only with native authoring tools inside Instapage, operated by a person or authorized browser automation. Figma remains the specification. Do not develop pages through external HTML/CSS recreation, generated page JSON, adapter-driven writes, API imports, or snapshot patch/save workflows, even if their outputs contain native elements. Use editor duplication and native blocks/elements for reuse. Read-only exports and offline checks remain evidence tools only. Historical adapter/import descriptions below are reference material, not authorized development routes. Previously approved CRM integration exceptions remain narrowly scoped integrations added through the editor; they do not authorize custom page/component development. Preserve creative ownership, saved editor changes, client isolation and the prohibition on unapproved publishing.
+
+
 | | |
 |---|---|
 | Source | CreativeEngine (in-house), for Instapage's official MCP server and Public API |
@@ -23,7 +28,7 @@
 - **Credentials.** The key lives in the macOS Keychain and reaches Claude Code through a `headersHelper` script outside the repo. It never enters the repo, `.mcp.json`, a prompt or a message. Instapage's Claude Desktop config (via `npx mcp-remote`) is documented but not preferred, because it keeps the key in a plain file.
 - **Data.** Page JSON snapshots, images by HTTPS URL, aggregate analytics. Leads and team data are masked by default; unmasking only with the user's consent, never stored in the repo.
 - **Destructive operations.** `page_delete`, folder and collection-page deletion, submission deletion and team changes are in no profile. Collection-page and submission deletion have no undo.
-- **What the MCP cannot do.** It cannot compose a page: no tools for blocks, elements, forms, integrations, conversion goals, scripts or saved blocks, and no in-place edits (a patched snapshot is saved as a new page). The page JSON format is undocumented. So structure is authored natively in the editor, or copied from a native page, or generated through an adapter grounded in native exports and validated per `references/preservation.md`. Unsupported structures remain hypotheses.
+- **What the MCP cannot do.** It cannot compose a page: no tools for blocks, elements, forms, integrations, conversion goals, scripts or saved blocks, and no in-place edits (a patched snapshot is saved as a new page). The page JSON format is undocumented. So structure is authored natively in the editor, or copied from a native page, using native editor duplication; external adapters and imports are not authorized development routes. Unsupported structures remain hypotheses.
 - **Overlap.** `format-prototyping` proves an idea as a prototype, this skill produces it natively; a prototype is never promoted. Code-first web skills (`design-taste-frontend`, `image-to-code`, `redesign-existing-projects`, `ui-ux-pro-max` stacks) produce what Native Authorability forbids and are not used for Instapage production. Instapage's own AI (Prompt to Page, AI Content Generator, AI translation) is not used for creative decisions. The Figma plugin skills do the Figma operations; the kit supplies the mapping.
 - **Assets.** Generated media stays inspiration and pitch only (`artlist-production.md`) and never enters an Instapage page. Placeholders are allowed in drafts and block publishing.
 - **Isolation.** One key and one workspace per client where the agency spans several client accounts; saved blocks and images are per workspace in Instapage. Client libraries in Figma and Instapage stay with their client; nothing is borrowed across clients.

@@ -1,0 +1,482 @@
+{
+  "review_date": "2026-09-25",
+  "archive_sha256": "dbed4fc1ad1ea4ca7fe0535c91a9b00ffed243649a1def9acfb4ffa8c41bbbe3",
+  "zip_crc_check": "PASS",
+  "files": [
+    {
+      "member": "cmu-handoff/02-knowledge/instapage-api-notes.md",
+      "bytes": 9474,
+      "sha256": "4988e8470305c09e54c99eb7e7cfff951ae85f03f07ee5b0c7021a9ed13fb245"
+    },
+    {
+      "member": "cmu-handoff/02-knowledge/instapage-api-pipeline.md",
+      "bytes": 4641,
+      "sha256": "3f00cdc726ad02e98e4f2929de8fdcf28ede0d105b4498d97b0b57814b598aa4"
+    },
+    {
+      "member": "cmu-handoff/02-knowledge/cmu-project-history.md",
+      "bytes": 8416,
+      "sha256": "39af9ee21e663a17dab22e15779420cb5b0b030a3fa3f49d173c41f6e8424b04"
+    },
+    {
+      "member": "cmu-handoff/02-knowledge/cmu-web-design-system.md",
+      "bytes": 8376,
+      "sha256": "ce0ad9fd8a4fe7d2091bd8cc1cf859986f71f88d5ed3cb1e14fda29d2fe52d81"
+    },
+    {
+      "member": "cmu-handoff/02-knowledge/HANDOFF.md",
+      "bytes": 4346,
+      "sha256": "9c099b1b81c4afedbfac5c24c1b3a1bdebe06d4ee190805e4854324cfe95b096"
+    },
+    {
+      "member": "cmu-handoff/README.md",
+      "bytes": 773,
+      "sha256": "660b821971af44ae3357afd5864928f1b5b0db30c1b79ffc391b90d7d384c1b5"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/video/cmu-tech-15s.mp4",
+      "bytes": 21252958,
+      "sha256": "d234612eab49524d9c0404e64f24d317bdbf4cbedc0bfda877f9e424741ae04b"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/cmu-logo.svg",
+      "bytes": 11987,
+      "sha256": "257c8e6a1ec080b8a4adc0bdabedcb38d7fe1dd3c916c0e5fc443c88c5908806"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/cmu-video-worker/wrangler.jsonc",
+      "bytes": 232,
+      "sha256": "7eaa4ddddfb51c896edf6aef6761bb141227aa4409e73816c038a3b8026c3db6"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/cmu-video-worker/worker.js",
+      "bytes": 968,
+      "sha256": "b3a5f377408f40635bd2147fb2594d785b08fd4953d96b03f65dff736aa0e45a"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/cmu-promise-gradient-version.html",
+      "bytes": 19464,
+      "sha256": "32d99cbfb68a4361e5a52a1256713c31d2bcff689dd4b86c50a17cf149be6e93"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/cmu-tech-vet.html",
+      "bytes": 16970,
+      "sha256": "637cbdf5c3c87d46d2fccad681948104015b2bc58a1a1fbedfc11e60d82520bc"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/serve.py",
+      "bytes": 410,
+      "sha256": "900e70316fd304f56a3c74197c26a4464deaa791656687ed687ca384d9622fa5"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/cmu-tech-gradient.html",
+      "bytes": 17127,
+      "sha256": "6b4b25f623737f4ae15668b23e1f983530b9eed0d46a2918f8b944ae9879ff76"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/cmu-tech-hands.html",
+      "bytes": 16977,
+      "sha256": "6ac8bb1645abe568ccabd56e989aee257b9a5921bb033a1bad08afac212a1f8d"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/campus-tour.html",
+      "bytes": 24647,
+      "sha256": "489ff720b423650ef3fe4b7c426e464ae860e6c77693ecb3b476ee55d42dd5b3"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/cmu-tech.html",
+      "bytes": 17124,
+      "sha256": "e41fa3185662fe7eecc1b2564550bfc77462c31ad267f131b89df5f7b36b9941"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/cmu-tech-simlab.html",
+      "bytes": 17123,
+      "sha256": "ffdcce229900f8ee59253d8cc3dc13c51640e2b6ffabdb84323efd5156374968"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/cmu-tech-logo.svg",
+      "bytes": 5300,
+      "sha256": "c11fd5646603d35d0b12292a2018047b1d71ff81bd8b9747d02e0de41a365534"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/cmu-promise.html",
+      "bytes": 22813,
+      "sha256": "6fc8902cc55cf9e22bb35596ea702cb9c95d0a1b30a11f10477daecc95173c8d"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/cmu-tech-h-white.svg",
+      "bytes": 6926,
+      "sha256": "2f544fa9fe24d146d658ad31e32f362c970f40cf053620c94637bcf500c12c55"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/cmu-tech-video.html",
+      "bytes": 17286,
+      "sha256": "77765bf2421329fd4a1423a78703d6e61d4b77322e14c5a9d3a2c55b2749030a"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/tech-these-hands.png",
+      "bytes": 2188548,
+      "sha256": "c939ccaf26f167b452250e7baa53bcfd5ea40793aaa5c2b4ec838ea29f56ee16"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p68_1.jpg",
+      "bytes": 661087,
+      "sha256": "828a3979a160a1d13df0d49db49da933ddf427c252e1c288af4864313a8980e8"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p71_0.jpg",
+      "bytes": 180556,
+      "sha256": "454bb613162572963e1855874d5d7c322e19162b7bbbfb9840ef5d12df8b78f3"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p71_1.jpg",
+      "bytes": 298723,
+      "sha256": "b2c5ba29d1111e9c0101fb265ffc2eb25a4c3edd6d0c0fd27d39867c1609a77a"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/white-gradient-mobile.jpg",
+      "bytes": 34746,
+      "sha256": "e5c4a79a4e5f609248b898ac1ef31a5486eaf5eb296b7b4fb1dbfa439e928879"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p68_0.jpg",
+      "bytes": 441418,
+      "sha256": "da6db31ba93131a07199d8ebe145ecdd10afeafbba113ad29cdda30460314787"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/thesehands-mobile.jpg",
+      "bytes": 111892,
+      "sha256": "3fbee9f90acc4d54b0b904e7822487a52d4464f35be39059c367314c1293bf15"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/tech-welding-src.jpg",
+      "bytes": 2976146,
+      "sha256": "8e21a8e2a9c9cfc69d6a1f6fda434cd0a202dc183045288333ec4ffb6d025cb7"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p68_2.jpg",
+      "bytes": 3909638,
+      "sha256": "ce98dc3184b5c5a7e1d0a9bebaf16e0c118a081f951f42421d9c28646c2d3af6"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p71_2.jpg",
+      "bytes": 144136,
+      "sha256": "a3119c0791ce54270deda9d5cbe6aa67c9f1acdae6c847c270a3c5c4f2130bae"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p68_3.jpg",
+      "bytes": 3758611,
+      "sha256": "6ea1dc87855ade8635d3c671ef3cfd8e4607067a9b3f0b69c96a47eef297b079"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/tech-hero-vet.jpg",
+      "bytes": 411836,
+      "sha256": "8972708d0c9438a739b1f2d1d04b74c1f45de24886666f4d63942818b9c4fff7"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/tour-garfield-hall.jpg",
+      "bytes": 3909638,
+      "sha256": "ce98dc3184b5c5a7e1d0a9bebaf16e0c118a081f951f42421d9c28646c2d3af6"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/white-gradient-desktop.jpg",
+      "bytes": 58908,
+      "sha256": "fc739fe5180d59f76e3b949b900d67f0a193c968e9e501dbfc9379a2b7f969e5"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/hero-campus-aerial.jpg",
+      "bytes": 3758611,
+      "sha256": "6ea1dc87855ade8635d3c671ef3cfd8e4607067a9b3f0b69c96a47eef297b079"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/tour-garfield-4x5.jpg",
+      "bytes": 1582542,
+      "sha256": "c8f7419ee368e46b5cded286f8faf15e683a64650b6cd5224d64370c5ec5fbc6"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/tech-hero-simlab.jpg",
+      "bytes": 480873,
+      "sha256": "c6a32c33e3ab65956a6324895f9877941dc75a1b5e4a77186767b7efdee4aac8"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/hero-with-scrim.jpg",
+      "bytes": 1926154,
+      "sha256": "34a9c4ccbe82d1fa0b4679094b9ff5d7c5d1199ef0d9159852e4f3dd59ac8098"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p70_3.jpg",
+      "bytes": 781884,
+      "sha256": "6b1ffd56c260bb419e21852257c246d615a3346565ab9fd7f55fdd90729d46db"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p72_1.jpg",
+      "bytes": 700879,
+      "sha256": "4185d11311738440ea1319389ab7ee5d8529e4c08b948497aa867c2d2d73aa48"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p69_2.jpg",
+      "bytes": 316246,
+      "sha256": "82d6fa700977374361fe31e5ed0d58e69768bc0bbc1a2b721d29e598b3e9a763"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/tech-testimonial.jpg",
+      "bytes": 96935,
+      "sha256": "e1210262aca32c3af070a275a2463ad205889706b7537624792ed60f8eab1dd0"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p69_3.jpg",
+      "bytes": 438010,
+      "sha256": "11ce9b53f2f6347dabfb4ef4fca815ed0bf2416d3f730ac86f8b1de995b2ce98"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p72_0.jpg",
+      "bytes": 697222,
+      "sha256": "87825ca0fc78a10c031a3b3dd1ef2e94b9865028311b6ff05587f27a36ac8df0"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p70_2.jpg",
+      "bytes": 349422,
+      "sha256": "1abd3af025c0db2c3d691e564954bf322240fa3fad128b8e7b2fba0bb25b29c5"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p70_0.jpg",
+      "bytes": 710458,
+      "sha256": "d59f562ab5c4c2000caed795f7c0f00f31ff8fb5cbc43ebaaf63da431b31b394"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p72_2.jpg",
+      "bytes": 594835,
+      "sha256": "f7e2fd142bb9a6c6268b747dfabcd679ec2947b1b53ba34fcb593c5ae527123c"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p69_1.jpg",
+      "bytes": 184388,
+      "sha256": "7bb1349fe737a937f4ccdfc72bf1404f694c59a2ee92e4c5e4813dddf8613769"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/tech-hero-lineman.jpg",
+      "bytes": 383416,
+      "sha256": "4932f8716e0ca20963047c4a877efa0b631268ebc476bcdf1e5bc82aba400e0e"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/tech-hero.jpg",
+      "bytes": 117608,
+      "sha256": "a6b3c2908af980ddd267a17dce307b0833593e2911ff94e8489b7986eb0ce383"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p69_0.jpg",
+      "bytes": 349095,
+      "sha256": "6a81e57bd9cdebd36a516706f652ea1e4e315a083d0e44993039708dd80b3f54"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p72_3.jpg",
+      "bytes": 600394,
+      "sha256": "6b22de8af935bdf28e692808eab85a71667078f78b75ff085cfc2f2f5158585d"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p70_1.jpg",
+      "bytes": 274963,
+      "sha256": "1c4d2b0bec11843145cf3ec1775bfb2943fafe732b8f0c7a274ccfaafb1e2248"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/tech-hero-thesehands.jpg",
+      "bytes": 216915,
+      "sha256": "0fdb30e9ccc279ee92e7ff24df111b7fd2017d483c606253a465878f6eede933"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p69_4.jpg",
+      "bytes": 524932,
+      "sha256": "55f6543471809c518c62003e9abf874a7e546c9919ee995b659bc835c638592a"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p69_5.jpg",
+      "bytes": 410232,
+      "sha256": "90220c66e59c33ed907b459eb01355fe0d79a9194b1fb2e67e94359c6cb1efb3"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/welder-z2.jpg",
+      "bytes": 443272,
+      "sha256": "91f4b93c86e9eaa6022a4b7428e2dfcfd891f8b4f3d896c5c22fba81c80f5d73"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/midnight-sky-mobile.jpg",
+      "bytes": 40576,
+      "sha256": "817edcd846e491cd7f470beb6953cac0416b0bfd1991ec0002d57654a5769bfd"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/welder-z1.jpg",
+      "bytes": 481198,
+      "sha256": "b7739d3f2f8ad550733f181005ccc774a01fe76dbe2a05f6b5667bae4c1c45a4"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p67_2.jpg",
+      "bytes": 384588,
+      "sha256": "5f0cb063d18f8badf903e9eb5d2d3ea1a4c4be30f7b52106d172c1a08940a048"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p67_3.jpg",
+      "bytes": 401461,
+      "sha256": "5f8e95c4707a5806167c0ea22741935361ed250c53deda306f0ccbfa1d3ae43f"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p67_1.jpg",
+      "bytes": 776831,
+      "sha256": "3e354d46f96f29f2eda97fe6784831a94b6b91bbe3266cf8f2abf56ff5dea27b"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/p67_0.jpg",
+      "bytes": 1330381,
+      "sha256": "0c5e6b2d5555eb4fcd2000a691845dbf8c10cc8d28677151d66cdd7d285e1d17"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/promise/mu-mavroon.png",
+      "bytes": 27234,
+      "sha256": "1e39604babb1b3bcd19e788e808dea77c3e1c8f99d0dfe480f8b9070fea0249a"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/promise/tech-tour-lineman.jpg",
+      "bytes": 323961,
+      "sha256": "e0e2748eea948c444125882fd8cf015787b3e7f37d9ff7ee85ff14f5d9428d56"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/promise/tech-tour-fire.jpg",
+      "bytes": 444555,
+      "sha256": "28c089ec6d8c4d14654d6d86527b9ba10758f411574d810a0c62c8c48f026f40"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/promise/crowd-src.jpg",
+      "bytes": 2798638,
+      "sha256": "0e7556f75f1d3db19bf4000420be57705e30875eb42728ab91cc76512dce7850"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/promise/eagle-valley-video.jpg",
+      "bytes": 235925,
+      "sha256": "272c11e3a5e65b18e366f2f41acd37a2dd6e9a7b27742fb3eca919b37d9e1c89"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/promise/tech-tour-welding.jpg",
+      "bytes": 259649,
+      "sha256": "62e4196c288c5cf8d3997dbfcaef72b9ff99800fd434cbfca528939ee78ca22b"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/promise/ft-morgan-keenesburg-video.png",
+      "bytes": 3735163,
+      "sha256": "ea026cd0c0b97fdc7cc13387a6da1d41500141038194a2dd3258a1113dde311c"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/promise/western-colorado-video.jpg",
+      "bytes": 107295,
+      "sha256": "bc358fa9fcec7887e0962758b5c9fe60c37606cc51ea27d162f711e7ad8268c6"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/promise/promise-hero-dark.jpg",
+      "bytes": 532507,
+      "sha256": "902ff2c95127ad742b265a499af5ea9cab669e624b876cfdcdba7dee61f0c4d9"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/promise/denver-aurora-video.jpg",
+      "bytes": 52488,
+      "sha256": "6e6ebd51a2603c1bd809fefc1e61a8ffa3839ef937b8f0b52c095c5dd8f9380a"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/promise/rifle-meeker-video.jpg",
+      "bytes": 188679,
+      "sha256": "9cbcd5f46b8e316dd34d59d8344c156a11fd6eb0988f3e10e7b980eebfac2350"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/promise/promise-seal.png",
+      "bytes": 138408,
+      "sha256": "10f2aa5f85592142ee2c0570b603ddf6fbe35765b150ab702f5c27dc87d9f165"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/promise/mu-white-on-mavroon.png",
+      "bytes": 27093,
+      "sha256": "422caf35a714c3f090da4fc4ada17350da2eda1e335132c3e69be1bc54cddf89"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/promise/promise-badge.png",
+      "bytes": 80921,
+      "sha256": "d252cb1334395d0db32bbfdbbb8e4d2358c625a56188a1b29dd52c24d90f5296"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/cmu-tech-15s-poster.jpg",
+      "bytes": 144188,
+      "sha256": "58c0a4c0d1964ca739862b6d541ae8ebc2e34fbb89b61b9800699f271f432572"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/midnight-sky-desktop.jpg",
+      "bytes": 64882,
+      "sha256": "beddc9a5dd6751b3d182a7edea62eef63d5daddc1b18cd0998abd0b143737a56"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/tech-hands-on.jpg",
+      "bytes": 710458,
+      "sha256": "d59f562ab5c4c2000caed795f7c0f00f31ff8fb5cbc43ebaaf63da431b31b394"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/tech-hero-welder.jpg",
+      "bytes": 502026,
+      "sha256": "4d02d4685eb6adb9f34f3e74e16316ef9b26b6f12baffced6bfc1f8dd73c6049"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/photos/tech-hero-dark.jpg",
+      "bytes": 329448,
+      "sha256": "0ed443ab85cca8b2e4725711a60ae66fad251ea721e613aa3c1b2125e0dbcd91"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/instapage-assets/instapage-slate-rfi.txt",
+      "bytes": 5532,
+      "sha256": "7870320ac3966b5ec4cf0ed97aa5b2124313f011f16c53b501406d2ea4968f49"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/instapage-assets/icon-stackable.png",
+      "bytes": 7129,
+      "sha256": "81623e12eb16d9632aa2754159c23fedb17d0a088d56f5c172987f3a174a959c"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/instapage-assets/tech-hero.jpg",
+      "bytes": 117608,
+      "sha256": "a6b3c2908af980ddd267a17dce307b0833593e2911ff94e8489b7986eb0ce383"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/instapage-assets/icon-programs.png",
+      "bytes": 8139,
+      "sha256": "fc52ff9b9c04d0d191bfcb5e9c06e54be0ff95ee12c8aac52ffd2e0230a8004d"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/instapage-assets/icon-pathway.png",
+      "bytes": 9650,
+      "sha256": "97c336d2aafce11832fce39059e37fe18a73aec7b379128c266217522f8dee39"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/instapage-assets/cmu-tech-logo.svg",
+      "bytes": 5300,
+      "sha256": "c11fd5646603d35d0b12292a2018047b1d71ff81bd8b9747d02e0de41a365534"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/instapage-assets/cmu-tech-h-white.svg",
+      "bytes": 6926,
+      "sha256": "2f544fa9fe24d146d658ad31e32f362c970f40cf053620c94637bcf500c12c55"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/instapage-assets/icon-tuition.png",
+      "bytes": 8761,
+      "sha256": "617f7d8a3c99de4d8323ace7ea11c92b8423900c604c0a95b87d11323d79df36"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/INSTAPAGE-BUILD-GUIDE.md",
+      "bytes": 9336,
+      "sha256": "5b2dee8aaa3eef3d39495ce84dd2d1a156383b2348dee95b6124e3b54c0f60b4"
+    },
+    {
+      "member": "cmu-handoff/03-project-files/cmu-tech-sales.html",
+      "bytes": 16831,
+      "sha256": "52717d644dcb8f465c8b1b845cfe02792da58597274d60df2579c0f2b3929fd7"
+    },
+    {
+      "member": "cmu-handoff/01-conversation/conversation.md",
+      "bytes": 227643,
+      "sha256": "58722c0108a62e85728d4f9f360ef9860391c4f89d80f3a05a30acc3fffc053b"
+    }
+  ]
+}

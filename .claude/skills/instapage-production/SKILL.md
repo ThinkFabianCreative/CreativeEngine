@@ -1,9 +1,13 @@
 ---
 name: instapage-production
-description: Build, check and publish an approved landing page natively in Instapage from DesignChamp's approved Figma specification, through Instapage's official MCP. Modes INSPECT, BUILD, UPDATE, QA, PUBLISH, MEASURE. Use when an approved landing-page direction must become a real Instapage page the client can keep editing, or when the user mentions Instapage. Native Authorability is mandatory - native blocks, elements and forms, with explicitly approved integration exceptions. Never rewrites approved copy, never makes creative decisions, never publishes without explicit approval. Prototypes belong to format-prototyping.
+description: Build, check and publish an approved landing page natively in Instapage from DesignChamp's approved Figma specification, using native authoring tools inside Instapage. Modes INSPECT, BUILD, UPDATE, QA, PUBLISH, MEASURE. Use when an approved landing-page direction must become a real Instapage page the client can keep editing, or when the user mentions Instapage. Native Authorability is mandatory - native blocks, elements and forms, with explicitly approved integration exceptions. Never rewrites approved copy, never makes creative decisions, never publishes without explicit approval. Prototypes belong to format-prototyping.
 ---
 
 # Instapage production
+
+## Authoring restriction — user instruction, 2026-09-25
+
+Build and edit pages only with native authoring tools inside Instapage, operated by a person or authorized browser automation. Figma remains the specification. Do not develop pages through external HTML/CSS recreation, generated page JSON, adapter-driven writes, API imports, or snapshot patch/save workflows, even if their outputs contain native elements. Use editor duplication and native blocks/elements for reuse. Read-only exports and offline checks remain evidence tools only. Historical adapter/import descriptions below are reference material, not authorized development routes. Previously approved CRM integration exceptions remain narrowly scoped integrations added through the editor; they do not authorize custom page/component development. Preserve creative ownership, saved editor changes, client isolation and the prohibition on unapproved publishing.
 
 CreativeEngine decides what is made. Figma makes DesignChamp's visual intent explicit. This skill turns the approved work into a native Instapage page that a client-side marketer can keep editing without us. Instapage is where the page is produced and published. It is not where creative decisions are made.
 
@@ -100,11 +104,11 @@ Fix a FAIL in the sheet, or turn it into a constraint report. Never clear a FAIL
 
 | Route | When | How |
 |---|---|---|
-| **A. Copy a native source** | A native page in this workspace already has the needed structure (an approved sibling page, or the client's kit page) | `page_export_json` → `page_snapshot_patch` (only the values the build sheet changes) → `page_snapshot_save` as a new draft. Then check in the editor what the copy did not inherit and re-apply it (`references/mcp-and-api.md` §5) |
+| **A. Duplicate in the editor** | An approved native source exists in this client workspace | Duplicate using Instapage’s editor controls, retain the predecessor, then edit with native authoring tools and verify inherited settings |
 | **B. Editor build** | New structure | A production designer builds it in the Instapage editor from the build sheet: Fluid Grid Blocks, native elements, Form Library forms, My Blocks |
 | **C. Editor build with Claude in the browser** | New structure, and editor operation is within the authorized task | The user signs in themselves. Claude works in the built-in browser, saves drafts only, never enters credentials, and never presses Publish or Update on a live page |
 
-Retain native generators/adapters only where their mappings derive from saved native exports and pass schema, render, editor and round-trip preservation tests (`references/preservation.md`). Unsupported generated structures remain hypotheses, never production-ready. No screenshot-to-HTML/CSS renderer is a production route. Upload images with `asset_image_upload` from an HTTPS URL, and only at the status the page's stage allows (hard rule 5). Write the build report.
+Use Instapage’s native asset controls and authoring tools for the draft. Retain historical generators/exports as evidence only; do not execute them to build or update pages. Write the build report.
 
 **4. QA.** Run every check in `references/qa.md` the unpublished page allows. Some embeds can render in preview; native form submissions and other runtime behaviors may need a published environment. Record unavailable tests as NOT_RUN with the limitation and remaining test. Do not publish solely to obtain a pass. Any separately requested staging publication follows `references/publishing.md`. Write `work/production/<packet>_instapage-qa_v<NN>.json` and its `.md` report, then validate:
 

@@ -44,3 +44,7 @@ The CMU archive was not found in the CreativeEngine workspace. Broader parent-di
 `before/`, `baseline-hashes.json`, `git-status-before.txt` and `tracked-before.diff` preserve initial local evidence. `ip-check-before-merge.py` preserves the later concurrent checker before integration changes. Do not restore entire directories from the initial baseline: that would remove legitimate work from the other writer. Review and revert individual intended hunks only. Use Figma before/after node IDs for targeted correction, preserving later edits and bindings. No platform rollback is required because no platform writes occurred.
 
 `final-local.diff` captures only changes still uncommitted at finalization; work saved/committed concurrently may not appear there. `artifact-sha256.json` fingerprints current evidence and relevant skill files, not a release or native deployment.
+
+## Follow-up — 2026-09-25
+
+The previously missing handoff archive has now been supplied and reviewed. The archive-access blocker is resolved; the earlier statement that it had not been read describes the 2026-09-24 run only. Client-specific evidence and the unchanged source archive are isolated in `projects/colorado-mesa-university/instapage-handoff-review/`, with integrity hashes and a source-level review. No final native exports/generators were included. Historical account references do not designate a synthetic test workspace. Runtime validation remains NOT_RUN; no platform changes were made.

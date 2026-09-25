@@ -38,3 +38,4 @@ None exists yet. Each is created only when it holds material; the rules are in [
 | Project | Folder | Named by | Status |
 |---|---|---|---|
 | Featherstone Phase 2 (provisional name) | [featherstone-phase-2/](../featherstone-phase-2/README.md) | User, 2026-09-18 | BRIEFING |
+| Instapage handoff evidence review | [instapage-handoff-review/](../instapage-handoff-review/README.md) | User-supplied handoff, 2026-09-25 | SOURCE REVIEW; no deployment |

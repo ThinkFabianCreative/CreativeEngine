@@ -1,5 +1,10 @@
 # Native Authorability
 
+## Authoring restriction — user instruction, 2026-09-25
+
+Build and edit pages only with native authoring tools inside Instapage, operated by a person or authorized browser automation. Figma remains the specification. Do not develop pages through external HTML/CSS recreation, generated page JSON, adapter-driven writes, API imports, or snapshot patch/save workflows, even if their outputs contain native elements. Use editor duplication and native blocks/elements for reuse. Read-only exports and offline checks remain evidence tools only. Historical adapter/import descriptions below are reference material, not authorized development routes. Previously approved CRM integration exceptions remain narrowly scoped integrations added through the editor; they do not authorize custom page/component development. Preserve creative ownership, saved editor changes, client isolation and the prohibition on unapproved publishing.
+
+
 > Hard production rule for Instapage work (SKILL.md hard rule 1). Owner: DesignChamp. Enforced by the build-sheet lint, QA and the publish gate (§7).
 
 ## 1. The rule

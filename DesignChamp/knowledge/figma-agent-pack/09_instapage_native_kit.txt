@@ -1,3 +1,5 @@
+AUTHORING RULE — USER, 2026-09-25: Develop only with native authoring tools inside Instapage. Figma specifies; the Instapage editor builds. No external HTML recreation, generated page JSON, API imports or snapshot patch/save development. Historical adapters are evidence only. Narrow previously approved CRM integrations do not authorize custom page development.
+
 09 · INSTAPAGE NATIVE KIT (LANDING PAGES BUILT IN INSTAPAGE ONLY)
 Derived from .claude/skills/instapage-production/references/figma-kit.md and
 platform.md (verified 2026-09-24). Those files win if anything here disagrees.

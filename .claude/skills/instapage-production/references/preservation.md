@@ -1,5 +1,10 @@
 # Native adapters, preservation and evidence
 
+## Authoring restriction — user instruction, 2026-09-25
+
+Build and edit pages only with native authoring tools inside Instapage, operated by a person or authorized browser automation. Figma remains the specification. Do not develop pages through external HTML/CSS recreation, generated page JSON, adapter-driven writes, API imports, or snapshot patch/save workflows, even if their outputs contain native elements. Use editor duplication and native blocks/elements for reuse. Read-only exports and offline checks remain evidence tools only. Historical adapter/import descriptions below are reference material, not authorized development routes. Previously approved CRM integration exceptions remain narrowly scoped integrations added through the editor; they do not authorize custom page/component development. Preserve creative ownership, saved editor changes, client isolation and the prohibition on unapproved publishing.
+
+
 Status 2026-09-24: offline scalar preservation implemented and tested with synthetic JSON. Native schema, importability, authorability and an actual editor round trip remain NOT_RUN. This is not a page renderer or a documented Instapage schema.
 
 ## Routes and limits
