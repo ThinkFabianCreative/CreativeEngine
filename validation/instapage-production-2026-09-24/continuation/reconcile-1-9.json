@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"mutatedNodeIds\":[\"11:38\",\"11:39\"],\"before\":[{\"id\":\"11:38\",\"text\":\"Built in the popup builder (Assets > Popups) with the same elements as a page; opened by a click or a page trigger (load, exit intent, scroll depth). The background is always white: a platform fact, not a style. A global popup syncs like a Global Block.\"},{\"id\":\"11:39\",\"description\":\"Instapage: popup from the Popup Library (Assets &gt; Popups), built with page elements; width and height set in the builder; on-click popup or page popup (load, exit intent, scroll depth). Background is always white (workaround: a Box sent to back). Global popups sync their changes to every page that uses them: treat edits as publishing when any is live. Popups have their own conversion goals.\"}]}"
+    }
+  ],
+  "isError": false
+}

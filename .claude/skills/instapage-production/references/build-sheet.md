@@ -21,7 +21,7 @@ File: `work/production/<packet>_instapage-build-sheet_v<NN>.json`. A new version
   "ask": {
     "cta_wording": "<exact, from the packet>",
     "destination": "<from the packet>",
-    "success_event": "form_submission | link_click | external_page | OPEN",
+    "success_event": "form_submission | link_click | external_page | external_submission | OPEN",
     "conversion_goals": ["form_submissions | link_clicks | external_page"]
   },
   "copy": { "<COPY-ID>": "<exact approved text>" },
@@ -59,9 +59,9 @@ File: `work/production/<packet>_instapage-build-sheet_v<NN>.json`. A new version
   ],
   "code": [
     { "id": "CODE-01", "location": "scripts_privacy | workspace_scripts | page_js | page_css | inline_css | global_block_settings",
-      "kind": "infrastructure | component", "owns_ui": false, "purpose": "", "exception": "EXC-01" }
+      "kind": "infrastructure | component | integration", "owns_ui": false, "purpose": "", "exception": "EXC-01" }
   ],
-  "exceptions": [ { "id": "EXC-01", "class": "INFRASTRUCTURE | COMPONENT", "status": "PROPOSED | APPROVED | REJECTED", "approved_by": "", "summary": "" } ],
+  "exceptions": [ { "id": "EXC-01", "class": "INFRASTRUCTURE | COMPONENT | INTEGRATION", "status": "PROPOSED | APPROVED | REJECTED", "approved_by": "", "summary": "" } ],
   "constraints": [ { "id": "CON-01", "constraint": "", "affects": "", "route_to": "", "material": false, "status": "OPEN | RESOLVED", "resolution": "" } ]
 }
 ```
@@ -103,3 +103,15 @@ Primitives: `headline`, `paragraph`, `button`, `image`, `video` (with `host`), `
 | P25 | Claims an element uses (`"claims": ["C1"]`) exist in the sheet's `claims` ledger; anything not VERIFIED warns with its handling (SOURCE-STATED and PENDING APPROVAL block publishing) | FAIL / WARNING |
 
 What the lint cannot see: whether the spec itself is good, whether the page was actually built as planned, and anything in the editor. That is DesignChamp's and CreativeDirector's judgment, and QA's job.
+
+## Integration forms and measurement
+
+For an approved CRM embed, keep approved field labels, order, submit and after-submit behavior in `forms` and add `"delivery": "external"` and `"exception": "EXC-CRM"`. Place it using an `html` element with `"integration_form": "F01"` and its exception ID. Do not label it a native `form` primitive.
+
+An INTEGRATION exception needs `requirement`, `native_alternatives`, `editing_owner`, `editing_route`, `maintenance_owner`, `tracking_method`, `validation_plan`, `approval_date`, `approval_evidence`, plus status and approver. These document responsibility; they do not turn planned tests into passes.
+
+For provider-measured completion use `ask.success_event = "external_submission"`, no native conversion goals for that event, and `ask.external_tracking` with `provider`, `success_event`, `attribution`, `deduplication`, `validation_plan`. A separately approved external confirmation-page journey may instead use `external_page`, with actual tracking evidence; never assume that an embedded form is supported by Instapage external tracking.
+
+`styles.brand_colors` is the subset assigned to Instapage Styles (maximum 14), not a limit on the client's complete palette. Keep full client tokens in the client library and approved instance mappings.
+
+Annotation parity: run `python3 .claude/skills/instapage-production/scripts/ip_spec_check.py <annotation-snapshot.json>`. Both views repeat shared annotations by stable IDs; device-specific notes may be additional. Serialization entities in annotation labels are normalized; actual text differences are not silently normalized.

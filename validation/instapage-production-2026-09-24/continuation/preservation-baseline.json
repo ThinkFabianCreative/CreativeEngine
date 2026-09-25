@@ -1,0 +1,15 @@
+{
+  "fixture": "SYNTHETIC\u2014not an Instapage schema",
+  "elements": {
+    "E01": {
+      "text": "Original",
+      "mobile_gap": 8
+    },
+    "E02": {
+      "link": "https://example.org/old"
+    }
+  },
+  "unknown": {
+    "preserve": true
+  }
+}

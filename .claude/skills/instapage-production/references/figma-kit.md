@@ -48,15 +48,15 @@ Rules that follow:
 | Widgets | `IP / Timer`, `IP / Accordion` (State), `IP / Carousel` |
 | Forms | `IP / Form Field` (8 types), `IP / Form Submit`, `IP / Form` |
 | Page & reuse | `IP / Tag` (8 kinds, margin annotations), `IP / Popup`, `IP / HTML (exception only)` |
-| Molecules & organisms | Neutral starter (added 2026-09-24). Molecules: `IP / Text Group` (eyebrow, title, subtitle, description, each toggleable), `IP / Action` (Primary, Secondary, Tertiary), `IP / Button Group`, `IP / Card` (Color, Image, Image overlay). Organisms, each a Fluid Grid block: `IP / Hero` (Split, Overlay), `IP / Proof · Cards`, `IP / Form Section`, `IP / CTA Band` |
+| Molecules & organisms | Eight preserved composite mapping fixtures, not client starters or global production templates. Hero, card rows, form arrangements and CTA bands must not dictate a client's composition |
+| Spec template | Project scaffold with replaceable preview widths and stable IDs |
+| Validation (SYNTHETIC) | Visual range and Fernwick specification fixtures; never client templates |
 
-**Semantic tokens.** The collection `Semantic (client fills)` holds semantic names only: `color/surface/*`, `color/text/*` (including eyebrow and inverse), `color/action/primary|secondary|tertiary`, `color/border/default`, `color/overlay/image`, `space/xs…section`, `radius/card|button`, `opacity/overlay`. The text styles `Semantic/Eyebrow|Title|Subtitle|Body|Action` go with them. In the global file every value is a wireframe placeholder, aliased to `wire/*`. A client library duplicates the starter and sets the values, and optionally adds client-specific names, from that client's approved sources. Molecules and organisms bind to these names, so one structure takes any client's look. Colors that end up in Instapage Styles must fit its 14 slots, and the semantic text roles resolve to the three font roles.
+**Semantic placeholders.** A concurrent writer added `Semantic (client fills)` (22 variables) and five semantic text styles on 2026-09-24. Preserve their bindings as implementation scaffolding. Colors alias wireframe values; spacing values (8/16/24/48/96), zero radii and overlay opacity are literal preview placeholders, not global standards. A client supplies its own values/names from approved sources in its isolated library. Do not duplicate a global hero or CTA layout and call token replacement client design. No live Instapage token synchronization is implied.
 
-**Native notes.** A card is a container with a background, border and radius, all native container settings. An image-overlay tint is documented for block (Instablock) backgrounds, not for containers; otherwise the tint is part of the approved image. Gradients are not a verified native container setting, so the starter has none. Organisms are starting structures for a client library, not layouts to reuse unchanged: DesignChamp composes each page.
-| Spec template | Layer 3 scaffold: spec header, Desktop 1440 and Mobile 400 frames with matching block IDs, margin tags, approved-spec checklist |
-| Validation (SYNTHETIC) | Range test (three synthetic clients, same primitives and words) and the synthetic end-to-end spec (`validation/instapage-production-2026-09-24/`). Fixtures, never templates; move to their own file once the kit is a published library |
+**Composite evidence.** Eight additional fixtures map to combinations of native primitives. Their complete authorability is NOT_RUN; see the additional inventory in `capability-map.md`. Seven carry official documentation links; Button Group currently has none. Family links do not establish a working composite.
 
-Audited 2026-09-24: all 17 top-level component families carry official help links; nested variants rely on their family link. A link is not runtime evidence. See `capability-map.md` for per-feature status; Tag is specification metadata, and HTML is an exception boundary, not native content.
+Audited 2026-09-24: all 17 original top-level primitive families carry official help links; nested variants rely on their family link. A link is not runtime evidence. See `capability-map.md` for per-feature status; Tag is specification metadata, and HTML is an exception boundary, not native content.
 
 **Why the primitives look unfinished.** Layer 1 renders in a wireframe register: grey outlines, radius 0, a placeholder mono face (Roboto Mono), no shadows, no case or hover treatment. Nothing in it can be mistaken for a style or shipped as a default. Variables: `Wireframe (not a style)` (`wire/*`) for the primitives and `Kit docs` for documentation colors. Text styles: `Wireframe/*` role placeholders and `Doc/*` for documentation. Annotation categories: IP · Build, IP · Copy, IP · Asset, IP · Reuse, IP · Exception.
 
@@ -128,3 +128,7 @@ The kit's Spec template page is this checklist as a scaffold.
 - Plugin API work: load `figma-use` before any `use_figma` call, and `figma-generate-library` when building components.
 - Figma's built-in agent: brief it in the format of `shared/frameworks/visual-craft.md` §12.1 and attach `DesignChamp/knowledge/figma-agent-pack/09_instapage_native_kit.txt` with the client's pack files.
 - Reading a spec for the build sheet: `get_metadata` for structure and names, and a read-only `use_figma` script for annotations.
+
+## 8. Explicit annotation check
+
+`ip_spec_check.py` consumes a read-only Figma snapshot with `policy: "explicit-repeat"`, `desktop` and `mobile` arrays of `{node_id, name, text, annotations: [{category, label}]}`. It rejects missing/duplicate IDs, block-order drift, missing shared mobile annotations and element text drift. This tests handoff completeness only; approved source comparison and native runtime QA remain separate. Preserve raw snapshots and checker output in the project evidence.

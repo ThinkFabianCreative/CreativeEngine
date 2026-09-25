@@ -1,0 +1,297 @@
+diff --git a/.claude/skills/instapage-production/references/build-sheet.md b/.claude/skills/instapage-production/references/build-sheet.md
+index 0b0ec0f..31b7838 100644
+--- a/.claude/skills/instapage-production/references/build-sheet.md
++++ b/.claude/skills/instapage-production/references/build-sheet.md
+@@ -21,7 +21,7 @@ File: `work/production/<packet>_instapage-build-sheet_v<NN>.json`. A new version
+   "ask": {
+     "cta_wording": "<exact, from the packet>",
+     "destination": "<from the packet>",
+-    "success_event": "form_submission | link_click | external_page | OPEN",
++    "success_event": "form_submission | link_click | external_page | external_submission | OPEN",
+     "conversion_goals": ["form_submissions | link_clicks | external_page"]
+   },
+   "copy": { "<COPY-ID>": "<exact approved text>" },
+@@ -59,9 +59,9 @@ File: `work/production/<packet>_instapage-build-sheet_v<NN>.json`. A new version
+   ],
+   "code": [
+     { "id": "CODE-01", "location": "scripts_privacy | workspace_scripts | page_js | page_css | inline_css | global_block_settings",
+-      "kind": "infrastructure | component", "owns_ui": false, "purpose": "", "exception": "EXC-01" }
++      "kind": "infrastructure | component | integration", "owns_ui": false, "purpose": "", "exception": "EXC-01" }
+   ],
+-  "exceptions": [ { "id": "EXC-01", "class": "INFRASTRUCTURE | COMPONENT", "status": "PROPOSED | APPROVED | REJECTED", "approved_by": "", "summary": "" } ],
++  "exceptions": [ { "id": "EXC-01", "class": "INFRASTRUCTURE | COMPONENT | INTEGRATION", "status": "PROPOSED | APPROVED | REJECTED", "approved_by": "", "summary": "" } ],
+   "constraints": [ { "id": "CON-01", "constraint": "", "affects": "", "route_to": "", "material": false, "status": "OPEN | RESOLVED", "resolution": "" } ]
+ }
+ ```
+@@ -103,3 +103,15 @@ Primitives: `headline`, `paragraph`, `button`, `image`, `video` (with `host`), `
+ | P25 | Claims an element uses (`"claims": ["C1"]`) exist in the sheet's `claims` ledger; anything not VERIFIED warns with its handling (SOURCE-STATED and PENDING APPROVAL block publishing) | FAIL / WARNING |
+ 
+ What the lint cannot see: whether the spec itself is good, whether the page was actually built as planned, and anything in the editor. That is DesignChamp's and CreativeDirector's judgment, and QA's job.
++
++## Integration forms and measurement
++
++For an approved CRM embed, keep approved field labels, order, submit and after-submit behavior in `forms` and add `"delivery": "external"` and `"exception": "EXC-CRM"`. Place it using an `html` element with `"integration_form": "F01"` and its exception ID. Do not label it a native `form` primitive.
++
++An INTEGRATION exception needs `requirement`, `native_alternatives`, `editing_owner`, `editing_route`, `maintenance_owner`, `tracking_method`, `validation_plan`, `approval_date`, `approval_evidence`, plus status and approver. These document responsibility; they do not turn planned tests into passes.
++
++For provider-measured completion use `ask.success_event = "external_submission"`, no native conversion goals for that event, and `ask.external_tracking` with `provider`, `success_event`, `attribution`, `deduplication`, `validation_plan`. A separately approved external confirmation-page journey may instead use `external_page`, with actual tracking evidence; never assume that an embedded form is supported by Instapage external tracking.
++
++`styles.brand_colors` is the subset assigned to Instapage Styles (maximum 14), not a limit on the client's complete palette. Keep full client tokens in the client library and approved instance mappings.
++
++Annotation parity: run `python3 .claude/skills/instapage-production/scripts/ip_spec_check.py <annotation-snapshot.json>`. Both views repeat shared annotations by stable IDs; device-specific notes may be additional. Serialization entities in annotation labels are normalized; actual text differences are not silently normalized.
+diff --git a/.claude/skills/instapage-production/references/capability-map.md b/.claude/skills/instapage-production/references/capability-map.md
+index 93e5384..08d2bb9 100644
+--- a/.claude/skills/instapage-production/references/capability-map.md
++++ b/.claude/skills/instapage-production/references/capability-map.md
+@@ -38,3 +38,18 @@ Wireframe font, grey controls, zero radius, preview spacing and 1440/400 frames
+ | IP-MY · My Block reuse · `11:11` | Canvas / Fluid Grid; workspace library | Block menu > Save to My Blocks; insert approved same-client block | Inserted copies edited independently; never creative starting template | Recheck device arrangement on insertion | [Help](https://help.instapage.com/hc/en-us/articles/115015974327-What-are-Instablocks-and-how-to-use-them) |
+ | IP-GLOBAL · Global Block reuse · `11:14` | Canvas / Fluid Grid; plan-dependent | Save as Global Block; record owner, reason, approval, affected pages | Synchronized; Manager required for apply to live references; one instance per page | Validate only isolated draft references; never apply shared live changes for QA | [Help](https://help.instapage.com/hc/en-us/articles/360001095648-What-are-Global-Blocks-and-how-to-use-them) |
+ | IP-STICKY · Sticky header/footer · `11:23 / 11:26` | Page settings; first/last block | Page settings > Sticky Bar; device-specific approved intent | Native setting; no scripted substitute | Runtime may need published environment; keep NOT_RUN if unavailable | [Help](https://help.instapage.com/hc/en-us/articles/23659391659031-Sticky-Bar) |
++
++## Additional composites found during the continuation
++
++The other writer added these before being paused. They are preserved as implementation fixtures, not Layer 1 creative authorities or client starters. The ownership, workspace availability, check date and NOT_RUN evidence contract above applies to each. All require native structure, responsive and ordinary editing tests. No complete-composite schema/import evidence exists.
++
++| Stable ID / name / Figma node | Native mapping and exact editor route | Ordinary editing / responsive limits | Official source / open evidence |
++|---|---|---|---|
++| FIX-TEXT · Text Group · 33:9 | Separate Headline/Paragraph elements in a native container | Edit each text element; title hierarchy and wrapping come from spec | Text boxes article linked on family; compound layout NOT_RUN |
++| FIX-ACTION · Action · 33:30 | Native Button, or selected native text link where specified | Native label/link/style editing; hierarchy is client-specific | Links article on family; variants NOT_RUN |
++| FIX-BUTTONS · Button Group · 33:34 | Separate native Buttons; container flow per approved spec | Edit/reorder controls natively; verify mobile flow | Family has no documentation link; mapped primitives: [Links](https://help.instapage.com/hc/en-us/articles/206024937-Adding-a-link-to-a-page-element); composite NOT_RUN |
++| FIX-CARD · Card · 33:88 | Native container and text/image/button elements | Container styles and element editing; overlay mapping unresolved | Fluid Grid article on family; overlay/background capability OPEN |
++| FIX-HERO · Hero · 34:88 | Approved client composition built with native block/containers/elements | Client chooses composition; fixture split/overlay is no default | Fluid Grid family link; entire composite and overlay mapping NOT_RUN |
++| FIX-PROOF · Proof Cards · 34:89 | Native block and independent containers/elements | Client chooses count and order; verify mobile stacking | Fluid Grid family link; entire composite NOT_RUN |
++| FIX-FORM · Form Section · 34:142 | Native block, text, Form Library form | Native text/field editing; field and integration limits apply | Form Builder family link; entire composite NOT_RUN |
++| FIX-CTA · CTA Band · 34:181 | Native block/containers and text/buttons | Client chooses surface, composition and action hierarchy | Fluid Grid family link; entire composite NOT_RUN |
+diff --git a/.claude/skills/instapage-production/references/figma-kit.md b/.claude/skills/instapage-production/references/figma-kit.md
+index 77161fe..734b7f0 100644
+--- a/.claude/skills/instapage-production/references/figma-kit.md
++++ b/.claude/skills/instapage-production/references/figma-kit.md
+@@ -48,15 +48,15 @@ Rules that follow:
+ | Widgets | `IP / Timer`, `IP / Accordion` (State), `IP / Carousel` |
+ | Forms | `IP / Form Field` (8 types), `IP / Form Submit`, `IP / Form` |
+ | Page & reuse | `IP / Tag` (8 kinds, margin annotations), `IP / Popup`, `IP / HTML (exception only)` |
+-| Molecules & organisms | Neutral starter (added 2026-09-24). Molecules: `IP / Text Group` (eyebrow, title, subtitle, description, each toggleable), `IP / Action` (Primary, Secondary, Tertiary), `IP / Button Group`, `IP / Card` (Color, Image, Image overlay). Organisms, each a Fluid Grid block: `IP / Hero` (Split, Overlay), `IP / Proof · Cards`, `IP / Form Section`, `IP / CTA Band` |
++| Molecules & organisms | Eight preserved composite mapping fixtures, not client starters or global production templates. Hero, card rows, form arrangements and CTA bands must not dictate a client's composition |
++| Spec template | Project scaffold with replaceable preview widths and stable IDs |
++| Validation (SYNTHETIC) | Visual range and Fernwick specification fixtures; never client templates |
+ 
+-**Semantic tokens.** The collection `Semantic (client fills)` holds semantic names only: `color/surface/*`, `color/text/*` (including eyebrow and inverse), `color/action/primary|secondary|tertiary`, `color/border/default`, `color/overlay/image`, `space/xs…section`, `radius/card|button`, `opacity/overlay`. The text styles `Semantic/Eyebrow|Title|Subtitle|Body|Action` go with them. In the global file every value is a wireframe placeholder, aliased to `wire/*`. A client library duplicates the starter and sets the values, and optionally adds client-specific names, from that client's approved sources. Molecules and organisms bind to these names, so one structure takes any client's look. Colors that end up in Instapage Styles must fit its 14 slots, and the semantic text roles resolve to the three font roles.
++**Semantic placeholders.** A concurrent writer added `Semantic (client fills)` (22 variables) and five semantic text styles on 2026-09-24. Preserve their bindings as implementation scaffolding. Colors alias wireframe values; spacing values (8/16/24/48/96), zero radii and overlay opacity are literal preview placeholders, not global standards. A client supplies its own values/names from approved sources in its isolated library. Do not duplicate a global hero or CTA layout and call token replacement client design. No live Instapage token synchronization is implied.
+ 
+-**Native notes.** A card is a container with a background, border and radius, all native container settings. An image-overlay tint is documented for block (Instablock) backgrounds, not for containers; otherwise the tint is part of the approved image. Gradients are not a verified native container setting, so the starter has none. Organisms are starting structures for a client library, not layouts to reuse unchanged: DesignChamp composes each page.
+-| Spec template | Layer 3 scaffold: spec header, Desktop 1440 and Mobile 400 frames with matching block IDs, margin tags, approved-spec checklist |
+-| Validation (SYNTHETIC) | Range test (three synthetic clients, same primitives and words) and the synthetic end-to-end spec (`validation/instapage-production-2026-09-24/`). Fixtures, never templates; move to their own file once the kit is a published library |
++**Composite evidence.** Eight additional fixtures map to combinations of native primitives. Their complete authorability is NOT_RUN; see the additional inventory in `capability-map.md`. Seven carry official documentation links; Button Group currently has none. Family links do not establish a working composite.
+ 
+-Audited 2026-09-24: all 17 top-level component families carry official help links; nested variants rely on their family link. A link is not runtime evidence. See `capability-map.md` for per-feature status; Tag is specification metadata, and HTML is an exception boundary, not native content.
++Audited 2026-09-24: all 17 original top-level primitive families carry official help links; nested variants rely on their family link. A link is not runtime evidence. See `capability-map.md` for per-feature status; Tag is specification metadata, and HTML is an exception boundary, not native content.
+ 
+ **Why the primitives look unfinished.** Layer 1 renders in a wireframe register: grey outlines, radius 0, a placeholder mono face (Roboto Mono), no shadows, no case or hover treatment. Nothing in it can be mistaken for a style or shipped as a default. Variables: `Wireframe (not a style)` (`wire/*`) for the primitives and `Kit docs` for documentation colors. Text styles: `Wireframe/*` role placeholders and `Doc/*` for documentation. Annotation categories: IP · Build, IP · Copy, IP · Asset, IP · Reuse, IP · Exception.
+ 
+@@ -128,3 +128,7 @@ The kit's Spec template page is this checklist as a scaffold.
+ - Plugin API work: load `figma-use` before any `use_figma` call, and `figma-generate-library` when building components.
+ - Figma's built-in agent: brief it in the format of `shared/frameworks/visual-craft.md` §12.1 and attach `DesignChamp/knowledge/figma-agent-pack/09_instapage_native_kit.txt` with the client's pack files.
+ - Reading a spec for the build sheet: `get_metadata` for structure and names, and a read-only `use_figma` script for annotations.
++
++## 8. Explicit annotation check
++
++`ip_spec_check.py` consumes a read-only Figma snapshot with `policy: "explicit-repeat"`, `desktop` and `mobile` arrays of `{node_id, name, text, annotations: [{category, label}]}`. It rejects missing/duplicate IDs, block-order drift, missing shared mobile annotations and element text drift. This tests handoff completeness only; approved source comparison and native runtime QA remain separate. Preserve raw snapshots and checker output in the project evidence.
+diff --git a/.claude/skills/instapage-production/references/platform.md b/.claude/skills/instapage-production/references/platform.md
+index 1749ab6..af7bd28 100644
+--- a/.claude/skills/instapage-production/references/platform.md
++++ b/.claude/skills/instapage-production/references/platform.md
+@@ -1,6 +1,8 @@
+ # Instapage platform facts
+ 
+-Verified 2026-09-24 against Instapage's Help Center, the Public API reference and the MCP guide, all read that day. Paraphrased; the linked articles are the source (list at the end). "Updated" dates are the articles' own.
++Documentation reviewed 2026-09-24 against Instapage's Help Center, the Public API reference and the MCP guide, all read that day. Paraphrased; the linked articles are the source (list at the end). "Updated" dates are the articles' own.
++
++No target workspace or runtime was inspected. See `capability-map.md` for per-feature status and the recheck notes below. Documentation is not implementation validation.
+ 
+ Instapage changes often, and several features depend on the plan or are rolling out gradually. Re-check a fact before a spec depends on it, when it is older than 90 days, or when the editor behaves differently. Record every divergence in §15 with its date.
+ 
+@@ -13,7 +15,7 @@ Instapage changes often, and several features depend on the plan or are rolling
+   - **Fluid Grid Blocks**: a grid of containers that reflows by itself (§3).
+   Block templates exist for both kinds. [Block Templates; Fluid Grid]
+ - The first and/or last block can be made a sticky header or footer in page settings. Stickiness does not show in the editor, only on a published page. [Sticky Bar]
+-- **Popups** are built in a popup builder (Assets > Popups) and opened on click or by page triggers. A global popup pushes its changes to every page that uses it. The popup background is always white; the documented workaround is a Box sent to the back. [Popups, updated 2026-03-27; Assets]
++- **Popups** are built in a popup builder (Assets > Popups) and opened on click or by page triggers. A global popup pushes its changes to every page that uses it. Earlier notes claimed a white-only popup background; this was not found in the rechecked popup article. Treat it as OPEN, not a platform mandate. [Popups, updated 2026-03-27; Assets]
+ 
+ ## 2. Elements and widgets
+ 
+@@ -30,7 +32,7 @@ Instapage changes often, and several features depend on the plan or are rolling
+ | Timer | Counts down to one fixed date and time; color, language, label position | Not evergreen or per-visitor; stays at zero after the date for everyone; labels are not shown on mobile | Timer |
+ | Accordion | Collapsible text sections; background, arrow and divider style, vertical spacing, separate text styles for section titles and content | Text only: no images or links inside. Recommended inside Fluid Grid Blocks so the block grows as sections open | Accordion |
+ | Carousel | Slides that can hold any elements; autoplay, arrows, dots, loop (three slides or more), transition time, background | Use inside Fluid Grid Blocks is not documented | Carousel |
+-| HTML | Custom HTML widget | Sits on top of the page structure: not part of its responsiveness, native integrations, lead collection, lead notifications or form-submission conversion goals. Runs only on the live page. Instapage support does not troubleshoot it | Embedding custom HTML |
++| HTML | Custom HTML widget | Sits on top of the page structure: not part of its responsiveness, native integrations, lead collection, lead notifications or form-submission conversion goals. Some embeds render in preview; the vendor recommends published testing. Record unavailable draft tests as NOT_RUN. Instapage support does not troubleshoot it | Embedding custom HTML |
+ 
+ Every element can be set visible on desktop and mobile, desktop only, or mobile only. Right-clicking an element also offers Duplicate, Order and Edit CSS (§10). [Page builder; Hiding elements]
+ 
+@@ -48,9 +50,9 @@ Every element can be set visible on desktop and mobile, desktop only, or mobile
+ 
+ ## 4. Responsive model
+ 
+-- Below 768 px of browser width the mobile version shows; wider shows desktop. A tablet in portrait gets mobile, in landscape desktop. The mobile version has to be switched on.
++- The guide says below 768 px is mobile and above 768 px desktop; exactly 768 is unspecified and requires an observed test. A tablet in portrait gets mobile, in landscape desktop. The mobile version has to be switched on.
+ - Canvas blocks respond up to 1200 px wide (editor guides at 960 and 1200 px; the inner column is fixed). The mobile canvas is 400 px wide.
+-- The mobile version uses the same elements as desktop, rearranged and resized. Elements stay tied to the block they were added to, so moving them into another block on mobile is not possible, and hiding a block hides its elements. "Regenerate" rebuilds the mobile arrangement from desktop. Groups and the mobile aspect-ratio lock keep arrangements together.
++- The mobile version uses the same elements as desktop, rearranged and resized. The current mobile guide documents moving an element to a different parent block, also changing its desktop parent. Earlier guidance said this was impossible; confirm rollout in the workspace. Hiding a block hides its elements. "Regenerate" rebuilds the mobile arrangement from desktop. Groups and the mobile aspect-ratio lock keep arrangements together.
+ - Device-specific settings, in limited release: width, height, padding, font size, line height, text alignment, list styles and custom styles per device; form field label size; image size, background position and top margin.
+ - Elements can be hidden per device. Blocks can be hidden on mobile but never on desktop.
+ 
+@@ -160,6 +162,14 @@ Not used for creative decisions on CreativeEngine work (SKILL.md hard rule 4). [
+ | MCP host support | The help article says the MCP is supported only on Claude; the setup guide also generates configurations for Cursor, ChatGPT and other hosts |
+ | Page JSON paths for element type, inline CSS and page code | UNVERIFIED; record them at the first connection so QA can check them from a snapshot |
+ 
++## Continuation recheck (2026-09-24)
++
++- [Mobile guide](https://help.instapage.com/hc/en-us/articles/40608499118743-Optimizing-Your-Page-for-Mobile): shared structural reparenting and device settings are documented; workspace availability still OPEN. Regenerate resets mobile tweaks, so it is not a routine preservation strategy.
++- [Custom HTML](https://help.instapage.com/hc/en-us/articles/205221768-Embedding-custom-HTML-or-widgets-into-an-Instapage-landing-page): some preview rendering is possible; native form goals/lead handling do not cover embeds.
++- [External tracking](https://help.instapage.com/hc/en-us/articles/205235648-External-Conversion-Tracking): externally embedded forms are explicitly unsupported; do not equate query forwarding with attribution or completion.
++- [Third-party tracking](https://help.instapage.com/hc/en-us/articles/15018624912791-Analytics-tracking-with-third-party-providers): placement and consent behavior require checking, particularly script tags in Scripts & Privacy.
++- [API Update Page](https://devdocs.instapage.com/#update-page): group assignment, not a design-content replacement API. Export/import supports a new standard page, with schema and carryover tests still required.
++
+ ## Sources
+ 
+ Instapage Help Center (`help.instapage.com/hc/en-us/articles/…`), read 2026-09-24:
+diff --git a/DesignChamp/knowledge/figma-agent-pack/09_instapage_native_kit.txt b/DesignChamp/knowledge/figma-agent-pack/09_instapage_native_kit.txt
+index 2c866ac..c556748 100644
+--- a/DesignChamp/knowledge/figma-agent-pack/09_instapage_native_kit.txt
++++ b/DesignChamp/knowledge/figma-agent-pack/09_instapage_native_kit.txt
+@@ -5,14 +5,14 @@ Read only when the request says the landing page will be produced in Instapage.
+ 
+ WHAT THIS IS
+ You are drawing a landing-page SPECIFICATION that a person will rebuild natively
+-inside Instapage. Everything you draw must have a native Instapage equivalent, so
+-the client can keep editing the page without a developer.
++inside Instapage. Ordinary content maps to native elements. Document required integration exceptions
++with external editing/maintenance owners; do not claim embedded CRM fields are native.
+ The kit file: "CreativeEngine · Instapage Native Kit"
+ https://www.figma.com/design/suQoQdAczG3IZRVMxooqpb
+ 
+ THREE LAYERS: KEEP THEM APART
+ Layer 1  The kit's IP primitives. Neutral grey wireframes. They carry structure, not
+-         style. Never leave their grey look, mono font or square corners in a spec.
++         style. These are replaceable conventions; client-approved styling and bindings govern.
+ Layer 2  The client's own library (client files 10+): faces, colors, buttons, forms,
+          imagery, client components named <Client> / <Section> / <Variant>.
+ Layer 3  This page: layout, composition, hierarchy, copy placement, mobile order.
+@@ -21,47 +21,48 @@ Never create or reuse a "CreativeEngine" house style.
+ Never pick a template because it is close. Build what the request specifies.
+ 
+ HOW TO BUILD THE SPEC
+-- Two frames: "Desktop · 1440" (content column 1200) and "Mobile · 400".
++- Desktop/mobile frames: 1440/400 are preview conventions, not universal dimensions.
+   Same blocks, same IDs, same order in both.
+ - Each section is a BLOCK: a full-width frame named "B01 · <section> · Fluid Grid"
+   or "B01 · <section> · Canvas". Number blocks top to bottom.
+-- Fluid Grid block = a frame with Figma GRID layout (columns, rows, gaps).
+-  Block padding at least 20 px left and right.
++- Figma GRID expresses intended Fluid Grid structure, not proven runtime equivalence.
++  Vendor-suggested 20 px side padding is guidance, not a hard platform minimum.
+ - Inside it, each CONTAINER is an auto-layout frame spanning grid cells, named
+   "B01.C1 · m1" where m1 = its position when stacked on mobile.
+-  Container settings you may use: direction, alignment, gap, padding, fill color or
+-  image, border, corner radius. Nothing else.
++  Document intended native container settings: direction, alignment, gap, padding, fill color or
++  image, border, corner radius. Validate mappings in the actual builder.
+ - Every element is an instance of a kit primitive (IP / Headline, IP / Paragraph,
+   IP / Button, IP / Image, IP / Video, IP / Line, IP / Form, IP / Timer,
+   IP / Accordion, IP / Carousel) or of a client component built from them.
+   Restyle instances with the client's faces and colors.
+ - Name elements with IDs: "E01 · Headline h1", "E05 · Image · IMG-01".
+ 
+-MOLECULES, ORGANISMS AND SEMANTIC TOKENS
+-- Molecules: IP / Text Group (eyebrow, title, subtitle, description), IP / Action
+-  (Primary, Secondary, Tertiary), IP / Button Group, IP / Card (Color, Image,
+-  Image overlay). Organisms: IP / Hero (Split, Overlay), IP / Proof · Cards,
+-  IP / Form Section, IP / CTA Band. Use the client's versions when they exist.
+-- They bind to the "Semantic (client fills)" tokens and Semantic/* text styles.
+-  Set colors, spacing and radius through those tokens. Never hardcode values.
+-- No gradients. An image-overlay tint is safe only on a block background.
++COMPOSITE FIXTURES AND SEMANTIC PLACEHOLDERS
++- The eight composites on Molecules & organisms are preserved mapping fixtures,
++  never client starters or universal hero/CTA layouts. The approved spec dictates composition.
++- Preserve Semantic token/style bindings, but define approved client values and any
++  client-specific names in the isolated client library. Spacing/radius/opacity values
++  in this kit are replaceable preview placeholders, not global design standards.
++- Overlay and other composite native mappings require workspace evidence; no runtime
++  or editor-authorability guarantee follows from a Figma component.
+ 
+ LIMITS YOU MUST DESIGN WITHIN
+ - Only three font roles per page: headline, paragraph, button. Forms use the
+   paragraph face, and form field text size cannot be changed.
+-- At most 14 colors (the client's Instapage palette).
++- At most 14 entries in Instapage Styles; this is not the full client palette limit.
+ - No box or circle shapes inside a Fluid Grid block. Use container fill, border and
+   radius, or make that section a Canvas block.
+ - Accordion sections: text only. No links or images inside.
+ - Timer: counts down to one fixed date only. No labels on mobile.
+ - Video: YouTube, Vimeo or Wistia. No uploaded or looping video.
+-- Popups are always white.
+-- An element cannot move to another block on mobile. If mobile needs it elsewhere,
+-  draw a desktop-only copy and a mobile-only copy with the same words.
++- Popup background controls require workspace verification; no universal client color.
++- Reparenting on mobile is documented to change desktop structure too; verify workspace
++  behavior. Independent placements need explicit device intent and approved duplicates.
+ - Exactly one h1 on the page.
+ - Text must stay real text. Never set copy inside an image to get a look.
+-- No custom-code components, embeds, widgets or iframes. If something cannot be drawn
+-  with the kit, STOP and report it as a constraint. Do not fake it.
++- Never recreate ordinary native content in custom code. A required CRM embed may
++  have an approved INTEGRATION exception with named owners and tested tracking.
++  Report other native gaps with alternatives; do not invent support.
+ 
+ ANNOTATIONS (use Figma annotations, not visible text on the design)
+   IP · Copy       copy ID of the text on this layer (from the approved copy doc)
+@@ -69,6 +70,8 @@ ANNOTATIONS (use Figma annotations, not visible text on the design)
+   IP · Build      link target, visibility, sticky, form settings, conversion goal
+   IP · Reuse      Page-local / My Block / Global Block (+ reason) on each block
+   IP · Exception  anything that is not native, with the native options
++Repeat shared annotations on both devices and lint stable IDs; no implicit inheritance.
++Preserve client variable/style bindings; Instapage Styles is not a live token sync.
+ Reuse tags (IP / Tag) go in the margin beside the block, never inside the design.
+ 
+ IMAGES
+diff --git a/DesignChamp/skills/instapage-production.md b/DesignChamp/skills/instapage-production.md
+index daa7d69..4acea84 100644
+--- a/DesignChamp/skills/instapage-production.md
++++ b/DesignChamp/skills/instapage-production.md
+@@ -6,24 +6,24 @@
+ | Owner | DesignChamp (turning an approved landing-page spec into a native Instapage page). WordSmither owns every word on the page; BriefMachine supplies the ask; CreativeDirector approves creative compromises and the work before it goes live; the user or client decides when it goes live |
+ | Status | Built at the user's request 2026-09-24. **Instapage MCP not yet connected** (no Instapage tools in the session); first-connection checklist pending (`references/mcp-and-api.md` §7). Figma Native Kit built the same day |
+ | Installed | `.claude/skills/instapage-production/`: `SKILL.md`; `references/` (platform, native-authorability, figma-kit, build-sheet, responsive, reusable-blocks, forms-and-tracking, mcp-and-api, publishing, qa); `scripts/ip_check.py` with `scripts/tests/` |
+-| Figma kit | "CreativeEngine · Instapage Native Kit", `https://www.figma.com/design/suQoQdAczG3IZRVMxooqpb` (TRAFFIK team drafts; Layer 1 only; not yet published as a team library) |
++| Figma kit | "CreativeEngine · Instapage Native Kit", `https://www.figma.com/design/suQoQdAczG3IZRVMxooqpb` (TRAFFIK team drafts; Layer 1 only; publication unconfirmed on recheck (published-component query is plan/seat-gated)) |
+ | Scope | Native Instapage production of single marketing landing pages from an approved spec: INSPECT, BUILD, UPDATE, QA, PUBLISH, MEASURE. Not prototyping (`format-prototyping`), not creative development, not a design system |
+ 
+ ## Principles set by the user (2026-09-24)
+ 
+-- **Native Authorability.** A production page stays editable in Instapage by a competent non-developer. User-facing structure uses native blocks, elements, widgets and forms; code only for infrastructure, in a fixed preference order, every exception recorded.
++- **Native Authorability.** A production page stays editable in Instapage by a competent non-developer. User-facing structure uses native blocks, elements, widgets and forms; code for approved infrastructure or documented integration exceptions, including required CRM embeds. External editing/maintenance ownership and tracking validation are explicit; ordinary content remains native.
+ - **Client-agnostic platform, client-specific expression.** The skill and kit define how to build in Instapage, never what a client looks like. Three layers: neutral native primitives (global), each client's own design system (client-scoped), each project's composition. No CreativeEngine-branded components or house look; a client pattern never becomes global; templates and blocks are implementation resources, never creative authorities.
+ - **Publishing is separate and explicit.** Nothing goes live because a build succeeded.
+ 
+ ## Review (2026-09-24)
+ 
+-- **Executables.** `scripts/ip_check.py` is standard-library Python: it reads local JSON, prints to stdout, makes no network calls and touches no credentials. 36 unit tests, including two that fail if the references and the checker drift apart. Everything else is Markdown.
++- **Executables.** `scripts/ip_check.py` is standard-library Python: it reads local JSON, prints to stdout, makes no network calls and touches no credentials. Test results and recovery snapshots are recorded in `validation/instapage-production-2026-09-24/continuation/`. Additional offline tools check annotation parity and conflict-safe scalar preservation; none proves Instapage runtime support.
+ - **Connector.** Instapage's hosted MCP (`https://mcp.instapage.com`; help article of 2026-09-17; setup guide and 39-tool catalog at `mcp.instapage.com/howto`). Authentication is a personal API key sent as a bearer header; the key has no scopes and carries its creator's full permissions. Client-side headers limit which tools the model sees. Instapage says the server does not store the key.
+ - **Least privilege.** Two layers. Server side: the key comes from a dedicated **Editor** with Developer Access, which Instapage prevents from publishing, unpublishing, starting experiments or applying Global Blocks on live pages. Client side: exact tool allowlists (READ, BUILD) with no publishing, deleting or team tools. PUBLISH is a separate Manager-level profile, off by default; the default is a Manager publishing in the Instapage UI.
+ - **Credentials.** The key lives in the macOS Keychain and reaches Claude Code through a `headersHelper` script outside the repo. It never enters the repo, `.mcp.json`, a prompt or a message. Instapage's Claude Desktop config (via `npx mcp-remote`) is documented but not preferred, because it keeps the key in a plain file.
+ - **Data.** Page JSON snapshots, images by HTTPS URL, aggregate analytics. Leads and team data are masked by default; unmasking only with the user's consent, never stored in the repo.
+ - **Destructive operations.** `page_delete`, folder and collection-page deletion, submission deletion and team changes are in no profile. Collection-page and submission deletion have no undo.
+-- **What the MCP cannot do.** It cannot compose a page: no tools for blocks, elements, forms, integrations, conversion goals, scripts or saved blocks, and no in-place edits (a patched snapshot is saved as a new page). The page JSON format is undocumented. So structure is authored natively in the editor, or copied from a native page, and never synthesized as JSON.
++- **What the MCP cannot do.** It cannot compose a page: no tools for blocks, elements, forms, integrations, conversion goals, scripts or saved blocks, and no in-place edits (a patched snapshot is saved as a new page). The page JSON format is undocumented. So structure is authored natively in the editor, or copied from a native page, or generated through an adapter grounded in native exports and validated per `references/preservation.md`. Unsupported structures remain hypotheses.
+ - **Overlap.** `format-prototyping` proves an idea as a prototype, this skill produces it natively; a prototype is never promoted. Code-first web skills (`design-taste-frontend`, `image-to-code`, `redesign-existing-projects`, `ui-ux-pro-max` stacks) produce what Native Authorability forbids and are not used for Instapage production. Instapage's own AI (Prompt to Page, AI Content Generator, AI translation) is not used for creative decisions. The Figma plugin skills do the Figma operations; the kit supplies the mapping.
+ - **Assets.** Generated media stays inspiration and pitch only (`artlist-production.md`) and never enters an Instapage page. Placeholders are allowed in drafts and block publishing.
+ - **Isolation.** One key and one workspace per client where the agency spans several client accounts; saved blocks and images are per workspace in Instapage. Client libraries in Figma and Instapage stay with their client; nothing is borrowed across clients.
+@@ -36,3 +36,7 @@
+ - **BriefMachine:** supplies the ask (objective, audience, offer, claims and status, mandatories, CTA wording, destination, measured event and measurement definition) and resolves form-field and measurement mismatches.
+ - **CreativeDirector:** approves the spec for production, decides material compromises and component exceptions, and gives creative approval before any publish.
+ - **Any role, any session:** this record governs Instapage work on CreativeEngine (root `CLAUDE.md`).
++
++## Continuation evidence
++
++Per-feature mappings and open workspace tests: `references/capability-map.md`. Native adapter, release/rollback and saved-edit preservation contract: `references/preservation.md`. Synthetic range fixtures prove visual flexibility only. Fernwick remains a specification test until an unpublished draft passes native structure, rendering, editor and preservation tests. No page was published by this continuation.

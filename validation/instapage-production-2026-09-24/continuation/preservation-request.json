@@ -1,0 +1,13 @@
+{
+  "current_sha256": "a97fee76357dc30c1dc1969cad68fde24726d5ce0668e3949b13f19bcd97feec",
+  "changes": [
+    {
+      "path": [
+        "elements",
+        "E02",
+        "link"
+      ],
+      "value": "https://example.org/new"
+    }
+  ]
+}

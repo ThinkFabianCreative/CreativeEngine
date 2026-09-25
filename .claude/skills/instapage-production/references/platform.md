@@ -1,6 +1,8 @@
 # Instapage platform facts
 
-Verified 2026-09-24 against Instapage's Help Center, the Public API reference and the MCP guide, all read that day. Paraphrased; the linked articles are the source (list at the end). "Updated" dates are the articles' own.
+Documentation reviewed 2026-09-24 against Instapage's Help Center, the Public API reference and the MCP guide, all read that day. Paraphrased; the linked articles are the source (list at the end). "Updated" dates are the articles' own.
+
+No target workspace or runtime was inspected. See `capability-map.md` for per-feature status and the recheck notes below. Documentation is not implementation validation.
 
 Instapage changes often, and several features depend on the plan or are rolling out gradually. Re-check a fact before a spec depends on it, when it is older than 90 days, or when the editor behaves differently. Record every divergence in §15 with its date.
 
@@ -13,7 +15,7 @@ Instapage changes often, and several features depend on the plan or are rolling 
   - **Fluid Grid Blocks**: a grid of containers that reflows by itself (§3).
   Block templates exist for both kinds. [Block Templates; Fluid Grid]
 - The first and/or last block can be made a sticky header or footer in page settings. Stickiness does not show in the editor, only on a published page. [Sticky Bar]
-- **Popups** are built in a popup builder (Assets > Popups) and opened on click or by page triggers. A global popup pushes its changes to every page that uses it. The popup background is always white; the documented workaround is a Box sent to the back. [Popups, updated 2026-03-27; Assets]
+- **Popups** are built in a popup builder (Assets > Popups) and opened on click or by page triggers. A global popup pushes its changes to every page that uses it. Earlier notes claimed a white-only popup background; this was not found in the rechecked popup article. Treat it as OPEN, not a platform mandate. [Popups, updated 2026-03-27; Assets]
 
 ## 2. Elements and widgets
 
@@ -30,7 +32,7 @@ Instapage changes often, and several features depend on the plan or are rolling 
 | Timer | Counts down to one fixed date and time; color, language, label position | Not evergreen or per-visitor; stays at zero after the date for everyone; labels are not shown on mobile | Timer |
 | Accordion | Collapsible text sections; background, arrow and divider style, vertical spacing, separate text styles for section titles and content | Text only: no images or links inside. Recommended inside Fluid Grid Blocks so the block grows as sections open | Accordion |
 | Carousel | Slides that can hold any elements; autoplay, arrows, dots, loop (three slides or more), transition time, background | Use inside Fluid Grid Blocks is not documented | Carousel |
-| HTML | Custom HTML widget | Sits on top of the page structure: not part of its responsiveness, native integrations, lead collection, lead notifications or form-submission conversion goals. Runs only on the live page. Instapage support does not troubleshoot it | Embedding custom HTML |
+| HTML | Custom HTML widget | Sits on top of the page structure: not part of its responsiveness, native integrations, lead collection, lead notifications or form-submission conversion goals. Some embeds render in preview; the vendor recommends published testing. Record unavailable draft tests as NOT_RUN. Instapage support does not troubleshoot it | Embedding custom HTML |
 
 Every element can be set visible on desktop and mobile, desktop only, or mobile only. Right-clicking an element also offers Duplicate, Order and Edit CSS (§10). [Page builder; Hiding elements]
 
@@ -48,9 +50,9 @@ Every element can be set visible on desktop and mobile, desktop only, or mobile 
 
 ## 4. Responsive model
 
-- Below 768 px of browser width the mobile version shows; wider shows desktop. A tablet in portrait gets mobile, in landscape desktop. The mobile version has to be switched on.
+- The guide says below 768 px is mobile and above 768 px desktop; exactly 768 is unspecified and requires an observed test. A tablet in portrait gets mobile, in landscape desktop. The mobile version has to be switched on.
 - Canvas blocks respond up to 1200 px wide (editor guides at 960 and 1200 px; the inner column is fixed). The mobile canvas is 400 px wide.
-- The mobile version uses the same elements as desktop, rearranged and resized. Elements stay tied to the block they were added to, so moving them into another block on mobile is not possible, and hiding a block hides its elements. "Regenerate" rebuilds the mobile arrangement from desktop. Groups and the mobile aspect-ratio lock keep arrangements together.
+- The mobile version uses the same elements as desktop, rearranged and resized. The current mobile guide documents moving an element to a different parent block, also changing its desktop parent. Earlier guidance said this was impossible; confirm rollout in the workspace. Hiding a block hides its elements. "Regenerate" rebuilds the mobile arrangement from desktop. Groups and the mobile aspect-ratio lock keep arrangements together.
 - Device-specific settings, in limited release: width, height, padding, font size, line height, text alignment, list styles and custom styles per device; form field label size; image size, background position and top margin.
 - Elements can be hidden per device. Blocks can be hidden on mobile but never on desktop.
 
@@ -159,6 +161,14 @@ Not used for creative decisions on CreativeEngine work (SKILL.md hard rule 4). [
 | What `page_snapshot_save` and `page_import_json` carry into the new page (integrations, conversion goals, scripts and privacy, SEO, lead notifications, Global Block links) | UNVERIFIED until the first connection (`mcp-and-api.md` §7). The `.instapage` upload loses them (§13); assume the same until tested |
 | MCP host support | The help article says the MCP is supported only on Claude; the setup guide also generates configurations for Cursor, ChatGPT and other hosts |
 | Page JSON paths for element type, inline CSS and page code | UNVERIFIED; record them at the first connection so QA can check them from a snapshot |
+
+## Continuation recheck (2026-09-24)
+
+- [Mobile guide](https://help.instapage.com/hc/en-us/articles/40608499118743-Optimizing-Your-Page-for-Mobile): shared structural reparenting and device settings are documented; workspace availability still OPEN. Regenerate resets mobile tweaks, so it is not a routine preservation strategy.
+- [Custom HTML](https://help.instapage.com/hc/en-us/articles/205221768-Embedding-custom-HTML-or-widgets-into-an-Instapage-landing-page): some preview rendering is possible; native form goals/lead handling do not cover embeds.
+- [External tracking](https://help.instapage.com/hc/en-us/articles/205235648-External-Conversion-Tracking): externally embedded forms are explicitly unsupported; do not equate query forwarding with attribution or completion.
+- [Third-party tracking](https://help.instapage.com/hc/en-us/articles/15018624912791-Analytics-tracking-with-third-party-providers): placement and consent behavior require checking, particularly script tags in Scripts & Privacy.
+- [API Update Page](https://devdocs.instapage.com/#update-page): group assignment, not a design-content replacement API. Export/import supports a new standard page, with schema and carryover tests still required.
 
 ## Sources
 

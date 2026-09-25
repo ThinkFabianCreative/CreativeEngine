@@ -1,0 +1,4 @@
+WARNING P14  assets.IMG-01: placeholder: allowed in drafts, blocks publishing
+WARNING P25  B03.E13: claim C1 is SOURCE-STATED: confirm before publishing; blocks publishing until VERIFIED
+WARNING P20  CON-03: constraint OPEN with DesignChamp
+PLAN: 0 FAIL · 3 WARNING · build may proceed

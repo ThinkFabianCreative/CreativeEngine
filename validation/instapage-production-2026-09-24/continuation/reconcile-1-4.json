@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"mutatedNodeIds\":[\"10:21\",\"10:45\",\"10:47\",\"10:48\",\"10:50\",\"10:70\",\"10:73\",\"10:78\",\"10:79\"],\"before\":[{\"id\":\"10:21\",\"text\":\"ONE NATIVE INSTAPAGE PRODUCTION GRAMMAR + MANY CLIENT DESIGN SYSTEMS + MANY PROJECT EXPRESSIONS. Client A can be editorial and type-led, Client B dense and product-led, Client C loud and image-led, all from these same primitives, all editable in Instapage, none inheriting another. Templates and saved blocks are implementation resources, never creative authorities: production asks \\\"what is the most faithful native build of the approved spec?\\\", never \\\"which existing template is closest?\\\".\"},{\"id\":\"10:45\",\"text\":\"Client layers replace all of it: real faces on the three font roles, the client's colors, radius, borders, shadows, case and hover. Nothing from this register should survive into a client spec.\"},{\"id\":\"10:47\",\"text\":\"WHAT A CLIENT LAYER HAS TO FIT (PLATFORM FACTS, VERIFIED 2026-09-24)\"},{\"id\":\"10:48\",\"text\":\"Technical limits only. No values here are recommendations.\"},{\"id\":\"10:50\",\"text\":\"— Type: three font roles per page (headline, paragraph, button); forms use the paragraph family at a size Instapage fixes. Custom fonts are added in Assets > Fonts by an Owner or Manager, with the client's licence.\"},{\"id\":\"10:70\",\"text\":\"Portrait tablets get the mobile layout. QA at 767 and 769.\"},{\"id\":\"10:73\",\"text\":\"Verified 2026-09-24 (platform.md). Push the native range first; raise a constraint early; an exception is the last resort.\"},{\"id\":\"10:78\",\"text\":\"— Popup background is always white.\"},{\"id\":\"10:79\",\"text\":\"— An element cannot move to another block on mobile. Duplicate it with desktop-only and mobile-only visibility instead.\"}]}"
+    }
+  ],
+  "isError": false
+}

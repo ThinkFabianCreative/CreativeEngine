@@ -38,3 +38,18 @@ Wireframe font, grey controls, zero radius, preview spacing and 1440/400 frames 
 | IP-MY · My Block reuse · `11:11` | Canvas / Fluid Grid; workspace library | Block menu > Save to My Blocks; insert approved same-client block | Inserted copies edited independently; never creative starting template | Recheck device arrangement on insertion | [Help](https://help.instapage.com/hc/en-us/articles/115015974327-What-are-Instablocks-and-how-to-use-them) |
 | IP-GLOBAL · Global Block reuse · `11:14` | Canvas / Fluid Grid; plan-dependent | Save as Global Block; record owner, reason, approval, affected pages | Synchronized; Manager required for apply to live references; one instance per page | Validate only isolated draft references; never apply shared live changes for QA | [Help](https://help.instapage.com/hc/en-us/articles/360001095648-What-are-Global-Blocks-and-how-to-use-them) |
 | IP-STICKY · Sticky header/footer · `11:23 / 11:26` | Page settings; first/last block | Page settings > Sticky Bar; device-specific approved intent | Native setting; no scripted substitute | Runtime may need published environment; keep NOT_RUN if unavailable | [Help](https://help.instapage.com/hc/en-us/articles/23659391659031-Sticky-Bar) |
+
+## Additional composites found during the continuation
+
+The other writer added these before being paused. They are preserved as implementation fixtures, not Layer 1 creative authorities or client starters. The ownership, workspace availability, check date and NOT_RUN evidence contract above applies to each. All require native structure, responsive and ordinary editing tests. No complete-composite schema/import evidence exists.
+
+| Stable ID / name / Figma node | Native mapping and exact editor route | Ordinary editing / responsive limits | Official source / open evidence |
+|---|---|---|---|
+| FIX-TEXT · Text Group · 33:9 | Separate Headline/Paragraph elements in a native container | Edit each text element; title hierarchy and wrapping come from spec | Text boxes article linked on family; compound layout NOT_RUN |
+| FIX-ACTION · Action · 33:30 | Native Button, or selected native text link where specified | Native label/link/style editing; hierarchy is client-specific | Links article on family; variants NOT_RUN |
+| FIX-BUTTONS · Button Group · 33:34 | Separate native Buttons; container flow per approved spec | Edit/reorder controls natively; verify mobile flow | Family has no documentation link; mapped primitives: [Links](https://help.instapage.com/hc/en-us/articles/206024937-Adding-a-link-to-a-page-element); composite NOT_RUN |
+| FIX-CARD · Card · 33:88 | Native container and text/image/button elements | Container styles and element editing; overlay mapping unresolved | Fluid Grid article on family; overlay/background capability OPEN |
+| FIX-HERO · Hero · 34:88 | Approved client composition built with native block/containers/elements | Client chooses composition; fixture split/overlay is no default | Fluid Grid family link; entire composite and overlay mapping NOT_RUN |
+| FIX-PROOF · Proof Cards · 34:89 | Native block and independent containers/elements | Client chooses count and order; verify mobile stacking | Fluid Grid family link; entire composite NOT_RUN |
+| FIX-FORM · Form Section · 34:142 | Native block, text, Form Library form | Native text/field editing; field and integration limits apply | Form Builder family link; entire composite NOT_RUN |
+| FIX-CTA · CTA Band · 34:181 | Native block/containers and text/buttons | Client chooses surface, composition and action hierarchy | Fluid Grid family link; entire composite NOT_RUN |
