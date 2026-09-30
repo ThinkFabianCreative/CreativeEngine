@@ -10,3 +10,6 @@ __pycache__/
 projects/**/work/generated/**
 !projects/**/work/generated/**/
 !projects/**/work/generated/**/*.md
+
+# Local source photos (copyrighted book pages and LUMA cards); summarized in shared/frameworks
+SprintFacilitator/SprintBook_Design_thinking/
