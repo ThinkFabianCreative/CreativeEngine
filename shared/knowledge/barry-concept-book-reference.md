@@ -2,7 +2,9 @@
 
 > Shared knowledge. A reading of an OCR capture of the book, organized for use. It is **not** a framework and is not registered as one. It feeds `barry-concept-art-direction.md`, `hey-whipple-copycraft.md`, `pricken-idea-mechanisms.md`, `brief-normalization.md` and `selling-the-work.md` when their owners choose to use it. Holds no client facts.
 
-Source: `~/Downloads/PeteBarry-AdvertisingConcept-book/`, 83 OCR'd photos. Primary text: `book_cleaned.txt` (re-OCR with orientation/lighting correction; low-confidence passages flagged `[OCR uncertain]` / `[Unclear OCR passage]`; pages 1 and 46 hand-corrected; described by its maker as a working reference, not a proofread transcription). `book.txt` (first pass) is kept for comparison. The source photos are in the same folder for spot checks. Citations use the image filename (`[p001]` = `001.jpg`, `[p0041]` = `0041.jpg`). **These are photo files, not printed page numbers.** Printed page numbers mentioned below come from the book's own cross-references and are marked "book p."
+Source: `~/Downloads/PeteBarry-AdvertisingConcept-book/`, 83 OCR'd photos. Primary text: `book_cleaned.txt` (re-OCR with orientation/lighting correction; low-confidence passages flagged `[OCR uncertain]` / `[Unclear OCR passage]`; pages 1 and 46 hand-corrected; described by its maker as a working reference, not a proofread transcription). `book.txt` (first pass) is kept for comparison. The source photos are in the same folder for spot checks.
+
+Second capture: `~/Downloads/PeteBarry-ExecutionChapter/book_cleaned.txt`, the **Execution chapter** (starts at book p.229): 13 JPGs and one video frame. Cited by filename, e.g. `[IMG_3162]`. See §6. Citations use the image filename (`[p001]` = `001.jpg`, `[p0041]` = `0041.jpg`). **These are photo files, not printed page numbers.** Printed page numbers mentioned below come from the book's own cross-references and are marked "book p."
 
 Everything is paraphrased. The examples marked *(original)* are CreativeEngine's own, not the book's.
 
@@ -12,7 +14,7 @@ Everything is paraphrased. The examples marked *(original)* are CreativeEngine's
 
 **Coverage is partial.** The capture holds roughly the Introduction, Basic Tools, The Strategy chapter, and fragments of the print/headline material. The book refers to sections that are **not in the capture**, so none of them may be cited as read:
 
-- The Exaggeration Tool (book p.136), Tackling the Double Proposition (p.143), Push It: Literal vs. Lateral (p.144), College Humor (p.151), the contrasting pair (p.205), Theater of the Mind / radio (p.210), the TV, Radio, Integrated, Execution, Presenting and Selling, and Student Book chapters, and Generating Strategies and Ideas.
+- The Exaggeration Tool (book p.136), How to Do a Volkswagen Ad (p.206), Questions Every Art Director Should Ask Themselves (p.243), Search / Look (p.244), Tackling the Double Proposition (p.143), Push It: Literal vs. Lateral (p.144), College Humor (p.151), the contrasting pair (p.205), Theater of the Mind / radio (p.210), the TV, Radio, Integrated, Presenting and Selling, and Student Book chapters, and Generating Strategies and Ideas.
 
 **OCR problems found:**
 
@@ -200,7 +202,7 @@ All examples below are *(original)*: hypothetical brands, written for this refer
 
 ### Complements
 
-- **`barry-concept-art-direction.md`.** That framework predates this reading; the book **supports** its core: think now/design later [p001], [p004]; roughs over finished art [p004]; single-mindedness [p0073]; visual clichés [p0052]; campaign consistency [p008]. It also adds material the framework lacks: the opposite tool, imply-don't-reveal, "do I need people / the product?", SLIP IT, and the cold-read test.
+- **`barry-concept-art-direction.md`.** That framework predates this reading; the book **supports** its core: think now/design later [p001], [p004]; roughs over finished art [p004]; single-mindedness [p0073]; visual clichés [p0052]; campaign consistency [p008]. The Execution chapter (§6) also supports its image decisions, type as concept and campaign consistency. The book adds material the framework lacked: the opposite tool, imply-don't-reveal, "do I need people / the product?", SLIP IT, and the cold-read test.
 - **`pricken-idea-mechanisms.md`.** Barry's Opposite Tool ≈ Pricken's Reversal; his exaggeration-vs.-contrivance test sharpens Pricken's Exaggeration; "imply, don't reveal" ≈ Omission; symbol-with-a-twist sits between Fusion and Analogy. Both share *truth first, mechanism second* ([p0074] vs. Pricken §1).
 - **`hey-whipple-copycraft.md`.** Headline twist, question exceptions, "no best", no exclamation marks and 1-in-10 are copycraft methods in the same tradition.
 - **`brief-normalization.md`.** Barry's strategy statement and the three failure points are a compact readiness check. Binary briefing is a useful forcing device BriefMachine does not currently hold.
@@ -220,3 +222,47 @@ All examples below are *(original)*: hypothetical brands, written for this refer
 - **Framework attribution.** Resolved: `barry-concept-art-direction.md` now separates what is verifiable in the book, what is CreativeEngine's own, and what is unread, and adds the book's tools as §14.
 - **Quantity rule vs. EXPLORE philosophy.** None real; the 1-in-10 tool and "write first, edit last" match EXPLORE. The only tension is that Barry's "Kill your babies" belongs in convergence, never mid-divergence.
 - **"Best" and legality.** Barry says the UK bars "best" claims [p0028]. Treat this as a historical claim from the book, not current legal advice; claim substantiation follows CLAUDE.md's rule (reviewed evidence or explicit approval).
+
+---
+
+## 6. Execution chapter (second capture)
+
+**Scope.** In this chapter "execution" means the final layout and production of an ad, not an individual ad in a campaign [IMG_3162]. Its focus is the student portfolio, practical, and much of it concerns 2000s-era tools. Barry frames it as craft that follows a decided concept.
+
+**Quality.** Legible: [IMG_3162] opening, [IMG_3163], [IMG_3165], [IMG_3167], [IMG_3168], [IMG_3171], [IMG_3173], [IMG_3175]/[IMG_3176] color. Largely unclear: [IMG_3164] (resolution arithmetic partly readable), [IMG_3166] (type = brand, fragmentary), [IMG_3169] (two columns interleaved), [IMG_3172] (top half), [IMG_3175] (duplicate of [IMG_3173] with cropping). [IMG_3170] is a video frame with no text. [IMG_3174] is absent from the sequence. The full list of Heller's eight hand-lettering themes is not recoverable (six partly legible).
+
+### 6.1 Author's guidance
+
+| Method | Guidance (paraphrased) | Source |
+|---|---|---|
+| **Levels of finish** | Thumbnail → loose rough → tight rough → computer comp → finished ad. The first concept critique is a "tissue session." Thumbnails are unclear to anyone who doesn't already know the idea; a tight rough shows the art director's decisions without pretending to be final | [IMG_3162] |
+| **Stimulus, not source** | Keep a visual scrapbook. At the execution stage, reference solves the blank canvas; presented loosely, it becomes a mood board for the client | [IMG_3163] |
+| **Don't make it look computer-made** | No over-designed "graphic art" using every tool, no pixelated or muddy retouching, unless the idea needs it | [IMG_3163], [IMG_3164] |
+| **Logos done properly** | Always reproduced at full quality. Good logos (letter, word or picture form) work at any size and in white, black or color; use white on dark and black on light for contrast | [IMG_3164], [IMG_3165] |
+| **Type = brand, message, audience, tone** | Swap test: "Fresh Eggs" in a hand-painted farm sign reads fresh; in a formal serif on a brass plaque it reads clinical. Swap the two and each fails | [IMG_3166] (fragmentary; the example itself is legible) |
+| **Type as concept** | Sometimes the type is the idea, not a carrier for words (magazine headline with "stop" and "walk" colored like a crossing signal) | [IMG_3167] |
+| **Optical alignment** | Letter shapes (vertical, round, diagonal) make mechanically aligned large type look misaligned; adjust by eye | [IMG_3167] |
+| **Typeface restraint** | Be wary of novelty and default fonts; learn a handful of well-made faces | [IMG_3163], [IMG_3167] |
+| **Photo or illustration: decided by the idea** | Photography when it must feel real; illustration for the abstract, surreal, charming, or where a photo would be wrong (an illustrated oil-spill bird is less shocking and more charity-ad) | [IMG_3167], [IMG_3168] |
+| **The exact visual, not "close enough"** | Find the exact image, shoot or draw it, or composite it, in rising order of effort. A near-miss stock image can change the idea. Avoid cheesy "concept" stock except as spoof | [IMG_3168] |
+| **Shoot craft** | Compose around the idea, keep it clean; natural light; shoot wide and many versions; find the right location (not the obvious nearby one); use a real photographer where possible | [IMG_3169] |
+| **Grid** | Structure under all good layout. Fewer elements = more freedom; more elements = more need for a grid | [IMG_3169], [IMG_3171] |
+| **Begin with a classic layout** | Learn the Krone/DDB layout (dominant visual, headline below, body copy in columns, logo lower right) and its most-to-least hierarchy; then experiment. Steve Dunn: put the time into writing the ad and basic art direction will work | [IMG_3171] |
+| **Layout considerations** | Space, balance, mood, tone, rhythm, pitch, weight, texture, type (listed, not expanded in the capture) | [IMG_3171] |
+| **Campaign consistency: same yet different** | Executions should differ conceptually but connect visually: typeface, palette and element positions stay constant; logo size stays constant; headline size may vary to keep proportion with white space. Any unmotivated discrepancy reads as a mistake | [IMG_3171], [IMG_3172], [IMG_3173] |
+| **Layout twist** | The Opposite Tool applied to layout (Steve Dunn: logo top left, big pack shot, body copy louder than headline), with logic, an implicit grid and consistency | [IMG_3173] |
+| **Don't do ads (execution)** | An ad needn't look like an ad; a small difference can make it stand out | [IMG_3173] |
+| **Trust your instincts** | Execution is more subjective than concept; if it feels wrong, change it | [IMG_3173] |
+| **Compare and contrast versions** | One version = one page; keep versions side by side instead of overwriting one layout | [IMG_3173], [IMG_3175] |
+| **Color from idea and brand** | Choose a palette that fits brand, product and idea. Some brands own a color (Kodak yellow, UPS brown, Tiffany green, FT pink, Orange) | [IMG_3175] |
+| **Tonal contrast for legibility** | Light+light, mid+mid, dark+dark = least legible; light+dark = most. Watch small type most | [IMG_3175], [IMG_3176] |
+
+### 6.2 Examples and anecdotes (illustration only)
+
+The student who photographed a real roadkill raccoon with a coffee cup [IMG_3163]; the "Agency of One" student portfolio [IMG_3162], [IMG_3163]; the VW Jerry Garcia "Tear" illustration [IMG_3168]; the Economist posters' headline-size logic [IMG_3173]. Use them to illustrate a point, not as models.
+
+### 6.3 How the chapter relates to CreativeEngine
+
+- **Complements.** `typography.md` and `visual-craft.md` already hold deeper type, grid, color and legibility craft; Barry's type swap test, tonal-contrast rules and "same yet different" add plain, testable checks. His "type as concept" and "photo vs. illustration decided by the idea" confirm `barry-concept-art-direction.md` §6–§7.
+- **Qualifies.** Software, file-format, megapixel and dpi advice is dated; current specs come from `shared/knowledge/*-ads/` and production skills. "Make it look like it ran" is portfolio advice for students; for concept presentations `barry-concept-art-direction.md` §12 (finish appropriate to stage) still governs, which matches Barry's own levels of finish.
+- **Conflicts.** None found. Stock-image and DIY guidance predates AI image generation; the "exact visual, not close enough" principle applies to generated images too, and the AI rules in the framework and skill records still govern.

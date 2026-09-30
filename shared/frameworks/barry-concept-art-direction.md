@@ -6,10 +6,10 @@
 
 This is an operational CreativeEngine framework built around the concept-first approach of Pete Barry's *The Advertising Concept Book: Think Now, Design Later*.
 
-- **Source now available.** A partial OCR capture of the book has been read and summarized in `shared/knowledge/barry-concept-book-reference.md`, with citations by page-image file (`[p0063]` = `0063.jpg`, not a printed page number).
-- **What is Barry's.** Principles and tools marked *(Barry)* below are verifiable in that capture: concept before execution and roughs over finished art [p001], [p004]; strategy → concept → campaign [p0041]; the single-minded benefit [p0073]; truth [p0074]; exaggeration vs. contrivance [p0048], [p0049]; the Opposite Tool [p0063]; show, don't tell [p0066]–[p0068]; imply, don't reveal [p0064], [p0067]; symbols [p0053]; people and product optional [p0050], [p0051]; visual clichés [p0052]; campaign consistency of form and tone [p008], [p0037]; SLIP IT [p0071]; the cold-read test [p0079]; Impact + Branding + Relevance [p0069].
-- **What is CreativeEngine's.** The stage structure, section names, "who carries the idea", reading order, image arguments, premise vs. template, the AI-workflow guidance, the output wrapper and all examples are CreativeEngine's own. Do not attribute them to Barry.
-- **What is unread.** The capture lacks the book's Execution, TV, Radio, Integrated, Presenting and Selling chapters, and sections it cross-references (e.g. The Exaggeration Tool, Push It: Literal vs. Lateral). Do not claim what Barry says there.
+- **Source now available.** Partial OCR captures of the book (early chapters, and the Execution chapter) have been read and summarized in `shared/knowledge/barry-concept-book-reference.md`, with citations by page-image file (`[p0063]` = `0063.jpg`, not a printed page number).
+- **What is Barry's.** Principles and tools marked *(Barry)* below are verifiable in that capture: concept before execution and roughs over finished art [p001], [p004]; strategy → concept → campaign [p0041]; the single-minded benefit [p0073]; truth [p0074]; exaggeration vs. contrivance [p0048], [p0049]; the Opposite Tool [p0063]; show, don't tell [p0066]–[p0068]; imply, don't reveal [p0064], [p0067]; symbols [p0053]; people and product optional [p0050], [p0051]; visual clichés [p0052]; campaign consistency of form and tone [p008], [p0037]; SLIP IT [p0071]; the cold-read test [p0079]; Impact + Branding + Relevance [p0069]. From the Execution chapter: levels of finish [IMG_3162]; photo vs. illustration decided by the idea and the exact visual, not "close enough" [IMG_3167], [IMG_3168]; type as concept and the type swap test [IMG_3166], [IMG_3167]; begin with a classic layout, then twist it [IMG_3171], [IMG_3173]; campaign executions "same yet different" [IMG_3172], [IMG_3173]; compare layout versions side by side [IMG_3173].
+- **What is CreativeEngine's.** The stage structure, section names, "who carries the idea", reading order, the "image arguments" framing, premise vs. template (Barry's campaign-consistency point supports it but is narrower), the AI-workflow guidance, the output wrapper and all examples are CreativeEngine's own. Do not attribute them to Barry.
+- **What is unread.** The captures lack the book's TV, Radio, Integrated, Presenting and Selling chapters, and sections it cross-references (e.g. The Exaggeration Tool, Push It: Literal vs. Lateral). Do not claim what Barry says there.
 - **Author's guidance vs. his examples.** Barry's methods are guidance. The advertisements he cites, his students' work and his exercises are illustrations: use them only when relevant to the task, and never as templates.
 - Paraphrase; do not quote at length or invent quotations. Where the OCR is garbled, say the text is unclear rather than guessing the author's intent.
 
@@ -234,7 +234,7 @@ Don't produce this wrapper when the user wants finished work and it would make t
 
 ## 14. Concept tools (Barry)
 
-Generation and review tools from the book, cited in `shared/knowledge/barry-concept-book-reference.md` §2. Apply them selectively; they are tools, not rules [p0074].
+Generation, execution and review tools from the book, cited in `shared/knowledge/barry-concept-book-reference.md` §2 and §6. Detailed type, grid, color and legibility craft stays in `typography.md` and `visual-craft.md`. Apply them selectively; they are tools, not rules [p0074].
 
 | Tool | Move | Mode | Source |
 |---|---|---|---|
@@ -250,6 +250,13 @@ Generation and review tools from the book, cited in `shared/knowledge/barry-conc
 | **Overnight test / kill your babies** | Review fresh; drop favorites that don't earn their place. Convergence only, never mid-divergence | DEVELOP, JUDGE | [p0068] |
 | **SLIP IT** | A great ad makes you Smile, Laugh, is Informative, Provokes, Involves, or makes you Think, at least one. Communication alone is only "good" | JUDGE | [p0071] |
 | **Cold read: "do you get it?"** | Show it unexplained to someone new; ask what it says, not whether they like it. Retest rewrites on a new person | JUDGE | [p0079] |
+| **Type swap test** | Put the line in the opposite typeface and setting; if nothing feels wrong, the type isn't doing a job yet ("Fresh Eggs" on a brass plaque) | DEVELOP | [IMG_3166] |
+| **Exact visual, not close enough** | Find, shoot, draw or composite the image the idea needs; a near-miss image (stock or generated) quietly changes the idea | DEVELOP | [IMG_3168] |
+| **Photo or illustration by the idea** | Photography when it must feel real; illustration for abstraction, surrealism, charm, or to set the right emotional distance | DEVELOP | [IMG_3167], [IMG_3168] |
+| **Classic layout first, then twist** | Start from the classic most-to-least layout, then break it with a reason (logo top left, huge pack shot). Keep an implicit grid | DEVELOP | [IMG_3171], [IMG_3173] |
+| **Same yet different** | Across a campaign, hold typeface, palette, positions and logo size; vary the idea. Any unmotivated discrepancy reads as a mistake | DEVELOP, JUDGE | [IMG_3172], [IMG_3173] |
+| **Versions side by side** | Keep each layout version as its own page and compare, instead of overwriting one | DEVELOP | [IMG_3173] |
+| **Don't make it look computer-made** | No over-designed effects or muddy retouching unless the idea needs them | JUDGE | [IMG_3163] |
 | **Impact + Branding + Relevance** | Memorable, attributable to the brand, and right for product and audience | JUDGE | [p0069] |
 
 Qualifications: the poster "3 seconds / 8 words" guideline [p0015] is roadside OOH guidance, not a spec for other formats (verified platform knowledge governs). Barry's left/right-brain framing is dated; keep only the point that work should reach reason and emotion.
