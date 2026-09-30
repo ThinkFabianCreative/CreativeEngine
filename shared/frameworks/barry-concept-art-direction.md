@@ -4,11 +4,14 @@
 
 ## Attribution
 
-This is an operational CreativeEngine framework. It is inspired by the concept-first approach the user associates with Pete Barry's *The Advertising Concept Book: Think Now, Design Later*.
+This is an operational CreativeEngine framework built around the concept-first approach of Pete Barry's *The Advertising Concept Book: Think Now, Design Later*.
 
-- It was not built from notes on the book or from the book itself. The stages, tests, labels and examples below are CreativeEngine terminology.
-- Do not claim that any test, label or example appears in Barry's book, or that the book structures art direction this way.
-- Do not quote the book or invent quotations from it.
+- **Source now available.** A partial OCR capture of the book has been read and summarized in `shared/knowledge/barry-concept-book-reference.md`, with citations by page-image file (`[p0063]` = `0063.jpg`, not a printed page number).
+- **What is Barry's.** Principles and tools marked *(Barry)* below are verifiable in that capture: concept before execution and roughs over finished art [p001], [p004]; strategy → concept → campaign [p0041]; the single-minded benefit [p0073]; truth [p0074]; exaggeration vs. contrivance [p0048], [p0049]; the Opposite Tool [p0063]; show, don't tell [p0066]–[p0068]; imply, don't reveal [p0064], [p0067]; symbols [p0053]; people and product optional [p0050], [p0051]; visual clichés [p0052]; campaign consistency of form and tone [p008], [p0037]; SLIP IT [p0071]; the cold-read test [p0079]; Impact + Branding + Relevance [p0069].
+- **What is CreativeEngine's.** The stage structure, section names, "who carries the idea", reading order, image arguments, premise vs. template, the AI-workflow guidance, the output wrapper and all examples are CreativeEngine's own. Do not attribute them to Barry.
+- **What is unread.** The capture lacks the book's Execution, TV, Radio, Integrated, Presenting and Selling chapters, and sections it cross-references (e.g. The Exaggeration Tool, Push It: Literal vs. Lateral). Do not claim what Barry says there.
+- **Author's guidance vs. his examples.** Barry's methods are guidance. The advertisements he cites, his students' work and his exercises are illustrations: use them only when relevant to the task, and never as templates.
+- Paraphrase; do not quote at length or invent quotations. Where the OCR is garbled, say the text is unclear rather than guessing the author's intent.
 
 ## Purpose
 
@@ -229,6 +232,28 @@ RISK:           [most likely way it fails at real size or in real context]
 
 Don't produce this wrapper when the user wants finished work and it would make the answer worse. Don't expose hidden chain-of-thought.
 
-## 14. Framework principle
+## 14. Concept tools (Barry)
+
+Generation and review tools from the book, cited in `shared/knowledge/barry-concept-book-reference.md` §2. Apply them selectively; they are tools, not rules [p0074].
+
+| Tool | Move | Mode | Source |
+|---|---|---|---|
+| **Opposite Tool** | Turn the expected on its head: a negative into a positive, the customer above the client, the unexpected audience or tone, the reversed visual or phrase, the inverted layout convention. Overlaps Pricken's reversal; use whichever is more specific | EXPLORE | [p0063], [p0057], [p0058], [p0054] |
+| **Show, don't tell** | Find the picture that proves the benefit instead of stating it. Words win when they create a stronger picture in the head | EXPLORE, DEVELOP | [p0066]–[p0068] |
+| **Imply, don't reveal** | Leave a gap the audience closes. Start literal, finish lateral; stop before it gets too obscure to get in a few seconds | DEVELOP | [p0064], [p0067] |
+| **Symbol with a twist** | Take the category's literal symbol and change one thing about it | EXPLORE | [p0053] |
+| **Remove the people / remove the product** | If the first idea is "person using product", try it without people (metaphor becomes available). Drop the pack shot only when the audience can still name the brand; new products usually need showing | EXPLORE, DEVELOP | [p0051], [p0050] |
+| **Exaggerate, don't contrive** | Exaggeration starts from something true; contrivance from something untrue. Ask "would anyone really do that?" or "does that actually happen?" | DEVELOP, JUDGE | [p0048], [p0049] |
+| **Good-simple, not bad-simple** | Simple and surprising, not simple and boring | DEVELOP, JUDGE | [p0071] |
+| **1-in-10 / write first, edit last** | Generate many (20+) before judging; the best often come later in the list | EXPLORE | [p0069] |
+| **One-sentence test** | The idea fits one sentence, separate from the strategy sentence | DEVELOP, JUDGE | [p0066], [p0034] |
+| **Overnight test / kill your babies** | Review fresh; drop favorites that don't earn their place. Convergence only, never mid-divergence | DEVELOP, JUDGE | [p0068] |
+| **SLIP IT** | A great ad makes you Smile, Laugh, is Informative, Provokes, Involves, or makes you Think, at least one. Communication alone is only "good" | JUDGE | [p0071] |
+| **Cold read: "do you get it?"** | Show it unexplained to someone new; ask what it says, not whether they like it. Retest rewrites on a new person | JUDGE | [p0079] |
+| **Impact + Branding + Relevance** | Memorable, attributable to the brand, and right for product and audience | JUDGE | [p0069] |
+
+Qualifications: the poster "3 seconds / 8 words" guideline [p0015] is roadside OOH guidance, not a spec for other formats (verified platform knowledge governs). Barry's left/right-brain framing is dated; keep only the point that work should reach reason and emotion.
+
+## 15. Framework principle
 
 The art director's first job is the idea, not the look. Design comes later and does everything it can to make that idea impossible to miss.
