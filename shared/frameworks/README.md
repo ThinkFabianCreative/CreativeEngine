@@ -15,6 +15,8 @@ Frameworks are shared CreativeEngine intellectual infrastructure: how we think a
 | `barry-concept-art-direction.md` | Active |
 | `education-enrollment-intake.md` | Active · optional extension, loaded only for education assignments |
 | `selling-the-work.md` | Active |
+| `design-sprint.md` | Active |
+| `discovery-and-lean-loop.md` | Active |
 | `narrative-craft.md` | Active |
 | `typography.md` | Active |
 | `visual-craft.md` | Active |
