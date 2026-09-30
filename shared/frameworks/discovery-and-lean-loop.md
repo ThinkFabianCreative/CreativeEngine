@@ -12,7 +12,7 @@ Method summarized in our own words from public descriptions of:
 
 Rules:
 - Attribute method names to their sources. LUMA is a proprietary system; describe and adapt its methods, and do not reproduce its handbook, cards or worksheets.
-- Only about fourteen LUMA method names were confirmed in what we read (§9). Do not present a complete list of 36 from this file.
+- The full set of 36 LUMA method names is verified from the physical card set (§2).
 - Anything not confirmed in a source we read is marked UNVERIFIED.
 
 ## Purpose
@@ -53,13 +53,21 @@ Skip stages that do not pay for themselves.
 
 ## 2. LUMA in use: Looking, Understanding, Making
 
-Verified method names, grouped as the sources group them. Placement of a few methods differs between sources (UNVERIFIED for Stakeholder Mapping).
+All 36 methods, as grouped on the *Innovating for People* method card set (verified from photos of the physical cards and summary card, `SprintFacilitator/SprintBook_Design_thinking/`).
 
-| Skill | Purpose | Confirmed methods |
+| Skill | Category | Methods |
 |---|---|---|
-| **Looking** | Observe the human experience | Interviewing, Fly-on-the-Wall Observation, Contextual Inquiry, Walk-a-Mile Immersion; participatory: What's on Your Radar, Buy a Feature, Build Your Own, Journaling; evaluative: Think-Aloud Testing, Heuristic Review, Critique, System Usability Scale |
-| **Understanding** | Make sense of what was seen | Affinity Clustering, Abstraction Laddering, Rose Thorn Bud, Problem Tree Analysis, Problem Framing; also stakeholder and persona work |
-| **Making** | Give ideas a tangible form | Concept Poster, Storyboarding, Visualize the Vote, Brainstorming, Round Robin |
+| **Looking** (observe the human experience) | Ethnographic research | Interviewing, Fly-on-the-Wall Observation, Contextual Inquiry, Walk-a-Mile Immersion |
+| | Participatory research | What's on Your Radar?, Buy a Feature, Build Your Own, Journaling |
+| | Evaluative research | Think-Aloud Testing, Heuristic Review, Critique, System Usability Scale |
+| **Understanding** (make sense of what was seen) | People & systems | Stakeholder Mapping, Persona Profile, Experience Diagramming, Concept Mapping |
+| | Patterns & priorities | Affinity Clustering, Bull's-eye Diagramming, Importance/Difficulty Matrix, Visualize the Vote |
+| | Problem framing | Problem Tree Analysis, Statement Starters, Abstraction Laddering, Rose, Thorn, Bud |
+| **Making** (give ideas a tangible form) | Concept ideation | Thumbnail Sketching, Creative Matrix, Round Robin, Alternative Worlds |
+| | Modeling & prototyping | Storyboarding, Schematic Diagramming, Rough & Ready Prototyping, Appearance Modeling |
+| | Design rationale | Concept Poster, Video Scenario, Cover Story Mock-up, Quick Reference Guide |
+
+"Brainstorming" is not a LUMA method; Statement Starters ("How might we…", "In what ways might we…", "How to…") is the LUMA framing that the Sprint's How Might We notes echo. Each card carries a quick guide and helpful hints; describe them in our own words, do not reproduce them.
 
 Selection guide for web design work:
 
@@ -132,7 +140,7 @@ A one-page set of hypotheses about a business or offer, built for early stages w
 
 - **Fill in order of certainty, not left to right.** Start with Customer Segments and Problem as a pair (a problem exists only for a person), then Unique Value Proposition, then Solution, then Channels.
 - **Every box is a hypothesis.** Mark each OBSERVED, DERIVED or ASSUMED (§3). The riskiest assumption at idea stage is usually the Problem and Customer Segment pair. Test in order of "if this is wrong, does it die?".
-- **Interview ladder** (*Running Lean*): a Problem Interview asks whether the segment has the problem badly enough; a Solution Interview shows a mock-up or prototype; an MVP Interview watches use of the real thing. Match the interview to what the canvas says is riskiest. A sprint's Day 4 test is roughly the Solution Interview.
+- **Interview ladder** (*Running Lean*): a Problem Interview asks whether the segment has the problem badly enough; a Solution Interview shows a mock-up or prototype; an MVP Interview watches use of the real thing. Problem Interview structure (2nd ed., chapter 7, as listed by O'Reilly and practitioners): welcome and set the stage → collect demographics (tests the segment) → tell a story that sets the problem context → have them rank the problems (tests the problem) → explore how they deal with it today (tests the problem) → wrap up: replay their story in 30 seconds and ask to follow up or refer others. Match the interview to what the canvas says is riskiest. A sprint's Day 4 test is roughly the Solution Interview.
 - **Web use.** Use it to sharpen a project's problem, audience and value proposition before a sprint, and to turn the Solution and Channels boxes into the page's job and traffic source. Key Metrics becomes the sprint question's signal.
 - **Not for every project.** A client with a settled offer and audience does not need a canvas. Use it when the offer, audience or model is unclear, or for a new product, service or campaign page. Revenue, Cost and Unfair Advantage are the client's to supply. Never invent them.
 
@@ -162,9 +170,8 @@ A one-page set of hypotheses about a business or offer, built for early stages w
 
 ## 9. Known gaps
 
-- The full list of 36 LUMA methods was not retrieved (the official pages were not readable). Only the confirmed names in §2 are used. Verify against the *Innovating for People* handbook or LUMA's materials before naming others.
-- Lean Canvas is summarized from search results and book summaries only, not from *Running Lean* or *Scaling Lean* themselves. Check the book before quoting box definitions or the interview scripts. The nine boxes are consistent across sources.
-- Placement of a few LUMA methods varies between sources.
+- The 36 LUMA method names and categories are now verified from the physical card set (§2). Per-method steps were read only for a few cards; check the card before running an unfamiliar method.
+- Lean Canvas and the Problem Interview steps are from the book's table of contents and summaries, not the full text (O'Reilly pages returned 403). Solution and MVP interview scripts are not detailed here. The nine boxes are consistent across sources.
 - No source was retrieved for quantitative sample-size guidance; treat small-sample findings as directional.
 
 ## Related frameworks
