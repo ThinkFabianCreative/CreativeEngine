@@ -36,6 +36,12 @@ This is where Claude discovers CreativeEngine's skills automatically. Each skill
 | `prototype` | DesignChamp | `DesignChamp/skills/emil-kowalski-skills.md` (Emil Kowalski) · manual only; skip Phase 6 (promote to production) |
 | `marketing-ideas` | BriefMachine | `BriefMachine/skills/marketing-ideas.md` (coreyhaines31/marketingskills) · manual only; tactics, not ideas; SaaS-centric, translate for other clients |
 | `wait-what` | WordSmither (any role) | `WordSmither/skills/wait-what.md` (mattpocock/skills) · manual only; re-pitch the last message plainly; uses CLAUDE.md vocabulary, no GLOSSARY.md |
+| `awwwards` | DesignChamp | `DesignChamp/skills/awwwards-stack.md` (Awwwards stack) · concept first; prototypes only; jsDelivr not esm.sh in Artifacts; no JS motion in email |
+| `frontend-design` | DesignChamp | `DesignChamp/skills/awwwards-stack.md` (Awwwards stack) |
+| `color-expert` | DesignChamp | `DesignChamp/skills/awwwards-stack.md` (Awwwards stack) |
+| `color-palette-extractor` | DesignChamp | `DesignChamp/skills/awwwards-stack.md` (Awwwards stack) |
+| `design-motion-principles` | DesignChamp | `DesignChamp/skills/awwwards-stack.md` (Awwwards stack) |
+| `remotion-best-practices` | DesignChamp | `DesignChamp/skills/awwwards-stack.md` (Awwwards stack) |
 
 ## Before adding a skill
 
