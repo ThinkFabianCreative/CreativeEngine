@@ -34,6 +34,8 @@ This is where Claude discovers CreativeEngine's skills automatically. Each skill
 | `review-animations` | DesignChamp | `DesignChamp/skills/emil-kowalski-skills.md` (Emil Kowalski) · manual only |
 | `animation-vocabulary` | DesignChamp | `DesignChamp/skills/emil-kowalski-skills.md` (Emil Kowalski) |
 | `prototype` | DesignChamp | `DesignChamp/skills/emil-kowalski-skills.md` (Emil Kowalski) · manual only; skip Phase 6 (promote to production) |
+| `marketing-ideas` | BriefMachine | `BriefMachine/skills/marketing-ideas.md` (coreyhaines31/marketingskills) · manual only; tactics, not ideas; SaaS-centric, translate for other clients |
+| `wait-what` | WordSmither (any role) | `WordSmither/skills/wait-what.md` (mattpocock/skills) · manual only; re-pitch the last message plainly; uses CLAUDE.md vocabulary, no GLOSSARY.md |
 
 ## Before adding a skill
 

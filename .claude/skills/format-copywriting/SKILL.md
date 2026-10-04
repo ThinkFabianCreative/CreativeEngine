@@ -85,6 +85,18 @@ Paid social invites variants. A senior writer makes them useful.
 - **Recombination.** Where the platform may combine text options with different assets (flexible creative or automated enhancements), every text option must work with every asset it could be paired with. Check what is enabled (`meta-paid-ads/production.md`); approving the copy does not approve a generated alteration.
 - **No performance promises.** Do not predict CTR, conversion or "this will perform". State what each variant tests and what result would tell you something.
 
+## Conversion clarity
+
+For copy whose job is a decision: lead and conversion ads, click-to-message, the landing page or destination behind them, nurture email, sales one-liners. A DEVELOP and JUDGE check, never an EXPLORE filter, and never a substitute for the idea. A clear message can still be an idea; clarity is required, cleverness is not banned. Adapted from Donald Miller, *Building a StoryBrand* (SB7); its fill-in copy patterns and 10/10 score are deliberately not adopted.
+
+- **The customer is the hero, the brand is the guide.** Copy about the brand's journey competes with the reader's. Quick tell: the first word is "We".
+- **Three levels of problem.** External (the tangible problem), internal (how it makes them feel), philosophical (why it shouldn't be this way). Most copy stops at external; people act on the internal one. Use only what the brief or ledger supports.
+- **Empathy and authority together.** Understanding without proof is unearned; proof without understanding is cold. Authority comes from the claim ledger, never invented.
+- **Both stakes, lightly.** What doing nothing costs and what success looks like. Name the cost of waiting; no scare tactics, no fake urgency.
+- **One direct action, one lighter one.** One obvious primary CTA per asset, and a lower-commitment option for people not ready yet. The button must say what happens on click: nothing paid is called free.
+- **A plan of three or four steps** to lower perceived risk, plus any approved risk-removing commitment (guarantee, cancel anytime). Commitments are claims: ledger status applies.
+- **One-hearing test.** Can someone repeat the one-liner or line after hearing it once?
+
 ## Copy check
 
 - [ ] The parent idea is legible in the smallest state: first line, frame one, card one or hook.
@@ -96,6 +108,7 @@ Paid social invites variants. A senior writer makes them useful.
 - [ ] Voice matches the client's approved voice and English variety.
 - [ ] No engagement bait, fake urgency or unverified personal-attribute language.
 - [ ] Message matches the destination.
+- [ ] Conversion copy: passes the conversion clarity checks above.
 - [ ] Video: works sound off; supers are short enough to read at the pace they appear.
 - [ ] `humanizer` pass on primary text, captions and long copy (not on hooks or headlines; see `WordSmither/skills/humanizer.md`).
 

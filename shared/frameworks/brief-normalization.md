@@ -476,6 +476,14 @@ Audience intelligence feeds EXPLORE as provocation, not as an answer. For exampl
 - What tension exists between where they are and where they want to be?
 - What would make this feel written for them rather than for the category's generic customer?
 
+### Messaging lens (optional)
+
+Adapted from Donald Miller, *Building a StoryBrand*. Use when a packet's job is a decision or a clear message (conversion, landing page, nurture, sales one-liner). Everything here is DERIVED unless the source states it; it shapes questions, never lines.
+
+- **One desire per message.** Name the single thing this person wants for this packet. Several desires blur the gap the work has to close. Consistent with Barry's one benefit, one person.
+- **The problem in three layers.** External (tangible), internal (how it feels), philosophical (why it is wrong), and a specific villain where one exists ("jargon designed to confuse you", not "complexity"). Creative teams find more in the internal and philosophical layers.
+- **Gap check.** Can the brief supply the desire, problem, proof of empathy and authority, plan, CTA, failure stakes and success picture? Each that cannot is an open question (section 10) for the client, never a blank to invent.
+
 ### Stereotype guardrail
 
 - Never infer personality, income, intelligence, family status, politics, emotional state, health or other unsupported traits from age, geography, education, industry, interests or platform targeting categories.
@@ -663,6 +671,7 @@ NOT IN THIS PACKET:                 [what was left out, and where to find it]
 ### Relevant media signals
 ### Observed patterns
 ### Potential motivations / barriers
+### Messaging lens                  [optional: one desire; problem in three layers; gaps as Q#s]
 ### Creative stimulus               [questions and provocations, not answers]
 ### Confidence / evidence limits
 ### Do not assume
