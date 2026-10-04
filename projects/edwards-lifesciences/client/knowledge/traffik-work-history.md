@@ -3,7 +3,8 @@ CLIENT:        Edwards Lifesciences
 DOMAIN:        Creative history (TRAFFIK work for Edwards)
 SOURCE:        client/sources/2026-10-03_user_edwards-tmtt-growth-pitch-intelligence.md
 DATE:          2026-10-03
-STATUS:        HISTORICAL · every item's delivery status is UNKNOWN until checked against the archive
+STATUS:        HISTORICAL · statuses updated 2026-10-03 from the team orientation deck; items not in the ledger stay UNKNOWN
+ALSO SOURCE:   client/sources/2026-10-03_gslides_edwards-traffik-team-orientation_LINK.md
 ```
 
 As supplied by the user. Use only work that can be substantiated from the archive or confirmed team knowledge. Fill in the STATUS column (`claims-and-evidence-rules.md`) as the archive is reviewed, with the evidence path.
@@ -20,18 +21,34 @@ As supplied by the user. Use only work that can be substantiated from the archiv
 
 ## Status ledger
 
-| Work | Status | Evidence | Note |
-|---|---|---|---|
-| SAPIEN M3 RESILIA animation | **PROPOSED SCOPE (2026)** | Archive, as supplied | Highly relevant to TMTT. Show only as category familiarity or a proposed example, labeled as such, unless completion is independently confirmed |
-| HemoSphere / hemodynamics | UNKNOWN · legacy | — | Divested business; label "legacy Edwards work"; secondary proof |
-| All other items | UNKNOWN | — | To be checked |
+From the team orientation deck (slides 14–29) unless noted. "Archive years identify folders, not delivery dates."
+
+| Work | Status | Evidence / note |
+|---|---|---|
+| Global Pulmonic Portfolio Campaign | **CONFIRMED DELIVERED** | Corroborated by approved, paid account records (deck slide 24) |
+| S3UR European launch and style guide | **CONFIRMED DELIVERED** | Same; S3UR archive folder (2026) also exists |
+| Tissue Is Trending (tissue vs mechanical) | ARCHIVE EVIDENCE | Case study slide 15: research, messaging matrix, campaign theme, interactive sales infographic, rollout tools; developed for Edwards' VAULT review process |
+| Inspiring Results / INSPIRIS Patient Profiles | ARCHIVE EVIDENCE | Case slide 16: interviews, messaging, campaign theme, visual direction, patient profiles; for cardiothoracic surgeons |
+| TCT conference experience | ARCHIVE EVIDENCE | Case slide 19: "chess-master" activation, booth graphics, meeting rooms, coffee bar, interactive screens, patient stories, 3D product reveal. **No verified traffic, lead or ROI data** |
+| TAVR patient community (CRM, portal, admin directory, Marketo/TCAP) | ARCHIVE EVIDENCE | Slide 17. Shows journey and platform work; does **not** establish usage or patient outcomes |
+| TAVR Talk | Wireframes: ARCHIVE EVIDENCE (2022) · homepage/resource-center revamp: **PROPOSED SCOPE (2025, unsigned)** | Do not present TAVR Talk as a launched platform without further evidence |
+| SAPIEN M3 RESILIA animation | **PROPOSED SCOPE (2026, unsigned)** | Category familiarity only, labeled |
+| THV Business Unit lead-agency proposal (2021) | **PROPOSED SCOPE** | Describes a lead strategy/creative role and "a decade-long relationship" as of 2021 |
+| EuroPCR 2024 | PROPOSED SCOPE for element detail | Completion of every element unverified; EuroPCR screens 2023 and work 2024–25 are archive folders |
+| Alterra visual identity | PROPOSED SCOPE (identity details) | Alterra ads archive exists |
+| SAVR LMS, JAPAC sales training | ARCHIVE EVIDENCE | Listed projects; mechanics from 2019 scopes; Mandarin and Japanese localization |
+| HemoSphere 360, Sepsis campaign, Critical Care items | Legacy · scope evidence | Critical Care sold to BD (completed 2024-09-03). Label "legacy Edwards work"; no current BD engagement implied |
+| Video samples: SAPIEN Platform wall-screen film (1:43), ELS × TRAFFIK showreel (1:08), New Frontiers TCT film (2:20), SAPIEN 3 Ultra RESILIA animation director's cut (1:50) | **CONFIRMED (asset exists)** | Actual supplied videos, Dropbox links in deck slides 28–29. Existence confirmed; air/usage dates not |
+| Everything else in the five categories | UNKNOWN / archive folder only | Truncated folder titles stay unexpanded |
+
+**Divergence from the first source (OPEN → resolved by evidence):** the 2026-10-03 intelligence brief listed "TAVR Talk" as strong proof; the orientation deck shows its revamp is unsigned scope. Use the patient-community CRM/portal work as the journey proof instead.
 
 ## Strongest proof for TMTT (as supplied)
 
 EuroPCR, TCT, S3UR, Alterra, Global Pulmonic, KONECT, TAVR Talk, the patient community, KOL work, film, product animation and clinical communications. Supplied examples of what they prove:
 
 - **EuroPCR:** structural-heart fluency, congress experience, experiential storytelling, clinical audience awareness
-- **TAVR Talk:** journey thinking, patient communication, digital ecosystem thinking
+- **TAVR Talk** (superseded: revamp is unsigned scope; use the TAVR patient-community CRM/portal work instead): journey thinking, patient communication, digital ecosystem thinking
 - **S3UR:** product launch, global/regional adaptation, brand-system execution
 
 ## Beyond the archive

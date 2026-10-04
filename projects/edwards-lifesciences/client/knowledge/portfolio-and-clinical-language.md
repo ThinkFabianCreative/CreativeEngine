@@ -3,7 +3,8 @@ CLIENT:        Edwards Lifesciences
 DOMAIN:        Portfolio, therapy areas, clinical language, audiences
 SOURCE:        client/sources/2026-10-03_user_edwards-tmtt-growth-pitch-intelligence.md
 DATE:          2026-10-03
-STATUS:        CURRENT · AS SUPPLIED, not verified against Edwards sources. Verify before client-facing use
+STATUS:        CURRENT · AS SUPPLIED; refined 2026-10-03 from the team orientation deck. Not Edwards-approved copy. Verify before client-facing use
+ALSO SOURCE:   client/sources/2026-10-03_gslides_edwards-traffik-team-orientation_LINK.md
 ```
 
 Edwards focuses primarily on structural heart disease.
@@ -32,6 +33,19 @@ Always keep two dimensions separate:
 | **Surgical Structural Heart** | Surgical devices; never grouped with transcatheter | INSPIRIS RESILIA, MITRIS RESILIA (surgical mitral, not SAPIEN M3), KONECT RESILIA |
 | **Pulmonary** | Transcatheter pulmonary valve replacement; anatomically separate from aortic, mitral and tricuspid | SAPIEN 3, Alterra adaptive prestent |
 | **Critical Care** (legacy) | **Divested.** HemoSphere and hemodynamics work is historical proof of complex device communication only, labeled "legacy Edwards work", never a current growth area | HemoSphere |
+
+## Additions from the orientation deck
+
+- Edwards: Irvine, California; NYSE: EW. Also markets **Cordella** (implantable heart-failure management), outside this map.
+- **PASCAL** tricuspid repair is available in some markets; check local indication.
+- **EVOQUE and SAPIEN M3 use ThermaFix-treated tissue**, not RESILIA.
+- **RESILIA** products: INSPIRIS, MITRIS, KONECT and SAPIEN 3 Ultra RESILIA. Bovine pericardial tissue treated against calcium binding and for dry storage.
+- **SAPIEN 3 Ultra RESILIA:** balloon-expandable frame; eligibility varies by patient, label and market. TAVI is the non-US term.
+- **KONECT RESILIA:** preassembled valve-and-graft for aortic-root surgery. **MITRIS:** saddle-shaped sewing cuff, low-profile frame.
+- **Alterra** creates a landing zone in suitable RVOT anatomy; SAPIEN 3 supplies the valve.
+- **AUTUS:** size-adjustable surgical pulmonary valve; Edwards announced FDA approval on 2026-10-01 (per the deck; verify).
+- **Critical Care:** BD completed the acquisition 2024-09-03; now BD Advanced Patient Monitoring.
+- A multidisciplinary Heart Team decides the treatment option. Confirm the actual buying group for hospital audiences.
 
 **RESILIA** is a tissue technology used in specific valves. It is not a valve. Evidence for one RESILIA device does not transfer to another.
 

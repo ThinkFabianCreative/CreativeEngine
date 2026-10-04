@@ -20,6 +20,7 @@ This workspace is the agency's working knowledge of Edwards and is meant to grow
 | 2 | [knowledge/portfolio-and-clinical-language.md](knowledge/portfolio-and-clinical-language.md) | Any product, therapy, anatomy or audience mention |
 | 3 | [knowledge/relationship-and-account-growth.md](knowledge/relationship-and-account-growth.md) | Strategy, pitches, positioning, tone, spotting next opportunities |
 | 4 | [knowledge/traffik-work-history.md](knowledge/traffik-work-history.md) | Case studies, credentials, proof |
+| — | [sources/2026-10-03_gslides_edwards-traffik-team-orientation_LINK.md](sources/2026-10-03_gslides_edwards-traffik-team-orientation_LINK.md) | The team orientation deck: the fullest current picture of portfolio and archive |
 | 5 | [knowledge/visual-direction.md](knowledge/visual-direction.md) | Any visual or deck work, together with `shared/frameworks/editorial-presentation.md` |
 
 **Adding intelligence.** New archive finds, stakeholder notes, briefs and debriefs go in as sources first (`sources/` for enduring material, a project's `raw/` for assignment material), then into the relevant knowledge file with source and date. Do not overwrite earlier entries; mark them SUPERSEDED.
