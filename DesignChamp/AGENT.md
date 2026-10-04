@@ -68,6 +68,8 @@ When the work will be built by Figma's agent, write the brief in the framework's
 
 ## Format prototyping
 
+For decks (pitch, credentials, case studies, concept presentations), consult `shared/frameworks/editorial-presentation.md`: references chosen by principle across film titles, editorial, annual reports, brand systems and exhibition design, a sequence with rhythm, chapter lines that argue, case studies as stories and evidence-first imagery.
+
 When an approved idea has to be seen as a real execution in its real format (landing page, display, Meta ad unit, DOOH, email, slideshow), use the `format-prototyping` skill (`.claude/skills/format-prototyping/`; record `DesignChamp/skills/format-prototyping.md`). Fidelity follows the mode: rough in EXPLORE, the one carrying interaction in DEVELOP, real size in context in JUDGE. Prototypes only, never production code.
 
 ## Landing-page production (Instapage)

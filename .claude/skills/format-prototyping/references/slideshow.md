@@ -34,6 +34,8 @@ Move an audience through a sequence of understanding to a decision, with each sl
 
 A creative presentation often moves from the problem or brief truth, to the insight, to the idea in one sentence, to its key visual, to executions in context, to how it extends across formats. That is a common shape, not a formula; CreativeDirector decides the presentation.
 
+For pitch, credentials and case-study decks, art direction (reference board, rhythm, chapter lines, case stories, scenarios, evidence-first imagery) is in `shared/frameworks/editorial-presentation.md`.
+
 ## What to prototype
 
 - The full sequence at the real aspect ratio of the venue or tool.

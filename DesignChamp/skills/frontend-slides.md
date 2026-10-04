@@ -45,6 +45,8 @@ Installed 2026-09-14 at user level, no admin rights. Tested end to end: PPTX ext
 
 ## Fit notes for DesignChamp
 
+- **Art direction comes from `shared/frameworks/editorial-presentation.md`** (added 2026-10-03). Before Phase 2 style discovery on pitch, credentials or case-study decks, produce that framework's direction output (§12): reference board, slide behaviours, chapter lines, hero moments. Of the three previews, at least the wildcard comes from that direction, not a preset. Run its final check (§13) before delivery.
+
 - It serves the slideshow and presentation format in `format-prototyping` (`references/slideshow.md`): pitch decks, credentials, concept presentations and client-facing work in JUDGE. It builds prototypes, not production code, which fits CreativeEngine's build intent.
 - **Style library beyond decks.** `DesignChamp/knowledge/presentation-style-library.md` indexes the presets and bold systems as a visual reference library for DesignChamp's work in any format (user request 2026-09-14).
 - **Presets and templates are methods, not taste.** Its three-preview discovery is useful. For brand or campaign work, though, the look comes from the brief, the brand and the idea, not from `STYLE_PRESETS.md` or the template pack. Use a template only when it truly fits. Use the wildcard slot for a direction designed from the concept. Principles 5, 6, 10 and 11 apply: do not let a polished template disguise a weak idea.
