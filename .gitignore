@@ -13,3 +13,6 @@ projects/**/work/generated/**
 
 # Local source photos (copyrighted book pages and LUMA cards); summarized in shared/frameworks
 SprintFacilitator/SprintBook_Design_thinking/
+
+# Large video files stay local (re-downloadable from Dropbox sources).
+projects/**/assets/video/**
