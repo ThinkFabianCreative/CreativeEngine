@@ -3,7 +3,7 @@ CLIENT:        Edwards Lifesciences
 DOMAIN:        Visual direction (agency working direction, not Edwards brand guidelines)
 SOURCE:        client/sources/2026-10-03_user_medtech-art-direction-extension.md; client/sources/2026-10-03_user_edwards-tmtt-growth-pitch-intelligence.md
 DATE:          2026-10-03
-STATUS:        CURRENT (user instruction). Edwards' own brand guidelines are UNKNOWN; where they exist, they govern
+STATUS:        CURRENT (user instruction). Edwards' own brand guidelines now on file: brand-identity-standards.md. They govern where they conflict with this file
 ```
 
 Apply on top of `shared/frameworks/editorial-presentation.md` and `visual-craft.md`.
