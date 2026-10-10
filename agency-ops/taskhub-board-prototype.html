@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Task Hub Board</title>
+<style>
+:root{--ink:#141414;--bar:#1d1d1d;--paper:#f4f3f1;--card:#fff;--line:#e4e2de;--grey:#6b6b6b;--red:#d7263d;--amber:#c47a12;--green:#2f8a4a;--blue:#2d6cdf}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.4 Inter,system-ui,-apple-system,sans-serif}
+header{background:var(--bar);color:#fff;display:flex;align-items:center;gap:24px;padding:14px 24px}
+header b{font-size:20px;letter-spacing:.5px}
+header nav a{color:#bbb;margin-right:18px;text-decoration:none}
+header nav a.on{color:#fff;border-bottom:2px solid var(--red);padding-bottom:12px}
+.wrap{padding:20px 24px}
+h1{font-size:34px;margin:0 0 4px}
+.sub{color:var(--grey);margin-bottom:16px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
+.seg{display:flex;border:1px solid var(--ink);border-radius:8px;overflow:hidden}
+.seg button{border:0;background:#fff;padding:7px 14px;cursor:pointer;font:inherit}
+.seg button.on{background:var(--ink);color:#fff}
+select{padding:7px 10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.stat{background:var(--ink);color:#fff;border-radius:10px;padding:10px 16px;min-width:120px}
+.stat b{font-size:24px;display:block}
+.stat.warn b{color:#ff6b7d}
+.board{display:grid;grid-template-columns:repeat(8,minmax(190px,1fr));gap:10px;overflow-x:auto;padding-bottom:8px}
+.col{background:#ebe9e5;border-radius:10px;padding:8px;min-height:300px}
+.col h3{font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin:4px 4px 2px;display:flex;justify-content:space-between}
+.col .rule{font-size:11px;color:var(--grey);margin:0 4px 8px;min-height:30px}
+.col.over{outline:2px solid var(--red)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:9px;margin-bottom:8px;cursor:grab}
+.card .t{font-weight:600;margin-bottom:4px}
+.meta{font-size:11px;color:var(--grey);display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:10px;font-weight:700;padding:1px 6px;border-radius:4px;background:#eee}
+.tag.high{background:var(--ink);color:#fff}.tag.late{background:#fde3e6;color:var(--red)}
+.checks{display:flex;gap:5px;margin-top:6px;font-size:11px}
+.ok{color:var(--green)}.no{color:var(--red)}
+.blocked{margin-top:14px;background:#fff;border:2px dashed var(--red);border-radius:10px;padding:10px}
+.blocked h3{margin:0 0 6px;font-size:13px;color:var(--red)}
+.brow{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;padding:6px 0;border-top:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;font-size:13px;vertical-align:top}
+th{background:var(--ink);color:#fff;font-weight:600}
+.load{height:8px;background:#eee;border-radius:4px;overflow:hidden;margin-top:4px}
+.load i{display:block;height:100%;background:var(--ink)}
+.load.hot i{background:var(--red)}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--red);color:#fff;padding:10px 16px;border-radius:8px;display:none;max-width:90vw}
+.note{font-size:12px;color:var(--grey);margin-top:14px}
+@media (max-width:700px){.wrap{padding:16px}h1{font-size:26px}header nav{display:none}}
+</style>
+</head>
+<body>
+<header><b>TRAFFIK</b><span style="color:#888">Task Hub</span><nav><a href="#">Home</a><a href="#">Hot Sheet</a><a class="on" href="#">Board</a><a href="#">Resourcing</a></nav></header>
+<div class="wrap">
+<h1>Board</h1>
+<div class="sub">Prototype for discussion · sample cards · drag cards between columns to see the entry rules</div>
+<div class="bar">
+  <div class="seg" id="views"><button class="on" data-v="board">Daily board</button><button data-v="week">Weekly load</button><button data-v="lead">Leadership</button></div>
+  <select id="who"><option value="">Everyone</option></select>
+</div>
+<div class="stats" id="stats"></div>
+<div id="view"></div>
+</div>
+<div id="toast"></div>
+<script>
+const COLS=[
+ {k:"intake",n:"Intake",r:"Request logged"},
+ {k:"ready",n:"Ready",r:"Signed brief · change log · date from standard time · due-date driver"},
+ {k:"prog",n:"In progress",r:"Assigned · WIP limit 3 per person",wip:3},
+ {k:"review",n:"Internal review",r:"ACD/CD review · maker ≠ checker"},
+ {k:"qc",n:"QC",r:"Five-section QC gate"},
+ {k:"client",n:"With client",r:"Presented, or sent with change log"},
+ {k:"fb",n:"Feedback",r:"Notes → numbered tasks · round counted"},
+ {k:"done",n:"Done",r:"QC passed · delivered"}];
+let cards=[
+ {id:1,t:"MA Search Copy",c:"Eternal Health",who:"Debbie",col:"prog",h:3,brief:1,qc:0,high:1,late:1,round:"G3 · R1"},
+ {id:2,t:"UTMs & QR Codes",c:"Eternal Health",who:"Connor",col:"prog",h:2,brief:1,qc:0,high:1,round:"G3 · R1"},
+ {id:3,t:"URL Re-Route",c:"Eternal Health",who:"Matt",col:"ready",h:1.5,brief:1,qc:0,late:1,round:"—"},
+ {id:4,t:"Storyboards",c:"Eternal Health",who:"Anthony",col:"review",h:12,brief:1,qc:0,high:1,round:"G2 · R1",maker:"Anthony",reviewer:"Jeremy"},
+ {id:5,t:"Duets MA Video Update",c:"Eternal Health",who:"Michael",col:"prog",h:6,brief:1,qc:0,round:"G3 · R2"},
+ {id:6,t:"Broker Guide Print Versions",c:"Eternal Health",who:"Anthony",col:"qc",h:4,brief:1,qc:0,late:1,round:"G3 · R1"},
+ {id:7,t:"MA Landing Page",c:"Eternal Health",who:"Damba",col:"prog",h:10,brief:1,qc:0,round:"G2 · R1"},
+ {id:8,t:"Direct Mail Creation",c:"Eternal Health",who:"Jeremy",col:"fb",h:24,brief:1,qc:0,round:"G3 · R1 of 2"},
+ {id:9,t:"AEP Social Ads",c:"Eternal Health",who:"Umair",col:"intake",h:12,brief:0,qc:0,round:"—"},
+ {id:10,t:"Applications Open · Meta set",c:"CMU",who:"Umair",col:"prog",h:12,brief:1,qc:0,round:"G2 · R1"},
+ {id:11,t:"Variant Matrix export",c:"CMU",who:"Andrea",col:"ready",h:4,brief:1,qc:0,round:"G3"},
+ {id:12,t:"Homepage hero",c:"Edwards",who:"Damba",col:"client",h:8,brief:1,qc:1,round:"G2 · R1"},
+ {id:13,t:"Brand film cutdowns",c:"Champlain",who:"Michael",col:"prog",h:8,brief:1,qc:0,round:"G3 · R1"},
+ {id:14,t:"Brand film :30",c:"Champlain",who:"Michael",col:"prog",h:10,brief:1,qc:0,round:"G3 · R1"},
+ {id:15,t:"Event OOH",c:"Grand Junction Airport",who:"Andrea",col:"done",h:3,brief:1,qc:1,round:"G3"}];
+let blocked=[{t:"Broker Guide Print Versions",why:"Awaiting licensed replacement image",owner:"Accounts",since:"Oct 9"},
+ {t:"MA Search Copy",why:"Client to confirm Part B figure",owner:"Client via Accounts",since:"Oct 10"}];
+const people=[...new Set(cards.map(c=>c.who))].sort();
+const CAP=35;
+let view="board",who="";
+const $=s=>document.querySelector(s);
+people.forEach(p=>$("#who").insertAdjacentHTML("beforeend",`<option>${p}</option>`));
+$("#who").onchange=e=>{who=e.target.value;render()};
+document.querySelectorAll("#views button").forEach(b=>b.onclick=()=>{document.querySelectorAll("#views button").forEach(x=>x.classList.remove("on"));b.classList.add("on");view=b.dataset.v;render()});
+function toast(m){const t=$("#toast");t.textContent=m;t.style.display="block";clearTimeout(t._h);t._h=setTimeout(()=>t.style.display="none",3200)}
+function rule(card,to){
+ const order=COLS.map(c=>c.k);
+ if(order.indexOf(to)>=order.indexOf("ready")&&!card.brief) return "No signed brief, no work. This card can't leave Intake.";
+ if(to==="prog"){const n=cards.filter(c=>c.col==="prog"&&c.who===card.who&&c.id!==card.id).length;if(n>=3)return `${card.who} already has 3 cards in progress. Finish or hand off one first.`}
+ if(to==="done"&&!card.qc) return "Done means the QC gate passed. Move it through QC first.";
+ if(to==="client"&&!card.qc) return "Nothing goes to the client before QC.";
+ return "";
+}
+function stats(){
+ const vis=cards.filter(c=>!who||c.who===who);
+ const overWip=people.filter(p=>cards.filter(c=>c.col==="prog"&&c.who===p).length>3);
+ $("#stats").innerHTML=[["Open",vis.filter(c=>c.col!=="done").length],["In progress",vis.filter(c=>c.col==="prog").length],["Waiting on QC",vis.filter(c=>c.col==="qc").length],["Blocked",blocked.length,1],["No brief",vis.filter(c=>!c.brief).length,1]].map(([n,v,w])=>`<div class="stat ${w&&v?'warn':''}"><b>${v}</b>${n}</div>`).join("");
+}
+function cardHTML(c){
+ const sameChecker=c.maker&&c.reviewer===c.maker;
+ return `<div class="card" draggable="true" data-id="${c.id}"><div class="t">${c.t}</div>
+ <div class="meta"><span>${c.c}</span>·<span>${c.who}</span>·<span>${c.h}h std</span></div>
+ <div class="meta" style="margin-top:4px">${c.high?'<span class="tag high">HIGH</span>':''}${c.late?'<span class="tag late">OVERDUE</span>':''}<span class="tag">${c.round}</span></div>
+ <div class="checks"><span class="${c.brief?'ok':'no'}">${c.brief?'✓':'✗'} brief</span><span class="${c.qc?'ok':'no'}">${c.qc?'✓':'○'} QC</span>${sameChecker?'<span class="no">maker = checker</span>':''}</div></div>`}
+function board(){
+ const vis=cards.filter(c=>!who||c.who===who);
+ let h='<div class="board">'+COLS.map(col=>{
+  const inCol=vis.filter(c=>c.col===col.k);
+  const over=col.wip&&people.some(p=>cards.filter(c=>c.col==="prog"&&c.who===p).length>col.wip);
+  return `<div class="col ${over?'over':''}" data-col="${col.k}"><h3><span>${col.n}</span><span>${inCol.length}</span></h3><div class="rule">${col.r}</div>${inCol.map(cardHTML).join("")}</div>`}).join("")+'</div>';
+ h+=`<div class="blocked"><h3>Blocked lane · every blocker has a reason, an owner and a date</h3>${blocked.map(b=>`<div class="brow"><b>${b.t}</b><span>${b.why}</span><span>Owner: ${b.owner}</span><span>Since ${b.since}</span></div>`).join("")}</div>`;
+ h+='<div class="note">Rules shown here: no card leaves Intake without a signed brief · WIP limit of 3 in progress per person · nothing reaches the client or Done before QC · a maker can\'t review their own work.</div>';
+ $("#view").innerHTML=h;
+ document.querySelectorAll(".card").forEach(el=>el.ondragstart=e=>e.dataTransfer.setData("id",el.dataset.id));
+ document.querySelectorAll(".col").forEach(col=>{col.ondragover=e=>e.preventDefault();col.ondrop=e=>{const c=cards.find(x=>x.id==e.dataTransfer.getData("id"));const m=rule(c,col.dataset.col);if(m){toast(m);return}c.col=col.dataset.col;if(c.col==="done")c.late=0;render()}});
+}
+function week(){
+ const rows=(who?[who]:people).map(p=>{const mine=cards.filter(c=>c.who===p&&c.col!=="done");const hrs=mine.reduce((a,c)=>a+c.h,0);const pct=Math.round(hrs/CAP*100);
+  return `<tr><td><b>${p}</b></td><td>${mine.length}</td><td>${hrs}h of ${CAP}h<div class="load ${pct>85?'hot':''}"><i style="width:${Math.min(pct,100)}%"></i></div></td><td>${pct}%${pct>100?' · <b style="color:var(--red)">over capacity</b>':''}</td><td>${mine.filter(c=>c.high).length}</td></tr>`}).join("");
+ $("#view").innerHTML=`<table><tr><th>Person</th><th>Open cards</th><th>Load this week (standard times)</th><th>Booked</th><th>HIGH</th></tr>${rows}</table><div class="note">Load comes from standard times now, and from logged hours once designers log daily. Overload shows before the week starts, not when work goes overdue.</div>`;
+}
+function lead(){
+ const rows=COLS.map(col=>{const n=cards.filter(c=>c.col===col.k).length;const hint={ready:"Pile here: work waiting to start",review:"Pile here: creative leads overloaded",qc:"Pile here: QC is the bottleneck",client:"Pile here: waiting on client decisions",fb:"Pile here: rework"}[col.k]||"";return `<tr><td><b>${col.n}</b></td><td>${n}<div class="load"><i style="width:${n*12}%"></i></div></td><td>${hint}</td></tr>`}).join("");
+ $("#view").innerHTML=`<table><tr><th>Stage</th><th>Cards</th><th>What a pile-up means</th></tr>${rows}<tr><td><b>Blocked</b></td><td>${blocked.length}</td><td>Owners: ${blocked.map(b=>b.owner).join(", ")}</td></tr></table><div class="note">Time waiting on QC, the client or Accounts is visible, so it stops counting against Creative.</div>`;
+}
+function render(){stats();({board,week,lead})[view]()}
+render();
+</script>
+</body>
+</html>
