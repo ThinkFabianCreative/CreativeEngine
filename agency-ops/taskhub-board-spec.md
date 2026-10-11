@@ -1,6 +1,6 @@
 # Task Hub: Stage board and quality rules (spec for Leo)
 
-From: Andres Fabian, Creative Director · Draft v0.6, Oct 10 2026
+From: Andres Fabian, Creative Director · Draft v0.8, Oct 10 2026
 Prototype: `taskhub-board-prototype.html` (open it in a browser and drag the cards)
 
 ## Summary
@@ -193,6 +193,22 @@ Not used, on purpose: urgency tricks, streaks, or guilt messages. Per the articl
 
 The token list below still applies, apart from these overrides.
 
+**Update v0.7: scannability.**
+- **Icons:** Feather icons throughout, at 16px with a 1.75 stroke.
+- **Column headers:** each stage has its own icon, and the column rules move into a tooltip on the header.
+- **One summary row of chips:** open · need someone · blocked · promised before plan.
+  - "Need someone" and "blocked" expand on click.
+  - The "Next up" list and the Blocked lane are collapsed by default.
+- **Cards show four things:**
+  - Title.
+  - Client and round.
+  - Assignee.
+  - One status badge.
+  - Icons appear only for a problem (no brief) or a pass (QC done).
+  - Hours live in the task panel.
+- **List:** 5 columns by default (Task, Client, Assignee, Stage, Promised); "More columns" adds the rest.
+- **Scope switch:** Mine / My team / Everyone, defaulting to My team.
+
 A shadcn/ui design language in plain HTML/CSS, so it works in a vanilla build:
 - **Tokens:** zinc neutrals (background #fafafa, card #fff, border #e4e4e7, muted #f4f4f5, muted text #71717a), 8px radius, 1px borders, light shadows only on cards and overlays.
 - **Identity:** the Traffik dark header (#1d1d1d) and red (#c8202f), used only for the header, the New Task button and real problems (blocked, overdue). Red is not decoration.
@@ -200,6 +216,29 @@ A shadcn/ui design language in plain HTML/CSS, so it works in a vanilla build:
 - **Components:** Tabs (view switcher), Card (task), Badge (one status per card, most important first), Button (primary, outline), Sheet (task detail, right side), Dialog (QC checklist, New Task), Toast (bottom right, with an action).
 - **Icons:** inline SVG (Lucide shapes), never emoji or text symbols.
 - **Accessibility:** cards are focusable and open with Enter; Escape closes the sheet and dialogs; focus returns to the card; visible focus rings; a "Move to" control in the sheet as the non-drag alternative (WCAG 2.2 dragging movements); reduced motion respected.
+
+## 9. What the Hub should stop showing
+
+The Hub shows nearly everything it knows at once, and some of it isn't reliable. Seen in the hub-fork build on Oct 10 2026:
+
+| Screen | What it shows today | Change |
+|---|---|---|
+| **Home** | Every open task, with about 12 details per row (job #, status, overdue flag, type, account pair, people, subtask progress, "Your subtasks" list, PM, due date, counter), all at the same visual weight | Lead with exceptions (blocked, overdue, waiting on someone). Rows show title, client, owner, one status, due date. The rest goes in the task panel |
+| **Home counters** | Total open, Active, In the queue, On hold, Overdue, Due this week, plus the out-of-office strip | One summary row. Hide counters at zero. Show out-of-office only for people on the current scope |
+| **Hot Sheet** | Five alert chips plus every deadline and step per day; Flow lists 71 assignments | Default to the user's scope (Mine / My team). Collapse steps under their task. Keep the alert chips and drop the duplicate counts |
+| **Task detail** | A 12-step plan where every step repeats the full list of ~30 people with "35h free" | Assign people once at task level; steps inherit them, with a per-step override. Show the people list only when "Assign" is clicked, filtered to the task's team |
+| **Resourcing** | Four big stats plus a 20 people × 6 weeks heatmap with numbers in every cell | Hide free hours, % booked and the heatmap numbers until time logging has run 4–6 weeks, or label them "Estimate (no hours logged)". Colour only, numbers on hover |
+| **Every task** | 13 columns × 710 rows | Default to 5 columns and open tasks only. Finished tasks go in the Completed view, with rates instead of rows |
+| **New task** | About 25 fields, plus four people checklists (Digital, Creative, Account, Assign team members) | A template plus about 8 required fields (title, client, account lead, creative lead, assignee, brief link, timeline, priority). "Quick capture" (already in the Hub) for everything else. One people picker, not four lists |
+
+**Principles**
+1. **Exceptions first.** Lead with what's blocked, overdue or waiting on someone. Everything else is one click away.
+2. **Scope by role.** Designers default to Mine, PMs and creative leads to My team, leadership to Everyone with stage totals.
+3. **One main number per view.** Hide zero counters.
+4. **Progressive disclosure.** Subtasks, plan steps and extra columns stay collapsed until asked for.
+5. **No metric before its data is real.** A number built on 0 logged hours is false precision, and it misleads staffing decisions. Hide it or label it as an estimate.
+6. **Enter once.** People are assigned at task level; dates come from the plan; templates pre-fill the rest.
+7. **One visual system.** The Hub mixes several fonts and a monospace. Use one variable family (Instrument Sans in the prototype) and the tokens in §8.
 
 ## Suggested build order
 

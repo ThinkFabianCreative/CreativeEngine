@@ -221,6 +221,19 @@ text(s, 8.6, 2.5, 3.8, 0.5, "WHY", 12, True, ACC)
 text(s, 8.6, 3.0, 3.8, 3.4, "Work sent cold gets judged on taste: \"she looks too old.\"\n\nWork presented gets judged on the brief: the insight, the idea, the decisions we need.", 17, True, WHITE, 1.3)
 text(s, 0.7, 6.0, 7.2, 0.8, "Older or busy clients: a 3–5 minute recorded walkthrough by the ACD counts as presented.", 13, False, GREY)
 
+# 11c Review by job size (web)
+s = slide("Pillar 2", "Who reviews: split by job size")
+table(s, 0.7, 2.2, 11.9, [
+    ["Track", "What it covers", "Reviewer", "Presents to client"],
+    ["Light", "Updates to approved work: page edits, template changes, resizes, variants, bug-level fixes", "Jordan (web) · senior designer on the job", "Sent with change log, after QC"],
+    ["Full", "New builds, new concepts, anything at G1 or G2, regulated claims", "Andres", "ACD or CD, live or recorded"],
+], [1.4, 5.2, 3.0, 2.3], 14, 0.9)
+text(s, 0.7, 5.3, 11.9, 1.2,
+     "Maker is never checker: Jordan never reviews his own work; Damba's work on Light jobs goes to Jordan.\n"
+     "For the first 6 weeks Andres spot-checks Jordan's reviews. Then Jordan's review scope grows job by job.",
+     14, False, INK, 1.4)
+notes(s, "Protects Andres's time now and gives Jordan a path into the ACD role he holds by title.")
+
 # 12 Pillar 3 rounds + triage
 s = slide("Pillar 3", "Rounds and triage")
 table(s, 0.7, 2.3, 5.2, [
@@ -310,6 +323,23 @@ text(s, 0.7, 2.3, 6.4, 4.3,
 rect(s, 7.5, 2.3, 5.1, 4.2, INK)
 text(s, 7.8, 2.6, 4.6, 0.5, "WHY IT MATTERS", 12, True, ACC)
 text(s, 7.8, 3.1, 4.6, 3.3, "Edits rushed on a weekend skip QC. On print and regulated work, that's where expensive mistakes happen.\n\nProtected weekends are how the team knows the reset is real.", 18, True, WHITE, 1.3)
+
+# 15c Daily stand-up
+s = slide("Pillar 3", "Daily stand-up: 15 minutes, PM-led")
+table(s, 0.7, 2.1, 7.0, [
+    ["Order", "PM calls out", "Time"],
+    ["1 · Blocked", "Reason, owner, since when. Cleared today?", "2 min"],
+    ["2 · With client / Feedback", "Round x of y. Feedback due when?", "2 min"],
+    ["3 · Review / QC", "Who is it waiting on? Clear by noon?", "2 min"],
+    ["4 · In progress", "Person by person, three questions", "7 min"],
+    ["5 · Ready / Intake", "Anything without a brief doesn't start", "1 min"],
+    ["6 · Close", "Read back commitments and blocker owners", "1 min"],
+], [2.4, 3.6, 1.0], 12, 0.55)
+rect(s, 8.1, 2.1, 4.5, 4.4, INK)
+text(s, 8.4, 2.35, 4.0, 0.4, "THREE QUESTIONS PER DESIGNER", 12, True, ACC)
+text(s, 8.4, 2.85, 4.0, 2.2, "1. What moves today?\n2. Will it make the promised date?\n3. What's blocking you, and who owns it?", 17, True, WHITE, 1.45)
+text(s, 8.4, 4.9, 4.0, 1.5, "Cards updated and hours confirmed by 9:40. No problem-solving in the room: park it. The PM updates the board live.", 12, False, WHITE, 1.35)
+text(s, 0.7, 6.25, 7.0, 0.5, "Walk the board right to left: finishing beats starting.", 13, True, ACC)
 
 # 13 Estimates
 s = slide("Pillar 3", "Estimates without a bottleneck")

@@ -6,6 +6,7 @@
 <title>Task Hub Board</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/feather.min.js"></script>
 <style>
 :root{--bg:#fafafa;--card:#fff;--fg:#09090b;--muted:#f4f4f5;--mfg:#71717a;--border:#e4e4e7;--ring:#a1a1aa;--brand:#c8202f;--head:#1d1d1d;--ok:#15803d;--warn:#b45309;--r:8px;
  --ink:var(--fg);--grey:var(--mfg);--line:var(--border);--paper:var(--bg);--red:var(--brand);--green:var(--ok);--amber:var(--warn)}
@@ -212,6 +213,10 @@ h1{font-size:24px;font-weight:650;font-stretch:90%;display:flex;align-items:cent
 .tabs button.on{color:var(--brand);border-bottom-color:var(--brand)}
 .tool{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
 select,input{border-radius:3px;border-color:#8590A2;height:32px}
+.scope{display:inline-flex;border:1px solid #8590A2;border-radius:3px;overflow:hidden}
+.scope button{border:0;background:#fff;height:30px;padding:0 12px;font-weight:500;color:var(--sub);cursor:pointer}
+.scope button+button{border-left:1px solid var(--border)}
+.scope button.on{background:var(--sel);color:var(--brand);font-weight:650}
 .avs{display:flex;padding-left:6px}
 .avs button{width:30px;height:30px;border-radius:50%;border:2px solid #fff;margin-left:-6px;font-size:10px;font-weight:700;color:#fff;cursor:pointer;display:grid;place-items:center}
 .avs button.on{box-shadow:0 0 0 2px var(--brand);z-index:1}
@@ -229,6 +234,66 @@ select,input{border-radius:3px;border-color:#8590A2;height:32px}
 .card:hover{background:var(--hov);box-shadow:0 1px 1px #091E4240,0 0 1px #091E424F}
 .card .t{font-weight:500;font-size:14px}
 .card .top{color:var(--mfg)}
+/* calmer density */
+.summary{display:flex;gap:8px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border-radius:16px;border:1px solid var(--border);background:#fff;color:var(--sub);cursor:pointer;font-size:13px}
+.chip:disabled{cursor:default}
+.chip:not(:disabled):hover{background:var(--hov)}
+.chip b{color:var(--fg);font-weight:650}
+.chip.warn b{color:var(--brand)}
+.chip svg{width:15px;height:15px}
+.stats{margin-bottom:18px;flex-direction:column;align-items:stretch}
+.focus{margin-top:10px}
+.focus .it{align-items:center}.focus .it svg{color:var(--mfg);flex:none}
+.col{padding:10px}
+.col h4{margin:2px 4px 10px}
+.col h4 .ch{display:inline-flex;align-items:center;gap:7px}
+.col h4 svg{width:15px;height:15px;color:var(--mfg)}
+.col .rule{min-height:0;margin:0 4px 10px;display:none}
+.card{padding:12px 14px;margin-bottom:10px}
+.card .t{font-size:14.5px;font-weight:550;line-height:1.35;margin-bottom:4px}
+.card .cl{font-size:12.5px;color:var(--mfg);margin-bottom:12px}
+.card .bot{gap:10px}
+.card .bot .sp{margin-left:auto}
+.nav svg,.search svg,.new svg{width:16px;height:16px}
+.btn svg{width:15px;height:15px}
+/* stand-up on the board */
+.boardbar{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.board.spot .card{opacity:.28;transition:opacity .2s}
+.board.spot .card.lit{opacity:1;box-shadow:0 0 0 2px var(--brand),0 1px 1px #091E4240}
+.board.spot .col.lit{background:#FDECEE}
+#supanel{position:fixed;right:16px;top:72px;bottom:16px;width:340px;background:#fff;border:1px solid var(--border);border-radius:8px;box-shadow:0 12px 32px rgba(9,30,66,.18);z-index:12;display:flex;flex-direction:column}
+#supanel .sp-h{display:flex;justify-content:space-between;align-items:center;padding:12px 14px 0}
+#supanel .sp-t{margin:6px 14px 8px;font-size:22px;text-transform:none;letter-spacing:0;font-stretch:80%}
+#supanel .sp-b{padding:0 14px;overflow:auto;flex:1}
+#supanel .sp-b h4{font-size:12px;text-transform:uppercase;letter-spacing:.06em;margin:14px 0 6px;font-stretch:85%}
+#supanel .sp-f{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-top:1px solid var(--border)}
+#supanel .qs{background:#1d1d1d;color:#fff;border-radius:6px;padding:12px 12px 12px 30px;margin:8px 0 12px;font-weight:550;line-height:1.7}
+.sp-row{padding:10px 0;border-top:1px solid var(--border)}
+.sp-row .t{font-weight:550;cursor:pointer}.sp-row .t:hover{text-decoration:underline}
+.sp-row .acts2{display:flex;gap:6px;margin-top:6px}
+.sp-row .acts2 button{height:26px;padding:0 9px;border-radius:3px;border:0;background:#F1F2F4;cursor:pointer;font-size:12px;color:var(--sub)}
+.sp-row .acts2 button.on{background:#BAF3DB;color:#216E4E}.sp-row .acts2 button.risk.on{background:#F8E6A0;color:#7F5F01}
+body.su-on .wrap{padding-right:372px}
+@media (max-width:900px){#supanel{left:16px;width:auto;top:auto;height:60vh}body.su-on .wrap{padding-right:16px}}
+/* stand-up */
+.su-top{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.su-dots{display:flex;gap:6px;flex-wrap:wrap}
+.su-dots button{height:28px;padding:0 10px;border-radius:14px;border:1px solid var(--border);background:#fff;font-size:12px;color:var(--sub);cursor:pointer}
+.su-dots button.on{background:var(--fg);color:#fff;border-color:var(--fg)}
+.su-dots button.done{color:var(--ok);border-color:#BAF3DB}
+.su{display:grid;grid-template-columns:1fr 320px;gap:16px}
+.su h2{font-size:26px;font-weight:650;font-stretch:80%;margin:0 0 4px}
+.su-row{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--border);border-radius:6px;margin-bottom:8px;background:#fff}
+.su-row .t{font-weight:550;cursor:pointer}.su-row .t:hover{text-decoration:underline}
+.su-row .acts2{margin-left:auto;display:flex;gap:6px}
+.su-row .acts2 button{height:28px;padding:0 10px;border-radius:3px;border:0;background:#F1F2F4;cursor:pointer;font-size:12px;color:var(--sub)}
+.su-row .acts2 button.on{background:#BAF3DB;color:#216E4E}.su-row .acts2 button.risk.on{background:#F8E6A0;color:#7F5F01}
+.su-q{background:#1d1d1d;color:#fff;border-radius:8px;padding:18px}
+.su-q h4{margin:0 0 10px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#ff8a94;font-stretch:85%}
+.su-q ol{margin:0;padding-left:18px;font-size:16px;line-height:1.7;font-weight:550}
+.su-q p{font-size:12.5px;color:#a1a1aa;margin:14px 0 0}
+@media (max-width:900px){.su{grid-template-columns:1fr}}
 /* lozenges (Atlassian style): bold uppercase, flat */
 .tag,.lz{border-radius:3px;border:0;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.02em;padding:1px 5px;font-stretch:90%}
 .tag{background:#DCDFE4;color:#44546F}
@@ -268,22 +333,23 @@ td{padding:10px 12px}
 <div class="app">
 <aside class="side" aria-label="Main navigation">
   <div class="brand"><span class="logo">T</span><b>Task Hub</b></div>
-  <a class="nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>For you</a>
-  <a class="nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg>Resourcing</a>
+  <a class="nav"><i data-fi="user"></i>For you</a>
+  <a class="nav"><i data-fi="bar-chart-2"></i>Resourcing</a>
   <div class="sh">Department</div>
   <a class="nav on"><span class="sq" style="background:#c8202f">C</span>Creative</a>
   <div class="sh">Clients</div>
   <div id="spaces"></div>
 </aside>
 <div class="main">
-  <div class="topbar"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4-4"/></svg><input placeholder="Search" aria-label="Search"></div><button class="new" id="newBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>Create</button><span class="me" title="Andres">AF</span></div>
+  <div class="topbar"><div class="search"><i data-fi="search"></i><input placeholder="Search" aria-label="Search"></div><button class="new" id="newBtn"><i data-fi="plus"></i>Create</button><span class="me" title="Andres">AF</span></div>
   <div class="wrap">
     <div class="crumbs">Spaces / Creative</div>
-    <h1><span class="sq big" style="background:#c8202f">C</span>Creative Department</h1>
+    <h1><span class="sq big" style="background:#c8202f">C</span><span id="ttl">Andres's team</span></h1>
     <div class="tabs" id="views" role="tablist">
       <button class="on" data-v="board">Board</button><button data-v="list">List</button><button data-v="cal">Calendar</button><button data-v="week">Workload</button><button data-v="lead">Leadership</button><button data-v="comp">Completed</button>
     </div>
     <div class="tool">
+      <div class="scope" id="scope" role="group" aria-label="Scope"><button data-scope="mine">Mine</button><button data-scope="team" class="on">My team</button><button data-scope="all">Everyone</button></div>
       <div id="avs" class="avs" role="group" aria-label="Filter by person"></div>
       <select id="who" aria-label="Person"><option value="">Everyone</option></select>
       <select id="cli" aria-label="Client"><option value="">All clients</option></select>
@@ -320,22 +386,28 @@ const QC=[
  ["Presentation ready?","Agency format, decisions needed, round count shown","ACD"]];
 // planned = hours from standard times; logged = hours logged; promised vs delivers = dates
 let cards=[
- {id:1,t:"MA Search Copy",c:"Eternal Health",who:"Debbie",am:"Brad",lead:"Jeremy",rev:"Jeremy",col:"prog",plan:3,log:1,brief:1,high:"Client launch moved up",late:1,round:1,rounds:2,del:"Oct 14",prom:"Oct 12"},
+ {id:1,t:"MA Search Copy",c:"Eternal Health",who:"Jeremy",am:"Brad",lead:"Jeremy",rev:"Anthony",col:"prog",plan:3,log:1,brief:1,high:"Client launch moved up",late:1,round:1,rounds:2,del:"Oct 14",prom:"Oct 12"},
  {id:2,t:"UTMs & QR Codes",c:"Eternal Health",who:"Connor",am:"Brad",lead:"—",rev:"Valerie",col:"prog",plan:2,log:0,brief:1,high:"",round:1,rounds:2,del:"Oct 12",prom:"Oct 12"},
- {id:3,t:"URL Re-Route",c:"Eternal Health",who:"Matt",am:"Brad",lead:"Jordan",rev:"Jordan",col:"ready",plan:1.5,log:0,brief:1,late:1,round:0,rounds:2,del:"Oct 13",prom:"Oct 12"},
+ {id:3,t:"URL Re-Route",c:"Eternal Health",who:"Connor",am:"Brad",lead:"Jeremy",rev:"Jeremy",col:"ready",plan:1.5,log:0,brief:1,late:1,round:0,rounds:2,del:"Oct 13",prom:"Oct 12"},
  {id:4,t:"Storyboards",c:"Eternal Health",who:"Anthony",am:"Brad",lead:"Jeremy",rev:"Anthony",col:"prog",plan:12,log:4,brief:1,high:"",round:1,rounds:2,del:"Oct 16",prom:"Oct 12"},
- {id:5,t:"Duets MA Video Update",c:"Eternal Health",who:"Michael",am:"Brad",lead:"Jeremy",rev:"Jeremy",col:"prog",plan:6,log:2,brief:1,round:2,rounds:2,del:"Oct 12",prom:"Oct 12"},
+ {id:5,t:"Duets MA Video Update",c:"Eternal Health",who:"Victoria",am:"Brad",lead:"Jeremy",rev:"Jeremy",col:"prog",plan:6,log:2,brief:1,round:2,rounds:2,del:"Oct 12",prom:"Oct 12"},
  {id:6,t:"Broker Guide Print Versions",c:"Eternal Health",who:"Anthony",am:"Brad",lead:"Jeremy",rev:"Jeremy",col:"qc",plan:4,log:3,brief:1,late:1,round:1,rounds:2,del:"Oct 12",prom:"Oct 9",driver:"Printer drop Oct 13"},
- {id:7,t:"MA Landing Page",c:"Eternal Health",who:"Damba",am:"Brad",lead:"Jordan",rev:"Jordan",col:"prog",plan:10,log:5,brief:1,round:1,rounds:2,del:"Oct 14",prom:"Oct 12"},
+ {id:7,t:"MA Landing Page",c:"Eternal Health",who:"Anthony",am:"Brad",lead:"Jeremy",rev:"Jeremy",col:"prog",plan:10,log:5,brief:1,round:1,rounds:2,del:"Oct 14",prom:"Oct 12"},
  {id:8,t:"DMs: Write copy & Create Layouts",c:"Eternal Health",who:"Jeremy",am:"Brad",lead:"Jeremy",rev:"Jeremy",col:"fb",plan:8,log:6,brief:1,round:2,rounds:2,del:"Oct 15",prom:"Oct 15"},
- {id:9,t:"AEP Social Ads",c:"Eternal Health",who:"Umair",am:"",lead:"",rev:"",col:"intake",plan:0,log:0,brief:0,round:0,rounds:2,del:"",prom:"Nov 2"},
+ {id:9,t:"AEP Social Ads",c:"Eternal Health",who:"Victoria",am:"",lead:"",rev:"",col:"intake",plan:0,log:0,brief:0,round:0,rounds:2,del:"",prom:"Nov 2"},
  {id:10,t:"Applications Open Refresh",c:"CMU",who:"Umair",am:"Amanda",lead:"Andres",rev:"Hunter",col:"review",plan:21.15,log:0,brief:1,round:1,rounds:2,del:"Oct 23",prom:"Oct 22",driver:"Media start Oct 23"},
- {id:11,t:"Instapage Templates",c:"CMU",who:"Damba",am:"Amanda",lead:"Jordan",rev:"Andres",col:"prog",plan:12,log:0,brief:1,late:1,round:1,rounds:2,del:"Oct 26",prom:"Oct 26"},
+ {id:11,t:"Instapage Templates",c:"CMU",who:"Damba",am:"Amanda",lead:"Andres",rev:"Jordan",col:"prog",plan:12,log:0,brief:1,late:1,round:1,rounds:2,del:"Oct 26",prom:"Oct 26",track:"Light"},
  {id:12,t:"CMU Promise Logo Design",c:"CMU",who:"Andres",am:"Amanda",lead:"Andres",rev:"Andres",col:"prog",plan:8.5,log:0,brief:1,round:0,rounds:2,del:"Nov 2",prom:"Nov 2"},
  {id:13,t:"M3 Animation Storyboard",c:"Edwards",who:"Debbie",am:"Amanda",lead:"Andres",rev:"Andres",col:"ready",plan:20,log:0,brief:0,round:0,rounds:2,del:"Oct 14",prom:"Oct 12"},
  {id:14,t:"Campaign Concepts",c:"Starling",who:"Umair",am:"Brad",lead:"Jeremy",rev:"Jeremy",col:"prog",plan:20,log:8,brief:1,round:0,rounds:1,del:"Oct 12",prom:"Oct 12"},
- {id:15,t:"Ski Season Creative",c:"GJRASA",who:"Debbie",am:"Amanda",lead:"Jordan",rev:"Andres",col:"client",plan:12,log:9,brief:1,qcOK:1,round:1,rounds:2,del:"Oct 14",prom:"Oct 14"},
- {id:16,t:"Homepage Creative Refinements",c:"MFK",who:"Jordan",am:"Leo",lead:"Andres",rev:"Andres",col:"done",plan:6,log:6,brief:1,qcOK:1,round:2,rounds:2,del:"Oct 13",prom:"Oct 13"}];
+ {id:15,t:"Ski Season Creative",c:"GJRASA",who:"Debbie",am:"Amanda",lead:"Andres",rev:"Andres",col:"client",plan:12,log:9,brief:1,qcOK:1,round:1,rounds:2,del:"Oct 14",prom:"Oct 14"},
+ {id:16,t:"Homepage Creative Refinements",c:"MFK",who:"Jordan",am:"Leo",lead:"Andres",rev:"Andres",col:"done",plan:6,log:6,brief:1,qcOK:1,round:2,rounds:2,del:"Oct 13",prom:"Oct 13"},
+ {id:17,t:"Tech Jam Video R1",c:"Champlain",who:"Michael",am:"Savannah",lead:"Andres",rev:"Andres",col:"prog",plan:10,log:4,brief:1,round:1,rounds:2,del:"Oct 13",prom:"Oct 13",driver:"Event Oct 20"},
+ {id:18,t:"Brand Retargeting Refresh: Videos",c:"CMU",who:"Michael",am:"Amanda",lead:"Andres",rev:"Andres",col:"prog",plan:12,log:3,brief:1,round:1,rounds:2,del:"Oct 16",prom:"Oct 16"},
+ {id:19,t:"Rowdy Script Review",c:"CMU",who:"Debbie",am:"Amanda",lead:"Andres",rev:"Andres",col:"review",plan:2,log:1,brief:1,round:0,rounds:2,del:"Oct 16",prom:"Oct 16"},
+ {id:20,t:"Page Templates for Staff",c:"Clever Care",who:"Matt",am:"Savannah",lead:"Andres",rev:"Jordan",col:"prog",plan:10,log:2,brief:1,round:0,rounds:2,del:"Oct 20",prom:"Oct 20",track:"Light"},
+ {id:21,t:"Variant Matrix export (pilot)",c:"CMU",who:"Andrea",am:"Amanda",lead:"Andres",rev:"Umair",col:"ready",plan:4,log:0,brief:1,round:0,rounds:2,del:"Oct 22",prom:"Oct 22",driver:"Media start Oct 23"},
+ {id:22,t:"New Website: Build",c:"TRAFFIK",who:"Aaron",am:"Amanda",lead:"Andres",rev:"Andres",col:"prog",plan:16,log:5,brief:1,round:1,rounds:2,del:"Oct 13",prom:"Oct 13"}];
 const PARENT={"Eternal Health":{job:"Job 657",name:"eH | AEP 2027 Acquisition Campaign",pm:"Mikayla"},"CMU":{job:"Job 643",name:"CMU | Fall Enrollment",pm:"Mikayla"},"Edwards":{job:"NS-667",name:"ELS | SAPIEN M3 RESILIA",pm:"Jeff"},"Starling":{job:"no job #",name:"Starling | Campaign 2027",pm:"Dee"},"GJRASA":{job:"no job #",name:"GJRASA | Ski Season",pm:"Dee"},"MFK":{job:"Job 600",name:"MFK | Website",pm:"Dee"}};
 const TPL=[["Brief & kickoff","Account lead","ready",0.5],["Write copy","Copywriter","prog",0.25],["Design / build","Assignee","prog",0.45],["Internal review","Reviewer","review",0.05,"Rule"],["Pre-launch QA → Quality Control","QC owner","qc",0.05,"Rule"],["Send / present","Creative lead","client",0.05,"Rule"],["Client feedback R1","Account lead","fb",0],["Revisions R1","Assignee","fb",0.1],["Internal review before final","Reviewer","review",0.03],["Client final approval","Account lead","done",0],["Exports & spec check","QC owner","done",0.02]];
 function steps(c){const ci=ORDER.indexOf(c.col);let curSet=false;return TPL.map((s,i)=>{const si=ORDER.indexOf(s[2]);let st=si<ci?"done":"todo";if(!curSet&&si===ci){st="cur";curSet=true}
@@ -382,30 +454,34 @@ function move(c,to){
   c.round=nr;if(nr>c.rounds)toast(`Round ${nr} of ${c.rounds}: flagged as change order.`)}
  c.col=to;if(to==="done")c.late=0;render();
 }
-function vis(){return cards.filter(c=>(!who||c.who===who)&&(!cli||c.c===cli))}
-let showMore=false;
-function focus(){
- const v=vis().filter(c=>c.col!=="done");
- const items=[];
- 
- v.filter(c=>!isBlocked(c)&&c.col==="qc"&&!c.qcOK).forEach(c=>items.push([1,c,"Waiting on Quality Control"]));
- v.filter(c=>!isBlocked(c)&&c.col==="review").forEach(c=>items.push([2,c,`Waiting on review by ${c.rev||"nobody assigned"}`]));
- v.filter(c=>!isBlocked(c)&&!c.brief&&c.col==="intake").forEach(c=>items.push([3,c,"No brief yet, can't start"]));
- v.filter(c=>!isBlocked(c)&&c.col==="prog"&&c.late).forEach(c=>items.push([4,c,"In progress and overdue"]));
- items.sort((a,b)=>a[0]-b[0]);const seen=new Set();const uniq=items.filter(([_,c])=>!seen.has(c.id)&&seen.add(c.id));items.length=0;items.push(...uniq);const top=items.slice(0,3);
- $("#focus").innerHTML=top.length?`<div class="focus"><h4>${who?who+"'s next 3":"Next up"} · ${items.length} waiting on someone (blocked work is in the lane below)</h4>${top.map(([_,c,why])=>`<div class="it" data-open="${c.id}"><b>${c.t}</b><span class="sm">${c.c} · ${why}</span></div>`).join("")}${items.length>3?`<div class="sm" style="margin-top:6px">${items.length-3} more on the board below.</div>`:""}</div>`:"";
- document.querySelectorAll("[data-open]").forEach(e=>e.onclick=()=>openDrawer(+e.dataset.open));
+// Andres's team (confirmed Oct 2026)
+const MY_TEAM=["Andres","Umair","Michael","Jordan","Debbie","Damba","Andrea","Aaron","Matt"];
+const ME="Andres";
+let scope="team";
+const inScope=c=>scope==="all"||(scope==="mine"?(c.who===ME||c.lead===ME||c.rev===ME):(MY_TEAM.includes(c.who)||c.lead===ME));
+function vis(){return cards.filter(c=>inScope(c)&&(!who||c.who===who)&&(!cli||c.c===cli))}
+let showNext=false,showBlocked=false;
+function focus(){$("#focus").innerHTML=""}
+function nextItems(){
+ const v=vis().filter(c=>c.col!=="done"&&!isBlocked(c));const items=[];
+ v.filter(c=>c.col==="qc"&&!c.qcOK).forEach(c=>items.push([1,c,"Waiting on Quality Control"]));
+ v.filter(c=>c.col==="review").forEach(c=>items.push([2,c,`Waiting on review by ${c.rev||"nobody"}`]));
+ v.filter(c=>!c.brief&&c.col==="intake").forEach(c=>items.push([3,c,"No brief yet"]));
+ v.filter(c=>c.col==="prog"&&c.late).forEach(c=>items.push([4,c,"Overdue"]));
+ items.sort((a,b)=>a[0]-b[0]);const seen=new Set();return items.filter(([_,c])=>!seen.has(c.id)&&seen.add(c.id));
 }
 function stats(){
- focus();
- const v=vis();const over=[...new Set(cards.map(c=>c.who))].filter(p=>prog(p)>3);
- const list=[["Open",v.filter(c=>c.col!=="done").length],["In progress",v.filter(c=>c.col==="prog").length],["Waiting on review/QC",v.filter(c=>c.col==="review"||c.col==="qc").length],["Blocked",blocked.filter(b=>v.some(c=>c.id===b.id)).length,1],["No brief",v.filter(c=>!c.brief).length,1],["Over WIP",over.length,1],["Promised earlier than planned",v.filter(earlier).length,1]];
- const shown=showMore?list:[list[0],list[3],list[2],list[6]];
- $("#stats").innerHTML=shown.map(([n,val,w])=>`<div class="stat ${w&&val?'warn':''}"><b>${val}</b>${n}</div>`).join("")+`<span class="more" id="more">${showMore?"Fewer":"More counts"}</span>`;
- $("#more").onclick=()=>{showMore=!showMore;render()};
+ const v=vis();const nx=nextItems();const bl=blocked.filter(b=>v.some(c=>c.id===b.id)).length;
+ const chip=(ic,n,label,id,warn)=>`<button class="chip ${warn&&n?"warn":""}" ${id?`id="${id}"`:""} ${id?"":"disabled"}>${svg(ic)}<b>${n}</b>${label}</button>`;
+ $("#stats").innerHTML=`<div class="summary">${chip("layers",v.filter(c=>c.col!=="done").length,"open")}${chip("arrow-right-circle",nx.length,"need someone","sNext")}${chip("lock",bl,"blocked","sBlk",1)}${chip("calendar",v.filter(earlier).length,"promised before plan",null,1)}</div>
+ ${showNext&&nx.length?`<div class="focus">${nx.slice(0,5).map(([_,c,why])=>`<div class="it" data-open="${c.id}">${svg(COLICON[c.col])}<b>${c.t}</b><span class="sm">${c.c} · ${why}</span></div>`).join("")}</div>`:""}`;
+ $("#sNext").onclick=()=>{showNext=!showNext;render()};$("#sBlk").onclick=()=>{showBlocked=!showBlocked;render()};
+ document.querySelectorAll("[data-open]").forEach(e=>e.onclick=()=>openDrawer(+e.dataset.open));
 }
 const IC={check:'<path d="M20 6 9 17l-5-5"/>',x:'<path d="M18 6 6 18M6 6l12 12"/>',circle:'<circle cx="12" cy="12" r="9"/>',file:'<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/>',shield:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',lock:'<rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>'};
-const svg=(n,c)=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"${c?` style="color:${c}"`:""}>${IC[n]}</svg>`;
+const FMAP={file:"file-text",check:"check",x:"x",circle:"circle",shield:"shield",clock:"clock",lock:"lock"};
+const svg=(n,c)=>{const f=window.feather&&feather.icons[FMAP[n]||n];if(f)return f.toSvg({"aria-hidden":"true",width:16,height:16,"stroke-width":1.75,style:c?`color:${c}`:""});return `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"${c?` style="color:${c}"`:""}>${IC[n]||""}</svg>`};
+const COLICON={intake:"inbox",ready:"flag",prog:"play-circle",review:"eye",qc:"shield",client:"send",fb:"message-square",done:"check-circle"};
 const ini=n=>(n||"?").split(/\s+/).map(x=>x[0]).join("").slice(0,2).toUpperCase();
 function flag(c){ // one badge, most important first (fewer competing signals)
  if(isBlocked(c))return '<span class="tag bad">'+svg("lock")+'Blocked</span>';
@@ -417,20 +493,21 @@ function flag(c){ // one badge, most important first (fewer competing signals)
  return "";
 }
 function cardHTML(c){
+ const f=flag(c);
  return `<div class="card" draggable="true" tabindex="0" role="button" aria-label="${c.t}, ${c.c}, ${c.who}. Open details" data-id="${c.id}">
- <div class="top"><span>${c.c}</span>${flag(c)}</div>
  <div class="t">${c.t}</div>
- <div class="bot"><span class="av" title="${c.who}">${ini(c.who)}</span>${c.round?`<span>R${c.round}/${c.rounds}</span>`:""}
- <span class="ic" title="${c.brief?"Brief linked":"No brief"}">${svg("file",c.brief?"var(--ok)":"#b91c1c")}</span>
- <span class="ic" title="${c.qcOK?"QC passed":"QC not passed"}">${svg("shield",c.qcOK?"var(--ok)":"var(--ring)")}</span>
- <span class="ic sp" title="Logged / planned hours">${svg("clock")}${c.log}/${c.plan}h</span></div></div>`}
+ <div class="cl">${c.c}${c.round?` · R${c.round}/${c.rounds}`:""}</div>
+ <div class="bot"><span class="av" title="${c.who}">${ini(c.who)}</span>${!c.brief?`<span class="ic" title="No brief">${svg("file-minus","#AE2E24")}</span>`:""}${c.qcOK?`<span class="ic" title="QC passed">${svg("check-circle","var(--ok)")}</span>`:""}<span class="sp">${f}</span></div></div>`}
 function board(){
+ if(suOn&&suI===0)showBlocked=true;
  const v=vis();
  const bl=blocked.filter(b=>v.some(c=>c.id===b.id));
- let h=`<div class="blocked"><h4>Blocked · every blocker has a reason, an owner and a date</h4>${bl.length?bl.map(b=>{const c=cards.find(x=>x.id===b.id);return `<div class="brow"><b>${c.t}</b><span>${b.why}</span><span>Owner: ${b.owner}</span><span>Since ${b.since}</span><button data-unblock="${b.id}">Clear</button></div>`}).join(""):'<div class="brow">Nothing blocked.</div>'}</div>`;
- h+='<div class="board">'+COLS.map(col=>{const inCol=v.filter(c=>c.col===col.k);return `<div class="col" data-col="${col.k}"><h4><span>${col.n}</span><span>${inCol.length}</span></h4><div class="rule">${col.r}</div>${inCol.map(cardHTML).join("")}</div>`}).join("")+'</div>';
- h+='<div class="note">Rules: brief link and one account lead before work starts · plan before date · WIP warning over 3 · maker can\'t review own work · QC checklist before the client · Feedback counts rounds and flags change orders · blockers need reason, owner, date. Hover HIGH to see its reason.</div>';
+ let h=!bl.length?"":!showBlocked?"":`<div class="blocked"><h4>Blocked · reason, owner, date</h4>${bl.length?bl.map(b=>{const c=cards.find(x=>x.id===b.id);return `<div class="brow"><b>${c.t}</b><span>${b.why}</span><span>Owner: ${b.owner}</span><span>Since ${b.since}</span><button data-unblock="${b.id}">Clear</button></div>`}).join(""):'<div class="brow">Nothing blocked.</div>'}</div>`;
+ h+='<div class="board">'+COLS.map(col=>{const inCol=v.filter(c=>c.col===col.k);return `<div class="col" data-col="${col.k}"><h4 title="Rule: ${col.r}"><span class="ch">${svg(COLICON[col.k])}${col.n}</span><span>${inCol.length}</span></h4><div class="rule" title="${col.r}">${svg("info")}<span>${col.r}</span></div>${inCol.map(cardHTML).join("")}</div>`}).join("")+'</div>';
+ 
+ h=`<div class="boardbar"><button class="btn ${suOn?"":"pri"}" id="runSU">${svg(suOn?"x":"users")}${suOn?"End stand-up":"Run stand-up"}</button><span class="sm">${suOn?"Walking the board: right to left, one person at a time":"Daily at 9:45 · PM-led · 15 minutes"}</span></div>`+h;
  $("#view").innerHTML=h;
+ $("#runSU").onclick=()=>{suOn=!suOn;suI=0;render()};
  document.querySelectorAll(".card").forEach(el=>{el.ondragstart=e=>e.dataTransfer.setData("id",el.dataset.id);el.onclick=e=>{if(e.target.closest("button"))return;openDrawer(+el.dataset.id)};el.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openDrawer(+el.dataset.id)}}});
  document.querySelectorAll(".col").forEach(col=>{col.ondragenter=()=>col.classList.add("drop");col.ondragleave=e=>{if(!col.contains(e.relatedTarget))col.classList.remove("drop")}});
  document.querySelectorAll(".col").forEach(col=>{col.ondragover=e=>e.preventDefault();col.ondrop=e=>{const c=cards.find(x=>x.id==e.dataTransfer.getData("id"));if(c)move(c,col.dataset.col)}});
@@ -553,7 +630,7 @@ $("#newBtn").onclick=()=>{
   $("#newModal").classList.remove("on");toast(g("nb")?"Task created in Ready.":"Task created in Intake (no brief yet).",1);render()};
 };
 
-let lsort={k:"due",dir:1},lgroup="",lq="";
+let lsort={k:"due",dir:1},lgroup="",lq="",lmore=false;
 const DUE=c=>Date.parse((c.prom||c.del||"Dec 31")+" 2026");
 function list(){
  let v=vis().filter(c=>!lq||(c.t+" "+c.c+" "+c.who+" "+(c.am||"")).toLowerCase().includes(lq.toLowerCase()));
@@ -561,14 +638,14 @@ function list(){
  v.sort((a,b)=>{const x=key(a),y=key(b);return (x>y?1:x<y?-1:0)*lsort.dir});
  const th=(k,n)=>`<th aria-sort="${lsort.k===k?(lsort.dir>0?"ascending":"descending"):"none"}"><button data-sort="${k}">${n}${lsort.k===k?(lsort.dir>0?" ↑":" ↓"):""}</button></th>`;
  const priCell=c=>c.high?`<span class="pri" title="${c.high}"><svg viewBox="0 0 24 24" fill="none" stroke="#b91c1c" stroke-width="2.5" stroke-linecap="round"><path d="m6 15 6-6 6 6"/></svg>High</span>`:`<span class="pri sm"><svg viewBox="0 0 24 24" fill="none" stroke="#a1a1aa" stroke-width="2.5" stroke-linecap="round"><path d="M5 10h14M5 14h14"/></svg>Normal</span>`;
- const row=c=>`<tr tabindex="0" data-row="${c.id}"><td><b>${c.t}</b>${flag(c)?" "+flag(c):""}</td><td>${c.c}</td><td><span class="av">${ini(c.who)}</span> ${c.who}</td><td>${c.am||'<span class="no">None</span>'}</td><td><span class="lz ${c.col}">${COLS.find(k=>k.k===c.col).n}</span></td><td>${priCell(c)}</td><td>${c.prom||"—"}</td><td class="sm">${c.del||"No plan"}</td><td>${c.round?`R${c.round}/${c.rounds}`:"—"}</td><td>${c.log}/${c.plan}h</td></tr>`;
+ const row=c=>`<tr tabindex="0" data-row="${c.id}"><td><b>${c.t}</b>${flag(c)?" "+flag(c):""}</td><td>${c.c}</td><td><span class="av">${ini(c.who)}</span> ${c.who}</td><td><span class="lz ${c.col}">${COLS.find(k=>k.k===c.col).n}</span></td><td>${c.prom||"—"}</td>${lmore?`<td>${c.am||'<span class="no">None</span>'}</td><td>${priCell(c)}</td><td class="sm">${c.del||"No plan"}</td><td>${c.round?`R${c.round}/${c.rounds}`:"—"}</td><td>${c.log}/${c.plan}h</td>`:""}</tr>`;
  let body="";
  if(lgroup){const gk={client:c=>c.c,stage:c=>COLS.find(k=>k.k===c.col).n,who:c=>c.who,am:c=>c.am||"No account lead"}[lgroup];const groups={};v.forEach(c=>(groups[gk(c)]=groups[gk(c)]||[]).push(c));
-  body=Object.entries(groups).map(([g,cs])=>`<tr class="grp"><td colspan="10">${g} · ${cs.length}</td></tr>`+cs.map(row).join("")).join("")}else body=v.map(row).join("");
- $("#view").innerHTML=`<div class="lbar"><input id="lq" type="search" placeholder="Search tasks, clients, people" value="${lq}" aria-label="Search tasks"><label class="sm" for="lg">Group by</label><select id="lg"><option value="">None</option><option value="client">Client</option><option value="stage">Stage</option><option value="who">Assignee</option><option value="am">Account lead</option></select><span class="sm" style="margin-left:auto">${v.length} of ${vis().length} tasks</span></div>
- <div class="tw"><table class="lt"><thead><tr>${th("task","Task")}${th("client","Client")}${th("who","Assignee")}${th("am","Account lead")}${th("stage","Stage")}${th("pri","Priority")}${th("due","Promised")}${th("plan","Plan delivers")}${th("round","Round")}${th("hrs","Hours")}</tr></thead><tbody>${body||'<tr><td colspan="10" class="sm">No tasks match.</td></tr>'}</tbody></table></div>
+  body=Object.entries(groups).map(([g,cs])=>`<tr class="grp"><td colspan="${lmore?10:5}">${g} · ${cs.length}</td></tr>`+cs.map(row).join("")).join("")}else body=v.map(row).join("");
+ $("#view").innerHTML=`<div class="lbar"><input id="lq" type="search" placeholder="Search tasks, clients, people" value="${lq}" aria-label="Search tasks"><label class="sm" for="lg">Group by</label><select id="lg"><option value="">None</option><option value="client">Client</option><option value="stage">Stage</option><option value="who">Assignee</option><option value="am">Account lead</option></select><button class="btn" id="lmore">${svg(lmore?"minimize-2":"columns")}${lmore?"Fewer columns":"More columns"}</button><span class="sm" style="margin-left:auto">${v.length} of ${vis().length} tasks</span></div>
+ <div class="tw"><table class="lt"><thead><tr>${th("task","Task")}${th("client","Client")}${th("who","Assignee")}${th("stage","Stage")}${th("due","Promised")}${lmore?th("am","Account lead")+th("pri","Priority")+th("plan","Plan delivers")+th("round","Round")+th("hrs","Hours"):""}</tr></thead><tbody>${body||'<tr><td colspan="${lmore?10:5}" class="sm">No tasks match.</td></tr>'}</tbody></table></div>
  <div class="note">Click a row or press Enter to open the task. Click a column header to sort. "Promised" is the date given to the client; "Plan delivers" is what the standard-time plan says.</div>`;
- $("#lg").value=lgroup;
+ $("#lg").value=lgroup;$("#lmore").onclick=()=>{lmore=!lmore;list()};
  $("#lg").onchange=e=>{lgroup=e.target.value;list()};
  $("#lq").oninput=e=>{lq=e.target.value;const pos=e.target.selectionStart;list();const i=$("#lq");i.focus();i.setSelectionRange(pos,pos)};
  document.querySelectorAll("[data-sort]").forEach(b=>b.onclick=()=>{const k=b.dataset.sort;lsort=lsort.k===k?{k,dir:-lsort.dir}:{k,dir:1};list()});
@@ -599,10 +676,52 @@ function cal(){
  $("#cprev").onclick=()=>{calM=Math.max(0,calM-1);cal()};$("#cnext").onclick=()=>{calM=Math.min(11,calM+1);cal()};$("#ctoday").onclick=()=>{calM=9;cal()};
  document.querySelectorAll("[data-ev]").forEach(e=>{e.onclick=()=>openDrawer(+e.dataset.ev);e.onkeydown=k=>{if(k.key==="Enter"){k.preventDefault();openDrawer(+e.dataset.ev)}}});
 }
+
+let suI=0;const suLog={};// id -> "ok" | "risk"
+function suSteps(){
+ const v=vis();const s=[];
+ s.push({k:"blk",n:"Blocked",ask:"Is it cleared today? Who chases it?",cards:v.filter(isBlocked)});
+ s.push({k:"cli",n:"With client & feedback",ask:"Round x of y. When is feedback due?",cards:v.filter(c=>!isBlocked(c)&&(c.col==="client"||c.col==="fb"))});
+ s.push({k:"rev",n:"Review & QC",ask:"Who is it waiting on? Can it clear by noon?",cards:v.filter(c=>!isBlocked(c)&&(c.col==="review"||c.col==="qc"))});
+ const ppl=scope==="team"?[...MY_TEAM].sort():[...new Set(v.filter(c=>c.col!=="done").map(c=>c.who))].sort();
+ ppl.filter(p=>!who||p===who).forEach(p=>s.push({k:"p:"+p,n:p,person:p,ask:"",cards:v.filter(c=>c.who===p&&c.col!=="done"&&!isBlocked(c))}));
+ s.push({k:"rdy",n:"Ready & intake",ask:"Anything without a brief doesn't start.",cards:v.filter(c=>!isBlocked(c)&&(c.col==="ready"||c.col==="intake"))});
+ s.push({k:"end",n:"Close",ask:"",cards:[]});
+ return s;
+}
+let suOn=false;
+function suPanel(){
+ const S=suSteps();suI=Math.min(suI,S.length-1);const st=S[suI];
+ // spotlight on the board
+ const match=c=>st.k==="blk"?isBlocked(c):st.k==="cli"?(!isBlocked(c)&&(c.col==="client"||c.col==="fb")):st.k==="rev"?(!isBlocked(c)&&(c.col==="review"||c.col==="qc")):st.k==="rdy"?(!isBlocked(c)&&(c.col==="ready"||c.col==="intake")):st.person?c.who===st.person&&c.col!=="done":false;
+ document.querySelector(".board")?.classList.add("spot");
+ document.querySelectorAll(".card").forEach(el=>{const c=cards.find(x=>x.id==el.dataset.id);el.classList.toggle("lit",!!c&&match(c))});
+ const cols={blk:[],cli:["client","fb"],rev:["review","qc"],rdy:["ready","intake"]}[st.k]||[];
+ document.querySelectorAll(".col").forEach(c=>c.classList.toggle("lit",cols.includes(c.dataset.col)));
+ const first=document.querySelector(".card.lit");if(first)first.scrollIntoView({block:"nearest",inline:"center"});
+ const row=c=>{const b=blocked.find(x=>x.id===c.id);const why=b?`${b.why} · ${b.owner}`:c.col==="review"||c.col==="qc"?`Waiting on ${c.col==="qc"?"QC":"review by "+(c.rev||"nobody")}`:c.col==="client"||c.col==="fb"?`R${c.round||1}/${c.rounds} · due ${c.prom}`:`Promised ${c.prom||"—"} · ${c.log}/${c.plan}h`;
+  return `<div class="sp-row"><div class="t" data-open="${c.id}">${c.t}</div><div class="sm">${c.c} · ${why}</div><div class="acts2"><button data-ok="${c.id}" class="${suLog[c.id]==="ok"?"on":""}">On track</button><button data-risk="${c.id}" class="risk ${suLog[c.id]==="risk"?"on":""}">At risk</button>${isBlocked(c)?"":`<button data-sblk="${c.id}">Blocked</button>`}</div></div>`};
+ let body;
+ if(st.k==="end"){const risks=cards.filter(c=>suLog[c.id]==="risk"),bl=blocked.filter(b=>vis().some(c=>c.id===b.id));
+  body=`<div class="sm">Read back today's commitments.</div><h4>At risk (${risks.length}) → account lead talks to client</h4>${risks.map(row).join("")||'<div class="sm">None flagged.</div>'}<h4>Blocker owners (${bl.length})</h4>${bl.map(b=>`<div class="sp-row"><b>${b.owner}</b><div class="sm">${cards.find(x=>x.id===b.id).t}: ${b.why}</div></div>`).join("")||'<div class="sm">Nothing blocked.</div>'}`}
+ else if(st.person){const wip=prog(st.person);body=`${wip>3?'<span class="tag bad">Over WIP</span> ':wip===3?'<span class="tag warn">At WIP limit</span> ':""}<ol class="qs"><li>What moves today?</li><li>Will it make the promised date?</li><li>What's blocking you, and who owns it?</li></ol>${st.cards.length?st.cards.map(row).join(""):`<div class="sm">Nothing on the board for ${st.person}. Ask what they're working on; untracked work goes on the board today.</div>`}`}
+ else body=`<div class="sm">${st.ask}</div>${st.cards.map(row).join("")||'<div class="sm">Nothing here today.</div>'}`;
+ let el=$("#supanel");if(!el){el=document.createElement("aside");el.id="supanel";el.setAttribute("aria-label","Stand-up");document.body.append(el)}
+ el.innerHTML=`<div class="sp-h"><span class="sm">Stand-up · step ${suI+1} of ${S.length}</span><button class="x" id="suX" aria-label="End stand-up">${svg("x")}</button></div><h3 class="sp-t">${st.n}</h3><div class="sp-b">${body}</div>
+ <div class="sp-f"><button class="btn" id="suP">${svg("chevron-left")}Back</button><span class="sm">← →</span><button class="btn pri" id="suN">${suI===S.length-1?"Finish":"Next"}${svg("chevron-right")}</button></div>`;
+ $("#suX").onclick=()=>{suOn=false;render()};
+ $("#suP").onclick=()=>{suI=Math.max(0,suI-1);render()};
+ $("#suN").onclick=()=>{if(suI===S.length-1){suOn=false;render();toast("Stand-up done. Risks go to account leads; blocker owners get a message.",1);return}suI++;render()};
+ el.querySelectorAll("[data-open]").forEach(e=>e.onclick=()=>openDrawer(+e.dataset.open));
+ el.querySelectorAll("[data-ok]").forEach(b=>b.onclick=()=>{suLog[b.dataset.ok]="ok";suPanel()});
+ el.querySelectorAll("[data-risk]").forEach(b=>b.onclick=()=>{suLog[b.dataset.risk]="risk";suPanel()});
+ el.querySelectorAll("[data-sblk]").forEach(b=>b.onclick=()=>{const why=prompt("Why is it blocked?");if(!why)return;const owner=prompt("Who owns unblocking it?");if(!owner)return;blocked.push({id:+b.dataset.sblk,why,owner,since:"Oct 12"});render()});
+}
+document.addEventListener("keydown",e=>{if(!(view==="board"&&suOn)||document.querySelector(".modal.on,.drawer.on")||/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName))return;if(e.key==="ArrowRight")$("#suN").click();if(e.key==="ArrowLeft")$("#suP").click()});
 function week(){
  setTimeout(()=>document.querySelectorAll('[data-confirm]').forEach(b=>b.onclick=()=>{const p=b.dataset.confirm;const mine=cards.filter(c=>c.who===p&&c.col==='prog');const h=Math.min(7,mine.reduce((a,c)=>a+Math.max(.5,+(c.plan/5).toFixed(1)),0));if(!h)return toast(p+' has nothing in progress today.');if(!confirm(`Log ${h.toFixed(1)}h for ${p} today across ${mine.length} in-progress task(s)? You can edit it after.`))return;mine.forEach(c=>c.log=+(c.log+h/mine.length).toFixed(1));toast(`Logged ${h.toFixed(1)}h for ${p}.`,1);render()}),0);
- const ps=(who?[who]:[...new Set(cards.map(c=>c.who))].sort());
- const rows=ps.map(p=>{const mine=cards.filter(c=>c.who===p&&c.col!=="done"&&(!cli||c.c===cli));const pl=mine.reduce((a,c)=>a+c.plan,0),lg=mine.reduce((a,c)=>a+c.log,0);const pct=Math.round(pl/CAP*100);
+ const ps=(who?[who]:[...new Set(cards.filter(inScope).map(c=>c.who))].sort());
+ const rows=ps.map(p=>{const mine=cards.filter(c=>inScope(c)&&c.who===p&&c.col!=="done"&&(!cli||c.c===cli));const pl=mine.reduce((a,c)=>a+c.plan,0),lg=mine.reduce((a,c)=>a+c.log,0);const pct=Math.round(pl/CAP*100);
   return `<tr><td><b>${p}</b></td><td>${mine.length}</td><td>${prog(p)}${prog(p)>3?' <span class="no">over WIP</span>':''}</td><td>${pl.toFixed(1)}h of ${CAP}h<div class="load ${pct>85?'hot':''}"><i style="width:${Math.min(pct,100)}%"></i></div></td><td>${pct}%</td><td>${lg.toFixed(1)}h${lg===0?' <span class="no">nothing logged</span>':''} <button class="acts" data-confirm="${p}" style="font-size:11px">Confirm today</button></td></tr>`}).join("");
  $("#view").innerHTML=`<div class="tw"><table><tr><th>Person</th><th>Open cards</th><th>In progress</th><th>Planned load (standard times)</th><th>Booked</th><th>Logged so far</th></tr>${rows}</table></div><div class="why" style="margin-top:12px">Hours that aren't logged don't exist when workload and staffing are decided. Today the Hub shows most people with 35h free because nothing is logged. "Confirm today" pre-fills today's planned hours for one click.</div><div class="note">Planned load comes from the plan's standard times. Logged hours come from the daily log (use +0.5h on a card). Over 85% shows red. Account, PM, Strategy and QA/QC belong in this grid too.</div>`;
 }
@@ -631,17 +750,19 @@ function comp(){
 
 const AVC=["#5E4DB2","#C8202F","#216E4E","#0055CC","#7F5F01","#AE2E24","#44546F","#1D7AFC"];
 function chrome(){
- const ps=[...new Set(cards.map(c=>c.who))].sort();
+ const ps=[...new Set(cards.filter(inScope).map(c=>c.who))].sort();
+ document.querySelectorAll("[data-scope]").forEach(b=>{b.classList.toggle("on",b.dataset.scope===scope);b.setAttribute("aria-pressed",b.dataset.scope===scope);b.onclick=()=>{scope=b.dataset.scope;who="";render()}});
  $("#avs").innerHTML=ps.map((p,i)=>`<button style="background:${AVC[i%AVC.length]}" class="${p===who?"on":""}" title="${p}" aria-pressed="${p===who}" data-av="${p}">${ini(p)}</button>`).join("");
  document.querySelectorAll("[data-av]").forEach(b=>b.onclick=()=>{who=who===b.dataset.av?"":b.dataset.av;render()});
- const cs=[...new Set(cards.map(c=>c.c))].sort();
+ const cs=[...new Set(cards.filter(inScope).map(c=>c.c))].sort();
  $("#spaces").innerHTML=`<a class="nav ${cli?"":"on"}" data-sp="">All clients</a>`+cs.map((c,i)=>`<a class="nav ${c===cli?"on":""}" data-sp="${c}"><span class="sq" style="background:${AVC[(i+3)%AVC.length]}">${c[0]}</span>${c}</a>`).join("");
  document.querySelectorAll("[data-sp]").forEach(a=>{a.tabIndex=0;a.onclick=()=>{cli=a.dataset.sp;render()};a.onkeydown=e=>{if(e.key==="Enter")a.click()}});
 }
-function render(){chrome();
+function hydrate(){document.querySelectorAll("i[data-fi]").forEach(i=>{if(window.feather&&feather.icons[i.dataset.fi])i.outerHTML=feather.icons[i.dataset.fi].toSvg({"aria-hidden":"true",width:16,height:16,"stroke-width":1.75})})}
+function render(){document.body.classList.toggle("su-on",view==="board"&&suOn);chrome();hydrate();$("#ttl").textContent=scope==="mine"?"My work":scope==="team"?"Andres's team":"Creative Department";
  const c=view==="comp";$("#dep").style.display=c?"":"none";$("#who").style.display=c?"none":"";
  if(c){$("#focus").innerHTML="";const cs=[...new Set(DONE.map(r=>r[0]))].sort();$("#cli").innerHTML='<option value="">All clients</option>'+cs.map(p=>`<option ${p===cli?"selected":""}>${p}</option>`).join("");comp();return}
- opts();stats();({board,list,cal,week,lead})[view]();
+ opts();stats();({board,list,cal,week,lead})[view]();if(view==="board"&&suOn)suPanel();else if($("#supanel"))$("#supanel").remove();
 }
 render();
 </script>
