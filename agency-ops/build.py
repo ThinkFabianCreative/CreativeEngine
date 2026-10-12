@@ -9,7 +9,9 @@ LINE = RGBColor(0xDD, 0xDD, 0xDD)
 ACC = RGBColor(0xFF, 0x4D, 0x00)
 PAPER = RGBColor(0xFA, 0xF8, 0xF5)
 WHITE = RGBColor(0xFF, 0xFF, 0xFF)
-FONT = "Inter"
+HEAD = "Libre Caslon Text"  # Traffik display
+BODY = "Acumin Pro"  # Traffik text
+FONT = BODY
 
 p = Presentation()
 p.slide_width, p.slide_height = Inches(13.333), Inches(7.5)
@@ -32,7 +34,8 @@ def text(s, x, y, w, h, t, size=18, bold=False, color=INK, lh=1.15):
         para.line_spacing = lh
         r = para.add_run()
         r.text = line
-        r.font.name, r.font.size, r.font.bold = FONT, Pt(size), bold
+        head = size >= 20
+        r.font.name, r.font.size, r.font.bold = (HEAD if head else BODY), Pt(size), (bold and not head)
         r.font.color.rgb = color
     return tb
 
@@ -129,15 +132,15 @@ s = slide("The playbook", "Four pillars")
 cols(s, [
     ("1 · No signed brief, no work", "One-page brief. Signed by the CD and the client before anything starts.\n\nOwner: Andres + Cayley"),
     ("2 · Gates and fidelity", "Four gates, a clear fidelity at each one, one presentation standard.\n\nOwner: Andres"),
-    ("3 · Scope and client protocol", "Round limits, triage, baseline estimates, studio input on every timeline.\n\nOwner: Andres + Darcey"),
-    ("4 · Craft and ambition", "Crits, the house standard, AI used properly, award ambition.\n\nOwner: Andres"),
+    ("3 · Scope and client protocol", "Round limits, triage, QC gate, dates from the plan, daily stand-up.\n\nOwner: Andres + Darcey"),
+    ("4 · The designer reset", "Discovery on every job, crafted output, weekly crit, excellence as the standard.\n\nOwner: Andres"),
 ], size=14)
 
 # 6 Pillar 1 rules
 s = slide("Pillar 1", "No signed brief, no work")
 text(s, 0.7, 2.3, 6.2, 4.4,
-     "1.  Every project starts with a one-page brief.\n"
-     "2.  Accounts write it. Media supplies audience and placement input. Cayley leads on insight.\n"
+     "1.  Every Full-track project starts with a one-page brief. Light-track jobs start from the ticket and change log.\n"
+     "2.  One named account lead writes it. Media supplies audience and placement. Insight comes from the truth hunt.\n"
      "3.  Andres approves or bounces it within 1 business day.\n"
      "4.  A bounce always names the missing choice (\"two audiences\", \"no single proposition\").\n"
      "5.  The client signs the brief before any creative work starts.\n"
@@ -158,20 +161,41 @@ table(s, 0.7, 2.3, 6.4, [
 ], [1.2, 2.6, 2.6], 13, 0.7)
 text(s, 7.6, 2.3, 5, 0.5, "THE ONE-PAGE BRIEF", 12, True, ACC)
 text(s, 7.6, 2.75, 5, 4,
-     "The problem\nThe one person\nThe insight\nThe single-minded proposition\nReasons to believe\nMandatories (incl. MLR/legal)\nDeliverables + budget\nTimeline\nHow we'll judge success",
+     "The problem\nThe one person (from real data)\nThe truth: one sentence + its source\nThe single-minded proposition\nReasons to believe (credible, verifiable)\nMandatories (incl. MLR/legal)\nDeliverables + budget\nTimeline\nHow we'll judge success",
      17, False, INK, 1.4)
 notes(s, "A 16-page brief is no brief. AI makes length free, so it avoids the hard choices. Research can be long; the brief can't.")
+
+# 7b Truth hunt
+s = slide("Pillar 1", "Briefs built on truth, not on information")
+cols(s, [
+    ("The truth hunt", "Before the brief: 60–90 minutes with the account lead, Cayley, Connor and the ACD. Ends with 2–3 candidate truths, each with a source."),
+    ("Label the evidence", "Verified: client data, research, performance.\nObserved: discovery, conversations, using the product.\nHypothesis: a guess, marked and tested."),
+    ("Where truths come from", "Connor's performance data. Cayley's audience data. The client's research and front-line people. Customers in their own words."),
+], size=14)
+text(s, 0.7, 6.2, 11.9, 0.6, "Great work starts from a truth (Pete Barry). AI can gather; a truth needs a source a person can point to.", 14, True, ACC)
+
+# 7c Two tracks
+s = slide("Pillar 1", "Two tracks: the process fits the job")
+table(s, 0.7, 2.2, 11.9, [
+    ["", "Light track", "Full track"],
+    ["What", "Updates to approved work: edits, resizes, variants, template changes", "New ideas, new builds, campaigns, rebrands, anything regulated"],
+    ["Starts with", "Ticket + change log", "Signed one-page brief + truth hunt"],
+    ["Gates", "None: build → QC → send", "G0 → G1 → G2 → G3"],
+    ["Discovery", "Read the brief and the change log", "15% discovery + 20% ideation, protected in the plan"],
+    ["Reviewer", "Senior designer who didn't make it (web: Jordan)", "Andres (or the ACD who didn't make it)"],
+    ["Reaches the client", "Sent with change log, after QC", "Presented by ACD or CD"],
+], [2.2, 4.8, 4.9], 13, 0.6)
 
 # 8 Gates
 s = slide("Pillar 2", "Four gates. Clear fidelity at each.")
 table(s, 0.7, 2.2, 11.9, [
     ["Gate", "Purpose", "What we show", "Owner", "Not allowed yet"],
     ["G0 Brief", "Agree the problem", "Signed one-page brief", "Accounts + Andres", "Any design"],
-    ["G1 Territories", "Agree the direction", "2–3 territories: concept sentence, rough key visual, headline, why", "ACD", "Polish, mockups, systems"],
-    ["G2 Concept", "Agree the idea", "1 recommendation (+1 max) in 3 real executions", "AD, ACD signs off", "Final assets"],
+    ["G1 Territories", "Agree the direction", "Discovery share-out + 2–3 territories: concept sentence, rough key visual, headline, why", "ACD · web: Andres", "Polish, mockups, systems"],
+    ["G2 Concept", "Agree the idea", "1 recommendation (+1 max) in 3 real executions", "AD · ACD/CD signs off", "Final assets"],
     ["G3 Final", "Approve for production", "Full system, real copy, real formats", "AD/GD, ACD + CD sign off", "New ideas"],
 ], [1.7, 2.0, 4.4, 2.0, 1.8], 13, 0.8)
-text(s, 0.7, 6.3, 11.9, 0.5, "Discovery and ideation take at least 20% of every timeline. Accounts can't compress them away.", 14, True, ACC)
+text(s, 0.7, 6.3, 11.9, 0.5, "Full track: discovery 15% + ideation 20% of every timeline. Accounts can't compress them away.", 14, True, ACC)
 
 # 9 Gates by type
 s = slide("Pillar 2", "Same gates, every type of project")
@@ -213,7 +237,7 @@ table(s, 0.7, 2.2, 7.2, [
     ["Stage", "How it reaches the client", "Who"],
     ["G1 Territories", "Live presentation", "ACD or CD"],
     ["G2 Concept", "Live presentation", "ACD or CD"],
-    ["G3 Final", "Live or recorded walkthrough", "ACD"],
+    ["G3 Final", "Live or recorded walkthrough", "ACD · web: Andres"],
     ["Correction rounds", "Sent with the change log, every item marked", "Accounts, after QC gate"],
 ], [2.0, 3.3, 1.9], 13, 0.7)
 rect(s, 8.3, 2.2, 4.3, 4.3, INK)
@@ -296,17 +320,17 @@ yn(s, 6.8, 4.6, 5.8, "5 · Presentation ready?", [
     "Decisions we need are stated",
     "Round count and next gate shown",
 ])
-notes(s, "Sections 1 and 4 (claims) are signed by Accounts. Sections 2, 3, 4 (craft) and 5 by the Creative QC owner. Any NO: fix it, or the ACD signs off on an explanation.")
+notes(s, "Sections 1 and 4 (claims) are signed by Accounts. Sections 3 and 4 (details) by the QC team, Judy and Katie, who get the brief, guidelines and change log. Section 2 by an AD who didn't make the work; 5 by the ACD. Any NO: fix it, or the ACD signs off on an explanation.")
 
 s = slide("Pillar 3", "Who signs the QC gate")
 table(s, 0.7, 2.2, 11.9, [
     ["Section", "Signed by", "Why"],
     ["Change log → ticket tasks + Done", "PM + Accounts", "Each feedback item becomes a task; Done = QC gate passed"],
     ["1 · Meeting the brief", "Accounts + ACD", "Accounts own the brief and client direction; ACD owns the idea"],
-    ["2 · On brand", "AD on the job", "Craft and brand standards"],
-    ["3 · Delivering what was asked", "Creative QC owner", "Ticks the change log Accounts wrote"],
+    ["2 · On brand", "An AD who didn't make it", "Craft and brand standards"],
+    ["3 · Delivering what was asked", "QC team (Judy, Katie)", "Ticks the change log, with the brief and guidelines in hand"],
     ["4 · Mistakes: claims and numbers", "Accounts", "Confirmed with the client in writing"],
-    ["4 · Mistakes: language and details", "Creative QC owner", "Proofing, links, CTAs"],
+    ["4 · Mistakes: language and details", "QC team (Judy, Katie)", "Proofing, links, CTAs"],
     ["5 · Presentation ready", "ACD", "Last look before it leaves the building"],
 ], [3.6, 2.8, 5.5], 13, 0.58)
 text(s, 0.7, 6.3, 11.9, 0.5, "Maker is never checker: whoever built the work can't sign its QC. Every round ships with a change log, each item marked done, clarified or out of scope.", 14, True, ACC)
@@ -341,15 +365,23 @@ text(s, 8.4, 2.85, 4.0, 2.2, "1. What moves today?\n2. Will it make the promised
 text(s, 8.4, 4.9, 4.0, 1.5, "Cards updated and hours confirmed by 9:40. No problem-solving in the room: park it. The PM updates the board live.", 12, False, WHITE, 1.35)
 text(s, 0.7, 6.25, 7.0, 0.5, "Walk the board right to left: finishing beats starting.", 13, True, ACC)
 
-# 13 Estimates
-s = slide("Pillar 3", "Estimates without a bottleneck")
+# 13 Dates from the plan
+s = slide("Pillar 3", "Dates come from the plan, not from a guess")
 cols(s, [
-    ("On the menu", "Accounts estimate standard work themselves from the baseline menu. No studio input needed."),
-    ("Modifiers", "Medical/MLR +5 days. New brand +1 week. Rush ×1.5 cost, only if the studio agrees."),
+    ("Standard times", "The Task Hub already holds 593 standard times. The PM builds the plan from them, and the plan sets the date."),
+    ("Earlier than plan", "The account lead negotiates with the client: what gets cut, moved or resourced. Designers aren't asked to absorb it."),
     ("Off the menu", "Large or unusual work (360º, full websites): the ACD estimates within 48 hours."),
-    ("Every RFP", "Includes a production line. Rates owned by Darcey + Brent. Baselines reviewed every quarter."),
-], size=15)
-text(s, 0.7, 6.3, 11.9, 0.5, "Calibration: the team logs real time on Meta work for 6 weeks. Baselines are built from actuals, not old task-hub hours.", 14, True, ACC)
+    ("Every RFP", "Includes a production line. Rates owned by Darcey + Brent. Standard times reviewed every quarter against logged hours."),
+], size=14)
+text(s, 0.7, 6.2, 11.9, 0.6, "Stop asking \"when will this be done?\" The answer is in the plan.", 14, True, ACC)
+
+# 13b Time logging + board
+s = slide("Pillar 3", "Our tool: the Task Hub board")
+cols(s, [
+    ("One board", "Every job on one board by stage: Intake, Ready, In progress, Internal review, Quality Control, With client, Feedback, Done. Blocked work has a reason, an owner and a date."),
+    ("One owner per role", "One account lead, one creative lead, one reviewer who isn't the maker, one QC owner. No \"Darcey/Brad/Ky\"."),
+    ("Hours, daily", "Everyone logs hours daily, Accounts and PM included. Under 5 minutes, half-hour steps. Unlogged hours don't exist when staffing is decided."),
+], size=14)
 
 # 14 Meta menu
 s = slide("Pillar 3", "Meta ads baseline menu (to calibrate)")
@@ -380,24 +412,54 @@ table(s, 0.7, 2.2, 11.9, [
 ], [2.6, 2.8, 6.5], 14, 0.65)
 text(s, 0.7, 6.3, 11.9, 0.5, "ADs stop being variant factories. We time the pilot against the manual way and show the numbers.", 14, True, ACC)
 
-# 17 Pillar 4
-s = slide("Pillar 4", "Craft and ambition")
+# 17 Cost of bad craft
+s = slide("Pillar 4", "Craft is where the money is")
+table(s, 0.7, 2.2, 11.9, [
+    ["Cost of bad craft", "Where it shows up", "What we saw"],
+    ["Rework", "Extra rounds, corrections, re-QC", "About 23% of creative tasks are rework by name"],
+    ["Wasted media", "Spend behind ads nobody clicks", "Creative quality drives most of a campaign's results"],
+    ["Late work", "Missed enrollment windows, late launches", "44% of tasks finish on their original date"],
+    ["Errors", "Wrong claims, reprints, compliance fixes", "Grammar-only QC catches none of these"],
+], [2.6, 4.2, 5.1], 13, 0.7)
+text(s, 0.7, 6.1, 11.9, 0.7, "AI can make an edit. Only craft makes it right, on brand and worth paying for.", 15, True, ACC)
+notes(s, "Task Hub export Apr 28 – Oct 9 2026. Rework is detected from task names, so it's an estimate. Check the exact creative-effectiveness study before quoting a figure.")
+
+# 17b The designer reset
+s = slide("Pillar 4", "The designer reset", dark=True)
+text(s, 0.7, 2.4, 11.9, 3.8, "We do discovery on our own work.\nWe think before we make pixels.\nWe craft what leaves the building.\nWe show work every week and get better on purpose.", 30, True, WHITE, 1.35)
+text(s, 0.7, 6.1, 11.9, 0.6, "Field guide: The Craft (discovery, ideation, campaign platform, checklists).", 14, False, GREY)
+
+# 17c What we expect
+s = slide("Pillar 4", "What we expect, and how we'll know")
+table(s, 0.7, 2.1, 11.9, [
+    ["Expectation", "What it looks like", "How we know"],
+    ["Discovery on every Full-track job", "Category audit wall, immersion, 2–3 insight candidates. 15% of the timeline", "Every G1 opens with a discovery share-out. No share-out, no G1"],
+    ["Thinking before pixels", "20+ rough ideas, concept sentences, a Concept Card. 20% of the timeline", "The ACD reviews the wall, not the favourite"],
+    ["Crafted output", "Real-size checks, type hierarchy, image quality, licences, finish", "\"On brand\" signed by an AD who didn't make it"],
+    ["Weekly crit", "45 minutes, every week. Work shown before every G2. Honest, specific, generous", "Attendance, and work shown before G2"],
+    ["Excellence on purpose", "Shared reference library. One award-target project per quarter", "Entries made; work in the library"],
+    ["Growth", "One personal craft goal per designer, reviewed quarterly", "Discussed in every 1:1"],
+], [2.8, 4.9, 4.2], 12, 0.62)
+
+# 17d AI
+s = slide("Pillar 4", "AI: for thinking wider, not for skipping the thinking")
 cols(s, [
-    ("Monthly crit", "Each team presents one Concept Card. Honest, specific, generous. This is where the standard is set and seniority gaps close."),
-    ("AI, properly", "No more bare-chat \"first round AI\". Structured agents and skills that force choices and sharpen thinking, instead of padding it."),
-    ("Award ambition", "One project per quarter is chosen as the award target and resourced to match."),
-], size=15)
+    ("Use it for", "Category audits, reference gathering, many rough variations, \"has this been done?\" checks, comps for pitches (credited, never final)."),
+    ("Not for", "Writing the insight. Choosing the idea. Final assets. Replacing sketching and thinking time."),
+    ("In production", "No AI in production until a pilot proves it on real files, with a named QA owner and measured results."),
+], size=14)
 
 # 18 Rollout
 s = slide("Rollout", "How we roll it out")
 table(s, 0.7, 2.2, 11.9, [
     ["When", "What", "Who"],
     ["Week 1", "Align on Pillars 1 and 3 with Darcey. Production budget in RFPs with Brent", "Andres, Darcey, Brent"],
-    ["Week 2", "Present to Andres's creative group + Accounts. Start the time-log calibration", "Whole team"],
+    ["Week 1", "Designer reset session: The Craft + Pillar 4. Each designer brings one piece they're proud of and one they're not. Weekly crit starts", "Andres + design team"],
+    ["Week 2", "Present to Andres's creative group + Accounts. Daily hours and stand-up start on the board", "Whole team"],
     ["Weeks 2–4", "Variant Matrix pilot on CMU Applications Open", "Cayley, Debbie, AD, Andrea"],
     ["Week 6", "Retro. Baselines updated from actuals. Playbook v1.0", "Andres + Darcey"],
     ["After v1.0", "Share results with Anthony. Offer the shared-client rules to Jeremy", "Andres"],
-], [1.6, 7.3, 3.0], 14, 0.7)
+], [1.6, 7.3, 3.0], 13, 0.6)
 
 # 19 Open
 s = slide("Still to decide", "Open questions for v1.0")
@@ -409,6 +471,31 @@ text(s, 0.7, 2.3, 11.9, 4.2,
      "•  Rules for shared medical clients with Jeremy's group\n"
      "•  Which award shows we target",
      18, False, INK, 1.5)
+
+# 32 Five rules
+s = slide("The Standard on one page", "Five rules and one place")
+items = [("No brief, no work", "Full-track work starts from a signed one-page brief with one named account lead."),
+         ("Five YESes before anything leaves", "Brief, brand, what was asked, no mistakes, presentation ready. The maker never checks their own work."),
+         ("Dates come from the plan", "Built from standard times. No weekends unless the CD approves an exception."),
+         ("Present, don't send", "New work is walked through by an ACD or CD. Corrections go out with the change log."),
+         ("Discovery and crit", "A discovery share-out opens every G1. Weekly 45-minute crit, work shown before G2.")]
+for i, (h, b) in enumerate(items):
+    y = 2.15 + i * 0.78
+    text(s, 0.7, y, 0.6, 0.6, f"{i+1}", 26, True, ACC)
+    text(s, 1.35, y + 0.04, 3.9, 0.6, h, 18, True)
+    text(s, 5.3, y + 0.08, 7.3, 0.7, b, 14, False, GREY)
+rect(s, 0.7, 6.15, 11.9, 0.62, INK)
+text(s, 0.95, 6.22, 11.4, 0.5, "One place: the Task Hub board. One owner per role, a reason on every blocker, stand-up at 9:45.", 14, True, WHITE)
+
+# 33 Phased rollout
+s = slide("Rollout", "One step at a time")
+table(s, 0.7, 2.2, 11.9, [
+    ["When", "We start", "Comes later"],
+    ["Month 1", "The five rules · the board · 9:45 stand-up · weekly crit · designer reset session", "Everything else"],
+    ["Month 2", "Daily hours · dates from standard times · Light vs. Full track", "Round limits in SOWs · Meta menu"],
+    ["Month 3", "Round limits in new SOWs · Variant Matrix pilot · AI pilot with QA owner", "Leadership and Completed views"],
+], [1.6, 6.6, 3.7], 14, 0.85)
+text(s, 0.7, 5.9, 11.9, 0.8, "Month 1 partners: Darcey (Accounts and PM rules), Jeremy (shared QC and working hours). Anthony sees results after month 3.", 13, False, INK, 1.35)
 
 out = "/Users/andresfabian/Documents/AI_Traffik_Projects/CreativeEngine/agency-ops/The_Standard_v0.1.pptx"
 p.save(out)

@@ -1,5 +1,27 @@
 exec(open(__file__.replace("build_craft.py", "_helpers.py")).read())
 
+# Traffik type (wearetraffik.com): Libre Caslon for display, Acumin Pro for text
+HEAD = "Libre Caslon Text"
+BODY = "Acumin Pro"
+FONT = BODY
+
+
+def text(s, x, y, w, h, t, size=18, bold=False, color=INK, lh=1.15):
+    tb = s.shapes.add_textbox(Inches(x), Inches(y), Inches(w), Inches(h))
+    tf = tb.text_frame
+    tf.word_wrap = True
+    head = size >= 20
+    for i, line in enumerate(t.split("\n")):
+        para = tf.paragraphs[0] if i == 0 else tf.add_paragraph()
+        para.line_spacing = lh
+        r = para.add_run()
+        r.text = line
+        r.font.name = HEAD if head else BODY
+        r.font.size = Pt(size)
+        r.font.bold = bold and not head  # Caslon carries weight on its own
+        r.font.color.rgb = color
+    return tb
+
 
 def checklist(s, items, x=0.7, y=2.3, w=11.9, size=16, colsn=2):
     per = -(-len(items) // colsn)
@@ -20,17 +42,76 @@ s = p.slides.add_slide(BLANK)
 bg(s, INK)
 rect(s, 0.7, 2.2, 1.2, 0.08, ACC)
 text(s, 0.7, 2.5, 12, 1.6, "The Craft", 80, True, WHITE, 1.0)
-text(s, 0.7, 3.9, 11, 1, "How we get from a signed brief to a campaign platform.\nA field guide for the design team.", 24, False, WHITE)
+text(s, 0.7, 3.9, 11, 1, "The designer reset, and how we make the work.\nFor the design team.", 24, False, WHITE)
 text(s, 0.7, 6.2, 11, 0.6, "Andres Fabian, Creative Director · v0.1 working draft · October 2026", 14, False, GREY)
 
-# 2 Flow
-s = slide("The flow", "Three phases before anything gets polished")
+# R1 Why
+s = slide("Section 01 · The reset", "We don't have a talent problem.\nWe have a system problem.")
 cols(s, [
-    ("01 · Discovery", "Understand the problem better than the client does. Find the truth worth dramatizing.\n\n~15% of the timeline\nEnds in: insight candidates"),
-    ("02 · Ideation", "Generate many rough ideas, then choose. Pen before pixels. Sentence before layout.\n\n~20% of the timeline\nEnds in: G1 territories"),
+    ("No time to think", "Dates are set by asking \"when will it be done?\". A third of creative requests come with a day or less. Discovery and ideation get squeezed out."),
+    ("Rework", "About a quarter of creative tasks are rework, edits or revisions. That's time that should have gone into the idea."),
+    ("Nobody checks the right things", "QC checks grammar. Nobody checks the brief, the claims or the craft. Mistakes reach clients and look like ours."),
+], size=14)
+text(s, 0.7, 6.2, 11.9, 0.6, "The fix is a better system, and a higher bar we hold each other to.", 14, True, ACC)
+notes(s, "Numbers from the Task Hub export, Apr 28 – Oct 9 2026. Rework is estimated from task names.")
+
+# R2 Manifesto
+s = slide("The reset", "What we stand for", dark=True)
+text(s, 0.7, 2.3, 11.9, 3.8, "We do discovery on our own work.\nWe think before we make pixels.\nWe craft what leaves the building.\nWe show work every week and get better on purpose.", 30, True, WHITE, 1.35)
+
+# R3 Expectations
+s = slide("The reset", "What we expect, and how we'll know")
+table(s, 0.7, 2.1, 11.9, [
+    ["Expectation", "What it looks like", "How we know"],
+    ["Discovery on every Full-track job", "Category audit wall, immersion, 2–3 insight candidates. 15% of the timeline", "Every G1 opens with your discovery share-out. No share-out, no G1"],
+    ["Thinking before pixels", "20+ rough ideas, concept sentences, ADLOBs. 20% of the timeline", "The ACD reviews the wall, not the favourite"],
+    ["Making the case", "Rationale, the insight's source, the competitive map", "On the slides at G1 and G2"],
+    ["Crafted output", "Real-size checks, type hierarchy, image quality, licences, finish", "\"On brand\" signed by an AD who didn't make it"],
+    ["Weekly crit", "45 minutes. Work shown before every G2", "Attendance, and work shown before G2"],
+    ["Growth", "One personal craft goal, reviewed quarterly", "Every 1:1"],
+], [2.8, 4.9, 4.2], 12, 0.6)
+
+# R4 Two tracks
+s = slide("The reset", "Two tracks: the process fits the job")
+table(s, 0.7, 2.2, 11.9, [
+    ["", "Light track", "Full track"],
+    ["What", "Edits, resizes, variants, template changes to approved work", "New ideas, new builds, campaigns, rebrands, anything regulated"],
+    ["Starts with", "Ticket + change log", "Signed one-page brief"],
+    ["Your process", "Build → QC → send", "Discovery → Ideation → Platform → gates G1, G2, G3"],
+    ["Reviewer", "A senior designer who didn't make it (web: Jordan)", "Andres, or an ACD who didn't make it"],
+    ["Reaches the client", "Sent with the change log, after QC", "Presented by an ACD or CD"],
+], [2.2, 4.8, 4.9], 13, 0.65)
+text(s, 0.7, 6.3, 11.9, 0.5, "Maker is never checker: nobody reviews or QCs their own work.", 13, True, ACC)
+
+# R5 Your day
+s = slide("The reset", "Your day on the board")
+cols(s, [
+    ("By 9:40", "Move your cards to their real stage. Confirm yesterday's hours (one click). Mark anything blocked, with a reason and an owner."),
+    ("9:45 stand-up", "15 minutes, PM-led. Your PM reads your cards; you answer three questions: What moves today? Will it make the promised date? What's blocking you, and who owns it?"),
+    ("All day", "WIP limit: 3 cards in progress. If a date is at risk, say it early: the account lead talks to the client, not you."),
+], size=14)
+text(s, 0.7, 6.2, 11.9, 0.6, "No work on the board, no work. Untracked work goes on the board today.", 13, True, ACC)
+
+# R6 QC
+s = slide("The reset", "Nothing leaves without five YESes")
+table(s, 0.7, 2.2, 11.9, [
+    ["Question", "Checked by"],
+    ["1 · Does it meet the brief?", "Account lead + ACD"],
+    ["2 · Is it on brand?", "An AD who didn't make it"],
+    ["3 · Does it deliver what was asked? Every change-log item done", "QC team (Judy, Katie)"],
+    ["4 · Any mistakes? Claims and numbers confirmed; spelling, links, CTAs", "Account lead + QC team"],
+    ["5 · Is the presentation ready?", "ACD"],
+], [7.9, 4.0], 14, 0.7)
+text(s, 0.7, 6.3, 11.9, 0.5, "Section 02 onwards is the field guide: how we do discovery, ideation, platforms and make the case.", 13, False, GREY)
+
+# 2 Flow
+s = slide("Section 02 · The field guide", "Three phases before anything gets polished")
+cols(s, [
+    ("01 · Discovery", "Understand the problem better than the client does. Find the truth worth dramatizing.\n\n15% of the timeline\nEnds in: insight candidates"),
+    ("02 · Ideation", "Generate many rough ideas, then choose. Pen before pixels. Sentence before layout.\n\n20% of the timeline\nEnds in: G1 territories"),
     ("03 · Platform", "Turn the chosen idea into a system that makes dozens of executions.\n\n~25% of the timeline\nEnds in: G2 concept"),
 ], size=16)
-text(s, 0.7, 6.3, 11.9, 0.5, "Concept before polish. Craft never disguises a weak idea.", 15, True, ACC)
+text(s, 0.7, 6.3, 11.9, 0.5, "Full-track work. Light-track jobs (edits, resizes, variants) go straight to build and QC.", 15, True, ACC)
 
 # 3 Discovery divider
 s = slide("Phase 01", "Discovery", dark=True)
@@ -57,7 +138,7 @@ checklist(s, [
     "Every insight is true for this client, not any client in the category",
     "Mandatories and legal/MLR limits noted",
     "Questions for the brief owner raised, not guessed",
-    "Discovery shared with the ACD before ideation starts",
+    "Discovery share-out ready: it opens the G1 presentation",
 ], size=15)
 
 # 6 Ideation divider
@@ -171,6 +252,106 @@ checklist(s, [
     "Concept Card complete and checked against the signed brief",
 ], size=15)
 
+# 15b Making the case: divider
+s = slide("Section 03", "Making the case", dark=True)
+text(s, 0.7, 2.6, 11, 3, "Good work loses when nobody can see the thinking.\n\nThe ADLOB, the rationale, the insight's source, the competitive map, the line, and how we steal well.", 24, False, WHITE, 1.4)
+
+# 15c ADLOB
+s = slide("Making the case", "The ADLOB: show the idea as an ad")
+cols(s, [
+    ("What it is", "An ad-like object: one idea rendered as a rough ad. A visual, a line, the logo. Black marker or greyscale. Not a mood board, not a strategy statement."),
+    ("Why rough", "Clients and crits judge the idea, not the finish. Keep the layouts rough and the ideas fancy (Cosmopulos, via Barry)."),
+    ("The tests", "Can I explain it on a Post-it? Where's the leap? Does the viewer complete it? Why only this brand? Does it make you smile, think or feel something (SLIP IT)?"),
+    ("Fails when", "Execution without an idea. Strategy dressed as a concept. A visual gag with no brand in it. Clever without meaning."),
+], size=13)
+text(s, 0.7, 6.2, 11.9, 0.6, "One ADLOB per sheet. Cold read: pin it up, walk away, ask someone outside the project what it says.", 13, True, ACC)
+notes(s, "ADLOB is CreativeEngine's internal term (creative-object-taxonomy.md). Method: Barry's roughs, one-sentence idea, cold read and SLIP IT.")
+
+# 15d Rationale
+s = slide("Making the case", "Every idea travels with its rationale")
+table(s, 0.7, 2.2, 11.9, [
+    ["Line", "Says", "Weak", "Strong"],
+    ["1 · What we heard", "The problem in the client's terms", "\"You want more awareness.\"", "\"Riders think e-bikes are for people who can't ride.\""],
+    ["2 · The truth we found", "The insight, with its source", "\"People love freedom.\"", "\"In 12 interviews, riders hid the battery in photos.\" (Observed)"],
+    ["3 · The idea", "One sentence", "\"A bold, modern campaign.\"", "\"Show the hill, not the bike.\""],
+    ["4 · Why it works", "Link to the proposition and the audience", "\"It's fresh and eye-catching.\"", "\"It sells the one benefit without saying 'electric'.\""],
+], [2.2, 2.9, 2.6, 4.2], 12, 0.75)
+text(s, 0.7, 6.2, 11.9, 0.6, "Four lines, said out loud in under 30 seconds. If line 2 has no source, it's an opinion. (Example is invented.)", 13, True, ACC)
+
+# 15e Insight source
+s = slide("Making the case", "Show where the insight came from")
+cols(s, [
+    ("The truth", "One sentence with tension. A truth with friction in it is an insight; a fact isn't."),
+    ("The proof", "The quote, the data point, the photo from the immersion, the review that says it in the customer's words. Put it on the slide."),
+    ("The label", "Verified (client data, research, performance) · Observed (discovery, conversations) · Hypothesis (marked, to be tested)."),
+], size=14)
+text(s, 0.7, 6.2, 11.9, 0.6, "The \"What we learned\" slide in every G1: truth + proof + label. Clients trust what they can see.", 13, True, ACC)
+
+# 15f Competitive map
+s = slide("Making the case", "Show the category before you show the idea")
+cols(s, [
+    ("Collect", "20–30 competitor ads, sites and posts. Screenshots with dates and links. Meta Ad Library for what's running now."),
+    ("Map it", "Group by what they say and how they look. Name the patterns: \"everyone shows smiling graduates\", \"everyone leads with price\"."),
+    ("Find the gap", "What nobody owns, that's true for us. That's the white space the territories aim at."),
+    ("Show it", "One slide before the territories: the wall, the patterns, the gap. It makes our idea look as different as it is."),
+], size=13)
+
+# 15g Lines
+s = slide("Making the case", "Headlines, taglines and slogans")
+table(s, 0.7, 2.1, 11.9, [
+    ["", "Headline", "Tagline / endline"],
+    ["Job", "Sells this execution, now", "Carries the brand or campaign for years"],
+    ["Lives", "In one ad", "Beside the logo, everywhere"],
+    ["Test", "Does it stop you and make the visual better (1+1=3)?", "Stronger beside the brand name? Could a competitor say it? Will it last 3 years?"],
+], [1.6, 5.0, 5.3], 13, 0.65)
+text(s, 0.7, 4.9, 11.9, 1.6,
+     "Write 30 to find 1: the good ones come in the middle and the end of the list (Barry's 1-in-10).\n"
+     "Land the twist as late as possible, and cut every word after it. No exclamation marks.\n"
+     "Say it out loud. If it's hard to say, it won't be repeated.",
+     14, False, INK, 1.4)
+
+# 15h Steal
+s = slide("Making the case", "Steal like a pro")
+cols(s, [
+    ("Steal the mechanism", "Not the look. Ask how the ad works: reversal, omission, fusion, exaggeration, a twist. Then apply that engine to our truth."),
+    ("Combine three", "One source is a copy. Three sources is a new idea. Mix a mechanism, a tone and a format from different places."),
+    ("Know the line", "Taking a nugget and building on it is craft. Lifting a strategy, a line or an image is plagiarism (Barry)."),
+    ("Keep a library", "Add one reference a week to the team library with why it works. Run a \"done before?\" check before any idea is shown. Credit references in pitch decks."),
+], size=13)
+
+# 15i Whipple: squeeze it
+s = slide("Making the case", "Squeeze it: find the idea before the words")
+cols(s, [
+    ("Reduce", "Fill the blank: THIS BRAND = ____. THIS CAMPAIGN IS REALLY ABOUT ____. If a competitor could write the same answer, keep going."),
+    ("Truth + conflict", "A truth with no conflict is an observation. Conflict with no truth is a gimmick. Look between what people say and what they do."),
+    ("Find the enemy", "What are we fighting? A category habit, a belief, a hassle, an old assumption. Not a competitor, and never a manufactured fight."),
+    ("Three truths", "Where do the product truth, the human truth and the cultural truth meet? Search there."),
+], size=13)
+notes(s, "Inspired by principles associated with Luke Sullivan's Hey Whipple, Squeeze This (CreativeEngine framework: hey-whipple-copycraft.md). Labels are ours, not quotes from the book.")
+
+# 15j Whipple: shake out the ugly
+s = slide("Making the case", "Shake out the ugly: six rounds of writing")
+table(s, 0.7, 2.1, 11.9, [
+    ["Round", "Write"],
+    ["A · Obvious", "The expected category answers. Get them out of your system first"],
+    ["B · Opposite", "What would the category never say?"],
+    ["C · Human", "From real behaviour: contradiction, embarrassment, pride, laziness, status, fear"],
+    ["D · Product", "Demonstrations, consequences, odd details, proof, unexpected uses"],
+    ["E · Culture", "Language, rituals, memes, taboos and tensions around the problem"],
+    ["F · Form", "Different structures, and different ways the words and the picture meet"],
+], [2.4, 9.5], 13, 0.58)
+text(s, 0.7, 6.3, 11.9, 0.5, "Bad early ideas are allowed. The goal is to get past the first idea, not to fill a list.", 13, True, ACC)
+
+# 15k Whipple: stress test
+s = slide("Making the case", "Before a line goes in front of anyone")
+cols(s, [
+    ("Stop + idea", "Would I notice it? Is there a thought, or only phrasing? Could it belong to another brand?"),
+    ("Tension + reward", "Is there friction or surprise? Does the reader get a small payoff for getting it (the smile in the mind)?"),
+    ("1 + 1 = 3", "With its image, does it say something neither says alone? If the line repeats the picture, cut one."),
+    ("Squeeze", "Cut set-up, duplicate meaning, empty adjectives, strategy words, and the explanation of the joke. Can one more word go?"),
+], size=13)
+text(s, 0.7, 6.2, 11.9, 0.6, "Not a scorecard. Ask the questions, then trust the room at crit.", 13, True, ACC)
+
 # 16 Before you present
 s = slide("Every gate", "Before you present anything")
 checklist(s, [
@@ -183,6 +364,17 @@ checklist(s, [
     "Is it in the agency presentation spine?",
     "Do I know which decisions I need from the client?",
 ], size=16)
+
+# 16b Weekly crit
+s = slide("Every week", "Weekly crit: 45 minutes")
+table(s, 0.7, 2.2, 11.9, [
+    ["Minutes", "What happens"],
+    ["0–5", "One sentence each: what you're showing and what you want from the room"],
+    ["5–35", "3 pieces, 10 minutes each. Maker shows, the room asks, then critiques: brief, idea, craft, in that order"],
+    ["35–40", "One reference someone found this week, and why it's good"],
+    ["40–45", "Each maker names the one change they'll make"],
+], [1.6, 10.3], 14, 0.7)
+text(s, 0.7, 5.7, 11.9, 0.9, "Every Full-track job is shown at crit before G2. Critique the work, not the person. Specific beats nice.", 15, True, ACC)
 
 # 17 Red flags
 s = slide("Watch for", "Red flags in a crit")
@@ -201,7 +393,7 @@ table(s, 0.7, 2.2, 11.9, [
     ["Generating many rough variations in ideation", "Choosing which idea is good"],
     ["Comps, pre-viz and pitch mood (credited, never final)", "Final assets presented as finished work"],
     ["Checking a concept: has it been done before?", "Replacing sketching and thinking time"],
-    ["Generating Variant Matrix files from masters", "Skipping craft QA"],
+    ["Brainstorm partner for headlines and angles (you choose)", "Skipping craft QA"],
 ], [5.95, 5.95], 14, 0.65)
 
 out = __file__.replace("build_craft.py", "The_Craft_v0.1.pptx")
