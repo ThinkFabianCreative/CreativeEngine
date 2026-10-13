@@ -332,6 +332,7 @@ The system should know:
 | Folder | Holds |
 |---|---|
 | `projects/` | Client workspaces: one folder per client, holding its client knowledge and its projects (raw sources, normalized brief, work packets, creative work, outputs). Contract: `projects/README.md` |
+| `agency-ops/` | Traffik's own operations: the culture-reset playbook decks, the Task Hub prototype and specs. `agency-ops/context/` holds the team, playbook decisions and Andres's standing working rules: read `working-preferences.md` before any work, on any machine |
 
 `briefs/` and `outputs/` are superseded by the client workspace and hold no material.
 
