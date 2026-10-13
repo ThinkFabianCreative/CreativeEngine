@@ -26,6 +26,12 @@ This is a hi-fi prototype and a spec for Leo, not production code.
 
 The prototype's Completed view embeds Traffik's own Task Hub export (Apr 28 – Oct 9 2026). It names Traffik's clients, so treat the file as internal and don't publish it.
 
+## Delivered
+
+| Date | To | What |
+|---|---|---|
+| 2026-10-12 | Leo M | `outputs/delivered/2026-10-12/leo-handoff/`: prototype, v1 and full specs, implementation notes, acceptance checks. A zip of it sits beside the folder (local only, not in git) |
+
 ## Related
 
 - [Culture reset playbook](../culture-reset-playbook/README.md): the workflow these changes support.

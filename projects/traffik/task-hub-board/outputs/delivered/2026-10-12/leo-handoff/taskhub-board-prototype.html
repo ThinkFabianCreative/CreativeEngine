@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Task Hub Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/feather.min.js"></script>
+<style>
+:root{--bg:#fafafa;--card:#fff;--fg:#09090b;--muted:#f4f4f5;--mfg:#71717a;--border:#e4e4e7;--ring:#a1a1aa;--brand:#c8202f;--head:#1d1d1d;--ok:#15803d;--warn:#b45309;--r:8px;
+ --ink:var(--fg);--grey:var(--mfg);--line:var(--border);--paper:var(--bg);--red:var(--brand);--green:var(--ok);--amber:var(--warn)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 14px/1.5 "Instrument Sans",system-ui,sans-serif;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+.cond{font-stretch:75%}
+button,select,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+a{color:inherit}
+/* header: Traffik identity */
+header{background:var(--head);color:#fff;display:flex;align-items:center;gap:20px;padding:0 24px;height:56px}
+header b{font-size:19px;font-weight:700;letter-spacing:.08em;font-stretch:85%}
+header .prod{color:#a1a1aa;padding-left:14px;border-left:1px solid #3f3f46;font-size:13px}
+header nav{display:flex;height:100%}
+header nav a{color:#a1a1aa;text-decoration:none;display:flex;align-items:center;padding:0 12px;font-size:13px;font-weight:500;border-bottom:2px solid transparent}
+header nav a:hover{color:#fff}
+header nav a.on{color:#fff;border-bottom-color:var(--brand)}
+.new{margin-left:auto;background:var(--brand);color:#fff;border:0;border-radius:6px;height:34px;padding:0 14px;font-weight:600;cursor:pointer}
+.new:hover{background:#b01c29}
+.wrap{padding:24px;max-width:1680px;margin:0 auto}
+h1{font-size:30px;font-weight:650;font-stretch:75%;letter-spacing:-.01em;margin:0}
+h3{font-size:13px;font-weight:650;margin:22px 0 8px;text-transform:uppercase;letter-spacing:.06em;font-stretch:85%}
+.sub{color:var(--mfg);font-size:13px;margin:2px 0 18px}
+/* toolbar */
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
+.seg{display:inline-flex;background:var(--muted);border-radius:var(--r);padding:3px;gap:2px;flex-wrap:wrap}
+.seg button{border:0;background:transparent;padding:5px 12px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500;color:var(--mfg)}
+.seg button:hover:not(:disabled){color:var(--fg)}
+.seg button.on{background:var(--card);color:var(--fg);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.seg button:disabled{opacity:.45;cursor:not-allowed}
+select,input,textarea{height:34px;padding:0 10px;border:1px solid var(--border);border-radius:6px;background:var(--card);font-size:13px}
+textarea{height:auto;padding:8px 10px}
+select{padding-right:28px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%2371717a' stroke-width='2'%3E%3Cpath d='m3 4.5 3 3 3-3'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center}
+/* stats */
+.stats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;align-items:stretch}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:10px 14px;min-width:150px;font-size:12px;color:var(--mfg)}
+.stat b{display:block;font-size:26px;line-height:1.1;font-weight:600;font-stretch:75%;color:var(--fg)}
+.stat.warn b{color:var(--brand)}
+.more{font-size:12px;color:var(--mfg);cursor:pointer;align-self:center;padding:4px 8px;border-radius:6px}
+.more:hover{background:var(--muted);color:var(--fg)}
+/* focus strip */
+.focus{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:12px 14px;margin-bottom:12px}
+.focus h4{margin:0 0 4px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.06em;font-stretch:85%;display:flex;gap:8px;align-items:center}
+.focus h4:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--brand)}
+.focus .it{display:flex;gap:10px;align-items:baseline;padding:6px 0;border-top:1px solid var(--border);font-size:13px;cursor:pointer}
+.focus .it:hover b{text-decoration:underline}
+/* board */
+.board{display:grid;grid-template-columns:repeat(8,minmax(212px,1fr));gap:12px;overflow-x:auto;padding-bottom:8px}
+.col{background:var(--muted);border-radius:10px;padding:8px;min-height:320px}
+.col h4{font-size:11.5px;font-weight:650;letter-spacing:.07em;text-transform:uppercase;font-stretch:80%;margin:4px 6px 0;display:flex;justify-content:space-between;align-items:center}
+.col h4 span:last-child{background:var(--card);border:1px solid var(--border);border-radius:999px;padding:0 7px;font-size:11px;letter-spacing:0;color:var(--mfg)}
+.col .rule{font-size:11.5px;color:var(--mfg);margin:2px 6px 10px;min-height:34px;line-height:1.4}
+.col.drop{outline:2px dashed var(--ring);outline-offset:-2px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:10px 11px;margin-bottom:8px;cursor:pointer;box-shadow:0 1px 2px rgba(0,0,0,.04);transition:border-color .15s,box-shadow .15s}
+.card:hover{border-color:#d4d4d8;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+.card .top{display:flex;justify-content:space-between;align-items:center;gap:6px;font-size:11.5px;color:var(--mfg);margin-bottom:3px}
+.card .t{font-weight:600;font-size:13.5px;line-height:1.3;margin-bottom:8px}
+.card .bot{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--mfg)}
+.av{width:22px;height:22px;border-radius:50%;background:var(--muted);border:1px solid var(--border);display:inline-grid;place-items:center;font-size:10px;font-weight:650;color:var(--fg);flex:none}
+.ic{display:inline-flex;align-items:center;gap:3px}
+.ic svg{width:13px;height:13px}
+.sp{margin-left:auto}
+.meta{font-size:12px;color:var(--mfg);display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;padding:1px 7px;border-radius:999px;border:1px solid var(--border);background:var(--card);color:var(--fg);white-space:nowrap}
+.tag.high{border-color:var(--fg)}
+.tag.late,.tag.bad{background:#fef2f2;border-color:#fecaca;color:#b91c1c}
+.tag.warn{background:#fffbeb;border-color:#fde68a;color:#92400e}
+.ok{color:var(--ok)}.no{color:#b91c1c}
+.checks{display:flex;flex-wrap:wrap;gap:8px;font-size:12px}
+.acts{display:none}
+/* blocked */
+.blocked{margin-bottom:14px;background:var(--card);border:1px solid #fecaca;border-left:3px solid var(--brand);border-radius:var(--r);padding:10px 14px}
+.blocked h4{margin:0 0 4px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.06em;font-stretch:85%;color:#b91c1c}
+.brow{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;padding:7px 0;border-top:1px solid var(--border);align-items:center}
+.brow span{color:var(--mfg)}
+/* buttons */
+.btn,.brow button,.btns button,.x{height:32px;padding:0 12px;border-radius:6px;border:1px solid var(--border);background:var(--card);font-size:13px;font-weight:500;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.btn:hover,.brow button:hover,.btns button:hover,.x:hover{background:var(--muted)}
+.btns .pri,.btn.pri{background:var(--fg);color:#fff;border-color:var(--fg)}
+.btns .pri:hover,.btn.pri:hover{background:#27272a}
+.brow button{margin-left:auto;height:28px}
+.btn svg,.x svg,.tag svg{width:15px;height:15px;flex:none}.tag svg{width:12px;height:12px}
+.btn,.x,.tag{white-space:nowrap}.x{width:32px;padding:0;justify-content:center}
+/* tables */
+.tw{overflow-x:auto;border:1px solid var(--border);border-radius:var(--r);background:var(--card)}
+table{width:100%;border-collapse:collapse}
+th,td{padding:9px 12px;border-bottom:1px solid var(--border);text-align:left;font-size:13px;vertical-align:top}
+th{font-size:11.5px;font-weight:650;text-transform:uppercase;letter-spacing:.06em;font-stretch:85%;color:var(--mfg);background:var(--bg)}
+tr:last-child td{border-bottom:0}
+.load{height:6px;background:var(--muted);border-radius:3px;overflow:hidden;margin-top:6px}
+.load i{display:block;height:100%;background:var(--fg)}
+.load.hot i{background:var(--brand)}
+.note{font-size:12px;color:var(--mfg);margin-top:14px;max-width:900px}
+.why{font-size:12.5px;color:var(--mfg);background:var(--muted);border-radius:6px;padding:8px 10px;margin-top:6px;line-height:1.45}
+/* toast (shadcn sonner-style) */
+#toast{position:fixed;bottom:20px;right:20px;max-width:420px;background:var(--card);color:var(--fg);border:1px solid var(--border);border-left:3px solid var(--brand);border-radius:var(--r);padding:12px 14px;display:none;box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:40;font-size:13px}
+#toast.good{border-left-color:var(--ok)}
+#toast button{margin-left:10px;height:28px;padding:0 10px;border-radius:6px;border:1px solid var(--fg);background:var(--fg);color:#fff;font-weight:600;cursor:pointer}
+/* dialog */
+.modal{position:fixed;inset:0;background:rgba(9,9,11,.5);display:none;align-items:flex-start;justify-content:center;overflow:auto;z-index:30;padding:40px 16px}
+.modal.on{display:flex}
+.sheet{background:var(--card);border-radius:12px;border:1px solid var(--border);max-width:620px;width:100%;padding:24px;box-shadow:0 16px 48px rgba(0,0,0,.18)}
+.sheet h2{margin:0;font-size:22px;font-weight:650;font-stretch:80%}
+.f{margin:14px 0}
+.f label{display:block;font-size:12.5px;font-weight:600;margin-bottom:6px}
+.f input,.f select,.f textarea{width:100%}
+.hint{font-size:12px;color:var(--mfg);margin-top:4px}
+.qrow{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid var(--border);align-items:flex-start}
+.qrow small{display:block;color:var(--mfg);font-size:12px}
+.yn{display:inline-flex;background:var(--muted);border-radius:6px;padding:2px;gap:2px;flex:none}
+.yn button{border:0;background:transparent;height:28px;padding:0 12px;border-radius:5px;cursor:pointer;font-weight:500;color:var(--mfg)}
+.yn button.y{background:var(--card);color:var(--ok);box-shadow:0 1px 2px rgba(0,0,0,.1)}
+.yn button.n{background:var(--card);color:#b91c1c;box-shadow:0 1px 2px rgba(0,0,0,.1)}
+.row2{display:flex;gap:12px}.row2>*{flex:1}
+.btns{display:flex;gap:8px;justify-content:flex-end;margin-top:18px}
+.choice{display:flex;gap:8px}.choice button{flex:1;height:36px;border:1px solid var(--border);background:var(--card);border-radius:6px;cursor:pointer;font-weight:500}
+.choice button.on{border-color:var(--fg);box-shadow:inset 0 0 0 1px var(--fg)}
+/* sheet (side panel) */
+.overlay{position:fixed;inset:0;background:rgba(9,9,11,.35);z-index:14;display:none}
+.overlay.on{display:block}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(640px,100%);background:var(--card);border-left:1px solid var(--border);box-shadow:-12px 0 32px rgba(0,0,0,.12);transform:translateX(105%);transition:transform .22s ease-out;z-index:15;overflow:auto;padding:22px 24px}
+.drawer.on{transform:none}
+.drawer h2{margin:6px 0 8px;font-size:24px;font-weight:650;font-stretch:80%;line-height:1.15}
+.crumb{font-size:12px;color:var(--mfg)}
+.crumb a{color:var(--fg);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.x{float:right}
+.actbar{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:12px 0 4px;padding:10px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.actbar select{height:32px}
+.dates{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:var(--r);margin:14px 0}
+.dates div{padding:10px 12px;border-right:1px solid var(--border)}.dates div:last-child{border:0}
+.dates small,.kv small{display:block;font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--mfg);text-transform:uppercase;font-stretch:85%}
+.dates b{font-weight:600}
+.kv{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 20px;margin:12px 0}
+.step{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-top:1px solid var(--border);font-size:13px}
+.step .dot{width:8px;height:8px;border-radius:50%;margin-top:6px;flex:none;background:var(--ring)}
+.step.done .dot{background:var(--ok)}
+.step.cur{background:var(--muted);margin:0 -10px;padding:9px 10px;border-radius:6px;border-top-color:transparent}
+.step.cur .dot{background:var(--fg)}
+.step.blk .dot{background:var(--brand)}
+.sm{color:var(--mfg);font-size:12px}
+.gate{font-size:10px;font-weight:650;border:1px solid var(--fg);border-radius:4px;padding:0 5px;margin-left:6px;letter-spacing:.04em}
+.sib{padding:8px 0;border-top:1px solid var(--border);font-size:13px;cursor:pointer}
+.sib:hover{text-decoration:underline}
+.lz{display:inline-flex;align-items:center;font-size:11px;font-weight:650;letter-spacing:.04em;text-transform:uppercase;font-stretch:85%;padding:1px 7px;border-radius:4px;background:var(--muted);color:var(--fg);white-space:nowrap}
+.lz.review,.lz.qc{background:#eef2ff;color:#3730a3}.lz.client,.lz.fb{background:#fffbeb;color:#92400e}.lz.done{background:#f0fdf4;color:#166534}.lz.prog{background:#f4f4f5;color:#18181b}
+.lt tbody tr{cursor:pointer}.lt tbody tr:hover td{background:#fafafa}.lt tbody tr:focus-visible{outline:2px solid var(--fg);outline-offset:-2px}
+.lt th button{all:unset;cursor:pointer;display:inline-flex;gap:4px;align-items:center}
+.lt th button:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.lt .grp td{background:var(--bg);font-weight:650;font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-stretch:85%;cursor:default}
+.pri{display:inline-flex;align-items:center;gap:5px}.pri svg{width:14px;height:14px}
+.lbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.lbar input{width:220px}
+.cal{border:1px solid var(--border);border-radius:var(--r);background:var(--card);overflow:hidden}
+.cal .hd,.cal .wk{display:grid;grid-template-columns:repeat(5,1fr)}
+.cal .hd div{padding:8px 10px;font-size:11.5px;font-weight:650;text-transform:uppercase;letter-spacing:.06em;font-stretch:85%;color:var(--mfg);background:var(--bg);border-bottom:1px solid var(--border)}
+.cal .wk{grid-auto-rows:min-content;min-height:118px;border-bottom:1px solid var(--border);position:relative;padding-bottom:6px}
+.cal .wk:last-child{border-bottom:0}
+.cal .dn{padding:6px 10px;font-size:12px;color:var(--mfg);grid-row:1}
+.cal .wk{background-image:repeating-linear-gradient(to right,transparent 0 calc(20% - 1px),var(--border) calc(20% - 1px) 20%)}
+.cal .dn.today{color:var(--fg);font-weight:700}.cal .dn.today span{background:var(--brand);color:#fff;border-radius:999px;padding:1px 7px}
+.cal .dn.out{color:#d4d4d8}
+.cal .ev{margin:2px 4px;padding:3px 8px;border-radius:5px;font-size:12px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;border:1px solid var(--border);background:var(--muted);display:flex;gap:6px;align-items:center}
+.cal .ev:focus-visible{outline:2px solid var(--fg)}
+.cal .ev.review,.cal .ev.qc{background:#eef2ff;border-color:#c7d2fe}.cal .ev.client,.cal .ev.fb{background:#fffbeb;border-color:#fde68a}.cal .ev.done{background:#f0fdf4;border-color:#bbf7d0;color:#166534}.cal .ev.bad{border-left:3px solid var(--brand)}
+.cal .ev .av{width:18px;height:18px;font-size:9px;margin-left:auto}
+.calbar{display:flex;gap:8px;align-items:center;margin-bottom:10px;flex-wrap:wrap}
+.calbar b{font-size:18px;font-weight:650;font-stretch:80%;min-width:130px;text-align:center}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--mfg);margin-left:auto}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:-1px;border:1px solid var(--border)}
+.bar2{height:6px;background:var(--muted);border-radius:3px;overflow:hidden;margin:8px 0 4px}.bar2 i{display:block;height:100%;background:var(--fg)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:760px){.wrap{padding:16px}header{padding:0 16px;gap:12px}header nav,header .prod{display:none}.row2{flex-direction:column}.dates,.kv{grid-template-columns:1fr}.dates div{border-right:0;border-bottom:1px solid var(--border)}}
+
+/* ===== Jira look & feel (remixed, Traffik brand) ===== */
+:root{--fg:#172B4D;--mfg:#626F86;--sub:#44546F;--border:#DCDFE4;--bg:#fff;--muted:#F7F8F9;--hov:#F1F2F4;--sel:#FDECEE;--brand:#C8202F;--r:4px;--ring:#8590A2;--ok:#216E4E}
+body{background:#fff;color:var(--fg);font-size:14px}
+.app{display:flex;min-height:100vh}
+.side{width:240px;flex:none;border-right:1px solid var(--border);padding:12px 8px;position:sticky;top:0;height:100vh;overflow:auto;background:#fff}
+.brand{display:flex;align-items:center;gap:8px;padding:6px 8px 14px;font-size:15px}
+.brand b{font-weight:650}
+.logo{width:26px;height:26px;border-radius:5px;background:#1d1d1d;color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px;border-bottom:3px solid var(--brand)}
+.nav{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:4px;color:var(--sub);font-weight:500;cursor:pointer;text-decoration:none;font-size:14px}
+.nav svg{width:16px;height:16px}
+.nav:hover{background:var(--hov)}
+.nav.on{background:var(--sel);color:var(--brand)}
+#spaces .nav.on{background:var(--hov);color:var(--fg);font-weight:650;box-shadow:inset 3px 0 0 var(--fg)}
+.sh{font-size:12px;font-weight:650;color:var(--mfg);padding:14px 10px 4px}
+.sq{width:20px;height:20px;border-radius:4px;color:#fff;display:inline-grid;place-items:center;font-size:11px;font-weight:700;flex:none}
+.sq.big{width:30px;height:30px;font-size:15px;border-radius:6px;margin-right:10px;vertical-align:-4px}
+.main{flex:1;min-width:0}
+.topbar{display:flex;align-items:center;gap:10px;padding:10px 20px;border-bottom:1px solid var(--border);position:sticky;top:0;background:#fff;z-index:5}
+.search{flex:1;max-width:720px;display:flex;align-items:center;gap:8px;border:1px solid #8590A2;border-radius:4px;padding:0 10px;height:34px}
+.search svg{width:16px;height:16px;color:var(--mfg)}
+.search input{border:0;height:30px;flex:1;padding:0;outline:none}
+.new{margin-left:0;height:34px;border-radius:4px;background:var(--brand);display:inline-flex;align-items:center;gap:6px;padding:0 14px}
+.new svg{width:15px;height:15px}
+.me{margin-left:auto;width:30px;height:30px;border-radius:50%;background:#1d1d1d;color:#fff;display:grid;place-items:center;font-size:11px;font-weight:700}
+.wrap{padding:16px 28px 40px;max-width:none}
+.crumbs{font-size:13px;color:var(--mfg);margin-bottom:6px}
+h1{font-size:24px;font-weight:650;font-stretch:90%;display:flex;align-items:center;margin-bottom:10px}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--border);margin:0 -28px 14px;padding:0 28px;flex-wrap:wrap}
+.tabs button{border:0;background:none;padding:10px 8px 9px;font-weight:500;color:var(--sub);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;font-size:14px}
+.tabs button:hover{color:var(--fg)}
+.tabs button.on{color:var(--brand);border-bottom-color:var(--brand)}
+.tool{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+select,input{border-radius:3px;border-color:#8590A2;height:32px}
+.scope{display:inline-flex;border:1px solid #8590A2;border-radius:3px;overflow:hidden}
+.scope button{border:0;background:#fff;height:30px;padding:0 12px;font-weight:500;color:var(--sub);cursor:pointer}
+.scope button+button{border-left:1px solid var(--border)}
+.scope button.on{background:var(--sel);color:var(--brand);font-weight:650}
+.avs{display:flex;padding-left:6px}
+.avs button{width:30px;height:30px;border-radius:50%;border:2px solid #fff;margin-left:-6px;font-size:10px;font-weight:700;color:#fff;cursor:pointer;display:grid;place-items:center}
+.avs button.on{box-shadow:0 0 0 2px var(--brand);z-index:1}
+.avs button:focus-visible{outline:2px solid var(--fg);outline-offset:1px;z-index:2}
+/* stats & focus quieter */
+.stat{border-radius:6px;border-color:var(--border);min-width:140px}
+.stat b{font-size:22px}
+.focus{border-radius:6px}
+/* board: Jira columns + cards */
+.board{gap:8px;grid-template-columns:repeat(8,minmax(248px,1fr))}
+.col{background:var(--muted);border-radius:6px;padding:6px}
+.col h4{font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--sub);font-stretch:100%}
+.col h4 span:last-child{background:transparent;border:0;color:var(--mfg);font-size:12px}
+.card{border:0;border-radius:4px;box-shadow:0 1px 1px #091E4240,0 0 1px #091E424F;padding:10px 12px}
+.card:hover{background:var(--hov);box-shadow:0 1px 1px #091E4240,0 0 1px #091E424F}
+.card .t{font-weight:500;font-size:14px}
+.card .top{color:var(--mfg)}
+/* calmer density */
+.summary{display:flex;gap:8px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border-radius:16px;border:1px solid var(--border);background:#fff;color:var(--sub);cursor:pointer;font-size:13px}
+.chip:disabled{cursor:default}
+.chip:not(:disabled):hover{background:var(--hov)}
+.chip b{color:var(--fg);font-weight:650}
+.chip.warn b{color:var(--brand)}
+.chip svg{width:15px;height:15px}
+.stats{margin-bottom:18px;flex-direction:column;align-items:stretch}
+.focus{margin-top:10px}
+.focus .it{align-items:center}.focus .it svg{color:var(--mfg);flex:none}
+.col{padding:10px}
+.col h4{margin:2px 4px 10px}
+.col h4 .ch{display:inline-flex;align-items:center;gap:7px}
+.col h4 svg{width:15px;height:15px;color:var(--mfg)}
+.col .rule{min-height:0;margin:0 4px 10px;display:none}
+.card{padding:12px 14px;margin-bottom:10px}
+.card .t{font-size:14.5px;font-weight:550;line-height:1.35;margin-bottom:4px}
+.card .cl{font-size:12.5px;color:var(--mfg);margin-bottom:12px}
+.card .bot{gap:10px}
+.card .bot .sp{margin-left:auto}
+.nav svg,.search svg,.new svg{width:16px;height:16px}
+.btn svg{width:15px;height:15px}
+/* stand-up on the board */
+.boardbar{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.board.spot .card{opacity:.28;transition:opacity .2s}
+.board.spot .card.lit{opacity:1;box-shadow:0 0 0 2px var(--brand),0 1px 1px #091E4240}
+.board.spot .col.lit{background:#FDECEE}
+#supanel{position:fixed;right:16px;top:72px;bottom:16px;width:340px;background:#fff;border:1px solid var(--border);border-radius:8px;box-shadow:0 12px 32px rgba(9,30,66,.18);z-index:12;display:flex;flex-direction:column}
+#supanel .sp-h{display:flex;justify-content:space-between;align-items:center;padding:12px 14px 0}
+#supanel .sp-t{margin:6px 14px 8px;font-size:22px;text-transform:none;letter-spacing:0;font-stretch:80%}
+#supanel .sp-b{padding:0 14px;overflow:auto;flex:1}
+#supanel .sp-b h4{font-size:12px;text-transform:uppercase;letter-spacing:.06em;margin:14px 0 6px;font-stretch:85%}
+#supanel .sp-f{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-top:1px solid var(--border)}
+#supanel .qs{background:#1d1d1d;color:#fff;border-radius:6px;padding:12px 12px 12px 30px;margin:8px 0 12px;font-weight:550;line-height:1.7}
+.sp-row{padding:10px 0;border-top:1px solid var(--border)}
+.sp-row .t{font-weight:550;cursor:pointer}.sp-row .t:hover{text-decoration:underline}
+.sp-row .acts2{display:flex;gap:6px;margin-top:6px}
+.sp-row .acts2 button{height:26px;padding:0 9px;border-radius:3px;border:0;background:#F1F2F4;cursor:pointer;font-size:12px;color:var(--sub)}
+.sp-row .acts2 button.on{background:#BAF3DB;color:#216E4E}.sp-row .acts2 button.risk.on{background:#F8E6A0;color:#7F5F01}
+body.su-on .wrap{padding-right:372px}
+@media (max-width:900px){#supanel{left:16px;width:auto;top:auto;height:60vh}body.su-on .wrap{padding-right:16px}}
+/* stand-up */
+.su-top{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.su-dots{display:flex;gap:6px;flex-wrap:wrap}
+.su-dots button{height:28px;padding:0 10px;border-radius:14px;border:1px solid var(--border);background:#fff;font-size:12px;color:var(--sub);cursor:pointer}
+.su-dots button.on{background:var(--fg);color:#fff;border-color:var(--fg)}
+.su-dots button.done{color:var(--ok);border-color:#BAF3DB}
+.su{display:grid;grid-template-columns:1fr 320px;gap:16px}
+.su h2{font-size:26px;font-weight:650;font-stretch:80%;margin:0 0 4px}
+.su-row{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--border);border-radius:6px;margin-bottom:8px;background:#fff}
+.su-row .t{font-weight:550;cursor:pointer}.su-row .t:hover{text-decoration:underline}
+.su-row .acts2{margin-left:auto;display:flex;gap:6px}
+.su-row .acts2 button{height:28px;padding:0 10px;border-radius:3px;border:0;background:#F1F2F4;cursor:pointer;font-size:12px;color:var(--sub)}
+.su-row .acts2 button.on{background:#BAF3DB;color:#216E4E}.su-row .acts2 button.risk.on{background:#F8E6A0;color:#7F5F01}
+.su-q{background:#1d1d1d;color:#fff;border-radius:8px;padding:18px}
+.su-q h4{margin:0 0 10px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#ff8a94;font-stretch:85%}
+.su-q ol{margin:0;padding-left:18px;font-size:16px;line-height:1.7;font-weight:550}
+.su-q p{font-size:12.5px;color:#a1a1aa;margin:14px 0 0}
+@media (max-width:900px){.su{grid-template-columns:1fr}}
+/* lozenges (Atlassian style): bold uppercase, flat */
+.tag,.lz{border-radius:3px;border:0;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.02em;padding:1px 5px;font-stretch:90%}
+.tag{background:#DCDFE4;color:#44546F}
+.tag.late,.tag.bad{background:#FFD5D2;color:#AE2E24}
+.tag.warn{background:#F8E6A0;color:#7F5F01}
+.tag.high{background:#DFD8FD;color:#5E4DB2}
+.lz{background:#DCDFE4;color:#44546F}
+.lz.prog,.lz.ready{background:#CCE0FF;color:#0055CC}
+.lz.review,.lz.qc{background:#DFD8FD;color:#5E4DB2}
+.lz.client,.lz.fb{background:#F8E6A0;color:#7F5F01}
+.lz.done{background:#BAF3DB;color:#216E4E}
+/* list: Jira table */
+.tw{border-radius:6px}
+th{background:#fff;text-transform:none;letter-spacing:0;font-stretch:100%;font-size:12.5px;color:var(--sub);font-weight:650;border-bottom:2px solid var(--border)}
+td{padding:10px 12px}
+.lt tbody tr:hover td{background:var(--hov)}
+/* calendar events Jira-ish */
+.cal{border-radius:6px}
+.cal .ev{border-radius:3px;border:0;background:#E9F2FF}
+.cal .ev.prog,.cal .ev.ready,.cal .ev.intake{background:#E9F2FF}
+.cal .ev.review,.cal .ev.qc{background:#F3F0FF}
+.cal .ev.client,.cal .ev.fb{background:#FFF7D6}
+.cal .ev.done{background:#DCFFF1;color:#216E4E}
+.cal .ev.bad{box-shadow:inset 3px 0 0 var(--brand)}
+.cal .hd div{background:#fff;text-transform:none;letter-spacing:0;font-size:12.5px;color:var(--sub);font-stretch:100%;text-align:center}
+/* buttons Atlassian */
+.btn,.brow button,.btns button,.x{border-radius:3px;background:#F1F2F4;border:0;color:var(--sub);font-weight:500}
+.btn:hover,.brow button:hover,.btns button:hover,.x:hover{background:#DCDFE4}
+.btns .pri,.btn.pri{background:var(--brand);color:#fff;border:0}
+.btns .pri:hover,.btn.pri:hover{background:#A51A26}
+#toast{border-radius:4px}
+.drawer{width:min(680px,100%)}
+@media (max-width:900px){.side{display:none}.tabs{margin:0 -16px 14px;padding:0 16px}.wrap{padding:16px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side" aria-label="Main navigation">
+  <div class="brand"><span class="logo">T</span><b>Task Hub</b></div>
+  <a class="nav"><i data-fi="user"></i>For you</a>
+  <a class="nav"><i data-fi="bar-chart-2"></i>Resourcing</a>
+  <div class="sh">Department</div>
+  <a class="nav on"><span class="sq" style="background:#c8202f">C</span>Creative</a>
+  <div class="sh">Clients</div>
+  <div id="spaces"></div>
+</aside>
+<div class="main">
+  <div class="topbar"><div class="search"><i data-fi="search"></i><input placeholder="Search" aria-label="Search"></div><button class="new" id="newBtn"><i data-fi="plus"></i>Create</button><span class="me" title="Andres">AF</span></div>
+  <div class="wrap">
+    <div class="crumbs">Spaces / Creative</div>
+    <h1><span class="sq big" style="background:#c8202f">C</span><span id="ttl">Andres's team</span></h1>
+    <div class="tabs" id="views" role="tablist">
+      <button class="on" data-v="board">Board</button><button data-v="list">List</button><button data-v="cal">Calendar</button><button data-v="week">Workload</button><button data-v="lead">Leadership</button><button data-v="comp">Completed</button>
+    </div>
+    <div class="tool">
+      <div class="scope" id="scope" role="group" aria-label="Scope"><button data-scope="mine">Mine</button><button data-scope="team" class="on">My team</button><button data-scope="all">Everyone</button></div>
+      <div id="avs" class="avs" role="group" aria-label="Filter by person"></div>
+      <select id="who" aria-label="Person"><option value="">Everyone</option></select>
+      <select id="cli" aria-label="Client"><option value="">All clients</option></select>
+      <select id="dep" style="display:none" aria-label="Department"><option value="">All departments</option></select>
+      <span class="sm" style="margin-left:auto">Prototype for Leo · sample cards</span>
+    </div>
+    <div id="focus"></div>
+    <div class="stats" id="stats"></div>
+    <div id="view"></div>
+  </div>
+</div>
+</div>
+<div class="modal" id="qcModal"><div class="sheet" id="qcSheet"></div></div>
+<div class="modal" id="newModal"><div class="sheet" id="newSheet"></div></div>
+<div class="overlay" id="ov"></div><div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Task details"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const COLS=[
+ {k:"intake",n:"Intake",r:"In the queue · needs a plan or date"},
+ {k:"ready",n:"Ready",r:"Plan · brief link · one account lead · due-date driver"},
+ {k:"prog",n:"In progress",r:"Work step Active · WIP limit 3 per person"},
+ {k:"review",n:"Internal review",r:"Step: Internal review · reviewer ≠ maker"},
+ {k:"qc",n:"Quality Control",r:"Step: Pre-launch QA → 5-section checklist"},
+ {k:"client",n:"With client",r:"Step: Send / present · only after QC"},
+ {k:"fb",n:"Feedback",r:"Client feedback / Revisions · round counted"},
+ {k:"done",n:"Done",r:"Client final approval · launch · Complete"}];
+const ORDER=COLS.map(c=>c.k);
+const QC=[
+ ["Meets the brief?","Answers the proposition, speaks to the one person, right fidelity","Account lead + ACD"],
+ ["On brand?","Logo, colours, type, imagery, tone, licences","AD on the job"],
+ ["Delivers what was asked?","Every change-log item done, nothing extra changed, sizes and specs","QC owner"],
+ ["Any mistakes?","Claims and numbers confirmed with client in writing; spelling, names, links, CTAs, legal lines","Account lead + QC owner"],
+ ["Presentation ready?","Agency format, decisions needed, round count shown","ACD"]];
+// planned = hours from standard times; logged = hours logged; promised vs delivers = dates
+let cards=[
+ {id:1,t:"MA Search Copy",c:"Eternal Health",who:"Jeremy",am:"Brad",lead:"Jeremy",rev:"Anthony",col:"prog",plan:3,log:1,brief:1,high:"Client launch moved up",late:1,round:1,rounds:2,del:"Oct 14",prom:"Oct 12"},
+ {id:2,t:"UTMs & QR Codes",c:"Eternal Health",who:"Connor",am:"Brad",lead:"—",rev:"Valerie",col:"prog",plan:2,log:0,brief:1,high:"",round:1,rounds:2,del:"Oct 12",prom:"Oct 12"},
+ {id:3,t:"URL Re-Route",c:"Eternal Health",who:"Connor",am:"Brad",lead:"Jeremy",rev:"Jeremy",col:"ready",plan:1.5,log:0,brief:1,late:1,round:0,rounds:2,del:"Oct 13",prom:"Oct 12"},
+ {id:4,t:"Storyboards",c:"Eternal Health",who:"Anthony",am:"Brad",lead:"Jeremy",rev:"Anthony",col:"prog",plan:12,log:4,brief:1,high:"",round:1,rounds:2,del:"Oct 16",prom:"Oct 12"},
+ {id:5,t:"Duets MA Video Update",c:"Eternal Health",who:"Victoria",am:"Brad",lead:"Jeremy",rev:"Jeremy",col:"prog",plan:6,log:2,brief:1,round:2,rounds:2,del:"Oct 12",prom:"Oct 12"},
+ {id:6,t:"Broker Guide Print Versions",c:"Eternal Health",who:"Anthony",am:"Brad",lead:"Jeremy",rev:"Jeremy",col:"qc",plan:4,log:3,brief:1,late:1,round:1,rounds:2,del:"Oct 12",prom:"Oct 9",driver:"Printer drop Oct 13"},
+ {id:7,t:"MA Landing Page",c:"Eternal Health",who:"Anthony",am:"Brad",lead:"Jeremy",rev:"Jeremy",col:"prog",plan:10,log:5,brief:1,round:1,rounds:2,del:"Oct 14",prom:"Oct 12"},
+ {id:8,t:"DMs: Write copy & Create Layouts",c:"Eternal Health",who:"Jeremy",am:"Brad",lead:"Jeremy",rev:"Jeremy",col:"fb",plan:8,log:6,brief:1,round:2,rounds:2,del:"Oct 15",prom:"Oct 15"},
+ {id:9,t:"AEP Social Ads",c:"Eternal Health",who:"Victoria",am:"",lead:"",rev:"",col:"intake",plan:0,log:0,brief:0,round:0,rounds:2,del:"",prom:"Nov 2"},
+ {id:10,t:"Applications Open Refresh",c:"CMU",who:"Umair",am:"Amanda",lead:"Andres",rev:"Hunter",col:"review",plan:21.15,log:0,brief:1,round:1,rounds:2,del:"Oct 23",prom:"Oct 22",driver:"Media start Oct 23"},
+ {id:11,t:"Instapage Templates",c:"CMU",who:"Damba",am:"Amanda",lead:"Andres",rev:"Jordan",col:"prog",plan:12,log:0,brief:1,late:1,round:1,rounds:2,del:"Oct 26",prom:"Oct 26",track:"Light"},
+ {id:12,t:"CMU Promise Logo Design",c:"CMU",who:"Andres",am:"Amanda",lead:"Andres",rev:"Andres",col:"prog",plan:8.5,log:0,brief:1,round:0,rounds:2,del:"Nov 2",prom:"Nov 2"},
+ {id:13,t:"M3 Animation Storyboard",c:"Edwards",who:"Debbie",am:"Amanda",lead:"Andres",rev:"Andres",col:"ready",plan:20,log:0,brief:0,round:0,rounds:2,del:"Oct 14",prom:"Oct 12"},
+ {id:14,t:"Campaign Concepts",c:"Starling",who:"Umair",am:"Brad",lead:"Jeremy",rev:"Jeremy",col:"prog",plan:20,log:8,brief:1,round:0,rounds:1,del:"Oct 12",prom:"Oct 12"},
+ {id:15,t:"Ski Season Creative",c:"GJRASA",who:"Debbie",am:"Amanda",lead:"Andres",rev:"Andres",col:"client",plan:12,log:9,brief:1,qcOK:1,round:1,rounds:2,del:"Oct 14",prom:"Oct 14"},
+ {id:16,t:"Homepage Creative Refinements",c:"MFK",who:"Jordan",am:"Leo",lead:"Andres",rev:"Andres",col:"done",plan:6,log:6,brief:1,qcOK:1,round:2,rounds:2,del:"Oct 13",prom:"Oct 13"},
+ {id:17,t:"Tech Jam Video R1",c:"Champlain",who:"Michael",am:"Savannah",lead:"Andres",rev:"Andres",col:"prog",plan:10,log:4,brief:1,round:1,rounds:2,del:"Oct 13",prom:"Oct 13",driver:"Event Oct 20"},
+ {id:18,t:"Brand Retargeting Refresh: Videos",c:"CMU",who:"Michael",am:"Amanda",lead:"Andres",rev:"Andres",col:"prog",plan:12,log:3,brief:1,round:1,rounds:2,del:"Oct 16",prom:"Oct 16"},
+ {id:19,t:"Rowdy Script Review",c:"CMU",who:"Debbie",am:"Amanda",lead:"Andres",rev:"Andres",col:"review",plan:2,log:1,brief:1,round:0,rounds:2,del:"Oct 16",prom:"Oct 16"},
+ {id:20,t:"Page Templates for Staff",c:"Clever Care",who:"Matt",am:"Savannah",lead:"Andres",rev:"Jordan",col:"prog",plan:10,log:2,brief:1,round:0,rounds:2,del:"Oct 20",prom:"Oct 20",track:"Light"},
+ {id:21,t:"Variant Matrix export (pilot)",c:"CMU",who:"Andrea",am:"Amanda",lead:"Andres",rev:"Umair",col:"ready",plan:4,log:0,brief:1,round:0,rounds:2,del:"Oct 22",prom:"Oct 22",driver:"Media start Oct 23"},
+ {id:22,t:"New Website: Build",c:"TRAFFIK",who:"Aaron",am:"Amanda",lead:"Andres",rev:"Andres",col:"prog",plan:16,log:5,brief:1,round:1,rounds:2,del:"Oct 13",prom:"Oct 13"}];
+const PARENT={"Eternal Health":{job:"Job 657",name:"eH | AEP 2027 Acquisition Campaign",pm:"Mikayla"},"CMU":{job:"Job 643",name:"CMU | Fall Enrollment",pm:"Mikayla"},"Edwards":{job:"NS-667",name:"ELS | SAPIEN M3 RESILIA",pm:"Jeff"},"Starling":{job:"no job #",name:"Starling | Campaign 2027",pm:"Dee"},"GJRASA":{job:"no job #",name:"GJRASA | Ski Season",pm:"Dee"},"MFK":{job:"Job 600",name:"MFK | Website",pm:"Dee"}};
+const TPL=[["Brief & kickoff","Account lead","ready",0.5],["Write copy","Copywriter","prog",0.25],["Design / build","Assignee","prog",0.45],["Internal review","Reviewer","review",0.05,"Rule"],["Pre-launch QA → Quality Control","QC owner","qc",0.05,"Rule"],["Send / present","Creative lead","client",0.05,"Rule"],["Client feedback R1","Account lead","fb",0],["Revisions R1","Assignee","fb",0.1],["Internal review before final","Reviewer","review",0.03],["Client final approval","Account lead","done",0],["Exports & spec check","QC owner","done",0.02]];
+function steps(c){const ci=ORDER.indexOf(c.col);let curSet=false;return TPL.map((s,i)=>{const si=ORDER.indexOf(s[2]);let st=si<ci?"done":"todo";if(!curSet&&si===ci){st="cur";curSet=true}
+ const who={"Account lead":c.am||"—","Copywriter":"Debbie","Assignee":c.who,"Reviewer":c.rev||"—","QC owner":"Judy / Katie","Creative lead":c.lead||"—"}[s[1]];
+ return {n:s[0],role:s[1],who,st,h:+(c.plan*s[3]).toFixed(2),rule:s[4]}})}
+let blocked=[{id:6,why:"Awaiting licensed replacement image",owner:"Brad (Accounts)",since:"Oct 9"},{id:1,why:"Client to confirm Part B figure",owner:"Client",since:"Oct 10"}];
+let qcAns={}; // id -> [true/false/undefined x5]
+const CAP=35;
+let view="board",who="",cli="",dep="";
+const $=s=>document.querySelector(s);
+function opts(){const ps=[...new Set(cards.map(c=>c.who))].sort();$("#who").innerHTML='<option value="">Everyone</option>'+ps.map(p=>`<option ${p===who?"selected":""}>${p}</option>`).join("");
+ const cs=[...new Set(cards.map(c=>c.c))].sort();$("#cli").innerHTML='<option value="">All clients</option>'+cs.map(p=>`<option ${p===cli?"selected":""}>${p}</option>`).join("")}
+$("#who").onchange=e=>{who=e.target.value;render()};
+$("#cli").onchange=e=>{cli=e.target.value;render()};
+$("#dep").onchange=e=>{dep=e.target.value;render()};
+document.querySelectorAll("#views button[data-v]").forEach(b=>b.onclick=()=>{document.querySelectorAll("#views button").forEach(x=>x.classList.remove("on"));b.classList.add("on");view=b.dataset.v;render()});
+function toast(m,good,act){const t=$("#toast");t.innerHTML="";t.append(m);if(act){const b=document.createElement("button");b.textContent=act[0];b.onclick=()=>{t.style.display="none";act[1]()};t.append(b)}t.className=good?"good":"";t.style.display="block";clearTimeout(t._h);t._h=setTimeout(()=>t.style.display="none",act?7000:3800)}
+const remind=new Set(); // #9 spend reminders like money: one WIP reminder per person per session
+const prog=p=>cards.filter(c=>c.col==="prog"&&c.who===p).length;
+const isBlocked=c=>blocked.some(b=>b.id===c.id);
+const earlier=c=>c.del&&c.prom&&Date.parse(c.prom+" 2026")<Date.parse(c.del+" 2026");
+function rule(c,to){
+ const ti=ORDER.indexOf(to);
+ if(ti>=ORDER.indexOf("ready")&&(!c.brief||!c.am)) return !c.brief?"No signed brief, no work. Add a brief link before this leaves Intake.":"One account lead is required before work starts.";
+ if(ti>=ORDER.indexOf("ready")&&!c.plan) return "Pick a standard timeline first. The plan sets the date, not a guess.";
+ if(to==="review"&&c.rev===c.who) return `Maker is never checker: ${c.who} can't review their own work. Assign another reviewer.`;
+ if((to==="client"||to==="done")&&!c.qcOK) return "Nothing goes to the client before Quality Control passes. Open the QC checklist first.";
+ if(isBlocked(c)&&ti>ORDER.indexOf(c.col)) return "This card is blocked. Clear the blocker first.";
+ return "";
+}
+function fix(c,to,m){
+ if(m.startsWith("Maker")){const alt=c.lead&&c.lead!==c.who?c.lead:"Andres";return [`Assign ${alt} as reviewer`,()=>{c.rev=alt;move(c,to)}]}
+ if(m.startsWith("No signed brief")) return ["Add brief link",()=>{const l=prompt("Paste the signed brief link");if(l){c.brief=1;move(c,to)}}];
+ if(m.startsWith("One account lead")) return ["Pick account lead",()=>{const a=prompt("One account lead (one name)");if(a&&!a.includes("/")){c.am=a;move(c,to)}else toast("One person, not a pair.")}];
+ if(m.startsWith("Nothing goes")) return ["Open QC checklist",()=>openQC(c.id)];
+ if(m.startsWith("This card is blocked")) return ["Open ticket",()=>openDrawer(c.id)];
+ return null;
+}
+function move(c,to){
+ const m=rule(c,to);if(m){toast(m,0,fix(c,to,m));return}
+ if(to==="prog"&&c.col!=="prog"&&prog(c.who)>=3&&!remind.has(c.who)){remind.add(c.who);toast(`${c.who} will have ${prog(c.who)+1} cards in progress (limit 3). Starting more usually finishes everything later.`)}
+ if(to==="fb"&&c.col!=="fb"){ // #26 show final state before the change
+  const nr=c.round+1;if(nr>c.rounds&&!confirm(`This starts round ${nr} of ${c.rounds} contracted.\n\nResult: the task is flagged as a change order and Accounts confirm scope with the client.\n\nContinue?`))return;
+  c.round=nr;if(nr>c.rounds)toast(`Round ${nr} of ${c.rounds}: flagged as change order.`)}
+ c.col=to;if(to==="done")c.late=0;render();
+}
+// Andres's team (confirmed Oct 2026)
+const MY_TEAM=["Andres","Umair","Michael","Jordan","Debbie","Damba","Andrea","Aaron","Matt"];
+const ME="Andres";
+let scope="team";
+const inScope=c=>scope==="all"||(scope==="mine"?(c.who===ME||c.lead===ME||c.rev===ME):(MY_TEAM.includes(c.who)||c.lead===ME));
+function vis(){return cards.filter(c=>inScope(c)&&(!who||c.who===who)&&(!cli||c.c===cli))}
+let showNext=false,showBlocked=false;
+function focus(){$("#focus").innerHTML=""}
+function nextItems(){
+ const v=vis().filter(c=>c.col!=="done"&&!isBlocked(c));const items=[];
+ v.filter(c=>c.col==="qc"&&!c.qcOK).forEach(c=>items.push([1,c,"Waiting on Quality Control"]));
+ v.filter(c=>c.col==="review").forEach(c=>items.push([2,c,`Waiting on review by ${c.rev||"nobody"}`]));
+ v.filter(c=>!c.brief&&c.col==="intake").forEach(c=>items.push([3,c,"No brief yet"]));
+ v.filter(c=>c.col==="prog"&&c.late).forEach(c=>items.push([4,c,"Overdue"]));
+ items.sort((a,b)=>a[0]-b[0]);const seen=new Set();return items.filter(([_,c])=>!seen.has(c.id)&&seen.add(c.id));
+}
+function stats(){
+ const v=vis();const nx=nextItems();const bl=blocked.filter(b=>v.some(c=>c.id===b.id)).length;
+ const chip=(ic,n,label,id,warn)=>`<button class="chip ${warn&&n?"warn":""}" ${id?`id="${id}"`:""} ${id?"":"disabled"}>${svg(ic)}<b>${n}</b>${label}</button>`;
+ $("#stats").innerHTML=`<div class="summary">${chip("layers",v.filter(c=>c.col!=="done").length,"open")}${chip("arrow-right-circle",nx.length,"need someone","sNext")}${chip("lock",bl,"blocked","sBlk",1)}${chip("calendar",v.filter(earlier).length,"promised before plan",null,1)}</div>
+ ${showNext&&nx.length?`<div class="focus">${nx.slice(0,5).map(([_,c,why])=>`<div class="it" data-open="${c.id}">${svg(COLICON[c.col])}<b>${c.t}</b><span class="sm">${c.c} · ${why}</span></div>`).join("")}</div>`:""}`;
+ $("#sNext").onclick=()=>{showNext=!showNext;render()};$("#sBlk").onclick=()=>{showBlocked=!showBlocked;render()};
+ document.querySelectorAll("[data-open]").forEach(e=>e.onclick=()=>openDrawer(+e.dataset.open));
+}
+const IC={check:'<path d="M20 6 9 17l-5-5"/>',x:'<path d="M18 6 6 18M6 6l12 12"/>',circle:'<circle cx="12" cy="12" r="9"/>',file:'<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/>',shield:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',lock:'<rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>'};
+const FMAP={file:"file-text",check:"check",x:"x",circle:"circle",shield:"shield",clock:"clock",lock:"lock"};
+const svg=(n,c)=>{const f=window.feather&&feather.icons[FMAP[n]||n];if(f)return f.toSvg({"aria-hidden":"true",width:16,height:16,"stroke-width":1.75,style:c?`color:${c}`:""});return `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"${c?` style="color:${c}"`:""}>${IC[n]||""}</svg>`};
+const COLICON={intake:"inbox",ready:"flag",prog:"play-circle",review:"eye",qc:"shield",client:"send",fb:"message-square",done:"check-circle"};
+const ini=n=>(n||"?").split(/\s+/).map(x=>x[0]).join("").slice(0,2).toUpperCase();
+function flag(c){ // one badge, most important first (fewer competing signals)
+ if(isBlocked(c))return '<span class="tag bad">'+svg("lock")+'Blocked</span>';
+ if(c.round>c.rounds)return '<span class="tag bad">Change order</span>';
+ if(c.late)return '<span class="tag late">Overdue</span>';
+ if(c.rev&&c.rev===c.who)return '<span class="tag warn">Self-review</span>';
+ if(earlier(c))return '<span class="tag warn">Before plan</span>';
+ if(c.high)return `<span class="tag high" title="HIGH: ${c.high}">High</span>`;
+ return "";
+}
+function cardHTML(c){
+ const f=flag(c);
+ return `<div class="card" draggable="true" tabindex="0" role="button" aria-label="${c.t}, ${c.c}, ${c.who}. Open details" data-id="${c.id}">
+ <div class="t">${c.t}</div>
+ <div class="cl">${c.c}${c.round?` · R${c.round}/${c.rounds}`:""}</div>
+ <div class="bot"><span class="av" title="${c.who}">${ini(c.who)}</span>${!c.brief?`<span class="ic" title="No brief">${svg("file-minus","#AE2E24")}</span>`:""}${c.qcOK?`<span class="ic" title="QC passed">${svg("check-circle","var(--ok)")}</span>`:""}<span class="sp">${f}</span></div></div>`}
+function board(){
+ if(suOn&&suI===0)showBlocked=true;
+ const v=vis();
+ const bl=blocked.filter(b=>v.some(c=>c.id===b.id));
+ let h=!bl.length?"":!showBlocked?"":`<div class="blocked"><h4>Blocked · reason, owner, date</h4>${bl.length?bl.map(b=>{const c=cards.find(x=>x.id===b.id);return `<div class="brow"><b>${c.t}</b><span>${b.why}</span><span>Owner: ${b.owner}</span><span>Since ${b.since}</span><button data-unblock="${b.id}">Clear</button></div>`}).join(""):'<div class="brow">Nothing blocked.</div>'}</div>`;
+ h+='<div class="board">'+COLS.map(col=>{const inCol=v.filter(c=>c.col===col.k);return `<div class="col" data-col="${col.k}"><h4 title="Rule: ${col.r}"><span class="ch">${svg(COLICON[col.k])}${col.n}</span><span>${inCol.length}</span></h4><div class="rule" title="${col.r}">${svg("info")}<span>${col.r}</span></div>${inCol.map(cardHTML).join("")}</div>`}).join("")+'</div>';
+ 
+ h=`<div class="boardbar"><button class="btn ${suOn?"":"pri"}" id="runSU">${svg(suOn?"x":"users")}${suOn?"End stand-up":"Run stand-up"}</button><span class="sm">${suOn?"Walking the board: right to left, one person at a time":"Daily at 9:45 · PM-led · 15 minutes"}</span></div>`+h;
+ $("#view").innerHTML=h;
+ $("#runSU").onclick=()=>{suOn=!suOn;suI=0;render()};
+ document.querySelectorAll(".card").forEach(el=>{el.ondragstart=e=>e.dataTransfer.setData("id",el.dataset.id);el.onclick=e=>{if(e.target.closest("button"))return;openDrawer(+el.dataset.id)};el.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openDrawer(+el.dataset.id)}}});
+ document.querySelectorAll(".col").forEach(col=>{col.ondragenter=()=>col.classList.add("drop");col.ondragleave=e=>{if(!col.contains(e.relatedTarget))col.classList.remove("drop")}});
+ document.querySelectorAll(".col").forEach(col=>{col.ondragover=e=>e.preventDefault();col.ondrop=e=>{const c=cards.find(x=>x.id==e.dataTransfer.getData("id"));if(c)move(c,col.dataset.col)}});
+ document.querySelectorAll("[data-qc]").forEach(b=>b.onclick=()=>openQC(+b.dataset.qc));
+ document.querySelectorAll("[data-block]").forEach(b=>b.onclick=()=>{const why=prompt("Why is it blocked?");if(!why)return toast("A blocker needs a reason.");const owner=prompt("Who owns unblocking it? (person or Client)");if(!owner)return toast("A blocker needs an owner.");blocked.push({id:+b.dataset.block,why,owner,since:"Oct 10"});render()});
+ document.querySelectorAll("[data-unblock]").forEach(b=>b.onclick=()=>{blocked=blocked.filter(x=>x.id!=b.dataset.unblock);render()});
+ document.querySelectorAll("[data-log]").forEach(b=>b.onclick=()=>{const c=cards.find(x=>x.id==b.dataset.log);c.log+=.5;toast(`Logged 0.5h on ${c.t}`,1);render()});
+}
+
+function openDrawer(id){
+ const c=cards.find(x=>x.id===id);if(!c)return;const P=PARENT[c.c]||{job:"no job #",name:c.c,pm:"—"};
+ const sibs=cards.filter(x=>x.c===c.c&&x.id!==c.id);const b=blocked.find(x=>x.id===c.id);const ss=steps(c);
+ const done=ss.filter(s=>s.st==="done").length;const qa=qcAns[c.id]||[];
+ $("#drawer").innerHTML=`<button class="x" id="dx" aria-label="Close">${svg("x")}</button>
+ <div class="crumb">${c.c.toUpperCase()} · ${P.job} · <a id="dparent">${P.name}</a></div>
+ <h2>${c.t}</h2>
+ <div class="actbar"><label class="sm" for="mv">Move to</label><select id="mv">${COLS.map(k=>`<option value="${k.k}" ${k.k===c.col?"selected":""}>${k.n}</option>`).join("")}</select>
+ ${c.col==="qc"&&!c.qcOK?'<button class="btn pri" id="dqc2">QC checklist</button>':""}
+ ${isBlocked(c)?'<button class="btn" id="dunb">Clear blocker</button>':c.col!=="done"?'<button class="btn" id="dblk">'+svg("lock")+'Block</button>':""}
+ <button class="btn" id="dlog">${svg("clock")}Log 0.5h</button></div>
+ <div class="meta">${c.high?`<span class="tag high">HIGH</span> <span>${c.high}</span>`:""}${c.late?'<span class="tag late">OVERDUE</span>':""}${earlier(c)?'<span class="tag warn">Promised before plan</span>':""}${c.round?`<span class="tag">Round ${c.round} of ${c.rounds}</span>`:""}${c.round>c.rounds?'<span class="tag late">Change order</span>':""}<span class="tag">${COLS.find(k=>k.k===c.col).n}</span></div>
+ ${b?`<div class="blocked" style="margin-top:12px"><h4>Blocked since ${b.since}</h4><div>${b.why} · Owner: ${b.owner}</div></div>`:""}
+ <div class="dates"><div><small>Plan delivers</small><b>${c.del||"No plan yet"}</b></div><div><small>Promised</small><b>${c.prom||"—"}</b></div><div><small>Due-date driver</small><b>${c.driver||'<span class="no">Missing</span>'}</b></div></div>
+ <div class="kv"><div><small>Account lead</small>${c.am||'<b class="no">None</b>'}</div><div><small>Project manager</small>${P.pm}</div><div><small>Creative lead</small>${c.lead||'<b class="no">None</b>'}</div><div><small>Reviewer</small>${c.rev||'<b class="no">None</b>'}${c.rev&&c.rev===c.who?' <b class="no">(maker = checker)</b>':""}</div><div><small>Assigned to</small>${c.who}</div><div><small>QC owner</small>Judy / Katie</div><div><small>Brief</small>${c.brief?`<span class="ok ic">${svg("check")}Linked (one-page brief)</span>`:`<b class="no ic">${svg("x")}No brief</b>`}</div><div><small>Hours</small>${c.log} logged of ${c.plan} planned <span class="sm">(likely ${(c.plan*0.75).toFixed(1)}–${(c.plan*1.5).toFixed(1)}h)</span></div></div>
+ <div class="why">Plan date = standard-time steps + client review days. ${earlier(c)?"The promised date is earlier than the plan, so something has to be cut, moved or resourced.":"The promised date fits the plan."}</div>
+ <h3>The plan · ${done}/${ss.length} steps complete</h3>
+ ${ss.map(s=>`<div class="step ${s.st==="done"?"done":s.st==="cur"?(b?"cur blk":"cur"):""}"><span class="dot"></span><div style="flex:1"><b>${s.n}</b>${s.rule?'<span class="gate">RULE</span>':""}<div class="sm">${s.role}: ${s.who} · ${s.h}h planned${s.st==="cur"?" · <b>current step</b>":""}</div></div><div class="sm">${s.st==="done"?"Complete":s.st==="cur"?(b?"Blocked":"Active"):"New"}</div></div>`).join("")}
+ <h3>Quality Control</h3>
+ ${c.qcOK?`<div class="ok ic">${svg("check")}Passed</div>`:QC.map((q,i)=>`<div class="step"><span class="dot" style="background:${qa[i]===true?'var(--green)':qa[i]===false?'var(--red)':'#ccc'}"></span><div style="flex:1"><b>${q[0]}</b><div class="sm">${q[2]}</div></div><div class="sm">${qa[i]===true?"Yes":qa[i]===false?"No":"Not answered"}</div></div>`).join("")}
+ ${c.col==="qc"?'<div class="btns" style="justify-content:flex-start"><button class="pri" id="dqc">Open QC checklist</button></div>':""}
+ <h3>Other tasks on ${P.name} (${sibs.length})</h3>
+ ${sibs.map(s=>`<div class="sib" data-sib="${s.id}"><b>${s.t}</b> · ${s.who} · ${COLS.find(k=>k.k===s.col).n}${s.late?' · <span class="no">overdue</span>':""}</div>`).join("")||'<div class="sm">No other tasks.</div>'}
+ <h3>Comments</h3><div class="sm">Requirements and details live here, as in the Hub today.</div>`;
+ showSheet();
+ $("#dx").onclick=hideSheet;
+ $("#dparent").onclick=()=>openParent(c.c);
+ $("#mv").onchange=e=>{move(c,e.target.value);openDrawer(c.id)};
+ if($("#dqc2"))$("#dqc2").onclick=()=>openQC(c.id);
+ if($("#dunb"))$("#dunb").onclick=()=>{blocked=blocked.filter(x=>x.id!==c.id);render();openDrawer(c.id)};
+ if($("#dblk"))$("#dblk").onclick=()=>{const why=prompt("Why is it blocked?");if(!why)return toast("A blocker needs a reason.");const owner=prompt("Who owns unblocking it? (person or Client)");if(!owner)return toast("A blocker needs an owner.");blocked.push({id:c.id,why,owner,since:"Oct 10"});render();openDrawer(c.id)};
+ $("#dlog").onclick=()=>{c.log=+(c.log+.5).toFixed(1);toast(`Logged 0.5h on ${c.t}`,1);render();openDrawer(c.id)};
+ if($("#dqc"))$("#dqc").onclick=()=>openQC(c.id);
+ document.querySelectorAll("[data-sib]").forEach(e=>e.onclick=()=>openDrawer(+e.dataset.sib));
+}
+let lastFocus=null;
+function showSheet(){if(!$("#drawer").classList.contains("on"))lastFocus=document.activeElement;$("#drawer").classList.add("on");$("#ov").classList.add("on");setTimeout(()=>$("#dx")&&$("#dx").focus(),50)}
+function hideSheet(){$("#drawer").classList.remove("on");$("#ov").classList.remove("on");lastFocus&&lastFocus.focus&&lastFocus.focus()}
+$("#ov").onclick=hideSheet;
+document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;if($("#qcModal").classList.contains("on"))$("#qcModal").classList.remove("on");else if($("#newModal").classList.contains("on"))$("#nCancel").click();else if($("#drawer").classList.contains("on"))hideSheet()});
+function openParent(client){
+ const P=PARENT[client]||{job:"",name:client,pm:"—"};const kids=cards.filter(x=>x.c===client);
+ const plan=kids.reduce((a,c)=>a+c.plan,0),log=kids.reduce((a,c)=>a+c.log,0);
+ $("#drawer").innerHTML=`<button class="x" id="dx" aria-label="Close">${svg("x")}</button><div class="crumb">${client.toUpperCase()} · ${P.job} · PARENT TICKET</div><h2>${P.name}</h2>
+ <div class="dates"><div><small>Tasks</small><b>${kids.length}</b></div><div><small>Done</small><b>${kids.filter(k=>k.col==="done").length}</b></div><div><small>Overdue</small><b>${kids.filter(k=>k.late).length}</b></div></div>
+ <div class="kv"><div><small>Project manager</small>${P.pm}</div><div><small>Account leads on tasks</small>${[...new Set(kids.map(k=>k.am||"none"))].join(", ")}</div><div><small>Hours</small>${log} logged of ${plan.toFixed(1)} planned</div><div><small>Blocked</small>${kids.filter(isBlocked).length}</div></div>
+ <div class="bar2"><i style="width:${Math.round(kids.filter(k=>k.col==="done").length/kids.length*100)}%"></i></div><div class="sm">${kids.filter(k=>k.col==="done").length} of ${kids.length} tasks done · next milestone: ${(kids.find(k=>k.col==="qc"||k.col==="review")||kids[0]).t}</div><h3>Tasks by stage</h3>${COLS.map(col=>{const ks=kids.filter(k=>k.col===col.k);return ks.length?`<div style="margin-top:8px"><b>${col.n}</b>${ks.map(s=>`<div class="sib" data-sib="${s.id}">${s.t} · ${s.who}${isBlocked(s)?' · <span class="no">blocked</span>':""}${s.late?' · <span class="no">overdue</span>':""}</div>`).join("")}</div>`:""}).join("")}`;
+ showSheet();$("#dx").onclick=hideSheet;
+ document.querySelectorAll("[data-sib]").forEach(e=>e.onclick=()=>openDrawer(+e.dataset.sib));
+}
+function openQC(id){
+ const c=cards.find(x=>x.id===id);const a=qcAns[id]||(qcAns[id]=[]);
+ const draw=()=>{$("#qcSheet").innerHTML=`<h2>Quality Control</h2><div class="sub">${c.c} · ${c.t} · round ${c.round||1} of ${c.rounds}</div>${QC.map((q,i)=>`<div class="qrow"><div><b>${i+1}. ${q[0]}</b><small>${q[1]}</small><small>Signed by: ${q[2]}</small></div><div class="yn"><button data-i="${i}" data-v="1" class="${a[i]===true?'y':''}">Yes</button> <button data-i="${i}" data-v="0" class="${a[i]===false?'n':''}">No</button></div></div>`).join("")}
+ <div class="f"><label>ACD override (only if a No is accepted)</label><input id="ovr" placeholder="Reason for sending with a No"></div>
+ <div class="btns"><button id="qcClose">Close</button><button class="pri" id="qcPass">Mark QC passed</button></div>`;
+ document.querySelectorAll("#qcSheet .yn button").forEach(b=>b.onclick=()=>{a[+b.dataset.i]=b.dataset.v==="1";draw()});
+ $("#qcClose").onclick=()=>$("#qcModal").classList.remove("on");
+ $("#qcPass").onclick=()=>{const all=a.filter(x=>x===true).length===5;const ovr=$("#ovr").value.trim();if(!all&&a.filter(x=>x!==undefined).length<5)return toast("Answer all five questions.");if(!all&&!ovr)return toast("Every answer must be Yes, or the ACD records an override reason.");c.qcOK=1;$("#qcModal").classList.remove("on");toast(all?"QC passed. Ready to send or present.":"QC passed with ACD override (logged).",1);render();if($("#drawer").classList.contains("on"))openDrawer(id)};};
+ draw();$("#qcModal").classList.add("on");
+}
+const TL={"21":["Digital, social & video ads",21,16,"Meta/social refresh with statics and video"],"12":["Campaign concepts",12,8,"New ideas for a campaign"],"8":["Direct mail",8,7,"Print mail piece"],"4":["Website update",4,4,"Edits to an existing page"]};
+function addBiz(n){const d=new Date(2026,9,12);let k=0;while(k<n){d.setDate(d.getDate()+1);if(d.getDay()%6)k++}return d}
+const fmt=d=>d.toLocaleDateString("en-US",{month:"short",day:"numeric"});
+function baseHigh(){const hi=DONE.filter(r=>r[5]&&r[4]!==null),lo=DONE.filter(r=>!r[5]&&r[4]!==null);return {share:Math.round(DONE.filter(r=>r[5]).length/DONE.length*100),hiOn:Math.round(hi.filter(r=>r[4]<=0).length/hi.length*100),loOn:Math.round(lo.filter(r=>r[4]<=0).length/lo.length*100)}}
+$("#newBtn").onclick=()=>{
+ let draft={};try{draft=JSON.parse(localStorage.getItem("th_draft")||"{}")}catch(e){}
+ const B=baseHigh();
+ $("#newSheet").innerHTML=`<h2>New task</h2><div class="sub">Plan first, one owner, a reason for every date and every HIGH${Object.keys(draft).length?' · <b>Draft restored</b> <a href="#" id="clr">clear</a>':""}</div>
+ <div class="f"><label>Task title *</label><input id="nt" placeholder="Ex: CMU Fall Enrollment LP Edits"></div>
+ <div class="row2"><div class="f"><label>Client *</label><select id="nc"><option></option><option>CMU</option><option>Eternal Health</option><option>Edwards</option><option>Starling</option><option>GJRASA</option></select></div>
+ <div class="f"><label>Account lead * (one person)</label><select id="na"><option></option><option>Amanda</option><option>Brad</option><option>Darcey</option><option>Hunter</option><option>Ky</option><option>Leo</option><option>Savannah</option></select><div class="hint">Others go in Account team.</div></div></div>
+ <div class="row2"><div class="f"><label>Creative lead *</label><select id="nl"><option></option><option>Andres</option><option>Jeremy</option><option>Jordan</option><option>Debbie</option><option>Anthony</option></select></div>
+ <div class="f"><label>Assigned to *</label><select id="nw"><option></option><option>Umair</option><option>Michael</option><option>Damba</option><option>Andrea</option><option>Victoria</option><option>Debbie</option></select></div></div>
+ <div class="f"><label>Brief link *</label><input id="nb" placeholder="Link to the signed one-page brief"><div class="hint">Template: Creative Brief</div></div>
+ <div class="f"><label>Standard timeline * (sets the date)</label><select id="np"><option value="">Pick a timeline</option>${Object.entries(TL).map(([k,t])=>`<option value="${k}">${t[0]} · ${t[3]}</option>`).join("")}</select><div id="planOut"></div></div>
+ <div class="row2"><div class="f"><label>Client's requested date (optional)</label><input id="nd" type="date" min="2026-10-12"><div id="dateOut"></div></div>
+ <div class="f"><label>Due-date driver</label><input id="ndr" placeholder="Printer, launch, media start, client event"></div></div>
+ <div class="f"><label>Priority * (choose one)</label><div class="choice"><button type="button" data-pr="normal">Normal</button><button type="button" data-pr="high">HIGH: needed today / tomorrow</button></div>
+ <div class="why">For context: ${B.share}% of completed tasks were marked HIGH. HIGH tasks finished on time ${B.hiOn}% of the time, vs ${B.loOn}% for normal tasks.</div>
+ <input id="nhr" style="margin-top:6px;width:100%;display:none" placeholder="Reason for HIGH (required)"></div>
+ <div class="btns"><button id="nCancel">Cancel</button><button class="pri" id="nSubmit">Submit task</button></div>`;
+ $("#newModal").classList.add("on");
+ let pr=draft.pr||"";
+ const ids=["nt","nc","na","nl","nw","nb","np","nd","ndr","nhr"];
+ ids.forEach(i=>{if(draft[i])$("#"+i).value=draft[i]});
+ const save=()=>{const o={pr};ids.forEach(i=>{const v=$("#"+i).value;if(v)o[i]=v});try{localStorage.setItem("th_draft",JSON.stringify(o))}catch(e){}};
+ const upd=()=>{
+  document.querySelectorAll("[data-pr]").forEach(b=>b.classList.toggle("on",b.dataset.pr===pr));$("#nhr").style.display=pr==="high"?"block":"none";
+  const t=TL[$("#np").value];let plan=null;const reg=["Eternal Health","Edwards"].includes($("#nc").value);
+  if(t){const days=t[2]+(reg?2:0);plan=addBiz(days);const lo=addBiz(Math.max(1,days-2)),hi=addBiz(days+3);
+   $("#planOut").innerHTML=`<div class="why"><b>Plan delivers ${fmt(plan)}</b> (likely range ${fmt(lo)} – ${fmt(hi)}). How it's calculated: the "${t[0]}" timeline runs ${t[2]} business days from Oct 12 (${t[1]}h of standard-time steps spread across the team, plus 3 days of client review)${reg?", +2 days of review for a regulated client":""}.</div>`}else $("#planOut").innerHTML="";
+  const dv=$("#nd").value;
+  if(dv&&plan){const req=new Date(dv+"T12:00");let diff=0,d=new Date(req);if(req<plan){while(d<plan){d.setDate(d.getDate()+1);if(d.getDay()%6)diff++}}
+   $("#dateOut").innerHTML=diff?`<div class="why" style="color:var(--red)">${diff} business days shorter than the plan. Result if submitted: tagged "Promised before plan", needs a driver, and Accounts confirm with the client what gets cut or moved.</div>`:`<div class="why">Fits the plan.</div>`}else $("#dateOut").innerHTML="";
+  save();};
+ ids.forEach(i=>$("#"+i).addEventListener("input",upd));
+ document.querySelectorAll("[data-pr]").forEach(b=>b.onclick=()=>{pr=b.dataset.pr;upd()});
+ if($("#clr"))$("#clr").onclick=e=>{e.preventDefault();try{localStorage.removeItem("th_draft")}catch(x){}$("#newBtn").onclick()};
+ upd();
+ $("#nCancel").onclick=()=>{$("#newModal").classList.remove("on");toast("Draft kept. Reopen + New Task to continue.",1)};
+ $("#nSubmit").onclick=()=>{
+  const g=id=>$("#"+id).value.trim();
+  if(!g("nt")||!g("nc")||!g("na")||!g("nl")||!g("nw"))return toast("Title, client, one account lead, creative lead and assignee are required.");
+  if(!g("np"))return toast("Pick a standard timeline. The plan sets the date, not a guess.");
+  if(!pr)return toast("Choose Normal or HIGH.");
+  const t=TL[g("np")],plan=addBiz(t[2]+(["Eternal Health","Edwards"].includes(g("nc"))?2:0));const early=g("nd")&&new Date(g("nd")+"T12:00")<plan;
+  if(early&&!g("ndr"))return toast("A date earlier than the plan needs a due-date driver.");
+  if(pr==="high"&&!g("nhr"))return toast("HIGH needs a reason.");
+  cards.push({id:Date.now(),t:g("nt"),c:g("nc"),who:g("nw"),am:g("na"),lead:g("nl"),rev:g("nl")===g("nw")?"":g("nl"),col:g("nb")?"ready":"intake",plan:t[1],log:0,brief:g("nb")?1:0,high:pr==="high"?g("nhr"):"",round:0,rounds:2,del:fmt(plan),prom:g("nd")?fmt(new Date(g("nd")+"T12:00")):fmt(plan),driver:g("ndr")});
+  try{localStorage.removeItem("th_draft")}catch(e){}
+  $("#newModal").classList.remove("on");toast(g("nb")?"Task created in Ready.":"Task created in Intake (no brief yet).",1);render()};
+};
+
+let lsort={k:"due",dir:1},lgroup="",lq="",lmore=false;
+const DUE=c=>Date.parse((c.prom||c.del||"Dec 31")+" 2026");
+function list(){
+ let v=vis().filter(c=>!lq||(c.t+" "+c.c+" "+c.who+" "+(c.am||"")).toLowerCase().includes(lq.toLowerCase()));
+ const key={task:c=>c.t,client:c=>c.c,who:c=>c.who,am:c=>c.am||"~",stage:c=>ORDER.indexOf(c.col),pri:c=>c.high?0:1,due:DUE,plan:c=>Date.parse((c.del||"Dec 31")+" 2026"),round:c=>c.round,hrs:c=>c.log/(c.plan||1)}[lsort.k];
+ v.sort((a,b)=>{const x=key(a),y=key(b);return (x>y?1:x<y?-1:0)*lsort.dir});
+ const th=(k,n)=>`<th aria-sort="${lsort.k===k?(lsort.dir>0?"ascending":"descending"):"none"}"><button data-sort="${k}">${n}${lsort.k===k?(lsort.dir>0?" ↑":" ↓"):""}</button></th>`;
+ const priCell=c=>c.high?`<span class="pri" title="${c.high}"><svg viewBox="0 0 24 24" fill="none" stroke="#b91c1c" stroke-width="2.5" stroke-linecap="round"><path d="m6 15 6-6 6 6"/></svg>High</span>`:`<span class="pri sm"><svg viewBox="0 0 24 24" fill="none" stroke="#a1a1aa" stroke-width="2.5" stroke-linecap="round"><path d="M5 10h14M5 14h14"/></svg>Normal</span>`;
+ const row=c=>`<tr tabindex="0" data-row="${c.id}"><td><b>${c.t}</b>${flag(c)?" "+flag(c):""}</td><td>${c.c}</td><td><span class="av">${ini(c.who)}</span> ${c.who}</td><td><span class="lz ${c.col}">${COLS.find(k=>k.k===c.col).n}</span></td><td>${c.prom||"—"}</td>${lmore?`<td>${c.am||'<span class="no">None</span>'}</td><td>${priCell(c)}</td><td class="sm">${c.del||"No plan"}</td><td>${c.round?`R${c.round}/${c.rounds}`:"—"}</td><td>${c.log}/${c.plan}h</td>`:""}</tr>`;
+ let body="";
+ if(lgroup){const gk={client:c=>c.c,stage:c=>COLS.find(k=>k.k===c.col).n,who:c=>c.who,am:c=>c.am||"No account lead"}[lgroup];const groups={};v.forEach(c=>(groups[gk(c)]=groups[gk(c)]||[]).push(c));
+  body=Object.entries(groups).map(([g,cs])=>`<tr class="grp"><td colspan="${lmore?10:5}">${g} · ${cs.length}</td></tr>`+cs.map(row).join("")).join("")}else body=v.map(row).join("");
+ $("#view").innerHTML=`<div class="lbar"><input id="lq" type="search" placeholder="Search tasks, clients, people" value="${lq}" aria-label="Search tasks"><label class="sm" for="lg">Group by</label><select id="lg"><option value="">None</option><option value="client">Client</option><option value="stage">Stage</option><option value="who">Assignee</option><option value="am">Account lead</option></select><button class="btn" id="lmore">${svg(lmore?"minimize-2":"columns")}${lmore?"Fewer columns":"More columns"}</button><span class="sm" style="margin-left:auto">${v.length} of ${vis().length} tasks</span></div>
+ <div class="tw"><table class="lt"><thead><tr>${th("task","Task")}${th("client","Client")}${th("who","Assignee")}${th("stage","Stage")}${th("due","Promised")}${lmore?th("am","Account lead")+th("pri","Priority")+th("plan","Plan delivers")+th("round","Round")+th("hrs","Hours"):""}</tr></thead><tbody>${body||'<tr><td colspan="${lmore?10:5}" class="sm">No tasks match.</td></tr>'}</tbody></table></div>
+ <div class="note">Click a row or press Enter to open the task. Click a column header to sort. "Promised" is the date given to the client; "Plan delivers" is what the standard-time plan says.</div>`;
+ $("#lg").value=lgroup;$("#lmore").onclick=()=>{lmore=!lmore;list()};
+ $("#lg").onchange=e=>{lgroup=e.target.value;list()};
+ $("#lq").oninput=e=>{lq=e.target.value;const pos=e.target.selectionStart;list();const i=$("#lq");i.focus();i.setSelectionRange(pos,pos)};
+ document.querySelectorAll("[data-sort]").forEach(b=>b.onclick=()=>{const k=b.dataset.sort;lsort=lsort.k===k?{k,dir:-lsort.dir}:{k,dir:1};list()});
+ document.querySelectorAll("[data-row]").forEach(r=>{r.onclick=()=>openDrawer(+r.dataset.row);r.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();openDrawer(+r.dataset.row)}}});
+}
+
+let calM=9; // October 2026 (0-based)
+const TODAY=new Date(2026,9,12);
+function span(c){const end=new Date(Date.parse((c.prom||c.del||"Oct 30")+" 2026"));const st=new Date(end);let n=Math.max(1,Math.round((c.plan||4)/4));while(n>0){st.setDate(st.getDate()-1);if(st.getDay()%6)n--}return [st,end]}
+function cal(){
+ const v=vis();const first=new Date(2026,calM,1);const start=new Date(first);start.setDate(1-((first.getDay()+6)%7));
+ const weeks=[];let d=new Date(start);
+ while(d.getMonth()<=calM&&d.getFullYear()===2026||weeks.length===0){const w=[];for(let i=0;i<7;i++){if(i<5)w.push(new Date(d));d.setDate(d.getDate()+1)}weeks.push(w);if(d.getMonth()>calM)break}
+ const same=(a,b)=>a.toDateString()===b.toDateString();
+ const rows=weeks.map(w=>{
+  let cells=w.map((day,i)=>`<div class="dn ${day.getMonth()!==calM?"out":""} ${same(day,TODAY)?"today":""}" style="grid-column:${i+1}"><span>${day.getDate()===1?day.toLocaleDateString("en-US",{month:"short"})+" 1":day.getDate()}</span></div>`).join("");
+  const ws=w[0],we=new Date(w[4]);we.setHours(23);
+  let row=2;
+  v.forEach(c=>{const [s,e]=span(c);if(e<ws||s>we)return;
+   const a=s<ws?0:w.findIndex(x=>same(x,s)),b=e>we?4:w.findIndex(x=>same(x,e));
+   if(a<0||b<0)return;
+   cells+=`<div class="ev ${c.col} ${isBlocked(c)||c.late?"bad":""}" tabindex="0" role="button" data-ev="${c.id}" style="grid-column:${a+1}/${b+2};grid-row:${row++}" title="${c.t} · ${c.c} · ${COLS.find(k=>k.k===c.col).n} · promised ${c.prom||"—"}">${c.c} · ${c.t}<span class="av">${ini(c.who)}</span></div>`});
+  return `<div class="wk">${cells}</div>`}).join("");
+ $("#view").innerHTML=`<div class="calbar"><button class="btn" id="ctoday">Today</button><button class="btn" id="cprev" aria-label="Previous month">‹</button><b>${first.toLocaleDateString("en-US",{month:"long",year:"numeric"})}</b><button class="btn" id="cnext" aria-label="Next month">›</button>
+ <div class="legend"><span><i style="background:var(--muted)"></i>In progress / ready</span><span><i style="background:#eef2ff"></i>Review / QC</span><span><i style="background:#fffbeb"></i>With client / feedback</span><span><i style="background:#f0fdf4"></i>Done</span><span><i style="background:#fff;border-left:3px solid var(--brand)"></i>Blocked or overdue</span></div></div>
+ <div class="cal"><div class="hd"><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div></div>${rows}</div>
+ <div class="note">Weekdays only: weekend work is an exception, not a plan. Bars run from the planned start to the promised date. Click a bar or press Enter to open the task.</div>`;
+ $("#cprev").onclick=()=>{calM=Math.max(0,calM-1);cal()};$("#cnext").onclick=()=>{calM=Math.min(11,calM+1);cal()};$("#ctoday").onclick=()=>{calM=9;cal()};
+ document.querySelectorAll("[data-ev]").forEach(e=>{e.onclick=()=>openDrawer(+e.dataset.ev);e.onkeydown=k=>{if(k.key==="Enter"){k.preventDefault();openDrawer(+e.dataset.ev)}}});
+}
+
+let suI=0;const suLog={};// id -> "ok" | "risk"
+function suSteps(){
+ const v=vis();const s=[];
+ s.push({k:"blk",n:"Blocked",ask:"Is it cleared today? Who chases it?",cards:v.filter(isBlocked)});
+ s.push({k:"cli",n:"With client & feedback",ask:"Round x of y. When is feedback due?",cards:v.filter(c=>!isBlocked(c)&&(c.col==="client"||c.col==="fb"))});
+ s.push({k:"rev",n:"Review & QC",ask:"Who is it waiting on? Can it clear by noon?",cards:v.filter(c=>!isBlocked(c)&&(c.col==="review"||c.col==="qc"))});
+ const ppl=scope==="team"?[...MY_TEAM].sort():[...new Set(v.filter(c=>c.col!=="done").map(c=>c.who))].sort();
+ ppl.filter(p=>!who||p===who).forEach(p=>s.push({k:"p:"+p,n:p,person:p,ask:"",cards:v.filter(c=>c.who===p&&c.col!=="done"&&!isBlocked(c))}));
+ s.push({k:"rdy",n:"Ready & intake",ask:"Anything without a brief doesn't start.",cards:v.filter(c=>!isBlocked(c)&&(c.col==="ready"||c.col==="intake"))});
+ s.push({k:"end",n:"Close",ask:"",cards:[]});
+ return s;
+}
+let suOn=false;
+function suPanel(){
+ const S=suSteps();suI=Math.min(suI,S.length-1);const st=S[suI];
+ // spotlight on the board
+ const match=c=>st.k==="blk"?isBlocked(c):st.k==="cli"?(!isBlocked(c)&&(c.col==="client"||c.col==="fb")):st.k==="rev"?(!isBlocked(c)&&(c.col==="review"||c.col==="qc")):st.k==="rdy"?(!isBlocked(c)&&(c.col==="ready"||c.col==="intake")):st.person?c.who===st.person&&c.col!=="done":false;
+ document.querySelector(".board")?.classList.add("spot");
+ document.querySelectorAll(".card").forEach(el=>{const c=cards.find(x=>x.id==el.dataset.id);el.classList.toggle("lit",!!c&&match(c))});
+ const cols={blk:[],cli:["client","fb"],rev:["review","qc"],rdy:["ready","intake"]}[st.k]||[];
+ document.querySelectorAll(".col").forEach(c=>c.classList.toggle("lit",cols.includes(c.dataset.col)));
+ const first=document.querySelector(".card.lit");if(first)first.scrollIntoView({block:"nearest",inline:"center"});
+ const row=c=>{const b=blocked.find(x=>x.id===c.id);const why=b?`${b.why} · ${b.owner}`:c.col==="review"||c.col==="qc"?`Waiting on ${c.col==="qc"?"QC":"review by "+(c.rev||"nobody")}`:c.col==="client"||c.col==="fb"?`R${c.round||1}/${c.rounds} · due ${c.prom}`:`Promised ${c.prom||"—"} · ${c.log}/${c.plan}h`;
+  return `<div class="sp-row"><div class="t" data-open="${c.id}">${c.t}</div><div class="sm">${c.c} · ${why}</div><div class="acts2"><button data-ok="${c.id}" class="${suLog[c.id]==="ok"?"on":""}">On track</button><button data-risk="${c.id}" class="risk ${suLog[c.id]==="risk"?"on":""}">At risk</button>${isBlocked(c)?"":`<button data-sblk="${c.id}">Blocked</button>`}</div></div>`};
+ let body;
+ if(st.k==="end"){const risks=cards.filter(c=>suLog[c.id]==="risk"),bl=blocked.filter(b=>vis().some(c=>c.id===b.id));
+  body=`<div class="sm">Read back today's commitments.</div><h4>At risk (${risks.length}) → account lead talks to client</h4>${risks.map(row).join("")||'<div class="sm">None flagged.</div>'}<h4>Blocker owners (${bl.length})</h4>${bl.map(b=>`<div class="sp-row"><b>${b.owner}</b><div class="sm">${cards.find(x=>x.id===b.id).t}: ${b.why}</div></div>`).join("")||'<div class="sm">Nothing blocked.</div>'}`}
+ else if(st.person){const wip=prog(st.person);body=`${wip>3?'<span class="tag bad">Over WIP</span> ':wip===3?'<span class="tag warn">At WIP limit</span> ':""}<ol class="qs"><li>What moves today?</li><li>Will it make the promised date?</li><li>What's blocking you, and who owns it?</li></ol>${st.cards.length?st.cards.map(row).join(""):`<div class="sm">Nothing on the board for ${st.person}. Ask what they're working on; untracked work goes on the board today.</div>`}`}
+ else body=`<div class="sm">${st.ask}</div>${st.cards.map(row).join("")||'<div class="sm">Nothing here today.</div>'}`;
+ let el=$("#supanel");if(!el){el=document.createElement("aside");el.id="supanel";el.setAttribute("aria-label","Stand-up");document.body.append(el)}
+ el.innerHTML=`<div class="sp-h"><span class="sm">Stand-up · step ${suI+1} of ${S.length}</span><button class="x" id="suX" aria-label="End stand-up">${svg("x")}</button></div><h3 class="sp-t">${st.n}</h3><div class="sp-b">${body}</div>
+ <div class="sp-f"><button class="btn" id="suP">${svg("chevron-left")}Back</button><span class="sm">← →</span><button class="btn pri" id="suN">${suI===S.length-1?"Finish":"Next"}${svg("chevron-right")}</button></div>`;
+ $("#suX").onclick=()=>{suOn=false;render()};
+ $("#suP").onclick=()=>{suI=Math.max(0,suI-1);render()};
+ $("#suN").onclick=()=>{if(suI===S.length-1){suOn=false;render();toast("Stand-up done. Risks go to account leads; blocker owners get a message.",1);return}suI++;render()};
+ el.querySelectorAll("[data-open]").forEach(e=>e.onclick=()=>openDrawer(+e.dataset.open));
+ el.querySelectorAll("[data-ok]").forEach(b=>b.onclick=()=>{suLog[b.dataset.ok]="ok";suPanel()});
+ el.querySelectorAll("[data-risk]").forEach(b=>b.onclick=()=>{suLog[b.dataset.risk]="risk";suPanel()});
+ el.querySelectorAll("[data-sblk]").forEach(b=>b.onclick=()=>{const why=prompt("Why is it blocked?");if(!why)return;const owner=prompt("Who owns unblocking it?");if(!owner)return;blocked.push({id:+b.dataset.sblk,why,owner,since:"Oct 12"});render()});
+}
+document.addEventListener("keydown",e=>{if(!(view==="board"&&suOn)||document.querySelector(".modal.on,.drawer.on")||/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName))return;if(e.key==="ArrowRight")$("#suN").click();if(e.key==="ArrowLeft")$("#suP").click()});
+function week(){
+ setTimeout(()=>document.querySelectorAll('[data-confirm]').forEach(b=>b.onclick=()=>{const p=b.dataset.confirm;const mine=cards.filter(c=>c.who===p&&c.col==='prog');const h=Math.min(7,mine.reduce((a,c)=>a+Math.max(.5,+(c.plan/5).toFixed(1)),0));if(!h)return toast(p+' has nothing in progress today.');if(!confirm(`Log ${h.toFixed(1)}h for ${p} today across ${mine.length} in-progress task(s)? You can edit it after.`))return;mine.forEach(c=>c.log=+(c.log+h/mine.length).toFixed(1));toast(`Logged ${h.toFixed(1)}h for ${p}.`,1);render()}),0);
+ const ps=(who?[who]:[...new Set(cards.filter(inScope).map(c=>c.who))].sort());
+ const rows=ps.map(p=>{const mine=cards.filter(c=>inScope(c)&&c.who===p&&c.col!=="done"&&(!cli||c.c===cli));const pl=mine.reduce((a,c)=>a+c.plan,0),lg=mine.reduce((a,c)=>a+c.log,0);const pct=Math.round(pl/CAP*100);
+  return `<tr><td><b>${p}</b></td><td>${mine.length}</td><td>${prog(p)}${prog(p)>3?' <span class="no">over WIP</span>':''}</td><td>${pl.toFixed(1)}h of ${CAP}h<div class="load ${pct>85?'hot':''}"><i style="width:${Math.min(pct,100)}%"></i></div></td><td>${pct}%</td><td>${lg.toFixed(1)}h${lg===0?' <span class="no">nothing logged</span>':''} <button class="acts" data-confirm="${p}" style="font-size:11px">Confirm today</button></td></tr>`}).join("");
+ $("#view").innerHTML=`<div class="tw"><table><tr><th>Person</th><th>Open cards</th><th>In progress</th><th>Planned load (standard times)</th><th>Booked</th><th>Logged so far</th></tr>${rows}</table></div><div class="why" style="margin-top:12px">Hours that aren't logged don't exist when workload and staffing are decided. Today the Hub shows most people with 35h free because nothing is logged. "Confirm today" pre-fills today's planned hours for one click.</div><div class="note">Planned load comes from the plan's standard times. Logged hours come from the daily log (use +0.5h on a card). Over 85% shows red. Account, PM, Strategy and QA/QC belong in this grid too.</div>`;
+}
+function lead(){
+ const v=vis();
+ const hint={ready:"Work waiting to start",review:"Creative leads overloaded",qc:"QC is the bottleneck",client:"Waiting on client decisions",fb:"Rework"};
+ const rows=COLS.map(col=>{const n=v.filter(c=>c.col===col.k).length;return `<tr><td><b>${col.n}</b></td><td>${n}<div class="load"><i style="width:${Math.min(n*12,100)}%"></i></div></td><td>${hint[col.k]?"A pile here means: "+hint[col.k]:""}</td></tr>`}).join("");
+ const self=v.filter(c=>c.rev&&c.rev===c.who).length,noAm=v.filter(c=>!c.am).length;
+ $("#view").innerHTML=`<div class="tw"><table><tr><th>Stage</th><th>Cards</th><th>What it means</th></tr>${rows}<tr><td><b>Blocked</b></td><td>${blocked.length}</td><td>Owners: ${blocked.map(b=>b.owner).join(", ")}</td></tr><tr><td><b>Maker = checker</b></td><td>${self}</td><td>Work with no independent review</td></tr><tr><td><b>No account lead</b></td><td>${noAm}</td><td>Nobody accountable for brief and claims</td></tr></table></div><div class="note">Time waiting on review, QC, the client or Accounts is visible, so it stops counting against Creative.</div>`;
+}
+const DONE=[["Alignment", "AHP | Meta Ads", "Creative", "2026-10-09", 0, 1, 0, 4], ["Alignment", "AHP | Review Radio Auditions", "Creative", "2026-10-09", 0, 0, 0, 2], ["Alignment", "AHP | AEP Meta Ads", "Creative", "2026-10-09", -52, 0, 0, 69], ["Balt", "Balt | New Product - Stellar", "Creative", "2026-10-09", 3, 0, 0, 5], ["Champlain", "Champlain | Update Meta Form Title", "Digital", "2026-10-09", 7, 0, 1, 2], ["Champlain", "Champlain | On Deck POV", "Digital", "2026-10-09", 4, 0, 0, 5], ["Champlain", "Champlain | Opportunity POV", "Digital", "2026-10-09", 3, 0, 0, 4], ["Champlain", "Revise & Export Short Form Videos", "Creative", "2026-10-09", 8, 0, 1, 6], ["Champlain", "Champlain | Open House Attendance Insights", "Digital", "2026-10-09", 3, 0, 0, 5], ["Clever Care", "Clever Care |  Executive Bios Design", "Creative", "2026-10-09", 0, 0, 0, 3], ["Edwards", "EDWARDS | TMTT Deck Improvements", "Creative", "2026-10-09", 1, 1, 0, 1], ["Eternal Health", "eH | 2025 MA AEP Ads", "Digital", "2026-10-09", 0, 0, 0, 1], ["Eternal Health", "eH | Initial AZ DM Update & Final Files", "Other", "2026-10-09", 0, 1, 1, 1], ["Eternal Health", "eH | MA Initial DM", "Creative", "2026-10-09", 0, 1, 0, 1], ["Free Wheelchair Mission", "FWM | AI & Automation Roadmap", "Digital", "2026-10-09", 0, 0, 0, 4], ["GJRASA", "GJRASA | Meta Video Edits", "Creative", "2026-10-09", -3, 0, 1, 4], ["LLU", "LLU | CMSD Ad Preview - Account legibility check", "Digital", "2026-10-09", 4, 0, 0, 4], ["PIH Health", "PIH Health | AEP Daily lead updates", "Digital", "2026-10-09", 0, 0, 1, 3], ["Starling", "Starling | Presentation Deck (#1)", "Creative", "2026-10-09", 0, 0, 0, 1], ["Starling", "Starling | Print Collateral Build (Parent Task - Not Overdue)", "Creative", "2026-10-09", 7, 0, 0, 32], ["TRAFFIK", "TRAFFIK Intersect", "Other", "2026-10-09", 2, 0, 0, 6], ["Alignment", "AHP | Meta Ad Update", "Creative", "2026-10-08", 0, 0, 1, 2], ["Alignment", "AHP | San Antonio Expansion Campaign (Parent Task)", "Creative", "2026-10-08", -1, 0, 0, 29], ["CalVEBA", "CalVEBA Outstanding Design Feedback + New Client Feedback", "Creative", "2026-10-08", 2, 0, 0, 4], ["Champlain", "Champlain | Dashboard Update (9/29)", "Digital", "2026-10-08", 2, 0, 1, 6], ["Champlain", "Champlain | Salesforce / Google Lead Quality", "Digital", "2026-10-08", 3, 0, 0, 4], ["Champlain", "Champlain | Update Status Tracker", "Digital", "2026-10-08", 1, 0, 1, 1], ["CMU", "Colorado Mesa University \u2014 Free App Week \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-08", 7, 0, 0, 27], ["Eternal Health", "eH | Initial DM Copy Updates", "Creative", "2026-10-08", 1, 1, 1, 0], ["Eternal Health", "eH | AEP Concepts  (Parent Task)", "Creative", "2026-10-08", -9, 0, 0, 36], ["Free Wheelchair Mission", "FWM Dashboard Example", "Digital", "2026-10-08", 8, 0, 0, 2], ["Free Wheelchair Mission", "FWM | Grant Awareness Campaign", "Digital", "2026-10-08", 2, 0, 0, 5], ["LLU", "LLU | Exports - PharmD, MSC, CSD & MSW", "Creative", "2026-10-08", 13, 0, 0, 3], ["PIH Health", "PIH Health Budget Confirmation", "Account", "2026-10-08", 21, 1, 0, 0], ["PIH Health", "PIH Health Additional Forum Email", "Creative", "2026-10-08", -5, 1, 0, 12], ["PIH Health", "PIH Health | Primary Care Rough Cut Spot Review", "Creative", "2026-10-08", 0, 1, 0, 0], ["PIH Health", "PIH Health AEP | Daily Lead Update", "Digital", "2026-10-08", 0, 0, 1, 1], ["UofWyoming", "UofWyoming | Tagging Set UP", "Digital", "2026-10-08", 34, 0, 0, 4], ["UofWyoming", "University of Wyoming \u2014 MS Accounting \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-08", 7, 0, 0, 27], ["UofWyoming", "University of Wyoming \u2014 MS Financial Planning & Wealth Management \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-08", 7, 0, 0, 27], ["UofWyoming", "University of Wyoming \u2014 On-Campus MBA \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-08", 7, 0, 0, 27], ["UofWyoming", "University of Wyoming \u2014 Online MBA \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-08", 7, 0, 0, 27], ["Alignment", "AHP | Meta Ad Launch", "Digital", "2026-10-07", 1, 1, 0, 1], ["CalVEBA", "CalVEBA Pop Up Functionality Update", "Creative", "2026-10-07", 1, 0, 1, 4], ["Champlain", "Champlain | Fix Statistics & Remove Concept 1", "Creative", "2026-10-07", 0, 1, 1, 0], ["Champlain", "Champlain | Tech Jam Bio Copy", "Creative", "2026-10-07", 0, 1, 0, 1], ["Champlain", "Champlain Ad Resize", "Creative", "2026-10-07", 0, 1, 0, 0], ["CMU", "CMU | Next Grad Creative Adjustment", "Creative", "2026-10-07", 0, 0, 0, 1], ["Eternal Health", "eH | Broker Guide Last QC & Final Files", "Creative", "2026-10-07", 0, 1, 0, 0], ["Eternal Health", "eH | Radio Cutdown (Not Overdue)", "Creative", "2026-10-07", 1, 1, 0, 4], ["Eternal Health", "eH | Duets Video Update", "Creative", "2026-10-07", -1, 1, 1, 1], ["Free Wheelchair Mission", "FWM | Donation Google Ad Campaign", "Digital", "2026-10-07", 0, 0, 0, 2], ["GJRASA", "Grand Junction Airport | Inbound & Outbound Social Creative Request (Parent Task)", "Creative", "2026-10-07", 11, 0, 0, 54], ["Hannah Brazney", "Hannah Brazney | Selects to Client EOD Today (3-4h)", "Creative", "2026-10-07", 25, 1, 0, 18], ["PIH Health", "PIH Health | Primary Care & Brand Photo Selects (Parent Task)", "Creative", "2026-10-07", 25, 1, 0, 12], ["PIH Health", "PIH Health AEP | Daily Lead Update", "Digital", "2026-10-07", 6, 0, 1, 16], ["PIH Health", "PIH Health AEP | Daily Lead Update", "Digital", "2026-10-07", 0, 0, 1, 0], ["TRAFFIK", "TRAFFIK 25th Anniversary Deliverables", "Creative", "2026-10-07", -1, 0, 0, 8], ["CMU", "CMU | Free App Week Updates & Exports", "Creative", "2026-10-06", 0, 0, 1, 1], ["Eternal Health", "eH | Broker Guide Edits", "Creative", "2026-10-06", 0, 1, 1, 0], ["Eternal Health", "eH | Broker Guide QR Codes", "Digital", "2026-10-06", 0, 1, 0, 0], ["Eternal Health", "eH | Campaign Concept Updates (Parent Task)", "Creative", "2026-10-06", -1, 0, 1, 7], ["Free Wheelchair Mission", "FWM | Fix Source Code for UTM", "Digital", "2026-10-06", 1, 0, 1, 3], ["Free Wheelchair Mission", "FWM | Virtual Event Replay Campaign", "Digital", "2026-10-06", 1, 0, 0, 5], ["GJRASA", "GJRASA | Video Ad Deck", "Creative", "2026-10-06", -1, 0, 0, 1], ["PIH Health", "PIH Health | AEP LA Times Advertorial (Parent Task)", "Creative", "2026-10-06", 24, 0, 0, 11], ["PIH Health", "PIH Health | AEP Daily lead updates", "Digital", "2026-10-06", 4, 0, 1, 17], ["PIH Health", "PIH Health | AEP Emails (Parent Task)", "Creative", "2026-10-06", -4, 0, 0, 59], ["TRAFFIK", "TRAFFIK New Website", "Creative", "2026-10-06", 0, 0, 0, 6], ["Alignment", "AHP | MTA Proposal", "Digital", "2026-10-05", 14, 0, 0, 4], ["Alignment", "AHP | AEP Search Copy", "Digital", "2026-10-05", 0, 0, 0, 21], ["Alignment", "AHP | Gonzaba Final Edit & Export", "Creative", "2026-10-05", 0, 0, 1, 3], ["Alignment", "AHP | AEP Digital Assets", "Creative", "2026-10-05", 4, 0, 0, 21], ["Champlain", "Champlain Dashboard Updates", "Digital", "2026-10-05", 5, 0, 1, 6], ["Clever Care", "Clever Care Fix", "Creative", "2026-10-05", -1, 0, 1, 4], ["CMU", "CMU | Social Boosting", "Digital", "2026-10-05", 5, 0, 0, 1], ["CMU", "CMU | Free App Week", "Creative", "2026-10-05", 3, 0, 0, 9], ["Edwards", "Edwards Lifesciences | Capabilities Deck", "Creative", "2026-10-05", 0, 0, 0, 4], ["Eternal Health", "eH | Media Plan - AZ Digital \u2013 AEP 2027", "Digital", "2026-10-05", 10, 0, 0, 11], ["Eternal Health", "eH | DM 1 Edits (All Versions)", "Creative", "2026-10-05", 0, 1, 1, 3], ["LLU", "LLU | FY26 Open House Edits", "Digital", "2026-10-05", 26, 0, 1, 1], ["Starling", "Starling | Directional Signage", "Creative", "2026-10-05", 0, 0, 0, 5], ["Alignment", "AHP | Update DOOH File", "Creative", "2026-10-02", 1, 1, 1, 1], ["Alignment", "Alignment Health \u2014 Creative Concept & Asset Development \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["Alignment", "Alignment Health \u2014 Digital Media \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["Alignment", "Alignment Health \u2014 Digital OOH, Transit & Place-Based Screens \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["Alignment", "Alignment Health \u2014 English & Spanish Local Media \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["Alignment", "Alignment Health \u2014 Senior & Community Center Outreach \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["Alignment", "AHP | CA DOOH Phone Number Update", "Creative", "2026-10-02", 0, 1, 1, 0], ["Champlain", "Champlain | Trending Organic Videos Meta Launch", "Digital", "2026-10-02", 2, 0, 0, 5], ["Champlain", "Champlain  Vendor Outreach", "Other", "2026-10-02", 1, 0, 0, 99], ["Champlain", "Champlain | POV: Counselor Travel + NACAC Geofencing", "Digital", "2026-10-02", 1, 0, 0, 3], ["Champlain", "Champlain | Tech Jam Revisions", "Creative", "2026-10-02", 1, 1, 1, 1], ["Champlain", "Pre Strategy Meeting 2 Week  Recap", "Digital", "2026-10-02", 1, 0, 0, 10], ["Champlain", "Champlain | Add New Fall Open House Videos to Existing Campaign", "Digital", "2026-10-02", 0, 0, 0, 3], ["CMU", "CMU | RN/BSN EOC Report Edits", "Digital", "2026-10-02", 3, 0, 1, 5], ["CMU", "CMU | Brand Retargeting Copy Edits", "Creative", "2026-10-02", 0, 1, 1, 1], ["CMU", "CMU | CMU Promise Logo Re-Design", "Creative", "2026-10-02", -3, 0, 0, 10], ["CSUN", "CSUN \u2014 ENGINEERING \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["CSUN", "CSUN \u2014 ENTERTAINMENT \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["CSUN", "CSUN \u2014 HDA-HSO \u2014 HEALTHCARE SYSTEMS & OPERATIONS CERTIFICATE \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["CSUN", "CSUN \u2014 MTX \u2014 MS TAXATION \u00b7 HYBRID \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["Eternal Health", "eH | DM1 Versioning", "Creative", "2026-10-02", 1, 1, 0, 1], ["Eternal Health", "eternalHealth \u2014 Broadcast TV \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["Eternal Health", "eternalHealth \u2014 Broadcast TV & Brand \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["Eternal Health", "eternalHealth \u2014 Digital Media \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["Eternal Health", "eternalHealth \u2014 Digital Media \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["Eternal Health", "eternalHealth \u2014 Direct Mail \u2014 Mass \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["Eternal Health", "eternalHealth \u2014 Direct Mail \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["Eternal Health", "eternalHealth \u2014 eternalHealth Gives Back \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["Eternal Health", "eH | Duets Video Update", "Creative", "2026-10-02", 0, 1, 1, 0], ["Eternal Health", "eH | Broker Guide Build-Out (Continued)", "Creative", "2026-10-02", -1, 0, 0, 37], ["Free Wheelchair Mission", "Go-To-Market Plan", "Digital", "2026-10-02", 4, 0, 0, 13], ["LLU", "Loma Linda University \u2014 Doctor of Pharmacy (PharmD) \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["LLU", "Loma Linda University \u2014 Master of Science, Chaplaincy (MSC) \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["LLU", "Loma Linda University \u2014 Master of Social Work (MSW), Online \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["LLU", "Loma Linda University \u2014 Open House (Event Sunday, Jan. 31, 2027) \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["PIH Health", "PIH Health \u2014 AEP \u2014 Media Launch Oct 1, 2026", "Creative", "2026-10-02", 1, 0, 0, 27], ["Starling", "Starling | Logo Updates Across all Items", "Creative", "2026-10-02", 1, 0, 1, 6], ["Starling", "Starling | Regional Collateral Creation", "Creative", "2026-10-02", 0, 0, 0, 15], ["TRAFFIK", "Analytics report on TRAFFIK's web presences", "Other", "2026-10-02", 4, 0, 0, 4], ["Alignment", "AHP | Gonzaba Billboard Edits", "Creative", "2026-10-01", 0, 0, 1, 0], ["Alignment", "AHP | Casting Specs for Alignment Health Radio Spot", "Creative", "2026-10-01", -1, 0, 0, 1], ["CalVEBA", "CalVEBA Plus Up Opportunities Write Ups", "Creative", "2026-10-01", 9, 0, 0, 1], ["CalVEBA", "CalVEBA | Phase 2 Portal Design", "Creative", "2026-10-01", 1, 0, 0, 40], ["CalVEBA", "CalVEBA Wellness Living Link in Dashboard Navigation Design", "Creative", "2026-10-01", 1, 0, 0, 7], ["Champlain", "Champlain | Tech Jam  UTM / URL Set Up", "Digital", "2026-10-01", 0, 1, 0, 0], ["Clever Care", "Update Clever Care Self-Enroll page for 2026 + 2027 applications", "Creative", "2026-10-01", 0, 1, 1, 1], ["Clever Care", "Update Help Me Find a Plan for 2027 \u2022 ASAP morning 10/1", "Creative", "2026-10-01", 0, 1, 1, 1], ["CMU", "CMU | 'Complete App' One Pager Edits", "Digital", "2026-10-01", 6, 0, 1, 1], ["CMU", "CMU | Brand Retargeting Edits", "Creative", "2026-10-01", 1, 0, 1, 16], ["Eternal Health", "eH | AEP Landing Page Updates", "Creative", "2026-10-01", 1, 0, 1, 1], ["Eternal Health", "eH | Broker Guide", "Other", "2026-10-01", 1, 0, 0, 1], ["Eternal Health", "eH | Search Ads Launch", "Digital", "2026-10-01", 0, 0, 0, 7], ["Eternal Health", "eH | Social Ads Launch", "Digital", "2026-10-01", 0, 0, 0, 6], ["Starling", "Starling | Business Card Updates", "Creative", "2026-10-01", -1, 0, 1, 10], ["TRAFFIK", "TRAFFIK Intersect", "Other", "2026-10-01", 1, 0, 0, 7], ["TRAFFIK", "TRAFFIK | Website Reset", "Creative", "2026-10-01", 1, 0, 0, 21], ["Balt", "Balt | Deck for Updated Website Meeting", "Creative", "2026-09-30", 2, 0, 1, 4], ["Champlain", "Champlain Flowchart Updates", "Digital", "2026-09-30", 2, 0, 1, 5], ["Champlain", "Champlain | Career Success Videos Meta Inquiry Launch", "Digital", "2026-09-30", 0, 0, 0, 5], ["Champlain", "Champlain | Webinar Video Meta Enrollment Launch", "Digital", "2026-09-30", 0, 0, 0, 5], ["Clever Care", "Clever Care Tag Website", "Digital", "2026-09-30", 13, 0, 0, 16], ["CMU", "CMU | Deck for Meeting", "Creative", "2026-09-30", 2, 0, 0, 5], ["CSUN", "CSUN | ATHS Ads Turn-Off", "Digital", "2026-09-30", 1, 0, 0, 6], ["CSUN", "CSUN | Programs New LP", "Digital", "2026-09-30", 1, 1, 0, 1], ["Eternal Health", "eternalHealth | Confirm eternalHealth Live and Planned Launch Items", "PM", "2026-09-30", 111, 0, 0, 0], ["Eternal Health", "eH | Initial AEP Letter", "Creative", "2026-09-30", 2, 1, 0, 4], ["Eternal Health", "eH  | Create Paid Search Ads for eternalHealth AZ AEP", "Digital", "2026-09-30", 1, 1, 0, 1], ["Eternal Health", "eternalHealth \u2014 Radio \u2014 Media Launch Oct 1, 2026", "Creative", "2026-09-30", -1, 0, 0, 27], ["Free Wheelchair Mission", "FWM | Meta Recommendatiosn", "Digital", "2026-09-30", 5, 0, 0, 4], ["LLU", "LLU | Open House UTM URL", "Digital", "2026-09-30", 8, 0, 0, 6], ["LLU", "LLU | Open House Search Copy", "Digital", "2026-09-30", 5, 0, 0, 2], ["LLU", "LLU | New Event - Digital Ads - Proposal", "Digital", "2026-09-30", 2, 0, 0, 6], ["LLU", "LLU | Google Copy - MSW, MSC, PharmD", "Digital", "2026-09-30", 1, 1, 0, 1], ["PIH Health", "PIH Health | AEP After Forum LA Times Print Ad", "Creative", "2026-09-30", 11, 1, 0, 16], ["PIH Health", "PIH Health | Campaign Turn Off - Multiple Campaigns", "Digital", "2026-09-30", 0, 0, 0, 57], ["Starling", "Starling | Regional Materials", "Creative", "2026-09-30", 2, 0, 0, 10], ["Starling", "Starling | Campaign Concepts", "Creative", "2026-09-30", -9, 0, 0, 14], ["TRAFFIK", "TRAFFIK New Website", "Creative", "2026-09-30", 1, 0, 0, 7], ["TRAFFIK", "TRAFFIK 25th Anniversary Deliverables", "Creative", "2026-09-30", -1, 0, 0, 7], ["Alignment", "Alignment Health \u2014 Creative Concept & Asset Development \u2014 Media Launch Oct 1, 2026", "Creative", "2026-09-29", -2, 0, 0, 27], ["Alignment", "Alignment Health \u2014 Digital Media \u2014 Media Launch Oct 1, 2026", "Creative", "2026-09-29", -2, 0, 0, 27], ["Champlain", "Champlain Logo PNG", "Other", "2026-09-29", 1, 0, 0, 3], ["Free Wheelchair Mission", "FWM | Digital guidance on video captions and landing page", "Digital", "2026-09-29", 1, 0, 0, 4], ["PIH Health", "PIH Health AEP | Resize Print Ad Request", "Other", "2026-09-29", 0, 0, 0, 4], ["Balt", "Balt | WordPress access for client", "Creative", "2026-09-28", 4, 0, 0, 2], ["Eternal Health", "eH | Initial AEP October Letter", "Other", "2026-09-28", 0, 0, 0, 4], ["GJRASA", "GJRASA | Ski Season Creative Brief", "Digital", "2026-09-28", 3, 0, 0, 2], ["PIH Health", "PIH Health | AEP Meta & Display Ads", "Creative", "2026-09-28", 2, 0, 0, 45], ["TPUSA", "TPUSA | Communities Airtable Embed", "Creative", "2026-09-28", 0, 0, 0, 5], ["Alignment", "AHP | AEP Landing Page & Home Page Recommendations", "Creative", "2026-09-25", 0, 0, 0, 2], ["Alignment", "AHP | Last Chance DM", "Creative", "2026-09-25", -5, 0, 0, 51], ["Alignment", "AHP | Transcreated Rollup Banners", "Creative", "2026-09-25", -8, 0, 0, 16], ["Balt", "Balt | Website Migration to Bluehost", "Creative", "2026-09-25", 2, 1, 0, 6], ["Champlain", "Champlain | Reporting Deck", "Digital", "2026-09-25", 3, 0, 0, 6], ["Champlain", "Champlain Investigate Lead Quality + Google Ads Feedback", "Digital", "2026-09-25", 1, 0, 0, 1], ["Champlain", "Organic Copy Revisions", "Digital", "2026-09-25", 0, 0, 1, 3], ["CMU", "CMU | Visit Campus Ads - URL LP Update", "Digital", "2026-09-25", 0, 0, 1, 1], ["Eternal Health", "eternalHealth \u2014 Direct Mail \u2014 Mass \u2014 Media Launch Sep 15, 2026", "Other", "2026-09-25", 10, 0, 0, 11], ["Eternal Health", "eternalHealth \u2014 Direct Mail \u2014 Media Launch Sep 15, 2026", "Other", "2026-09-25", 10, 0, 0, 11], ["Eternal Health", "eternalHealth \u2014 Direct Mail \u2014 Targeted Co-Affiliate \u2014 Media Launch Sep 15, 2026", "Other", "2026-09-25", 10, 0, 0, 11], ["Eternal Health", "eternalHealth \u2014 eternalHealth Gives Back \u2014 Media Launch Sep 15, 2026", "Other", "2026-09-25", 10, 0, 0, 11], ["Eternal Health", "eternalHealth \u2014 Events & Guide Funnel \u2014 Media Launch Sep 15, 2026", "Other", "2026-09-25", 10, 0, 0, 11], ["Eternal Health", "eternalHealth \u2014 Hyperlocal & Senior Centers \u2014 Media Launch Sep 15, 2026", "Other", "2026-09-25", 10, 0, 0, 11], ["Eternal Health", "eternalHealth \u2014 Radio \u2014 Media Launch Sep 15, 2026", "Other", "2026-09-25", 10, 0, 0, 11], ["Eternal Health", "eH | Pull Ads", "Digital", "2026-09-25", 0, 1, 0, 1], ["Free Wheelchair Mission", "FWM | Push Meta  & Google Ads Live", "Digital", "2026-09-25", 1, 0, 0, 7], ["Free Wheelchair Mission", "FWM | Reallocating Channels", "Digital", "2026-09-25", 1, 0, 0, 27], ["Free Wheelchair Mission", "Troubleshoot FWM Tracking", "Digital", "2026-09-25", 1, 0, 0, 16], ["MFK", "MFK | Donation Forms - Crypto & Credit Card (16hrs)", "Creative", "2026-09-25", 0, 0, 1, 28], ["MFK", "MFK | Volunteer Hub Integration", "Creative", "2026-09-25", -5, 0, 0, 29], ["TRAFFIK", "RFP | Halifax Health", "Creative", "2026-09-25", 0, 0, 0, 8], ["Alignment", "AHP | Media Pan - All Markets", "Digital", "2026-09-24", -2, 0, 0, 12], ["Champlain", "Champlain | Conversions Dashboard Update", "Digital", "2026-09-24", 0, 0, 1, 3], ["Champlain", "Implement Reddit on Dashboard", "Digital", "2026-09-24", 0, 0, 0, 9], ["Champlain", "Champlain Dashboard Counselor Errors", "Digital", "2026-09-24", -1, 0, 0, 2], ["CMU", "CMU | Updated table for CMU Promise FY 25-26", "Digital", "2026-09-24", 23, 0, 1, 1], ["CMU", "CMU | Status Call Action Items", "Digital", "2026-09-24", 3, 1, 0, 4], ["CMU", "CMU | Dashboard Updates", "Digital", "2026-09-24", 2, 0, 1, 5], ["PIH Health", "PIH Health | Spanish Emails & Digital", "Creative", "2026-09-24", 1, 0, 0, 1], ["PIH Health", "PIH Health | VO Option Review", "Other", "2026-09-24", 1, 1, 0, 19], ["TRAFFIK", "TRAFFIK 25th Anniversary Deliverables", "Creative", "2026-09-24", 0, 0, 0, 6], ["Alignment", "AHP | Update San Antonio Media Buys", "Digital", "2026-09-23", 5, 0, 1, 7], ["Alignment", "AHP | Member Referral Self Mailer", "Creative", "2026-09-23", 4, 0, 0, 33], ["Alignment", "AHP | Provider DM", "Creative", "2026-09-23", -5, 0, 0, 20], ["Champlain", "Champlain Meta In-Platform Form Build + Updates", "Digital", "2026-09-23", 6, 1, 1, 23], ["Champlain", "Champlain | Tech Jam Newsletter Recommendation", "Digital", "2026-09-23", 2, 0, 0, 3], ["Clever Care", "Clever Care | Prepare to Push Live", "Creative", "2026-09-23", 5, 0, 0, 4], ["Clever Care", "Clever Care URLs and Redirects", "Creative", "2026-09-23", 2, 0, 0, 4], ["CSUN", "CSUN | Recurring: Monthly Program Campaign Spend", "Digital", "2026-09-23", 22, 0, 0, 26], ["CSUN", "CSUN | Program Campaigns Launching", "Digital", "2026-09-23", 12, 0, 0, 11], ["Eternal Health", "eternalHealth - Broadcast TV - Media Launch Sep 15, 2026", "Other", "2026-09-23", 8, 0, 0, 11], ["Eternal Health", "eternalHealth \u2014 Broadcast TV \u2014 Media Launch Sep 15, 2026", "Other", "2026-09-23", 8, 0, 0, 11], ["Eternal Health", "eternalHealth \u2014 Broadcast TV & Brand \u2014 Media Launch Sep 15, 2026", "Other", "2026-09-23", 8, 0, 0, 11], ["Eternal Health", "eternalHealth \u2014 Broker Co-Op + Sales Kit \u2014 Media Launch Sep 15, 2026", "Other", "2026-09-23", 8, 0, 0, 11], ["Eternal Health", "eternalHealth \u2014 Creative & Attribution Setup \u2014 Media Launch Sep 15, 2026", "Other", "2026-09-23", 8, 0, 0, 11], ["Eternal Health", "eternalHealth \u2014 Creative & Attribution Setup \u2014 Media Launch Sep 15, 2026", "Other", "2026-09-23", 8, 0, 0, 11], ["Eternal Health", "eternalHealth \u2014 Creative & Attribution Setup \u2014 Media Launch Sep 15, 2026", "Other", "2026-09-23", 8, 0, 0, 11], ["Eternal Health", "eternalHealth \u2014 Creative & Attribution Setup \u2014 Media Launch Sep 15, 2026", "Other", "2026-09-23", 8, 0, 0, 11], ["Eternal Health", "eternalHealth \u2014 Digital Media \u2014 Media Launch Sep 15, 2026", "Other", "2026-09-23", 8, 0, 0, 11], ["Eternal Health", "eternalHealth \u2014 Digital Media \u2014 Media Launch Sep 15, 2026", "Other", "2026-09-23", 8, 0, 0, 11], ["Eternal Health", "eternalHealth \u2014 Digital OOH \u2014 Media Launch Sep 15, 2026", "Other", "2026-09-23", 8, 0, 0, 11], ["Free Wheelchair Mission", "FWM | Revise Copy for Meta Ads", "Digital", "2026-09-23", 6, 0, 1, 0], ["Free Wheelchair Mission", "Virtual Event Recs", "Digital", "2026-09-23", 1, 0, 0, 1], ["Internal", "Review Task Hub", "Account", "2026-09-23", 5, 0, 0, 2], ["PIH Health", "PIH Health | Bilingual DM  + Envelope", "Creative", "2026-09-23", 50, 0, 0, 12], ["PIH Health", "PIH Health | Primary Care Digital Edits (1hr)", "Creative", "2026-09-23", 26, 0, 1, 2], ["TRAFFIK", "TRAFFIK Intersect", "Other", "2026-09-23", 0, 0, 0, 5], ["Alignment", "AHP | AEP Advertising Recommendation", "Digital", "2026-09-22", 1, 1, 0, 0], ["Alignment", "AHP | Final Chance DM Updates", "Creative", "2026-09-22", -4, 0, 1, 31], ["Alignment", "AHP | Photoshoot Selects", "Creative", "2026-09-22", -4, 0, 0, 46], ["CalVEBA", "CalVEBA | Phase 1 Training Documents (Parent Task)", "Creative", "2026-09-22", 0, 0, 0, 12], ["Champlain", "Champlain | Chat GPT Ads Launch", "Digital", "2026-09-22", 5, 0, 0, 9], ["Champlain", "Champlain | Webinar Ad", "Digital", "2026-09-22", 1, 0, 0, 4], ["Champlain", "Champlain Short Form Videos", "Creative", "2026-09-22", 1, 0, 0, 53], ["Champlain", "Revise Copy for Career Success", "Digital", "2026-09-22", 1, 0, 1, 3], ["Clever Care", "Clever Care Launch Checklist", "Creative", "2026-09-22", 1, 0, 0, 4], ["CMU", "CMU | Why CMU Ad Update", "Digital", "2026-09-22", 0, 0, 1, 0], ["CMU", "CMU | Why CMU Date Update & Exports", "Creative", "2026-09-22", 0, 0, 1, 4], ["Eternal Health", "eH | eH Monthly Reporting", "Digital", "2026-09-22", 1, 0, 0, 25], ["MFK", "MFK Website Edits", "Creative", "2026-09-22", 0, 0, 1, 11], ["PIH Health", "PIH Health | ~5 More Primary Care Selects (1hr)", "Creative", "2026-09-22", 1, 0, 0, 5], ["TRAFFIK", "TRAFFIK New Website", "Creative", "2026-09-22", 0, 0, 0, 12], ["Champlain", "Champlain NEW Counselor Goals", "Digital", "2026-09-21", 3, 0, 0, 2], ["Champlain", "Champlain Cutdowns Final Feedback", "Creative", "2026-09-21", 0, 0, 0, 7], ["Champlain", "Exporting Chat GPT Ads", "Creative", "2026-09-21", -2, 0, 0, 2], ["LLU", "LLU | Open House Exports", "Creative", "2026-09-21", -1, 0, 0, 4], ["Starling", "Starling | Logo Update", "Creative", "2026-09-21", -5, 0, 1, 8], ["Alignment", "AHP | Monthly Reporting Action Items", "Digital", "2026-09-18", 7, 0, 0, 1], ["Alignment", "AHP | Final Files (30 min)", "Creative", "2026-09-18", 0, 0, 0, 2], ["Champlain", "Champlain Webinar Copy", "Digital", "2026-09-18", 0, 0, 0, 9], ["Clever Care", "Clever Care Help Me Find A Plan Updates", "Creative", "2026-09-18", 0, 1, 1, 16], ["Eternal Health", "eH | AZ Sales Kit Cover Image Updates (30min)", "Creative", "2026-09-18", 0, 0, 1, 1], ["GJRASA", "GJRASA: Google Copy", "Digital", "2026-09-18", 57, 1, 0, 0], ["LLU", "LLU | ADA Compliant Creative Refresh : Andrea - 16 hours", "Creative", "2026-09-18", 42, 0, 0, 11], ["LLU", "LLU | Open House Video Date Update", "Creative", "2026-09-18", 37, 0, 1, 13], ["LLU", "LLU | Creative Edits", "Creative", "2026-09-18", 8, 0, 1, 2], ["PIH Health", "PIH Health | AEP Billboards (Parent Task)", "Creative", "2026-09-18", 6, 0, 0, 52], ["PIH Health", "PIH Health | AEP Existing Patients Email (Parent Task)", "Creative", "2026-09-18", 6, 1, 0, 11], ["PIH Health", "PIH Health | AEP Print Ads  (Parent Task) (4 Hrs)", "Creative", "2026-09-18", 6, 0, 0, 15], ["PIH Health", "PIH Health | AEP Spanish Meta & Email Translations", "Creative", "2026-09-18", 1, 0, 0, 1], ["PIH Health", "PIH Health | AEP Google Search Copy", "Digital", "2026-09-18", -10, 0, 0, 31], ["Starling", "Starling | Brand Guidelines", "Creative", "2026-09-18", 0, 0, 0, 4], ["TRAFFIK", "TRAFFIK Intersect", "Other", "2026-09-18", 2, 0, 0, 6], ["TRAFFIK", "TRAFFIK 25th Anniversary Deliverables", "Creative", "2026-09-18", 1, 0, 0, 9], ["Alignment", "AHP | Photo Library", "Creative", "2026-09-17", 1, 0, 0, 0], ["Alignment", "AHP | Last Chance DM QR Code", "Digital", "2026-09-17", 0, 0, 0, 0], ["Champlain", "Champlain | Enrollment Ads Launch", "Digital", "2026-09-17", 1, 0, 0, 6], ["Clever Care", "Clever Care Copy Changes", "Creative", "2026-09-17", 1, 0, 1, 2], ["CMU", "CMU |Complete Application Search Copy", "Digital", "2026-09-17", 14, 1, 0, 0], ["CMU", "CMU | Aviation Boosted Social Post", "Digital", "2026-09-17", 1, 0, 0, 1], ["CMU", "CMU | Why CMU Edit & Exports (45 min)", "Creative", "2026-09-17", 1, 0, 1, 1], ["Free Wheelchair Mission", "FWM | Tweaking Copy for Ads", "Digital", "2026-09-17", 0, 0, 0, 1], ["PIH Health", "PIH Health | K-Radio Review", "Creative", "2026-09-17", 1, 1, 0, 1], ["TPUSA", "TPUSA | Get Out the Vote Monthly Reporting", "Digital", "2026-09-17", 3, 0, 0, 20], ["Alignment", "AHP | AEP Production Deliverables", "Creative", "2026-09-16", 4, 0, 0, 52], ["Alignment", "AHP | These Are Your Moments Brand Guideline", "Creative", "2026-09-16", 1, 0, 0, 1], ["Alignment", "AHP | Member Referral DM Final Files (30 min)", "Creative", "2026-09-16", 0, 0, 0, 1], ["Alignment", "AHP | Transcreation DM Image Update (30min)", "Creative", "2026-09-16", 0, 0, 1, 1], ["Champlain", "Champlain | Paid Ad Video Review", "Digital", "2026-09-16", 0, 0, 0, 1], ["CMU", "CMU | September Boosted Post", "Digital", "2026-09-16", 12, 1, 0, 0], ["CMU", "CMU | Social Post Boosting", "Digital", "2026-09-16", 5, 0, 0, 2], ["CMU", "CMU | Mesa Experience Launch", "Digital", "2026-09-16", 2, 0, 0, 10], ["Eternal Health", "eH | AZ Sales Kits Updates (1Hr)", "Creative", "2026-09-16", 2, 0, 1, 5], ["Starling", "Starling | Clinic Rebrand Concepts", "Creative", "2026-09-16", 4, 0, 0, 15], ["Starling", "Starling | GTM Updates", "Digital", "2026-09-16", 2, 1, 1, 0], ["Starling", "Starling | Business Card Updates (1 Hr)", "Creative", "2026-09-16", 0, 0, 1, 2], ["Starling", "Starling | T-Shirt Designs (30 min)", "Creative", "2026-09-16", 0, 0, 0, 1], ["Alignment", "AHP | New SFTP", "Creative", "2026-09-15", 0, 0, 0, 1], ["Champlain", "Champlain | Reddit Ads Launch", "Digital", "2026-09-15", 11, 0, 0, 2], ["Champlain", "Implement Counsler Information in Dashboard", "Digital", "2026-09-15", 1, 0, 0, 11], ["Champlain", "Champlain | Creative Media Video Adjustment", "Creative", "2026-09-15", 0, 0, 0, 15], ["Hannah Brazney", "Hannah Brazney | Review of Album Names", "Other", "2026-09-15", 1, 0, 0, 10], ["Alignment", "AHP | Cover Design Updates", "Creative", "2026-09-14", 2, 0, 1, 32], ["CalVEBA", "CalVeba Design & Dev Updates", "Creative", "2026-09-14", 0, 0, 1, 14], ["PIH Health", "PIH Health | AEP Advertorial Edits", "Creative", "2026-09-14", 3, 0, 1, 3], ["Starling", "Starling | EOT Meeting Deck Updates", "Creative", "2026-09-14", 3, 0, 1, 1], ["Champlain", "Champlain Organic Video to Paid Ad Copy", "Digital", "2026-09-11", 3, 0, 0, 4], ["Champlain", "Champlain Ad Copy", "Digital", "2026-09-11", 0, 0, 0, 3], ["JenaValve", "JenaValve | Website 'About Us' Page", "Creative", "2026-09-11", 59, 0, 0, 4], ["PIH Health", "PIH Health | AEP Photo select Work Block (3 hrs)", "Creative", "2026-09-11", 14, 1, 0, 1], ["TPUSA", "TPUSA | GOTV Updated Copy", "Digital", "2026-09-11", 1, 1, 1, 2], ["TRAFFIK", "CSUN RFP | 8-12 Hours (Victoria)-Due Fri, 9/11 @3pm", "Creative", "2026-09-11", 0, 0, 0, 3], ["Alignment", "Always On Monthly Reporting", "Digital", "2026-09-10", 1, 0, 0, 29], ["Alignment", "AHP | QR Code", "Digital", "2026-09-10", 0, 0, 0, 0], ["Alignment", "AHP | Transcreation Image Updates", "Creative", "2026-09-10", 0, 0, 1, 6], ["Champlain", "Champlain Kat Video Feedback", "Creative", "2026-09-10", 1, 0, 0, 6], ["Champlain", "Enrollment Cmapaign - Revisions for Client Feedback", "Creative", "2026-09-10", 1, 0, 1, 0], ["Champlain", "Champlain | Chat GPT Ad Copy", "Digital", "2026-09-10", 0, 0, 0, 6], ["Champlain", "Champlain | Chat GPT Deck", "Creative", "2026-09-10", 0, 0, 0, 0], ["Champlain", "Champlain | Virtual Open House Ad Launch", "Digital", "2026-09-10", 0, 1, 0, 1], ["Champlain", "Champlain | Enrollment Ad Exports", "Creative", "2026-09-10", -1, 0, 0, 1], ["Eternal Health", "eH | AZ Sales Kits QR Codes", "Digital", "2026-09-10", 0, 0, 0, 1], ["JenaValve", "JenaValve | ARTIST PDFs/ LPs", "Creative", "2026-09-10", 34, 0, 0, 16], ["TRAFFIK", "TRAFFIK Intersect", "Other", "2026-09-10", 1, 0, 0, 7], ["TRAFFIK", "TRAFFIK New Website", "Creative", "2026-09-10", -5, 0, 0, 7], ["Champlain", "Champlain Enrollment Campaign", "Creative", "2026-09-09", -3, 0, 0, 19], ["Clever Care", "Clever Care UTM Container", "Creative", "2026-09-09", -2, 0, 0, 2], ["CMU", "CMU | Slate Connection for RFI Form", "Digital", "2026-09-09", 13, 0, 0, 3], ["CMU", "CMU | CMU Tech Copy Update", "Creative", "2026-09-09", 0, 0, 1, 1], ["Eternal Health", "eH | MA Sales Kit QR Codes", "Digital", "2026-09-09", 1, 1, 0, 0], ["LLU", "LLU | Open House 2027 Ad Images", "Creative", "2026-09-09", 28, 0, 0, 13], ["TPUSA", "TPUSA | GOTV Ad COpy Updates", "Creative", "2026-09-09", 0, 1, 1, 1], ["TRAFFIK", "TRAFFIK Clients Website Hosting Migration (Ongoing)", "Creative", "2026-09-09", 1, 0, 0, 62], ["UofWyoming", "UofWyoming | Google Search - Go Live", "Digital", "2026-09-09", 6, 0, 0, 2], ["Alignment", "AHP | DM3", "Creative", "2026-09-08", 3, 0, 0, 15], ["Alignment", "AHP | Back Cover Edits", "Creative", "2026-09-08", 0, 0, 1, 4], ["Alignment", "AHP | Print Ad Edits", "Creative", "2026-09-08", 0, 1, 1, 4], ["Champlain", "Reformat Reddit Ads for Chat GPT", "Creative", "2026-09-08", 4, 0, 0, 2], ["Champlain", "Revise Champlain Short Form Videos (Afternoon)", "Creative", "2026-09-08", 4, 0, 1, 9], ["Champlain", "Champlain Virtual Open House Copy / Platform Recs", "Digital", "2026-09-08", 0, 0, 0, 4], ["CMU", "EOQ 4 Report", "Digital", "2026-09-08", 53, 0, 0, 32], ["CMU", "CMU | Launch August Campaigns", "Digital", "2026-09-08", 39, 0, 0, 2], ["CMU", "CMU | Why CMU Edits", "Creative", "2026-09-08", 3, 0, 1, 3], ["CMU", "CMU | CMU Tech Image Swap", "Creative", "2026-09-08", 0, 0, 0, 4], ["Eternal Health", "eH | Naturopath Letter & Envelope Files", "Creative", "2026-09-08", 0, 0, 0, 4], ["Eternal Health", "eH | Sales Kits Updates", "Creative", "2026-09-08", 0, 0, 1, 4], ["PIH Health", "PIH Health | AEP Spanish LP Edits (1HR)", "Other", "2026-09-08", 4, 1, 1, 1], ["PIH Health", "PIH Health | AEP Spanish Website Edits", "Creative", "2026-09-08", -1, 1, 1, 1], ["TRAFFIK", "TRAFFIK 25th Anniversary Deliverables", "Creative", "2026-09-08", 0, 0, 0, 7], ["TRAFFIK", "TRAFFIK New Website", "Creative", "2026-09-08", 0, 0, 0, 7], ["Voom", "VOOM | Dashboard Location Updates per campaign", "Digital", "2026-09-08", 27, 0, 1, 6], ["Voom", "Voom Media Plan Development", "Digital", "2026-09-08", 18, 0, 0, 64], ["CalVEBA", "CalVEBA | OE Notification Banner Edit", "Other", "2026-09-04", 7, 0, 1, 3], ["CalVEBA", "Update Registration Notice", "Creative", "2026-09-04", 0, 0, 1, 1], ["Clever Care", "Clever Care | Site Migration", "Creative", "2026-09-04", 1, 0, 0, 2], ["CMU", "CMU | Finish Your Application Exports", "Creative", "2026-09-04", 0, 0, 0, 1], ["CMU", "CMU | Mesa Experience Exports", "Creative", "2026-09-04", 0, 0, 0, 0], ["Eternal Health", "eH | Naturopath Flyer, Letter & Envelope Updates", "Creative", "2026-09-04", 1, 1, 1, 0], ["Eternal Health", "eH | AZ Kit 2 Edits", "Creative", "2026-09-04", 0, 0, 1, 1], ["Eternal Health", "eH | Update Envelope MAT ID", "Creative", "2026-09-04", 0, 0, 1, 0], ["Free Wheelchair Mission", "FWM Meta Recommendations Deck", "Digital", "2026-09-04", 2, 0, 0, 2], ["PIH Health", "PIH Health | AEP English Landing Page", "Creative", "2026-09-04", 1, 0, 0, 43], ["PIH Health", "PIH Health | Update Spanish FPO Imagery for LP & DM", "Creative", "2026-09-04", 1, 1, 1, 1], ["Alignment", "AHP | DM2 Transcreation Image Swap", "Creative", "2026-09-03", 0, 0, 0, 1], ["Alignment", "AHP | DM3 QR Code", "Digital", "2026-09-03", 0, 1, 0, 0], ["Champlain", "Champlain Dashboard Updates", "Digital", "2026-09-03", 1, 0, 1, 13], ["Champlain", "Champlain Webinars Ad Review", "Digital", "2026-09-03", 0, 0, 0, 1], ["Champlain", "Champlain DOOH Opportunity", "Digital", "2026-09-03", -5, 0, 0, 12], ["CMU", "CMU | Landing Pages Design and Optimizations - Instapages", "Creative", "2026-09-03", 23, 0, 0, 12], ["CMU", "CMU | CMU Promise Image Swap", "Creative", "2026-09-03", 0, 1, 0, 0], ["CMU", "CMU | Mesa Experience Edit", "Creative", "2026-09-03", 0, 1, 1, 1], ["Eternal Health", "eH | QR Code", "Digital", "2026-09-03", 1, 1, 0, 0], ["Eternal Health", "eH | MA Sales Kit Edits", "Creative", "2026-09-03", 0, 0, 1, 1], ["Eternal Health", "eH | Naturopath Flyer Edits", "Creative", "2026-09-03", 0, 0, 1, 1], ["Free Wheelchair Mission", "UTM Template Set Up", "Digital", "2026-09-03", 0, 0, 0, 0], ["GJRASA", "GJRASA | Webpage Monument Photo Update", "Creative", "2026-09-03", 0, 0, 1, 3], ["MFK", "Implement Content on Website", "Creative", "2026-09-03", 3, 0, 0, 0], ["PIH Health", "PIh Health | Additional AEP Vanity #'s", "Other", "2026-09-03", 7, 0, 0, 3], ["PIH Health", "PIH Health | AEP 1-3 Email -Edits", "Creative", "2026-09-03", 1, 1, 1, 1], ["PIH Health", "PIH Health | AEP Insertion Dates - Edits", "Production", "2026-09-03", 1, 0, 1, 1], ["Alignment", "AHP | DM1 & Pre-AEP Final Files", "Creative", "2026-09-02", 26, 1, 0, 1], ["Champlain", "Champlain | Reddit Asset Exports", "Creative", "2026-09-02", 0, 0, 0, 1], ["CMU", "CMU | Brand Retargeting Deck", "Creative", "2026-09-02", 0, 0, 0, 1], ["CMU", "CMU | CMU promise copy and creative adjustments", "Creative", "2026-09-02", 0, 0, 0, 6], ["CMU", "CMU | Brand Retargeting Video & Static", "Creative", "2026-09-02", -2, 0, 0, 18], ["Eternal Health", "eternalHealth | Create Meta Lead Experience Flow", "Digital", "2026-09-02", 1, 0, 0, 0], ["Eternal Health", "eH | AZ Sales Kits Edits", "Creative", "2026-09-02", 0, 1, 1, 2], ["Eternal Health", "eH | MA Sales Kit Edits", "Creative", "2026-09-02", 0, 0, 1, 2], ["Eternal Health", "eH | Meta Leads Form Update", "Digital", "2026-09-02", 0, 1, 1, 0], ["PIH Health", "PIH Health | Mens Health & Lung Scan Creative Refresh", "Creative", "2026-09-02", 20, 0, 0, 8], ["Starling", "Starling | Print Collateral Templates", "Creative", "2026-09-02", 27, 0, 0, 17], ["Starling", "Starling | Radancy Graphics", "Creative", "2026-09-02", 1, 0, 0, 4], ["Starling", "Brand Guidelines Build (3 Full Days)", "Creative", "2026-09-02", 0, 0, 0, 62], ["Starling", "Starling | Photos for Yelp + Google Business Profile", "Creative", "2026-09-02", 0, 0, 0, 9], ["TPUSA", "TPUSA | Add Houston Stop to Events Page \u2013 ASAP", "Creative", "2026-09-02", 0, 1, 0, 1], ["TPUSA", "TPUSA | AZ Ad Exports", "Creative", "2026-09-02", 0, 0, 0, 1], ["TPUSA", "TPUSA | GOTV AZ Ad Launch", "Digital", "2026-09-02", 0, 0, 0, 1], ["TRAFFIK", "TRAFFIK | Podcast", "Other", "2026-09-02", 1, 0, 0, 29], ["TRAFFIK", "TRAFFIK Intersect", "Other", "2026-09-02", 0, 0, 0, 6], ["TRAFFIK", "RFP | Victoria Work (6 hours)", "Creative", "2026-09-02", -1, 0, 0, 3], ["Champlain", "Champlain Organic Video Review", "Digital", "2026-09-01", 0, 0, 0, 0], ["Clever Care", "CC Edits from Client Meeting", "Creative", "2026-09-01", 4, 1, 1, 2], ["Clever Care", "Adding GA & UTM to Website", "Creative", "2026-09-01", -1, 0, 0, 12], ["PIH Health", "PIH Health | Turn off listed campaigns", "Digital", "2026-09-01", 1, 0, 0, 21], ["PIH Health", "PIH Health | Creative Exports", "Creative", "2026-09-01", 0, 1, 0, 1], ["PIH Health", "PIH Health | July Age-In Email", "Creative", "2026-09-01", 0, 0, 0, 7], ["TRAFFIK", "TRAFFIK 25th Anniversary Deliverables", "Creative", "2026-09-01", 0, 0, 0, 5], ["TRAFFIK", "TRAFFIK New Website", "Creative", "2026-09-01", 0, 0, 0, 5], ["UofWyoming", "UofWyoming | Google Search Copy Edit", "Digital", "2026-09-01", 4, 0, 1, 0], ["Alignment", "AHP | Source Files", "Creative", "2026-08-31", 3, 0, 0, 1], ["Champlain", "Champlain Game Art Ads", "Digital", "2026-08-31", 0, 0, 0, 4], ["Champlain", "Champlain Implementing Reddit Feedback", "Creative", "2026-08-31", 0, 0, 0, 4], ["CMU", "CMU | Apps Open ChaGPT Additional Ads", "Digital", "2026-08-31", 0, 0, 0, 0], ["CMU", "CMU | Apps Open Enrollments Down Strategy Shift", "Other", "2026-08-31", 0, 1, 0, 0], ["CMU", "CMU | ChatGPT Deck Updates", "Creative", "2026-08-31", 0, 0, 1, 4], ["CMU", "CMU | Instapage Updates", "Other", "2026-08-31", 0, 0, 1, 11], ["CMU", "CMU | Mesa Experience", "Creative", "2026-08-31", 0, 0, 0, 3], ["Eternal Health", "eH | Naturopath Event Conference Flyer", "Creative", "2026-08-31", 0, 0, 0, 5], ["Eternal Health", "eH | Naturopath Mailer & Envelope Updates", "Creative", "2026-08-31", 0, 0, 1, 6], ["MFK", "MFK | Select Rotating Headline & Record Video", "Creative", "2026-08-31", 3, 1, 0, 1], ["MFK", "Review MFK Email & Organic Social Media Template (JT & Digital)", "Digital", "2026-08-31", 0, 1, 0, 3], ["PIH Health", "PIH Health | Mens Health Copy Edit (15min)", "Creative", "2026-08-31", 3, 0, 1, 2], ["Starling", "Starling | T-Shirt Updates", "Creative", "2026-08-31", 0, 0, 1, 5], ["TPUSA", "TPUSA | Get Out the Vote Campaign Refresh", "Creative", "2026-08-31", 0, 0, 0, 34], ["Alignment", "AHP | Prepare Alignment Media Campaign Walkthrough", "Digital", "2026-08-28", 1, 0, 0, 7], ["CalVEBA", "Determine API Limits", "Creative", "2026-08-28", -4, 0, 0, 19], ["CMU", "CMU | Application Open Image Adjustment", "Creative", "2026-08-28", 0, 0, 0, 1], ["CMU", "CMU | Why Choose CMU Creative Refresh", "Creative", "2026-08-28", -3, 0, 0, 13], ["Free Wheelchair Mission", "FWM UTM Review", "Digital", "2026-08-28", 1, 1, 0, 1], ["PIH Health", "EOQ Report", "Digital", "2026-08-28", 44, 0, 0, 30], ["Starling", "Starling | Update GTM Strategy Deck", "Digital", "2026-08-28", 1, 0, 1, 0], ["Starling", "Starling | Asset Review", "Creative", "2026-08-28", 0, 0, 0, 1], ["Alignment", "AHP | DM2 Rework", "Creative", "2026-08-27", 15, 0, 1, 6], ["BCBSM", "BCBSM O65 | Agent Email Template Formatting Issues (1-2h)", "Creative", "2026-08-27", 2, 0, 0, 4], ["Champlain", "Champlain Reddit Tagging", "Digital", "2026-08-27", 1, 0, 0, 1], ["Champlain", "Champlain Budget Allocation", "Digital", "2026-08-27", 0, 0, 0, 2], ["CMU", "CMU | Q4 Report Edits", "Digital", "2026-08-27", 7, 0, 1, 17], ["CMU", "CMU | RN/BSN EOC Report", "Digital", "2026-08-27", 6, 0, 0, 7], ["CMU", "CMU | Creative Adjustments for ChatGPT", "Creative", "2026-08-27", 2, 0, 0, 4], ["CMU", "CMU | Real Cost Calculator ChatGPT Creative", "Creative", "2026-08-27", 2, 0, 0, 4], ["CMU", "CMU | App Open ChatGPT Ads", "Digital", "2026-08-27", 0, 0, 0, 0], ["CMU", "CMU | Mesa Experience Copy Adjustments", "Creative", "2026-08-27", -1, 0, 0, 1], ["CMU", "CMU | RCC ChatGPT Ads", "Digital", "2026-08-27", -1, 0, 0, 1], ["CSUN", "CSUN | Go-to-Market Plan - Programs", "Digital", "2026-08-27", 8, 0, 0, 16], ["Eternal Health", "eH | eH Monthly Reporting", "Digital", "2026-08-27", 6, 0, 0, 38], ["Eternal Health", "eH | Broker Sales Kits (4 Hours)", "Creative", "2026-08-27", 2, 0, 0, 11], ["Eternal Health", "eH | Broker Resource Guide: 40 hours", "Creative", "2026-08-27", -4, 0, 0, 41], ["Free Wheelchair Mission", "Recommend September Meta content plan for FWM", "Digital", "2026-08-27", 0, 0, 0, 7], ["Hannah Brazney", "Hannah Brazney | Review Photos Daily Block", "Other", "2026-08-27", 0, 0, 0, 7], ["MFK", "MFK | Review Headlines", "Creative", "2026-08-27", 1, 1, 0, 0], ["PIH Health", "PIH Health | Pre-Production Task", "Creative", "2026-08-27", 15, 0, 0, 16], ["PIH Health", "PIH Health | AEP Commercial review", "Creative", "2026-08-27", 1, 1, 0, 0], ["Starling", "Starling | CV File", "Creative", "2026-08-27", 0, 0, 0, 1], ["TRAFFIK", "TRAFFIK 25th Anniversary Deliverables", "Creative", "2026-08-27", 8, 0, 0, 8], ["TRAFFIK", "TRAFFIK New Website", "Creative", "2026-08-27", 8, 0, 0, 8], ["TRAFFIK", "TRAFFIK 25th Anniversary Deliverables", "Creative", "2026-08-27", 1, 0, 0, -1], ["TRAFFIK", "TRAFFIK Intersect", "Other", "2026-08-27", 1, 0, 0, 6], ["TRAFFIK", "TRAFFIK New Website", "Creative", "2026-08-27", 1, 0, 0, -1], ["Alignment", "AHP | Always On Retargeting", "Digital", "2026-08-26", 0, 0, 0, 1], ["Alignment", "AHP | Always On Salesforce", "Digital", "2026-08-26", 0, 0, 0, 1], ["Champlain", "Advising on Client Email Regarding Mail Attribution", "Digital", "2026-08-26", 0, 0, 0, 1], ["Clever Care", "CleverCare | Additional Broker Page Designs", "Creative", "2026-08-26", -9, 0, 0, 16], ["CMU", "CMU | Fix Featherstone Meta Ads", "Digital", "2026-08-26", 0, 1, 1, 1], ["Starling", "Make Deck Pretty & Starling Branded", "Creative", "2026-08-26", 0, 1, 0, 0], ["BCBSM", "BCBSM O65 | Pre-AEP Retention Campaign", "Creative", "2026-08-25", -17, 0, 0, 43], ["CalVEBA", "CalVEBA Website Tags Recommendations", "Digital", "2026-08-25", 1, 1, 0, 6], ["Champlain", "Champlain Meta In-Platform Lead Forms Client Questions", "Digital", "2026-08-25", 1, 0, 0, 3], ["Champlain", "Client Feedback Review In-Platform Leads", "Digital", "2026-08-25", 1, 0, 0, 0], ["Champlain", "Champlain Updated KPIs", "Digital", "2026-08-25", 0, 0, 1, 13], ["Champlain", "Game Art Ad Copy", "Digital", "2026-08-25", 0, 0, 0, 1], ["Clever Care", "Clever Care Development - Group 2", "Creative", "2026-08-25", 21, 0, 0, 11], ["Clever Care", "Clever Care | Group 1  & Group 2 On Call + UAT edits", "Creative", "2026-08-25", 1, 0, 1, 20], ["CMU", "CMU | Dashboard Updates", "Digital", "2026-08-25", 1, 0, 1, 21], ["CMU", "CMU | Next Grad Poster Creative", "Creative", "2026-08-25", 0, 1, 0, 1], ["Eternal Health", "eH | Dashboard Build", "Digital", "2026-08-25", 5, 0, 0, 35], ["TPUSA", "TPUSA | Get Out the Vote Monthly Reporting", "Digital", "2026-08-25", 11, 0, 0, 32], ["TPUSA", "TPUSA | Website Handoff Questions", "Creative", "2026-08-25", 4, 0, 0, 3], ["UofWyoming", "UofWyoming | Google Search Copy", "Digital", "2026-08-25", 1, 0, 0, 7], ["CalVEBA", "CalVEBA | Google Analytics and Google Tags", "Creative", "2026-08-24", 0, 0, 0, 28], ["CalVEBA", "CalVEBA Phase 2 MedPoint API", "Creative", "2026-08-24", 0, 0, 0, 5], ["Champlain", "Review Reddit Ads", "Digital", "2026-08-24", 0, 0, 0, 0], ["PIH Health", "PIH Health | Additional Vanity URL Options", "Creative", "2026-08-24", 10, 0, 0, 1], ["PIH Health", "PIH Health | Lung Scan Caption Edits", "Creative", "2026-08-24", -4, 1, 1, 9], ["Starling", "Starling | CV Template Updates (1.5Hr)", "Creative", "2026-08-24", 0, 0, 1, 4], ["Starling", "Starling | T-Shirt Mockups (45 Min)", "Creative", "2026-08-24", 0, 0, 0, 5], ["Voom", "Voom Paid & Organic UTM Tracker", "Digital", "2026-08-24", 3, 0, 0, 0], ["Alignment", "AHP | Broker Flyer Update (due to client noon 8/21)", "Creative", "2026-08-21", 0, 1, 1, 1], ["Alignment", "AHP | Promo Portal Reskin", "Creative", "2026-08-21", -3, 0, 0, 39], ["Balt", "BALT | Website Issues", "Creative", "2026-08-21", 2, 1, 0, 2], ["BCBSM", "BCBSM O65 | Pre-AEP LP & Email HTML Files Dev & Handoff (Due by noon Fri, 8/21: 4 hours)", "Creative", "2026-08-21", 0, 0, 0, 2], ["CalVEBA", "Email to Ryan", "Creative", "2026-08-21", 0, 0, 0, 0], ["Champlain", "Review Assets and Determine Platform", "Digital", "2026-08-21", 1, 0, 0, 0], ["Champlain", "Champlain | Storyboard Updates (4 hours)", "Creative", "2026-08-21", 0, 0, 1, 2], ["Champlain", "Champlain Attribution added to the Dashboard", "Digital", "2026-08-21", 0, 0, 0, 1], ["Champlain", "Champlain Reddit Assets to JT (EOD Thurs)", "Creative", "2026-08-21", 0, 0, 0, 32], ["Champlain", "Champlain Timeline Cleanup", "Other", "2026-08-21", 0, 0, 0, 8], ["Champlain", "Review Landing Pages", "Digital", "2026-08-21", 0, 0, 0, 0], ["Clever Care", "Add Birthday to Events Page/Calendar", "Creative", "2026-08-21", 3, 0, 0, 1], ["CMU", "CMU | Digital Launch Brief Adjustments", "Digital", "2026-08-21", 1, 0, 0, 10], ["CMU", "CMU | Video Size Guidance for CMU Promise Tour", "Digital", "2026-08-21", 0, 0, 0, 1], ["Eternal Health", "eH | Pause Weekend Meta Ads + Troubleshoot HubSpot", "Digital", "2026-08-21", 0, 1, 0, 1], ["PIH Health", "PIH Health Production Tasks: Daily w/o 8/17", "Creative", "2026-08-21", 1, 0, 0, 3], ["UofWyoming", "UofWyoming | Onboarding and Access to Accounts", "Other", "2026-08-21", 9, 0, 0, 9], ["UofWyoming", "UofWyoming | Audit Campaigns", "Digital", "2026-08-21", 7, 0, 0, 4], ["UofWyoming", "UofWyoming | Campaign Audits", "Digital", "2026-08-21", 7, 0, 0, 3], ["Alignment", "AHP | DM2 Alt Version (30 min)", "Creative", "2026-08-20", 0, 1, 0, 1], ["CalVEBA", "CalVEBA | LAUNCH  READY", "Creative", "2026-08-20", -1, 0, 0, 9], ["Champlain", "Champlain | Production Confirmation & Storyboard Finalization by EOD", "Creative", "2026-08-20", 2, 0, 0, 1], ["Champlain", "CMU Stats on FU to share with Champlain", "Digital", "2026-08-20", 0, 1, 0, 0], ["CMU", "CMU | Provide Outline within the Status Doc", "Digital", "2026-08-20", 6, 0, 0, 11], ["CMU", "CMU | NextGrad Deck", "Creative", "2026-08-20", 1, 1, 0, 0], ["CMU", "CMU | Mesa Experience Caption Copy Updates", "Creative", "2026-08-20", 0, 1, 1, 1], ["CMU", "CMU | SFTP set up", "Digital", "2026-08-20", 0, 0, 0, 0], ["Eternal Health", "eH | Arizona Broker Roll-Out Signage (Noon Review, Files EOD)", "Creative", "2026-08-20", 0, 1, 0, 1], ["TRAFFIK", "TRAFFIK Intersect", "Other", "2026-08-20", 1, 0, 0, 1], ["Alignment", "AHP | AEP Agent Preview Deck", "Creative", "2026-08-19", 1, 0, 0, 4], ["Alignment", "AHP | AEP DM2 Edit & Source File by 2pm (30m)", "Creative", "2026-08-19", 0, 0, 1, 0], ["CMU", "CMU | Mesa Experience Creative - Date Updates", "Creative", "2026-08-19", 0, 0, 1, 2], ["CSUN", "CSUN | Formalized Deck for Meta Ads (PM to HANDLE)", "Creative", "2026-08-19", 0, 0, 0, 8], ["GJRASA", "GJRASA | Website changes", "Creative", "2026-08-19", 1, 0, 1, 4], ["Voom", "Voom | Pause All VOOM Bunionplasty Ads", "Digital", "2026-08-19", 0, 1, 0, 0], ["Alignment", "AHP | DM2 Rework", "Creative", "2026-08-18", 4, 1, 1, 1], ["Alignment", "AHP | Broker Pieces Rework", "Creative", "2026-08-18", 1, 1, 1, 4], ["CalVEBA", "Review API Doc", "Creative", "2026-08-18", 0, 0, 0, 1], ["Champlain", "Champlain Dashboard Funnel Update", "Digital", "2026-08-18", 1, 0, 1, 5], ["Champlain", "Champlain Short Form Video 1 Edit", "Creative", "2026-08-18", 1, 0, 1, 4], ["CMU", "CMU | Application Open Campaign Go-Live", "Digital", "2026-08-18", 1, 1, 0, 0], ["CMU", "CMU | RCC Ads - Go Live", "Digital", "2026-08-18", 1, 1, 0, 0], ["CMU", "CMU | NextGrad Creative Revisions", "Creative", "2026-08-18", 0, 0, 1, 1], ["Starling", "Starling Oncology | Beefree Email Template Design & Development - Remaining Templates", "Creative", "2026-08-18", 8, 0, 0, 11], ["Starling", "Starling | Beefree Newsletter Templates", "Creative", "2026-08-18", 5, 0, 0, 3], ["Starling", "Starling | Beefreee Leadership Email Templates", "Creative", "2026-08-18", 1, 0, 0, 7], ["Starling", "Starling | CV Template", "Creative", "2026-08-18", 1, 1, 0, 5], ["TRAFFIK", "TRAFFIK Intersect", "Other", "2026-08-18", 6, 0, 0, 7], ["BCBSM", "BCBSM O65 All Product Sales Deck (PLACEHOLDER IN CASE OF EDITS)", "Creative", "2026-08-17", 0, 0, 1, 48], ["Champlain", "Estimated Cost for Brand Campaign Video", "Other", "2026-08-17", -1, 0, 0, 15], ["CMU", "CMU | Creative Exports", "Creative", "2026-08-17", 0, 1, 0, 0], ["CSUN", "CSUN | Annual Planning - Portfolios", "Digital", "2026-08-17", 13, 0, 0, 1], ["Free Wheelchair Mission", "FWM brand audit: platform data pull + performance report", "Digital", "2026-08-17", 3, 0, 0, 9], ["Free Wheelchair Mission", "FWM Paid Media Budget", "Digital", "2026-08-17", 3, 0, 0, 2], ["LLU", "LLU | ASHS Campaign - Go Live", "Digital", "2026-08-17", 17, 0, 0, 0], ["TRAFFIK", "RFP | Friday 8/14 for UofOregon AI/Attribution Tech + International (Victoria: 12 hours before 8/14)", "Creative", "2026-08-17", 3, 0, 0, 3], ["CMU", "CMU | Instapages Set Up", "Other", "2026-08-14", 11, 0, 0, 4], ["CMU", "CMU | Application Open Deck Edits", "Creative", "2026-08-14", 0, 1, 1, 1], ["CMU", "CMU | Creative Exports - Visit Campus and RCC", "Creative", "2026-08-14", 0, 1, 0, 1], ["CMU", "CMU | Formalized Meta Ad Deck", "Creative", "2026-08-14", 0, 0, 0, 2], ["CMU", "CMU | In School Media Formats", "Creative", "2026-08-14", 0, 0, 0, 4], ["Eternal Health", "eH | Adelante Mailer Update", "Creative", "2026-08-14", 0, 0, 1, 1], ["PIH Health", "Anthony/Tracy DM Work", "Other", "2026-08-14", 15, 1, 0, 8], ["Starling", "Starling | Icon Library", "Creative", "2026-08-14", 0, 0, 0, 4], ["Starling", "Starling | Temporary Signage Exports", "Creative", "2026-08-14", 0, 0, 0, 1], ["Alignment", "Always On Monthly Reporting", "Digital", "2026-08-11", 4, 0, 0, 49], ["TRAFFIK", "TRAFFIK 25th Anniversary Deliverables", "Creative", "2026-08-11", -1, 0, 0, 7], ["TRAFFIK", "TRAFFIK New Website", "Creative", "2026-08-11", -1, 0, 0, 55], ["CSUN", "CSUN | Recurring: Monthly Program Campaign Spend", "Digital", "2026-08-06", 5, 0, 0, 26], ["TRAFFIK", "TRAFFIK 25th Anniversary Deliverables", "Creative", "2026-08-05", 0, 0, 0, 49], ["TRAFFIK", "TRAFFIK Intersect", "Other", "2026-08-05", 0, 0, 0, 1], ["TRAFFIK", "TRAFFIK Websites | Social AI Agent System", "Creative", "2026-08-04", 25, 0, 0, 23], ["TRAFFIK", "TRAFFIK Websites | Social AI Agent System", "Creative", "2026-08-04", 18, 0, 0, -18], ["TRAFFIK", "TRAFFIK Intersect", "Other", "2026-08-04", 7, 0, 0, 39], ["Eternal Health", "eH | eH Monthly Reporting", "Digital", "2026-07-14", -1, 0, 0, 44], ["CSUN", "CSUN | Recurring: Monthly Program Campaign Spend", "Digital", "2026-07-06", 5, 0, 0, 35], ["KDOT", "KDOT Activation Monthly Submission", "Digital", "2026-07-01", 9, 0, 0, 20], ["LLU", "LLU | AYC Weekly Report", "Digital", "2026-06-30", -1, 0, 0, 6], ["LLU", "LLU | AYC Weekly Report", "Digital", "2026-06-25", 1, 0, 0, 6], ["LLU", "LLU | AYC Weekly Report", "Digital", "2026-06-18", 1, 0, 0, 16], ["TRAFFIK", "TRAFFIK Websites | Social AI Agent System", "Creative", "2026-06-17", 5, 0, 0, 0], ["TRAFFIK", "TRAFFIK Websites | Social AI Agent System", "Creative", "2026-06-12", 7, 0, 0, 8], ["CSUN", "CSUN | Recurring: Bi-weekly Portfolio Campaign Spend", "Digital", "2026-06-08", 7, 0, 0, 5], ["LLU", "AYC Weekly Report", "Digital", "2026-06-05", 2, 1, 0, 1], ["LLU", "Monthly Physician Spotlight", "Creative", "2026-05-28", 0, 0, 0, 30]]; // [client,item,dept,completed,daysLateVsOriginal,high,rework,daysRequested]
+[...new Set(DONE.map(r=>r[2]))].sort().forEach(c=>$("#dep").insertAdjacentHTML("beforeend",`<option>${c}</option>`));
+const pct=(a,b)=>b?Math.round(a/b*100)+"%":"–";
+const med=a=>{if(!a.length)return 0;a=[...a].sort((x,y)=>x-y);return a[Math.floor(a.length/2)]};
+function sum(rs){const lt=rs.filter(r=>r[4]!==null);return{n:rs.length,on:pct(lt.filter(r=>r[4]<=0).length,lt.length),late:med(lt.filter(r=>r[4]>0).map(r=>r[4])),rw:pct(rs.filter(r=>r[6]).length,rs.length),hi:pct(rs.filter(r=>r[5]).length,rs.length),short:pct(rs.filter(r=>r[7]!==null&&r[7]<=1).length,rs.filter(r=>r[7]!==null).length)}}
+function comp(){
+ const rs=DONE.filter(r=>(!cli||r[0]===cli)&&(!dep||r[2]===dep));const s=sum(rs);
+ $("#stats").innerHTML=[["Completed",s.n],["On time vs original date",s.on],["Median days late (late ones)",s.late],["Rework / revisions",s.rw,1],["Requested in ≤1 day",s.short,1],["Marked HIGH",s.hi]].map(([n,v,w])=>`<div class="stat ${w?'warn':''}"><b>${v}</b>${n}</div>`).join("");
+ const by={};rs.forEach(r=>(by[r[0]]=by[r[0]]||[]).push(r));
+ const ct=Object.entries(by).sort((a,b)=>b[1].length-a[1].length).map(([c,x])=>{const t=sum(x);return `<tr><td><b>${c}</b></td><td>${t.n}</td><td>${t.on}</td><td>${t.late}</td><td>${t.rw}</td><td>${t.short}</td><td>${t.hi}</td></tr>`}).join("");
+ const list=rs.slice(0,60).map(r=>`<tr><td>${r[3]}</td><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[4]===null?"–":r[4]<=0?'<span class="ok">On time</span>':`<span class="no">${r[4]}d late</span>`}</td><td>${r[7]??"–"}</td><td>${r[6]?"Rework":""}${r[5]?' <span class="tag high">HIGH</span>':''}</td></tr>`).join("");
+ $("#view").innerHTML=`<h3>By client</h3><div class="tw"><table><tr><th>Client</th><th>Completed</th><th>On time</th><th>Median days late</th><th>Rework</th><th>≤1 day asks</th><th>HIGH</th></tr>${ct}</table></div>
+ <h3>Recently completed (latest 60)</h3><div class="tw"><table><tr><th>Completed</th><th>Client</th><th>Item</th><th>Dept</th><th>Vs original date</th><th>Days requested</th><th></th></tr>${list}</table></div>
+ <div class="note">Real Task Hub export, Apr 28 – Oct 9 2026. "On time" compares completion with the original due date. Rework is detected from task names (rework, revision, edit, update, fix, round, v2), so it's an estimate. Completion dates may be logged late. Rounds used and planned vs. logged hours appear here once logging is live.</div>`;
+}
+
+const AVC=["#5E4DB2","#C8202F","#216E4E","#0055CC","#7F5F01","#AE2E24","#44546F","#1D7AFC"];
+function chrome(){
+ const ps=[...new Set(cards.filter(inScope).map(c=>c.who))].sort();
+ document.querySelectorAll("[data-scope]").forEach(b=>{b.classList.toggle("on",b.dataset.scope===scope);b.setAttribute("aria-pressed",b.dataset.scope===scope);b.onclick=()=>{scope=b.dataset.scope;who="";render()}});
+ $("#avs").innerHTML=ps.map((p,i)=>`<button style="background:${AVC[i%AVC.length]}" class="${p===who?"on":""}" title="${p}" aria-pressed="${p===who}" data-av="${p}">${ini(p)}</button>`).join("");
+ document.querySelectorAll("[data-av]").forEach(b=>b.onclick=()=>{who=who===b.dataset.av?"":b.dataset.av;render()});
+ const cs=[...new Set(cards.filter(inScope).map(c=>c.c))].sort();
+ $("#spaces").innerHTML=`<a class="nav ${cli?"":"on"}" data-sp="">All clients</a>`+cs.map((c,i)=>`<a class="nav ${c===cli?"on":""}" data-sp="${c}"><span class="sq" style="background:${AVC[(i+3)%AVC.length]}">${c[0]}</span>${c}</a>`).join("");
+ document.querySelectorAll("[data-sp]").forEach(a=>{a.tabIndex=0;a.onclick=()=>{cli=a.dataset.sp;render()};a.onkeydown=e=>{if(e.key==="Enter")a.click()}});
+}
+function hydrate(){document.querySelectorAll("i[data-fi]").forEach(i=>{if(window.feather&&feather.icons[i.dataset.fi])i.outerHTML=feather.icons[i.dataset.fi].toSvg({"aria-hidden":"true",width:16,height:16,"stroke-width":1.75})})}
+function render(){document.body.classList.toggle("su-on",view==="board"&&suOn);chrome();hydrate();$("#ttl").textContent=scope==="mine"?"My work":scope==="team"?"Andres's team":"Creative Department";
+ const c=view==="comp";$("#dep").style.display=c?"":"none";$("#who").style.display=c?"none":"";
+ if(c){$("#focus").innerHTML="";const cs=[...new Set(DONE.map(r=>r[0]))].sort();$("#cli").innerHTML='<option value="">All clients</option>'+cs.map(p=>`<option ${p===cli?"selected":""}>${p}</option>`).join("");comp();return}
+ opts();stats();({board,list,cal,week,lead})[view]();if(view==="board"&&suOn)suPanel();else if($("#supanel"))$("#supanel").remove();
+}
+render();
+</script>
+</body>
+</html>
