@@ -16,3 +16,10 @@ SprintFacilitator/SprintBook_Design_thinking/
 
 # Large video files stay local (re-downloadable from Dropbox sources).
 projects/**/assets/video/**
+
+# Large client media stays out of git (GitHub's 100 MB limit, repo size).
+# Keep originals in the client's Drive/Dropbox folder; each project's raw/LARGE-FILES.md says where.
+*.mp4
+*.mov
+*.zip
+projects/colorado-mesa-university/featherstone-phase-2/raw/CMU-Brand-Guidelines_Sep2025.pdf
