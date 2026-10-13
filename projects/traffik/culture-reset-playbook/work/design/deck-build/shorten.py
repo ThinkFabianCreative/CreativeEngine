@@ -1,5 +1,6 @@
 """Build the short presented decks (v0.2): chosen slides first, then an Appendix divider and the rest."""
-import copy, sys
+import copy, sys, os
+os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", "outputs", "review"))
 from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor

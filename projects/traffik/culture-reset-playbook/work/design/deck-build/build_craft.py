@@ -1,4 +1,5 @@
-exec(open(__file__.replace("build_craft.py", "_helpers.py")).read())
+import os
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "_helpers.py")).read())
 
 # Traffik type (wearetraffik.com): Libre Caslon for display, Acumin Pro for text
 HEAD = "Libre Caslon Text"
@@ -396,6 +397,6 @@ table(s, 0.7, 2.2, 11.9, [
     ["Brainstorm partner for headlines and angles (you choose)", "Skipping craft QA"],
 ], [5.95, 5.95], 14, 0.65)
 
-out = __file__.replace("build_craft.py", "The_Craft_v0.1.pptx")
+out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", "outputs", "review", "The_Craft_v0.1.pptx")
 p.save(out)
 print(out, n[0])
