@@ -2,11 +2,10 @@
 
 Started 2026-10-07. Andres is resetting how the creative department and Accounts work. Built with Claude in question-and-answer rounds.
 
-**Deliverables** (this folder's parent, `agency-ops/`):
-- **The Standard** (`The_Standard_v0.2.pptx`): for Accounts, PMs and leadership. 10 slides plus an appendix. Full master: v0.1.
-- **The Craft** (`The_Craft_v0.2.pptx`): for designers. 12 slides plus an appendix. Full master: v0.1.
-- **Task Hub board prototype** and spec for Leo: `taskhub-board-prototype.html`, `taskhub-v1-spec.md` (month 1), `taskhub-board-spec.md` (everything).
-- Build scripts: `build.py`, `build_craft.py`, `shorten.py`. Type: Libre Caslon (display) + Acumin Pro (text).
+**Deliverables**
+- **The Standard** and **The Craft**: `../../outputs/review/` (v0.2 = short presented decks with appendix; v0.1 = full masters). Build scripts: `../design/deck-build/`. Type: Libre Caslon (display) + Acumin Pro (text).
+- **Task Hub board** prototype and specs: the sibling project `../../../task-hub-board/`.
+- Team and reporting lines: `../../../client/knowledge/team.md`.
 
 ## Scope and people
 

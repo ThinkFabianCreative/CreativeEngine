@@ -19,14 +19,14 @@ Nothing about this client has been supplied beyond its name, the note above and 
 - audiences
 - offerings
 - claims and their evidence
-- stakeholders, contacts and approvers
+- stakeholders, contacts and approvers: team and reporting lines now in `client/knowledge/team.md` (supplied by Andres, 2026-10)
 - Figma libraries and Adobe asset locations
 
 Do not fill these from general knowledge or from any other client's workspace.
 
 ## Client-level locations
 
-None exists yet. Each is created only when it holds material; the rules are in [projects/README.md](../../README.md).
+`client/sources/` and `client/knowledge/` exist. Others are created only when they hold material; the rules are in [projects/README.md](../../README.md).
 
 | Location | For |
 |---|---|
@@ -38,3 +38,5 @@ None exists yet. Each is created only when it holds material; the rules are in [
 ## Projects
 
 - [Website D2C](../website-d2c/README.md)
+- [Culture reset playbook](../culture-reset-playbook/README.md): The Standard and The Craft, the creative and accounts workflow reset
+- [Task Hub board](../task-hub-board/README.md): proposed changes to the internal Task Hub tool

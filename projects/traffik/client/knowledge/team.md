@@ -1,6 +1,13 @@
-# Traffik team
+# Team and stakeholders
 
-As of October 2026. Source: Andres Fabian, Creative Director.
+```
+CLIENT:         Traffik
+DOMAIN:         Stakeholders, team and reporting lines
+SOURCE:         Andres Fabian (Creative Director), in conversation with CreativeEngine, 2026-10-07 to 2026-10-12; Task Hub screens and export, 2026-10-10
+DATE:           2026-10-12
+STATUS:         CURRENT
+CONFIRMED BY:   Andres Fabian, 2026-10 (supplied directly)
+```
 
 ## Leadership
 

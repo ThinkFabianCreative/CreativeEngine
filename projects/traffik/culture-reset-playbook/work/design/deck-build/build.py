@@ -497,6 +497,7 @@ table(s, 0.7, 2.2, 11.9, [
 ], [1.6, 6.6, 3.7], 14, 0.85)
 text(s, 0.7, 5.9, 11.9, 0.8, "Month 1 partners: Darcey (Accounts and PM rules), Jeremy (shared QC and working hours). Anthony sees results after month 3.", 13, False, INK, 1.35)
 
-out = "/Users/andresfabian/Documents/AI_Traffik_Projects/CreativeEngine/agency-ops/The_Standard_v0.1.pptx"
+import os
+out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", "outputs", "review", "The_Standard_v0.1.pptx")
 p.save(out)
 print(out, n[0])
