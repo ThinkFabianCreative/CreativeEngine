@@ -12,7 +12,8 @@ Leo, this is everything for the board and workflow changes we want in the Task H
 | 2 | `taskhub-board-prototype.html` | Open it in Chrome and click around. Notes for each item are in `IMPLEMENTATION.md` |
 | 3 | `IMPLEMENTATION.md` | How the prototype works: data model, rules, views, and where each one lives in the code |
 | 4 | `ACCEPTANCE.md` | How we'll check each v1 item is done |
-| 5 | `taskhub-board-spec.md` | The full picture, including what comes in months 2–3. Reference only |
+| 5 | `ux-audit_hot-sheet-weekly_2026-10-14.md` | Audit of today's Hot Sheet and the full list of UI changes to reach the prototype |
+| 6 | `taskhub-board-spec.md` | The full picture, including what comes in months 2–3. Reference only |
 
 ## Running the prototype
 
@@ -20,6 +21,7 @@ It's a single HTML file. Open it in Chrome (double-click, or `open -a "Google Ch
 
 ## Scope of v1
 
+0. **Side navigation** (must-have): a persistent, collapsible left sidebar
 1. A **Board** view by stage
 2. **One owner per role:** account lead, creative lead, reviewer
 3. A **Quality Control** checklist with five yes/no questions

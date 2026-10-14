@@ -5,6 +5,14 @@ Full spec and the "later" list: `taskhub-board-spec.md` · Prototype: `taskhub-b
 
 The board and four changes. Nothing else in month 1.
 
+## 0. Side navigation (must-have)
+
+**Side navigation (must-have).** A persistent left sidebar replaces the top-only nav:
+- **Order, top to bottom:** brand · For you · Hot Sheet · Resourcing · Department (e.g. Creative) · Clients (each client filters every view; "All clients" first).
+- **Collapsible** to a 64 px icon rail with a chevron toggle. The user's choice is remembered. Narrow screens default to the rail; it never disappears.
+- **Every item has a tooltip and an accessible name** in rail mode. The current page and the selected client are clearly marked.
+- The top bar keeps search, + Create and the user avatar.
+
 ## 1. A Board view
 
 A new Hot Sheet view with the existing Team, Person and Client filters, plus Mine / My team / Everyone.

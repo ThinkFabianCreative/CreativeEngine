@@ -96,6 +96,10 @@ Pass = five Yes. A No is allowed only with an ACD override and a reason.
 
 **Card content (keep it this light):** title · client · round · assignee avatar · one status badge chosen by `flag()` in priority order (Blocked → Change order → Overdue → Self-review → Before plan → High) · icons only for "no brief" and "QC passed".
 
+## 5b. Side navigation (must-have)
+
+Markup: `<aside class="side" id="side">`. Client entries render in `chrome()` into `#spaces`, each with a `data-sp` client filter. The rail toggle is `#sideT`; `applyRail()` sets the `.rail` class (64 px, labels hidden via `.lbl`) and remembers the choice in `localStorage` (`th_rail`). Narrow screens (<900 px) default to the rail. Every nav item carries a `title` for the rail tooltip.
+
 ## 6. Design tokens
 
 The prototype uses a Jira-style layout with the Traffik brand. Tokens (CSS variables in the "Jira look & feel" block):
