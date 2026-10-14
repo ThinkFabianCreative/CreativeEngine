@@ -15,6 +15,10 @@ Leo, this is everything for the board and workflow changes we want in the Task H
 | 5 | `ux-audit_hot-sheet-weekly_2026-10-14.md` | Audit of today's Hot Sheet and the full list of UI changes to reach the prototype |
 | 6 | `taskhub-board-spec.md` | The full picture, including what comes in months 2–3. Reference only |
 
+## Building it with Claude
+
+`CLAUDE-PROMPT.md` is a ready-to-paste prompt for your Claude builder. It points Claude at these files, has it study the Hub's codebase and propose a plan first, then build v1 one item at a time against the acceptance checks.
+
 ## Running the prototype
 
 It's a single HTML file. Open it in Chrome (double-click, or `open -a "Google Chrome" taskhub-board-prototype.html`). It needs internet for the font (Instrument Sans) and icons (Feather). Nothing is saved: a reload resets it.
