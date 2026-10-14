@@ -2,6 +2,13 @@
 
 Each item is done when every check passes on real Hub data.
 
+## 0. Side navigation
+
+- [ ] Persistent left sidebar on every page: For you, Hot Sheet, Resourcing, Department, Clients
+- [ ] Clicking a client filters every view; "All clients" clears it
+- [ ] Collapses to an icon rail; the choice is remembered; narrow screens show the rail instead of hiding the nav
+- [ ] In rail mode every item has a tooltip and an accessible name; current page and selected client are marked
+
 ## 1. Board view
 
 - [ ] "Board" appears as a view next to Weekly, Day view and Flow & capacity
