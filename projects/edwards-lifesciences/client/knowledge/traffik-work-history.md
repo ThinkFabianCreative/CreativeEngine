@@ -32,7 +32,7 @@ From the team orientation deck (slides 14–29) unless noted. "Archive years ide
 | TCT conference experience | ARCHIVE EVIDENCE | Case slide 19: "chess-master" activation, booth graphics, meeting rooms, coffee bar, interactive screens, patient stories, 3D product reveal. **No verified traffic, lead or ROI data** |
 | TAVR patient community (CRM, portal, admin directory, Marketo/TCAP) | ARCHIVE EVIDENCE | Slide 17. Shows journey and platform work; does **not** establish usage or patient outcomes |
 | TAVR Talk | Wireframes: ARCHIVE EVIDENCE (2022) · homepage/resource-center revamp: **PROPOSED SCOPE (2025, unsigned)** | Do not present TAVR Talk as a launched platform without further evidence |
-| SAPIEN M3 RESILIA animation | **PROPOSED SCOPE (2026, unsigned)** | Category familiarity only, labeled |
+| SAPIEN M3 RESILIA animation | ~~PROPOSED SCOPE (2026, unsigned)~~ SUPERSEDED 2026-10-14 → **LIVE ASSIGNMENT (brief received; signed scope UNCONFIRMED)** | Orientation deck listed it as unsigned scope. A creative brief dated 2026-10-06 arrived 2026-10-14: [sapien-m3-resilia-animation](../../sapien-m3-resilia-animation/README.md). Not delivered work; don't cite it as proof until it is |
 | THV Business Unit lead-agency proposal (2021) | **PROPOSED SCOPE** | Describes a lead strategy/creative role and "a decade-long relationship" as of 2021 |
 | EuroPCR 2024 | PROPOSED SCOPE for element detail | Completion of every element unverified; EuroPCR screens 2023 and work 2024–25 are archive folders |
 | Alterra visual identity | PROPOSED SCOPE (identity details) | Alterra ads archive exists |
