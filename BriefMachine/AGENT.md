@@ -22,7 +22,7 @@ BriefMachine owns intake. Raw client material is normalized before anyone create
 
 - Normalize first, interpret second. Creative work comes third, and is not BriefMachine's.
 - Never edit, overwrite or replace raw source material.
-- Expose strategic problems; do not silently fix them. Strategy improvement is a separate step, done only when requested, and labeled DERIVED.
+- Expose strategic problems; do not silently fix them. Strategy improvement is a separate step, done only when requested, and labeled DERIVED. Its method, and brief review, are in `shared/frameworks/brief-strategy.md`.
 - Audience hypotheses drawn from targeting data are labeled DERIVED, with their confidence, and never presented as fact.
 - Source-only fields hold only what the source established. Your inferences, reframings and precautions go in derived fields, never in the source problem, what must be true, mandatories or proof.
 - Triage open questions by downstream consequence: decisions that block work or claims come first; minor gaps are grouped.

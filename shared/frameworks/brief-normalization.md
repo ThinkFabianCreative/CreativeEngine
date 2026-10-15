@@ -12,6 +12,7 @@ This framework sits upstream of the creative frameworks. It organizes and interp
 |---|---|
 | `creative-object-taxonomy.md` | Downstream. The deliverable matrix names formats; the taxonomy classifies what a deliverable is when that affects the criteria. |
 | `hey-whipple-copycraft.md`, `creative-trajectory-evaluation.md`, `creative-direction-audit.md` | Downstream. Creative work and ambition judgment start from a normalized brief or a work packet, never from the raw source. |
+| `brief-strategy.md` | Supplement for the requested strategy-improvement step (§16.2) and brief review: insight, tension, proposition, desired response, quality checks. Starts after normalization; changes no rule here. |
 | `education-enrollment-intake.md` | Optional extension to this framework. Load it only when the assignment concerns education, training or institutional communication, and only for intake fields. It adds questions and field definitions; it changes no rule here. |
 
 The framework registry in the root `CLAUDE.md` is the source of truth for what exists.
@@ -580,7 +581,7 @@ Everything here is DERIVED. Nothing here is source fact.
 Pattern records, cross-offering comparison, communication opportunities.
 Or: "Not run: targeting data too sparse" / "Not run: no audience data".
 ### 16.2 Strategy improvement
-Empty unless requested. Each item: its basis, and what source content it adds to or changes.
+Empty unless requested. Method and output: `brief-strategy.md`. Each item: its basis, and what source content it adds to or changes.
 
 ## 17. CreativeEngine handoff
 ```
@@ -602,6 +603,11 @@ SOURCE-SUGGESTED IDEAS:   [SOURCE HYPOTHESIS; see section 13; input, not boundar
 DERIVED   (BriefMachine interpretation; never source truth)
 PRIMARY TENSION:          [DERIVED with its basis, or OPEN. A tension the source itself
                            states is quoted and labeled SOURCE STRATEGY]
+INSIGHT:                  [DERIVED: observation → interpretation → implication, with basis
+                           and limits; or OPEN. Filled only by strategy improvement]
+PROPOSITION:              [DERIVED: one plain sentence, not a line; or OPEN. A proposition
+                           the source states is quoted and labeled SOURCE STRATEGY]
+DESIRED RESPONSE:         [DERIVED: what the audience should think, feel or do; or OPEN]
 AUDIENCE HYPOTHESES:      [pattern IDs with confidence, or "not run"]
 SAFE HANDLING UNTIL RESOLVED: [working guardrails, each citing its Q# or claim ID]
 DO NOT ASSUME:            [claims, facts, audience traits and resolutions creative must
