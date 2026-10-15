@@ -41,6 +41,18 @@ From the team orientation deck (slides 14–29) unless noted. "Archive years ide
 | Video samples: SAPIEN Platform wall-screen film (1:43), ELS × TRAFFIK showreel (1:08), New Frontiers TCT film (2:20), SAPIEN 3 Ultra RESILIA animation director's cut (1:50) | **CONFIRMED (asset exists)** | Actual supplied videos, Dropbox links in deck slides 28–29. Existence confirmed; air/usage dates not |
 | Everything else in the five categories | UNKNOWN / archive folder only | Truncated folder titles stay unexpanded |
 
+### Archive items not in the ledger above (added 2026-10-14)
+
+Named in the orientation deck's archive slides (23–27) but missing from the first pass. Status for all is ARCHIVE EVIDENCE (folder or listed project) unless marked; years are folder years, not delivery dates. Truncated titles are kept as they appear.
+
+| Category | Items |
+|---|---|
+| Events & Experiences | ACC 2023 and 2024; KOL event (2024), KOL Event Art (2026); OUS regional marketing workshop (described in a case study); Huddle Event (2026); Trophy (2026); Moodboards (2023); "Interior design p..." (2023) |
+| Product & Brand Marketing | This Moment Is Everything campaign and banner ads; Sermo Pilot Campaign (2022); KONECT RESILIA (2025); ELS TPVR (2023) |
+| Digital & Interactive | Product-page redesign and Edwards website updates; surgical app development; congenital-heart-disease / TPV education site; This Moment Is Everything digital experience; Sepsis page on Edwards.com (legacy); "KONECT Landin..." (2026); additional TCAP updates; HUDDLE Study URL renewal (2026) |
+| Sales Materials & Clinical Communications | Printed infographics; Peak 3 email campaign and leave-behind card; Critical Care plan layout (legacy); Hemodynamics one-pager (2022); ELS One Sheets (2023) and One Pager (2024); HVD Awareness Day emails (2022); 2021 Q4 quarterly newsletter; ELS Quiz Design (2026); "ELS Presentatio..." (2025); KONECT brochure development and printing ("Konnect" in older inventories = KONECT) |
+| Video, Animation & Photography | Huddle video (2023); Lab video project (2024); Innovation Story (2024); ELS Showreel (2025); "Video and Anim..." (2025); "Superhuman movi..." (2026); ELS Photos (2024); Heart Illustration (2024); TD Podcast cover graphic (2022) |
+
 **Divergence from the first source (OPEN → resolved by evidence):** the 2026-10-03 intelligence brief listed "TAVR Talk" as strong proof; the orientation deck shows its revamp is unsigned scope. Use the patient-community CRM/portal work as the journey proof instead.
 
 ## Strongest proof for TMTT (as supplied)
