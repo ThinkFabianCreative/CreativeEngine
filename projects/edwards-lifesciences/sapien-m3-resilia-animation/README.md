@@ -7,7 +7,7 @@ CLIENT:           Edwards Lifesciences
 PROJECT:          SAPIEN M3 RESILIA animation (R1 title: "Edwards SAPIEN M3 RESILIA Animation")
 FOLDER:           projects/edwards-lifesciences/sapien-m3-resilia-animation/
 IDENTITY SOURCE:  Andres Fabian (user), CreativeEngine session, 2026-10-14, when he supplied the brief
-BRIEF:            normalized-brief.md (v02 DRAFT, 2026-10-14; v01 kept as normalized-brief_v01.md)
+BRIEF:            normalized-brief.md (v03 DRAFT, 2026-10-15, with strategy improvement; v02 kept as normalized-brief_v02.md, v01 as normalized-brief_v01.md)
 ```
 
 ## Scope and workstreams *(summary)*
@@ -51,7 +51,7 @@ Approval of a specific asset is recorded in `outputs/approved/`, not here.
 
 ```
 STATUS:   BRIEFING
-UPDATED:  2026-10-14
+UPDATED:  2026-10-15
 ```
 
 | Date | Milestone | Source |
@@ -61,11 +61,12 @@ UPDATED:  2026-10-14
 | 2026-10-06 | Kickoff, per the "ELS Animation" tab of R2 | R2 (partial read) |
 | 2026-10-14 | Brief supplied to CreativeEngine; project named; brief normalized (v01 DRAFT) | User; brief-machine |
 | 2026-10-14 | Messaging (R3) supplied; brief revised (v02 DRAFT); work packet P1 prepared | User; brief-machine |
+| 2026-10-15 | Territory review v01; strategy improvement requested by the user; brief revised (v03 DRAFT): recommended proposition and two alternates in §16.2; Q36–Q38 added | User; creative-engine-director; brief-machine |
 | OPEN | Due date and milestones (R2 unreadable for them; possibly the "December assignment", unconfirmed) | Brief Q6, Q7 |
 
 ## Open questions
 
-Project-administration questions only. Briefing questions (34 open: 0 blocker, 5 claim blockers, 20 important, 9 minor) live in the brief's [open-question register](normalized-brief.md#14-open-questions-conflicts--ambiguities).
+Project-administration questions only. Briefing questions (37 open: 0 blocker, 5 claim blockers, 23 important, 9 minor) live in the brief's [open-question register](normalized-brief.md#14-open-questions-conflicts--ambiguities).
 
 - [ ] Q6: Due date and milestones · owner: unknown · raised: 2026-10-14
 - [ ] Q10: Approvers, MLR process and timing · owner: unknown · raised: 2026-10-14
@@ -75,6 +76,7 @@ Project-administration questions only. Briefing questions (34 open: 0 blocker, 5
 ## Contents
 
 - `raw/`: R1 and R2 sources, as received
-- `normalized-brief.md`: the master working brief (v02)
+- `normalized-brief.md`: the master working brief (v03, with strategy improvement)
+- `normalized-brief_v02.md`: the R1 + R2 + R3 version without strategy improvement, kept unchanged
 - `normalized-brief_v01.md`: the earlier version (R1 + R2 only), kept unchanged
 - `packets/P1_launch-animation.md`: work packet for the launch animation (mode not set)

@@ -1,5 +1,16 @@
 # Normalized Brief: SAPIEN M3 RESILIA animation
 
+> **Revision v03, 2026-10-15 (brief-machine). STRATEGY IMPROVEMENT, requested by Andres Fabian (user), 2026-10-15.** v02 is kept unchanged as [normalized-brief_v02.md](normalized-brief_v02.md); v01 as [normalized-brief_v01.md](normalized-brief_v01.md). No raw source changed. Sections 1–15 keep their source content; the only additions there are three new questions in §14 and their counts.
+>
+> What changed:
+> - **§16.2 Strategy improvement written** (was "not requested"). Every item is DERIVED, with its basis. It pressure-tests six working hypotheses from the main session (audience, human truth, tension, insight, USP, proposition), keeps, sharpens or replaces each with reasons, and recommends one single-minded proposition (A) plus two alternates (B, C).
+> - **User direction recorded:** Andres would prefer not to use the red glass heart (2026-10-15). R1 mandatory 6 ("Red glass heart: Yes please keep") is **not removed**. Recorded as an OPEN divergence (Q37).
+> - **New questions:** Q36 (audience confirmation, IMPORTANT), Q37 (red glass heart optional?, IMPORTANT · CONFLICT), Q38 (may the inward-vs-outward contrast be shown, IMPORTANT). Register now 38 IDs.
+> - **§17 DERIVED fields updated:** PRIMARY TENSION, AUDIENCE HYPOTHESES, RECOMMENDED PROPOSITION.
+> - Claims are not gated at territory stage (Andres's rule, 2026-10-15). §16.2 notes each claim's status but does not soften strategy for it. The ledger (§9) and its safe handling are unchanged and still apply to anything Edwards-facing beyond territory review.
+>
+> ---
+>
 > **Revision v02, 2026-10-14 (brief-machine).** Rebuilt from R1 + R2 + **R3** (`raw/Edwards Lifesciences.txt`, "SM3R Updated Product Messaging Pillars - EW provided on 9/30", supplied by the user 2026-10-14). The earlier version (v01, R1 + R2 only) is kept unchanged as [normalized-brief_v01.md](normalized-brief_v01.md).
 >
 > What changed:
@@ -31,9 +42,9 @@
 | Market | U.S. (R1: "One 60-second U.S. animation", "One 30-second U.S. animation cutdown") |
 | Sources | **R1** "Edwards_SAPIEN M3 RESILIA_Creative Brief.docx", dated 10/6/26, Drive last modified 2026-10-07. Read via `raw/R1_creative-brief_2026-10-14-capture.md` (verbatim capture, 2026-10-14). PROJECT-LEVEL. **R2** Google Sheet "ELS \| ANIMATION TIMELINE", linked from R1. Partial read 2026-10-14, see `raw/README.md`. PROJECT-LEVEL. **R3** `raw/Edwards Lifesciences.txt`, "SM3R Updated Product Messaging Pillars - EW provided on 9/30 - see comments throughout". A text transcription of a scan, with uncertain readings of handwritten notes. Transcriber not stated. Supplied by the user 2026-10-14; SHA-256 begins e31b1beb. PROJECT-LEVEL. Matches by title the "SM3R EW Provided messaging_9-30-26" that R1 refers to; whether it is the latest version is unconfirmed (Q31). **Client knowledge** (cited, CLIENT-LEVEL): `client/knowledge/claims-and-evidence-rules.md` (2026-10-03, CURRENT); `portfolio-and-clinical-language.md` (2026-10-03, refined 2026-10-14; AS SUPPLIED, not Edwards-approved); `brand-identity-standards.md` (2026-10-07, CURRENT); `traffik-work-history.md` (2026-10-03, HISTORICAL); `relationship-and-account-growth.md` (2026-10-03, CURRENT, internal) |
 | Built from | R1 (capture 2026-10-14), R2 (partial read 2026-10-14), R3 (as filed 2026-10-14) |
-| Normalized by | brief-machine, 2026-10-14 (v01); revised 2026-10-14 (v02) |
+| Normalized by | brief-machine, 2026-10-14 (v01); revised 2026-10-14 (v02); strategy improvement 2026-10-15 (v03) |
 | Status | DRAFT |
-| Derived layer | NONE (audience intelligence not run; strategy improvement not requested; §16.2 holds labeled observations only) |
+| Derived layer | STRATEGY IMPROVEMENT (§16.2, requested by the user 2026-10-15). Audience intelligence not run (no targeting data); the audience in §16.2 is a hypothesis from the indication, not from data |
 | Resources not reviewed | RS4, RS5, RS6, RS7, RS8, RS9, RS10, RS11, RS17 (§15) |
 
 Quotes from R1 are exact. The R1 capture escapes some characters for Markdown (`\<`, `\_`); they are shown unescaped here. R3 quotes are exact to the transcription; the original scan is not in CreativeEngine. R1's "DATE: 10/6/26" is read as 2026-10-06. R3's "9/30" is read as 2026-09-30 (R1 names it "9-30-26").
@@ -338,7 +349,7 @@ Overlap notes:
 
 ## 14. Open questions, conflicts & ambiguities
 
-35 IDs: **0 BLOCKER, 5 CLAIM BLOCKER, 20 IMPORTANT, 9 MINOR, 1 RESOLVED** (34 open).
+38 IDs: **0 BLOCKER, 5 CLAIM BLOCKER, 23 IMPORTANT, 9 MINOR, 1 RESOLVED** (37 open). Q36–Q38 added in v03, 2026-10-15.
 
 ### RESOLVED
 
@@ -669,6 +680,59 @@ BLOCKS:                       NOTHING YET
 OWNER:                        internal (user)
 ```
 
+```
+Q36 IMPORTANT · GAP  (added v03, 2026-10-15; sharpens Q8 for Edwards)
+QUESTION:                     Is the animation for the structural heart team (implanting interventional cardiologists,
+                              imaging cardiologists and the heart-team surgeon), for the referring cardiologists who
+                              hold patients "unsuitable for surgery or TEER", or for both? Is any patient, sales-only
+                              or congress-only audience intended?
+SOURCE SAYS:                  No audience in R1 or R3. R3 indication: "…who are unsuitable for surgery or TEER". R3
+                              elevator pitch: "Edwards supports heart teams across the continuum of care, from patient
+                              selection through implantation." R3's vocabulary is unexpanded clinical shorthand.
+AFFECTS:                      §16.2 audience hypothesis and propositions A–C; P1 depth, abbreviation handling, which
+                              proof leads
+BLOCKS:                       NOTHING YET (territory work proceeds on the §16.2 hypothesis)
+SAFE HANDLING UNTIL RESOLVED: DERIVED. Work to the §16.2 hypothesis (structural heart team primary, referrers
+                              secondary), labeled as a hypothesis. Never write "HCPs" as one audience.
+OWNER:                        client (via R1 author)
+```
+
+```
+Q37 IMPORTANT · CONFLICT (user direction vs client mandatory)  (added v03, 2026-10-15)
+QUESTION:                     Is the red glass heart optional in this animation? If not, may "the heart moving forward"
+                              be expressed without the glass heart (for example, the anatomical heart or another heart
+                              form moving forward on the beige ground)?
+SOURCE SAYS:                  A · R1, PROJECT-LEVEL (client mandatory, §11 item 6): "Red glass heart: Yes please keep"
+                              B · R1 (§11 item 5): "The visual of the heart moving forward: Yes please keep. This will be
+                              our main concept so we will want to somehow incorporate." R1 lists the two as separate
+                              items; it does not say the moving heart must be the glass heart.
+                              C · User direction, Andres Fabian, 2026-10-15, this project only: he would prefer not to
+                              use the red glass heart.
+AFFECTS:                      Mandatories 5–6; P1 opening and closing images; §16.2 propositions (all three survive
+                              either way)
+BLOCKS:                       NOTHING YET (exploration may test both; anything Edwards-facing keeps the glass heart
+                              until Edwards answers)
+SAFE HANDLING UNTIL RESOLVED: DERIVED. Mandatory 6 stands. Territories may carry a without-glass-heart variant only
+                              as a labeled option alongside a version that keeps it. Do not reconstruct the campaign
+                              heart from description (Q12).
+RESOLUTION:                   OPEN (domain owner: client / campaign agency for campaign assets)
+OWNER:                        client (via R1 author)
+```
+
+```
+Q38 IMPORTANT · AMBIGUITY  (added v03, 2026-10-15)
+QUESTION:                     May the animation show the contrast R3 states ("draw the mitral apparatus inward, rather
+                              than expanding outward against the anatomy") as a visible inward-vs-outward comparison,
+                              and if so without depicting or implying any named competitor device?
+SOURCE SAYS:                  R3 header: "Designed to Draw Anatomy Inward"; RTB: "leverages radial force to draw the
+                              mitral apparatus inward, rather than expanding outward against the anatomy" [C10].
+                              Client rule: verify before anything Edwards-facing (claims-and-evidence-rules.md).
+AFFECTS:                      §16.2 proposition A; C10; any "outward" image
+BLOCKS:                       NOTHING YET (territory stage: not gated, per user)
+SAFE HANDLING UNTIL RESOLVED: DERIVED. Show "outward" only as an abstract force, never as a recognizable device.
+OWNER:                        unknown (MLR)
+```
+
 ### MINOR SOURCE GAPS
 
 - Q22 · CONFLICT. R1: "focused on structural heart disease and critical cardiovascular care". Client knowledge: Critical Care divested (BD acquisition completed 2024-09-03). (affects C12)
@@ -714,15 +778,111 @@ Not run: no audience data.
 
 ### 16.2 Strategy improvement
 
-Not requested. Observations for `creative-engine-director`. They change no source content and resolve no question.
+**Requested** by Andres Fabian (user), 2026-10-15. Every item below is **DERIVED**: BriefMachine's interpretation, with its basis. None is source fact, none resolves a question in §14, and none changes §1–§15. Inputs: six working hypotheses from the main session, the territory review (`work/reviews/territory-review_v01.md`) and the current territory script (`work/copy/p1-nature-30s_v02.md`).
 
-- **Density** (basis: R1 deliverables, "no narration", R3 §7.2, Q33). R3 gives 3 pillars, 11 promotional headers, 18 RTBs and 2 footnotes. In 60 s and 30 s of on-screen text only, a message-priority decision (Q32, Q20) will shape the script more than any visual choice.
-- **The proof sits mostly outside this device's name** (basis: C2–C7, C14–C18, C23, footnote *).
-  - The quantified proof attaches to SAPIEN M3 (footnote *), surgical RESILIA valves, or the SAPIEN / SAPIEN 3 platform.
-  - The two statements specific to this valve are C9 (design and tissue) and C21 (EOA, PENDING APPROVAL).
-  - Q29 decides how much of OUTCOMES can be said under the product name.
-- **Fit with R1's pillar visuals** (basis: §7.2 vs H1–H3). R3's structure matches R1's pillar visuals closely: ENCIRCLE data, dock mechanism, legacy and tissue. The handwritten notes (H7, H8, H10) point the same way. This is consistency, not confirmation.
-- **Adjacent opportunity** (basis: `relationship-and-account-growth.md`, internal). A product launch "may imply" film, social, congress, sales tools, digital and KOL content. Noted, not pitched.
+**Claim rule for this step (user direction, 2026-10-15, territory stage only).** Claims are not gated: each item notes its claim status, but strategy is not softened for it. This does not change §9 or the safe handling in §14/§17 for anything beyond territory review.
+
+#### 16.2.1 Pressure test of the working hypotheses
+
+| # | Working hypothesis | Verdict | Why | Basis |
+|---|---|---|---|---|
+| W1 | Audience: interventional cardiologists / structural heart teams | **SHARPENED** | Right centre of gravity, but "interventional cardiologists" alone is too narrow. The decision to treat a mitral patient "unsuitable for surgery or TEER" is made by a heart team (implanter, imaging cardiologist, surgeon who declares the patient unsuitable). And the patient reaches that team only if a referring cardiologist believes there is somewhere to send them. Primary: the structural heart team. Secondary: referring cardiologists who hold these patients. Confidence LOW–MEDIUM: inferred from indication and vocabulary, not from data | C13 indication; C25 "supports heart teams"; R3 unexpanded clinical shorthand (§10); Q8, Q36. Client rule: never "HCPs" as one audience |
+| W2 | Human truth: these teams keep meeting mitral patients they can't help | **KEPT, made precise** | True to the indication, but "can't help" is vague and slightly self-pitying. The sharper truth is about the decision: the hardest case is the one the team has already worked up and ruled out. Restated: *"The mitral patients a heart team remembers are the ones it evaluated and had to turn away, because the anatomy didn't fit any option."* Unverified: no research supplied. It is a plausible professional truth, to be checked with Edwards (Q36) | C13 ("unsuitable for surgery or TEER"); C18 ("varied populations, anatomies and pathologies") |
+| W3 | Tension: every mitral anatomy is different, so results depend on anatomy; physicians want reproducibility and anatomy won't let them | **KEPT** | The strongest hypothesis, because R3 states both halves: "Heterogeneous Anatomy" and "Reproducible Replacement" sit in the same header. It is a real conflict (variability vs repeatability), not a slogan. Compressed: *"Mitral anatomy is never the same twice. The procedure needs to be."* | C10 header "Accommodates Heterogeneous Anatomy for Reproducible Replacement"; elevator pitch "standardize heterogeneous mitral anatomy"; INNOVATION pillar "reproducible mitral valve replacement" |
+| W4 | Insight: in mitral, the patient's anatomy has decided the outcome, not the device or the physician | **REPLACED** | Two problems. (1) "not the physician" tells the audience its skill doesn't matter; implanters will reject it on first read. (2) "decided the outcome" makes an outcome claim about all prior therapy that nothing in R3 supports. What anatomy decides, on the source's own terms, is **who qualifies and how predictable the procedure is**. Replacement: *"In mitral, the anatomy has been the gatekeeper: devices have been asked to fit it, and the patients who don't fit get turned away."* Inference about the category, not a sourced comparison (Q38) | Indication (C13); C10 "rather than expanding outward against the anatomy"; W2, W3 |
+| W5 | USP: the system draws anatomy inward to create a standardized landing zone instead of pushing outward | **KEPT** | The only differentiator in R3 that is (a) specific to this system, (b) mechanical, so it can be shown in a text-only film, and (c) directly answers W3. The outcomes are mostly SAPIEN M3 data (footnote *) and the tissue evidence is surgical (Q4); the mechanism is this system's own. Status SOURCE-STATED, not verified | C10 (all four dock RTBs; elevator pitch); §16.2 v02 note "the proof sits mostly outside this device's name" |
+| W6 | Proposition: "It shapes the anatomy instead of fighting it." | **REPLACED** (by A) | Single-minded and right in spirit, but: "shapes" overstates what R3 says (draws inward, captures, standardizes) and blurs into remodeling, which is a separate claim (C22); "fighting" frames other devices as aggressive, which drifts toward an implied comparative (Q38). The source verb, *draw in*, is stronger: it is a visible motion, it pairs with the mandated "heart moving forward", and it is already the territory's verb | C10; C22; mandatory 5; `work/copy/p1-nature-30s_v02.md` |
+
+#### 16.2.2 Recommended proposition
+
+```
+PROPOSITION A (RECOMMENDED)   DERIVED
+SINGLE-MINDED PROPOSITION:  It draws the anatomy in, instead of pushing against it.
+                            (Benefit layer, not a line: so a different mitral every time becomes the same
+                            landing zone every time.)
+AUDIENCE:                   Structural heart team (implanter, imaging, heart-team surgeon) primary;
+                            referring cardiologists secondary. Hypothesis, LOW–MEDIUM (Q8, Q36).
+HUMAN TRUTH:                The mitral patients a heart team remembers are the ones it worked up and turned
+                            away because the anatomy fit no option. (W2)
+TENSION:                    Mitral anatomy is never the same twice; a reproducible procedure needs it to be. (W3)
+INSIGHT:                    Anatomy has been the gatekeeper because devices have been asked to fit it. Stop asking
+                            the anatomy to fit the device. (W4 replacement)
+USP:                        A valve-in-dock system whose dock captures both leaflets and draws the mitral apparatus
+                            inward with radial force, rather than expanding outward, creating a standardized
+                            landing zone for the valve. (W5)
+SUPPORT:                    C10 (mechanism; SOURCE-STATED) · C19, C20 (transseptal access; dock repositionable and
+                            retrievable before release; SOURCE-STATED) · C9 (next-gen valve, RESILIA tissue;
+                            SOURCE-STATED, Q2 open) · C18 (efficacy across varied anatomies; CONDITIONAL, footnote *)
+                            · C2, C3 (outcomes payoff; CONDITIONAL, Q29, Q30, Q3) · C11 (lineage; SOURCE-STATED).
+                            None VERIFIED. Comparison implied by "instead of": Q38.
+PILLAR FIT:                 INNOVATION is the proposition; OUTCOMES is its payoff ("what a standard landing zone
+                            makes possible"); LEGACY is why to trust it (SAPIEN platform, RESILIA tissue).
+                            All three pillars stay in R3 wording; the proposition orders them, it doesn't
+                            replace them.
+WHY THIS ONE:               It is the system's own truth (not borrowed SAPIEN M3, platform or surgical data); it
+                            is a motion, so a text-only film can show it rather than say it; it gives the
+                            mandated "heart moving forward" a cause (drawn in, so it moves forward); and it
+                            survives a 30 s cut, because it needs one mechanism shot, not a preamble.
+```
+
+**What it means for the creative.**
+
+- **Fit with the current territory, "Nature holds by drawing in" (`work/copy/p1-nature-30s_v02.md`): STRONG.** The territory is already proposition A in visual form: each nature shot (fern curl, anemone closing) is the inward motion, match-cut into the dock. It fixes T01's flaw from the territory review: nature now rhymes with what *this* device does, not with "pattern" in general. Keep the inward/forward pair as the spine; its end line A ("Drawn in. Moving forward.") states the proposition and the mandate in four words.
+- **Where the territory drifts from A** (noted, not gated): the 16–22 s super "RESILIA tissue. Made to move the way the heart does." moves the "natural" idea onto the tissue; R3's only natural-motion statement is the dock's ("designed to support natural annular motion", C10). Pointing that beat at the leaflets' rhythm without a tissue-behavior claim would keep it on-proposition. End line B ("The natural way forward") is off-proposition: it sells "natural", not "drawn in". The 97% beat attributes C2 to SAPIEN M3 RESILIA (Q29); claim status only.
+- **The "outward" half needs a picture or it disappears.** A works best if the film once shows (abstractly) what pushing outward against the anatomy would look like, then the inward draw. Show force, never a recognizable device (Q38).
+- **Tension carries the 60.** "Never the same twice" invites a visual of varied anatomies resolving into one landing zone: a natural home for the pillar-1 "varied populations" RTB (C18) and the pillar icons.
+- **For WordSmither:** the proposition is not the line. "Draw in" is the owned verb; avoid "shape", "fight", "only", "first".
+- **Without the red glass heart (Q37): A still works, arguably better.** The proposition lives in the mechanism, not in the campaign prop. The mandated motion ("the heart moving forward") can be carried by the anatomical heart: drawn in at its centre, then moving forward. That would join the proposition and the campaign image in one object. The glass heart remains a client mandatory until Edwards answers Q37; with it, A still holds (heart moves forward, camera goes inside, dock draws in).
+
+#### 16.2.3 Alternates
+
+```
+PROPOSITION B (ALTERNATE)   DERIVED
+SINGLE-MINDED PROPOSITION:  Every mitral is different. The landing zone is the same.
+AUDIENCE:                   Implanting physicians and imaging cardiologists specifically (procedure planners).
+HUMAN TRUTH:                No two mitral cases plan the same way, and the variability is what keeps a procedure
+                            from becoming routine.
+TENSION:                    W3, stated as the proposition itself.
+INSIGHT:                    Reproducibility in mitral doesn't come from a better-sized device; it comes from
+                            standardizing the site the device lands in.
+USP:                        Same as A (C10 "stable, standardized landing zone"), told as an outcome of the
+                            mechanism rather than the mechanism.
+SUPPORT:                    C10; INNOVATION pillar "reproducible mitral valve replacement" (SOURCE STRATEGY); C18
+                            (CONDITIONAL); C20. None VERIFIED.
+FOR THE CREATIVE:           More rational, more procedural: many anatomies resolving into one. Strong for
+                            OUTCOMES and for the pillar icons; weaker emotionally. Fits the nature territory
+                            only loosely (variety in nature → one form). Without the glass heart: unaffected,
+                            the heart is not load-bearing here. Risk: reads as a spec benefit; it is A's
+                            consequence, so prefer A unless Edwards wants procedural language first.
+```
+
+```
+PROPOSITION C (ALTERNATE)   DERIVED
+SINGLE-MINDED PROPOSITION:  For the mitral patients anatomy ruled out.
+AUDIENCE:                   Referring cardiologists primary; heart teams secondary (reverses A).
+HUMAN TRUTH:                W2: the patient you had to send home is the one you remember.
+TENSION:                    Patients who need a valve most have been the ones no option fitted.
+INSIGHT:                    The barrier for these patients was anatomical, not clinical will, so an answer that
+                            works with the anatomy reopens the conversation.
+USP:                        C10 mechanism, as the reason these patients may now have an option; transseptal
+                            access (C19).
+SUPPORT:                    C13 indication (SOURCE-STATED; Q5 on U.S. status) · C18 (CONDITIONAL) · C10. The
+                            proposition itself implies efficacy in a previously excluded population: highest
+                            claim exposure of the three (Q5, Q29). None VERIFIED.
+FOR THE CREATIVE:           The most human and the most emotional; the "heart moving forward" becomes the
+                            patient's heart moving forward again, which is a natural reading of the campaign
+                            image, with or without the glass heart. Fits the nature territory weakly. Tensions:
+                            a patient beat needs approved casting or footage (Edwards visual direction), the
+                            film is text-only, and "a new life" style promises are the drift the territory
+                            review flagged. Best held as the emotional frame around A rather than its replacement.
+```
+
+#### 16.2.4 Still standing from v02 (observations, not strategy)
+
+- **Density** (basis: R1 deliverables, "no narration", R3 §7.2, Q33). 3 pillars, 11 headers, 18 RTBs, 2 footnotes in 60 s and 30 s of on-screen text: a message-priority decision (Q32, Q20) will shape the script more than any visual choice. Proposition A gives that decision an order (INNOVATION leads).
+- **The proof sits mostly outside this device's name** (basis: C2–C7, C14–C18, C23, footnote *). Quantified proof attaches to SAPIEN M3, surgical RESILIA valves or the SAPIEN platform. This is the main reason A is built on the mechanism (C10), which is this system's own.
+- **Fit with R1's pillar visuals** (basis: §7.2 vs H1–H3). Consistent with R3; consistency, not confirmation.
+- **Adjacent opportunity** (basis: `relationship-and-account-growth.md`, internal). Launch "may imply" more work. Noted, not pitched.
 
 ## 17. CreativeEngine handoff
 
@@ -759,8 +919,18 @@ SOURCE-SUGGESTED IDEAS:  H1–H10, §13. Input, not boundary; R1 invites "a diff
                          CreativeDirector may withhold them from a first round.
 
 DERIVED   (BriefMachine interpretation; never source truth)
-PRIMARY TENSION:          OPEN. Neither R1 nor R3 states one.
-AUDIENCE HYPOTHESES:      Not run (no audience data).
+PRIMARY TENSION:          DERIVED (§16.2, W3; basis: R3 header "Accommodates Heterogeneous Anatomy for
+                          Reproducible Replacement", C10). Mitral anatomy is never the same twice; a
+                          reproducible procedure needs it to be.
+RECOMMENDED PROPOSITION:  DERIVED (§16.2.2, A): "It draws the anatomy in, instead of pushing against it."
+                          Alternates: B "Every mitral is different. The landing zone is the same." · C "For
+                          the mitral patients anatomy ruled out." Support: C10 lead; none VERIFIED.
+INSIGHT:                  DERIVED: anatomy has been the gatekeeper because devices have been asked to fit it.
+AUDIENCE HYPOTHESES:      Audience intelligence not run (no data). Working hypothesis from the indication
+                          (§16.2, W1): structural heart team primary, referring cardiologists secondary.
+                          LOW–MEDIUM. Q8, Q36.
+USER DIRECTION:           Andres prefers not to use the red glass heart (2026-10-15). Mandatory 6 stands
+                          until Edwards answers Q37; A works with or without it.
 SAFE HANDLING UNTIL RESOLVED:
   - No outcome figure or outcome statement attached to "SAPIEN M3 RESILIA" on screen (Q29)
   - Not the unqualified "MR elimination" (Q30)
@@ -770,18 +940,23 @@ SAFE HANDLING UNTIL RESOLVED:
   - RESILIA tissue stated only for the next-generation valve; no tissue statement about the first generation (Q2)
   - "evolve", "evolution" and variants off screen (Q17)
   - Do not reconstruct the campaign artwork or icons from description (Q12, Q14)
+  - Keep the red glass heart in anything Edwards-facing; a without-glass-heart variant only as a labeled option (Q37)
+  - "Outward" shown only as abstract force, never a recognizable device (Q38)
+  - Territory stage: claims not gated (user, 2026-10-15); this list governs beyond territory review
 DO NOT ASSUME:
   - that R3 is the final, complete or accurately transcribed messaging (Q31)
   - which R3 text is the required "green" messaging (Q32)
   - that the ThermaFix entry in client knowledge describes the first-generation valve (Q2)
-  - that the audience is "HCPs" or any single audience (Q8); where it plays, or with sound (Q9)
+  - that the audience is "HCPs" or any single audience (Q8); that the §16.2 hypothesis is confirmed (Q36);
+    where it plays, or with sound (Q9)
+  - that the glass heart is optional (Q37)
   - that the due date is December 2026 (Q7); that the scope is signed (Q11)
   - that the handwritten notes are direction (Q34)
 
 QUESTIONS   (§14 holds the full register)
 BLOCKERS:        none (Q1 resolved)
 CLAIM BLOCKERS:  Q29 (C1–C3, C14–C18, C22), Q30 (C1), Q3 (C2–C4, C14–C18), Q4 (C5–C7), Q5 (C8, C13)
-IMPORTANT:       Q2, Q6–Q21, Q31–Q33
+IMPORTANT:       Q2, Q6–Q21, Q31–Q33, Q36–Q38
 MINOR:           9
 ```
 
@@ -796,3 +971,5 @@ In v01 no packet was prepared, because Q1 blocked the packet's source-grounded c
 - It has no derived layer, because none ran.
 
 Its mode is not set; `creative-engine-director` decides whether and when to use it.
+
+**v03 (2026-10-15):** P1 now points to v03 and carries a short derived layer: proposition A with alternates B and C (§16.2), the audience hypothesis, and Q36–Q38.
