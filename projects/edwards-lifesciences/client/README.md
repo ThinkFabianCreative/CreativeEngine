@@ -38,3 +38,5 @@ Do not fill these from general knowledge.
 ## Projects
 
 - [TMTT capabilities pitch](../tmtt-capabilities-pitch/README.md)
+- [TMTT XLT deck elevation](../tmtt-xlt-deck/README.md)
+- [SAPIEN M3 RESILIA animation](../sapien-m3-resilia-animation/README.md): brief received 2026-10-14, BRIEFING

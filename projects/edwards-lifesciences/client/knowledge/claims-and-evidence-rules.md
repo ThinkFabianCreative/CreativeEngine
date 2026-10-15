@@ -39,6 +39,15 @@ Exact product, anatomy, therapy type, audience, market, indication, approval sta
 - RESILIA vs ThermaFix
 - current vs legacy (divested) businesses
 
+### The team's four checks for any Edwards brief, asset or adaptation
+
+From the team orientation deck, slide 21 (`client/sources/2026-10-03_gslides_edwards-traffik-team-orientation_LINK.md`, added 2026-10-14):
+
+1. **Product and anatomy.** Name the exact device, valve location and route. Keep repair, replacement, tissue technology and monitoring distinct.
+2. **Audience and purpose.** Decide who needs the asset and what they need to understand. A surgeon, referrer, patient and purchaser need different detail.
+3. **Market and evidence.** Confirm geography, device version, label and source study. Approval, launch and investigational status are different facts.
+4. **Archive and review.** Separate delivered work from proposed scope. Treat historical examples as creative references and recheck claims, permissions and review requirements.
+
 The product statements in `portfolio-and-clinical-language.md` are AS SUPPLIED by the user. They're a working map, not a verified source for claims.
 
 ## Vocabulary

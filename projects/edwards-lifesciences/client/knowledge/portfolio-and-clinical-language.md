@@ -47,6 +47,26 @@ Always keep two dimensions separate:
 - **Critical Care:** BD completed the acquisition 2024-09-03; now BD Advanced Patient Monitoring.
 - A multidisciplinary Heart Team decides the treatment option. Confirm the actual buying group for hospital audiences.
 
+## Second pass on the orientation deck (2026-10-14)
+
+Deck reread through the Drive connector; unchanged since 2026-10-03. Points the first pass did not record:
+
+- **SAVR** = Surgical Aortic Valve Replacement, the surgical counterpart to TAVR/TAVI (slide 4).
+- **THV business scope** covers SAPIEN aortic valves and SAPIEN 3 + Alterra pulmonary therapy. TMTT is separate, and SAPIEN M3 sits in TMTT, not THV (slide 6). The SAPIEN name alone doesn't tell you the business unit.
+- **TPVR** = transcatheter pulmonary valve replacement. "Global Pulmonic" in the archive is a portfolio campaign name, not a product (slide 11).
+- **Repair vs replacement by device:** PASCAL repairs existing leaflets (paddles, clasps and a central spacer). SAPIEN, EVOQUE, INSPIRIS and MITRIS replace valve function. EVOQUE: tissue valve, self-expanding frame and anchors (slides 4, 8).
+- **SAPIEN M3 vs MITRIS:** both mitral replacement; catheter delivery is what separates M3 from surgical MITRIS (slide 8).
+- **HemoSphere (legacy):** a monitoring platform combining blood-pressure, blood-flow and tissue-oxygenation readings through compatible sensors, cuffs or catheters; available measurements depend on the connected technology (slide 12).
+
+### What each audience needs (slide 13)
+
+| Audience | Needs |
+|---|---|
+| Clinical decision-makers (interventional cardiologists, surgeons, imaging specialists) | Patient-selection context, mechanism, qualified evidence |
+| Referrers and coordinators | Referrers identify disease and connect patients to specialists; coordinators help with evaluation, preparation and follow-up |
+| Patients and caregivers | Plain-language disease and treatment explanations, realistic expectations, questions to ask their clinicians |
+| Hospital and commercial teams | Workflow, training and product information; confirm the actual buying group |
+
 **RESILIA** is a tissue technology used in specific valves. It is not a valve. Evidence for one RESILIA device does not transfer to another.
 
 **TMTT portfolio storytelling:** PASCAL, EVOQUE and SAPIEN M3 stay clinically distinct but should feel connected in one Edwards/TMTT story.
