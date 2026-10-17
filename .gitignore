@@ -23,3 +23,9 @@ projects/**/assets/video/**
 *.mov
 *.zip
 projects/colorado-mesa-university/featherstone-phase-2/raw/CMU-Brand-Guidelines_Sep2025.pdf
+
+# MFK reference folder (large photo set, kept local only)
+projects/miracles-for-kids/website-rebrand/raw/MiraclesForKids/
+
+# MFK production-site assets (downloaded for reference)
+projects/miracles-for-kids/website-rebrand/raw/production-site/

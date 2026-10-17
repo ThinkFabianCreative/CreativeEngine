@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+  <rect width="1200" height="620" fill="#fffaf3"/>
+  <g font-family="Arial, sans-serif" fill="#00447c">
+    <text x="64" y="70" font-size="30" font-weight="700">A little less perfect. A little more human.</text>
+    <text x="64" y="106" font-size="17">Three handmade button shapes for Miracles for Kids</text>
+  </g>
+  <!-- Intentionally asymmetric, editable vector silhouettes. -->
+  <path d="M71 240 L117 227 L194 231 L266 224 L339 237 L347 268 L339 302 L348 329 L279 339 L204 334 L126 342 L67 327 L74 284Z" fill="#00447c"/>
+  <path d="M439 280 C426 249 459 231 505 235 C547 222 573 236 608 230 C659 224 704 246 699 277 C713 302 689 332 651 335 C616 347 583 333 546 340 C498 350 439 328 443 304 C435 297 434 289 439 280Z" fill="#b91685"/>
+  <path d="M812 245 L843 234 L842 241 L899 229 L897 235 L968 228 L965 233 L1051 236 L1080 246 L1071 252 L1096 258 L1085 268 L1091 281 L1080 294 L1086 307 L1069 311 L1070 323 L1011 330 L1008 324 L940 337 L942 330 L875 335 L876 328 L815 324 L827 314 L805 304 L816 292 L804 279 L819 267 L808 260 L824 252Z" fill="#f0973b"/>
+  <g font-family="Arial, sans-serif" font-weight="700" font-size="25" text-anchor="middle">
+    <text x="207" y="292" fill="white" transform="rotate(-2 207 292)">Make a miracle</text>
+    <text x="569" y="292" fill="white" transform="rotate(1 569 292)">Make a miracle</text>
+    <text x="950" y="292" fill="#00447c" transform="rotate(-1 950 292)">Make a miracle</text>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#00447c">
+    <g font-size="20" font-weight="700"><text x="68" y="408">01 / Cut paper</text><text x="437" y="408">02 / Soft blob</text><text x="805" y="408">03 / Painted swash</text></g>
+    <g font-size="16"><text x="68" y="440">Uneven edges. Quietly playful.</text><text x="437" y="440">Squishy, warm, a little lopsided.</text><text x="805" y="440">Rough ends. More expressive.</text></g>
+    <text x="64" y="550" font-size="16">Shape study · Typography is a placeholder · All silhouettes are editable SVG paths</text>
+  </g>
+</svg>

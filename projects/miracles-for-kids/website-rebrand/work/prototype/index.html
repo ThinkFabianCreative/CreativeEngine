@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MFK Landing v3 prototype</title>
+<!-- Prototype only (aesthetic pass). Framework: Material 3 Expressive (friendly 4:3 shape family, shape morph on hover/press, emphasized variable-font type, spring motion; reduced-motion respected).
+     Tokens: Color "B Blocks" + Type "A Saturated". Copy: MFK Copy "T5 v02". Spec: work/reviews/design-review_prototype-v3_v01.md -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-canvas:#FBF6EE; --bg-primary:#FFD23F; --bg-secondary:#A92061; --bg-accent:#79BDE9; --bg-soft:#E9F8FA;
+  --text-primary:#002855; --text-secondary:#5B6474; --on-primary:#002855; --on-secondary:#FFFFFF; --on-accent:#002855; --on-soft:#002855;
+  --highlight:#A92061; --action-bg:#A92061; --action-text:#FFFFFF; --navy:#002855; --white:#FFFFFF; --border-subtle:#C7D0DA; --focus:#002855;
+  --pat-sun:#F5C52C; --pat-magenta:#B42B6C; --pat-canvas:#F1E8D8;
+  --sans:"Outfit",system-ui,sans-serif; --script:"Caveat",cursive;
+  --display:clamp(46px,6.6vw,96px); --h1:clamp(38px,4.4vw,64px); --h2:clamp(26px,2.6vw,36px);
+  --hl-display:clamp(54px,7.8vw,112px);
+  --gutter:clamp(16px,8.3vw,120px); --spring:cubic-bezier(.34,1.56,.64,1); --r:28px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg-canvas);color:var(--text-primary);font:400 16px/1.5 var(--sans);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:4px;border-radius:12px}
+section{position:relative;overflow:hidden}
+.eyebrow{font:600 14px/20px var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--highlight)}
+.display{font:820 var(--display)/1 var(--sans);letter-spacing:-.02em}
+.h1{font:800 var(--h1)/1.1 var(--sans);letter-spacing:-.015em}
+.h2{font:750 var(--h2)/1.2 var(--sans);letter-spacing:-.01em}
+.h3{font:750 22px/1.3 var(--sans)}
+.lead{font:400 20px/32px var(--sans);color:var(--text-secondary)}
+.cap{font:500 14px/20px var(--sans)}
+.hl{color:var(--highlight)}
+.script{font-family:var(--script);font-weight:700;letter-spacing:0}
+.display .script{font-size:var(--hl-display);line-height:.9}
+.lite{font-weight:320;letter-spacing:-.01em}
+.heavy{font-weight:900;letter-spacing:-.035em}
+@keyframes wghtIn{from{font-weight:200;letter-spacing:.02em}to{font-weight:900;letter-spacing:-.035em}}
+#hero-h .heavy{animation:wghtIn 1.1s var(--spring) both .1s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:14px 28px;border-radius:999px;font:650 16px/24px var(--sans);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .35s var(--spring),font-weight .35s var(--spring),border-radius .35s var(--spring)}
+.btn:hover{font-weight:800;border-radius:18px;transform:translateY(-2px)}
+.btn:active{transform:scale(.97);border-radius:12px}
+.btn-primary{background:var(--action-bg);color:var(--action-text)}
+.btn-ghost{border-color:currentColor;background:transparent}
+.btn-sun{background:var(--bg-primary);color:var(--navy)}
+.deco{position:absolute;pointer-events:none}
+.crop{width:100%;aspect-ratio:4/3;object-fit:cover}
+.c-arch{clip-path:url(#c-arch)}.c-star{clip-path:url(#c-star);object-position:center 30%}.c-squircle{clip-path:url(#c-squircle)}.c-ticket{clip-path:url(#c-ticket)}.c-capsule{clip-path:url(#c-capsule)}
+.wave{position:absolute;left:0;width:100%;height:80px;display:block;z-index:2}
+/* patterns (tone-on-tone, static) */
+.pat-confetti{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='%23F5C52C'%3E%3Cpath d='M40 28c3 0 4 6 4 8s5-3 7-1-3 6-3 8 6 2 6 5-6 3-8 3 3 5 1 7-6-3-7-3-1 6-4 6-4-6-4-6-5 4-7 2 2-6 2-7-6-1-6-4 6-3 8-3-4-6-2-8 6 1 7 1 1-8 4-8z'/%3E%3Ccircle cx='118' cy='44' r='5'/%3E%3Ccircle cx='92' cy='120' r='7'/%3E%3Cpath transform='translate(80 70) rotate(20)' d='M40 28c3 0 4 6 4 8s5-3 7-1-3 6-3 8 6 2 6 5-6 3-8 3 3 5 1 7-6-3-7-3-1 6-4 6-4-6-4-6-5 4-7 2 2-6 2-7-6-1-6-4 6-3 8-3-4-6-2-8 6 1 7 1 1-8 4-8z' opacity='.7'/%3E%3C/g%3E%3C/svg%3E")}
+.pat-scallop{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24' viewBox='0 0 48 24'%3E%3Cpath d='M0 24a24 24 0 0 1 48 0' fill='none' stroke='%23B42B6C' stroke-width='3'/%3E%3C/svg%3E")}
+.pat-wave{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60'%3E%3Cpath d='M0 40c20-12 40-12 60 0s40 12 60 0' fill='none' stroke='%23F1E8D8' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='30' cy='14' r='3' fill='%23F1E8D8'/%3E%3Ccircle cx='90' cy='14' r='3' fill='%23E2F0F3'/%3E%3C/svg%3E")}
+/* nav */
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px var(--gutter);gap:24px;position:relative;z-index:5}
+nav .links{display:flex;gap:32px;align-items:center;font:650 16px var(--sans)}
+nav .links a{text-decoration:none;white-space:nowrap}
+nav .links a:not(.btn){transition:font-weight .3s var(--spring)}
+nav .links a:not(.btn):hover{font-weight:850}
+.logo{height:56px;width:auto}
+@media (max-width:1100px){nav .links a:not(.btn){display:none}nav .links{gap:12px}}
+/* hero */
+.hero{min-height:940px;display:flex;align-items:flex-end;padding:0 var(--gutter) 140px;color:#fff}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,40,85,0) 45%,rgba(0,40,85,.55) 70%,rgba(0,40,85,.85) 100%),radial-gradient(ellipse 60% 50% at 0% 100%,rgba(0,40,85,.4),transparent 70%)}
+.hero-text{position:relative;z-index:3;display:flex;flex-direction:column;gap:22px;max-width:760px}
+.hero .eyebrow{color:var(--bg-primary);text-shadow:0 1px 8px rgba(0,40,85,.6)}
+.hero .display .script{color:var(--bg-primary)}
+.hero .lead{color:#fff;max-width:560px}
+.hero-ctas{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.hero .deco{right:calc(var(--gutter) - 20px);bottom:40px;width:150px;z-index:3}
+.video-chip{display:flex;align-items:center;gap:12px;background:var(--bg-canvas);color:var(--text-primary);border-radius:999px;padding:12px 20px 12px 12px;text-decoration:none}
+.play{width:48px;height:48px;border-radius:50%;background:var(--action-bg);display:grid;place-items:center;flex:none;transition:border-radius .45s var(--spring),transform .45s var(--spring)}
+.play svg{width:16px;height:18px;margin-left:3px}
+a:hover .play{border-radius:32%;transform:rotate(-8deg) scale(1.06)}
+@media (max-width:1100px){
+ .hero{display:block;min-height:0;padding:0 0 64px;color:var(--text-primary)}
+ .hero-bg{position:relative;height:auto;aspect-ratio:4/3;clip-path:url(#c-arch);object-position:50% 10%}
+ .hero::after{display:none}
+ .hero-text{padding:24px var(--gutter) 0;max-width:none}
+ .hero .eyebrow{color:var(--highlight);text-shadow:none}
+ .hero .display .script{color:var(--highlight)}
+ .hero .lead{color:var(--text-secondary)}
+ .hero .deco{top:calc(75vw - 70px);bottom:auto;right:16px;width:96px}
+ .hero .wave{display:none}
+}
+/* stories */
+.stories{padding:72px var(--gutter) 112px}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 32px}
+.chip{min-height:44px;padding:10px 18px;border-radius:999px;border:1.5px solid var(--border-subtle);background:transparent;font:600 14px var(--sans);color:var(--text-primary);cursor:pointer;transition:border-radius .4s var(--spring)}
+.chip[aria-pressed=true]{background:var(--navy);color:#fff;border-color:var(--navy);border-radius:14px}
+.mosaic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.tile{position:relative;min-height:340px;border-radius:var(--r);padding:24px;display:flex;flex-direction:column;justify-content:flex-end;gap:8px;overflow:hidden;text-decoration:none;transition:transform .45s var(--spring)}
+.tile:hover{transform:translateY(-4px)}
+.tile.wide{grid-column:span 2}
+.tile.wide.vid{border-top-right-radius:140px}
+.tile .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,40,85,0) 35%,rgba(0,40,85,.8) 100%)}
+.tile>*:not(.poster):not(.scrim):not(.play):not(.ph-note){position:relative;z-index:1}
+.tile .play{position:absolute;right:24px;top:24px;width:72px;height:72px;z-index:2}
+.tile .pill{align-self:flex-start;background:var(--bg-canvas);color:var(--text-primary);border-radius:999px;padding:6px 14px;font:500 14px var(--sans)}
+.tile .ph-note{position:absolute;left:16px;top:16px;z-index:2;background:rgba(255,255,255,.9);color:var(--text-primary);font:600 11px var(--sans);padding:4px 10px;border-radius:999px}
+.tile .h3,.tile .h2{transition:font-weight .4s var(--spring)}.tile:hover .h3,.tile:hover .h2{font-weight:880}
+.quote{font:400 20px/30px var(--sans)}
+.drawing{background:var(--bg-accent);clip-path:url(#c-ticket);border-radius:0}
+.drawing .inner{background:var(--bg-canvas);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:6px;position:relative}
+.drawing .script{font-size:40px;line-height:1;color:var(--highlight)}
+@media (max-width:1000px){.mosaic{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mosaic{grid-template-columns:1fr}.tile.wide{grid-column:auto}}
+/* truth */
+.truth{background-color:var(--bg-primary);color:var(--on-primary);text-align:center;padding:220px var(--gutter)}
+.truth .display .script{color:var(--highlight)}
+.truth p.proofline{max-width:760px;margin:28px auto 32px;font:700 24px/32px var(--sans)}
+.badge{position:absolute;right:5%;top:60px;width:200px;aspect-ratio:4/3;display:grid;place-items:center;color:#fff;text-align:center}
+.badge svg{position:absolute;inset:0;width:100%;height:100%}
+.badge div{position:relative;margin-top:8px}
+.badge b{font:900 34px/1 var(--sans);display:block}.badge small{font:600 12px var(--sans)}
+@media (max-width:700px){.badge{width:150px;top:24px;right:8px}.badge b{font-size:26px}.truth{padding:190px var(--gutter) 160px}}
+/* programs: bento + zipper */
+.programs{background-color:var(--bg-canvas);padding:112px var(--gutter)}
+.pgrid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;margin-top:40px}
+.prog{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;padding:20px;border-radius:32px;background:var(--white);text-decoration:none;transition:transform .45s var(--spring),border-radius .45s var(--spring)}
+.prog:hover{transform:translateY(-4px);border-radius:48px}
+.prog.lead{grid-column:1/6;grid-row:1/3;grid-template-columns:1fr;align-content:start;background:var(--bg-primary);color:var(--on-primary);padding:28px}
+.prog:nth-child(2),.prog:nth-child(3){grid-column:6/13}
+.prog:nth-child(4),.prog:nth-child(5){grid-column:span 6}
+.prog:nth-child(3) .crop,.prog:nth-child(5) .crop{order:2}
+.prog.sky{background:var(--bg-accent);color:var(--on-accent)}
+.prog .k{font:600 14px var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--highlight)}
+.prog.sky .k{color:var(--navy)}
+.prog .hl{color:var(--highlight)}.prog.sky .hl{color:var(--navy);text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:4px}
+.prog .body{display:flex;flex-direction:column;gap:8px}
+.prog .stat{align-self:flex-start;background:var(--bg-soft);color:var(--navy);font:700 18px var(--sans);padding:6px 14px;border-radius:999px}
+.prog .go{align-self:flex-end;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font:700 20px var(--sans);transition:border-radius .4s var(--spring)}
+.prog:hover .go{border-radius:30%}
+.prog .h3,.prog .h2{transition:font-weight .4s var(--spring)}.prog:hover .h3,.prog:hover .h2{font-weight:880}
+@media (max-width:1099px){.pgrid{grid-template-columns:1fr 1fr}.prog.lead{grid-column:1/-1;grid-row:auto;grid-template-columns:1fr 1fr;align-items:center}.prog:nth-child(n){grid-column:auto}.prog:nth-child(n) .crop{order:0}.prog{grid-template-columns:1fr}}
+@media (max-width:700px){.pgrid{grid-template-columns:1fr;gap:16px}.prog.lead{grid-template-columns:1fr}}
+/* proof */
+.proof{background-color:var(--bg-secondary);color:var(--on-secondary);padding:112px var(--gutter) 160px}
+.sentences{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:36px 0 24px}
+.sentence{padding:36px 32px;border-radius:48px;font:750 26px/34px var(--sans)}
+.logo-wall{background:#fff;border-radius:32px;padding:36px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;align-items:center}
+.logo-wall-k{grid-column:1/-1;color:var(--text-primary);font:500 18px var(--sans);margin-bottom:8px}
+.logo-wall-k b{font:900 44px/1 var(--sans);color:var(--highlight);margin-right:8px;vertical-align:-6px}
+.lg{height:128px;display:grid;place-items:center;padding:16px 20px;border-radius:24px;transition:background .3s,border-radius .45s var(--spring),transform .45s var(--spring)}
+.lg img{max-height:80px;max-width:100%;object-fit:contain}
+.lg:hover{background:var(--bg-soft);border-radius:40%;transform:scale(1.04)}
+.badges{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.badges span{background:var(--bg-canvas);color:var(--text-primary);border-radius:999px;padding:10px 18px;font:600 14px var(--sans)}
+@media (max-width:1000px){.logo-wall{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:700px){.sentences{grid-template-columns:1fr}.logo-wall{grid-template-columns:repeat(2,minmax(0,1fr));padding:20px}.lg{height:92px}}
+/* urgency: inset capsule */
+.urgency-wrap{padding:96px var(--gutter) 24px}
+.urgency{max-width:1200px;margin:0 auto;background:var(--navy);color:#fff;border-radius:999px;padding:48px 72px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+.urgency p{max-width:620px;font:400 18px/28px var(--sans);opacity:.9}
+@media (max-width:800px){.urgency{border-radius:40px;padding:36px 28px}}
+/* get involved: 1 + 2 bento */
+.involve{padding:88px var(--gutter)}
+.igrid{display:grid;grid-template-columns:1.1fr 1fr;grid-template-rows:auto auto;gap:24px;margin-top:40px}
+.icard{border-radius:32px;padding:24px;display:flex;flex-direction:column;gap:10px;text-decoration:none;transition:transform .45s var(--spring)}
+.icard:hover{transform:translateY(-4px)}
+.icard.big{grid-row:1/3;background:var(--bg-soft)}
+.icard.row{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
+.icard .h2{transition:font-weight .4s var(--spring)}.icard:hover .h2{font-weight:880}
+@media (max-width:900px){.igrid{grid-template-columns:1fr}.icard.big{grid-row:auto}.icard.row{grid-template-columns:1fr}}
+/* events: ticket cards */
+.events{padding:24px var(--gutter) 112px}
+.ecards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:36px 0 24px}
+.ticket{display:grid;grid-template-columns:150px 1fr 1.1fr;align-items:center;clip-path:url(#c-ticket);background:var(--white);text-decoration:none;min-height:220px;transition:transform .45s var(--spring)}
+.ticket:hover{transform:translateY(-4px)}
+.ticket .stub{align-self:stretch;background:var(--bg-primary);display:grid;place-items:center;text-align:center;padding:16px;border-right:3px dashed rgba(0,40,85,.25)}
+.ticket .stub b{font:900 40px/1 var(--sans);display:block}.ticket .stub span{font:700 16px var(--sans);text-transform:uppercase;letter-spacing:1px}
+.ticket .tx{padding:20px}
+.ticket .crop{width:calc(100% - 20px)}
+@media (max-width:1000px){.ecards{grid-template-columns:1fr}}
+@media (max-width:560px){.ticket{grid-template-columns:110px 1fr}.ticket .crop{display:none}}
+/* close */
+.close{background-color:var(--bg-primary);color:var(--on-primary);text-align:center;padding:200px var(--gutter) 112px}
+.close .display .script{color:var(--highlight)}
+.close .deco.star{right:-70px;top:110px;width:360px}
+.close .deco.a1{left:6%;top:150px;width:70px}.close .deco.a2{left:14%;bottom:120px;width:44px}
+.news{display:flex;justify-content:center;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-top:48px;text-align:left}
+.news label{display:block;font:500 14px var(--sans);margin-bottom:6px}
+.news input{min-height:52px;width:320px;max-width:100%;border-radius:999px;border:1.5px solid var(--navy);padding:0 20px;font:400 16px var(--sans);background:var(--bg-canvas)}
+@media (max-width:700px){.close .deco.star{width:200px;right:-60px;top:30px}.close .deco.a1,.close .deco.a2{display:none}}
+/* footer */
+footer{position:relative;background:var(--navy);color:#fff;padding:96px var(--gutter) 72px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px}
+footer::before{content:"";position:absolute;left:0;right:0;top:-23px;height:24px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24' viewBox='0 0 48 24'%3E%3Cpath d='M0 24a24 24 0 0 1 48 0Z' fill='%23002855'/%3E%3C/svg%3E")}
+footer h4{font:600 14px var(--sans);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+footer a{display:block;text-decoration:none;font:500 14px/32px var(--sans)}
+footer p{font:500 14px/24px var(--sans)}
+@media (max-width:800px){footer{grid-template-columns:repeat(3,1fr)}footer>div:first-child{grid-column:1/-1}}
+@media (max-width:560px){footer{grid-template-columns:1fr}}
+/* donation interstitial + bug */
+.give-dialog{margin:auto;border:0;padding:0;background:transparent;max-width:min(420px,calc(100vw - 32px));overflow:visible}
+.give-dialog::backdrop{background:rgba(0,40,85,.45);backdrop-filter:blur(2px)}
+.give-dialog[open]{animation:popIn .55s var(--spring)}
+@keyframes popIn{from{transform:translateY(24px) scale(.92);opacity:0}to{transform:none;opacity:1}}
+.donation{background:var(--bg-primary);color:var(--on-primary);border-radius:40px;padding:36px 32px 32px;display:flex;flex-direction:column;gap:16px}
+.donation .h3 .script{font-size:44px;color:var(--highlight)}
+.toggle,.amounts{display:flex;gap:8px;flex-wrap:wrap}
+.donation .chip{border-color:var(--navy)}
+.donation .chip[aria-pressed=true]{background:var(--action-bg);border-color:var(--action-bg)}
+.amounts .chip{border-radius:14px}
+.give-dialog .eyebrow{display:block;background:var(--bg-canvas);border-radius:999px;padding:8px 16px;margin:0 0 -14px 16px;position:relative;z-index:2;width:max-content}
+.give-close{position:absolute;right:-10px;top:-10px;z-index:3;width:44px;height:44px;border-radius:50%;border:0;background:var(--navy);color:#fff;font:700 24px/1 var(--sans);cursor:pointer;transition:border-radius .4s var(--spring)}
+.give-close:hover{border-radius:30%}
+.give-later{display:block;margin:12px auto 0;background:none;border:0;color:#fff;font:600 15px var(--sans);text-decoration:underline;cursor:pointer;min-height:44px}
+.give-bug{position:fixed;right:20px;bottom:20px;z-index:8;display:flex;align-items:center;gap:10px;min-height:56px;padding:10px 22px 10px 12px;border:0;border-radius:999px;background:var(--action-bg);color:var(--action-text);font:750 16px var(--sans);box-shadow:0 10px 30px rgba(169,32,97,.35);cursor:pointer;transition:transform .45s var(--spring),border-radius .45s var(--spring)}
+.give-bug:hover{transform:translateY(-3px) scale(1.04);border-radius:20px}
+.give-bug svg{width:36px;height:27px}
+.give-bug[hidden]{display:none}
+.note{position:fixed;left:50%;transform:translateX(-50%);top:8px;z-index:9;background:var(--navy);color:#fff;font:500 12px var(--sans);padding:6px 12px;border-radius:8px;opacity:.85}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<!-- Friendly 4:3 shape family (400x300). No hearts. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <clipPath id="c-arch" clipPathUnits="objectBoundingBox"><path transform="scale(0.0025 0.003333)" d="M0 276 V200 A200 200 0 0 1 400 200 V276 Q400 300 376 300 H24 Q0 300 0 276 Z"/></clipPath>
+  <clipPath id="c-squircle" clipPathUnits="objectBoundingBox"><path transform="scale(0.0025 0.003333)" d="M200 0 C360 0 400 30 400 150 C400 270 360 300 200 300 C40 300 0 270 0 150 C0 30 40 0 200 0 Z"/></clipPath>
+  <clipPath id="c-ticket" clipPathUnits="objectBoundingBox"><path transform="scale(0.0025 0.003333)" d="M24 0 H376 Q400 0 400 24 V126 A24 24 0 0 0 400 174 V276 Q400 300 376 300 H24 Q0 300 0 276 V174 A24 24 0 0 0 0 126 V24 Q0 0 24 0 Z"/></clipPath>
+  <clipPath id="c-capsule" clipPathUnits="objectBoundingBox"><path transform="scale(0.0025 0.003333)" d="M150 0 H250 A150 150 0 0 1 250 300 H150 A150 150 0 0 1 150 0 Z"/></clipPath>
+  <clipPath id="c-star" clipPathUnits="objectBoundingBox"><path transform="scale(0.0025 0.003333)" d="M200.0 0.0 L208.3 1.3 L216.2 5.2 L223.4 11.3 L229.6 19.3 L234.7 28.6 L238.6 38.5 L241.5 48.5 L243.7 57.9 L245.5 66.3 L247.3 73.1 L249.7 78.3 L252.9 81.7 L257.4 83.6 L263.4 84.0 L270.9 83.5 L279.9 82.6 L290.1 81.6 L301.1 81.1 L312.4 81.5 L323.4 83.2 L333.4 86.3 L341.9 90.8 L348.3 96.6 L352.2 103.6 L353.4 111.5 L351.9 119.7 L347.9 128.0 L341.7 136.0 L333.9 143.4 L325.0 150.0 L315.8 155.7 L306.9 160.5 L299.0 164.7 L292.6 168.5 L288.1 172.1 L285.6 176.1 L285.1 180.6 L286.5 186.1 L289.3 192.7 L293.1 200.4 L297.2 209.2 L301.1 218.9 L304.2 229.1 L305.9 239.4 L305.9 249.3 L303.9 258.2 L299.9 265.7 L294.0 271.4 L286.5 274.9 L277.7 276.1 L268.0 275.1 L258.0 272.0 L248.0 267.3 L238.6 261.5 L230.0 255.0 L222.4 248.6 L215.7 242.8 L209.9 238.3 L204.8 235.4 L200.0 234.4 L195.2 235.4 L190.1 238.3 L184.3 242.8 L177.6 248.6 L170.0 255.0 L161.4 261.5 L152.0 267.3 L142.0 272.0 L132.0 275.1 L122.3 276.1 L113.5 274.9 L106.0 271.4 L100.1 265.7 L96.1 258.2 L94.1 249.3 L94.1 239.4 L95.8 229.1 L98.9 218.9 L102.8 209.2 L106.9 200.4 L110.7 192.7 L113.5 186.1 L114.9 180.6 L114.4 176.1 L111.9 172.1 L107.4 168.5 L101.0 164.7 L93.1 160.5 L84.2 155.7 L75.0 150.0 L66.1 143.4 L58.3 136.0 L52.1 128.0 L48.1 119.7 L46.6 111.5 L47.8 103.6 L51.7 96.6 L58.1 90.8 L66.6 86.3 L76.6 83.2 L87.6 81.5 L98.9 81.1 L109.9 81.6 L120.1 82.6 L129.1 83.5 L136.6 84.0 L142.6 83.6 L147.1 81.7 L150.3 78.3 L152.7 73.1 L154.5 66.3 L156.3 57.9 L158.5 48.5 L161.4 38.5 L165.3 28.6 L170.4 19.3 L176.6 11.3 L183.8 5.2 L191.7 1.3 Z"/></clipPath>
+  <symbol id="s-star" viewBox="0 0 400 300"><path d="M200.0 0.0 L208.3 1.3 L216.2 5.2 L223.4 11.3 L229.6 19.3 L234.7 28.6 L238.6 38.5 L241.5 48.5 L243.7 57.9 L245.5 66.3 L247.3 73.1 L249.7 78.3 L252.9 81.7 L257.4 83.6 L263.4 84.0 L270.9 83.5 L279.9 82.6 L290.1 81.6 L301.1 81.1 L312.4 81.5 L323.4 83.2 L333.4 86.3 L341.9 90.8 L348.3 96.6 L352.2 103.6 L353.4 111.5 L351.9 119.7 L347.9 128.0 L341.7 136.0 L333.9 143.4 L325.0 150.0 L315.8 155.7 L306.9 160.5 L299.0 164.7 L292.6 168.5 L288.1 172.1 L285.6 176.1 L285.1 180.6 L286.5 186.1 L289.3 192.7 L293.1 200.4 L297.2 209.2 L301.1 218.9 L304.2 229.1 L305.9 239.4 L305.9 249.3 L303.9 258.2 L299.9 265.7 L294.0 271.4 L286.5 274.9 L277.7 276.1 L268.0 275.1 L258.0 272.0 L248.0 267.3 L238.6 261.5 L230.0 255.0 L222.4 248.6 L215.7 242.8 L209.9 238.3 L204.8 235.4 L200.0 234.4 L195.2 235.4 L190.1 238.3 L184.3 242.8 L177.6 248.6 L170.0 255.0 L161.4 261.5 L152.0 267.3 L142.0 272.0 L132.0 275.1 L122.3 276.1 L113.5 274.9 L106.0 271.4 L100.1 265.7 L96.1 258.2 L94.1 249.3 L94.1 239.4 L95.8 229.1 L98.9 218.9 L102.8 209.2 L106.9 200.4 L110.7 192.7 L113.5 186.1 L114.9 180.6 L114.4 176.1 L111.9 172.1 L107.4 168.5 L101.0 164.7 L93.1 160.5 L84.2 155.7 L75.0 150.0 L66.1 143.4 L58.3 136.0 L52.1 128.0 L48.1 119.7 L46.6 111.5 L47.8 103.6 L51.7 96.6 L58.1 90.8 L66.6 86.3 L76.6 83.2 L87.6 81.5 L98.9 81.1 L109.9 81.6 L120.1 82.6 L129.1 83.5 L136.6 84.0 L142.6 83.6 L147.1 81.7 L150.3 78.3 L152.7 73.1 L154.5 66.3 L156.3 57.9 L158.5 48.5 L161.4 38.5 L165.3 28.6 L170.4 19.3 L176.6 11.3 L183.8 5.2 L191.7 1.3 Z"/></symbol>
+  <symbol id="s-asterisk" viewBox="0 0 400 300"><path d="M200.0 0.0 L210.3 2.4 L219.8 9.0 L227.7 18.9 L233.9 30.3 L238.8 41.3 L243.2 50.4 L248.0 56.1 L254.5 58.1 L263.4 56.6 L275.0 52.6 L288.9 47.4 L304.0 42.6 L318.9 39.9 L331.9 40.1 L341.4 43.9 L346.5 51.1 L346.9 60.8 L343.2 72.0 L336.9 83.3 L329.9 93.8 L324.5 102.4 L322.5 109.1 L325.2 114.0 L332.9 117.6 L344.9 120.9 L359.6 124.6 L374.8 129.2 L387.9 135.2 L396.8 142.3 L400.0 150.0 L396.8 157.7 L387.9 164.8 L374.8 170.8 L359.6 175.4 L344.9 179.1 L332.9 182.4 L325.2 186.0 L322.5 190.9 L324.5 197.6 L329.9 206.2 L336.9 216.7 L343.2 228.0 L346.9 239.2 L346.5 248.9 L341.4 256.1 L331.9 259.9 L318.9 260.1 L304.0 257.4 L288.9 252.6 L275.0 247.4 L263.4 243.4 L254.5 241.9 L248.0 243.9 L243.2 249.6 L238.8 258.7 L233.9 269.7 L227.7 281.1 L219.8 291.0 L210.3 297.6 L200.0 300.0 L189.7 297.6 L180.2 291.0 L172.3 281.1 L166.1 269.7 L161.2 258.7 L156.8 249.6 L152.0 243.9 L145.5 241.9 L136.6 243.4 L125.0 247.4 L111.1 252.6 L96.0 257.4 L81.1 260.1 L68.1 259.9 L58.6 256.1 L53.5 248.9 L53.1 239.2 L56.8 228.0 L63.1 216.7 L70.1 206.3 L75.5 197.6 L77.5 190.9 L74.8 186.0 L67.1 182.4 L55.1 179.1 L40.4 175.4 L25.2 170.8 L12.1 164.8 L3.2 157.7 L0.0 150.0 L3.2 142.3 L12.1 135.2 L25.2 129.2 L40.4 124.6 L55.1 120.9 L67.1 117.6 L74.8 114.0 L77.5 109.1 L75.5 102.4 L70.1 93.7 L63.1 83.3 L56.8 72.0 L53.1 60.8 L53.5 51.1 L58.6 43.9 L68.1 40.1 L81.1 39.9 L96.0 42.6 L111.1 47.4 L125.0 52.6 L136.6 56.6 L145.5 58.1 L152.0 56.1 L156.8 50.4 L161.2 41.3 L166.1 30.3 L172.3 18.9 L180.2 9.0 L189.7 2.4 Z"/></symbol>
+ </defs>
+</svg>
+
+<nav aria-label="Main">
+  <a href="#"><img class="logo" src="../../raw/MiraclesForKids/logo_mfks.png" alt="Miracles for Kids"></a>
+  <div class="links">
+    <a href="https://miraclesforkids.org/families-weve-helped/">Family Stories</a>
+    <a href="https://miraclesforkids.org/how-we-help-2/">Programs</a>
+    <a href="https://miraclesforkids.org/why-we-help/">About</a>
+    <a href="https://miraclesforkids.org/take-action/our-events/">Events</a>
+    <a class="btn btn-ghost" href="https://miraclesforkids.volunteerhub.com/vv2/">Volunteer</a>
+    <a class="btn btn-primary" href="https://miraclesforkids.org/donate/">Donate</a>
+  </div>
+</nav>
+
+<main>
+<section class="hero" aria-labelledby="hero-h">
+  <img class="hero-bg" src="../../raw/production-site/Homepage_Desktop_EDIT_2-2.jpg" alt="A mother, father and daughter smiling together in a park">
+  <svg class="deco" viewBox="0 0 400 300" aria-hidden="true"><use href="#s-asterisk" fill="var(--bg-primary)"/></svg>
+  <div class="hero-text">
+    <span class="eyebrow">Miracles for Kids</span>
+    <h1 id="hero-h" class="display"><span class="heavy">Miracles</span> <span class="lite">look like a</span> <span class="script">normal Tuesday.</span></h1>
+    <p class="lead">Rent paid. Lights on. Dinner on the table. So families can focus on their kid.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="https://miraclesforkids.org/donate/">Donate</a>
+      <a class="video-chip" href="https://www.youtube.com/watch?v=GKu1Jh4S97M" aria-label="Watch William's story, 1 minute 43 seconds">
+        <span class="play"><svg viewBox="0 0 22 26"><path d="M0 0 L22 13 L0 26 Z" fill="#fff"/></svg></span>
+        <span class="cap">Watch William's story<br><span style="color:var(--text-secondary)">1:43</span></span>
+      </a>
+    </div>
+  </div>
+  <svg class="wave" style="bottom:-1px" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M 0 80 L 1440 80 L 1440 50 C 1200 -10 960 70 720 40 C 480 10 240 -10 0 40 Z" fill="var(--bg-canvas)"/></svg>
+</section>
+
+<section class="stories" aria-labelledby="st-h">
+  <span class="eyebrow">Family Stories</span>
+  <h2 id="st-h" class="h1"><span class="lite">Meet the</span> <span class="hl heavy">families.</span></h2>
+  <p class="lead">Real families. Real kids. Their words.</p>
+  <div class="filters" role="group" aria-label="Filter stories"><button class="chip" aria-pressed="true">All</button><button class="chip" aria-pressed="false">Video</button><button class="chip" aria-pressed="false">Read</button><button class="chip" aria-pressed="false">Where Are They Now?</button></div>
+  <div class="mosaic">
+    <a class="tile wide vid" style="color:#fff" href="https://www.youtube.com/watch?v=GKu1Jh4S97M">
+      <img class="poster" src="../../raw/MiraclesForKids/more_images/Gilette-childrens-web-10 copy.jpg" alt="Placeholder: a boy laughing with a toy"><span class="scrim"></span>
+      <span class="ph-note">Placeholder photo · replace with MFK family still</span>
+      <span class="play"><svg viewBox="0 0 22 26"><path d="M0 0 L22 13 L0 26 Z" fill="#fff"/></svg></span>
+      <span class="h2">William's miracle</span><span class="pill">Video · 1:43</span>
+    </a>
+    <div class="tile" style="background:var(--bg-primary);color:var(--on-primary)"><p class="quote">“To have help from Miracles for Kids lifts a weight from us…”</p><span class="cap">Maribel, a Miracles for Kids mom</span></div>
+    <a class="tile" href="https://miraclesforkids.org/families-weve-helped/?fam=0"><img class="poster" src="../../raw/MiraclesForKids/Michelle.jpg" alt="Michelle with her mother and brother"><span class="pill">Michelle's miracle · Read</span></a>
+    <a class="tile" style="color:#fff" href="https://www.youtube.com/watch?v=BFT26CmxsYY">
+      <img class="poster" src="../../raw/MiraclesForKids/more_images/Gilette-childrens-web-3 copy.jpg" alt="Placeholder: a smiling girl in glasses"><span class="scrim"></span>
+      <span class="ph-note">Placeholder photo</span>
+      <span class="play"><svg viewBox="0 0 22 26"><path d="M0 0 L22 13 L0 26 Z" fill="#fff"/></svg></span>
+      <span class="h3">Willow's miracle</span><span class="pill">Video · 3:01</span>
+    </a>
+    <a class="tile wide vid" style="color:#fff" href="https://www.youtube.com/watch?v=QAD2hSqy9oY">
+      <img class="poster" src="../../raw/MiraclesForKids/more_images/Gilette-childrens-web-12 copy.jpg" alt="Placeholder: a girl dancing outdoors with her mom"><span class="scrim"></span>
+      <span class="ph-note">Placeholder photo · replace with MFK family still</span>
+      <span class="play"><svg viewBox="0 0 22 26"><path d="M0 0 L22 13 L0 26 Z" fill="#fff"/></svg></span>
+      <span class="pill">Where Are They Now? · 2:26</span><span class="h2">Jeremiah's miracle</span><span>[They kept their home through it all.]</span>
+    </a>
+    <div class="tile drawing" aria-label="Placeholder for a child's drawing">
+      <div class="inner">
+        <svg viewBox="0 0 400 300" style="width:84px" aria-hidden="true"><use href="#s-asterisk" fill="var(--bg-primary)"/></svg>
+        <span class="script">A drawing by an MFK kid</span>
+        <span class="cap" style="color:var(--text-secondary)">[Placeholder. Collect real drawings, with consent, at the next Birthday Bash.]</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="truth pat-confetti" aria-labelledby="truth-h">
+  <svg class="wave" style="top:-1px" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M 0 0 L 1440 0 L 1440 30 C 1200 90 960 10 720 40 C 480 70 240 90 0 40 Z" fill="var(--bg-canvas)"/></svg>
+  <div class="badge" aria-label="Up to $500, every month"><svg viewBox="0 0 400 300" aria-hidden="true"><use href="#s-star" fill="var(--bg-secondary)"/></svg><div><b>$500</b><small>up to, every month</small></div></div>
+  <h2 id="truth-h" class="display"><span class="lite">Rent's due.</span> <span class="script">Miracles</span> <span class="heavy">too.</span></h2>
+  <p class="proofline">Up to $500 a month toward rent, utilities and the bills that don't stop for treatment.</p>
+  <a class="btn btn-ghost" href="https://miraclesforkids.org/pay-the-bills/">How the bills get paid</a>
+  <svg class="wave" style="bottom:-1px" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M 0 80 L 1440 80 L 1440 50 C 1200 -10 960 70 720 40 C 480 10 240 -10 0 40 Z" fill="var(--bg-canvas)"/></svg>
+</section>
+
+<section class="programs pat-wave" aria-labelledby="pr-h">
+  <span class="eyebrow">How we help</span>
+  <h2 id="pr-h" class="h1"><span class="lite">Five ways we</span> <span class="hl heavy">help.</span></h2>
+  <p class="lead">Each one takes a weight off a family.</p>
+  <div class="pgrid">
+    <a class="prog lead" href="https://miraclesforkids.org/pay-the-bills/"><img class="crop c-arch" src="../../raw/MiraclesForKids/KiaraSanchez.jpg" alt="A mother laughing with her toddler"><div class="body"><span class="k">Lifeline</span><span class="h2">The <span class="hl">lights-on</span> miracle</span><span>Up to $500 a month toward the bills.</span><span class="stat">[230+] families every month</span><span class="go" aria-hidden="true">→</span></div></a>
+    <a class="prog" href="https://miraclesforkids.org/housing/"><img class="crop c-arch" style="object-position:top" src="../../raw/MiraclesForKids/miracles-manor-2.png" alt="Miracle Manor, MFK's family housing"><div class="body"><span class="k">Safe Haven</span><span class="h3">The <span class="hl">home</span> miracle</span><span>Miracle Manor, around the corner from CHOC.</span><span class="stat">[22] families housed</span><span class="go" aria-hidden="true">→</span></div></a>
+    <a class="prog" href="https://miraclesforkids.org/heal/"><img class="crop c-squircle" src="../../raw/MiraclesForKids/banner-volunteer.jpg" alt="A mother hugging her daughter"><div class="body"><span class="k">Balance</span><span class="h3">The <span class="hl">hard-day</span> miracle</span><span>Counseling for the whole family.</span><span class="stat">[400+] people in therapy this year</span><span class="go" aria-hidden="true">→</span></div></a>
+    <a class="prog" href="https://miraclesforkids.org/feed-and-clothe/"><img class="crop c-star" src="../../raw/MiraclesForKids/takecard3.jpg" alt="A little girl sitting in a cardboard box"><div class="body"><span class="k">Boost</span><span class="h3">The <span class="hl">full-fridge</span> miracle</span><span>Food, clothes and essentials, every month.</span><span class="stat">[Box of Miracles monthly]</span><span class="go" aria-hidden="true">→</span></div></a>
+    <a class="prog sky" href="https://miraclesforkids.org/how-we-help-2/pillars/"><img class="crop c-squircle" src="../../raw/MiraclesForKids/work-3-scaled.jpg" alt="A father and son blowing bubbles on the grass"><div class="body"><span class="k">Pillars</span><span class="h3">The <span class="hl">what's-next</span> miracle</span><span>Jobs, school and a fresh start.</span><span class="stat">[78%] of those interviewed were hired</span><span class="go" aria-hidden="true">→</span></div></a>
+  </div>
+</section>
+
+<section class="proof pat-scallop" aria-labelledby="pf-h">
+  <h2 id="pf-h" class="h1" style="max-width:820px"><span class="lite">Trusted by the hospitals</span> <span class="heavy">that send us families.</span></h2>
+  <div class="sentences">
+    <div class="sentence" style="background:var(--bg-primary);color:var(--on-primary)">Up to $500 a month toward a family's bills.</div>
+    <div class="sentence" style="background:var(--bg-canvas);color:var(--text-primary)">[22] families living at Miracle Manor today.</div>
+  </div>
+  <div class="logo-wall" role="list" aria-label="Children's hospitals that refer families to Miracles for Kids">
+    <p class="logo-wall-k"><b>9</b> children's hospitals refer families to us</p>
+    <div class="lg" role="listitem"><img src="../../raw/production-site/logos/logo-choc.png" alt="CHOC Children's"></div>
+    <div class="lg" role="listitem"><img src="../../raw/production-site/logos/logo-chla.png" alt="Children's Hospital Los Angeles"></div>
+    <div class="lg" role="listitem"><img src="../../raw/production-site/logos/CityofHopeLogo2020.png" alt="City of Hope"></div>
+    <div class="lg" role="listitem"><img src="../../raw/production-site/logos/kisspng-rady-children-s-hospital.png" alt="Rady Children's Hospital San Diego"></div>
+    <div class="lg" role="listitem"><img src="../../raw/production-site/logos/logo-mattel.png" alt="UCLA Mattel Children's Hospital"></div>
+    <div class="lg" role="listitem"><img src="../../raw/production-site/logos/logo-ucsf2.png" alt="UCSF Benioff Children's Hospitals"></div>
+    <div class="lg" role="listitem"><img src="../../raw/production-site/logos/Loma-Linda.png" alt="Loma Linda University Children's Hospital"></div>
+    <div class="lg" role="listitem"><img src="../../raw/production-site/logos/By-the-Bay-Health-Logo.png" alt="By the Bay Health"></div>
+    <div class="lg" role="listitem"><img src="../../raw/production-site/logos/pc-phoenix-childrens-hosp-logo.png" alt="Phoenix Children's"></div>
+  </div>
+  <div class="badges"><span>Charity Navigator · [4-star]</span><span>Candid · [Platinum Transparency]</span><span>Audited financials, published every year</span></div>
+  <p style="margin-top:24px;font:650 16px var(--sans)"><a href="https://miraclesforkids.org/financials/">Our financials</a></p>
+</section>
+
+<div class="urgency-wrap">
+  <section class="urgency" aria-labelledby="ur-h">
+    <div><h2 id="ur-h" class="h2" style="font-size:clamp(28px,3.2vw,44px)"><span class="lite">There's a</span> <span class="heavy">waitlist.</span></h2><p>Families referred by children's hospitals are waiting for help with their bills. Your monthly gift moves one off the list.</p></div>
+    <a class="btn btn-sun" href="https://miraclesforkids.org/donate/">Donate</a>
+  </section>
+</div>
+
+<section class="involve" aria-labelledby="in-h">
+  <h2 id="in-h" class="h1"><span class="lite">More ways to</span> <span class="hl heavy">help.</span></h2>
+  <div class="igrid">
+    <a class="icard big" href="https://360miracle.org/"><img class="crop c-arch" src="../../raw/MiraclesForKids/card2.jpg" alt="Two MFK team members at an event"><p class="h2">Miracles, <span class="hl">together.</span></p><p>A circle of women giving all year.</p><span class="btn btn-ghost" style="align-self:flex-start">Join 360° Miracle</span></a>
+    <a class="icard row" style="background:var(--bg-secondary);color:var(--on-secondary)" href="https://miraclesforkids.volunteerhub.com/vv2/"><img class="crop c-ticket" src="../../raw/MiraclesForKids/2yg3tcwo.jpg" alt="Volunteers in matching shirts, arms around each other"><div><p class="h2">Join Team Miracles.</p><p>Wrap, pack, deliver, cheer.</p><span class="btn btn-sun" style="margin-top:12px">Volunteer</span></div></a>
+    <a class="icard row" style="background:var(--white)" href="https://miraclesforkids.org/our-partners/"><img class="crop c-squircle" src="../../raw/MiraclesForKids/BIRTHDAY-e1712945105405.png" alt="A child at the MFK Birthday Bash"><div><p class="h2"><span class="hl">Business</span> with purpose.</p><p>Give, sponsor, volunteer as a team.</p><span class="btn btn-ghost" style="margin-top:12px">Partner with us</span></div></a>
+  </div>
+</section>
+
+<section class="events" aria-labelledby="ev-h">
+  <h2 id="ev-h" class="h1"><span class="lite">See us</span> <span class="hl heavy">in person.</span></h2><p class="lead">Pack a basket. Play a game. Meet the families.</p>
+  <div class="ecards">
+    <a class="ticket" href="https://miraclesforkids.org/take-action/our-events/"><div class="stub"><div><span>Nov</span><b>14</b></div></div><div class="tx"><p class="h3">Wellness Fun Fest</p><p class="cap">Volunteers welcome</p></div><img class="crop c-squircle" src="../../raw/MiraclesForKids/takecard2.jpg" alt=""></a>
+    <a class="ticket" href="https://miraclesforkids.org/take-action/our-events/"><div class="stub"><div><span>Nov</span><b>18</b><span style="font-size:12px">to 24</span></div></div><div class="tx"><p class="h3">Thanksgiving Basket of Miracles</p><p class="cap">Assembly day Nov 21</p></div><img class="crop c-squircle" src="../../raw/MiraclesForKids/banner-donate.jpg" alt=""></a>
+  </div>
+  <p style="font:650 16px var(--sans)"><a href="https://miraclesforkids.org/take-action/our-events/">All events</a></p>
+</section>
+
+<section class="close" aria-labelledby="cl-h">
+  <svg class="wave" style="top:-1px" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M 0 0 L 1440 0 L 1440 30 C 1200 90 960 10 720 40 C 480 70 240 90 0 40 Z" fill="var(--bg-canvas)"/></svg>
+  <svg class="deco star" viewBox="0 0 400 300" aria-hidden="true"><use href="#s-star" fill="var(--bg-accent)"/></svg>
+  <svg class="deco a1" viewBox="0 0 400 300" aria-hidden="true"><use href="#s-asterisk" fill="var(--bg-secondary)"/></svg>
+  <svg class="deco a2" viewBox="0 0 400 300" aria-hidden="true"><use href="#s-asterisk" fill="var(--bg-accent)"/></svg>
+  <h2 id="cl-h" class="display" style="position:relative"><span class="lite">Make a</span> <span class="script">miracle</span> <span class="heavy">today.</span></h2>
+  <p style="font:400 20px var(--sans);margin:24px 0 32px;position:relative">It's easier than it sounds.</p>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative"><a class="btn btn-primary" href="https://miraclesforkids.org/donate/">Donate</a><a class="btn btn-ghost" href="https://miraclesforkids.volunteerhub.com/vv2/">Volunteer</a></div>
+  <form class="news" onsubmit="return false" aria-label="Newsletter (design only)" style="position:relative">
+    <div><p class="h3">Get the good news.</p><p class="cap">Family stories and ways to help, once a month.</p></div>
+    <div><label for="em">Email address</label><input id="em" type="email" placeholder="you@example.com"></div>
+    <button class="btn btn-primary" type="submit">Sign up</button>
+  </form>
+</section>
+</main>
+
+<footer>
+  <div><p class="h3" style="margin-bottom:16px">Helping the families who don't have time to ask for help.</p><p>17848 Sky Park Circle, Suite C, Irvine, CA 92614<br>(714) 730-3040 · info@miraclesforkids.org<br>Miracles for Kids is a 501(c)(3) nonprofit. EIN 91-2160616.</p></div>
+  <div><h4>Programs</h4><a href="https://miraclesforkids.org/pay-the-bills/">Lifeline</a><a href="https://miraclesforkids.org/housing/">Safe Haven</a><a href="https://miraclesforkids.org/heal/">Balance</a><a href="https://miraclesforkids.org/feed-and-clothe/">Boost</a><a href="https://miraclesforkids.org/how-we-help-2/pillars/">Pillars</a></div>
+  <div><h4>About</h4><a href="https://miraclesforkids.org/why-we-help/our-story/">Our Story</a><a href="https://miraclesforkids.org/our-team/">Our Team</a><a href="https://miraclesforkids.org/financials/">Financials</a><a href="https://miraclesforkids.org/newsroom/">Newsroom</a><a href="https://miraclesforkids.org/careers/">Careers</a></div>
+  <div><h4>Get Involved</h4><a href="https://miraclesforkids.org/donate/">Donate</a><a href="https://miraclesforkids.org/volunteer/">Volunteer</a><a href="https://360miracle.org/">360° Miracle</a><a href="https://miraclesforkids.org/our-partners/">Partners</a><a href="https://miraclesforkids.org/take-action/our-events/">Events</a></div>
+</footer>
+
+<dialog id="give" class="give-dialog" aria-labelledby="give-h">
+  <button class="give-close" type="button" aria-label="Close and minimize" data-close>×</button>
+  <span id="give-h" class="eyebrow" style="color:var(--highlight)">You just met the families</span>
+  <form class="donation" method="dialog" aria-label="Quick donation (design only)">
+    <p class="h3">Every <span class="script">month</span> counts.</p>
+    <p class="cap">Up to $500 a month keeps a family's lights on while their kid is in treatment.</p>
+    <div class="toggle" role="group" aria-label="Frequency"><button type="button" class="chip" aria-pressed="true">Monthly</button><button type="button" class="chip" aria-pressed="false">One-time</button></div>
+    <div class="amounts" role="group" aria-label="Amount"><button type="button" class="chip" aria-pressed="false">$[25]</button><button type="button" class="chip" aria-pressed="true">$[50]</button><button type="button" class="chip" aria-pressed="false">$[100]</button><button type="button" class="chip" aria-pressed="false">$[250]</button></div>
+    <button class="btn btn-primary" type="submit">Give monthly</button>
+    <span class="cap">EIN 91-2160616</span>
+  </form>
+  <button class="give-later" type="button" data-close>Maybe later</button>
+</dialog>
+<button id="give-bug" class="give-bug" type="button" aria-haspopup="dialog" aria-controls="give" hidden><svg viewBox="0 0 400 300" aria-hidden="true"><use href="#s-asterisk" fill="var(--bg-primary)"/></svg> Donate</button>
+<div class="note">Prototype · design only · [brackets] = pending MFK confirmation</div>
+
+<script>
+document.querySelectorAll('.toggle,.amounts,.filters').forEach(g=>g.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;g.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));}));
+// Donation interstitial: opens once, after the visitor has seen stories, truth and programs. Dismiss = minimize to the sticky bug.
+(function(){const d=document.getElementById('give'),bug=document.getElementById('give-bug');let seen=false;try{seen=localStorage.getItem('mfk-give-seen')==='1'}catch(e){}
+ const minimize=()=>{if(d.open)d.close();bug.hidden=false;try{localStorage.setItem('mfk-give-seen','1')}catch(e){}};
+ d.addEventListener('close',()=>{bug.hidden=false});
+ d.addEventListener('cancel',e=>{e.preventDefault();minimize();});
+ d.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',minimize));
+ d.addEventListener('click',e=>{if(e.target===d)minimize();});
+ bug.addEventListener('click',()=>{bug.hidden=true;d.showModal();});
+ if(seen){bug.hidden=false;return;}
+ const pr=document.querySelector('.programs');const io=new IntersectionObserver(es=>{es.forEach(en=>{if(!en.isIntersecting&&en.boundingClientRect.top<0){io.disconnect();d.showModal();}})});io.observe(pr);})();
+</script>
+</body>
+</html>

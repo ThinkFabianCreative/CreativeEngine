@@ -35,4 +35,4 @@ None exists yet. Each is created only when it holds material; the rules are in [
 
 ## Projects
 
-None recorded.
+- [website-rebrand](../website-rebrand/README.md): website rebranding and pivot, opened 2026-10-16
