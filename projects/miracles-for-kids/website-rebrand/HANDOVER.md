@@ -48,6 +48,12 @@ The larger original folders `raw/MiraclesForKids/` and `raw/production-site/` re
 4. Resolve bracketed claims and dates against MFK sources; newsletter is design-only. Preserve existing project approval questions in the brief/README.
 5. Review soft-blob buttons and organic dividers with Andres before expanding that styling.
 
+## Also in the repository
+
+- `work/reviews/mobile-m3e-audit/`: mobile Material 3 Expressive molecule audit of Figma frame 39:136 (contrast repairs, hierarchy, elevation), with before/after captures.
+- `work/reviews/cd-review_v2-landing_v01.md` and `work/reviews/design-review_prototype-v3_v01.md`: the Creative Director and designer reviews that drove v3.
+- `.claude/launch.json` is not committed (it points at a machine-specific temporary folder). On a new computer, serve from the repository root as described above.
+
 ## Handover verification
 
 The save task checked local image-path existence and versioned the source, documentation, token files and review artifacts. It did not perform a full visual or functional acceptance review and did not publish the website.
