@@ -20,14 +20,11 @@ http://localhost:8430/projects/miracles-for-kids/website-rebrand/work/prototype/
 
 The old Claude scratchpad preview is a temporary copy; use the repository version as the source of truth.
 
-## Transfer images separately
+## Prototype images included
 
-These folders are deliberately excluded from Git and must be copied from the original computer into the same project-relative locations:
+All 25 images used by the current prototype are versioned in `work/prototype/assets/` (about 5.6 MB total). The HTML references these portable copies, so no separate image transfer is needed to view the prototype on another computer.
 
-- `raw/MiraclesForKids/`
-- `raw/production-site/` (including `logos/`)
-
-`work/prototype/local-assets-manifest.json` lists the 25 unique image paths used by the prototype. All exist on the source computer at handover. A Git-only clone will have missing images until these folders are transferred. No shared cloud asset location has been confirmed.
+The larger original folders `raw/MiraclesForKids/` and `raw/production-site/` remain excluded. `work/prototype/local-assets-manifest.json` lists the included assets. Gillette placeholder photos remain labeled in the prototype and still need replacement before publication.
 
 ## Current state
 
@@ -45,7 +42,7 @@ These folders are deliberately excluded from Git and must be copied from the ori
 
 ## Next work
 
-1. Transfer the ignored image folders and verify all images load over HTTP. The supplied Claude screenshot showed broken images in its file preview; source image paths exist locally, but that does not confirm browser rendering.
+1. Open the repository prototype over HTTP and verify image rendering. All referenced images are now included; the old Claude file preview showed broken images before portable copies were added.
 2. Complete a visual review at 1440 and 375 pixels, including every section, crops, contrast, overflow, story filtering and donation dialog behavior. Claude was interrupted during its browser check; final visual acceptance is outstanding.
 3. Replace clearly labeled Gillette Children's placeholder story photos with approved MFK family stills. Do not publish the stand-ins as MFK families.
 4. Resolve bracketed claims and dates against MFK sources; newsletter is design-only. Preserve existing project approval questions in the brief/README.

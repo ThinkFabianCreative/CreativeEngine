@@ -69,7 +69,7 @@ Built from cd-review_v2-landing_v01.md plus Material 3 Expressive tactics (Andre
 - Framework: Material 3 Expressive tactics: shape variety + shape morph (play buttons, chips and buttons morph on hover/press), shaped containers, emphasized variable-font type (Outfit wght 100–900, Caveat 400–700: weight contrast 340/900 in headlines, weight shifts on hover, one load animation), spring easing, reduced-motion respected.
 - Hero (Andres, 2026-10-16): full-bleed production-site photo (raw/production-site/Homepage_Desktop_EDIT_2-2.jpg, a stock family). Note: this reverses the earlier "no stock heroes" rule at Andres's request; the Campbell family photo is the real-family alternative.
 - Mobile: hero stacks (photo, then navy text, then donation card). No horizontal scroll at 375 or 1440.
-- Preview: the app's sandbox can't serve from Documents, so a copy is served from the session scratchpad on localhost:8430. Images live in gitignored raw/ folders, so a clone won't show them.
+- Preview: the app's sandbox can't serve from Documents, so a copy is served from the session scratchpad on localhost:8430. The 25 images used by the prototype are included in work/prototype/assets/, so a clone can render the page. Original raw asset folders remain gitignored.
 - Donation (Andres, 2026-10-16): the form left the hero. It's now a dismissible interstitial (`<dialog>`) that opens once after the visitor scrolls past the family stories. "Maybe later", the close button, a backdrop click or Esc minimize it to a sticky "Donate" bug, which reopens it. Remembered per browser.
 - Story-first order: Hero → Family stories → Truth → Programs → Proof → Urgency → Get involved → Events → Close.
 - CTAs: Donate and Volunteer only (nav, hero, close; urgency is Donate).
