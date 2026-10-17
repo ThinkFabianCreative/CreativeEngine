@@ -1,5 +1,19 @@
 # Normalized Brief: SAPIEN M3 RESILIA animation
 
+> **Revision v04, 2026-10-15 (brief-machine). New raw source R4 normalized.** v03 is kept unchanged as [normalized-brief_v03.md](normalized-brief_v03.md). No raw source changed.
+>
+> R4 is `raw/R4_sapien-m3-eu-brochure-scan_2026-10-15.pdf`: Edwards' printed EU brochure for the **first-generation SAPIEN M3 system** (not M3 RESILIA), PP--EU-9557 v3.0, © 2026, Edwards Lifesciences Sàrl, Nyon. Supplied by Andres Fabian 2026-10-15. **PROJECT-LEVEL reference. Different product generation and different market. Not a claims source for SAPIEN M3 RESILIA in the U.S.** Wording transcribed by brief-machine from rendered page images (scan, rotated pages); small print marked where uncertain (§7.3).
+>
+> What changed:
+> - **§7.3 added:** R4 content, exact where legible.
+> - **Q2 PARTIALLY RESOLVED (still OPEN):** R4 states the first-generation SAPIEN M3 valve uses "Trileaflet bovine pericardial tissue treated with the ThermaFix tissue process". This is Edwards' own material and supports reading the client-knowledge ThermaFix entry as the first generation. Confirmation that SAPIEN M3 RESILIA is a separate valve with RESILIA tissue still rests on R3 alone.
+> - **Q12, Q18 narrowed (still OPEN):** R4's cover is very likely the campaign "red glass heart" R1 refers to, but unconfirmed; R4 gives first-generation device illustrations and dimensions, not an approved reference for the M3 RESILIA valve.
+> - **Q37 updated** with what R4 shows of the glass heart (still OPEN).
+> - **New questions Q39–Q43** (Q39–Q42 IMPORTANT, Q43 MINOR): Edwards' own "evolution" usage vs R1's ban; R4's grey/glossy look vs R1's beige mandate; whether "Touch more lives. Treat more MR." is the campaign line for the U.S. M3 RESILIA launch; R4 vs R3 claim wording divergences; EU data and timeline. Register now 43 IDs.
+> - **§16.2 / §17:** v03 proposition moved into the handoff fields INSIGHT / PROPOSITION / DESIRED RESPONSE (`brief-normalization.md` §14), content unchanged; desired response OPEN. New §16.2.5: what R4 means for the current territory slate.
+>
+> ---
+>
 > **Revision v03, 2026-10-15 (brief-machine). STRATEGY IMPROVEMENT, requested by Andres Fabian (user), 2026-10-15.** v02 is kept unchanged as [normalized-brief_v02.md](normalized-brief_v02.md); v01 as [normalized-brief_v01.md](normalized-brief_v01.md). No raw source changed. Sections 1–15 keep their source content; the only additions there are three new questions in §14 and their counts.
 >
 > What changed:
@@ -40,9 +54,9 @@
 | Project | SAPIEN M3 RESILIA animation. Named by Andres Fabian (user), 2026-10-14, when he supplied the brief. R1's own title: "Edwards SAPIEN M3 RESILIA Animation" |
 | Brand / offering | Edwards Lifesciences · SAPIEN M3 RESILIA system. R1: "the new SAPIEN M3 RESILIA system"; R3: "The fully transseptal SAPIEN M3 RESILIA TMVR system" |
 | Market | U.S. (R1: "One 60-second U.S. animation", "One 30-second U.S. animation cutdown") |
-| Sources | **R1** "Edwards_SAPIEN M3 RESILIA_Creative Brief.docx", dated 10/6/26, Drive last modified 2026-10-07. Read via `raw/R1_creative-brief_2026-10-14-capture.md` (verbatim capture, 2026-10-14). PROJECT-LEVEL. **R2** Google Sheet "ELS \| ANIMATION TIMELINE", linked from R1. Partial read 2026-10-14, see `raw/README.md`. PROJECT-LEVEL. **R3** `raw/Edwards Lifesciences.txt`, "SM3R Updated Product Messaging Pillars - EW provided on 9/30 - see comments throughout". A text transcription of a scan, with uncertain readings of handwritten notes. Transcriber not stated. Supplied by the user 2026-10-14; SHA-256 begins e31b1beb. PROJECT-LEVEL. Matches by title the "SM3R EW Provided messaging_9-30-26" that R1 refers to; whether it is the latest version is unconfirmed (Q31). **Client knowledge** (cited, CLIENT-LEVEL): `client/knowledge/claims-and-evidence-rules.md` (2026-10-03, CURRENT); `portfolio-and-clinical-language.md` (2026-10-03, refined 2026-10-14; AS SUPPLIED, not Edwards-approved); `brand-identity-standards.md` (2026-10-07, CURRENT); `traffik-work-history.md` (2026-10-03, HISTORICAL); `relationship-and-account-growth.md` (2026-10-03, CURRENT, internal) |
-| Built from | R1 (capture 2026-10-14), R2 (partial read 2026-10-14), R3 (as filed 2026-10-14) |
-| Normalized by | brief-machine, 2026-10-14 (v01); revised 2026-10-14 (v02); strategy improvement 2026-10-15 (v03) |
+| Sources | **R1** "Edwards_SAPIEN M3 RESILIA_Creative Brief.docx", dated 10/6/26, Drive last modified 2026-10-07. Read via `raw/R1_creative-brief_2026-10-14-capture.md` (verbatim capture, 2026-10-14). PROJECT-LEVEL. **R2** Google Sheet "ELS \| ANIMATION TIMELINE", linked from R1. Partial read 2026-10-14, see `raw/README.md`. PROJECT-LEVEL. **R3** `raw/Edwards Lifesciences.txt`, "SM3R Updated Product Messaging Pillars - EW provided on 9/30 - see comments throughout". A text transcription of a scan, with uncertain readings of handwritten notes. Transcriber not stated. Supplied by the user 2026-10-14; SHA-256 begins e31b1beb. PROJECT-LEVEL. Matches by title the "SM3R EW Provided messaging_9-30-26" that R1 refers to; whether it is the latest version is unconfirmed (Q31). **R4** `raw/R4_sapien-m3-eu-brochure-scan_2026-10-15.pdf`, Edwards EU brochure for the first-generation SAPIEN M3 system, PP--EU-9557 v3.0, © 2026, Edwards Lifesciences Sàrl. Scan, 5 pages. Supplied by the user 2026-10-15. PROJECT-LEVEL **reference only**: other generation, other market; not a claims source for SAPIEN M3 RESILIA U.S. (§7.3). **Client knowledge** (cited, CLIENT-LEVEL): `client/knowledge/claims-and-evidence-rules.md` (2026-10-03, CURRENT); `portfolio-and-clinical-language.md` (2026-10-03, refined 2026-10-14; AS SUPPLIED, not Edwards-approved); `brand-identity-standards.md` (2026-10-07, CURRENT); `traffik-work-history.md` (2026-10-03, HISTORICAL); `relationship-and-account-growth.md` (2026-10-03, CURRENT, internal) |
+| Built from | R1 (capture 2026-10-14), R2 (partial read 2026-10-14), R3 (as filed 2026-10-14), R4 (as filed 2026-10-15, read from page images) |
+| Normalized by | brief-machine, 2026-10-14 (v01); revised 2026-10-14 (v02); strategy improvement 2026-10-15 (v03); R4 added 2026-10-15 (v04) |
 | Status | DRAFT |
 | Derived layer | STRATEGY IMPROVEMENT (§16.2, requested by the user 2026-10-15). Audience intelligence not run (no targeting data); the audience in §16.2 is a hypothesis from the indication, not from data |
 | Resources not reviewed | RS4, RS5, RS6, RS7, RS8, RS9, RS10, RS11, RS17 (§15) |
@@ -214,6 +228,46 @@ In R3's body, the "*" marker appears only on the EOA line (C21) and the "†" ma
 
 **Handwritten annotations:** see §13 (SOURCE HYPOTHESIS, author unknown) and Q34.
 
+### 7.3 From R4: first-generation SAPIEN M3, EU brochure (reference only, added v04)
+
+**Scope.** SOURCE FACT about Edwards' EU communication for the **first-generation SAPIEN M3 system** (PP--EU-9557 v3.0, © 2026, "Edwards Lifesciences Sàrl • Route de l'Etraz 70, 1260 Nyon, Switzerland"; "Medical device for professional use"). It is evidence of how Edwards has presented the platform and campaign in Europe. **It is not U.S. messaging, not SAPIEN M3 RESILIA messaging, and not eligible support for any claim in §9.** Nothing here enters the claim ledger. Where R4 and R3 differ, R3 governs this project's messaging; the differences are recorded as Q39–Q42, not resolved.
+
+Transcribed by brief-machine from page images of a rotated scan. Headlines and body copy are clear; footnotes, references and timeline captions are small and partly blurred: marked "[approx.]" where the reading is uncertain.
+
+**p1 · Cover**
+- Eyebrow: "SAPIEN M3 System for TMVR"
+- Headline: "Touch more lives. Treat more MR."
+- Body: "The first and only approved fully transseptal approach to mitral valve replacement. Built on proven SAPIEN technology, designed to treat mitral regurgitation."
+- Image (described, not reconstructed): a red, translucent glass anatomical heart with the white dock-and-valve implant visible inside at the mitral position; the heart sits on a reflective surface against a light grey, soft-gradient ground; a small solid red square at the image's lower left; Edwards logo (grey). The heart is static; no motion is implied in print.
+
+**p2 · Platform and burden**
+- Headline: "The latest evolution of SAPIEN technology, designed to treat the mitral valve"
+- Indication line: "Treat more MR with the SAPIEN M3 system for patients with symptomatic moderate-to-severe or severe MR or symptomatic MAC-associated mitral valve dysfunction, including MR and/or MS, who are unsuitable for surgery or TEER.†" Footnote † (small print, [approx.]): MAC-associated mitral valve dysfunction includes moderate-to-severe or severe MR, severe MS, or moderate MR with moderate MS; "See the Instructions for Use (IFU) for full indications."
+- "A legacy of success: The SAPIEN platform has been used in over 1 million procedures globally, including the use of the SAPIEN 3 platform in 10,000+ mitral procedures.*" · "*As of Q3 2025"
+- Hero image: dock and valve assembly, close-up; leaflets visible in a yellow-tan tone inside the white skirt.
+- "The opportunity to advance mitral regurgitation care. MR contributes to the overall disease burden of heart failure and represents a major patient and societal burden." Stat tiles (footnoted, several "Based on US data" / "in a nation-wide study in France" [approx.]): MR affects approximately one in ten adults over 75 years; 79% of patients with isolated moderate-to-severe MR and a Class I surgical indication go untreated; approximately two-thirds of MR patients were readmitted at least once; 39% of MR patients presented with heart failure; MR represented an extrapolated annual cost of 350–550M euros; 50% mortality rate for non-operated patients with severe MR at 5 years. Symptom icons: shortness of breath, feeling fatigued, swelling of hands and feet, heart palpitations.
+
+**p3 · Device**
+- Headline: "One system. Two parts. MR treatment reimagined."
+- Subhead: "The SAPIEN M3 transcatheter mitral valve replacement (TMVR) system significantly reduces mitral regurgitation.¹¹"
+- "SAPIEN M3 Dock: Encircles and captures the native mitral leaflets to create a stable and standardized landing zone for the SAPIEN M3 valve." Callouts: "Radiopaque markers to visualize proper positioning and deployment within the anatomy" · "Nitinol PVL guard expands in the medial commissure" · "Functional turns provide a stable anchor for the SAPIEN M3 valve" · "Encircling turn captures the native mitral leaflets"
+- "SAPIEN M3 Valve: Built on the proven SAPIEN technology, optimized to treat mitral regurgitation." Callouts: "Cobalt-chromium alloy frame provides radial strength and good visibility under fluoroscopy" · "Trileaflet bovine pericardial tissue treated with the ThermaFix tissue process" · "Full-frame PET skirt respects the native anatomy" · "Single 29mm valve can treat a variety of mitral anatomies"
+- Four procedure illustrations (cutaway heart, circular crops, joined by a dotted line): "Transseptal access: The low-profile Edwards 23F inner diameter guide sheath is used for both the dock and valve delivery, providing a minimally invasive transseptal approach to TMVR.¹²" · "Dock delivery: The SAPIEN M3 dock steerable catheter enables responsive navigation and positioning of the dock. The dock is repositionable and retrievable prior to dock release." · "Valve delivery: The Edwards Commander M delivery system uses on-balloon valve crimping and allows accurate valve positioning for controlled deployment." · "Final implant: The SAPIEN M3 system delivers significant MR reduction with proven safety profile and meaningful health status improvements.¹¹"
+
+**p4 · Innovation and legal**
+- Headline: "Producing a steady beat of innovation" · "Edwards is committed to advancing transcatheter mitral and tricuspid therapies."
+- Timeline labeled "Approved in Europe", 2015–2025 [captions approx.]: Cardioband (mitral, tricuspid; "*Cardioband has been discontinued and is not available for commercial use"), PASCAL and PASCAL Ace systems, PASCAL stabilizer and Precision systems, Edwards reusable accessories, EVOQUE tricuspid valve replacement system, EVOQUE 56mm valve size, and at 2025 "SAPIEN M3 Transcatheter Mitral Valve Replacement System". "Future innovations: Edwards is developing a portfolio of differentiated solutions, from transcatheter valve repair to replacement, that will continue to transform care for underserved patient populations." [approx.]
+- "Learn more about the SAPIEN M3 system at Edwards.com/gb/SAPIENM3" (QR code)
+- References 1–12 (journal citations and Penn Medicine web pages; ref. 11 reads as Guerrero M, et al. Lancet 2025, a transseptal TMVR study [approx.]); trademark line naming "SAPIEN M3" and "ThermaFix" among Edwards trademarks; "© 2026 Edwards Lifesciences Corporation. All rights reserved. PP--EU-9557 v3.0"
+
+**p5 · Technical specifications** (page printed inverted)
+- "SAPIEN M3 Transcatheter Mitral Valve Replacement System · Technical Specifications"; anatomical cutaway with implant; "1 SAPIEN M3 Dock": "Dock height: 23 mm", "Ascending segment height: 12 mm", reference number "N/A (See SAPIEN M3 Dock Steerable Catheter)"; "2 SAPIEN M3 Valve": "Valve width: 29 mm", "Valve height: 22.5 mm", reference number "9880TFX29MCE".
+
+**What R4 adds, DERIVED observations:**
+- R4's dock description ("Encircles and captures the native mitral leaflets to create a stable and standardized landing zone") and "repositionable and retrievable prior to dock release" agree in substance with R3 (C10, C20) for the first generation. Agreement raises confidence that the mechanism language is Edwards' own; it does not verify either claim for M3 RESILIA. R4 does not use R3's "draw inward / rather than expanding outward" language.
+- R4 names the first-generation valve's tissue (ThermaFix), which bears on Q2.
+- R4 shows the campaign image R1 likely refers to (Q12, Q37, Q41) and a look that differs from R1's beige mandate (Q40).
+
 ## 8. Offering briefs
 
 Single offering. §5, §7, §9 and §11 hold its content. No overrides.
@@ -349,7 +403,7 @@ Overlap notes:
 
 ## 14. Open questions, conflicts & ambiguities
 
-38 IDs: **0 BLOCKER, 5 CLAIM BLOCKER, 23 IMPORTANT, 9 MINOR, 1 RESOLVED** (37 open). Q36–Q38 added in v03, 2026-10-15.
+43 IDs: **0 BLOCKER, 5 CLAIM BLOCKER, 27 IMPORTANT, 10 MINOR, 1 RESOLVED** (42 open). Q36–Q38 added in v03; Q39–Q43 added in v04 (R4), 2026-10-15. Q2 is partially resolved by R4 and stays OPEN.
 
 ### RESOLVED
 
@@ -453,13 +507,20 @@ SOURCE SAYS:                  A · client knowledge, CLIENT-LEVEL, 2026-10-03, A
                               C · R3, PROJECT-LEVEL, EW provided 9/30: "The next-generation valve with RESILIA tissue and
                               refined leaflet geometry" · "(*compared to the first-generation SAPIEN M3 valve)"
                               R3 does not state the first generation's tissue.
+                              D · R4 (v04), PROJECT-LEVEL reference, Edwards EU brochure for the first-generation SAPIEN
+                              M3 (PP--EU-9557 v3.0): SAPIEN M3 Valve: "Trileaflet bovine pericardial tissue treated with
+                              the ThermaFix tissue process"; valve ref. "9880TFX29MCE".
 AFFECTS:                      C9, C21; client knowledge entry (not changed here)
 BLOCKS:                       NOTHING YET (claim use now restricted by C9's ledger status)
-SAFE HANDLING UNTIL RESOLVED: DERIVED. Inference, not fact: the ThermaFix entry plausibly describes the first-generation
-                              valve. State RESILIA tissue only for the next-generation valve, in R3's wording. Make no
-                              tissue statement about the first generation.
-RESOLUTION:                   OPEN (domain owner: client product information; client-knowledge update needs user
-                              confirmation)
+PARTIAL (v04):                First half answered by Edwards' own material: the first-generation SAPIEN M3 valve uses
+                              ThermaFix-treated tissue (R4, EU labeling). The client-knowledge entry is consistent with
+                              the first generation. Still open: Edwards confirmation that SAPIEN M3 RESILIA is the
+                              separate next-generation valve with RESILIA tissue (R3 only), and whether the U.S. first
+                              generation matches the EU one. No client-knowledge update without user confirmation.
+SAFE HANDLING UNTIL RESOLVED: DERIVED. State RESILIA tissue only for the next-generation valve, in R3's wording. Make no
+                              tissue statement about the first generation on screen (R4 is EU, other product).
+RESOLUTION:                   PARTIALLY RESOLVED, OPEN (domain owner: client product information; client-knowledge
+                              update needs user confirmation)
 OWNER:                        unknown (client to confirm)
 ```
 
@@ -572,9 +633,19 @@ OWNER:                        internal (user)
 Q12 IMPORTANT · GAP
 QUESTION:                     When will the campaign agency's finalized concept artwork be supplied?
 SOURCE SAYS:                  "The campaign agency is in the middle of artwork finalization with the below concept."
+                              R4 (v04): printed EU cover "Touch more lives. Treat more MR." with a red glass heart
+                              containing the implant, light grey ground, red square (§7.3).
+NEW EVIDENCE (v04):           DERIVED, LIKELY, UNCONFIRMED: R4's cover is the "Red glass heart" R1 asks to keep, or an
+                              earlier, EU, first-generation execution of the same campaign. Basis: a red glass heart is
+                              rare and specific; same client, same platform, © 2026. Against: R1 says the artwork is
+                              still "in finalization" while R4 is already printed; R4 is EU and first generation; R1's
+                              "heart moving forward" and beige ground do not appear in R4. R4 is therefore not the
+                              finalized artwork for this animation (Q41).
 AFFECTS:                      P1 storyboard and design frames; mandatories 5–7
 BLOCKS:                       NOTHING YET (becomes blocking at storyboard design frames)
-SAFE HANDLING UNTIL RESOLVED: DERIVED. Do not reconstruct the campaign's heart or look from description.
+SAFE HANDLING UNTIL RESOLVED: DERIVED. Do not reconstruct the campaign's heart or look from description. R4 may be
+                              used internally as a reference for what the glass heart is; not traced, recreated or
+                              presented as this campaign's artwork.
 OWNER:                        unknown (campaign agency, via client)
 ```
 
@@ -643,8 +714,19 @@ QUESTION:                     What approved device reference will the animation 
 SOURCE SAYS:                  R3 now describes the mechanism in words (C10): dock captures anterior and posterior
                               leaflets, inward radial force, chordae toward dock center, leaflet-based anchoring. No
                               visual reference supplied.
+                              R4 (v04) provides, for the FIRST-GENERATION SAPIEN M3 only: product renders of dock and
+                              valve; named dock parts (encircling turn, functional turns, nitinol PVL guard,
+                              radiopaque markers); valve parts (cobalt-chromium frame, trileaflet tissue, full-frame
+                              PET skirt); four procedure illustrations; dimensions (dock height 23 mm, ascending
+                              segment 12 mm; valve 29 mm wide, 22.5 mm high; valve ref. 9880TFX29MCE).
+                              R4 does NOT provide: the M3 RESILIA valve (RESILIA tissue, "refined leaflet geometry"
+                              per R3), production-grade 3D/CAD files, the dock's inward-draw motion, or approval to
+                              depict. Scan quality only.
 AFFECTS:                      C10, C20; P1 animation production
 BLOCKS:                       NOTHING YET (blocks production, not script)
+SAFE HANDLING UNTIL RESOLVED: DERIVED. R4 may guide internal understanding of dock form (coil with turns) and procedure
+                              order. Do not build or show the valve from R4 as M3 RESILIA: the leaflets and tissue
+                              differ. Approved M3 RESILIA reference still required.
 OWNER:                        unknown
 ```
 
@@ -708,6 +790,10 @@ SOURCE SAYS:                  A · R1, PROJECT-LEVEL (client mandatory, §11 ite
                               items; it does not say the moving heart must be the glass heart.
                               C · User direction, Andres Fabian, 2026-10-15, this project only: he would prefer not to
                               use the red glass heart.
+                              D · R4 (v04): Edwards' EU cover uses the glass heart as the lead image, with the implant
+                              visible inside it, static, on light grey. Evidence that the glass heart is an established
+                              Edwards campaign asset already in market (EU), which raises the cost of dropping it.
+                              Also shows one job it does: a window onto the device in place. Neither side resolved.
 AFFECTS:                      Mandatories 5–6; P1 opening and closing images; §16.2 propositions (all three survive
                               either way)
 BLOCKS:                       NOTHING YET (exploration may test both; anything Edwards-facing keeps the glass heart
@@ -733,6 +819,75 @@ SAFE HANDLING UNTIL RESOLVED: DERIVED. Show "outward" only as an abstract force,
 OWNER:                        unknown (MLR)
 ```
 
+```
+Q39 IMPORTANT · CONFLICT (source divergence)  (added v04, 2026-10-15; extends Q17)
+QUESTION:                     R1 bans "evolve"; Edwards' own printed material uses "evolution" for this platform. Is
+                              the ban about the dropped "Evolve" campaign concept only, or all evolve/evolution
+                              language, including the lineage idea?
+SOURCE SAYS:                  R1: "Please do not use "evolve." We are not moving forward with the Evolve concept" ·
+                              R1 pillar 3: "SAPIEN 3 pipeline/evolution".
+                              R4 p2 headline: "The latest evolution of SAPIEN technology, designed to treat the
+                              mitral valve" (EU, first generation). R3 avoids the word.
+AFFECTS:                      Q17; C11; LEGACY on-screen text; any "lineage" visual
+BLOCKS:                       NOTHING YET
+SAFE HANDLING UNTIL RESOLVED: DERIVED. R1 governs this project: "evolve", "evolution" and variants stay off screen. R4's
+                              usage is not permission.
+OWNER:                        R1 author / client
+```
+
+```
+Q40 IMPORTANT · CONFLICT (source divergence: look)  (added v04, 2026-10-15)
+QUESTION:                     Is the beige/tan ground a deliberate new direction for the U.S. M3 RESILIA launch, replacing
+                              the light grey, glossy, reflective look of R4's cover? Must the glass-heart render style
+                              (gloss, reflection, translucency) carry over?
+SOURCE SAYS:                  R1: "Let's use the beige/tan background color as the main color".
+                              R4 cover: red glass heart on a light grey, soft-gradient, reflective ground; white page;
+                              small red square; grey Edwards logo.
+                              Client level: V4 "Red and titanium brand" (brand-identity-standards.md).
+AFFECTS:                      Mandatory 7; Q15; P1 design frames; current slate (beige grounds)
+BLOCKS:                       NOTHING YET
+SAFE HANDLING UNTIL RESOLVED: DERIVED. R1's beige mandate governs this project. R4's grey is a record of EU execution,
+                              not a direction. Do not blend the two into a new palette without Edwards.
+OWNER:                        client / campaign agency
+```
+
+```
+Q41 IMPORTANT · AMBIGUITY  (added v04, 2026-10-15; sharpens Q12, Q27)
+QUESTION:                     Is "Touch more lives. Treat more MR." with the red glass heart the campaign concept R1
+                              refers to ("the campaign concept below")? Will it carry into the U.S. M3 RESILIA launch,
+                              and may the animation use or echo the line?
+SOURCE SAYS:                  R1: "The animation will be developed based on the campaign concept below" · "Red glass
+                              heart: Yes please keep" · "The visual of the heart moving forward … This will be our main
+                              concept". R4 cover: "Touch more lives. Treat more MR." with the glass heart. R1 and R3
+                              never quote this line.
+AFFECTS:                      S1, S2; mandatories 5–6; end line and supers in P1; Q12, Q27, Q37
+BLOCKS:                       NOTHING YET
+SAFE HANDLING UNTIL RESOLVED: DERIVED. Treat the line as Edwards EU copy for another product: do not put it on screen
+                              or build on it as this campaign's line. "Treat more MR" also implies broader eligibility
+                              (Q42). Record, do not adopt.
+OWNER:                        client (via R1 author)
+```
+
+```
+Q42 IMPORTANT · CONFLICT (source divergence: claims wording)  (added v04, 2026-10-15)
+QUESTION:                     R4 words several claims differently from R3. Which differences reflect product, market or
+                              date, and does any R4 wording exist in approved U.S. form for M3 RESILIA?
+SOURCE SAYS:                  - "The first and only approved fully transseptal approach to mitral valve replacement" (R4
+                                cover, EU). R3: no "first and only", no approval language.
+                              - "significantly reduces mitral regurgitation" / "significant MR reduction with proven
+                                safety profile and meaningful health status improvements" (R4). R3: "near MR
+                                elimination" (Q30).
+                              - "the SAPIEN 3 platform in 10,000+ mitral procedures … *As of Q3 2025" (R4). R3: "more
+                                than 11,000 mitral procedures … as of year-end 2025" (C23, Q35).
+                              - "Single 29mm valve can treat a variety of mitral anatomies" (R4, first generation).
+                              - R4 MR-burden statistics, partly EU/French data.
+AFFECTS:                      C1, C8, C23; Q5, Q30, Q35; any copy borrowing R4 phrasing
+BLOCKS:                       NOTHING YET (R4 is not a claims source, so it restricts nothing it could have supported)
+SAFE HANDLING UNTIL RESOLVED: DERIVED. No R4 claim wording on screen. No "first", "only" or "approved" (Q5). The 10,000+
+                              vs 11,000 difference is consistent with later data but is recorded, not reconciled.
+OWNER:                        unknown (MLR / claims library)
+```
+
 ### MINOR SOURCE GAPS
 
 - Q22 · CONFLICT. R1: "focused on structural heart disease and critical cardiovascular care". Client knowledge: Critical Care divested (BD acquisition completed 2024-09-03). (affects C12)
@@ -744,6 +899,7 @@ OWNER:                        unknown (MLR)
 - Q28 · GAP. R2 holds leftover template rows unrelated to this assignment; does a clean timeline exist? (affects Q6)
 - Q34 · AMBIGUITY. R3's handwritten annotations: who wrote them, the readings ("approximate"; one "not reliably legible") and whether they are direction. The untranscribed marks (arrows, underlines, highlighting) are not captured. Recorded as H7–H10. (affects §13; Q31, Q32)
 - Q35 · AMBIGUITY. C23: does "as of year-end 2025" apply to both figures? How do "The SAPIEN platform" (1 million) and "the SAPIEN 3 platform" (11,000 mitral) relate? (affects C23)
+- Q43 · AMBIGUITY (added v04). R4's p4 timeline ("Producing a steady beat of innovation", "Approved in Europe") and "Future innovations" copy place SAPIEN M3 in an Edwards TMTT sequence. EU approvals only; small print partly illegible in the scan. Whether a U.S. version exists, and whether the "steady beat" framing is a campaign idea or brochure copy, is unknown. Also: the R4 scan's small print (references, footnote †, timeline captions) needs the original PDF for exact reading. (affects H3, C11, Q39)
 
 ## 15. Resource registry
 
@@ -767,6 +923,8 @@ OWNER:                        unknown (MLR)
 | RS16 | `client/knowledge/relationship-and-account-growth.md` | client layer | REVIEWED | SUPPORTING | Q7 |
 | RS17 | The original scanned messaging document behind R3, with its "comments throughout" | R3 title | REFERENCED, NOT AVAILABLE | REQUIRED BEFORE CLAIM USE (to check the transcription) | Q31, Q32, Q34 |
 | RS18 | Edwards claims library; MAC Registry source; RWE source for EOA | R3 footnote * | REFERENCED, NOT AVAILABLE | REQUIRED BEFORE CLAIM USE | Q3, Q10, Q29, C17, C21 |
+| RS19 | R4 `raw/R4_sapien-m3-eu-brochure-scan_2026-10-15.pdf`, first-generation SAPIEN M3 EU brochure (scan) | user, 2026-10-15 | REVIEWED (page images; small print partly illegible) | SUPPORTING (reference only; not a claims source) | §7.3; Q2, Q12, Q18, Q37, Q39–Q43 |
+| RS20 | Original digital PDF of PP--EU-9557 and any U.S. equivalent | R4 | REFERENCED, NOT AVAILABLE | SUPPORTING | Q43 |
 
 ## 16. Derived layer
 
@@ -797,16 +955,24 @@ Not run: no audience data.
 
 ```
 PROPOSITION A (RECOMMENDED)   DERIVED
-SINGLE-MINDED PROPOSITION:  It draws the anatomy in, instead of pushing against it.
+(v04: fields relabeled to the brief-normalization.md §14 handoff fields; content unchanged from v03)
+INSIGHT:                    Anatomy has been the gatekeeper because devices have been asked to fit it. Stop asking
+                            the anatomy to fit the device. (W4 replacement)
+                            Observation: R3's indication names patients "unsuitable for surgery or TEER"; R3 pairs
+                            "Heterogeneous Anatomy" with "Reproducible Replacement" (C10, C13).
+                            Interpretation: anatomy, not clinical will, decides who qualifies and how predictable
+                            the procedure is. Inference about the category, no research supplied (Q36, Q38).
+                            Implication: a device that works with the anatomy, not against it, is the story.
+PROPOSITION:                It draws the anatomy in, instead of pushing against it.
                             (Benefit layer, not a line: so a different mitral every time becomes the same
                             landing zone every time.)
+DESIRED RESPONSE:           OPEN. Not supplied by R1 or R3 and not derivable without the audience (Q8, Q36) and
+                            the place of use (Q9).
 AUDIENCE:                   Structural heart team (implanter, imaging, heart-team surgeon) primary;
                             referring cardiologists secondary. Hypothesis, LOW–MEDIUM (Q8, Q36).
 HUMAN TRUTH:                The mitral patients a heart team remembers are the ones it worked up and turned
                             away because the anatomy fit no option. (W2)
-TENSION:                    Mitral anatomy is never the same twice; a reproducible procedure needs it to be. (W3)
-INSIGHT:                    Anatomy has been the gatekeeper because devices have been asked to fit it. Stop asking
-                            the anatomy to fit the device. (W4 replacement)
+PRIMARY TENSION:            Mitral anatomy is never the same twice; a reproducible procedure needs it to be. (W3)
 USP:                        A valve-in-dock system whose dock captures both leaflets and draws the mitral apparatus
                             inward with radial force, rather than expanding outward, creating a standardized
                             landing zone for the valve. (W5)
@@ -884,6 +1050,17 @@ FOR THE CREATIVE:           The most human and the most emotional; the "heart mo
 - **Fit with R1's pillar visuals** (basis: §7.2 vs H1–H3). Consistent with R3; consistency, not confirmation.
 - **Adjacent opportunity** (basis: `relationship-and-account-growth.md`, internal). Launch "may imply" more work. Noted, not pitched.
 
+#### 16.2.5 What R4 means for the current slate (added v04; for creative-engine-director)
+
+DERIVED notes, not verdicts. Slate per `work/reviews/territory-review_v03-round2.md`: The Gather (R2-1 reworked, A), One Landing Zone (T03, B), The Door That Opened (R2-3 reworked, C). Proposition A is unchanged by R4.
+
+- **Edwards' own device language supports the slate's core.** R4 (first generation) already says the dock "Encircles and captures the native mitral leaflets to create a stable and standardized landing zone". T03's "landing zone" and A's capture/draw-in idea are Edwards vocabulary, not agency invention. R4 does *not* use R3's "draw inward, rather than expanding outward" (that is R3-only), so the outward contrast still rests on R3 and Q38.
+- **Coil and spiral imagery will read as the dock.** R4 shows the dock as a white coil: an encircling turn and stacked functional turns. To this audience any inward spiral, vortex or nested-ring form will be read as the dock. For The Gather (vortex, draining basin, settling grains) that is an asset if the spiral resolves into the dock, and a risk if it reads as the dock tightening or crushing: the same purse-string problem the review flagged, in another material. For T03, stacked identical rings echo the functional turns.
+- **Device reference exists only for the first generation (Q18).** Dock form, procedure order and dimensions can inform match-cuts and the mechanism shot internally. The M3 RESILIA valve (RESILIA tissue, refined leaflets) cannot be drawn from R4. Any route whose payoff is the valve or leaflets close up waits for approved reference.
+- **The glass heart is real, in market, and used as a window onto the implant (Q37, Q41).** R4's cover is a static glass heart with the dock and valve visible inside. All three routes currently avoid the glass heart by preference. R4 makes Edwards' attachment to it more likely, not less. Each route should be able to show a labeled glass-heart version: The Gather (the red point at the centre could be the glass heart), T03 (procession ends in the heart), The Door (the camera goes into the heart). R4 also shows one thing the campaign has not done: move the heart. "The heart moving forward" is still unexecuted in what we have.
+- **Beige vs grey (Q40).** All three routes are on beige per R1. R4 is light grey and glossy. R1 governs; but if Edwards' campaign artwork turns out to be R4's grey look, beige grounds would need confirming. Flag it with the slate.
+- **Language traps.** R4 uses "evolution" (Q39) and "Touch more lives. Treat more MR." (Q41). Neither goes on screen; WordSmither should not echo them as end lines. "Treat more MR" also overlaps with The Door's "patients anatomy ruled out" eligibility read (Q42, Q5).
+
 ## 17. CreativeEngine handoff
 
 ```
@@ -922,10 +1099,14 @@ DERIVED   (BriefMachine interpretation; never source truth)
 PRIMARY TENSION:          DERIVED (§16.2, W3; basis: R3 header "Accommodates Heterogeneous Anatomy for
                           Reproducible Replacement", C10). Mitral anatomy is never the same twice; a
                           reproducible procedure needs it to be.
-RECOMMENDED PROPOSITION:  DERIVED (§16.2.2, A): "It draws the anatomy in, instead of pushing against it."
+INSIGHT:                  DERIVED (§16.2.2): anatomy has been the gatekeeper because devices have been asked to
+                          fit it. Basis C10, C13; inference, no research (Q36).
+PROPOSITION:              DERIVED (§16.2.2, A): "It draws the anatomy in, instead of pushing against it."
                           Alternates: B "Every mitral is different. The landing zone is the same." · C "For
                           the mitral patients anatomy ruled out." Support: C10 lead; none VERIFIED.
-INSIGHT:                  DERIVED: anatomy has been the gatekeeper because devices have been asked to fit it.
+DESIRED RESPONSE:         OPEN (needs audience and place of use: Q8, Q36, Q9).
+R4 NOTE:                  R4 (first-gen SAPIEN M3, EU) is reference only, never claim support. Implications
+                          for the slate: §16.2.5.
 AUDIENCE HYPOTHESES:      Audience intelligence not run (no data). Working hypothesis from the indication
                           (§16.2, W1): structural heart team primary, referring cardiologists secondary.
                           LOW–MEDIUM. Q8, Q36.
@@ -942,11 +1123,17 @@ SAFE HANDLING UNTIL RESOLVED:
   - Do not reconstruct the campaign artwork or icons from description (Q12, Q14)
   - Keep the red glass heart in anything Edwards-facing; a without-glass-heart variant only as a labeled option (Q37)
   - "Outward" shown only as abstract force, never a recognizable device (Q38)
+  - No R4 wording on screen: not "evolution" (Q39), not "Touch more lives. Treat more MR." (Q41), not "first and
+    only approved" or R4 outcome phrasing (Q42)
+  - Beige ground per R1; R4's grey is EU execution, not direction (Q40)
+  - R4 device images inform dock form only; never build the M3 RESILIA valve from them (Q18)
   - Territory stage: claims not gated (user, 2026-10-15); this list governs beyond territory review
 DO NOT ASSUME:
   - that R3 is the final, complete or accurately transcribed messaging (Q31)
   - which R3 text is the required "green" messaging (Q32)
-  - that the ThermaFix entry in client knowledge describes the first-generation valve (Q2)
+  - that SAPIEN M3 RESILIA's valve is confirmed by Edwards as separate from the ThermaFix first generation (Q2,
+    partially resolved by R4)
+  - that R4's cover is this campaign's finalized artwork, or its line this campaign's line (Q12, Q41)
   - that the audience is "HCPs" or any single audience (Q8); that the §16.2 hypothesis is confirmed (Q36);
     where it plays, or with sound (Q9)
   - that the glass heart is optional (Q37)
@@ -956,8 +1143,8 @@ DO NOT ASSUME:
 QUESTIONS   (§14 holds the full register)
 BLOCKERS:        none (Q1 resolved)
 CLAIM BLOCKERS:  Q29 (C1–C3, C14–C18, C22), Q30 (C1), Q3 (C2–C4, C14–C18), Q4 (C5–C7), Q5 (C8, C13)
-IMPORTANT:       Q2, Q6–Q21, Q31–Q33, Q36–Q38
-MINOR:           9
+IMPORTANT:       Q2 (partial), Q6–Q21, Q31–Q33, Q36–Q42
+MINOR:           10
 ```
 
 ## Work packets
@@ -971,5 +1158,7 @@ In v01 no packet was prepared, because Q1 blocked the packet's source-grounded c
 - It has no derived layer, because none ran.
 
 Its mode is not set; `creative-engine-director` decides whether and when to use it.
+
+**v04 (2026-10-15):** P1 points to v04; adds R4 (reference only), Q39–Q42 and the §16.2.5 slate note.
 
 **v03 (2026-10-15):** P1 now points to v03 and carries a short derived layer: proposition A with alternates B and C (§16.2), the audience hypothesis, and Q36–Q38.

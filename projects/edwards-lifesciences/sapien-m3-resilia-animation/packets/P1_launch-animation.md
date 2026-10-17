@@ -2,8 +2,8 @@
 
 Client:        Edwards Lifesciences
 Project:       SAPIEN M3 RESILIA animation
-From:          `../normalized-brief.md`, v03, 2026-10-15, DRAFT (strategy improvement added; source core unchanged from v02)
-Source scope:  PROJECT-LEVEL (R1 creative brief; R2 timeline, partial; R3 messaging transcription). CLIENT-LEVEL as cited by the brief: `claims-and-evidence-rules.md`, `portfolio-and-clinical-language.md`, `brand-identity-standards.md`
+From:          `../normalized-brief.md`, v04, 2026-10-15, DRAFT (R4 added as reference; source core unchanged from v02)
+Source scope:  PROJECT-LEVEL (R1 creative brief; R2 timeline, partial; R3 messaging transcription; R4 first-generation SAPIEN M3 EU brochure, reference only, not a claims source). CLIENT-LEVEL as cited by the brief: `claims-and-evidence-rules.md`, `portfolio-and-clinical-language.md`, `brand-identity-standards.md`
 Problem ID:    P1
 Mode:          Not set (creative-engine-director decides)
 
@@ -57,7 +57,7 @@ creative-engine-director may withhold them from the first round.
 
 BLOCKERS:                           None.
 CLAIM RESTRICTIONS:                 Q29 outcome attribution to SAPIEN M3 vs SAPIEN M3 RESILIA · Q30 "MR elimination" vs "near MR elimination" · Q3 verification of the OUTCOMES data · Q4 surgical RESILIA evidence · Q5 U.S. approval, launch status, full indication
-IMPORTANT:                          Q2 (tissue divergence, OPEN) · Q31 (R3 version and transcription) · Q32 (required "green" text) · Q33 (on-screen footnotes and disclaimers) · Q8 (audience) · Q9 (where it plays) · Q12 (campaign artwork) · Q13–Q14 (pillar icons) · Q15 (palette) · Q16 (creative latitude) · Q17 ("evolve" scope) · Q18 (device reference) · Q20 (cutdown content) · Q36 (audience confirmation) · Q37 (red glass heart optional? user prefers not to use it; mandatory stands) · Q38 (inward-vs-outward contrast on screen)
+IMPORTANT:                          Q2 (tissue divergence, OPEN) · Q31 (R3 version and transcription) · Q32 (required "green" text) · Q33 (on-screen footnotes and disclaimers) · Q8 (audience) · Q9 (where it plays) · Q12 (campaign artwork) · Q13–Q14 (pillar icons) · Q15 (palette) · Q16 (creative latitude) · Q17 ("evolve" scope) · Q18 (device reference; R4 gives first-generation only) · Q20 (cutdown content) · Q36 (audience confirmation) · Q37 (red glass heart optional? user prefers not to use it; mandatory stands) · Q38 (inward-vs-outward contrast on screen) · Q39 (Edwards uses "evolution" in R4) · Q40 (R4 grey vs R1 beige) · Q41 (is "Touch more lives. Treat more MR." + glass heart this campaign?) · Q42 (R4 vs R3 claim wording)
 SAFE HANDLING UNTIL RESOLVED:       DERIVED.
                                     - No outcome figure or outcome statement attached to "SAPIEN M3 RESILIA" on screen (Q29).
                                     - Not the unqualified "MR elimination" (Q30).
@@ -67,19 +67,24 @@ SAFE HANDLING UNTIL RESOLVED:       DERIVED.
                                     - RESILIA tissue only for the next-generation valve; no tissue statement about the first generation (Q2).
                                     - "evolve", "evolution" and variants off screen (Q17).
                                     - Do not reconstruct the campaign artwork or icons (Q12, Q14).
+                                    - No R4 wording on screen ("evolution", "Touch more lives. Treat more MR.", "first and only approved") (Q39, Q41, Q42).
+                                    - R4 device images inform dock form only; never build the M3 RESILIA valve from them (Q18).
 DO NOT ASSUME:                      That R3 is final or accurately transcribed (Q31); which text is required (Q32); the audience (Q8); the venue or sound-on (Q9); that the handwritten notes are direction (Q34); a due date (Q6, Q7).
 NOT IN THIS PACKET:                 Minor issues Q22–Q28, Q34, Q35; admin questions Q6, Q7, Q10, Q11, Q19, Q21; resource registry; full ledger wording. All in `../normalized-brief.md` §9, §14, §15.
 
-## Derived layer   (DERIVED; brief §16.2, v03, 2026-10-15; strategy improvement requested by the user)
+## Derived layer   (DERIVED; brief §16.2, v03–v04, 2026-10-15; strategy improvement requested by the user)
 
 AUDIENCE HYPOTHESIS:   Structural heart team (implanter, imaging cardiologist, heart-team surgeon) primary; referring
                        cardiologists secondary. LOW–MEDIUM, from the indication, not data (Q8, Q36).
 TENSION:               Mitral anatomy is never the same twice; a reproducible procedure needs it to be.
 INSIGHT:               Anatomy has been the gatekeeper because devices have been asked to fit it.
 PROPOSITION (A):       It draws the anatomy in, instead of pushing against it.
+DESIRED RESPONSE:      OPEN (Q8, Q36, Q9).
                        USP: dock captures both leaflets and draws the mitral apparatus inward, rather than expanding
                        outward, creating a standardized landing zone (C10).
 ALTERNATES:            B "Every mitral is different. The landing zone is the same." · C "For the mitral patients
                        anatomy ruled out." Full cards, support and creative implications: brief §16.2.3.
 CLAIMS AT TERRITORY:   Not gated (user, 2026-10-15). Status noted in §16.2; safe handling above governs beyond territory review.
 GLASS HEART:           Mandatory stands (Q37). A works with or without it.
+R4 FOR THE SLATE:      Edwards' own (first-gen, EU) dock copy says "standardized landing zone"; spirals/coils will read as the
+                       dock; glass heart is in market as a window onto the implant; R4 look is grey, not beige. Brief §16.2.5.

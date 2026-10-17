@@ -1,0 +1,160 @@
+14 · FIGMA CANVAS AGENT PROMPT · UW GRADUATE PROGRAM LANDING PAGES · v02 WIREFRAME
+Created 2026-10-14, revised same day for conversion (short page, carousels, overlays).
+Supersedes v01 for round 1 (v01, the styled version, is kept for later).
+CLIENT: University of Wyoming (College of Business)
+PROJECT: fy26-27-graduate-business-inquiry · Round 1 client approval · STATIC WIREFRAME
+Do NOT attach the brand files. This round approves structure, content order and
+conversion mechanics only. No visual style direction of any kind.
+
+======================================================================
+ROLE AND GOAL
+======================================================================
+You are building static, mid/high-fidelity WIREFRAMES in Figma for five University of
+Wyoming College of Business graduate program landing pages. The pages exist to drive
+inquiries (request-info form submissions) from people arriving from Meta ads.
+
+The client is approving: section order, what each section does, content hierarchy,
+the prominence of the video, and the persistent form. They are NOT approving color,
+typography, imagery or brand look. Make that obvious: everything must read as a
+wireframe, so nobody gives feedback on style.
+
+Not a prototype, not production. No interactions, no prototype links. Pages will later
+be designed, then rebuilt natively in Instapage, so keep structure Instapage can
+reproduce: stacked full-width sections on a 12-column grid.
+
+STRUCTURAL REFERENCE (structure only)
+The section rhythm of the Miami Ad School Art Direction Master's page: a long scroll of
+full-width sections, each with one job, a big headline, a short paragraph and at most one
+action. Borrow the rhythm and modularity. None of its look.
+
+======================================================================
+WIREFRAME STYLE (the only styling allowed)
+======================================================================
+- Greyscale only: White #FFFFFF, Grey 05 #F4F4F4, Grey 15 #DADADA, Grey 40 #9A9A9A,
+  Grey 70 #4D4D4D, Black #1A1A1A. Alternate section backgrounds White / Grey 05 only,
+  so section boundaries read.
+- One font: Inter (or the Figma default sans). Regular and Bold only. Sizes:
+    H1 64/68 desktop, 36/40 mobile · H2 44/48, 28/32 · H3 24/30, 20/26
+    Body 18/28, 16/24 · Label 13/16 Bold uppercase · Caption 12/16
+  Size steps show hierarchy only; they are not a type direction.
+- Images/video: Grey 15 rectangle with a 1px Grey 40 diagonal cross and a centered label
+  ("IMAGE – [WHAT IT SHOWS]", "VIDEO – [WHAT IT SHOWS]").
+- Buttons: Black fill, White label, 4px radius. Secondary: 1px Black outline.
+  This is the only "dark" element, so actions are findable.
+- Icons: simple outline placeholders (24px circle) labelled.
+- Lines: 1px Grey 15. No shadows, gradients, blur, color, logos or photography.
+- Logo: a Grey 15 box labelled "UW LOGO".
+- Add a small "WIREFRAME – NOT FINAL DESIGN" tag top-right of every artboard.
+
+======================================================================
+BUILD ORDER (stop and report after step 3)
+======================================================================
+1. Page "Foundations": the greyscale styles, text styles and 12-col grids (1440 / 390).
+2. Page "Components": every section below as a component with auto layout, plus Form Card,
+   Sticky Mobile CTA Bar, Sticky Side Tab, Video Player, Carousel (card, arrows, dots),
+   Tabs, Overlay/Modal shell, Bottom Sheet, FAQ Row, Stat Slot, Quote Card, Button, Nav,
+   Footer.
+3. Page "Master": ONE desktop (1440) and ONE mobile (390) page for ONLINE MBA, built
+   from instances, with its carousel strips, tab states and overlay frames beside it. STOP. Report the frame links.
+4. After approval: duplicate for the other four programs, swapping content only.
+
+Programs (exact labels):
+  ON-CAMPUS MBA · ONLINE MBA · M.S. IN ACCOUNTING · ONLINE M.S. IN ACCOUNTING ·
+  ONLINE M.S. IN FINANCE
+
+======================================================================
+THE TWO NON-NEGOTIABLES
+======================================================================
+A) VIDEO IS PROMINENT
+- Inside the hero, above the fold (see 01). Desktop: 8 of 12 columns (form in the right
+  4), 16:9. Mobile: full width, first thing after the hero headline.
+- Large centered play icon (80px circle outline), duration chip "0:60", caption line
+  under it "[WHAT THE VIDEO SHOWS]".
+- Placeholder label "VIDEO – UW FOOTAGE TBD".
+
+B) THE FORM IS PERSISTENT  (where this differs from "FORM PERSISTENCE (updated)" below, the update wins)
+- Desktop: Form Card in the right 4 columns from the hero down. Show it in the hero, beside
+  the curriculum section, and in the final CTA section. Annotation outside the artboard:
+  "STICKY – stays in view on scroll", with a dashed line showing its scroll range.
+- Mobile: form inline after the video, PLUS a Sticky CTA Bar fixed at the bottom of every
+  mobile screen-height ("[PROGRAM LABEL]" left, "REQUEST INFO" button right). Annotate:
+  "Sticky bar jumps to form".
+- Fields (max 5): First name · Last name · Email · Phone (optional) · Program of interest
+  (dropdown, pre-filled with this page's program) · Button "REQUEST INFO" · Caption
+  "[PRIVACY / CONSENT LINE]". White card, 1px Grey 40 border, 48px fields.
+
+======================================================================
+CONVERSION LOGIC (why the page is short)
+======================================================================
+Visitors come from a Meta ad and decide fast. Keep the page SHORT: 7 sections on desktop,
+roughly 5–6 screen-heights. Anything that is "nice to know" moves into a carousel (swipe
+sideways instead of scrolling down) or an overlay (opened on demand). The vertical scroll
+holds only: promise → video → proof → reasons → how to apply → form.
+Every overlay and every last carousel card ends with a "REQUEST INFO" button.
+
+HOW TO SHOW MOTION IN A STATIC FILE
+- Carousels: draw card 1 fully, card 2 peeking 20% at the right edge, arrows (desktop) and
+  dots (all). Next to the artboard, lay out ALL cards side by side in a strip labelled
+  "CAROUSEL 05 – ALL CARDS", connected with an annotation arrow.
+- Overlays: draw each overlay as its own frame beside the page (desktop 1440 with a 60%
+  Black scrim over a greyed page; mobile as a full-screen sheet). Annotation arrow from the
+  trigger button to the overlay frame: "OPENS OVERLAY 07A".
+
+======================================================================
+SECTIONS (top to bottom)
+======================================================================
+Each section = one job, one headline, ≤40 words body, ≤1 primary action.
+All copy is bracketed slot descriptions: [SLOT – WHAT GOES HERE]. Do not write marketing
+copy or invent facts, numbers, costs, rankings, outcomes or deadlines.
+Label each section on the artboard edge ("01 HERO") so the client can reference it.
+
+00 NAV (slim, 64px): logo box left; "REQUEST INFO" button right. No anchor links (fewer
+   exits). Mobile: logo + button only.
+01 HERO + VIDEO (one screen): label = program name; H1 [CAMPAIGN HEADLINE] (2 lines max);
+   one-line sub; video player 8 cols beside the form card (4 cols). Above the fold on
+   1440x900. Mobile: headline, then full-width video, then the sticky bar.
+   The video thumbnail opens OVERLAY 01A: full-screen video player, with an end-state
+   card "[CLOSING LINE] + REQUEST INFO".
+02 AT A GLANCE (a strip, not a section): 4 Stat Slots in one row directly under the hero:
+   [FORMAT] [CREDITS] [LENGTH] [START TERMS], values "[CLIENT TO SUPPLY]". Mobile:
+   horizontal swipe strip.
+03 WHY THIS PROGRAM – CAROUSEL: H2 left, carousel right. 4 cards, each: image box,
+   H3 reason, 2 lines. Card 4 = REQUEST INFO card.
+04 STUDENT VOICES – CAROUSEL: 3 Quote Cards (photo box "STUDENT PHOTO – TBD", quote
+   "[REAL STUDENT QUOTE – SUPPLIED BY UW]", name + CURRENT STUDENT/ALUM). Each card may
+   have a small play icon if UW supplies student video (opens OVERLAY 04A).
+05 PROGRAM DETAILS – TABS + OVERLAYS: one compact block with 4 tabs: CURRICULUM ·
+   FACULTY · COST & AID · DEADLINES. Show the CURRICULUM tab active (8 "[COURSE NAME]"
+   rows, 2 cols). Other tabs drawn as separate frames beside the page.
+   Secondary button "SEE FULL CURRICULUM" opens OVERLAY 05A (full course list +
+   "DOWNLOAD PROGRAM GUIDE" + REQUEST INFO). Values "[CLIENT TO SUPPLY]".
+   Mobile: tabs become a horizontal scrollable tab bar.
+06 HOW TO APPLY + FINAL FORM (one section): left: 3-step stepper (Step 1/2/3 + [STEP]);
+   right: Form Card. H2 [CLOSING LINE]. Mobile: stepper, then form.
+   Under the steps, a text link "QUESTIONS? READ THE FAQ" opens OVERLAY 06A (5 FAQ rows,
+   first open, REQUEST INFO at the bottom).
+07 FOOTER (minimal): logo box, legal slot, privacy link.
+
+FORM PERSISTENCE (updated)
+- Desktop: the Form Card is sticky in the right column from 01 through 06 (annotate
+  range). In 03–05, where carousels need full width, show the collapsed version: a slim
+  sticky side tab "REQUEST INFO" on the right edge that opens OVERLAY F (the form as a
+  modal). Annotate both states.
+- Mobile: sticky bottom bar on every screen; tapping opens OVERLAY F as a bottom sheet.
+- Optional, annotate only: exit-intent overlay (desktop) "[SHORT OFFER – E.G. PROGRAM
+  GUIDE]" with an email-only field. Mark "OPTIONAL – CLIENT TO DECIDE".
+
+OVERLAYS TO DRAW (desktop + mobile each)
+  01A video · 04A student video (only if supplied) · 05A full curriculum · 06A FAQ ·
+  F request-info form · EXIT (optional)
+
+======================================================================
+FILE HYGIENE
+======================================================================
+- Name every frame and layer ("LP / Online MBA / Desktop", "06 Student Voice").
+- Auto layout everywhere.
+- Annotations OUTSIDE artboards, in one annotation color (#E5484D is the only non-grey
+  allowed, and only off-artboard).
+- Cover frame: "UW College of Business · Graduate Program Landing Pages · Round 1
+  Wireframes · Structure for approval, not visual design".
+- After step 3, report: frame links and any instruction you could not follow.

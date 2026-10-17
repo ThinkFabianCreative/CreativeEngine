@@ -24,6 +24,10 @@ projects/**/assets/video/**
 *.zip
 projects/colorado-mesa-university/featherstone-phase-2/raw/CMU-Brand-Guidelines_Sep2025.pdf
 
+# Team member HR data (reviews, salary, leave) stays local. See CreativeAdmin/AGENT.md.
+projects/traffik/people/**
+!projects/traffik/people/README.md
+
 # MFK reference folder (large photo set, kept local only)
 projects/miracles-for-kids/website-rebrand/raw/MiraclesForKids/
 

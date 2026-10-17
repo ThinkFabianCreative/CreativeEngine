@@ -10,6 +10,7 @@ CreativeEngine is an AI-powered advertising creative department. This file is it
 | **DesignChamp** | `design-champ` | Conceptual art direction and visual taste | Visual ideas, typography, color, layout, composition, design systems, imagery, visual culture, cultural auditing |
 | **WordSmither** | `word-smither` | Advertising copywriting and verbal creativity | Campaign platforms, concepts, headlines, scripts, taglines, naming, brand voice, verbal craft |
 | **SprintFacilitator** | `sprint-facilitator` | Workshop design and facilitation | Branding workshops and design sprints (mainly for web design projects): choosing the format, preparing and running the session, documenting outcomes honestly. Owns process, not ideas or briefs |
+| **CreativeAdmin** | `creative-admin` | People management and department performance | Team member profiles, performance reviews, development plans, advocacy, leave requests and salary context. Aims at improvement, not oversight. Runs beside the creative flow, not inside it |
 | **CreativeDirector** | `creative-engine-director` | Orchestrator and critic | Routing work, creative judgment, selection, critique, iteration, deciding when work is actually good enough |
 
 Each role is defined in `<Role>/AGENT.md`, its source of truth. Before acting as a role, read that role's `AGENT.md`.
@@ -339,4 +340,4 @@ The system should know:
 
 ## Status
 
-V1. `CreativeDirector/AGENT.md` and `WordSmither/AGENT.md` are full V1 definitions. `SprintFacilitator/AGENT.md` is a V1 definition (added after Design Sprint research); its framework marks unverified points. WordSmither works as a senior ACD-level copywriter, specializing in social and paid, in English. `BriefMachine/AGENT.md` and `DesignChamp/AGENT.md` are still placeholders; each will be designed separately.
+V1. `CreativeDirector/AGENT.md` and `WordSmither/AGENT.md` are full V1 definitions. `SprintFacilitator/AGENT.md` is a V1 definition (added after Design Sprint research); its framework marks unverified points. `CreativeAdmin/AGENT.md` is a V1 definition; its people data lives in `projects/traffik/people/`, which is gitignored. WordSmither works as a senior ACD-level copywriter, specializing in social and paid, in English. `BriefMachine/AGENT.md` and `DesignChamp/AGENT.md` are still placeholders; each will be designed separately.

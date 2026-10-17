@@ -18,3 +18,11 @@ The Drive files are the authority and may change. R1's text as read on 2026-10-1
 ## R2 as read on 2026-10-14
 
 The connector returned only sample rows. The sheet appears to be built from an older HUDDLE project-plan template: most tabs are the 2024 HUDDLE plan and a TRAFFIKunites website timeline. The "INTERNAL 2024 HUDDLE (Updated)" tab is titled "ELS Animation" and shows a kickoff on 2026-10-06, followed by leftover rows labeled "ELS HUDDLE Project Kickoff", "Landing Page" and "TRAFFIK to Develop Sitemap". **No animation due date or milestones could be read.** Treat the timeline as OPEN until someone confirms it.
+
+## R4 · SAPIEN M3 EU brochure (scan)
+
+- **File:** `R4_sapien-m3-eu-brochure-scan_2026-10-15.pdf` (5 pages, scanned; copied as received from Andres's Desktop, `ed/Animation/`)
+- **Supplied:** Andres Fabian, 2026-10-15
+- **What it is:** Edwards printed brochure for the **SAPIEN M3 system** (not M3 RESILIA), EU market (Edwards Lifesciences Sàrl, Nyon; "Edwards.com/gb/SAPIENM3"; PP--EU-9557 v3.0, © 2026). Cover line "Touch more lives. Treat more MR." with a red glass heart showing the implanted device; "The latest evolution of SAPIEN technology"; "One system. Two parts. MR treatment reimagined."; dock and valve anatomy; procedure steps; MR burden stats; innovation timeline; technical specifications.
+- **Scope:** PROJECT-LEVEL reference. Different product (first-generation SAPIEN M3) and different market (EU). Not U.S. messaging and not a claims source for SAPIEN M3 RESILIA.
+- **Normalized** into `../normalized-brief.md` v04 (2026-10-15), §7.3, as reference only.

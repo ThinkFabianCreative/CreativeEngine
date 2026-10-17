@@ -7,7 +7,7 @@ CLIENT:           Edwards Lifesciences
 PROJECT:          SAPIEN M3 RESILIA animation (R1 title: "Edwards SAPIEN M3 RESILIA Animation")
 FOLDER:           projects/edwards-lifesciences/sapien-m3-resilia-animation/
 IDENTITY SOURCE:  Andres Fabian (user), CreativeEngine session, 2026-10-14, when he supplied the brief
-BRIEF:            normalized-brief.md (v03 DRAFT, 2026-10-15, with strategy improvement; v02 kept as normalized-brief_v02.md, v01 as normalized-brief_v01.md)
+BRIEF:            normalized-brief.md (v04 DRAFT, 2026-10-15, R4 added; v03 kept as normalized-brief_v03.md, v02 as normalized-brief_v02.md, v01 as normalized-brief_v01.md)
 ```
 
 ## Scope and workstreams *(summary)*
@@ -28,7 +28,7 @@ One approved script and storyboard; one 60-second U.S. animation; one 30-second 
 
 | Kind | Location | What it is | Checked on |
 |---|---|---|---|
-| Raw sources | `raw/` | R1 creative brief (Drive .docx, verbatim capture), R2 timeline sheet (partial read), R3 product messaging (transcription of a scan); index in `raw/README.md` | 2026-10-14 |
+| Raw sources | `raw/` | R1 creative brief (Drive .docx, verbatim capture), R2 timeline sheet (partial read), R3 product messaging (transcription of a scan), R4 first-gen SAPIEN M3 EU brochure (scan, reference only); index in `raw/README.md` | 2026-10-15 |
 | Resources folder | Drive link in R1 (see `raw/README.md`) | Supplied resources | Not opened |
 | SharePoint | Not accessible here | ENCIRCLE trial deck draft; archived "SM3R_CampaignConcepts_WIP" | — |
 | Figma | None yet | | |
@@ -62,11 +62,12 @@ UPDATED:  2026-10-15
 | 2026-10-14 | Brief supplied to CreativeEngine; project named; brief normalized (v01 DRAFT) | User; brief-machine |
 | 2026-10-14 | Messaging (R3) supplied; brief revised (v02 DRAFT); work packet P1 prepared | User; brief-machine |
 | 2026-10-15 | Territory review v01; strategy improvement requested by the user; brief revised (v03 DRAFT): recommended proposition and two alternates in §16.2; Q36–Q38 added | User; creative-engine-director; brief-machine |
+| 2026-10-15 | R4 (first-generation SAPIEN M3 EU brochure scan) supplied; brief revised (v04 DRAFT): Q2 partially resolved, Q12/Q18/Q37 narrowed, Q39–Q43 added, §16.2.5 slate note | User; brief-machine |
 | OPEN | Due date and milestones (R2 unreadable for them; possibly the "December assignment", unconfirmed) | Brief Q6, Q7 |
 
 ## Open questions
 
-Project-administration questions only. Briefing questions (37 open: 0 blocker, 5 claim blockers, 23 important, 9 minor) live in the brief's [open-question register](normalized-brief.md#14-open-questions-conflicts--ambiguities).
+Project-administration questions only. Briefing questions (42 open: 0 blocker, 5 claim blockers, 27 important, 10 minor) live in the brief's [open-question register](normalized-brief.md#14-open-questions-conflicts--ambiguities).
 
 - [ ] Q6: Due date and milestones · owner: unknown · raised: 2026-10-14
 - [ ] Q10: Approvers, MLR process and timing · owner: unknown · raised: 2026-10-14
@@ -75,8 +76,9 @@ Project-administration questions only. Briefing questions (37 open: 0 blocker, 5
 
 ## Contents
 
-- `raw/`: R1 and R2 sources, as received
-- `normalized-brief.md`: the master working brief (v03, with strategy improvement)
+- `raw/`: R1–R4 sources, as received
+- `normalized-brief.md`: the master working brief (v04, R4 added)
+- `normalized-brief_v03.md`: v03 (strategy improvement, before R4), kept unchanged
 - `normalized-brief_v02.md`: the R1 + R2 + R3 version without strategy improvement, kept unchanged
 - `normalized-brief_v01.md`: the earlier version (R1 + R2 only), kept unchanged
 - `packets/P1_launch-animation.md`: work packet for the launch animation (mode not set)
