@@ -75,3 +75,9 @@ Built from cd-review_v2-landing_v01.md plus Material 3 Expressive tactics (Andre
 - CTAs: Donate and Volunteer only (nav, hero, close; urgency is Donate).
 - Trust (Andres, 2026-10-16: "recognizable logos are key"): the 9 hospital logos from the live site (raw/production-site/logos/, gitignored) in a white logo wall inside Proof, full color. Logo use still needs each hospital's permission (Q7).
 - Story tiles: William, Willow and Jeremiah use photos from raw/MiraclesForKids/more_images as labeled placeholders. Those are Gillette Children's patients from its brand guide, not MFK families: never ship or present them as MFK families.
+
+## Type pairing P2 "Storybook" (2026-10-19)
+
+- Figma: new MFK Type mode "P2 Storybook" (Bogart display/h1/stat, Playpen Sans highlights). h2 and smaller use Outfit as a stand-in, because Filson Soft isn't visible to Figma (and only Filson Pro is installed locally). Frame: "MFK Landing v3 / … Type P2 Storybook" (85:210).
+- HTML prototype: type switcher (Current / P1 / P2 / P3), or ?pair=p1|p2|p3. Spec: work/design/type-pairings-new-families_v01.md.
+- Bogart and Filson are commercial: web licences needed before any live use.

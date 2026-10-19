@@ -8,7 +8,7 @@
      Tokens: Color "B Blocks" + Type "A Saturated". Copy: MFK Copy "T5 v02". Spec: work/reviews/design-review_prototype-v3_v01.md -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Outfit:wght@100..900&family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg-canvas:#FBF6EE; --bg-primary:#FFD23F; --bg-secondary:#A92061; --bg-accent:#79BDE9; --bg-soft:#E9F8FA;
@@ -28,19 +28,19 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--focus);outline-offset:4px;border-radius:12px}
 section{position:relative;overflow:hidden}
 .eyebrow{font:600 14px/20px var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--highlight)}
-.display{font:820 var(--display)/1 var(--sans);letter-spacing:-.02em}
-.h1{font:800 var(--h1)/1.1 var(--sans);letter-spacing:-.015em}
+.display{font:var(--w-display) var(--display)/var(--lh-display) var(--disp);letter-spacing:-.02em}
+.h1{font:var(--w-h1) var(--h1)/1.1 var(--disp);letter-spacing:-.015em}
 .h2{font:750 var(--h2)/1.2 var(--sans);letter-spacing:-.01em}
 .h3{font:750 22px/1.3 var(--sans)}
 .lead{font:400 20px/32px var(--sans);color:var(--text-secondary)}
 .cap{font:500 14px/20px var(--sans)}
 .hl{color:var(--highlight)}
-.script{font-family:var(--script);font-weight:700;letter-spacing:0}
+.script{font-family:var(--script);font-weight:var(--w-script);letter-spacing:var(--ls-script)}
 .display .script{font-size:var(--hl-display);line-height:.9}
-.lite{font-weight:320;letter-spacing:-.01em}
-.heavy{font-weight:900;letter-spacing:-.035em}
-@keyframes wghtIn{from{font-weight:200;letter-spacing:.02em}to{font-weight:900;letter-spacing:-.035em}}
-#hero-h .heavy{animation:wghtIn 1.1s var(--spring) both .1s}
+.lite{font-weight:var(--w-lite);letter-spacing:-.01em}
+.heavy{font-weight:var(--w-heavy);letter-spacing:-.035em}
+@keyframes wghtIn{from{font-weight:200;letter-spacing:.02em}}
+#hero-h .heavy{animation:wghtIn 1.1s var(--spring) backwards .1s}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:14px 28px;border-radius:999px;font:650 16px/24px var(--sans);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .35s var(--spring),font-weight .35s var(--spring),border-radius .35s var(--spring)}
 .btn:hover{font-weight:800;border-radius:18px;transform:translateY(-2px)}
 .btn:active{transform:scale(.97);border-radius:12px}
@@ -118,7 +118,7 @@ a:hover .play{border-radius:32%;transform:rotate(-8deg) scale(1.06)}
 .badge{position:absolute;right:5%;top:60px;width:200px;aspect-ratio:4/3;display:grid;place-items:center;color:#fff;text-align:center}
 .badge svg{position:absolute;inset:0;width:100%;height:100%}
 .badge div{position:relative;margin-top:8px}
-.badge b{font:900 34px/1 var(--sans);display:block}.badge small{font:600 12px var(--sans)}
+.badge b{font:900 34px/1 var(--disp);display:block}.badge small{font:600 12px var(--sans)}
 @media (max-width:700px){.badge{width:150px;top:24px;right:8px}.badge b{font-size:26px}.truth{padding:190px var(--gutter) 160px}}
 /* programs: bento + zipper */
 .programs{background-color:var(--bg-canvas);padding:112px var(--gutter)}
@@ -146,7 +146,7 @@ a:hover .play{border-radius:32%;transform:rotate(-8deg) scale(1.06)}
 .sentence{padding:36px 32px;border-radius:48px;font:750 26px/34px var(--sans)}
 .logo-wall{background:#fff;border-radius:32px;padding:36px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;align-items:center}
 .logo-wall-k{grid-column:1/-1;color:var(--text-primary);font:500 18px var(--sans);margin-bottom:8px}
-.logo-wall-k b{font:900 44px/1 var(--sans);color:var(--highlight);margin-right:8px;vertical-align:-6px}
+.logo-wall-k b{font:900 44px/1 var(--disp);color:var(--highlight);margin-right:8px;vertical-align:-6px}
 .lg{height:128px;display:grid;place-items:center;padding:16px 20px;border-radius:24px;transition:background .3s,border-radius .45s var(--spring),transform .45s var(--spring)}
 .lg img{max-height:80px;max-width:100%;object-fit:contain}
 .lg:hover{background:var(--bg-soft);border-radius:40%;transform:scale(1.04)}
@@ -174,7 +174,7 @@ a:hover .play{border-radius:32%;transform:rotate(-8deg) scale(1.06)}
 .ticket{display:grid;grid-template-columns:150px 1fr 1.1fr;align-items:center;clip-path:url(#c-ticket);background:var(--white);text-decoration:none;min-height:220px;transition:transform .45s var(--spring)}
 .ticket:hover{transform:translateY(-4px)}
 .ticket .stub{align-self:stretch;background:var(--bg-primary);display:grid;place-items:center;text-align:center;padding:16px;border-right:3px dashed rgba(0,40,85,.25)}
-.ticket .stub b{font:900 40px/1 var(--sans);display:block}.ticket .stub span{font:700 16px var(--sans);text-transform:uppercase;letter-spacing:1px}
+.ticket .stub b{font:900 40px/1 var(--disp);display:block}.ticket .stub span{font:700 16px var(--sans);text-transform:uppercase;letter-spacing:1px}
 .ticket .tx{padding:20px}
 .ticket .crop{width:calc(100% - 20px)}
 @media (max-width:1000px){.ecards{grid-template-columns:1fr}}
@@ -216,10 +216,36 @@ footer p{font:500 14px/24px var(--sans)}
 .give-bug svg{width:36px;height:27px}
 .give-bug[hidden]{display:none}
 .note{position:fixed;left:50%;transform:translateX(-50%);top:8px;z-index:9;background:var(--navy);color:#fff;font:500 12px var(--sans);padding:6px 12px;border-radius:8px;opacity:.85}
+
+/* ---- Type pairings (design-champ, work/design/type-pairings-new-families_v01.md). Switch with the panel or ?pair=p1|p2|p3|now ---- */
+:root{--disp:"Outfit",system-ui,sans-serif;--w-display:820;--w-h1:800;--w-lite:320;--w-heavy:900;--lh-display:1;--w-script:700;--ls-script:0}
+html[data-pair="p3"]{--script:"Playpen Sans",cursive;--w-script:700;--ls-script:-.01em;--display:clamp(46px,7.2vw,104px);--hl-display:clamp(46px,6.6vw,96px)}
+html[data-pair="p3"] .close .display .script{font-family:"Bakerie Rough","Playpen Sans",cursive;font-weight:400}
+html[data-pair="p1"]{--sans:"Filson Soft","Filson Pro",system-ui,sans-serif;--disp:"Filson Soft","Filson Pro",system-ui,sans-serif;--script:"Playpen Sans",cursive;--w-display:900;--w-h1:900;--w-lite:300;--w-heavy:900;--lh-display:.93;--w-script:700;--ls-script:-.01em;--display:clamp(46px,7.2vw,104px);--hl-display:clamp(46px,6.6vw,96px)}
+html[data-pair="p2"]{--sans:"Filson Soft","Filson Pro",system-ui,sans-serif;--disp:"Bogart",Georgia,serif;--script:"Playpen Sans",cursive;--w-display:900;--w-h1:700;--w-lite:300;--w-heavy:900;--lh-display:.96;--w-script:700;--ls-script:-.01em;--display:clamp(46px,7.2vw,104px);--hl-display:clamp(46px,6.6vw,96px)}
+html[data-pair="p1"] body,html[data-pair="p2"] body{letter-spacing:.012em}
+html[data-pair="p1"] .h3,html[data-pair="p2"] .h3{font-weight:700}
+.pair-switch{position:fixed;left:16px;top:96px;z-index:9;display:flex;gap:6px;align-items:center;background:var(--navy);color:#fff;padding:8px;border-radius:999px;font:600 13px "Outfit",sans-serif;box-shadow:0 8px 24px rgba(0,26,51,.25)}
+.pair-switch span{padding:0 8px}
+.pair-switch button{min-height:36px;padding:6px 14px;border-radius:999px;border:0;background:transparent;color:#fff;font:inherit;cursor:pointer}
+.pair-switch button[aria-pressed=true]{background:#fff;color:var(--navy)}
+.pair-switch .warn{display:none;color:var(--bg-primary);padding:0 8px}
+.pair-switch .warn.on{display:inline}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
+<link rel="stylesheet" href="brand-evolution.css">
+<link rel="stylesheet" href="taste-refinement.css">
 </head>
 <body>
+<details class="prototype-tools"><summary>Preview settings</summary><div class="prototype-tools-content"><div class="pair-switch" role="group" aria-label="Type pairing">
+  <span>Type</span>
+  <button type="button" data-p="now">Current</button>
+  <button type="button" data-p="p1">P1 Soft Ground</button>
+  <button type="button" data-p="p2">P2 Storybook</button>
+  <button type="button" data-p="p3">P3 Outfit+Playpen</button>
+  <span class="warn" aria-live="polite"></span>
+</div>
+<div class="note">Prototype · design only · [brackets] = pending MFK confirmation</div></div></details>
 <!-- Friendly 4:3 shape family (400x300). No hearts. -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
  <defs>
@@ -235,13 +261,14 @@ footer p{font:500 14px/24px var(--sans)}
 
 <nav aria-label="Main">
   <a href="#"><img class="logo" src="assets/MiraclesForKids/logo_mfks.png" alt="Miracles for Kids"></a>
+<details class="mobile-nav"><summary><span data-feather-icon="Menu" aria-hidden="true"></span><span>Menu</span></summary><div class="mobile-nav-panel"><a href="https://miraclesforkids.org/families-weve-helped/">Family Stories</a><a href="https://miraclesforkids.org/how-we-help-2/">Programs</a><a href="https://miraclesforkids.org/why-we-help/">About</a><a href="https://miraclesforkids.org/take-action/our-events/">Events</a><a href="https://miraclesforkids.volunteerhub.com/vv2/">Volunteer</a></div></details>
   <div class="links">
     <a href="https://miraclesforkids.org/families-weve-helped/">Family Stories</a>
     <a href="https://miraclesforkids.org/how-we-help-2/">Programs</a>
     <a href="https://miraclesforkids.org/why-we-help/">About</a>
     <a href="https://miraclesforkids.org/take-action/our-events/">Events</a>
-    <a class="btn btn-ghost" href="https://miraclesforkids.volunteerhub.com/vv2/">Volunteer</a>
-    <a class="btn btn-primary" href="https://miraclesforkids.org/donate/">Donate</a>
+    <a class="btn btn-ghost" href="https://miraclesforkids.volunteerhub.com/vv2/"><span data-feather-icon="Users" aria-hidden="true"></span>Volunteer</a>
+    <a class="btn btn-primary" href="https://miraclesforkids.org/donate/"><span data-feather-icon="Gift" aria-hidden="true"></span>Donate</a>
   </div>
 </nav>
 
@@ -254,9 +281,9 @@ footer p{font:500 14px/24px var(--sans)}
     <h1 id="hero-h" class="display"><span class="heavy">Miracles</span> <span class="lite">look like a</span> <span class="script">normal Tuesday.</span></h1>
     <p class="lead">Rent paid. Lights on. Dinner on the table. So families can focus on their kid.</p>
     <div class="hero-ctas">
-      <a class="btn btn-primary" href="https://miraclesforkids.org/donate/">Donate</a>
+      <a class="btn btn-primary" href="https://miraclesforkids.org/donate/"><span data-feather-icon="Gift" aria-hidden="true"></span>Donate</a>
       <a class="video-chip" href="https://www.youtube.com/watch?v=GKu1Jh4S97M" aria-label="Watch William's story, 1 minute 43 seconds">
-        <span class="play"><svg viewBox="0 0 22 26"><path d="M0 0 L22 13 L0 26 Z" fill="#fff"/></svg></span>
+        <span class="play" aria-hidden="true"><span data-feather-icon="Play"></span></span>
         <span class="cap">Watch William's story<br><span style="color:var(--text-secondary)">1:43</span></span>
       </a>
     </div>
@@ -268,26 +295,26 @@ footer p{font:500 14px/24px var(--sans)}
   <span class="eyebrow">Family Stories</span>
   <h2 id="st-h" class="h1"><span class="lite">Meet the</span> <span class="hl heavy">families.</span></h2>
   <p class="lead">Real families. Real kids. Their words.</p>
-  <div class="filters" role="group" aria-label="Filter stories"><button class="chip" aria-pressed="true">All</button><button class="chip" aria-pressed="false">Video</button><button class="chip" aria-pressed="false">Read</button><button class="chip" aria-pressed="false">Where Are They Now?</button></div>
+  <div class="filters" role="group" aria-label="Filter stories"><button class="chip" aria-pressed="true">All</button><button class="chip" aria-pressed="false"><span data-feather-icon="Video" aria-hidden="true"></span>Video</button><button class="chip" aria-pressed="false"><span data-feather-icon="BookOpen" aria-hidden="true"></span>Read</button><button class="chip" aria-pressed="false"><span data-feather-icon="Clock" aria-hidden="true"></span>Where Are They Now?</button></div>
   <div class="mosaic">
     <a class="tile wide vid" style="color:#fff" href="https://www.youtube.com/watch?v=GKu1Jh4S97M">
       <img class="poster" src="assets/MiraclesForKids/more_images/Gilette-childrens-web-10 copy.jpg" alt="Placeholder: a boy laughing with a toy"><span class="scrim"></span>
       <span class="ph-note">Placeholder photo · replace with MFK family still</span>
-      <span class="play"><svg viewBox="0 0 22 26"><path d="M0 0 L22 13 L0 26 Z" fill="#fff"/></svg></span>
+      <span class="play" aria-hidden="true"><span data-feather-icon="Play"></span></span>
       <span class="h2">William's miracle</span><span class="pill">Video · 1:43</span>
     </a>
-    <div class="tile" style="background:var(--bg-primary);color:var(--on-primary)"><p class="quote">“To have help from Miracles for Kids lifts a weight from us…”</p><span class="cap">Maribel, a Miracles for Kids mom</span></div>
+
     <a class="tile" href="https://miraclesforkids.org/families-weve-helped/?fam=0"><img class="poster" src="assets/MiraclesForKids/Michelle.jpg" alt="Michelle with her mother and brother"><span class="pill">Michelle's miracle · Read</span></a>
     <a class="tile" style="color:#fff" href="https://www.youtube.com/watch?v=BFT26CmxsYY">
       <img class="poster" src="assets/MiraclesForKids/more_images/Gilette-childrens-web-3 copy.jpg" alt="Placeholder: a smiling girl in glasses"><span class="scrim"></span>
       <span class="ph-note">Placeholder photo</span>
-      <span class="play"><svg viewBox="0 0 22 26"><path d="M0 0 L22 13 L0 26 Z" fill="#fff"/></svg></span>
+      <span class="play" aria-hidden="true"><span data-feather-icon="Play"></span></span>
       <span class="h3">Willow's miracle</span><span class="pill">Video · 3:01</span>
     </a>
     <a class="tile wide vid" style="color:#fff" href="https://www.youtube.com/watch?v=QAD2hSqy9oY">
       <img class="poster" src="assets/MiraclesForKids/more_images/Gilette-childrens-web-12 copy.jpg" alt="Placeholder: a girl dancing outdoors with her mom"><span class="scrim"></span>
       <span class="ph-note">Placeholder photo · replace with MFK family still</span>
-      <span class="play"><svg viewBox="0 0 22 26"><path d="M0 0 L22 13 L0 26 Z" fill="#fff"/></svg></span>
+      <span class="play" aria-hidden="true"><span data-feather-icon="Play"></span></span>
       <span class="pill">Where Are They Now? · 2:26</span><span class="h2">Jeremiah's miracle</span><span>[They kept their home through it all.]</span>
     </a>
     <div class="tile drawing" aria-label="Placeholder for a child's drawing">
@@ -298,6 +325,7 @@ footer p{font:500 14px/24px var(--sans)}
       </div>
     </div>
   </div>
+<blockquote class="family-quote"><p>“To have help from Miracles for Kids lifts a weight from us…”</p><cite>Maribel, a Miracles for Kids mom</cite></blockquote>
 </section>
 
 <section class="truth pat-confetti" aria-labelledby="truth-h">
@@ -314,11 +342,11 @@ footer p{font:500 14px/24px var(--sans)}
   <h2 id="pr-h" class="h1"><span class="lite">Five ways we</span> <span class="hl heavy">help.</span></h2>
   <p class="lead">Each one takes a weight off a family.</p>
   <div class="pgrid">
-    <a class="prog lead" href="https://miraclesforkids.org/pay-the-bills/"><img class="crop c-arch" src="assets/MiraclesForKids/KiaraSanchez.jpg" alt="A mother laughing with her toddler"><div class="body"><span class="k">Lifeline</span><span class="h2">The <span class="hl">lights-on</span> miracle</span><span>Up to $500 a month toward the bills.</span><span class="stat">[230+] families every month</span><span class="go" aria-hidden="true">→</span></div></a>
-    <a class="prog" href="https://miraclesforkids.org/housing/"><img class="crop c-arch" style="object-position:top" src="assets/MiraclesForKids/miracles-manor-2.png" alt="Miracle Manor, MFK's family housing"><div class="body"><span class="k">Safe Haven</span><span class="h3">The <span class="hl">home</span> miracle</span><span>Miracle Manor, around the corner from CHOC.</span><span class="stat">[22] families housed</span><span class="go" aria-hidden="true">→</span></div></a>
-    <a class="prog" href="https://miraclesforkids.org/heal/"><img class="crop c-squircle" src="assets/MiraclesForKids/banner-volunteer.jpg" alt="A mother hugging her daughter"><div class="body"><span class="k">Balance</span><span class="h3">The <span class="hl">hard-day</span> miracle</span><span>Counseling for the whole family.</span><span class="stat">[400+] people in therapy this year</span><span class="go" aria-hidden="true">→</span></div></a>
-    <a class="prog" href="https://miraclesforkids.org/feed-and-clothe/"><img class="crop c-star" src="assets/MiraclesForKids/takecard3.jpg" alt="A little girl sitting in a cardboard box"><div class="body"><span class="k">Boost</span><span class="h3">The <span class="hl">full-fridge</span> miracle</span><span>Food, clothes and essentials, every month.</span><span class="stat">[Box of Miracles monthly]</span><span class="go" aria-hidden="true">→</span></div></a>
-    <a class="prog sky" href="https://miraclesforkids.org/how-we-help-2/pillars/"><img class="crop c-squircle" src="assets/MiraclesForKids/work-3-scaled.jpg" alt="A father and son blowing bubbles on the grass"><div class="body"><span class="k">Pillars</span><span class="h3">The <span class="hl">what's-next</span> miracle</span><span>Jobs, school and a fresh start.</span><span class="stat">[78%] of those interviewed were hired</span><span class="go" aria-hidden="true">→</span></div></a>
+    <a class="prog lead" href="https://miraclesforkids.org/pay-the-bills/"><img class="crop c-arch" src="assets/MiraclesForKids/KiaraSanchez.jpg" alt="A mother laughing with her toddler"><div class="body"><span class="k"><span data-feather-icon="CreditCard" aria-hidden="true"></span>Lifeline</span><span class="h2">The <span class="hl">lights-on</span> miracle</span><span>Up to $500 a month toward the bills.</span><span class="stat">[230+] families every month</span><span class="go" aria-hidden="true"><span data-feather-icon="ArrowUpRight"></span></span></div></a>
+    <a class="prog" href="https://miraclesforkids.org/housing/"><img class="crop c-arch" style="object-position:top" src="assets/MiraclesForKids/miracles-manor-2.png" alt="Miracle Manor, MFK's family housing"><div class="body"><span class="k"><span data-feather-icon="Home" aria-hidden="true"></span>Safe Haven</span><span class="h3">The <span class="hl">home</span> miracle</span><span>Miracle Manor, around the corner from CHOC.</span><span class="stat">[22] families housed</span><span class="go" aria-hidden="true"><span data-feather-icon="ArrowUpRight"></span></span></div></a>
+    <a class="prog" href="https://miraclesforkids.org/heal/"><img class="crop c-squircle" src="assets/MiraclesForKids/banner-volunteer.jpg" alt="A mother hugging her daughter"><div class="body"><span class="k"><span data-feather-icon="Sun" aria-hidden="true"></span>Balance</span><span class="h3">The <span class="hl">hard-day</span> miracle</span><span>Counseling for the whole family.</span><span class="stat">[400+] people in therapy this year</span><span class="go" aria-hidden="true"><span data-feather-icon="ArrowUpRight"></span></span></div></a>
+    <a class="prog" href="https://miraclesforkids.org/feed-and-clothe/"><img class="crop c-star" src="assets/MiraclesForKids/takecard3.jpg" alt="A little girl sitting in a cardboard box"><div class="body"><span class="k"><span data-feather-icon="ShoppingBag" aria-hidden="true"></span>Boost</span><span class="h3">The <span class="hl">full-fridge</span> miracle</span><span>Food, clothes and essentials, every month.</span><span class="stat">[Box of Miracles monthly]</span><span class="go" aria-hidden="true"><span data-feather-icon="ArrowUpRight"></span></span></div></a>
+    <a class="prog sky" href="https://miraclesforkids.org/how-we-help-2/pillars/"><img class="crop c-squircle" src="assets/MiraclesForKids/work-3-scaled.jpg" alt="A father and son blowing bubbles on the grass"><div class="body"><span class="k"><span data-feather-icon="TrendingUp" aria-hidden="true"></span>Pillars</span><span class="h3">The <span class="hl">what's-next</span> miracle</span><span>Jobs, school and a fresh start.</span><span class="stat">[78%] of those interviewed were hired</span><span class="go" aria-hidden="true"><span data-feather-icon="ArrowUpRight"></span></span></div></a>
   </div>
 </section>
 
@@ -347,7 +375,7 @@ footer p{font:500 14px/24px var(--sans)}
 <div class="urgency-wrap">
   <section class="urgency" aria-labelledby="ur-h">
     <div><h2 id="ur-h" class="h2" style="font-size:clamp(28px,3.2vw,44px)"><span class="lite">There's a</span> <span class="heavy">waitlist.</span></h2><p>Families referred by children's hospitals are waiting for help with their bills. Your monthly gift moves one off the list.</p></div>
-    <a class="btn btn-sun" href="https://miraclesforkids.org/donate/">Donate</a>
+    <a class="btn btn-sun" href="https://miraclesforkids.org/donate/"><span data-feather-icon="Gift" aria-hidden="true"></span>Donate</a>
   </section>
 </div>
 
@@ -376,11 +404,11 @@ footer p{font:500 14px/24px var(--sans)}
   <svg class="deco a2" viewBox="0 0 400 300" aria-hidden="true"><use href="#s-asterisk" fill="var(--bg-accent)"/></svg>
   <h2 id="cl-h" class="display" style="position:relative"><span class="lite">Make a</span> <span class="script">miracle</span> <span class="heavy">today.</span></h2>
   <p style="font:400 20px var(--sans);margin:24px 0 32px;position:relative">It's easier than it sounds.</p>
-  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative"><a class="btn btn-primary" href="https://miraclesforkids.org/donate/">Donate</a><a class="btn btn-ghost" href="https://miraclesforkids.volunteerhub.com/vv2/">Volunteer</a></div>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative"><a class="btn btn-primary" href="https://miraclesforkids.org/donate/"><span data-feather-icon="Gift" aria-hidden="true"></span>Donate</a><a class="btn btn-ghost" href="https://miraclesforkids.volunteerhub.com/vv2/"><span data-feather-icon="Users" aria-hidden="true"></span>Volunteer</a></div>
   <form class="news" onsubmit="return false" aria-label="Newsletter (design only)" style="position:relative">
-    <div><p class="h3">Get the good news.</p><p class="cap">Family stories and ways to help, once a month.</p></div>
+    <div><p class="h3"><span data-feather-icon="Mail" aria-hidden="true"></span>Get the good news.</p><p class="cap">Family stories and ways to help, once a month.</p></div>
     <div><label for="em">Email address</label><input id="em" type="email" placeholder="you@example.com"></div>
-    <button class="btn btn-primary" type="submit">Sign up</button>
+    <button class="btn btn-primary" type="submit"><span data-feather-icon="Send" aria-hidden="true"></span>Sign up</button>
   </form>
 </section>
 </main>
@@ -393,7 +421,7 @@ footer p{font:500 14px/24px var(--sans)}
 </footer>
 
 <dialog id="give" class="give-dialog" aria-labelledby="give-h">
-  <button class="give-close" type="button" aria-label="Close and minimize" data-close>×</button>
+  <button class="give-close" type="button" aria-label="Close and minimize" data-close><span data-feather-icon="X" aria-hidden="true"></span></button>
   <span id="give-h" class="eyebrow" style="color:var(--highlight)">You just met the families</span>
   <form class="donation" method="dialog" aria-label="Quick donation (design only)">
     <p class="h3">Every <span class="script">month</span> counts.</p>
@@ -406,20 +434,25 @@ footer p{font:500 14px/24px var(--sans)}
   <button class="give-later" type="button" data-close>Maybe later</button>
 </dialog>
 <button id="give-bug" class="give-bug" type="button" aria-haspopup="dialog" aria-controls="give" hidden><svg viewBox="0 0 400 300" aria-hidden="true"><use href="#s-asterisk" fill="var(--bg-primary)"/></svg> Donate</button>
-<div class="note">Prototype · design only · [brackets] = pending MFK confirmation</div>
+
 
 <script>
 document.querySelectorAll('.toggle,.amounts,.filters').forEach(g=>g.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;g.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));}));
-// Donation interstitial: opens once, after the visitor has seen stories, truth and programs. Dismiss = minimize to the sticky bug.
-(function(){const d=document.getElementById('give'),bug=document.getElementById('give-bug');let seen=false;try{seen=localStorage.getItem('mfk-give-seen')==='1'}catch(e){}
- const minimize=()=>{if(d.open)d.close();bug.hidden=false;try{localStorage.setItem('mfk-give-seen','1')}catch(e){}};
- d.addEventListener('close',()=>{bug.hidden=false});
- d.addEventListener('cancel',e=>{e.preventDefault();minimize();});
- d.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',minimize));
- d.addEventListener('click',e=>{if(e.target===d)minimize();});
- bug.addEventListener('click',()=>{bug.hidden=true;d.showModal();});
- if(seen){bug.hidden=false;return;}
- const pr=document.querySelector('.programs');const io=new IntersectionObserver(es=>{es.forEach(en=>{if(!en.isIntersecting&&en.boundingClientRect.top<0){io.disconnect();d.showModal();}})});io.observe(pr);})();
+// Donation dialog retained as a design study; no automatic interruption or floating duplicate CTA.
+(function(){const d=document.getElementById('give'),bug=document.getElementById('give-bug');bug.hidden=true;d.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',()=>d.close()));})();
+
+// Type pairing switcher. Local commercial fonts (Filson Soft, Bogart, Bakerie Rough) render only if installed on this computer.
+(function(){const root=document.documentElement,bar=document.querySelector('.pair-switch'),warn=bar.querySelector('.warn');
+ const need={p1:['Filson Soft'],p2:['Filson Soft','Bogart'],p3:['Bakerie Rough']},alt={'Filson Soft':'Filson Pro'};
+ function has(f){const c=document.createElement('canvas').getContext('2d');const t='Miracles $500 ¢ “quote”';c.font='72px monospace';const a=c.measureText(t).width;c.font='72px "'+f+'", monospace';return c.measureText(t).width!==a;}
+ function set(p){root.dataset.pair=p;bar.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.p===p));try{localStorage.setItem('mfk-pair',p)}catch(e){}
+  const miss=(need[p]||[]).filter(f=>!has(f));warn.textContent=miss.length?miss.map(f=>alt[f]&&has(alt[f])?(f+' missing, using '+alt[f]):(f+' missing')).join(' · '):'';warn.classList.toggle('on',!!miss.length);}
+ let p=new URLSearchParams(location.search).get('pair');if(!p){try{p=localStorage.getItem('mfk-pair')}catch(e){}}
+ bar.addEventListener('click',e=>{const b=e.target.closest('button');if(b)set(b.dataset.p);});
+ document.fonts.ready.then(()=>set(p||'now'));set(p||'now');})();
 </script>
+<script type="importmap">{"imports":{"react":"https://esm.sh/react@18.3.1","react-dom/client":"https://esm.sh/react-dom@18.3.1/client?external=react","react-feather":"https://esm.sh/react-feather@2.0.10?external=react"}}</script>
+<script type="module" src="icons-react.js"></script>
+<script src="prototype-interactions.js"></script>
 </body>
 </html>
