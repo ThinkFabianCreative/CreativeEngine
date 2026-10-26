@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Source | CreativeEngine (in-house) |
-| Owner | DesignChamp (reference libraries); used equally by WordSmither and CreativeDirector |
+| Owner | DesignChamp (reference libraries); CreativeResearcher is the primary runner (since 2026-10-26); used equally by WordSmither and CreativeDirector |
 | Status | Built at the user's request 2026-09-24 ("build it and wire it in" for Ads of the World). First live run: UW T2 done-before check |
 | Installed | `.claude/skills/ad-reference/` (SKILL.md + `references/adsoftheworld.md`) |
 | Index | `shared/knowledge/ad-reference/` (README, index, entries) |

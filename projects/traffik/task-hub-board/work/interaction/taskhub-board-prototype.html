@@ -337,6 +337,50 @@ td{padding:10px 12px}
 .side.rail .collapse{margin:0;transform:rotate(180deg)}
 .side.rail #spaces .nav.on{box-shadow:inset 0 0 0 2px var(--fg)}
 @media (max-width:900px){.tabs{margin:0 -16px 14px;padding:0 16px}.wrap{padding:16px}}
+
+/* Trello alignment 2026-10-20: card front, collapse, quick add, two-pane card back */
+.card .lbl{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mfg);margin-bottom:6px}
+.lbl i{width:28px;height:8px;border-radius:4px;flex:none}
+.lbl.big{display:inline-flex;vertical-align:middle;margin-right:8px}
+.card .t{margin-bottom:8px}
+.card .fl{margin-bottom:8px}
+.card .bot{gap:10px;flex-wrap:wrap}
+.bdg{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--mfg);border-radius:3px;padding:1px 4px;margin-left:-4px}
+.bdg svg{width:14px;height:14px}
+.bdg.done{background:#1F845A;color:#fff}.bdg.bad{background:#FFECEB;color:#AE2E24}
+.card .bot .av.sp{margin-left:auto}
+.col h4{justify-content:flex-start;gap:6px}
+.col h4 .colx{margin-left:auto}
+.colx{background:none;border:0;border-radius:4px;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;color:var(--mfg);cursor:pointer;padding:0}
+.colx:hover{background:var(--hov)}.colx svg{width:14px;height:14px}
+.board{display:flex}
+.board .col{flex:1 0 248px}
+.board .col.shut{flex:0 0 44px;min-width:44px;display:flex;flex-direction:column;align-items:center;gap:10px;padding:8px 4px}
+.vt{writing-mode:vertical-rl;font-size:12px;font-weight:600;color:var(--sub)}
+.addc{display:flex;align-items:center;gap:6px;width:100%;background:none;border:0;border-radius:6px;padding:8px;color:var(--sub);font:inherit;font-size:13px;cursor:pointer;text-align:left}
+.addc:hover{background:var(--hov)}.addc svg{width:15px;height:15px}
+.qa textarea,.dside textarea{width:100%;box-sizing:border-box;border:1px solid var(--border);border-radius:6px;padding:8px 10px;font:inherit;font-size:14px;resize:vertical;background:var(--card);color:var(--fg)}
+.qab{display:flex;gap:6px;margin-top:6px}
+.drawer{width:min(960px,100%);padding:0}
+.dtop{display:flex;align-items:center;gap:12px;padding:14px 20px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--card);z-index:1}
+.dtop .x{margin-left:auto;float:none}
+.stsel{height:30px;font-weight:600}
+.dgrid{display:grid;grid-template-columns:minmax(0,1fr) 300px}
+.dmain{padding:16px 24px 32px}
+.dside{padding:16px 20px;border-left:1px solid var(--border);background:var(--muted)}
+.dside .btn{margin:6px 0 14px}
+.sec{display:flex;align-items:center;gap:8px}.sec svg{width:16px;height:16px;color:var(--mfg)}
+.pbar{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--mfg);margin-bottom:6px}
+.pbar .bar2{flex:1;margin:0}
+.chk{display:flex;gap:10px;align-items:flex-start;padding:7px 6px;border-radius:6px;cursor:pointer;font-size:13px}
+.chk:hover{background:var(--hov)}
+.chk input{width:16px;height:16px;margin-top:2px;flex:none;accent-color:var(--ok)}
+.chk > span{display:flex;flex-direction:column}
+.chk.on b{text-decoration:line-through;color:var(--mfg);font-weight:500}
+.ev{display:flex;gap:10px;font-size:13px;margin-bottom:12px}
+.ev .av{flex:none}
+.cmt{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:6px 10px;margin-top:4px}
+@media (max-width:760px){.dgrid{grid-template-columns:1fr}.dside{border-left:0;border-top:1px solid var(--border)}}
 </style>
 </head>
 <body>
@@ -503,18 +547,29 @@ function flag(c){ // one badge, most important first (fewer competing signals)
  if(c.high)return `<span class="tag high" title="HIGH: ${c.high}">High</span>`;
  return "";
 }
+// Trello-style card front: title first, then one row of small badges, avatar right. No status chip: the list says it.
+let collapsed=new Set(),comments={},quickAdd=false;
+function qcCount(c){return c.qcOK?5:(qcAns[c.id]||[]).filter(x=>x===true).length}
 function cardHTML(c){
- const f=flag(c);
+ const f=flag(c);const q=qcCount(c);const nc=(comments[c.id]||[]).length;
+ const showQC=c.qcOK||["qc","review","client","fb","done"].includes(c.col)||q>0;
  return `<div class="card" draggable="true" tabindex="0" role="button" aria-label="${c.t}, ${c.c}, ${c.who}. Open details" data-id="${c.id}">
+ <div class="lbl" title="${c.c}"><i style="background:${cliColor(c.c)}"></i>${c.c}</div>
  <div class="t">${c.t}</div>
- <div class="cl">${c.c}${c.round?` · R${c.round}/${c.rounds}`:""}</div>
- <div class="bot"><span class="av" title="${c.who}">${ini(c.who)}</span>${!c.brief?`<span class="ic" title="No brief">${svg("file-minus","#AE2E24")}</span>`:""}${c.qcOK?`<span class="ic" title="QC passed">${svg("check-circle","var(--ok)")}</span>`:""}<span class="sp">${f}</span></div></div>`}
+ ${f?`<div class="fl">${f}</div>`:""}
+ <div class="bot">${c.prom?`<span class="bdg ${c.late?"bad":""}" title="Promised ${c.prom}">${svg("clock")}${c.prom}</span>`:""}${showQC?`<span class="bdg ${q===5?"done":""}" title="QC checklist ${q} of 5">${svg("check-square")}${q}/5</span>`:""}${nc?`<span class="bdg" title="${nc} comments">${svg("message-square")}${nc}</span>`:""}${c.round?`<span class="bdg" title="Round ${c.round} of ${c.rounds}">R${c.round}/${c.rounds}</span>`:""}${!c.brief?`<span class="bdg bad" title="No brief">${svg("file-minus")}</span>`:""}<span class="av sp" title="${c.who}">${ini(c.who)}</span></div></div>`}
+const CLI_COL={"Eternal Health":"#4BCE97","CMU":"#579DFF","Edwards":"#9F8FEF","Starling":"#F5CD47","GJRASA":"#6CC3E0","MFK":"#FEA362","TRAFFIK":"#8590A2"};
+function cliColor(n){return CLI_COL[n]||"#8590A2"}
+function addQuick(){const i=$("#qaIn");const t=i&&i.value.trim();if(!t)return;const id=Math.max(...cards.map(c=>c.id))+1;cards.push({id,t,c:cli||"TRAFFIK",who:who||"Andres",am:"",lead:"",rev:"",col:"intake",plan:0,log:0,brief:0,round:0,rounds:2,del:"",prom:""});toast(`Added to Intake: ${t}`,1);render();setTimeout(()=>{const n=$("#qaIn");n&&n.focus()},0)}
 function board(){
  if(suOn&&suI===0)showBlocked=true;
  const v=vis();
  const bl=blocked.filter(b=>v.some(c=>c.id===b.id));
  let h=!bl.length?"":!showBlocked?"":`<div class="blocked"><h4>Blocked · reason, owner, date</h4>${bl.length?bl.map(b=>{const c=cards.find(x=>x.id===b.id);return `<div class="brow"><b>${c.t}</b><span>${b.why}</span><span>Owner: ${b.owner}</span><span>Since ${b.since}</span><button data-unblock="${b.id}">Clear</button></div>`}).join(""):'<div class="brow">Nothing blocked.</div>'}</div>`;
- h+='<div class="board">'+COLS.map(col=>{const inCol=v.filter(c=>c.col===col.k);return `<div class="col" data-col="${col.k}"><h4 title="Rule: ${col.r}"><span class="ch">${svg(COLICON[col.k])}${col.n}</span><span>${inCol.length}</span></h4><div class="rule" title="${col.r}">${svg("info")}<span>${col.r}</span></div>${inCol.map(cardHTML).join("")}</div>`}).join("")+'</div>';
+ h+='<div class="board">'+COLS.map(col=>{const inCol=v.filter(c=>c.col===col.k);
+  if(collapsed.has(col.k))return `<div class="col shut" data-col="${col.k}"><button class="colx" data-colx="${col.k}" aria-label="Expand ${col.n}" aria-expanded="false">${svg("maximize-2")}</button><div class="vt">${col.n} · ${inCol.length}</div></div>`;
+  const add=col.k!=="intake"?"":quickAdd?`<div class="qa"><textarea id="qaIn" rows="2" placeholder="Task title (lands in Intake)" aria-label="New task title"></textarea><div class="qab"><button class="btn pri" id="qaGo">Add card</button><button class="btn x" id="qaX" aria-label="Cancel">${svg("x")}</button></div></div>`:`<button class="addc" id="qaOpen">${svg("plus")}Add a card</button>`;
+  return `<div class="col" data-col="${col.k}"><h4 title="Rule: ${col.r}"><span class="ch">${svg(COLICON[col.k])}${col.n}</span><button class="colx" data-colx="${col.k}" aria-label="Collapse ${col.n}" aria-expanded="true">${svg("minimize-2")}</button><span>${inCol.length}</span></h4><div class="rule" title="${col.r}">${svg("info")}<span>${col.r}</span></div>${inCol.map(cardHTML).join("")}${add}</div>`}).join("")+'</div>';
  
  h=`<div class="boardbar"><button class="btn ${suOn?"":"pri"}" id="runSU">${svg(suOn?"x":"users")}${suOn?"End stand-up":"Run stand-up"}</button><span class="sm">${suOn?"Walking the board: right to left, one person at a time":"Daily at 9:45 · PM-led · 15 minutes"}</span></div>`+h;
  $("#view").innerHTML=h;
@@ -523,6 +578,9 @@ function board(){
  document.querySelectorAll(".col").forEach(col=>{col.ondragenter=()=>col.classList.add("drop");col.ondragleave=e=>{if(!col.contains(e.relatedTarget))col.classList.remove("drop")}});
  document.querySelectorAll(".col").forEach(col=>{col.ondragover=e=>e.preventDefault();col.ondrop=e=>{const c=cards.find(x=>x.id==e.dataTransfer.getData("id"));if(c)move(c,col.dataset.col)}});
  document.querySelectorAll("[data-qc]").forEach(b=>b.onclick=()=>openQC(+b.dataset.qc));
+ document.querySelectorAll("[data-colx]").forEach(b=>b.onclick=()=>{const k=b.dataset.colx;collapsed.has(k)?collapsed.delete(k):collapsed.add(k);render();const n=document.querySelector(`[data-colx="${k}"]`);n&&n.focus()});
+ if($("#qaOpen"))$("#qaOpen").onclick=()=>{quickAdd=true;render();setTimeout(()=>$("#qaIn")&&$("#qaIn").focus(),0)};
+ if($("#qaIn")){$("#qaIn").onkeydown=e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();addQuick()}if(e.key==="Escape"){e.stopPropagation();quickAdd=false;render()}};$("#qaGo").onclick=addQuick;$("#qaX").onclick=()=>{quickAdd=false;render()}}
  document.querySelectorAll("[data-block]").forEach(b=>b.onclick=()=>{const why=prompt("Why is it blocked?");if(!why)return toast("A blocker needs a reason.");const owner=prompt("Who owns unblocking it? (person or Client)");if(!owner)return toast("A blocker needs an owner.");blocked.push({id:+b.dataset.block,why,owner,since:"Oct 10"});render()});
  document.querySelectorAll("[data-unblock]").forEach(b=>b.onclick=()=>{blocked=blocked.filter(x=>x.id!=b.dataset.unblock);render()});
  document.querySelectorAll("[data-log]").forEach(b=>b.onclick=()=>{const c=cards.find(x=>x.id==b.dataset.log);c.log+=.5;toast(`Logged 0.5h on ${c.t}`,1);render()});
@@ -532,31 +590,36 @@ function openDrawer(id){
  const c=cards.find(x=>x.id===id);if(!c)return;const P=PARENT[c.c]||{job:"no job #",name:c.c,pm:"—"};
  const sibs=cards.filter(x=>x.c===c.c&&x.id!==c.id);const b=blocked.find(x=>x.id===c.id);const ss=steps(c);
  const done=ss.filter(s=>s.st==="done").length;const qa=qcAns[c.id]||[];
- $("#drawer").innerHTML=`<button class="x" id="dx" aria-label="Close">${svg("x")}</button>
- <div class="crumb">${c.c.toUpperCase()} · ${P.job} · <a id="dparent">${P.name}</a></div>
- <h2>${c.t}</h2>
- <div class="actbar"><label class="sm" for="mv">Move to</label><select id="mv">${COLS.map(k=>`<option value="${k.k}" ${k.k===c.col?"selected":""}>${k.n}</option>`).join("")}</select>
- ${c.col==="qc"&&!c.qcOK?'<button class="btn pri" id="dqc2">QC checklist</button>':""}
- ${isBlocked(c)?'<button class="btn" id="dunb">Clear blocker</button>':c.col!=="done"?'<button class="btn" id="dblk">'+svg("lock")+'Block</button>':""}
- <button class="btn" id="dlog">${svg("clock")}Log 0.5h</button></div>
- <div class="meta">${c.high?`<span class="tag high">HIGH</span> <span>${c.high}</span>`:""}${c.late?'<span class="tag late">OVERDUE</span>':""}${earlier(c)?'<span class="tag warn">Promised before plan</span>':""}${c.round?`<span class="tag">Round ${c.round} of ${c.rounds}</span>`:""}${c.round>c.rounds?'<span class="tag late">Change order</span>':""}<span class="tag">${COLS.find(k=>k.k===c.col).n}</span></div>
+ const qn=qcCount(c);const cm=comments[c.id]||[];
+ const act=[...cm.map(x=>({w:x.w,t:x.t,when:x.when,c:1})),{w:c.am||"PM",t:`moved this card to ${COLS.find(k=>k.k===c.col).n}`,when:"Oct 12"},{w:P.pm,t:`added this card to ${P.name}`,when:"Oct 6"}];
+ $("#drawer").innerHTML=`<div class="dtop"><select id="mv" class="stsel" aria-label="Status (list)">${COLS.map(k=>`<option value="${k.k}" ${k.k===c.col?"selected":""}>${k.n}</option>`).join("")}</select><span class="crumb">${c.c.toUpperCase()} · ${P.job} · <a id="dparent">${P.name}</a></span><button class="x" id="dx" aria-label="Close">${svg("x")}</button></div>
+ <div class="dgrid"><div class="dmain">
+ <h2><span class="lbl big"><i style="background:${cliColor(c.c)}"></i></span>${c.t}</h2>
+ <div class="actbar">${isBlocked(c)?'<button class="btn" id="dunb">Clear blocker</button>':c.col!=="done"?'<button class="btn" id="dblk">'+svg("lock")+'Block</button>':""}
+ <button class="btn" id="dlog">${svg("clock")}Log 0.5h</button>${c.col==="qc"&&!c.qcOK?'<button class="btn" id="dqc">'+svg("shield")+'QC override</button>':""}</div>
+ <div class="meta">${c.high?`<span class="tag high">HIGH</span> <span>${c.high}</span>`:""}${c.late?'<span class="tag late">OVERDUE</span>':""}${earlier(c)?'<span class="tag warn">Promised before plan</span>':""}${c.round?`<span class="tag">Round ${c.round} of ${c.rounds}</span>`:""}${c.round>c.rounds?'<span class="tag late">Change order</span>':""}</div>
  ${b?`<div class="blocked" style="margin-top:12px"><h4>Blocked since ${b.since}</h4><div>${b.why} · Owner: ${b.owner}</div></div>`:""}
  <div class="dates"><div><small>Plan delivers</small><b>${c.del||"No plan yet"}</b></div><div><small>Promised</small><b>${c.prom||"—"}</b></div><div><small>Due-date driver</small><b>${c.driver||'<span class="no">Missing</span>'}</b></div></div>
  <div class="kv"><div><small>Account lead</small>${c.am||'<b class="no">None</b>'}</div><div><small>Project manager</small>${P.pm}</div><div><small>Creative lead</small>${c.lead||'<b class="no">None</b>'}</div><div><small>Reviewer</small>${c.rev||'<b class="no">None</b>'}${c.rev&&c.rev===c.who?' <b class="no">(maker = checker)</b>':""}</div><div><small>Assigned to</small>${c.who}</div><div><small>QC owner</small>Judy / Katie</div><div><small>Brief</small>${c.brief?`<span class="ok ic">${svg("check")}Linked (one-page brief)</span>`:`<b class="no ic">${svg("x")}No brief</b>`}</div><div><small>Hours</small>${c.log} logged of ${c.plan} planned <span class="sm">(likely ${(c.plan*0.75).toFixed(1)}–${(c.plan*1.5).toFixed(1)}h)</span></div></div>
- <div class="why">Plan date = standard-time steps + client review days. ${earlier(c)?"The promised date is earlier than the plan, so something has to be cut, moved or resourced.":"The promised date fits the plan."}</div>
- <h3>The plan · ${done}/${ss.length} steps complete</h3>
+ <h3 class="sec">${svg("check-square")}Quality Control</h3>
+ <div class="pbar"><span>${Math.round(qn/5*100)}%</span><div class="bar2"><i style="width:${qn/5*100}%;${qn===5?"background:var(--ok)":""}"></i></div></div>
+ ${QC.map((q,i)=>{const on=c.qcOK||qa[i]===true;return `<label class="chk ${on?"on":""}"><input type="checkbox" data-qci="${i}" ${on?"checked":""} ${c.qcOK?"disabled":""}><span><b>${q[0]}</b><span class="sm">${q[2]}</span></span></label>`}).join("")}
+ ${c.qcOK?`<div class="ok ic sm">${svg("check")}QC passed. Ready to send or present.</div>`:'<div class="sm">Tick all five to pass QC. If one cannot pass, the ACD records an override.</div>'}
+ <h3 class="sec">${svg("list")}The plan · ${done}/${ss.length} steps complete</h3>
  ${ss.map(s=>`<div class="step ${s.st==="done"?"done":s.st==="cur"?(b?"cur blk":"cur"):""}"><span class="dot"></span><div style="flex:1"><b>${s.n}</b>${s.rule?'<span class="gate">RULE</span>':""}<div class="sm">${s.role}: ${s.who} · ${s.h}h planned${s.st==="cur"?" · <b>current step</b>":""}</div></div><div class="sm">${s.st==="done"?"Complete":s.st==="cur"?(b?"Blocked":"Active"):"New"}</div></div>`).join("")}
- <h3>Quality Control</h3>
- ${c.qcOK?`<div class="ok ic">${svg("check")}Passed</div>`:QC.map((q,i)=>`<div class="step"><span class="dot" style="background:${qa[i]===true?'var(--green)':qa[i]===false?'var(--red)':'#ccc'}"></span><div style="flex:1"><b>${q[0]}</b><div class="sm">${q[2]}</div></div><div class="sm">${qa[i]===true?"Yes":qa[i]===false?"No":"Not answered"}</div></div>`).join("")}
- ${c.col==="qc"?'<div class="btns" style="justify-content:flex-start"><button class="pri" id="dqc">Open QC checklist</button></div>':""}
- <h3>Other tasks on ${P.name} (${sibs.length})</h3>
+ <h3 class="sec">Other tasks on ${P.name} (${sibs.length})</h3>
  ${sibs.map(s=>`<div class="sib" data-sib="${s.id}"><b>${s.t}</b> · ${s.who} · ${COLS.find(k=>k.k===s.col).n}${s.late?' · <span class="no">overdue</span>':""}</div>`).join("")||'<div class="sm">No other tasks.</div>'}
- <h3>Comments</h3><div class="sm">Requirements and details live here, as in the Hub today.</div>`;
+ </div><aside class="dside" aria-label="Comments and activity">
+ <h3 class="sec">${svg("message-square")}Comments and activity</h3>
+ <textarea id="cmIn" rows="2" placeholder="Write a comment…" aria-label="Write a comment"></textarea><button class="btn pri" id="cmGo">Save</button>
+ ${act.map(x=>`<div class="ev"><span class="av">${ini(x.w)}</span><div>${x.c?`<b>${x.w}</b><div class="cmt">${x.t}</div>`:`<b>${x.w}</b> ${x.t}`}<div class="sm">${x.when}</div></div></div>`).join("")}
+ </aside></div>`;
  showSheet();
  $("#dx").onclick=hideSheet;
  $("#dparent").onclick=()=>openParent(c.c);
  $("#mv").onchange=e=>{move(c,e.target.value);openDrawer(c.id)};
- if($("#dqc2"))$("#dqc2").onclick=()=>openQC(c.id);
+ document.querySelectorAll("[data-qci]").forEach(x=>x.onchange=()=>{const a=qcAns[c.id]||(qcAns[c.id]=[]);a[+x.dataset.qci]=x.checked?true:undefined;if(a.filter(v=>v===true).length===5){c.qcOK=1;toast("QC passed. Ready to send or present.",1)}render();openDrawer(c.id);const n=document.querySelector(`[data-qci="${x.dataset.qci}"]`);n&&n.focus()});
+ $("#cmGo").onclick=()=>{const t=$("#cmIn").value.trim();if(!t)return;(comments[c.id]||(comments[c.id]=[])).unshift({w:"Andres",t,when:"just now"});render();openDrawer(c.id)};
  if($("#dunb"))$("#dunb").onclick=()=>{blocked=blocked.filter(x=>x.id!==c.id);render();openDrawer(c.id)};
  if($("#dblk"))$("#dblk").onclick=()=>{const why=prompt("Why is it blocked?");if(!why)return toast("A blocker needs a reason.");const owner=prompt("Who owns unblocking it? (person or Client)");if(!owner)return toast("A blocker needs an owner.");blocked.push({id:c.id,why,owner,since:"Oct 10"});render();openDrawer(c.id)};
  $("#dlog").onclick=()=>{c.log=+(c.log+.5).toFixed(1);toast(`Logged 0.5h on ${c.t}`,1);render();openDrawer(c.id)};

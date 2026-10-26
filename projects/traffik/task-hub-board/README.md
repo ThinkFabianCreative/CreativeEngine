@@ -31,6 +31,7 @@ The prototype's Completed view embeds Traffik's own Task Hub export (Apr 28 – 
 | Date | To | What |
 |---|---|---|
 | 2026-10-12 | Leo M | `outputs/delivered/2026-10-12/leo-handoff/`: prototype, v1 and full specs, implementation notes, acceptance checks. A zip of it sits beside the folder (local only, not in git) |
+| 2026-10-20 | Leo M (ready, not sent) | `outputs/delivered/2026-10-20/leo-v2-feedback/`: feedback on his mockup v2. Read-first decisions, marked-up mockup + PDF, acceptance checks in three batches, Claude prompt. Zip beside it (local only); message draft in `message-to-leo.md` |
 
 ## Related
 

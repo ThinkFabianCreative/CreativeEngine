@@ -108,16 +108,19 @@ All copy is bracketed slot descriptions: [SLOT – WHAT GOES HERE]. Do not write
 copy or invent facts, numbers, costs, rankings, outcomes or deadlines.
 Label each section on the artboard edge ("01 HERO") so the client can reference it.
 
-00 NAV (slim, 64px): logo box left; "REQUEST INFO" button right. No anchor links (fewer
-   exits). Mobile: logo + button only.
+00 NAV (slim, 64px): logo box left; "REQUEST INFO" button right. Mobile: logo + button only.
 01 HERO + VIDEO (one screen): label = program name; H1 [CAMPAIGN HEADLINE] (2 lines max);
    one-line sub; video player 8 cols beside the form card (4 cols). Above the fold on
    1440x900. Mobile: headline, then full-width video, then the sticky bar.
    The video thumbnail opens OVERLAY 01A: full-screen video player, with an end-state
    card "[CLOSING LINE] + REQUEST INFO".
-02 AT A GLANCE (a strip, not a section): 4 Stat Slots in one row directly under the hero:
-   [FORMAT] [CREDITS] [LENGTH] [START TERMS], values "[CLIENT TO SUPPLY]". Mobile:
-   horizontal swipe strip.
+02 SUB-NAVIGATION (Andres, 2026-10-19: replaces the at-a-glance strip; graduate
+   prospects compare programs and need to jump to what they're checking): a sticky bar
+   directly under the hero with anchor links to the page's own sections (e.g. WHY ·
+   STUDENT VOICES · PROGRAM DETAILS · HOW TO APPLY) + REQUEST INFO at its right end.
+   Links stay on the page (no exits). Show the active-section state. Mobile: horizontal
+   scrolling tab bar under the top nav. Annotate: "STICKY – pins below nav on scroll".
+   Format/credits/length/start facts move into 05 PROGRAM DETAILS.
 03 WHY THIS PROGRAM – CAROUSEL: H2 left, carousel right. 4 cards, each: image box,
    H3 reason, 2 lines. Card 4 = REQUEST INFO card.
 04 STUDENT VOICES – CAROUSEL: 3 Quote Cards (photo box "STUDENT PHOTO – TBD", quote

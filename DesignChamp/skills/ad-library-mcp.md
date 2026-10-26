@@ -2,7 +2,7 @@
 
 - **Source:** `at-dan/ad-library-mcp`, reviewed commit `2da03c1` (2026-04-16), v0.1.0, MIT.
 - **Installed:** 2026-10-08, outside the repo at `~/Documents/AI_Traffik_Projects/tools/ad-library-mcp`. Registered at user scope as HTTP MCP `ad-library` → `http://127.0.0.1:3002/mcp`. The server must be running (`npm start` in that folder).
-- **Owner:** DesignChamp (reference research). Any role may use it under this record; BriefMachine for competitive context.
+- **Owner:** DesignChamp (reference research). CreativeResearcher is the primary runner (since 2026-10-26). Any role may use it under this record; BriefMachine for competitive context.
 
 ## What it does
 

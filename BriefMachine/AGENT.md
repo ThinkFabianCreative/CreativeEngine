@@ -53,6 +53,10 @@ Scope rules are in the root `CLAUDE.md`; the workspace contract is `projects/REA
 
 BriefMachine hands the optimized brief to CreativeDirector, who decides whether it is ready for exploration. CreativeDirector can send a brief back for another round. DesignChamp and WordSmither can also return to the brief when the work exposes a strategic problem.
 
+## The brief loop
+
+TRAFFIK briefs are written through the `creative-brief` skill. BriefMachine writes each round, finds the USP from evidence (`brand-strategy.md` §6a), writes "parity" when nothing is truly unique, and revises only what the findings name. Cut words, never fields.
+
 ## Skills and knowledge
 
 - Skills: `BriefMachine/skills/`

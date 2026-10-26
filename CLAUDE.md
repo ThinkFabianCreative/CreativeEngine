@@ -7,13 +7,16 @@ CreativeEngine is an AI-powered advertising creative department. This file is it
 | Role | Subagent | Function | Owns |
 |---|---|---|---|
 | **BriefMachine** | `brief-machine` | Strategic briefing intelligence | Transforming messy client material into simple, sharp, creatively fertile briefs |
-| **DesignChamp** | `design-champ` | Conceptual art direction and visual taste | Visual ideas, typography, color, layout, composition, design systems, imagery, visual culture, cultural auditing |
+| **DesignChamp** | `design-champ` | Design lead with Marketing design and Interaction design specialist modes | Coherent design direction across visual ideas, brand expression, typography, imagery, design systems, user flows, interface behavior, accessibility and prototypes |
 | **WordSmither** | `word-smither` | Advertising copywriting and verbal creativity | Campaign platforms, concepts, headlines, scripts, taglines, naming, brand voice, verbal craft |
 | **SprintFacilitator** | `sprint-facilitator` | Workshop design and facilitation | Branding workshops and design sprints (mainly for web design projects): choosing the format, preparing and running the session, documenting outcomes honestly. Owns process, not ideas or briefs |
+| **CreativeResearcher** | `creative-researcher` | Research and evidence | Competitor and category maps, live competitor ads, voice-of-customer language, benchmarks by Creative Ladder rung, reference boards and client asset audits. Owns evidence, not judgment: reports sourced observations and patterns; BriefMachine turns them into strategy |
 | **CreativeAdmin** | `creative-admin` | People management and department performance | Team member profiles, performance reviews, development plans, advocacy, leave requests and salary context. Aims at improvement, not oversight. Runs beside the creative flow, not inside it |
 | **CreativeDirector** | `creative-engine-director` | Orchestrator and critic | Routing work, creative judgment, selection, critique, iteration, deciding when work is actually good enough |
 
 Each role is defined in `<Role>/AGENT.md`, its source of truth. Before acting as a role, read that role's `AGENT.md`.
+
+DesignChamp remains one role. Its Marketing design and Interaction design specialties are defined in `DesignChamp/AGENT.md`; mixed assignments use both, with DesignChamp accountable for the complete design direction. These specialties do not change the EXPLORE, DEVELOP and JUDGE operating modes.
 
 ## Operating model
 
@@ -39,7 +42,7 @@ CRITIQUE + REVISION
 SELECTED WORK
 ```
 
-CreativeDirector decides where incoming work enters this flow. Raw or unclear material starts with BriefMachine.
+CreativeDirector decides where incoming work enters this flow. Raw or unclear material starts with BriefMachine. CreativeResearcher supplies evidence before BriefMachine when a brief lacks it, and to any role on request.
 
 Creative work never starts directly from raw source material. BriefMachine normalizes it first, and never edits or replaces the raw source. Departments work from the normalized brief or, usually, from the smallest relevant work packet drawn from it. Strategy improvement is a separate, labeled step. Method: `shared/frameworks/brief-normalization.md`.
 
@@ -210,7 +213,7 @@ Principle 1 still holds: agents own judgment. Frameworks inform it; skills carry
 - Each framework exists to solve a particular class of creative problem.
 - Frameworks complement one another. They are not competing evaluation systems.
 - Frameworks stay modular. They must not gradually collapse into one enormous universal prompt or scorecard.
-- More specialist frameworks are expected, for example brand strategy, briefing, positioning, naming, tagline development, headline development, long copy, humor, visual concepts, typography, art direction, identity systems, film, OOH, social, experiential, guerrilla, brand acts, integrated campaigns, cultural auditing and creative effectiveness. Of these, briefing (`brief-normalization.md`, `brief-strategy.md`), visual concepts and art direction (`pricken-idea-mechanisms.md`, `barry-concept-art-direction.md`), typography (`typography.md`), visual craft (`visual-craft.md`), presentations (`editorial-presentation.md`) and the narrative side of film (`narrative-craft.md`) exist so far. Each remaining one will be added as a new layer and registered below.
+- More specialist frameworks are expected, for example brand strategy, briefing, positioning, naming, tagline development, headline development, long copy, humor, visual concepts, typography, art direction, identity systems, film, OOH, social, experiential, guerrilla, brand acts, integrated campaigns, cultural auditing and creative effectiveness. Of these, briefing (`brief-normalization.md`, `brief-strategy.md`), visual concepts and art direction (`pricken-idea-mechanisms.md`, `barry-concept-art-direction.md`), typography (`typography.md`), visual craft (`visual-craft.md`), brand strategy (`brand-strategy.md`), creative effectiveness (`creative-effectiveness.md`), presentations (`editorial-presentation.md`) and the narrative side of film (`narrative-craft.md`) exist so far. Each remaining one will be added as a new layer and registered below.
 
 ### Framework registry
 
@@ -236,6 +239,8 @@ This registry is the only source of truth for which framework files exist. Do no
 | `typography.md` | What is the type's job, does this face do it, does the hierarchy deliver the idea, and does it survive where it is actually read? | `design-champ` (owner); `word-smither` when type decides how a line is read; `creative-engine-director` in review | Once a visual concept exists and type has to carry, become or deliver it. Mainly DEVELOP and JUDGE. Type experiments are legitimate in EXPLORE; its craft tests are not |
 | `visual-craft.md` | Does the craft make a decided visual idea land? Composition, grids and spacing, color jobs, imagery craft, visual codes, visual systems, finish, generic visual tells, real-condition checks; a Figma agent brief format. The "DesignChamp visual criteria" in creative object routing | `design-champ` (owner); `creative-engine-director` in review; `word-smither` when image and copy are composed together | Once a concept sentence exists (Barry §1). Mainly DEVELOP and JUDGE; craft tests are not filters in EXPLORE |
 | `editorial-presentation.md` | Is the deck a sequence of authored visual moments, or a template? Reference hierarchy (film titles, editorial, annual reports, brand systems, exhibition), reference boards, rhythm, chapter lines, the turn, case studies as stories, capabilities as outcomes, scenarios for what's next, evidence-first imagery, the specificity test | `design-champ` (owner); `creative-engine-director` when a deck is judged; `word-smither` for chapter lines, titles and case language | Pitch decks, credentials, capabilities and case-study decks, concept presentations. Supplements `visual-craft.md`, `typography.md` and `slideshow.md`; does not repeat them. Client look stays in client knowledge |
+| `creative-effectiveness.md` | Is the work good enough for this job? The Creative Ladder (10 rungs, Calamity to Cultural Movement) for setting ambition and assessing level; 3 pitstops / 10 questions (branding, strategic, creative); the five drivers (impact, insight, emotion, craft, fame); category stereotypes; conditions for climbing. From the Cannes Lions Creative Effectiveness Program | `creative-engine-director` (owner); `brief-machine` for the ambition field; `word-smither` and `design-champ` for self-assessment in DEVELOP | Setting Creative Ambition at the brief; diagnosis in DEVELOP; full assessment in JUDGE. No ladder scoring in EXPLORE. Maps onto, does not replace, the altitude in `creative-direction-audit.md` |
+| `brand-strategy.md` | Brand-level strategic assets above any single brief: Brand Promise and brand house (human truth, broad target, DNA, benefits, role, archetype), Core Creative Idea ("Stories where…") and its seven tests, Jobs to Be Done and barrier types, brand identity assets, and what a creative brief carries from them. From the Cannes Lions Creative Effectiveness Program | `brief-machine` (owner); `creative-engine-director` for readiness and CCI fit; `sprint-facilitator` for brand workshops | Only on request, when building or reviewing a brand's promise, CCI or JTBDs, or checking a brief's brand-level fields. Never during intake. Client assets live in client knowledge |
 
 **Planned / not yet implemented**
 
@@ -340,4 +345,4 @@ The system should know:
 
 ## Status
 
-V1. `CreativeDirector/AGENT.md` and `WordSmither/AGENT.md` are full V1 definitions. `SprintFacilitator/AGENT.md` is a V1 definition (added after Design Sprint research); its framework marks unverified points. `CreativeAdmin/AGENT.md` is a V1 definition; its people data lives in `projects/traffik/people/`, which is gitignored. WordSmither works as a senior ACD-level copywriter, specializing in social and paid, in English. `BriefMachine/AGENT.md` and `DesignChamp/AGENT.md` are still placeholders; each will be designed separately.
+V1. `CreativeDirector/AGENT.md` and `WordSmither/AGENT.md` are full V1 definitions. `SprintFacilitator/AGENT.md` is a V1 definition (added after Design Sprint research); its framework marks unverified points. `CreativeResearcher/AGENT.md` is a V1 definition (added 2026-10-26); screen-grabs are internal working references only. `CreativeAdmin/AGENT.md` is a V1 definition; its people data lives in `projects/traffik/people/`, which is gitignored. WordSmither works as a senior ACD-level copywriter, specializing in social and paid, in English. `BriefMachine/AGENT.md` remains a placeholder. `DesignChamp/AGENT.md` defines the design lead and its Marketing design and Interaction design specialties; further personality and methodology remain to be developed.

@@ -34,6 +34,7 @@ This is where Claude discovers CreativeEngine's skills automatically. Each skill
 | `review-animations` | DesignChamp | `DesignChamp/skills/emil-kowalski-skills.md` (Emil Kowalski) · manual only |
 | `animation-vocabulary` | DesignChamp | `DesignChamp/skills/emil-kowalski-skills.md` (Emil Kowalski) |
 | `prototype` | DesignChamp | `DesignChamp/skills/emil-kowalski-skills.md` (Emil Kowalski) · manual only; skip Phase 6 (promote to production) |
+| `creative-brief` | BriefMachine (loop with CreativeDirector, WordSmither, DesignChamp) | `BriefMachine/skills/creative-brief.md` (in-house) · writes, pressure-tests and renders TRAFFIK briefs; max three rounds; never clears ⚑ claims |
 | `marketing-ideas` | BriefMachine | `BriefMachine/skills/marketing-ideas.md` (coreyhaines31/marketingskills) · manual only; tactics, not ideas; SaaS-centric, translate for other clients |
 | `wait-what` | WordSmither (any role) | `WordSmither/skills/wait-what.md` (mattpocock/skills) · manual only; re-pitch the last message plainly; uses CLAUDE.md vocabulary, no GLOSSARY.md |
 | `awwwards` | DesignChamp | `DesignChamp/skills/awwwards-stack.md` (Awwwards stack) · concept first; prototypes only; jsDelivr not esm.sh in Artifacts; no JS motion in email |
@@ -43,6 +44,15 @@ This is where Claude discovers CreativeEngine's skills automatically. Each skill
 | `color-palette-extractor` | DesignChamp | `DesignChamp/skills/awwwards-stack.md` (Awwwards stack) |
 | `design-motion-principles` | DesignChamp | `DesignChamp/skills/awwwards-stack.md` (Awwwards stack) |
 | `remotion-best-practices` | DesignChamp | `DesignChamp/skills/awwwards-stack.md` (Awwwards stack) |
+
+## Plugin skills
+
+Installed as Claude plugins, outside this folder. Their department record governs use on CreativeEngine work.
+
+| Skill | Owner | Record |
+|---|---|---|
+| `design-superpowers:map-design`, `:design-review`, `:creative`, `:design`, `:ds-make` | DesignChamp | `DesignChamp/skills/design-superpowers.md` · approved 2026-10-26; `DESIGN.md` goes in the client project folder, never the repo root; `/creative` systematizes a decided idea, it does not find one; `/ds-make` manual only |
+| `design-superpowers:ds-consumer`, `:ds-producer`, `:ds-manage`, `:figma-setup` | DesignChamp | `DesignChamp/skills/design-superpowers.md` · on hold, do not use |
 
 ## Before adding a skill
 

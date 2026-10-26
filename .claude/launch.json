@@ -1,0 +1,26 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "uw-wireframes",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8420"
+      ],
+      "port": 8420,
+      "cwd": "/Users/andresfabian/Documents/AI_Traffik_Projects/CreativeEngine/projects/university-of-wyoming/fy26-27-graduate-business-inquiry/work/wireframes"
+    },
+    {
+      "name": "taskhub-audit",
+      "port": 8440,
+      "url": "http://localhost:8440"
+    },
+    {
+      "name": "mfk-prototype",
+      "url": "http://localhost:8430",
+      "port": 8430
+    }
+  ]
+}

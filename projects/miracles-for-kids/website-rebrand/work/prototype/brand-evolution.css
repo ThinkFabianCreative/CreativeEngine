@@ -1,0 +1,30 @@
+/* MFK evolution: retain program hues, use neutral reading tokens. */
+:root{--text-primary:#242424;--text-secondary:#595959;--on-primary:#242424;--on-accent:#242424;--on-soft:#242424;--highlight:#242424;--bg-primary:#FFF4D0;--focus:#242424}
+.eyebrow,.hl,.script,.logo-wall-k b,.prog .k,.prog .hl,.prog.sky .k,.prog.sky .hl{color:inherit}
+.hero .eyebrow,.hero .display .script{color:#fff}
+.hero .display,.h1,.h2,.h3{letter-spacing:0}
+.btn-primary,.btn-sun{background:#A92061;color:#fff}
+.btn-ghost,.video-chip,.chip,.logo-wall-k,.prog .stat{color:#242424}
+.chip[aria-pressed=true]{background:#242424;color:#fff;border-color:#242424}
+.prog:nth-child(1){--program:#31B744;--program-surface:#EAF7EC}
+.prog:nth-child(2){--program:#A92061;--program-surface:#F8E9F0}
+.prog:nth-child(3){--program:#27BBC9;--program-surface:#E8F7F9}
+.prog:nth-child(4){--program:#F99400;--program-surface:#FFF0DB}
+.prog:nth-child(5){--program:#79BDE9;--program-surface:#EBF5FC}
+.prog,.prog.lead,.prog.sky{background:var(--program-surface);color:#242424;border-top:6px solid var(--program)}
+.prog .k{display:flex;align-items:center;gap:10px;color:#242424}
+.prog .stat{background:#fff}.prog .go{background:#242424;color:#fff}
+.proof{background:#fff;color:#242424;background-image:none}.logo-wall{border:1px solid #C7D0DA}
+.close{background:#FFF4D0;background-image:none}.truth{background-image:none}
+.close .display .script,.truth .display .script{color:#242424}
+.icard,.sentence,.ticket,.ticket .stub,.news,.drawing,.badge{color:#242424}
+.badge{color:#fff}.urgency .script{color:#fff}.urgency .btn-ghost{color:#fff}
+[data-feather-icon]{display:inline-flex;width:24px;height:24px;align-items:center;justify-content:center;flex:0 0 24px;vertical-align:middle;color:inherit;pointer-events:none}
+[data-feather-icon] svg{display:block;width:24px;height:24px;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.play [data-feather-icon] svg{width:24px;height:24px;margin:0}
+.btn,.chip{gap:8px}.chip{display:inline-flex;align-items:center;justify-content:center}
+.news .h3{display:flex;align-items:center;gap:10px}.give-close [data-feather-icon]{margin:auto}
+@media(max-width:1100px){.hero .eyebrow,.hero .display .script{color:#242424}}
+@media(prefers-reduced-motion:reduce){[data-feather-icon] svg{animation:none}}
+
+.pair-switch button[aria-pressed=true]{color:#242424}

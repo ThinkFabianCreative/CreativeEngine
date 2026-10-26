@@ -21,3 +21,9 @@ Access: read access confirmed through the Figma connector, 2026-09-23. Write acc
 | File | Link | What it shows | Checked |
 |---|---|---|---|
 | ADLOB Examples (EXPLORE) | [open](https://www.figma.com/design/r8GkaVShHb3xZLovBhXUxA) | Rough comps of `work/concepts/…_adlob-examples_v01.md`. TRAFFIK drafts; internal | 2026-09-12 |
+
+## Internal file: "Universityof-Wyoming---program-information-flow"
+
+| Frame | Link | What it shows | Checked |
+|---|---|---|---|
+| Program information flow (35-560) | [open](https://www.figma.com/design/7ncffOfPa99xFSzJN6GYZF/Universityof-Wyoming----program-information-flow?node-id=35-560) | Andres's refinement of `wireframes/lp-wireframe_online-mba_v01.html`: targeted email → M.S. in Accounting landing page (UW brown/gold, Montserrat-style type) → 0:30 program video overlay. Presented to client 2026-10-19 | 2026-10-19 |

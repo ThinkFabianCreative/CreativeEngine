@@ -34,6 +34,7 @@ Every subfolder is optional and created only when it holds material. No industry
 - One client holds many projects. One project holds many sources and many creative problems (one packet per problem). One creative problem holds many iterations and executions, in `work/` and `outputs/`, named by its problem or packet ID.
 - Folder names are short lowercase slugs. They are handles, not evidence: identity is stated inside the files.
 - `client` is reserved and is never a project name.
+- `new-business/` holds pitch and RFP prospects that are not yet clients. Each prospect inside it follows this same layout (`new-business/<prospect>/client/`, `new-business/<prospect>/<pitch>/`) and moves to `projects/<client>/` if won. See `new-business/README.md`.
 - Create a folder only when there is something to put in it.
 - Nothing in one client's folder references, copies or summarizes another client's.
 - Brief normalization, work packets and their schema: `shared/frameworks/brief-normalization.md`.
@@ -106,6 +107,7 @@ Each project starts from `shared/templates/project-readme.md`. The README identi
 | Subfolder | Holds |
 |---|---|
 | `strategy/` | Strategic development: research notes, audience analysis, strategy options. Changes to the brief itself go through BriefMachine |
+| `research/` | CreativeResearcher output: competitor maps, voice-of-customer files, benchmark lists, reference boards, asset audits. Screen-grabs are internal working references, named `YYYY-MM-DD_<source>_<subject>` with their source URL |
 | `copy/` | Scripts, headlines, body copy and verbal development |
 | `concepts/` | Concept boards, territories and idea development |
 | `design/` | Figma links, Adobe editable files, layouts, identity and visual development |

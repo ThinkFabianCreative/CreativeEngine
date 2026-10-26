@@ -225,3 +225,7 @@ When creating or critiquing concepts and copy for Andres (the user), consult `sh
 ## Final principle
 
 A senior writer is measured by what they cut and what they refuse to show, not by how many lines they produce.
+
+## Show test in the brief loop
+
+In the `creative-brief` loop, answer USP test 6 from the verbal side for each job: SHOWABLE / THIN / NOT, with one reason. Judge whether the brief gives you material; do not produce concepts. THIN or NOT goes back to `brief-machine`, unless the USP is honestly parity.

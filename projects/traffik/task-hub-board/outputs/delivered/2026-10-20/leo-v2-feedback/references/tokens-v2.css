@@ -1,0 +1,90 @@
+/* Task Hub v2 design tokens (reference for Leo's build)
+   Source: DesignChamp review 2026-10-20 + Andres's decisions. Map these onto the Hub's
+   existing variables; don't add a second token system.
+   Contrast (text on its usual surface), checked 2026-10-20:
+   light  text 18.2 · secondary 6.5 · problem 5.7 · warning 6.3 · primary button 18.2
+   dark   text 14.8 · secondary 7.4 · problem 6.0 · warning 8.1 · primary button 16.3
+   Card-vs-page and border contrast are below 3:1 by design (cards are not controls). */
+
+:root,
+:root[data-theme="light"] {
+  /* Surfaces */
+  --surface-page:    #F5F6F8;
+  --surface-card:    #FFFFFF;
+  --surface-column:  #EEF0F3;   /* neutral board column; no status tint */
+  --surface-today:   #E8EBF0;   /* neutral, never red family */
+  --border:          #DCDFE5;
+
+  /* Text */
+  --text:            #14151A;
+  --text-secondary:  #5B5E66;   /* ≥ 4.5:1 on card and page */
+
+  /* Colour roles: one job each */
+  --problem:         #C8202F;   /* overdue date text, blocked / on hold, problem counts > 0 */
+  --warning:         #8A5300;   /* at risk, age that threatens the date */
+  --primary-bg:      #14151A;   /* New Task, Next, Save, Send to client. One per screen */
+  --primary-text:    #FFFFFF;
+
+  /* Status: muted chips and column dots only. Never card fills or borders */
+  --status-intake:   #6B6F78;
+  --status-progress: #2F6FDB;
+  --status-review:   #7A4FD6;   /* internal review and QC */
+  --status-client:   #9A6B00;
+  --status-done:     #2E8B57;
+  --chip-fill-opacity: 0.12;
+}
+
+:root[data-theme="dark"] {
+  --surface-page:    #0D0F12;
+  --surface-card:    #1B1F26;   /* one step lighter than the page */
+  --surface-column:  #14171C;
+  --surface-today:   #1F242C;
+  --border:          #3A404B;
+
+  --text:            #F2F2F5;
+  --text-secondary:  #A9ADB6;
+
+  --problem:         #FF6B6F;
+  --warning:         #F5A524;
+  --primary-bg:      #F2F2F5;
+  --primary-text:    #14151A;
+
+  --status-intake:   #9AA0AA;
+  --status-progress: #6EA0FF;
+  --status-review:   #A98BFF;
+  --status-client:   #E2B341;
+  --status-done:     #5CC98B;
+}
+
+/* "System" theme: no data-theme attribute, follow the OS */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --surface-page: #0D0F12; --surface-card: #1B1F26; --surface-column: #14171C;
+    --surface-today: #1F242C; --border: #3A404B; --text: #F2F2F5; --text-secondary: #A9ADB6;
+    --problem: #FF6B6F; --warning: #F5A524; --primary-bg: #F2F2F5; --primary-text: #14151A;
+    --status-intake: #9AA0AA; --status-progress: #6EA0FF; --status-review: #A98BFF;
+    --status-client: #E2B341; --status-done: #5CC98B;
+  }
+}
+
+/* Client identity: text colour on the client name only (12px / 600, sentence case).
+   Keep the Hub's existing per-client colours, checked at ≥ 4.5:1 on --surface-card. */
+
+/* Type: one family (Manrope), five steps, tabular figures for numbers */
+:root {
+  --font: 'Manrope', system-ui, sans-serif;
+  --fs-page:   28px;  --lh-page:   36px;  --fw-page:   600;   /* "Workspace", "Home" */
+  --fs-head:   14px;  --lh-head:   20px;  --fw-head:   600;   /* columns, panels; sentence case */
+  --fs-title:  15px;  --lh-title:  20px;  --fw-title:  500;   /* card title, max 2 lines */
+  --fs-body:   14px;  --lh-body:   20px;  --fw-body:   400;
+  --fs-meta:   12px;  --lh-meta:   16px;  --fw-meta:   500;   /* client 600; no caps under 12px */
+  --text-scale: 1;    /* Settings → Text size: Large = 1.125 */
+}
+.num, time, [data-count] { font-variant-numeric: tabular-nums; }
+
+/* Card: 14px padding, 6px row gap, max four rows */
+:root { --card-pad: 14px; --card-gap: 6px; --radius: 8px; }
+:root[data-density="compact"] { --card-pad: 10px; --card-gap: 4px; }
+
+/* Icons: Lucide, 24 grid */
+:root { --icon-ui: 16px; --icon-nav: 20px; --icon-stroke: 1.75; }

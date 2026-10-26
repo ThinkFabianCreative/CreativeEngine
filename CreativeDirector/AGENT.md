@@ -163,6 +163,8 @@ If any answer is no, return the brief to `brief-machine` with specific questions
 
 Do not send a strategically weak brief downstream merely because it is well formatted.
 
+In the `creative-brief` loop, this gate also runs USP tests 1, 2, 3, 5 and 7 (`brand-strategy.md` §6a), the rule of 1 and the ambition check, returning PASS / FAIL with a reason and a fix for each.
+
 Judge readiness from the normalized brief (`shared/frameworks/brief-normalization.md`), not from raw source material. Its handoff lists the open questions that block work. Send departments the smallest relevant work packet, not the master brief.
 
 ## Client and project context
