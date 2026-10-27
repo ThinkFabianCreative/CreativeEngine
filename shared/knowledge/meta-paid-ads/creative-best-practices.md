@@ -26,6 +26,10 @@ Read on 2026-09-12. Practices are hypotheses and craft guidance, not guaranteed 
 
 The [official lead-generation guide](https://about.fb.com/ltam/wp-content/uploads/sites/14/2023/11/LeadGenerationGuide.pdf) recommends explaining what follows submission and reducing unnecessary questions. This is an older official source (2023 URL), useful for qualitative design guidance, not proof that every historical form feature is still available. The [current lead-ad overview](https://www.facebook.com/business/ads/ad-objectives/lead-generation) distinguishes instant forms, website forms, calls and messaging, and emphasizes lead quality and follow-up.
 
+### Blueprint lesson
+
+Andres's notes on Meta Blueprint's *Creative best practices* lesson (added 2026-10-27) cover mobile-first framing, seven video and Reels techniques, creative diversification, Advantage+ creative and placement preview, with an audit checklist. Read [the notes](blueprint-creative-best-practices.md), including how CreativeEngine reads them.
+
 ## CreativeEngine recommendations — derived, not Meta mandates
 
 | Format or experience | Useful creative job | Avoid |

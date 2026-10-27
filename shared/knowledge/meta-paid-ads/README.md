@@ -15,6 +15,7 @@ A shared platform reference for BriefMachine, DesignChamp, WordSmither and Creat
 | Collection covers and product images | [Collection specifications](collection-specs.md) |
 | Safe zones, codecs, captions and delivery checks | [Production requirements](production.md) |
 | Creative practices, with attribution | [Creative guidance](creative-best-practices.md) |
+| Blueprint lesson: mobile-first, the 7 Reels techniques, diversification, Advantage+ creative, preview audit | [Blueprint notes](blueprint-creative-best-practices.md) |
 | Lead forms, Instant Experience, playable, slideshow, catalog and partnerships | [Additional experiences](additional-experiences.md) |
 | Source anomalies and unanswered availability questions | [Source conflicts and gaps](source-conflicts.md) |
 | Sources, provenance and refresh procedure | [Sources and maintenance](sources-and-maintenance.md) |

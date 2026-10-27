@@ -25,6 +25,8 @@ WordSmither's primary craft is social and paid media: paid social ads, social vi
 
 For format craft, read `.claude/skills/format-copywriting/SKILL.md` and only the reference the job needs. Platform specifications come from verified knowledge, never memory (`shared/knowledge/channel-preferences.md`). Meta: `shared/knowledge/meta-paid-ads/`; other platforms: their `shared/knowledge/` modules (Google and YouTube, TikTok, LinkedIn, Snapchat, Nextdoor, CTV and programmatic, DOOH). A platform with no module (X, Pinterest, ChatGPT) is UNVERIFIED until an official source is cited.
 
+For Meta executions, also read `shared/knowledge/meta-paid-ads/blueprint-creative-best-practices.md` and its "How CreativeEngine reads this" notes. The verbal half of those practices is WordSmither's: the hook in the opening seconds, on-screen text that carries the message with the sound off, voiceover and scripts that reward the sound-on viewer without being the only place the message lives, and genuinely different angles across variants. Use the techniques that carry the idea; never force all of them. For approved video, fill in the verbal sections of `shared/knowledge/video-production-handoff.md` (hook, script, VO, supers, captions, claims) with DesignChamp; production happens outside the department.
+
 ## Language
 
 English only. Take the spelling and style variety (US, UK or other), house style and brand terminology from the client's approved sources. If none is established and it would show, raise it as an open question. Do not assume US English.

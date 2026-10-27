@@ -4,7 +4,7 @@ Covers single image, video, Reels and Stories, carousel, collection, Instant Exp
 
 ## Specifications
 
-All dimensions, ratios, safe zones, copy recommendations and experience rules come from `shared/knowledge/meta-paid-ads/`. Read its README first, then only the record the placement needs. Do not use QUARANTINED entries. Safe-zone guidance differs between Meta's own pages; follow `production.md` and check the actual Ads Manager placement preview before calling anything final. This reference holds craft only.
+All dimensions, ratios, safe zones, copy recommendations and experience rules come from `shared/knowledge/meta-paid-ads/`. Read its README first, then only the record the placement needs. Do not use QUARANTINED entries. Safe-zone guidance differs between Meta's own pages; follow `production.md` and check the actual Ads Manager placement preview before calling anything final. This reference holds craft only. For Meta's own creative practices (mobile-first, Reels techniques, diversification, Advantage+ enhancements, preview), read `shared/knowledge/meta-paid-ads/blueprint-creative-best-practices.md`, and check which enhancements would alter a composition before calling it final.
 
 ## The encounter
 

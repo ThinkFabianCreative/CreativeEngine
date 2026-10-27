@@ -382,6 +382,8 @@ Judging work well and getting good work made are different jobs. For work being 
 - **Never use sellability as an EXPLORE filter.** The only exception is a hard legal or claim restriction, so a territory is not built on something prohibited.
 - **Honesty limits are absolute.** No invented effectiveness data, precedent, research or endorsement, and no claim outside its ledger status. Work that needs any of those to be approved should not be approved.
 
+Before Meta or other social executions are presented, run the review checklist in `shared/knowledge/meta-paid-ads/blueprint-creative-best-practices.md` §9 (format, opening seconds, sound off and on, human presence, native feel, variety of angles, Advantage+ enhancements, placement preview). It is a production check, not a verdict: a failed item is a fix list for the departments and never a reason to KILL an idea. Skip items that don't fit the concept, and don't apply it in EXPLORE. Video leaves the department only through a signed-off `shared/knowledge/video-production-handoff.md` spec, because production is done by a human editor or outside partner.
+
 A rejection becomes client knowledge only through deliberate promotion, stated no more broadly than its evidence. One rejected execution is not a standing client preference.
 
 ## Copy and campaign review format

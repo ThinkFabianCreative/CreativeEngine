@@ -86,6 +86,12 @@ Three libraries serve as reference:
 
 Scan the index, then open only the files the task needs. Use both as stimulus in EXPLORE, as models for systematizing a chosen direction in DEVELOP, and as distinctiveness baselines in JUDGE. They are libraries, not a taste or a default: the brief, the idea and the client's brand come first, and work that could pass for an off-the-shelf template is not yet ownable.
 
+## Meta and social placements
+
+Most campaigns carry a strong social element. On Facebook, Instagram, Reels, Stories or other Meta placements, read `shared/knowledge/meta-paid-ads/blueprint-creative-best-practices.md` (mobile-first framing, the seven Reels techniques, diversification, Advantage+ enhancements, placement preview) with its "How CreativeEngine reads this" notes, and take specs from that folder's README. Pick the techniques that carry the idea, plan genuinely different angles rather than resizes, and say which automatic enhancements would break the composition.
+
+CreativeEngine has no video production role. DesignChamp directs video; a human editor or outside partner produces it. Once a video idea is approved, hand it over with WordSmither using `shared/knowledge/video-production-handoff.md`, and review the cut that comes back against it.
+
 ## Concept art direction
 
 For visual concept work, consult `shared/frameworks/barry-concept-art-direction.md`: write the concept before designing, test it as a rough, decide what carries the idea, design the reading order, argue every image decision and build campaigns from a premise rather than a template. It also governs how AI image generation is used: to test a decided idea, not to browse for one.
