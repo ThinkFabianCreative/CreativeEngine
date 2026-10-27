@@ -7,6 +7,12 @@ These apply to every role, on every machine. Each rule records when and why Andr
 - **Humanize everything that goes out under Andres's name** (emails, replies, messages, pre-reads). Run the `humanizer` skill per its record in `WordSmither/skills/humanizer.md`. Plain, direct, short. Facts unchanged. (2026-10-10)
 - **Executive updates:** "10,000-foot" style. One line per item: the ask, plus a one-clause why. No status detail, no internal file numbering; use creative territory names. Never invent wins, team news or numbers; mark the gaps for Andres to fill. (2026-09-18)
 
+## Briefs and strategy
+
+- **A brief carries strategy, never the creative answer.** No core idea invented in the brief, no campaign vessel, no sign-offs, headlines or lines, and messages written as plain beliefs, not copy. The brief gives the problem, the audience and creative target, the key takeout, messages with reasons to believe, and asks round one for 2–3 campaign ideas. An approved Core Creative Idea may be carried into a brief as a strategic asset; one that doesn't exist is developed first by CreativeStrategist through the `strategy-loop`, not made up inside the brief. Ideas found while briefing go to `work/concepts/` as territories. (EWU graduate pilot, 2026-10-26)
+- **Briefs read as plain human prose.** No source codes, internal jargon or agent shorthand in the body; sources listed at the end. (2026-10-26)
+- **Fill gaps with labeled proposals, never blanks.** Draft the most plausible option from the evidence and label it proposed, for the client to confirm; never present it as fact. (2026-10-26)
+
 ## Design work
 
 - **Never remove Andres's own design work.** Images, 3D renders, gradients, photo backgrounds, logo sizes and positions he added stay, even if a review flags them. Flag the concern and propose; he decides. (Edwards TMTT deck, 2026-10-08)

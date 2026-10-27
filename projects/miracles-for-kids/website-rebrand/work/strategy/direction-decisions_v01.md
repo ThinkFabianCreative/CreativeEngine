@@ -32,3 +32,7 @@ STATUS:   Internal direction. Not client-approved.
 ## Approvals
 
 Autumn Strier (CEO) approves. David LaBonte (Marketing Director) is the major stakeholder. See ../client/knowledge/stakeholders.md.
+
+## Chosen visual direction (Andres, 2026-10-26)
+
+Look A Saturated, as in Figma MFK-Andres v2 frame 26:6: MFK Type mode "A Saturated" (Outfit + Caveat) and MFK Color mode "A Saturated" (white canvas, royal #1B5FBF, orange #F99400 action with navy text, sun #FFD23F accents, orange-700 #BB6F00 highlight at display sizes only). This supersedes the CD's Color B + Type A recommendation and the P1–P3 type explorations.

@@ -23,6 +23,8 @@ Template: `assets/creative-brief-template.md`. Judging card: `assets/judging-car
 Run it from the main session, calling each agent with the Agent tool. Each call gets the client, project, the paths to the sources and the current draft, and only what that role needs. Agents work from the project's sources and the normalized brief, never from another client's workspace.
 
 ```
+STEP 0a           check for approved strategic assets (promise, Core Creative Idea, job to be done);
+                  if none, run the strategy-loop (creative-strategist) before writing the brief
 STEP 0 (optional)  creative-researcher   if the project has no competitor map or voice-of-customer
                                          evidence, research them first (CreativeResearcher/AGENT.md)
 ROUND n (max 3)

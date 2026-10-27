@@ -33,7 +33,7 @@ Find, catalog and summarize the evidence the department judges with: what compet
 
 ## Rules
 
-1. **Observations, not insights.** Report what was found, with its source and date. Name patterns and say how many sources support each. Turning a pattern into an insight, a USP or a strategy is BriefMachine's job; judging work is CreativeDirector's.
+1. **Observations, not insights.** Report what was found, with its source and date. Name patterns and say how many sources support each. Turning a pattern into an insight, a USP or a strategy is CreativeStrategist's job; judging work is CreativeDirector's.
 2. **Every item is sourced.** URL, owner or brand, date seen, and where it came from. No source, no item. Never invent an ad, a quote, a statistic or an award.
 3. **Voice of customer stays verbatim.** Quote exactly, keep the context, and never merge quotes into a composite and present it as real. Remove personal names and handles.
 4. **Links and our analysis, not copies.** Screen-grabs are allowed as **internal working references only** (user decision 2026-10-26): saved in the client's project folder with source URL and date, never placed in client deliverables, never presented as our work. Pinterest and Google Images are for discovery: trace each image to its original source and cite that.

@@ -126,3 +126,114 @@ Andres: the core idea is creative output, not brief content. Brief restructured 
 
 ## v16 (2026-10-26)
 Andres: messages must not lead creative expression. Key takeout and the three messages rewritten as plain third-person propositions (what to believe, not how to say it); creative-target closing and one consideration de-prescribed. MFA paid-roles claim scoped to four second-year students.
+
+## Strategic assets v02 (2026-10-26), BriefMachine REWORK per creative-engine-director
+work/strategy/ewu-strategic-assets_v02.md (v01 kept). Promise A re-led by "the real work of a profession", access as qualifier; swap shown vs CWU, WWU, WSU, Gonzaga, Whitworth (CWU/WWU not researched, flagged). DNA labels: polytechnic = EWU's unverified claim; 36% first-gen sourced to ewu.edu/about; $12,825 = nine-month tuition only; "TA funding is selective" beside every MFA proof. CCI reworked to the handover + proof object ("the defense, the magazine, the patient"); doubt only inside stories; seven tests and one-line swaps re-run; fit under Region's Polytechnic stated. JTBD: one cross-program job; primary barrier practical/value, aspirational secondary, still a hypothesis; synthesis labeled; OT quote moved to MOT credential barrier. Bar: commit OWNABLE, FRESH as target contingent on shoot access. Open: CWU/WWU research, EWU prospect voice, shoot access and lead time.
+
+## v17 (2026-10-26), BriefMachine, from approved strategic assets v06
+creative-brief_v17.md written in the Cannes five-part structure (strategic assets, objectives, creative target, executional requirements, creative ambition) plus assessment and measurement. Carries P2 promise and C2 Core Creative Idea as strategic assets, both proposed to EWU; CCI sentence and portrait marked do-not-lift; gap stated beside the CCI. One cross-program job (request information), insight labeled our synthesis, barrier a hypothesis; per-program lines with v16 facts. MS defense: "to faculty" removed. MFA paid roles cited to EWU funding page. Bar: OWNABLE committed, FRESH contingent on access; benchmarks Monash "A Future Without Change", USMC "Battles Won", NHS "We Are the NHS" (third: closest recruitment match, real work shown, reported +35% applications). No headlines, lines or vessels. Not re-gated; not rendered.
+
+## v17 show test, visual (design-champ, 2026-10-26)
+| Job | Verdict | Image / demonstration / visual proof | Gap |
+|---|---|---|---|
+| Cross-program | SHOWABLE | "In front of others" gives an act or object being judged by people; gap (doing the work, no title yet) is pictureable | None |
+| MS in Management | SHOWABLE | Oral defense in a room; the defended portfolio; applied project from her own work | Defense room and a consenting defender not yet secured |
+| MFA Creative Writing | SHOWABLE (proof) / THIN (funding) | Printed Willow Springs issues and Books titles with student editors' mark-up | Funding, her first need, is selective and can't be shown as an image; carried by copy only |
+| MOT | THIN | Catalyst Building; fieldwork tools in use; simulated session | Strongest proofs (95% pass, 96% grad) are numbers; fieldwork at outside sites needs separate clinical permission; no identifiable patients |
+| Access plan | PASS | Items listed with owner and date lock at kickoff; clinical permission split out | Owners not yet named |
+| OWNABLE fallback | PASS | Real EWU objects showing the act of being judged; no stock/generated stand-ins in final | MOT fallback (simulated session) is weakest; risks reading generic clinical |
+| No prescribed execution | FLAG | Sections 1-5 clean | §6 test cell "single image of a person doing the work with the proof in frame" prescribes a visual; reword as a test variable (e.g. person-led vs proof-object-led) |
+
+## v17 show test, verbal (2026-10-26, word-smither)
+| Part | Verdict | Why |
+|---|---|---|
+| Cross-program job | SHOWABLE | Gap ("capable, not yet counted in") plus "in front of others" gives a scene with an audience and a stake. Insight (doubt others will see them differently) is a real tension a line can turn. Risk: "count them in" is repeated five times and is becoming the campaign line by default. |
+| MS in Management | SHOWABLE | Oral defense of a portfolio built on her own work is a moment with witnesses. Portrait (runs the shift, title says "lead") is the sharpest tension in the brief. |
+| MFA | SHOWABLE | Editor of others' work with no credit of her own, paid editorial roles, printed issues: concrete and ownable. TA selectivity limits money talk, not the idea. |
+| MOT | THIN | Tension is good (aide knows the next step, not allowed to decide it), but the proofs are stats (96%, 95%, cohort 32) and the "in front of others" moment (supervised fieldwork) depends on a clinical partner's permission not yet secured. Writer has a feeling, not yet a scene. |
+| Readable once | YES, mostly | Plain prose, short. Snags: brand promise sentence is long and abstract; Bar terms (OWNABLE, FRESH) unexplained for a first reader; MOT barrier list mixes three doubts in one clause. |
+| Reads like copy | FLAG | "the proof that gets their field to count them in" (promise, new belief) and "letters that change nothing on Monday" (portrait) read as finished lines. Portrait is marked do-not-lift; promise phrasing is not. |
+| Prescribes execution | FLAG | §1 "an act or an object, not a grade" and §6 test cell "a single image of a person doing the work with the proof in frame" / "card one working alone" pre-decide the visual. Fallback access rule "objects must show the act of being judged" same. Acceptable as constraints, but they narrow round one before ideas exist. |
+
+## v17 strategy gate (2026-10-26), creative-engine-director
+Mode: JUDGE on the brief (§7a 1–11). Verdict: **REWORK, light.** Strategy is faithful and the chain holds; six fixable failures, none needs the strategy loop.
+
+| # | Result | Reason / fix |
+|---|---|---|
+| 1 Length | PASS | About three pages. |
+| 2 Complete | FAIL | Footer points to "Strategic and creative considerations", which does not exist. Add the section (open decisions + recommendations) or cut the pointer. Contact and budget honestly marked. |
+| 3 Real problem | PASS | Names behavior: rule themselves out, put it off, pick the cheapest online box. |
+| 4 Single-minded | FAIL | No proposition is stated; the new belief stands in implicitly. Add one line, "Proposition: at EWU you build proof that gets your field to count you in", no "and". |
+| 5 True insight | FAIL | Insight is our synthesis only; standard asks for the audience's words. Add two of v06's category voices verbatim beside it (cost justification; "only apply to funded programs"), labeled public forums, not EWU prospects. |
+| 6 Tested USP | FAIL | No USP test shown. Note: tests 1 and 5 pass on "shown in front of others"; test 2 (ownable) holds against CWU/WWU on sourced copy but is **pre-emptive against WGU** until the live-ad check; four rivals untested. Say so in one line. |
+| 7 Connected chain | PASS | Behavior, insight, new belief and P2 follow. |
+| 8 Ownable | PASS (conditional, declared via fix 6) | Swap fails for CWU/WWU; WGU dependency must be visible in the brief. |
+| 9 Honest evidence | FAIL | RTBs not in v06 carry no ⚑ or source: MOT cohort 32 / 96% / 95% (2025), "two and a half years", "rural focus", MS "no management experience required", "applied project", MFA "not the GRE", "classes at EWU Spokane". Cite clearances or ⚑ each. NHS "+35%" ⚑ (reported, source-cited, unverified). Italicize the barrier hypothesis. |
+| 10 Ambition set | FAIL | Rung and honest timing PASS. Benchmarks: v06 asks for three at FRESH; Monash is rated SHOWTIME in our scan. Keep it labeled "ceiling, above the pilot's Bar" or swap it. |
+| 11 Creative space | FAIL | §6 test cells prescribe execution ("single image of a person doing the work with the proof in frame", carousel build). Rewrite as message cells: proof-led, cost-led, category control; formats set after round one. "If access slips" object list is fine as an access rule, keep it framed as such. |
+
+**Fidelity to v06.** Promise, CCI, gap, job, insight, barrier, portrait, Bar and claim rules match; do-not-lifts respected; nothing changed. Additions beyond v06 are the RTB facts listed under 9 (from v16, acceptable only once sourced). No lines, vessels or headlines. Brief's "Washington's only" claim correctly absent.
+
+**Single cross-program job.** PASS: one job (request information), per-program lines carry barriers and RTBs, not separate propositions.
+
+**Benchmarks.** USMC "Battles Won": right, mechanism twin (capability shown in front of strangers before the title). NHS: right job, right register (real work, unvarnished), FRESH-rated; but its people are already counted in, so it anchors honesty, not the gap. Keep it as the third, labeled "register, not mechanism". Monash: see 10.
+
+Route: back to brief-machine for v18 (fixes 2, 4, 5, 6, 9, 10, 11), then step 2b showability. No re-gate of strategy needed; I re-check only the fixed rows.
+
+## v18 changes (brief-machine, 2026-10-26)
+- Fix 2: footer names "Strategic and creative considerations" (work/brief/ewu-considerations_v03.md); file checked, exists.
+- Fix 4: proposition added, no "and", marked do-not-lift. "Count them in" cut from new belief and §1 note; remains in idea, gap, and the promise (v06 verbatim, kept for fidelity).
+- Fix 5: two public-forum quotes (r/ESCP, r/managers) beside the insight, labeled "public forums, not EWU prospects".
+- Fix 6: USP test line added (CWU/WWU hold; WGU pre-emptive; Gonzaga, Whitworth, WSU, UW untested).
+- Fix 9: every RTB sourced (FG or EWU pages via research files). MFA location corrected to Cheney from fall 2026 (FG relocation notice). MOT 95% flagged for EWU sign-off (82% first attempt on same page). NHS +35% marked unverified. Barrier hypothesis in italics.
+- Fix 10: Monash labeled ceiling above the Bar (Showtime); USMC kept as mechanism match; NHS labeled "register, not mechanism".
+- Fix 11 + creatives: test cells now messages (proof-led, cost-led, control), formats after round one. Removed "an act or an object, not a grade", "card one working alone", "proof in frame", "show the act of being judged"; added neutral "real EWU people, places and work; no stock or generated stand-ins".
+- Creatives MOT: tension kept; "work must find MOT's moment in front of others" stated; clinical partner permission + simulated lab access made top ask; numbers are copy proof; one doubt per phrase.
+- Ownable/Fresh plain-language line added. Promise not shortened: no shorter version stays faithful to v06 P2.
+
+- Main session: MFA location recorded as an OPEN divergence (relocation notice Dec 2025 = Cheney from fall 2026; MFA apply page = Spokane). Not resolved by recency. Added to EWU asks via the brief line.
+
+## v18 show test, visual (design-champ, 2026-10-26)
+| Check | Verdict | Note |
+|---|---|---|
+| MOT | SHOWABLE, conditional | Brief now names the scene's source, not just the numbers: supervised treatment in a Catalyst simulation lab (no permission beyond EWU) or a consenting clinical session (partner permission). Condition: one of the two secured by kickoff; otherwise MOT drops to Catalyst exteriors and THIN again. Clinical permission is the long-lead item, lock the sim lab as floor. |
+| Prescribed execution | PASS | Test cells are messages; formats after round one; removed phrases gone. Only residue: §1 "the proof is shown to other people" and §6 "in front of others" restate the CCI, which is strategy, not a visual. Keep. |
+| Fallback | PASS | Neutral mandatory carries OWNABLE (no stock/generated) without dictating the image. MOT fallback (simulated or consenting session, no identifiable patients) still the weakest and can read generic clinical; ownership must come from Catalyst place cues and EWU people, not the activity. |
+| Still open | — | MS defense room + consenting defender; access owners not named. |
+
+## v18 strategy gate recheck (2026-10-26), creative-engine-director
+Rows failed in v17 only. Verdict: **ADVANCE to step 2b showability.** Promise keeps "count them in" verbatim from approved v06: accepted, strategy-level wording.
+
+| # | Result | Note / fix |
+|---|---|---|
+| 2 Complete | PASS | Pointer resolves to ewu-considerations_v03.md (exists). |
+| 4 Single-minded | PASS | One proposition, no "and", do-not-lift. Softer than my suggested wording but faithful to P2 and avoids repeating the promise. |
+| 5 True insight | PASS | Two verbatim forum voices, labeled, sourced. |
+| 6 Tested USP | PASS | Test line states CWU/WWU hold, WGU pre-emptive, four untested. |
+| 9 Honest evidence | PASS | Each RTB sourced; MOT 95% vs 82% and MFA location flagged for EWU sign-off; NHS lift unverified; barrier italicized. Minor: "a public university" has no source tag; add (FG) or cut. Not blocking. |
+| 10 Ambition set | PASS | Monash labeled ceiling above the Bar; USMC mechanism; NHS register. |
+| 11 Creative space | PASS | Test cells are messages, formats after round one; access fallback framed as a rule. |
+
+## v18 show test, verbal (2026-10-26, word-smither)
+| Part | Verdict | Why |
+|---|---|---|
+| Cross-program | SHOWABLE | Gap plus "shown to other people" still gives a scene with witnesses. |
+| MS / MFA | SHOWABLE | Unchanged; portrait remains the sharpest tension. |
+| MOT | THIN, improving | "Work must find MOT's moment" names the gap rather than closing it. Scene exists only if clinical permission or Catalyst sim-lab access lands; numbers moved to copy, correctly. Showable on condition, not yet. |
+| Copy-like phrases | FLAG, minor | Proposition "show their field what they can already do" has tagline rhythm; marked do-not-lift, acceptable. New belief "build proof their field can see" and promise "proof that gets their field to count them in" still read as lines; promise is not marked do-not-lift. Portrait "letters that change nothing on Monday" covered by its do-not-lift. |
+| "Count them in" | PASS | Down to 3 (promise, idea, gap), all strategy statements. No longer drifting toward a default line. |
+| Execution prescribed | PASS | Visual prescriptions gone. Residual nudges only: "MOT's numbers are proof the copy carries, not the scene"; "one doubt per phrase"; "proof is shown to other people". Constraints, fine. |
+| Readability: sources in body | FAIL | Rule is sources at the end only. Left in body: "FG = EWU Internal Field Guide (raw); sources as listed in work/research/"; "(FG)" x3; "(FG; benchmarks.md)"; "(FG; catalog per benchmarks.md)"; "(EWU MFA pages, per ewu-own-voice-and-gaps.md)"; "(EWU funding page)"; "(EWU OT page, per benchmarks.md; FG)"; "(EWU OT page, per competitor-map.md; ...)"; "(EWU OT page)"; "(EWU fieldwork page)"; "Source: work/research/voice-of-customer.md."; "(r/ESCP)", "(r/managers)" (keep as plain "Reddit forum" or move); footer "(work/brief/ewu-considerations_v03.md)". No "CT" or "PR" found. |
+| Readability: jargon | FLAG | Unexplained for a first reader: CWU, WWU, WGU, NBCOT, "USP test", "rated Showtime in our scan", "Level II fieldwork", WCAG 2.2 AA. Spell out schools once; drop "Showtime"; "USP test" -> "Why only EWU can say it". |
+
+Net: one fix pass on readability (move every parenthetical source to the end list, spell out acronyms). MOT stays THIN until access is confirmed; not a brief rewrite issue.
+
+## v19 readability pass (2026-10-26, word-smither)
+- All source codes, file names and paths moved out of the body into a numbered Sources list at the end; body keeps plain attributions (EWU's MFA funding page, EWU's OT program page, a Reddit forum). No source dropped.
+- Spelled out once: CWU, WWU, WGU, NBCOT, Level II fieldwork, WCAG 2.2 AA. "Rated Showtime in our scan" -> "a higher bar than this pilot's". "USP test" -> "Why only EWU can say it".
+- "A public university" (MOT) now sourced: Field Guide, EWU About section (Sources 8).
+- Promise and new belief marked do-not-lift. No fact, decision, field, claim flag or promise/idea/proposition wording changed.
+
+## v19 result (2026-10-26)
+- Strategy gate: v18 recheck ADVANCE (all 7 failed rows pass). Visual: SHOWABLE (MOT conditional on sim-lab or consenting clinical access by kickoff). Verbal: SHOWABLE except MOT THIN pending access (no rewrite can fix). Readability: v19 removes all source codes from the body; sources listed at the end.
+- Rendered EWU_Creative-Brief_v19.docx: body 3 pages + 1 page Sources appendix (Word). Brief ready for Andres; not approved by EWU.

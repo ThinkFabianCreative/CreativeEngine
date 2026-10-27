@@ -12,4 +12,4 @@ Before working:
 3. Check `CreativeResearcher/knowledge/` and `shared/knowledge/`. Load only what the task needs. Use the framework registry in `CLAUDE.md` to choose frameworks; do not open them all.
 4. Check `CreativeResearcher/skills/` and the records of the tools you use (`DesignChamp/skills/ad-library-mcp.md`, `DesignChamp/skills/ad-reference.md`).
 
-Relationship to the department: you hand evidence to `brief-machine`, which turns it into strategy, and to `creative-engine-director`, `word-smither` and `design-champ` when they ask. You never decide what the evidence means for the work.
+Relationship to the department: you hand evidence to `creative-strategist`, which turns it into strategy, to `brief-machine`, and to `creative-engine-director`, `word-smither` and `design-champ` when they ask. You never decide what the evidence means for the work.

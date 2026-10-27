@@ -87,3 +87,36 @@ Pattern: of the entry-level OT program ads found, every one is for an OTD, not a
 
 ## Round 2 additions (2026-10-25)
 See benchmarks.md in this folder (Q1 voice evidence and Q2 program requirements).
+
+## CWU / WWU / WGU (2026-10-26)
+
+Source: web search excerpts of official pages, seen 2026-10-26. FOUND = on the page; INFERRED = our reading, not stated. Program absence is INFERRED from catalog/degree lists and needs a direct check before any comparative claim.
+
+### Central Washington University (CWU)
+- Positioning, FOUND: "immersive, hands-on learning opportunities" for undergrad and graduate; 32 master's programs. https://www.cwu.edu/academics
+- FOUND (third-party profiles repeating CWU copy): students "do what they're studying in real-world, professional settings." https://www.teenlife.com/l/college/central-washington-university ; https://applywave.com/product/central-washington-university-graduate . WA Career Bridge (updated 06/2026): "hands-on learning, applied research, and career preparation"; instructional centers statewide "to expand access." https://careerbridge.wa.gov/learn/educational-institutions/47
+- Management: MBA and MS IT Management (IT Leadership and Strategic Innovation) FOUND; no generic MS Management seen (INFERRED). https://www.cwu.edu/academics/colleges/college-education-professional-studies/academic-departments/graduate-degrees.php
+- Creative writing: MA Professional and Creative Writing (online), ranked top five by OnlineMasters.com, news 2026-04-21. Not an MFA. Studio-art MFA exists but is NOT accepting applications. https://www.cwu.edu/about/media-resources/news/2026/04/cwu-creative-writing-masters-program-earns-top-five-ranking.php ; https://www.cwu.edu/academics/art/graduate-program/index.php
+- Entry-level OT: none found (INFERRED; not verified).
+- First-gen / affordability graduate copy: not found in this pass.
+
+### Western Washington University (WWU)
+- Homepage, FOUND: "Start Here. Go Anywhere."; "The PNW Is Calling"; "Best Value in the Pacific Northwest" (#1 among regional universities). https://www.wwu.edu/
+- Grad School, FOUND: "A remarkable place to advance your career"; "personalized faculty mentorship of a close academic community"; programs "offer hands-on research and practical experience"; "#1 public master's granting university in the Pacific Northwest." https://gradschool.wwu.edu/ ; https://gradschool.wwu.edu/application-process
+- About, FOUND: "rigorous academics with hands-on learning." https://www.wwu.edu/about-wwu
+- Management: MBA FOUND in the 12 authorized degrees; no MS Management seen (INFERRED). https://catalog.wwu.edu/content.php?catoid=23&navoid=7105
+- MFA Creative Writing FOUND: 2-year, 55 credits, Bellingham face to face, multigenre/cross-genre, "opportunities to gain teaching and editorial experience." Direct overlap with EWU MFA. https://gradschool.wwu.edu/creative-writing ; https://www.wwu.edu/majors
+- Entry-level OT: no OT degree in the authorized degree list (INFERRED absent). Same source as catalog above.
+
+### Western Governors University (WGU), national online reference
+- Mission line, FOUND: "Changing Lives for the Better by Creating Pathways to Opportunity"; access "by addressing barriers of affordability, location, and time." https://www.wgu.edu/about.html
+- Model, FOUND: competency-based; "success is measured by actual learning, not class time"; "personalized, relevant, and affordable." https://www.wgu.edu/about/story/cbe.html ; https://www.wgu.edu/online-degree-programs.html
+- MS Management and Leadership FOUND: 10 courses, entirely online, one-year option, built with a Business Program Council. Direct competitor to EWU MSM on speed and price. https://www.wgu.edu/online-business-degrees/management-leadership-masters-program.html
+- MFA / entry-level OT: none found (INFERRED; WGU health list is nursing/health admin).
+- Scholarship claim FOUND: "over $55 million in 2025 awarded." https://www.wgu.edu/lp/general/lead/outcomes.html
+
+### Lines near the EWU promise ("hands graduate students the real work of their profession")
+- CWU: "do what they're studying in real-world, professional settings" (closest; generic, institution-wide, partly from third-party reposts).
+- WWU: "hands-on research and practical experience"; MFA "teaching and editorial experience" (closest on the magazine proof).
+- WGU: competency/"career-relevant" framing; measures mastery, not handing over real work.
+- Pattern: "hands-on" appears at CWU and WWU (2 of 3); none found names a specific artifact (defense, magazine, patient). Gap: no CWU/WWU first-gen grad copy, no live ads pulled this pass.

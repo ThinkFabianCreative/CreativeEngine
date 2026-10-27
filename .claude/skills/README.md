@@ -35,6 +35,7 @@ This is where Claude discovers CreativeEngine's skills automatically. Each skill
 | `animation-vocabulary` | DesignChamp | `DesignChamp/skills/emil-kowalski-skills.md` (Emil Kowalski) |
 | `prototype` | DesignChamp | `DesignChamp/skills/emil-kowalski-skills.md` (Emil Kowalski) · manual only; skip Phase 6 (promote to production) |
 | `creative-brief` | BriefMachine (loop with CreativeDirector, WordSmither, DesignChamp) | `BriefMachine/skills/creative-brief.md` (in-house) · writes, pressure-tests and renders TRAFFIK briefs; max three rounds; never clears ⚑ claims |
+| `strategy-loop` | CreativeStrategist (loop with CreativeResearcher, CreativeDirector, WordSmither, DesignChamp) | `CreativeStrategist/skills/strategy-loop.md` (in-house) · develops and refines strategic assets; max three rounds; candidates, red team, evidence audit; passing is not client approval |
 | `marketing-ideas` | BriefMachine | `BriefMachine/skills/marketing-ideas.md` (coreyhaines31/marketingskills) · manual only; tactics, not ideas; SaaS-centric, translate for other clients |
 | `wait-what` | WordSmither (any role) | `WordSmither/skills/wait-what.md` (mattpocock/skills) · manual only; re-pitch the last message plainly; uses CLAUDE.md vocabulary, no GLOSSARY.md |
 | `awwwards` | DesignChamp | `DesignChamp/skills/awwwards-stack.md` (Awwwards stack) · concept first; prototypes only; jsDelivr not esm.sh in Artifacts; no JS motion in email |
