@@ -36,3 +36,11 @@ Autumn Strier (CEO) approves. David LaBonte (Marketing Director) is the major st
 ## Chosen visual direction (Andres, 2026-10-26)
 
 Look A Saturated, as in Figma MFK-Andres v2 frame 26:6: MFK Type mode "A Saturated" (Outfit + Caveat) and MFK Color mode "A Saturated" (white canvas, royal #1B5FBF, orange #F99400 action with navy text, sun #FFD23F accents, orange-700 #BB6F00 highlight at display sizes only). This supersedes the CD's Color B + Type A recommendation and the P1–P3 type explorations.
+
+## Photography (Andres, 2026-10-27)
+
+The redesign will raise the standard of MFK's own imagery: new content, new family photos and higher-quality assets, as a trust signal to visitors, donors and partners. It is part of the visual brand scope (a photography plan is a Phase 1 deliverable in pitch v2). Stock and borrowed placeholders are temporary only.
+
+## Brand pitch v2 (2026-10-27)
+
+Figma page 139:236, 9 slides, Look A. Reworked per work/reviews/cd-review_pitch-v2_v01.md and work/copy/pitch-v2-copy-review_v01.md. Still open: weeks and cost on the ask (slide 09), a strip of current inconsistent materials (slide 03), a real trust screen on slide 07, a footnoted Material 3 Expressive source, whether Instapage can build M3 Expressive natively, and consent for the cover photo.
