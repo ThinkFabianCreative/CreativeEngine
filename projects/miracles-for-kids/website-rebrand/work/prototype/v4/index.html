@@ -411,6 +411,13 @@ footer p{font-size:16px;line-height:1.9}
 .prog .h2,.icard .h2{font-size:var(--fs-h2)}
 .ev .h2{font-size:24px}
 @media (max-width:600px){.ev .h2{font-size:20px}}
+/* event cards: title link + tertiary "Add to calendar" button (downloads .ics) */
+.ev{position:relative}
+.ev .h2 a{text-decoration:none;color:inherit}.ev .h2 a:hover{text-decoration:underline;text-underline-offset:3px}
+.ev .h2 a::after{content:"";position:absolute;inset:0;border-radius:inherit}
+.btn-text{position:relative;z-index:1;display:inline-flex;align-items:center;gap:8px;min-height:40px;margin:4px 0 0 -12px;padding:8px 12px;border:0;border-radius:999px;background:transparent;color:var(--royal);font:700 16px var(--sans);transition:background .2s,border-radius .3s var(--m3-spring-fast)}
+.btn-text .ic{width:20px;height:20px}
+.btn-text:hover{background:rgba(27,95,191,.08);border-radius:12px}.btn-text:active{background:rgba(27,95,191,.14);border-radius:8px}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
@@ -429,6 +436,7 @@ footer p{font-size:16px;line-height:1.9}
   <symbol id="playtri" viewBox="0 0 22 26"><path d="M0 0 L22 13 L0 26 Z" fill="currentColor"/></symbol>
 <!-- Phosphor Icons, duotone (MIT), @phosphor-icons/core 2.1.1 -->
   <symbol id="ph-basket" viewBox="0 0 256 256" fill="currentColor"><path d="M232,88,216.93,201.06A8,8,0,0,1,209,208H47a8,8,0,0,1-7.93-6.94L24,88Z" opacity="0.2"/><path d="M136,120v56a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm36.84-.8-5.6,56A8,8,0,0,0,174.4,184a7.32,7.32,0,0,0,.81,0,8,8,0,0,0,7.95-7.2l5.6-56a8,8,0,0,0-15.92-1.6Zm-89.68,0a8,8,0,0,0-15.92,1.6l5.6,56a8,8,0,0,0,8,7.2,7.32,7.32,0,0,0,.81,0,8,8,0,0,0,7.16-8.76ZM239.93,89.06,224.86,202.12A16.06,16.06,0,0,1,209,216H47a16.06,16.06,0,0,1-15.86-13.88L16.07,89.06A8,8,0,0,1,24,80H68.37L122,18.73a8,8,0,0,1,12,0L187.63,80H232a8,8,0,0,1,7.93,9.06ZM89.63,80h76.74L128,36.15ZM222.86,96H33.14L47,200H209Z"/></symbol>
+  <symbol id="ph-calendar-plus" viewBox="0 0 256 256" fill="currentColor"><path d="M216,48V88H40V48a8,8,0,0,1,8-8H208A8,8,0,0,1,216,48Z" opacity="0.2"/><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-48-56a8,8,0,0,1-8,8H136v16a8,8,0,0,1-16,0V160H104a8,8,0,0,1,0-16h16V128a8,8,0,0,1,16,0v16h16A8,8,0,0,1,160,152Z"/></symbol>
   <symbol id="ph-calendar-dots" viewBox="0 0 256 256" fill="currentColor"><path d="M216,48V88H40V48a8,8,0,0,1,8-8H208A8,8,0,0,1,216,48Z" opacity="0.2"/><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-68-76a12,12,0,1,1-12-12A12,12,0,0,1,140,132Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,132ZM96,172a12,12,0,1,1-12-12A12,12,0,0,1,96,172Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,140,172Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,172Z"/></symbol>
   <symbol id="ph-facebook-logo" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/></symbol>
   <symbol id="ph-graduation-cap" viewBox="0 0 256 256" fill="currentColor"><path d="M216,113.07v53.22a8,8,0,0,1-2,5.31c-11.3,12.59-38.9,36.4-86,36.4s-74.68-23.81-86-36.4a8,8,0,0,1-2-5.31V113.07L128,160Z" opacity="0.2"/><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"/></symbol>
@@ -731,9 +739,15 @@ document.querySelectorAll('.give .toggle button').forEach(b=>b.addEventListener(
   const state=now>e.b?'past':now>=e.a?'now':'';const single=+e.a.toDateString===+e.b.toDateString||e.a.toDateString()===e.b.toDateString();
   const span=single||/&/.test(e.n)?'':(e.a.getMonth()===e.b.getMonth()?'to '+e.b.getDate():'to '+M[e.b.getMonth()]+' '+e.b.getDate());
   const tag=feat&&!state?'<span class="tag next">Next up</span>':state==='now'?'<span class="tag now">Happening now</span>':state==='past'?'<span class="tag held">Held '+M[e.a.getMonth()]+' '+e.a.getDate()+'</span>':e.tent?'<span class="tag tent">Tentative</span>':'';
-  const meta=e.n?'<p class="cap ev-meta"><svg class="ic" aria-hidden="true"><use href="#ph-calendar-dots"/></svg>'+e.n+'</p>':'';
-  return '<a class="ev'+(feat?' feat':'')+(state==='past'?' past':'')+' reveal in" href="'+url+'" style="--c:'+c+';--on:'+on+';--tint:'+tint+';--sx:'+sx+'%;--sy:'+sy+'%"><div class="date">'+SH[i%4]+'<div><span class="m">'+M[e.a.getMonth()]+'</span><b>'+e.a.getDate()+'</b>'+(span?'<span class="to">'+span+'</span>':'')+'</div></div><div class="body"><p class="h2">'+e.t+'</p>'+meta+'</div>'+(feat&&e.img?'<img class="photo" src="'+e.img+'" alt="" loading="lazy">':'')+'</a>';};
+  const meta=e.n?'<p class="cap ev-meta">'+e.n+'</p>':'';
+  return '<div class="ev'+(feat?' feat':'')+(state==='past'?' past':'')+' reveal in" data-i="'+E.indexOf(e)+'" style="--c:'+c+';--on:'+on+';--tint:'+tint+';--sx:'+sx+'%;--sy:'+sy+'%"><div class="date">'+SH[i%4]+'<div><span class="m">'+M[e.a.getMonth()]+'</span><b>'+e.a.getDate()+'</b>'+(span?'<span class="to">'+span+'</span>':'')+'</div></div><div class="body"><p class="h2"><a href="'+url+'">'+e.t+'</a></p>'+meta+(state==='past'?'':'<button type="button" class="btn-text ics" data-i="'+E.indexOf(e)+'"><svg class="ic" aria-hidden="true"><use href="#ph-calendar-plus"/></svg>Add to calendar</button>')+'</div>'+(feat&&e.img?'<img class="photo" src="'+e.img+'" alt="" loading="lazy">':'')+'</div>';};
  const drive='<a class="ev drive reveal in" href="https://miraclesforkids.org/take-action/" style="--c:var(--royal);--on:#fff;--tint:rgba(255,255,255,.2);--sx:-35%;--sy:40%"><div class="date">'+SH[2]+'<div><svg class="ic" aria-hidden="true"><use href="#ph-hand-heart"/></svg><b>.</b></div></div><div class="body"><p class="h2">Host your own drive</p><p class="cap ev-meta">Adopt a family or rally your team, school or office.</p></div></a>';
+ const pad=n=>String(n).padStart(2,'0'),d8=d=>d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate());
+ const ics=e=>{const days=/&/.test(e.n)?[e.a,e.b].map(d=>[d,d]):[[e.a,e.b]];const stamp=new Date().toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
+  const ev=days.map(([a,b],k)=>{const end=new Date(b);end.setDate(end.getDate()+1);return['BEGIN:VEVENT','UID:mfk-'+d8(a)+'-'+k+'-'+e.t.replace(/\W+/g,'-').toLowerCase()+'@miraclesforkids.org','DTSTAMP:'+stamp,'DTSTART;VALUE=DATE:'+d8(a),'DTEND;VALUE=DATE:'+d8(end),'SUMMARY:'+e.t.replace(/[,;]/g,'\\$&')+' (Miracles for Kids)','DESCRIPTION:'+((e.n?e.n+' ':'')+'Volunteers register in advance. Details: '+url).replace(/[,;]/g,'\\$&'),'URL:'+url,'END:VEVENT'].join('\r\n');}).join('\r\n');
+  return['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Miracles for Kids//Events 2026//EN','CALSCALE:GREGORIAN',ev,'END:VCALENDAR'].join('\r\n');};
+
+ document.getElementById('events').addEventListener('click',ev=>{const b=ev.target.closest('.ics');if(!b)return;const e=E[+b.dataset.i];const blob=new Blob([ics(e)],{type:'text/calendar;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=e.t.replace(/[^\w]+/g,'-').replace(/-+$/,'')+'.ics';document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},500);});
  const up=E.filter(e=>e.b>=now),past=E.filter(e=>e.b<now).reverse();
  const vis=up.slice(0,4),rest=up.slice(4).concat(past);
  let html=vis.map((e,i)=>card(e,i,i===0)).join('');if(vis.length<4)html+=drive;
@@ -741,10 +755,10 @@ document.querySelectorAll('.give .toggle button').forEach(b=>b.addEventListener(
  document.getElementById('ecards-rest').innerHTML=rest.map((e,i)=>card(e,i+vis.length,false)).join('');
  const more=document.getElementById('ecards-more'),btn=document.getElementById('ev-toggle');
  if(!rest.length)btn.hidden=true;
- btn.addEventListener('click',()=>{const o=more.classList.toggle('open');btn.setAttribute('aria-expanded',o);btn.textContent=o?'Show fewer':'See the full 2026 calendar';if(o)more.querySelector('.ev')?.focus({preventScroll:true});});
+ btn.addEventListener('click',()=>{const o=more.classList.toggle('open');btn.setAttribute('aria-expanded',o);btn.textContent=o?'Show fewer':'See the full 2026 calendar';if(o)setTimeout(()=>more.querySelector('.ev a')?.focus({preventScroll:true}),0);});
  more.querySelectorAll('.ev').forEach((el,i)=>el.style.animationDelay=(i*40)+'ms');
- document.querySelectorAll('#ecards-rest .ev').forEach(el=>el.tabIndex=-1);
- btn.addEventListener('click',()=>document.querySelectorAll('#ecards-rest .ev').forEach(el=>el.tabIndex=more.classList.contains('open')?0:-1));
+ const restFoc=()=>document.querySelectorAll('#ecards-rest a,#ecards-rest button').forEach(el=>el.tabIndex=more.classList.contains('open')?0:-1);restFoc();
+ btn.addEventListener('click',restFoc);
 })();
 </script>
 </body>
