@@ -151,8 +151,10 @@ a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale
 .stat-card{background:#fff;border-radius:24px;padding:28px}
 .stat-card b{display:block;font:850 clamp(32px,3.4vw,48px)/1 var(--sans);letter-spacing:-.02em}
 .stat-card span{color:var(--grey);font-size:14px}
-.hosp{display:flex;flex-wrap:wrap;gap:14px 32px;font:600 14px var(--sans)}
-@media (max-width:900px){.stats{grid-template-columns:1fr 1fr}.hosp{flex-direction:column;gap:12px}}
+.hosp{list-style:none;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.hosp li{background:#fff;border-radius:16px;height:88px;display:grid;place-items:center;padding:14px 20px}
+.hosp img{max-height:56px;max-width:100%;width:auto;object-fit:contain}
+@media (max-width:900px){.stats{grid-template-columns:1fr 1fr}.hosp{grid-template-columns:1fr 1fr}}
 /* involve */
 .involve{padding:110px var(--gutter)}
 .igrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px}
@@ -310,12 +312,12 @@ footer p{font-size:14px;line-height:1.9}
   </div>
   <div class="mosaic" id="mosaic">
     <a class="tile tl" data-t="video lifeline" data-page="1" style="background:var(--sun-100)" href="https://www.youtube.com/watch?v=GKu1Jh4S97M"><svg class="deco" viewBox="0 0 100 100" style="right:0;bottom:0;width:62%;color:var(--sun)" preserveAspectRatio="none"><path fill="currentColor" d="M0 45 L50 10 L100 45 V100 H0Z"/></svg><span class="play"><svg viewBox="0 0 22 26" style="width:18px;color:var(--navy)"><use href="#playtri"/></svg></span><span class="h2" style="font-size:22px">William's miracle</span><span class="pill">1:43</span></a>
-    <div class="tile tl" data-t="read lifeline" data-page="1" style="background:var(--royal);color:#fff"><p class="quote">“To have help from Miracles for Kids lifts a weight from us…”</p><span class="cap">Maribel, a Miracles for Kids mom</span></div>
+    <div class="tile tl qt" data-t="read lifeline" data-page="1" style="background:var(--royal);color:#fff"><p class="quote">“To have help from Miracles for Kids lifts a weight from us…”</p><span class="cap">Maribel, a Miracles for Kids mom</span></div>
     <a class="tile tr" data-t="read lifeline" data-page="1" href="https://miraclesforkids.org/families-weve-helped/?fam=0"><img class="poster" src="assets/michelle.jpg" alt="Michelle with her mother and brother"><span class="pill">Michelle's miracle</span></a>
     <a class="tile br" data-t="video boost" data-page="1" style="background:var(--sky-50)" href="https://www.youtube.com/watch?v=BFT26CmxsYY"><svg class="deco" viewBox="0 0 100 100" style="left:0;bottom:0;width:58%;height:60%;color:var(--orange)" preserveAspectRatio="none"><path fill="currentColor" d="M0 100 V40 A50 40 0 0 1 100 40 V100Z"/></svg><span class="play"><svg viewBox="0 0 22 26" style="width:18px;color:var(--navy)"><use href="#playtri"/></svg></span><span class="h2" style="font-size:22px">Willow's miracle</span><span class="pill">3:01</span></a>
     <a class="tile wide tr" data-t="video wato safe" data-page="2" style="background:var(--orange)" href="https://www.youtube.com/watch?v=QAD2hSqy9oY"><svg class="deco" viewBox="0 0 100 100" style="right:0;top:0;width:60%;height:100%;color:#FBD7A6" preserveAspectRatio="none"><path fill="currentColor" d="M100 0 V100 H10 C10 40 50 0 100 0Z"/></svg><span class="play"><svg viewBox="0 0 22 26" style="width:18px;color:var(--navy)"><use href="#playtri"/></svg></span><span class="pill">Where Are They Now?</span><span class="h1" style="font-size:clamp(28px,2.6vw,38px)">Jeremiah's miracle</span><span>They kept their home through it all.</span></a>
-    <a class="tile tl" data-t="read lifeline" data-page="2" href="#programs"><img class="poster" src="assets/lifeline.jpg" alt="A mother laughing with her toddler"><span class="pill">Lifeline</span></a>
-    <div class="tile tl" data-t="read boost" data-page="2" style="background:var(--sun-100)"><p class="quote">“…thanks to you, many times my children was able to have snack at home.”</p><span class="cap" style="color:var(--grey)">The Madrid family</span></div>
+    <a class="tile tl" data-t="read lifeline" data-page="2" href="https://miraclesforkids.org/families-weve-helped/"><img class="poster" src="assets/kiara.jpg" alt="Kiara and her family"><span class="pill">Kiara's miracle</span></a>
+    <div class="tile tl qt" data-t="read boost" data-page="2" style="background:var(--sun-100)"><p class="quote">“…thanks to you, many times my children was able to have snack at home.”</p><span class="cap" style="color:var(--grey)">The Madrid family</span></div>
   </div>
 </section>
 
@@ -340,7 +342,7 @@ footer p{font-size:14px;line-height:1.9}
     <div class="stat-card reveal"><b data-count="41437">41,437</b><span>nights of sleep at Miracle Manor</span></div>
     <div class="stat-card reveal"><b data-count="88" data-suffix="¢">88¢</b><span>of every dollar to programs</span></div>
   </div>
-  <div class="hosp reveal"><span>CHOC Children's</span><span>Children's Hospital Los Angeles</span><span>City of Hope</span><span>By the Bay Health</span><span>Loma Linda University Children's</span><span>Rady Children's</span><span>UCLA Mattel Children's</span><span>UCSF Benioff Children's</span><span>Phoenix Children's</span></div>
+  <ul class="hosp reveal" aria-label="Referring hospitals"><li><img src="assets/h-logo-choc.png" alt="CHOC Children's" loading="lazy"></li><li><img src="assets/h-logo-chla.png" alt="Children's Hospital Los Angeles" loading="lazy"></li><li><img src="assets/h-cityofhopelogo2020.png" alt="City of Hope" loading="lazy"></li><li><img src="assets/h-by-the-bay-health-logo.png" alt="By the Bay Health" loading="lazy"></li><li><img src="assets/h-loma-linda.png" alt="Loma Linda University Children's Hospital" loading="lazy"></li><li><img src="assets/h-kisspng-rady-children-s-hospital.png" alt="Rady Children's Hospital San Diego" loading="lazy"></li><li><img src="assets/h-logo-mattel.png" alt="UCLA Mattel Children's Hospital" loading="lazy"></li><li><img src="assets/h-logo-ucsf2.png" alt="UCSF Benioff Children's Hospital Oakland" loading="lazy"></li><li><img src="assets/h-pc-phoenix-childrens-hosp-logo.png" alt="Phoenix Children's Hospital" loading="lazy"></li><li><img src="assets/h-texas-childrens-hospital.png" alt="Texas Children's Hospital" loading="lazy"></li></ul>
   <p style="margin-top:28px;font-weight:650"><a href="https://miraclesforkids.org/financials/">Our financials</a></p>
 </section>
 
@@ -357,8 +359,8 @@ footer p{font-size:14px;line-height:1.9}
   <h2 id="ev-h" class="h1 reveal">Miracles, <span class="script">in person.</span></h2>
   <p class="lead reveal">Galas, baskets and beach days.</p>
   <div class="ecards">
-    <a class="ev reveal" href="https://miraclesforkids.org/take-action/our-events/"><div class="date"><div>Nov<b>18</b>to 24</div></div><div><p class="h2">Basket of Miracles</p><p class="cap" style="color:var(--grey)">Thanksgiving 2026</p></div><img src="assets/event-basket.jpg" alt=""></a>
-    <a class="ev reveal" href="https://miraclesforkids.org/take-action/our-events/"><div class="date"><div>Nov<b>14</b></div></div><div><p class="h2">Wellness Fun Fest</p><p class="cap" style="color:var(--grey)">Volunteers welcome</p></div><img src="assets/event-wellness.jpg" alt=""></a>
+    <a class="ev reveal" href="https://miraclesforkids.org/take-action/our-events/"><div class="date"><div>Nov<b>18</b>to 24</div></div><div><p class="h2">Thanksgiving Basket of Miracles</p><p class="cap" style="color:var(--grey)">Assembly Day Nov 21. Pack meals, essentials and gifts for hundreds of families.</p></div><img src="assets/event-thanksgiving.jpg" alt="Volunteers packing Basket of Miracles boxes"></a>
+    <a class="ev reveal" href="https://miraclesforkids.org/take-action/our-events/"><div class="date"><div>Dec<b>7</b>to 16</div></div><div><p class="h2">Holiday Basket of Miracles</p><p class="cap" style="color:var(--grey)">Wrapping party Dec 12. Adopt a family, host a drive or volunteer.</p></div><img src="assets/event-holiday.jpg" alt="Volunteers assembling holiday baskets"></a>
   </div>
   <a class="btn btn-sky" href="https://miraclesforkids.org/take-action/our-events/">See all events →</a>
 </section>
@@ -411,12 +413,15 @@ const closeGive=()=>{give.classList.remove('open');dismissed=true;try{sessionSto
 gx.addEventListener('click',closeGive);addEventListener('keydown',e=>{if(e.key==='Escape'&&give.classList.contains('open'))closeGive();});
 addEventListener('scroll',()=>{if(!dismissed&&scrollY>innerHeight*.35)openGive(false);},{passive:true});
 document.querySelectorAll('a[href="#give"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openGive(true);}));
+// Client testimonials (raw/R6). Quote tiles step through them with the pager.
+const QUOTES=[["“To have help from Miracles for Kids lifts a weight from us…”","Maribel, a Miracles for Kids mom"],["“…thanks to you, many times my children was able to have snack at home.”","The Madrid family"],["“They genuinely care about the well-being of families like mine.”","Miranda M."],["“For my son and for me, Miracles for Kids has been of great mental health help, and we look forward to the boxes each month.”","Diego O."],["“We are infinitely grateful to all of you for your assistance, which does us so much good.”","Denise M."],["“Miracles for Kids has been a huge help to Miranda and our family.”","Miranda M."]];
+const setQuotes=pg=>document.querySelectorAll('.qt').forEach((t,i)=>{const q=QUOTES[(2*(pg-1)+i)%QUOTES.length];t.querySelector('.quote').textContent=q[0];t.querySelector('.cap').textContent=q[1];});
 // Stories: filters + pager (Figma shows "1 of 6"; each page rotates the mosaic)
 const mosaic=document.getElementById('mosaic'),tiles=[...mosaic.querySelectorAll('.tile')],label=document.getElementById('page-label');let filt='all',page=1;const PAGES=6;
 function render(){const pool=tiles.filter(t=>filt==='all'||t.dataset.t.split(' ').includes(filt));const paged=filt==='all';
  tiles.forEach(t=>t.classList.toggle('hide',!pool.includes(t)));label.textContent=paged?page+' of '+PAGES:pool.length+' stor'+(pool.length===1?'y':'ies');
  document.getElementById('prev').disabled=!paged||page===1;document.getElementById('next').disabled=!paged||page===PAGES;}
-function turn(d){page+=d;mosaic.animate([{opacity:1,transform:'none'},{opacity:0,transform:'translateX('+(-d*24)+'px)'}],{duration:180,easing:'ease-in'}).onfinish=()=>{const small=tiles.filter(t=>!t.classList.contains('wide'));const first=small[d>0?0:small.length-1];d>0?mosaic.appendChild(first):mosaic.insertBefore(first,mosaic.firstChild);render();mosaic.animate([{opacity:0,transform:'translateX('+(d*24)+'px)'},{opacity:1,transform:'none'}],{duration:260,easing:'cubic-bezier(.2,.7,.2,1)'});};}
+function turn(d){page+=d;mosaic.animate([{opacity:1,transform:'none'},{opacity:0,transform:'translateX('+(-d*24)+'px)'}],{duration:180,easing:'ease-in'}).onfinish=()=>{setQuotes(page);const small=tiles.filter(t=>!t.classList.contains('wide')&&!t.classList.contains('qt'));const first=small[d>0?0:small.length-1];d>0?mosaic.appendChild(first):mosaic.insertBefore(first,mosaic.firstChild);render();mosaic.animate([{opacity:0,transform:'translateX('+(d*24)+'px)'},{opacity:1,transform:'none'}],{duration:260,easing:'cubic-bezier(.2,.7,.2,1)'});};}
 document.querySelectorAll('.filters .chip').forEach(c=>c.addEventListener('click',()=>{document.querySelectorAll('.filters .chip').forEach(x=>x.setAttribute('aria-pressed',x===c));filt=c.dataset.f;page=1;render();}));
 document.getElementById('prev').onclick=()=>turn(-1);document.getElementById('next').onclick=()=>turn(1);render();
 // Parallax: [data-speed] layers drift against scroll (off for reduced motion)
