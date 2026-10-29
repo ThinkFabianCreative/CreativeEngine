@@ -74,7 +74,7 @@ a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale
 .hero-blob5{left:-29.64%;top:60%;width:56.7%;height:auto}
 .hero-photo{left:-20.88%;top:-8.29%;width:110.82%;height:111.43%;object-fit:cover;object-position:45% 30%;clip-path:url(#c-hero)}
 .hero-heart{left:-17.01%;top:-5.71%;width:15.46%;height:auto}
-.give{left:28.09%;top:60%;width:340px;padding:32px;border-radius:32px;background:var(--royal);color:#fff;box-shadow:0 16px 40px rgba(0,26,51,.18);display:flex;flex-direction:column;gap:16px;z-index:3}
+.give{position:fixed!important;right:32px;bottom:32px;left:auto;top:auto;width:340px;transform:translateY(calc(100% + 48px)) scale(.92);opacity:0;visibility:hidden;transition:transform .55s var(--spring),opacity .3s,visibility 0s .55s;z-index:30;padding:32px;border-radius:32px;background:var(--royal);color:#fff;box-shadow:0 16px 40px rgba(0,26,51,.18);display:flex;flex-direction:column;gap:16px;z-index:3}
 .give .h3{font:700 24px/32px var(--sans);padding-bottom:8px}
 .give .script{color:var(--sun);font-size:48px;line-height:48px;display:block}
 .toggle{position:relative;display:grid;grid-template-columns:1fr 1fr;padding:4px;border-radius:999px;border:2px solid #fff;isolation:isolate}
@@ -86,6 +86,10 @@ a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale
 .amounts button{min-height:44px;padding:12px 14px;border-radius:14px;border:1px solid #fff;background:transparent;color:#fff;font:600 16px/1 var(--sans);transition:border-radius .35s var(--spring),background .2s}
 .amounts button[aria-pressed=true]{border-width:3px;padding:10px 12px}
 .give .btn{width:100%;color:#fff}
+.give.open{transform:none;opacity:1;visibility:visible;transition:transform .55s var(--spring),opacity .3s}
+.give-x{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;display:grid;place-items:center;transition:background .2s,border-radius .35s var(--spring),transform .35s var(--spring)}
+.give-x:hover{background:rgba(255,255,255,.26);border-radius:14px;transform:rotate(90deg)}
+.give .h3{padding-right:40px}
 @media (max-width:1100px){
  .hero{flex-direction:column;align-items:stretch;padding:24px var(--gutter) 64px;min-height:0;gap:20px}
  .hero-text{width:auto}
@@ -93,7 +97,7 @@ a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale
  .hero-photo{left:-6%;top:0;width:112%;height:auto;aspect-ratio:860/780}
  .hero-heart{left:2%;top:-4%;width:18%}
  .hero-blob5{left:-20%;top:38%;width:60%}
- .give{position:relative;left:auto;top:auto;width:100%;margin-top:-12%}
+ .give{right:12px;left:12px;bottom:12px;width:auto;max-height:calc(100vh - 24px);overflow:auto}
  .hero-media{aspect-ratio:auto;display:flex;flex-direction:column}
  .hero-media .hero-photo,.hero-media .hero-blob5,.hero-media .hero-heart{position:absolute}
  .hero-media::before{content:"";display:block;aspect-ratio:776/700}
@@ -233,8 +237,9 @@ footer p{font-size:14px;line-height:1.9}
     <img class="hero-blob5" data-speed="-0.18" src="assets/shape-blob5.svg" alt="" aria-hidden="true">
     <img class="hero-photo" data-speed="0.06" src="assets/hero.jpg" alt="A smiling girl walking with a purple walker">
     <img class="hero-heart" data-speed="-0.32" src="assets/shape-heart1.svg" alt="" aria-hidden="true">
-    <form class="give" id="give" aria-label="Quick donation (prototype, does not charge)" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thank you! (prototype)'">
-      <p class="h3">Become a monthly <span class="script">miracle.</span></p>
+    <form class="give" id="give" role="dialog" aria-labelledby="give-h" aria-label="Quick donation (prototype, does not charge)" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thank you! (prototype)'">
+      <button type="button" class="give-x" aria-label="Close donation"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <p class="h3" id="give-h">Become a monthly <span class="script">miracle.</span></p>
       <div class="toggle" role="group" aria-label="Frequency"><button type="button" aria-pressed="true" data-freq="monthly">Monthly</button><button type="button" aria-pressed="false" data-freq="once">One-time</button></div>
       <div class="amounts" role="group" aria-label="Amount">
         <button type="button" aria-pressed="false">$25</button><button type="button" aria-pressed="true">$50</button><button type="button" aria-pressed="false">$100</button>
@@ -361,6 +366,13 @@ const give=document.getElementById('give'),gbtn=give.querySelector('.btn');let f
 const lbl=()=>gbtn.textContent='Give '+amt+(freq==='monthly'?' monthly':' today');
 give.querySelectorAll('.toggle button').forEach(b=>b.addEventListener('click',()=>{give.querySelectorAll('.toggle button').forEach(x=>x.setAttribute('aria-pressed',x===b));freq=b.dataset.freq;b.parentElement.dataset.on=freq;lbl();}));
 give.querySelectorAll('.amounts button').forEach(b=>b.addEventListener('click',()=>{give.querySelectorAll('.amounts button').forEach(x=>x.setAttribute('aria-pressed',x===b));amt=b.textContent;lbl();}));
+// Donation pop-out: appears once the visitor scrolls past 35% of the hero; X or Esc closes it for the session; Donate links reopen it
+const gx=give.querySelector('.give-x');let dismissed=false;try{dismissed=sessionStorage.getItem('mfk-give-x')==='1'}catch(e){}
+const openGive=f=>{give.classList.add('open');if(f)give.querySelector('.toggle button[aria-pressed=true]').focus();};
+const closeGive=()=>{give.classList.remove('open');dismissed=true;try{sessionStorage.setItem('mfk-give-x','1')}catch(e){}};
+gx.addEventListener('click',closeGive);addEventListener('keydown',e=>{if(e.key==='Escape'&&give.classList.contains('open'))closeGive();});
+addEventListener('scroll',()=>{if(!dismissed&&scrollY>innerHeight*.35)openGive(false);},{passive:true});
+document.querySelectorAll('a[href="#give"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openGive(true);}));
 // Stories: filters + pager (Figma shows "1 of 6"; each page rotates the mosaic)
 const mosaic=document.getElementById('mosaic'),tiles=[...mosaic.querySelectorAll('.tile')],label=document.getElementById('page-label');let filt='all',page=1;const PAGES=6;
 function render(){const pool=tiles.filter(t=>filt==='all'||t.dataset.t.split(' ').includes(filt));const paged=filt==='all';
