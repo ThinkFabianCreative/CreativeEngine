@@ -11,7 +11,7 @@
 <style>
 :root{
   --white:#fff; --navy:#002855; --royal:#1B5FBF; --sky:#79BDE9; --sky-50:#F2F8FD;
-  --orange:#F99400; --orange-700:#BB6F00; --sun:#FFD23F; --sun-100:#FFF5D5; --grey:#5B6474; --line:#C7D0DA;
+  --orange:#F99400; --orange-700:#BB6F00; --sun:#FFD23F; --sun-100:#FFF5D5; --grey:#5B6474; --line:#C7D0DA; --orange-800:#8A5200;
   --sans:"Outfit",system-ui,sans-serif; --script:"Caveat",cursive;
   --gutter:clamp(20px,8.3vw,120px); --spring:cubic-bezier(.34,1.56,.64,1); --ease:cubic-bezier(.2,.7,.2,1);
 }
@@ -21,10 +21,12 @@ body{background:var(--white);color:var(--navy);font:400 16px/1.5 var(--sans);-we
 img{display:block;max-width:100%}
 a{color:inherit}
 button{font:inherit;color:inherit;cursor:pointer}
-:focus-visible{outline:3px solid var(--navy);outline-offset:3px;border-radius:12px}
+:focus-visible{outline:3px solid var(--focus,var(--navy));outline-offset:3px;border-radius:12px}
+.truth,.close,.give,footer{--focus:var(--sun)}
+html{scroll-padding-top:120px}
 .wrap{padding-inline:var(--gutter)}
 section{position:relative}
-.eyebrow{font:600 14px/20px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--orange-700)}
+.eyebrow{font:600 14px/20px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--orange-800)}
 h1,h2,h3{font-family:var(--sans);letter-spacing:-.02em}
 .display{font-weight:850;font-size:clamp(44px,6.7vw,96px);line-height:1}
 .h1{font-weight:800;font-size:clamp(34px,4.4vw,64px);line-height:1.08}
@@ -56,7 +58,8 @@ h1,h2,h3{font-family:var(--sans);letter-spacing:-.02em}
 @media (max-width:980px){
  .nav-links{position:fixed;inset:104px 16px auto 16px;flex-direction:column;align-items:stretch;gap:4px;padding:16px;background:#fff;border-radius:24px;box-shadow:0 16px 40px rgba(0,40,85,.15);transform:translateY(-12px);opacity:0;pointer-events:none;transition:.3s var(--ease)}
  .nav-links a{padding:12px 8px}
- .nav.open .nav-links{transform:none;opacity:1;pointer-events:auto}
+ .nav-links{visibility:hidden}
+ .nav.open .nav-links{transform:none;opacity:1;pointer-events:auto;visibility:visible}
  .menu-btn{display:grid;place-items:center}
 }
 /* hero: positions from Figma 154:947 (1440 x 896); media box 776x700 at x836 y56 */
@@ -74,7 +77,7 @@ a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale
 .hero-blob5{left:-29.64%;top:60%;width:56.7%;height:auto}
 .hero-photo{left:-20.88%;top:-8.29%;width:110.82%;height:111.43%;object-fit:cover;object-position:45% 30%;clip-path:url(#c-hero)}
 .hero-heart{left:-17.01%;top:-5.71%;width:15.46%;height:auto}
-.give{position:fixed!important;right:32px;bottom:32px;left:auto;top:auto;width:340px;transform:translateY(calc(100% + 48px)) scale(.92);opacity:0;visibility:hidden;transition:transform .55s var(--spring),opacity .3s,visibility 0s .55s;z-index:30;padding:32px;border-radius:32px;background:var(--royal);color:#fff;box-shadow:0 16px 40px rgba(0,26,51,.18);display:flex;flex-direction:column;gap:16px;z-index:3}
+.give{position:fixed!important;right:32px;bottom:32px;left:auto;top:auto;width:340px;transform:translateY(calc(100% + 48px)) scale(.92);opacity:0;visibility:hidden;transition:transform .55s var(--spring),opacity .3s,visibility 0s .55s;z-index:30;padding:32px;border-radius:32px;background:var(--royal);color:#fff;box-shadow:0 16px 40px rgba(0,26,51,.18);display:flex;flex-direction:column;gap:16px}
 .give .h3{font:700 24px/32px var(--sans);padding-bottom:8px}
 .give .script{color:var(--sun);font-size:48px;line-height:48px;display:block}
 .toggle{position:relative;display:grid;grid-template-columns:1fr 1fr;padding:4px;border-radius:999px;border:2px solid #fff;isolation:isolate}
@@ -85,7 +88,7 @@ a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale
 .amounts{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 .amounts button{min-height:44px;padding:12px 14px;border-radius:14px;border:1px solid #fff;background:transparent;color:#fff;font:600 16px/1 var(--sans);transition:border-radius .35s var(--spring),background .2s}
 .amounts button[aria-pressed=true]{border-width:3px;padding:10px 12px}
-.give .btn{width:100%;color:#fff}
+.give .btn{width:100%}
 .give.open{transform:none;opacity:1;visibility:visible;transition:transform .55s var(--spring),opacity .3s}
 .give-x{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;display:grid;place-items:center;transition:background .2s,border-radius .35s var(--spring),transform .35s var(--spring)}
 .give-x:hover{background:rgba(255,255,255,.26);border-radius:14px;transform:rotate(90deg)}
@@ -109,7 +112,8 @@ a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale
 .truth .shade{background:rgba(36,36,36,.76)}
 .truth .inner{position:relative;max-width:880px;margin:auto;display:flex;flex-direction:column;align-items:center;gap:40px}
 .h1x{font:800 clamp(36px,4.44vw,64px)/72px var(--sans);letter-spacing:-1px}
-.h1x .script{font-size:1.1875em;color:var(--sun)}
+.h1x .script{font-size:1.1875em;color:var(--sun);margin-right:.12em}
+@media (max-width:700px){.h1x{line-height:1.1}}
 .truth p{font-size:20px;line-height:32px;max-width:720px}
 .truth .more{font-weight:600;text-decoration:none}
 .truth-ctas{display:flex;align-items:center;gap:28px;flex-wrap:wrap;justify-content:center}
@@ -119,6 +123,8 @@ a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale
 .pager{display:flex;align-items:center;gap:12px}
 .pager .btn{min-height:46px;padding:10px 20px;border-color:var(--navy)}
 .filters{display:flex;gap:10px;flex-wrap:wrap;margin:40px 0}
+@media (max-width:700px){.filters{flex-wrap:nowrap;overflow-x:auto;margin:24px calc(var(--gutter)*-1);padding:4px var(--gutter);scrollbar-width:none}.filters .chip{flex:none}}
+.empty{grid-column:1/-1;padding:40px;border-radius:28px;background:var(--sky-50);text-align:center;color:var(--grey)}
 .mosaic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-flow:dense;gap:24px}
 .tile{position:relative;min-height:320px;border-radius:28px;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;overflow:hidden;text-decoration:none;transition:transform .45s var(--spring),opacity .3s,box-shadow .3s}
 .tile:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(0,40,85,.12)}
@@ -132,7 +138,7 @@ a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale
 .pill{align-self:flex-start;background:#fff;color:var(--navy);border-radius:999px;padding:6px 14px;font:600 13px var(--sans)}
 .quote{font-size:20px;line-height:1.5}
 @media (max-width:1000px){.mosaic{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:600px){.mosaic{grid-template-columns:1fr}.tile.wide{grid-column:auto}}
+@media (max-width:600px){.mosaic{gap:12px}.tile{min-height:220px;padding:16px;border-radius:20px}.tl,.tr,.br{--r:90px}.tl{border-top-left-radius:90px}.tr{border-top-right-radius:90px}.br{border-bottom-right-radius:90px}.tile .play{width:48px;height:48px;top:14px;right:14px}.quote{font-size:15px}}
 /* programs */
 .programs{background:var(--sun-100);padding:180px var(--gutter) 112px}
 .pgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:52px 24px;margin-top:40px}
@@ -234,6 +240,11 @@ footer p{font-size:14px;line-height:1.9}
 .give .btn:hover{transform:none;border-radius:16px}
 .give .btn:active{transform:scale(.97);border-radius:10px}
 @media (max-width:1100px){.give{width:auto}}
+.give-more{display:none}
+.give.mini>.toggle,.give.mini>.amounts,.give.mini>.btn{display:none}
+.give.mini .give-more{display:flex;align-items:center;justify-content:center;gap:6px;min-height:40px;border-radius:var(--m3-full);border:0;background:var(--orange);color:var(--navy);font:750 14px var(--sans);transition:border-radius .35s var(--m3-spring-spatial)}
+.give.mini .give-more:active{border-radius:10px}
+@media (min-width:1101px){.give.mini{width:260px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
@@ -278,16 +289,6 @@ footer p{font-size:14px;line-height:1.9}
     <img class="hero-blob5" data-speed="-0.18" src="assets/shape-blob5.svg" alt="" aria-hidden="true">
     <img class="hero-photo" data-speed="0.06" src="assets/hero.jpg" alt="A smiling girl walking with a purple walker">
     <img class="hero-heart" data-speed="-0.32" src="assets/shape-heart1.svg" alt="" aria-hidden="true">
-    <form class="give" id="give" role="dialog" aria-labelledby="give-h" aria-label="Quick donation (prototype, does not charge)" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thank you! (prototype)'">
-      <button type="button" class="give-x" aria-label="Close donation"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-      <p class="h3" id="give-h">Become a monthly <span class="script">miracle.</span></p>
-      <div class="toggle" role="group" aria-label="Frequency"><button type="button" aria-pressed="true" data-freq="monthly">Monthly</button><button type="button" aria-pressed="false" data-freq="once">One-time</button></div>
-      <div class="amounts" role="group" aria-label="Amount">
-        <button type="button" aria-pressed="false">$25</button><button type="button" aria-pressed="true">$50</button><button type="button" aria-pressed="false">$100</button>
-        <button type="button" aria-pressed="false">$250</button><button type="button" aria-pressed="false">$300</button><button type="button" aria-pressed="false">$350</button>
-      </div>
-      <button class="btn btn-orange" type="submit">Give $50 monthly</button>
-    </form>
   </div>
 </section>
 
@@ -312,7 +313,7 @@ footer p{font-size:14px;line-height:1.9}
   <div class="filters reveal" role="group" aria-label="Filter stories">
     <button class="chip" aria-pressed="true" data-f="all">All</button><button class="chip" aria-pressed="false" data-f="video">Video</button><button class="chip" aria-pressed="false" data-f="read">Read</button><button class="chip" aria-pressed="false" data-f="wato">Where Are They Now?</button><button class="chip" aria-pressed="false" data-f="lifeline">Lifeline</button><button class="chip" aria-pressed="false" data-f="safe">Safe Haven</button><button class="chip" aria-pressed="false" data-f="balance">Balance</button><button class="chip" aria-pressed="false" data-f="boost">Boost</button><button class="chip" aria-pressed="false" data-f="pillars">Pillars</button>
   </div>
-  <div class="mosaic" id="mosaic">
+  <div class="mosaic" id="mosaic"><p class="empty" hidden>No stories in this group yet. <button class="chip" type="button" data-reset>See all stories</button></p>
     <a class="tile tl" data-t="video lifeline" data-page="1" style="background:var(--sun-100)" href="https://www.youtube.com/watch?v=GKu1Jh4S97M"><svg class="deco" viewBox="0 0 100 100" style="right:0;bottom:0;width:62%;color:var(--sun)" preserveAspectRatio="none"><path fill="currentColor" d="M0 45 L50 10 L100 45 V100 H0Z"/></svg><span class="play"><svg viewBox="0 0 22 26" style="width:18px;color:var(--navy)"><use href="#playtri"/></svg></span><span class="h2" style="font-size:22px">William's miracle</span><span class="pill">1:43</span></a>
     <div class="tile tl qt" data-t="read lifeline" data-page="1" style="background:var(--royal);color:#fff"><p class="quote">“To have help from Miracles for Kids lifts a weight from us…”</p><span class="cap">Maribel, a Miracles for Kids mom</span></div>
     <a class="tile tr" data-t="read lifeline" data-page="1" href="https://miraclesforkids.org/families-weve-helped/?fam=0"><img class="poster" src="assets/michelle.jpg" alt="Michelle with her mother and brother"><span class="pill">Michelle's miracle</span></a>
@@ -395,13 +396,26 @@ footer p{font-size:14px;line-height:1.9}
   <div><h4>Get involved</h4><a href="#give">Donate</a><a href="https://miraclesforkids.volunteerhub.com/vv2/">Volunteer</a><a href="https://360miracle.org/">360° Miracle</a><a href="https://miraclesforkids.org/our-partners/">Partners</a><a href="#events">Events</a></div>
 </footer>
 
+    <form class="give" id="give" role="region" aria-labelledby="give-h" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thank you! (prototype)'">
+  <button type="button" class="give-x" aria-label="Close donation"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <p class="h3" id="give-h">Become a monthly <span class="script">miracle.</span></p>
+  <div class="toggle" role="group" aria-label="Frequency"><button type="button" aria-pressed="true" data-freq="monthly">Monthly</button><button type="button" aria-pressed="false" data-freq="once">One-time</button></div>
+  <div class="amounts" role="group" aria-label="Amount">
+    <button type="button" aria-pressed="false">$25</button><button type="button" aria-pressed="true">$50</button><button type="button" aria-pressed="false">$100</button>
+    <button type="button" aria-pressed="false">$250</button><button type="button" aria-pressed="false">$300</button><button type="button" aria-pressed="false">$350</button>
+  </div>
+  <button type="button" class="give-more" aria-expanded="false">Choose an amount</button>
+  <button class="btn btn-orange" type="submit">Give $50 monthly</button>
+</form>
 <script>
 // Scalloped "flower" crop for Pillars (generated)
 (function(){let d='',n=12,a=.06;for(let i=0;i<=240;i++){const t=i/240*2*Math.PI;let r=.5*(1-a*Math.abs(Math.sin(n*t/2)))/(1);const x=.5+r*Math.cos(t),y=.5+r*Math.sin(t)*1;d+=(i?'L':'M')+x.toFixed(4)+' '+y.toFixed(4)+' ';}document.getElementById('scallop-path').setAttribute('d',d+'Z');})();
 // Sticky nav shadow + mobile menu
 const nav=document.getElementById('nav'),mb=nav.querySelector('.menu-btn');
 addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>8),{passive:true});
-mb.addEventListener('click',()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o);});
+const setMenu=o=>{nav.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Close menu':'Open menu');if(o)nav.querySelector('.nav-links a').focus();};
+mb.addEventListener('click',()=>setMenu(!nav.classList.contains('open')));
+addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){setMenu(false);mb.focus();}});
 nav.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded',false);}));
 // Donation card: frequency + amount update the button label
 const give=document.getElementById('give'),gbtn=give.querySelector('.btn');let freq='monthly',amt='$50';
@@ -410,21 +424,24 @@ give.querySelectorAll('.toggle button').forEach(b=>b.addEventListener('click',()
 give.querySelectorAll('.amounts button').forEach(b=>b.addEventListener('click',()=>{give.querySelectorAll('.amounts button').forEach(x=>x.setAttribute('aria-pressed',x===b));amt=b.textContent;lbl();}));
 // Donation pop-out: appears once the visitor scrolls past 35% of the hero; X or Esc closes it for the session; Donate links reopen it
 const gx=give.querySelector('.give-x');let dismissed=false;try{dismissed=sessionStorage.getItem('mfk-give-x')==='1'}catch(e){}
-const openGive=f=>{give.classList.add('open');if(f)give.querySelector('.toggle button[aria-pressed=true]').focus();};
-const closeGive=()=>{give.classList.remove('open');dismissed=true;try{sessionStorage.setItem('mfk-give-x','1')}catch(e){}};
+let opener=null;const more=give.querySelector('.give-more');
+const openGive=(f,from)=>{give.classList.add('open');if(f){give.classList.remove('mini');more.setAttribute('aria-expanded','true');opener=from||null;give.querySelector('.toggle button[aria-pressed=true]').focus();}else if(!give.classList.contains('full'))give.classList.add('mini');};
+more.addEventListener('click',()=>{give.classList.remove('mini');give.classList.add('full');more.setAttribute('aria-expanded','true');give.querySelector('.toggle button[aria-pressed=true]').focus();});
+const closeGive=()=>{give.classList.remove('open');if(opener){opener.focus();opener=null;}dismissed=true;try{sessionStorage.setItem('mfk-give-x','1')}catch(e){}};
 gx.addEventListener('click',closeGive);addEventListener('keydown',e=>{if(e.key==='Escape'&&give.classList.contains('open'))closeGive();});
 addEventListener('scroll',()=>{if(!dismissed&&scrollY>innerHeight*.35)openGive(false);},{passive:true});
-document.querySelectorAll('a[href="#give"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openGive(true);}));
+document.querySelectorAll('a[href="#give"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openGive(true,a);}));
 // Client testimonials (raw/R6). Quote tiles step through them with the pager.
 const QUOTES=[["“To have help from Miracles for Kids lifts a weight from us…”","Maribel, a Miracles for Kids mom"],["“…thanks to you, many times my children was able to have snack at home.”","The Madrid family"],["“They genuinely care about the well-being of families like mine.”","Miranda M."],["“For my son and for me, Miracles for Kids has been of great mental health help, and we look forward to the boxes each month.”","Diego O."],["“We are infinitely grateful to all of you for your assistance, which does us so much good.”","Denise M."],["“Miracles for Kids has been a huge help to Miranda and our family.”","Miranda M."]];
 const setQuotes=pg=>document.querySelectorAll('.qt').forEach((t,i)=>{const q=QUOTES[(2*(pg-1)+i)%QUOTES.length];t.querySelector('.quote').textContent=q[0];t.querySelector('.cap').textContent=q[1];});
 // Stories: filters + pager (Figma shows "1 of 6"; each page rotates the mosaic)
-const mosaic=document.getElementById('mosaic'),tiles=[...mosaic.querySelectorAll('.tile')],label=document.getElementById('page-label');let filt='all',page=1;const PAGES=6;
+const mosaic=document.getElementById('mosaic'),tiles=[...mosaic.querySelectorAll('.tile')],label=document.getElementById('page-label');let filt='all',page=1;const PAGES=Math.ceil(QUOTES.length/2);
 function render(){const pool=tiles.filter(t=>filt==='all'||t.dataset.t.split(' ').includes(filt));const paged=filt==='all';
- tiles.forEach(t=>t.classList.toggle('hide',!pool.includes(t)));label.textContent=paged?page+' of '+PAGES:pool.length+' stor'+(pool.length===1?'y':'ies');
+ tiles.forEach(t=>t.classList.toggle('hide',!pool.includes(t)));mosaic.querySelector('.empty').hidden=pool.length>0;label.textContent=paged?page+' of '+PAGES:pool.length+' stor'+(pool.length===1?'y':'ies');
  document.getElementById('prev').disabled=!paged||page===1;document.getElementById('next').disabled=!paged||page===PAGES;}
 function turn(d){page+=d;mosaic.animate([{opacity:1,transform:'none'},{opacity:0,transform:'translateX('+(-d*24)+'px)'}],{duration:180,easing:'ease-in'}).onfinish=()=>{setQuotes(page);const small=tiles.filter(t=>!t.classList.contains('wide')&&!t.classList.contains('qt'));const first=small[d>0?0:small.length-1];d>0?mosaic.appendChild(first):mosaic.insertBefore(first,mosaic.firstChild);render();mosaic.animate([{opacity:0,transform:'translateX('+(d*24)+'px)'},{opacity:1,transform:'none'}],{duration:260,easing:'cubic-bezier(.2,.7,.2,1)'});};}
 document.querySelectorAll('.filters .chip').forEach(c=>c.addEventListener('click',()=>{document.querySelectorAll('.filters .chip').forEach(x=>x.setAttribute('aria-pressed',x===c));filt=c.dataset.f;page=1;render();}));
+mosaic.querySelector('[data-reset]').onclick=()=>document.querySelector('.filters .chip[data-f=all]').click();
 document.getElementById('prev').onclick=()=>turn(-1);document.getElementById('next').onclick=()=>turn(1);render();
 // Parallax: [data-speed] layers drift against scroll (off for reduced motion)
 const layers=[...document.querySelectorAll('[data-speed]')];
