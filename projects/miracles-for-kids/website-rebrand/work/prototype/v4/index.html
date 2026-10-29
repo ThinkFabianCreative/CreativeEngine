@@ -193,19 +193,43 @@ footer a{display:block;text-decoration:none;font-size:14px;line-height:2.1}
 footer a:hover{text-decoration:underline}
 footer p{font-size:14px;line-height:1.9}
 @media (max-width:900px){footer{grid-template-columns:1fr 1fr}footer>div:first-child{grid-column:1/-1}}
-/* condensed pop-out */
-.give{width:300px;padding:16px;gap:10px;border-radius:24px}
-.give .h3{font:700 17px/24px var(--sans);padding:0 36px 0 2px}
+/* condensed pop-out, on M3 Expressive foundations:
+   containment (extra-large corner container), connected button groups, shape morph on select/press,
+   spring motion (spatial = overshoot, effects = no overshoot), emphasized type, 48px touch targets */
+:root{
+ --m3-spring-spatial:linear(0,.009,.035 2.1%,.141 4.4%,.723 12.9%,.938 16.7%,1.017 20.3%,1.051 24.4%,1.059 28.6%,1.039 36.9%,1.003 50%,.996 63%,1);
+ --m3-spring-effects:cubic-bezier(.31,.94,.34,1);
+ --m3-xl:28px; --m3-inner:8px; --m3-full:999px;
+}
+.give{width:300px;padding:16px;gap:12px;border-radius:var(--m3-xl);transition:transform .6s var(--m3-spring-spatial),opacity .25s var(--m3-spring-effects),visibility 0s .6s}
+.give.open{transition:transform .6s var(--m3-spring-spatial),opacity .25s var(--m3-spring-effects)}
+.give .h3{font:800 17px/24px var(--sans);letter-spacing:-.01em;padding:0 40px 0 4px}
 .give .h3 .script{display:inline;font-size:26px;line-height:24px}
-.give-x{top:10px;right:10px;width:32px;height:32px}
+/* icon button: 40 visual, 48 target, morphs round to square on hover/press */
+.give-x{top:12px;right:12px;width:36px;height:36px;border-radius:var(--m3-full);background:rgba(255,255,255,.16);transition:border-radius .35s var(--m3-spring-spatial),background .2s var(--m3-spring-effects),transform .35s var(--m3-spring-spatial)}
+.give-x:hover{border-radius:12px;transform:none}
+.give-x:active{border-radius:8px;transform:scale(.92)}
 .give-x svg{width:14px;height:14px}
+.give button{position:relative}
+.give .give-x{position:absolute}
+.give .toggle button::after,.give .amounts button::after,.give-x::after{content:"";position:absolute;inset:50% auto auto 50%;width:max(100%,48px);height:48px;transform:translate(-50%,-50%)}
+/* frequency: switch whose thumb is a spring */
 .give .toggle{padding:3px}
-.give .toggle::before{top:3px;bottom:3px;left:3px;width:calc(50% - 3px)}
-.give .toggle button{min-height:32px;font-size:13px}
-.give .amounts{display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
-.give .amounts button{min-height:34px;padding:0;border-radius:10px;font-size:13px}
-.give .amounts button[aria-pressed=true]{border-width:2px;padding:0}
-.give .btn{min-height:40px;padding:8px 16px;font-size:15px}
+.give .toggle::before{top:3px;bottom:3px;left:3px;width:calc(50% - 3px);transition:transform .5s var(--m3-spring-spatial)}
+.give .toggle button{min-height:32px;font:600 13px var(--sans)}
+.give .toggle button[aria-pressed=true]{font-weight:750}
+/* amounts: connected button group; inner corners small, outer ends full; selected morphs to a full pill */
+.give .amounts{display:flex;gap:2px}
+.give .amounts button{flex:1 1 0;min-width:0;min-height:36px;padding:0;border:0;border-radius:var(--m3-inner);background:rgba(255,255,255,.14);color:#fff;font:600 13px var(--sans);transition:border-radius .4s var(--m3-spring-spatial),flex-grow .4s var(--m3-spring-spatial),background .2s var(--m3-spring-effects),color .2s var(--m3-spring-effects)}
+.give .amounts button:first-child{border-radius:var(--m3-full) var(--m3-inner) var(--m3-inner) var(--m3-full)}
+.give .amounts button:last-child{border-radius:var(--m3-inner) var(--m3-full) var(--m3-full) var(--m3-inner)}
+.give .amounts button:hover{background:rgba(255,255,255,.24)}
+.give .amounts button:active{flex-grow:1.35;border-radius:4px}
+.give .amounts button[aria-pressed=true]{flex-grow:1.3;border-radius:var(--m3-full);background:#fff;color:var(--royal);font-weight:800;padding:0;border-width:0}
+/* primary action: emphasized label, morphs pill to rounded square on press */
+.give .btn{min-height:44px;padding:10px 16px;font:750 15px var(--sans);transition:border-radius .35s var(--m3-spring-spatial),transform .35s var(--m3-spring-spatial)}
+.give .btn:hover{transform:none;border-radius:16px}
+.give .btn:active{transform:scale(.97);border-radius:10px}
 @media (max-width:1100px){.give{width:auto}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 </style>
