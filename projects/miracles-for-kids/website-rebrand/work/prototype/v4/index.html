@@ -77,9 +77,11 @@ a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale
 .give{left:28.09%;top:60%;width:340px;padding:32px;border-radius:32px;background:var(--royal);color:#fff;box-shadow:0 16px 40px rgba(0,26,51,.18);display:flex;flex-direction:column;gap:16px;z-index:3}
 .give .h3{font:700 24px/32px var(--sans);padding-bottom:8px}
 .give .script{color:var(--sun);font-size:48px;line-height:48px;display:block}
-.toggle{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.toggle button{min-height:44px;border-radius:999px;border:2px solid #fff;background:transparent;color:#fff;font:500 14px var(--sans);transition:.25s}
-.toggle button[aria-pressed=true]{background:var(--orange);border-color:var(--orange);color:var(--navy)}
+.toggle{position:relative;display:grid;grid-template-columns:1fr 1fr;padding:4px;border-radius:999px;border:2px solid #fff;isolation:isolate}
+.toggle::before{content:"";position:absolute;z-index:-1;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:999px;background:var(--orange);transition:transform .45s var(--spring)}
+.toggle[data-on=once]::before{transform:translateX(100%)}
+.toggle button{min-height:40px;border-radius:999px;border:0;background:transparent;color:#fff;font:500 14px var(--sans);transition:color .25s}
+.toggle button[aria-pressed=true]{color:var(--navy)}
 .amounts{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 .amounts button{min-height:44px;padding:12px 14px;border-radius:14px;border:1px solid #fff;background:transparent;color:#fff;font:600 16px/1 var(--sans);transition:border-radius .35s var(--spring),background .2s}
 .amounts button[aria-pressed=true]{border-width:3px;padding:10px 12px}
@@ -357,7 +359,7 @@ nav.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{
 // Donation card: frequency + amount update the button label
 const give=document.getElementById('give'),gbtn=give.querySelector('.btn');let freq='monthly',amt='$50';
 const lbl=()=>gbtn.textContent='Give '+amt+(freq==='monthly'?' monthly':' today');
-give.querySelectorAll('.toggle button').forEach(b=>b.addEventListener('click',()=>{give.querySelectorAll('.toggle button').forEach(x=>x.setAttribute('aria-pressed',x===b));freq=b.dataset.freq;lbl();}));
+give.querySelectorAll('.toggle button').forEach(b=>b.addEventListener('click',()=>{give.querySelectorAll('.toggle button').forEach(x=>x.setAttribute('aria-pressed',x===b));freq=b.dataset.freq;b.parentElement.dataset.on=freq;lbl();}));
 give.querySelectorAll('.amounts button').forEach(b=>b.addEventListener('click',()=>{give.querySelectorAll('.amounts button').forEach(x=>x.setAttribute('aria-pressed',x===b));amt=b.textContent;lbl();}));
 // Stories: filters + pager (Figma shows "1 of 6"; each page rotates the mosaic)
 const mosaic=document.getElementById('mosaic'),tiles=[...mosaic.querySelectorAll('.tile')],label=document.getElementById('page-label');let filt='all',page=1;const PAGES=6;
