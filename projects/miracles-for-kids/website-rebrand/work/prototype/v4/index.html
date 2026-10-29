@@ -94,9 +94,10 @@ a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale
 .give-x:hover{background:rgba(255,255,255,.26);border-radius:14px;transform:rotate(90deg)}
 .give .h3{padding-right:40px}
 @media (max-width:1100px){
- .hero{flex-direction:column;align-items:stretch;padding:24px var(--gutter) 64px;min-height:0;gap:20px}
+ .hero{flex-direction:column;align-items:stretch;padding:16px var(--gutter) 64px;min-height:0;gap:8px}
+ .hero-text{gap:16px}
  .hero-text{width:auto}
- .hero-media{position:relative;left:auto;top:auto;width:100%;margin-top:24px}
+ .hero-media{position:relative;left:auto;top:auto;width:100%;margin-top:8px}
  .hero-photo{left:-6%;top:0;width:112%;height:auto;aspect-ratio:860/780}
  .hero-heart{left:2%;top:-4%;width:18%}
  .hero-blob5{left:-20%;top:38%;width:60%}
@@ -154,7 +155,7 @@ a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale
 @media (max-width:900px){.pgrid{grid-template-columns:1fr;gap:40px}.prog,.prog.big{grid-column:auto}}
 /* proof */
 .proof{background:var(--sky-50);padding:110px var(--gutter)}
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:40px 0 32px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin:40px 0 32px}
 .stat-card{background:#fff;border-radius:24px;padding:28px}
 .stat-card b{display:block;font:850 clamp(32px,3.4vw,48px)/1 var(--sans);letter-spacing:-.02em}
 .stat-card span{color:var(--grey);font-size:14px}
@@ -197,7 +198,7 @@ a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale
 @media (max-width:700px){.close .circle{width:200px;left:auto;right:-90px;top:40px}.close .heart{width:90px;top:auto;bottom:60px;left:-24px}.news{padding:32px 0 0}.news input{width:100%}.news form{width:100%}}
 /* footer */
 footer{background:var(--navy);color:#fff;padding:72px var(--gutter);display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
-footer h4{font:650 13px var(--sans);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+footer .fh{font:650 13px var(--sans);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
 footer a{display:block;text-decoration:none;font-size:14px;line-height:2.1}
 footer a:hover{text-decoration:underline}
 footer p{font-size:14px;line-height:1.9}
@@ -245,6 +246,25 @@ footer p{font-size:14px;line-height:1.9}
 .give.mini .give-more{display:flex;align-items:center;justify-content:center;gap:6px;min-height:40px;border-radius:var(--m3-full);border:0;background:var(--orange);color:var(--navy);font:750 14px var(--sans);transition:border-radius .35s var(--m3-spring-spatial)}
 .give.mini .give-more:active{border-radius:10px}
 @media (min-width:1101px){.give.mini{width:260px}}
+.give.mini.tuck{transform:translateY(calc(100% + 48px));opacity:0;visibility:hidden}
+.vbox{width:min(960px,92vw);padding:0;border:0;border-radius:28px;background:#000;overflow:hidden}.vbox::backdrop{background:rgba(0,26,51,.72)}.vbox iframe{display:block;width:100%;aspect-ratio:16/9;border:0}.vbox .give-x{position:absolute;top:12px;right:12px;z-index:1;--focus:var(--sun)}
+.tile:focus-visible{transform:translateY(-4px);box-shadow:0 16px 32px rgba(0,40,85,.12)}.icard:focus-visible{transform:translateY(-6px);box-shadow:0 18px 36px rgba(0,40,85,.12)}.ev:focus-visible{transform:translateY(-4px)}.prog:focus-visible .crop{transform:scale(1.03) rotate(-.6deg)}
+.news form{position:relative;padding-top:24px}.news-label{position:absolute;top:0;left:20px;color:#fff}.news-err{position:absolute;left:20px;top:100%;margin-top:6px;font:600 13px var(--sans);color:var(--sun)}.news input[aria-invalid=true]{outline:3px solid var(--sun)}
+.btn:disabled{opacity:.38;cursor:default;transform:none!important;border-radius:999px!important}
+/* ?m3=1 : M3 Expressive controls pass. Controls only; containers keep their own corners and shapes. */
+.m3 .btn{position:relative;overflow:hidden;transition:border-radius .4s var(--m3-spring-spatial),background .2s var(--m3-spring-effects)}
+.m3 .btn::before{content:"";position:absolute;inset:0;background:currentColor;opacity:0;transition:opacity .2s var(--m3-spring-effects);pointer-events:none}
+.m3 .btn:hover{transform:none;border-radius:16px}.m3 .btn:hover::before{opacity:.08}
+.m3 .btn:focus-visible::before{opacity:.10}
+.m3 .btn:active{transform:none;border-radius:10px}.m3 .btn:active::before{opacity:.10}
+.m3 .chip{display:inline-flex;align-items:center;gap:6px;border-radius:8px;transition:border-radius .4s var(--m3-spring-spatial),background .2s var(--m3-spring-effects),color .2s var(--m3-spring-effects),padding .4s var(--m3-spring-spatial)}
+.m3 .chip[aria-pressed=true]{border-radius:999px;padding-left:12px}
+.m3 .chip[aria-pressed=true]::before{content:"";width:14px;height:14px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 12.5l5 5L20 6.5' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 12.5l5 5L20 6.5' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+.m3 .pager{gap:2px}.m3 .pager .cap{margin-right:10px}
+.m3 .pager .btn{border-width:0;background:var(--sky-50);color:var(--navy)}
+.m3 #prev{border-radius:999px 8px 8px 999px}.m3 #next{border-radius:8px 999px 999px 8px}
+.m3 .pager .btn:not(:disabled):hover{border-radius:999px}
+.m3 .pager .btn:not(:disabled):active{border-radius:6px}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
@@ -330,7 +350,7 @@ footer p{font-size:14px;line-height:1.9}
   <div class="pgrid">
     <a class="prog big reveal" href="https://miraclesforkids.org/pay-the-bills/"><img class="crop" style="clip-path:url(#c-oval)" src="assets/lifeline.jpg" alt="A mother laughing with her toddler"><span class="k">Lifeline</span><span class="h2">The <span class="script">lights-on</span> miracle</span><p>Up to $500 a month toward the bills.</p><span class="stat">230+ families every month</span></a>
     <a class="prog big reveal" href="https://miraclesforkids.org/housing/"><img class="crop" style="clip-path:url(#c-arch);object-position:top" src="assets/safe-haven.jpg" alt="Miracle Manor, MFK's family housing"><span class="k">Safe Haven</span><span class="h2">The <span class="script">home</span> miracle</span><p>Miracle Manor, around the corner from CHOC.</p><span class="stat">22 families housed</span></a>
-    <a class="prog reveal" href="https://miraclesforkids.org/heal/"><img class="crop" style="clip-path:url(#c-heart)" src="assets/balance.jpg" alt="A mother hugging her daughter"><span class="k">Balance</span><span class="h2">The <span class="script">hard-day</span> miracle</span><p>Counseling for the whole family.</p><span class="stat">400+ people in therapy this year</span></a>
+    <a class="prog reveal" href="https://miraclesforkids.org/heal/"><img class="crop" style="clip-path:url(#c-heart);object-position:30% 15%" src="assets/balance.jpg" alt="A mother hugging her daughter"><span class="k">Balance</span><span class="h2">The <span class="script">hard-day</span> miracle</span><p>Counseling for the whole family.</p><span class="stat">400+ people in therapy this year</span></a>
     <a class="prog reveal" href="https://miraclesforkids.org/feed-and-clothe/"><img class="crop" style="clip-path:url(#c-pebble)" src="assets/boost.jpg" alt="A little girl sitting in a cardboard box"><span class="k">Boost</span><span class="h2">The <span class="script">full-fridge</span> miracle</span><p>Food, clothes and essentials, every month.</p><span class="stat">Box of Miracles monthly</span></a>
     <a class="prog reveal" href="https://miraclesforkids.org/how-we-help-2/pillars/"><img class="crop" style="clip-path:url(#c-scallop)" src="assets/pillars.jpg" alt="A father and son blowing bubbles on the grass"><span class="k">Pillars</span><span class="h2">The <span class="script">what's-next</span> miracle</span><p>Jobs, school and a fresh start.</p><span class="stat">78% of those interviewed were hired</span></a>
   </div>
@@ -340,10 +360,10 @@ footer p{font-size:14px;line-height:1.9}
   <h2 id="pf-h" class="h1 reveal">Trusted by the <span class="script">hospitals</span><br>that send us families.</h2>
   <p class="lead reveal" style="margin-top:20px;color:var(--navy)">Every family is referred by a children's hospital.</p>
   <div class="stats">
-    <div class="stat-card reveal"><b data-count="2100" data-suffix="+">2,100+</b><span>families helped</span></div>
+    <div class="stat-card reveal" role="group" aria-label="2,100+ families helped"><b aria-hidden="true" data-count="2100" data-suffix="+">2,100+</b><span aria-hidden="true">families helped</span></div>
     <div class="stat-card reveal"><b>Up to $500</b><span>a month toward bills</span></div>
-    <div class="stat-card reveal"><b data-count="41437">41,437</b><span>nights of sleep at Miracle Manor</span></div>
-    <div class="stat-card reveal"><b data-count="88" data-suffix="¢">88¢</b><span>of every dollar to programs</span></div>
+    <div class="stat-card reveal" role="group" aria-label="41,437 nights of sleep at Miracle Manor"><b aria-hidden="true" data-count="41437">41,437</b><span aria-hidden="true">nights of sleep at Miracle Manor</span></div>
+    <div class="stat-card reveal" role="group" aria-label="88¢ of every dollar to programs"><b aria-hidden="true" data-count="88" data-suffix="¢">88¢</b><span aria-hidden="true">of every dollar to programs</span></div>
   </div>
   <ul class="hosp reveal" aria-label="Referring hospitals"><li><img src="assets/h-logo-choc.png" alt="CHOC Children's" loading="lazy"></li><li><img src="assets/h-logo-chla.png" alt="Children's Hospital Los Angeles" loading="lazy"></li><li><img src="assets/h-cityofhopelogo2020.png" alt="City of Hope" loading="lazy"></li><li><img src="assets/h-by-the-bay-health-logo.png" alt="By the Bay Health" loading="lazy"></li><li><img src="assets/h-loma-linda.png" alt="Loma Linda University Children's Hospital" loading="lazy"></li><li><img src="assets/h-kisspng-rady-children-s-hospital.png" alt="Rady Children's Hospital San Diego" loading="lazy"></li><li><img src="assets/h-logo-mattel.png" alt="UCLA Mattel Children's Hospital" loading="lazy"></li><li><img src="assets/h-logo-ucsf2.png" alt="UCSF Benioff Children's Hospital Oakland" loading="lazy"></li><li><img src="assets/h-pc-phoenix-childrens-hosp-logo.png" alt="Phoenix Children's Hospital" loading="lazy"></li><li><img src="assets/h-texas-childrens-hospital.png" alt="Texas Children's Hospital" loading="lazy"></li></ul>
   <p style="margin-top:28px;font-weight:650"><a href="https://miraclesforkids.org/financials/">Our financials</a></p>
@@ -380,8 +400,8 @@ footer p{font-size:14px;line-height:1.9}
     <div class="news">
       <div><p class="h3">Get the <span class="script">good</span> news.</p><p class="cap">Family stories and ways to help, once a month.</p></div>
       <form onsubmit="event.preventDefault();this.innerHTML='<p class=news-ok>You\'re on the list. (prototype)</p>'" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
-        <label class="cap" for="em" style="position:absolute;left:-9999px">Email address</label>
-        <input id="em" type="email" required placeholder="you@example.com">
+        <label class="cap news-label" for="em">Email address</label>
+        <input id="em" type="email" required placeholder="you@example.com" aria-describedby="em-err"><span class="news-err" id="em-err" aria-live="polite"></span>
         <button class="btn btn-orange" type="submit">Sign up</button>
       </form>
     </div>
@@ -391,9 +411,9 @@ footer p{font-size:14px;line-height:1.9}
 
 <footer>
   <div><p style="font:750 22px/1.3 var(--sans);margin-bottom:16px">Helping the families who don't have time to ask for help.</p><p>17848 Sky Park Circle, Suite C, Irvine, CA 92614<br>(714) 730-3040<br>info@miraclesforkids.org<br>Miracles for Kids is a 501(c)(3) nonprofit. EIN 91-2160616.</p></div>
-  <div><h4>Programs</h4><a href="https://miraclesforkids.org/pay-the-bills/">Lifeline</a><a href="https://miraclesforkids.org/housing/">Safe Haven</a><a href="https://miraclesforkids.org/heal/">Balance</a><a href="https://miraclesforkids.org/feed-and-clothe/">Boost</a><a href="https://miraclesforkids.org/how-we-help-2/pillars/">Pillars</a></div>
-  <div><h4>About</h4><a href="https://miraclesforkids.org/why-we-help/our-story/">Our Story</a><a href="https://miraclesforkids.org/our-team/">Our Team</a><a href="https://miraclesforkids.org/financials/">Financials</a><a href="https://miraclesforkids.org/newsroom/">Newsroom</a><a href="https://miraclesforkids.org/careers/">Careers</a></div>
-  <div><h4>Get involved</h4><a href="#give">Donate</a><a href="https://miraclesforkids.volunteerhub.com/vv2/">Volunteer</a><a href="https://360miracle.org/">360° Miracle</a><a href="https://miraclesforkids.org/our-partners/">Partners</a><a href="#events">Events</a></div>
+  <div><h3 class="fh">Programs</h3><a href="https://miraclesforkids.org/pay-the-bills/">Lifeline</a><a href="https://miraclesforkids.org/housing/">Safe Haven</a><a href="https://miraclesforkids.org/heal/">Balance</a><a href="https://miraclesforkids.org/feed-and-clothe/">Boost</a><a href="https://miraclesforkids.org/how-we-help-2/pillars/">Pillars</a></div>
+  <div><h3 class="fh">About</h3><a href="https://miraclesforkids.org/why-we-help/our-story/">Our Story</a><a href="https://miraclesforkids.org/our-team/">Our Team</a><a href="https://miraclesforkids.org/financials/">Financials</a><a href="https://miraclesforkids.org/newsroom/">Newsroom</a><a href="https://miraclesforkids.org/careers/">Careers</a></div>
+  <div><h3 class="fh">Get involved</h3><a href="#give">Donate</a><a href="https://miraclesforkids.volunteerhub.com/vv2/">Volunteer</a><a href="https://360miracle.org/">360° Miracle</a><a href="https://miraclesforkids.org/our-partners/">Partners</a><a href="#events">Events</a></div>
 </footer>
 
     <form class="give" id="give" role="region" aria-labelledby="give-h" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thank you! (prototype)'">
@@ -407,7 +427,9 @@ footer p{font-size:14px;line-height:1.9}
   <button type="button" class="give-more" aria-expanded="false">Choose an amount</button>
   <button class="btn btn-orange" type="submit">Give $50 monthly</button>
 </form>
+<dialog class="vbox" id="vbox" aria-label="Video"><button type="button" class="give-x" aria-label="Close video"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button><iframe title="Video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></dialog>
 <script>
+if(new URLSearchParams(location.search).get("m3")==="1")document.documentElement.classList.add("m3");
 // Scalloped "flower" crop for Pillars (generated)
 (function(){let d='',n=12,a=.06;for(let i=0;i<=240;i++){const t=i/240*2*Math.PI;let r=.5*(1-a*Math.abs(Math.sin(n*t/2)))/(1);const x=.5+r*Math.cos(t),y=.5+r*Math.sin(t)*1;d+=(i?'L':'M')+x.toFixed(4)+' '+y.toFixed(4)+' ';}document.getElementById('scallop-path').setAttribute('d',d+'Z');})();
 // Sticky nav shadow + mobile menu
@@ -420,7 +442,7 @@ nav.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{
 // Donation card: frequency + amount update the button label
 const give=document.getElementById('give'),gbtn=give.querySelector('.btn');let freq='monthly',amt='$50';
 const lbl=()=>gbtn.textContent='Give '+amt+(freq==='monthly'?' monthly':' today');
-give.querySelectorAll('.toggle button').forEach(b=>b.addEventListener('click',()=>{give.querySelectorAll('.toggle button').forEach(x=>x.setAttribute('aria-pressed',x===b));freq=b.dataset.freq;b.parentElement.dataset.on=freq;lbl();}));
+give.querySelectorAll('.toggle button').forEach(b=>b.addEventListener('click',()=>{give.querySelectorAll('.toggle button').forEach(x=>x.setAttribute('aria-pressed',x===b));freq=b.dataset.freq;b.parentElement.dataset.on=freq;document.getElementById('give-h').innerHTML=freq==='monthly'?'Become a monthly <span class="script">miracle.</span>':'Be today\'s <span class="script">miracle.</span>';lbl();}));
 give.querySelectorAll('.amounts button').forEach(b=>b.addEventListener('click',()=>{give.querySelectorAll('.amounts button').forEach(x=>x.setAttribute('aria-pressed',x===b));amt=b.textContent;lbl();}));
 // Donation pop-out: appears once the visitor scrolls past 35% of the hero; X or Esc closes it for the session; Donate links reopen it
 const gx=give.querySelector('.give-x');let dismissed=false;try{dismissed=sessionStorage.getItem('mfk-give-x')==='1'}catch(e){}
@@ -434,6 +456,13 @@ document.querySelectorAll('a[href="#give"]').forEach(a=>a.addEventListener('clic
 // Client testimonials (raw/R6). Quote tiles step through them with the pager.
 const QUOTES=[["“To have help from Miracles for Kids lifts a weight from us…”","Maribel, a Miracles for Kids mom"],["“…thanks to you, many times my children was able to have snack at home.”","The Madrid family"],["“They genuinely care about the well-being of families like mine.”","Miranda M."],["“For my son and for me, Miracles for Kids has been of great mental health help, and we look forward to the boxes each month.”","Diego O."],["“We are infinitely grateful to all of you for your assistance, which does us so much good.”","Denise M."],["“Miracles for Kids has been a huge help to Miranda and our family.”","Miranda M."]];
 const setQuotes=pg=>document.querySelectorAll('.qt').forEach((t,i)=>{const q=QUOTES[(2*(pg-1)+i)%QUOTES.length];t.querySelector('.quote').textContent=q[0];t.querySelector('.cap').textContent=q[1];});
+new IntersectionObserver(es=>es.forEach(e=>give.classList.toggle('tuck',e.isIntersecting))).observe(document.querySelector('.stories-head'));
+// Videos play in a lightbox instead of leaving the page
+const vbox=document.getElementById('vbox'),vframe=vbox.querySelector('iframe');
+document.querySelectorAll('a[href*="youtube.com/watch"]').forEach(a=>{const id=new URL(a.href).searchParams.get('v');a.setAttribute('aria-haspopup','dialog');a.addEventListener('click',e=>{if(e.metaKey||e.ctrlKey)return;e.preventDefault();vframe.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0';vbox.showModal();});});
+vbox.querySelector('.give-x').onclick=()=>vbox.close();vbox.addEventListener('close',()=>{vframe.src='';});vbox.addEventListener('click',e=>{if(e.target===vbox)vbox.close();});
+// Newsletter inline validation
+const em=document.getElementById('em');em.addEventListener('invalid',e=>{e.preventDefault();em.setAttribute('aria-invalid','true');document.getElementById('em-err').textContent='Please enter an email like name@example.com';});em.addEventListener('input',()=>{if(em.validity.valid){em.removeAttribute('aria-invalid');document.getElementById('em-err').textContent='';}});
 // Stories: filters + pager (Figma shows "1 of 6"; each page rotates the mosaic)
 const mosaic=document.getElementById('mosaic'),tiles=[...mosaic.querySelectorAll('.tile')],label=document.getElementById('page-label');let filt='all',page=1;const PAGES=Math.ceil(QUOTES.length/2);
 function render(){const pool=tiles.filter(t=>filt==='all'||t.dataset.t.split(' ').includes(filt));const paged=filt==='all';
