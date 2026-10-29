@@ -45,6 +45,7 @@ This is where Claude discovers CreativeEngine's skills automatically. Each skill
 | `color-palette-extractor` | DesignChamp | `DesignChamp/skills/awwwards-stack.md` (Awwwards stack) |
 | `design-motion-principles` | DesignChamp | `DesignChamp/skills/awwwards-stack.md` (Awwwards stack) |
 | `remotion-best-practices` | DesignChamp | `DesignChamp/skills/awwwards-stack.md` (Awwwards stack) |
+| `hyperframes` | DesignChamp | `DesignChamp/skills/hyperframes.md` · global install; no Whisper transcribe; no camp-scale maps; init with `--skip-skills` |
 
 ## Plugin skills
 
