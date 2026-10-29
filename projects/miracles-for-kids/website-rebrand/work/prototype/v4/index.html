@@ -26,7 +26,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 html{scroll-padding-top:120px}
 .wrap{padding-inline:var(--gutter)}
 section{position:relative}
-.eyebrow{font:600 14px/20px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--orange-800)}
+.eyebrow{font:600 12px/20px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--orange-800)}
 h1,h2,h3{font-family:var(--sans);letter-spacing:-.02em}
 .display{font-weight:850;font-size:clamp(44px,6.7vw,96px);line-height:1}
 .h1{font-weight:800;font-size:clamp(34px,4.4vw,64px);line-height:1.08}
@@ -41,7 +41,7 @@ h1,h2,h3{font-family:var(--sans);letter-spacing:-.02em}
 .btn-orange{background:var(--orange);color:var(--navy)}
 .btn-sky{background:var(--sky);color:var(--navy)}
 .btn-ghost{border-color:currentColor;background:transparent}
-.chip{min-height:44px;padding:9px 18px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font:600 14px var(--sans);transition:border-radius .35s var(--spring),background .2s,color .2s}
+.chip{min-height:44px;padding:9px 18px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font:600 16px var(--sans);transition:border-radius .35s var(--spring),background .2s,color .2s}
 .chip[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff;border-radius:14px}
 .wave{position:absolute;left:0;width:100%;height:80px;display:block;pointer-events:none}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
@@ -71,7 +71,7 @@ h1,h2,h3{font-family:var(--sans);letter-spacing:-.02em}
 .play{width:48px;height:48px;border-radius:50%;background:var(--orange);display:grid;place-items:center;flex:none;transition:border-radius .45s var(--spring),transform .45s var(--spring)}
 .play svg{width:14px;margin-left:3px}
 a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale(1.06)}
-.cap{font:500 14px/20px var(--sans)}
+.cap{font:500 16px/20px var(--sans)}
 .hero-media{position:absolute;left:58.06%;top:56px;width:53.89%;aspect-ratio:776/700}
 .hero-media>*{position:absolute}
 .hero-blob5{left:-29.64%;top:60%;width:56.7%;height:auto}
@@ -83,7 +83,7 @@ a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale
 .toggle{position:relative;display:grid;grid-template-columns:1fr 1fr;padding:4px;border-radius:999px;border:2px solid #fff;isolation:isolate}
 .toggle::before{content:"";position:absolute;z-index:-1;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:999px;background:var(--orange);transition:transform .45s var(--spring)}
 .toggle[data-on=once]::before{transform:translateX(100%)}
-.toggle button{min-height:40px;border-radius:999px;border:0;background:transparent;color:#fff;font:500 14px var(--sans);transition:color .25s}
+.toggle button{min-height:40px;border-radius:999px;border:0;background:transparent;color:#fff;font:500 16px var(--sans);transition:color .25s}
 .toggle button[aria-pressed=true]{color:var(--navy)}
 .amounts{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 .amounts button{min-height:44px;padding:12px 14px;border-radius:14px;border:1px solid #fff;background:transparent;color:#fff;font:600 16px/1 var(--sans);transition:border-radius .35s var(--spring),background .2s}
@@ -136,10 +136,10 @@ a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale
 .tile .deco{position:absolute;pointer-events:none}
 .tile>*:not(.poster):not(.deco):not(.play){position:relative;z-index:1}
 .tile .play{position:absolute;top:24px;right:24px;width:64px;height:64px;z-index:2}
-.pill{align-self:flex-start;background:#fff;color:var(--navy);border-radius:999px;padding:6px 14px;font:600 13px var(--sans)}
+.pill{align-self:flex-start;background:#fff;color:var(--navy);border-radius:999px;padding:6px 14px;font:600 12px var(--sans)}
 .quote{font-size:20px;line-height:1.5}
 @media (max-width:1000px){.mosaic{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:600px){.mosaic{gap:12px}.tile{min-height:220px;padding:16px;border-radius:20px}.tl,.tr,.br{--r:90px}.tl{border-top-left-radius:90px}.tr{border-top-right-radius:90px}.br{border-bottom-right-radius:90px}.tile .play{width:48px;height:48px;top:14px;right:14px}.quote{font-size:15px}}
+@media (max-width:600px){.mosaic{gap:12px}.tile{min-height:220px;padding:16px;border-radius:20px}.tl,.tr,.br{--r:90px}.tl{border-top-left-radius:90px}.tr{border-top-right-radius:90px}.br{border-bottom-right-radius:90px}.tile .play{width:48px;height:48px;top:14px;right:14px}.quote{font-size:16px}}
 /* programs */
 .programs{background:var(--sun-100);padding:180px var(--gutter) 112px}
 .pgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:52px 24px;margin-top:40px}
@@ -148,17 +148,17 @@ a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale
 .prog .crop{width:100%;aspect-ratio:384/280;object-fit:cover;transition:transform .5s var(--spring)}
 .prog.big .crop{aspect-ratio:588/360}
 .prog:hover .crop{transform:scale(1.03) rotate(-.6deg)}
-.prog .k{margin-top:16px;padding-inline:18px;font:600 13px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+.prog .k{margin-top:16px;padding-inline:18px;font:600 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
 .prog .h2,.prog p{padding-inline:18px}
 .prog p{color:var(--grey)}
-.prog .stat{padding-inline:18px;font:650 14px var(--sans);color:var(--navy)}
+.prog .stat{padding-inline:18px;font:650 16px var(--sans);color:var(--navy)}
 @media (max-width:900px){.pgrid{grid-template-columns:1fr;gap:40px}.prog,.prog.big{grid-column:auto}}
 /* proof */
 .proof{background:var(--sky-50);padding:110px var(--gutter)}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin:40px 0 32px}
 .stat-card{background:#fff;border-radius:24px;padding:28px}
 .stat-card b{display:block;font:850 clamp(32px,3.4vw,48px)/1 var(--sans);letter-spacing:-.02em}
-.stat-card span{color:var(--grey);font-size:14px}
+.stat-card span{color:var(--grey);font-size:16px}
 .hosp{list-style:none;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
 .hosp li{background:#fff;border-radius:16px;height:88px;display:grid;place-items:center;padding:14px 20px}
 .hosp img{max-height:56px;max-width:100%;width:auto;object-fit:contain}
@@ -171,7 +171,7 @@ a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale
 .icard .crop{width:100%;aspect-ratio:4/3;object-fit:cover}
 .icard .body{padding:24px 24px 28px;display:flex;flex-direction:column;gap:8px}
 .icard .body{flex:1}
-.icard .go{align-self:flex-start;margin-top:auto;min-height:48px;padding:12px 24px;font:650 15px var(--sans)}
+.icard .go{align-self:flex-start;margin-top:auto;min-height:48px;padding:12px 24px;font:650 16px var(--sans)}
 .icard .btn-ghost.go{color:var(--navy);border-color:var(--navy)}
 .icard:hover .go{border-radius:16px}.icard:active .go{border-radius:10px;transform:scale(.97)}
 @media (max-width:900px){.igrid{grid-template-columns:1fr}}
@@ -201,10 +201,10 @@ a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale
 @media (max-width:700px){.close .circle{width:200px;left:auto;right:-90px;top:40px}.close .heart{width:90px;top:auto;bottom:60px;left:-24px}.news{padding:32px 0 0}.news input{width:100%}.news form{width:100%}}
 /* footer */
 footer{background:var(--navy);color:#fff;padding:72px var(--gutter);display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
-footer .fh{font:650 13px var(--sans);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
-footer a{display:block;text-decoration:none;font-size:14px;line-height:2.1}
+footer .fh{font:650 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+footer a{display:block;text-decoration:none;font-size:16px;line-height:2.1}
 footer a:hover{text-decoration:underline}
-footer p{font-size:14px;line-height:1.9}
+footer p{font-size:16px;line-height:1.9}
 @media (max-width:900px){footer{grid-template-columns:1fr 1fr}footer>div:first-child{grid-column:1/-1}}
 /* condensed pop-out, on M3 Expressive foundations:
    containment (extra-large corner container), connected button groups, shape morph on select/press,
@@ -216,8 +216,8 @@ footer p{font-size:14px;line-height:1.9}
 }
 .give{width:300px;padding:16px;gap:12px;border-radius:var(--m3-xl);transition:transform .6s var(--m3-spring-spatial),opacity .25s var(--m3-spring-effects),visibility 0s .6s}
 .give.open{transition:transform .6s var(--m3-spring-spatial),opacity .25s var(--m3-spring-effects)}
-.give .h3{font:800 17px/24px var(--sans);letter-spacing:-.01em;padding:0 40px 0 4px}
-.give .h3 .script{display:inline;font-size:26px;line-height:24px}
+.give .h3{font:800 16px/24px var(--sans);letter-spacing:-.01em;padding:0 40px 0 4px}
+.give .h3 .script{display:inline;font-size:28px;line-height:24px}
 /* icon button: 40 visual, 48 target, morphs round to square on hover/press */
 .give-x{top:12px;right:12px;width:36px;height:36px;border-radius:var(--m3-full);background:rgba(255,255,255,.16);transition:border-radius .35s var(--m3-spring-spatial),background .2s var(--m3-spring-effects),transform .35s var(--m3-spring-spatial)}
 .give-x:hover{border-radius:12px;transform:none}
@@ -229,30 +229,30 @@ footer p{font-size:14px;line-height:1.9}
 /* frequency: switch whose thumb is a spring */
 .give .toggle{padding:3px}
 .give .toggle::before{top:3px;bottom:3px;left:3px;width:calc(50% - 3px);transition:transform .5s var(--m3-spring-spatial)}
-.give .toggle button{min-height:32px;font:600 13px var(--sans)}
+.give .toggle button{min-height:32px;font:600 12px var(--sans)}
 .give .toggle button[aria-pressed=true]{font-weight:750}
 /* amounts: connected button group; inner corners small, outer ends full; selected morphs to a full pill */
 .give .amounts{display:flex;gap:2px}
-.give .amounts button{flex:1 1 0;min-width:0;min-height:36px;padding:0;border:0;border-radius:var(--m3-inner);background:rgba(255,255,255,.14);color:#fff;font:600 13px var(--sans);transition:border-radius .4s var(--m3-spring-spatial),flex-grow .4s var(--m3-spring-spatial),background .2s var(--m3-spring-effects),color .2s var(--m3-spring-effects)}
+.give .amounts button{flex:1 1 0;min-width:0;min-height:36px;padding:0;border:0;border-radius:var(--m3-inner);background:rgba(255,255,255,.14);color:#fff;font:600 12px var(--sans);transition:border-radius .4s var(--m3-spring-spatial),flex-grow .4s var(--m3-spring-spatial),background .2s var(--m3-spring-effects),color .2s var(--m3-spring-effects)}
 .give .amounts button:first-child{border-radius:var(--m3-full) var(--m3-inner) var(--m3-inner) var(--m3-full)}
 .give .amounts button:last-child{border-radius:var(--m3-inner) var(--m3-full) var(--m3-full) var(--m3-inner)}
 .give .amounts button:hover{background:rgba(255,255,255,.24)}
 .give .amounts button:active{flex-grow:1.35;border-radius:4px}
 .give .amounts button[aria-pressed=true]{flex-grow:1.3;border-radius:var(--m3-full);background:#fff;color:var(--royal);font-weight:800;padding:0;border-width:0}
 /* primary action: emphasized label, morphs pill to rounded square on press */
-.give .btn{min-height:44px;padding:10px 16px;font:750 15px var(--sans);transition:border-radius .35s var(--m3-spring-spatial),transform .35s var(--m3-spring-spatial)}
+.give .btn{min-height:44px;padding:10px 16px;font:750 16px var(--sans);transition:border-radius .35s var(--m3-spring-spatial),transform .35s var(--m3-spring-spatial)}
 .give .btn:hover{transform:none;border-radius:16px}
 .give .btn:active{transform:scale(.97);border-radius:10px}
 @media (max-width:1100px){.give{width:auto}}
 .give-more{display:none}
 .give.mini>.toggle,.give.mini>.amounts,.give.mini>.btn{display:none}
-.give.mini .give-more{display:flex;align-items:center;justify-content:center;gap:6px;min-height:40px;border-radius:var(--m3-full);border:0;background:var(--orange);color:var(--navy);font:750 14px var(--sans);transition:border-radius .35s var(--m3-spring-spatial)}
+.give.mini .give-more{display:flex;align-items:center;justify-content:center;gap:6px;min-height:40px;border-radius:var(--m3-full);border:0;background:var(--orange);color:var(--navy);font:750 16px var(--sans);transition:border-radius .35s var(--m3-spring-spatial)}
 .give.mini .give-more:active{border-radius:10px}
 @media (min-width:1101px){.give.mini{width:260px}}
 .give.mini.tuck{transform:translateY(calc(100% + 48px));opacity:0;visibility:hidden}
 .vbox{width:min(960px,92vw);padding:0;border:0;border-radius:28px;background:#000;overflow:hidden}.vbox::backdrop{background:rgba(0,26,51,.72)}.vbox iframe{display:block;width:100%;aspect-ratio:16/9;border:0}.vbox .give-x{position:absolute;top:12px;right:12px;z-index:1;--focus:var(--sun)}
 .tile:focus-visible{transform:translateY(-4px);box-shadow:0 16px 32px rgba(0,40,85,.12)}.icard:focus-visible{transform:translateY(-6px);box-shadow:0 18px 36px rgba(0,40,85,.12)}.ev:focus-visible{transform:translateY(-4px)}.prog:focus-visible .crop{transform:scale(1.03) rotate(-.6deg)}
-.news form{position:relative;padding-top:24px}.news-label{position:absolute;top:0;left:20px;color:#fff}.news-err{position:absolute;left:20px;top:100%;margin-top:6px;font:600 13px var(--sans);color:var(--sun)}.news input[aria-invalid=true]{outline:3px solid var(--sun)}
+.news form{position:relative;padding-top:24px}.news-label{position:absolute;top:0;left:20px;color:#fff}.news-err{position:absolute;left:20px;top:100%;margin-top:6px;font:600 12px var(--sans);color:var(--sun)}.news input[aria-invalid=true]{outline:3px solid var(--sun)}
 .btn:disabled{opacity:.38;cursor:default;transform:none!important;border-radius:999px!important}
 /* ?m3=1 : M3 Expressive controls pass. Controls only; containers keep their own corners and shapes. */
 .m3 .btn{position:relative;overflow:hidden;transition:border-radius .4s var(--m3-spring-spatial),background .2s var(--m3-spring-effects)}
@@ -365,11 +365,11 @@ footer p{font-size:14px;line-height:1.9}
 .ev .date svg.duo{position:absolute;z-index:-1;width:150%;height:auto;left:var(--sx,-30%);top:var(--sy,35%);color:var(--tint);transition:transform .6s var(--m3-spring-spatial)}
 .ev:hover .date svg.duo{transform:rotate(-12deg) scale(1.08)}
 @media (hover:none){.ev:hover .date svg.duo{transform:none}}
-.ev .m{display:block;font:500 15px/1 var(--sans);letter-spacing:.14em}
+.ev .m{display:block;font:500 16px/1 var(--sans);letter-spacing:.14em}
 .ev .date b{font:900 64px/.95 var(--sans);letter-spacing:-.04em;margin:6px 0 4px}
-.ev .to{display:block;font:400 13px/1 var(--sans);letter-spacing:.06em;opacity:.85}
+.ev .to{display:block;font:400 12px/1 var(--sans);letter-spacing:.06em;opacity:.85}
 .ev .body{padding:22px 24px;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
-.ev .h2{font-size:22px}
+.ev .h2{font-size:24px}
 .ev .photo{width:calc(100% - 20px);height:calc(100% - 20px);margin:10px;aspect-ratio:auto;object-fit:cover;border-radius:22px 22px 22px 6px}
 .ev .tag{display:inline-block;padding:3px 10px;border-radius:999px;font:700 12px var(--sans)}
 .tag.next{background:var(--orange);color:var(--navy)}.tag.now{background:var(--royal);color:#fff}.tag.held{background:var(--sky-50);color:var(--grey)}.tag.tent{background:#fff;border:1px solid var(--line);color:var(--grey)}
@@ -382,9 +382,9 @@ footer p{font-size:14px;line-height:1.9}
 .ecards-more.open .ev{animation:ev-in .45s var(--ease) both}
 @keyframes ev-in{from{opacity:0;transform:translateY(10px)}}
 .ev-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:32px}
-.ev-link{font-weight:600;font-size:15px}
+.ev-link{font-weight:600;font-size:16px}
 @media (max-width:1100px){.ecards{grid-template-columns:1fr}.ev.feat{grid-template-columns:150px 1fr 170px}}
-@media (max-width:600px){.ev,.ev.next,.ev.feat{grid-template-columns:104px 1fr;min-height:150px}.ev .photo{display:none}.ev .date b{font-size:44px}.ev .body{padding:16px}.ev .h2{font-size:19px}}
+@media (max-width:600px){.ev,.ev.next,.ev.feat{grid-template-columns:104px 1fr;min-height:150px}.ev .photo{display:none}.ev .date b{font-size:44px}.ev .body{padding:16px}.ev .h2{font-size:20px}}
 /* newsletter centered on mobile */
 @media (max-width:700px){
  .news{flex-direction:column;align-items:center;text-align:center}
@@ -394,6 +394,23 @@ footer p{font-size:14px;line-height:1.9}
  .news-err{position:static;margin-top:-8px}
  .news form .btn{align-self:center}
 }
+/* Type scale on a 4px grid: fixed steps per breakpoint instead of fluid clamps */
+:root{--fs-display:96px;--fs-display-s:112px;--fs-h1:64px;--fs-h1-s:76px;--fs-h2:32px;--fs-h2-s:36px;--fs-lead:20px;--fs-stat:48px;--fs-tile:36px}
+@media (max-width:1300px){:root{--fs-display:80px;--fs-display-s:92px}}
+@media (max-width:1100px){:root{--fs-display:64px;--fs-display-s:76px;--fs-h1:48px;--fs-h1-s:56px;--fs-stat:40px}}
+@media (max-width:700px){:root{--fs-display:44px;--fs-display-s:52px;--fs-h1:36px;--fs-h1-s:44px;--fs-h2:24px;--fs-h2-s:28px;--fs-lead:16px;--fs-stat:32px;--fs-tile:28px}}
+.display,.hero .display,.close .display{font-size:var(--fs-display)}
+.display .script,.hero .display .script,.close .display .script{font-size:var(--fs-display-s)}
+.h1,.h1x{font-size:var(--fs-h1)}
+.h1 .script,.h1x .script{font-size:var(--fs-h1-s)}
+.h2{font-size:var(--fs-h2)}
+.h2 .script{font-size:var(--fs-h2-s)}
+.lead{font-size:var(--fs-lead)}
+.stat-card b{font-size:var(--fs-stat)}
+.tile.wide .h1{font-size:var(--fs-tile)!important}
+.prog .h2,.icard .h2{font-size:var(--fs-h2)}
+.ev .h2{font-size:24px}
+@media (max-width:600px){.ev .h2{font-size:20px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
@@ -479,10 +496,10 @@ footer p{font-size:14px;line-height:1.9}
     <button class="chip" aria-pressed="true" data-f="all">All</button><button class="chip" aria-pressed="false" data-f="video">Video</button><button class="chip" aria-pressed="false" data-f="read">Read</button><button class="chip" aria-pressed="false" data-f="wato">Where Are They Now?</button><button class="chip" aria-pressed="false" data-f="lifeline">Lifeline</button><button class="chip" aria-pressed="false" data-f="safe">Safe Haven</button><button class="chip" aria-pressed="false" data-f="balance">Balance</button><button class="chip" aria-pressed="false" data-f="boost">Boost</button><button class="chip" aria-pressed="false" data-f="pillars">Pillars</button>
   </div></div>
   <div class="mosaic" id="mosaic"><p class="empty" hidden>No stories in this group yet. <button class="chip" type="button" data-reset>See all stories</button></p>
-    <a class="tile tl" data-t="video lifeline" data-page="1" style="background:var(--sun-100)" href="https://www.youtube.com/watch?v=GKu1Jh4S97M"><svg class="deco" viewBox="0 0 100 100" style="right:0;bottom:0;width:62%;color:var(--sun)" preserveAspectRatio="none"><path fill="currentColor" d="M0 45 L50 10 L100 45 V100 H0Z"/></svg><span class="play"><svg viewBox="0 0 22 26" style="width:18px;color:var(--navy)"><use href="#playtri"/></svg></span><span class="h2" style="font-size:22px">William's miracle</span><span class="pill">1:43</span></a>
+    <a class="tile tl" data-t="video lifeline" data-page="1" style="background:var(--sun-100)" href="https://www.youtube.com/watch?v=GKu1Jh4S97M"><svg class="deco" viewBox="0 0 100 100" style="right:0;bottom:0;width:62%;color:var(--sun)" preserveAspectRatio="none"><path fill="currentColor" d="M0 45 L50 10 L100 45 V100 H0Z"/></svg><span class="play"><svg viewBox="0 0 22 26" style="width:18px;color:var(--navy)"><use href="#playtri"/></svg></span><span class="h2" style="font-size:24px">William's miracle</span><span class="pill">1:43</span></a>
     <div class="tile tl qt" data-t="read lifeline" data-page="1" style="background:var(--royal);color:#fff"><p class="quote">“To have help from Miracles for Kids lifts a weight from us…”</p><span class="cap">Maribel, a Miracles for Kids mom</span></div>
     <a class="tile tr" data-t="read lifeline" data-page="1" href="https://miraclesforkids.org/families-weve-helped/?fam=0"><img class="poster" src="assets/michelle.jpg" alt="Michelle with her mother and brother"><span class="pill">Michelle's miracle</span></a>
-    <a class="tile br" data-t="video boost" data-page="1" style="background:var(--sky-50)" href="https://www.youtube.com/watch?v=BFT26CmxsYY"><svg class="deco" viewBox="0 0 100 100" style="left:0;bottom:0;width:58%;height:60%;color:var(--orange)" preserveAspectRatio="none"><path fill="currentColor" d="M0 100 V40 A50 40 0 0 1 100 40 V100Z"/></svg><span class="play"><svg viewBox="0 0 22 26" style="width:18px;color:var(--navy)"><use href="#playtri"/></svg></span><span class="h2" style="font-size:22px">Willow's miracle</span><span class="pill">3:01</span></a>
+    <a class="tile br" data-t="video boost" data-page="1" style="background:var(--sky-50)" href="https://www.youtube.com/watch?v=BFT26CmxsYY"><svg class="deco" viewBox="0 0 100 100" style="left:0;bottom:0;width:58%;height:60%;color:var(--orange)" preserveAspectRatio="none"><path fill="currentColor" d="M0 100 V40 A50 40 0 0 1 100 40 V100Z"/></svg><span class="play"><svg viewBox="0 0 22 26" style="width:18px;color:var(--navy)"><use href="#playtri"/></svg></span><span class="h2" style="font-size:24px">Willow's miracle</span><span class="pill">3:01</span></a>
     <a class="tile wide tr" data-t="video wato safe" data-page="2" style="background:var(--orange)" href="https://www.youtube.com/watch?v=QAD2hSqy9oY"><svg class="deco" viewBox="0 0 100 100" style="right:0;top:0;width:60%;height:100%;color:#FBD7A6" preserveAspectRatio="none"><path fill="currentColor" d="M100 0 V100 H10 C10 40 50 0 100 0Z"/></svg><span class="play"><svg viewBox="0 0 22 26" style="width:18px;color:var(--navy)"><use href="#playtri"/></svg></span><span class="pill">Where Are They Now?</span><span class="h1" style="font-size:clamp(28px,2.6vw,38px)">Jeremiah's miracle</span><span>They kept their home through it all.</span></a>
     <a class="tile tl" data-t="read lifeline" data-page="2" href="https://miraclesforkids.org/families-weve-helped/"><img class="poster" src="assets/kiara.jpg" alt="Kiara and her family"><span class="pill">Kiara's miracle</span></a>
     <div class="tile tl qt" data-t="read boost" data-page="2" style="background:var(--sun-100)"><p class="quote">“…thanks to you, many times my children was able to have snack at home.”</p><span class="cap" style="color:var(--grey)">The Madrid family</span></div>
@@ -553,7 +570,7 @@ footer p{font-size:14px;line-height:1.9}
 </main>
 
 <footer>
-  <div><p style="font:750 22px/1.3 var(--sans);margin-bottom:16px">Helping the families who don't have time to ask for help.</p><p>17848 Sky Park Circle, Suite C, Irvine, CA 92614<br>(714) 730-3040<br>info@miraclesforkids.org<br>Miracles for Kids is a 501(c)(3) nonprofit. EIN 91-2160616.</p><div class="social" aria-label="Miracles for Kids on social media"><a href="#" data-todo="social URL" aria-label="Facebook"><svg class="ic" aria-hidden="true"><use href="#ph-facebook-logo"/></svg></a><a href="#" data-todo="social URL" aria-label="Instagram"><svg class="ic" aria-hidden="true"><use href="#ph-instagram-logo"/></svg></a><a href="#" data-todo="social URL" aria-label="LinkedIn"><svg class="ic" aria-hidden="true"><use href="#ph-linkedin-logo"/></svg></a><a href="#" data-todo="social URL" aria-label="YouTube"><svg class="ic" aria-hidden="true"><use href="#ph-youtube-logo"/></svg></a><a href="#" data-todo="social URL" aria-label="Pinterest"><svg class="ic" aria-hidden="true"><use href="#ph-pinterest-logo"/></svg></a><a href="#" data-todo="social URL" aria-label="X"><svg class="ic" aria-hidden="true"><use href="#ph-x-logo"/></svg></a></div></div>
+  <div><p style="font:750 24px/1.3 var(--sans);margin-bottom:16px">Helping the families who don't have time to ask for help.</p><p>17848 Sky Park Circle, Suite C, Irvine, CA 92614<br>(714) 730-3040<br>info@miraclesforkids.org<br>Miracles for Kids is a 501(c)(3) nonprofit. EIN 91-2160616.</p><div class="social" aria-label="Miracles for Kids on social media"><a href="#" data-todo="social URL" aria-label="Facebook"><svg class="ic" aria-hidden="true"><use href="#ph-facebook-logo"/></svg></a><a href="#" data-todo="social URL" aria-label="Instagram"><svg class="ic" aria-hidden="true"><use href="#ph-instagram-logo"/></svg></a><a href="#" data-todo="social URL" aria-label="LinkedIn"><svg class="ic" aria-hidden="true"><use href="#ph-linkedin-logo"/></svg></a><a href="#" data-todo="social URL" aria-label="YouTube"><svg class="ic" aria-hidden="true"><use href="#ph-youtube-logo"/></svg></a><a href="#" data-todo="social URL" aria-label="Pinterest"><svg class="ic" aria-hidden="true"><use href="#ph-pinterest-logo"/></svg></a><a href="#" data-todo="social URL" aria-label="X"><svg class="ic" aria-hidden="true"><use href="#ph-x-logo"/></svg></a></div></div>
   <div><h3 class="fh">Programs</h3><a href="https://miraclesforkids.org/pay-the-bills/">Lifeline</a><a href="https://miraclesforkids.org/housing/">Safe Haven</a><a href="https://miraclesforkids.org/heal/">Balance</a><a href="https://miraclesforkids.org/feed-and-clothe/">Boost</a><a href="https://miraclesforkids.org/how-we-help-2/pillars/">Pillars</a></div>
   <div><h3 class="fh">About</h3><a href="https://miraclesforkids.org/why-we-help/our-story/">Our Story</a><a href="https://miraclesforkids.org/our-team/">Our Team</a><a href="https://miraclesforkids.org/financials/">Financials</a><a href="https://miraclesforkids.org/newsroom/">Newsroom</a><a href="https://miraclesforkids.org/careers/">Careers</a></div>
   <div><h3 class="fh">Get involved</h3><a href="#give">Donate</a><a href="https://miraclesforkids.volunteerhub.com/vv2/">Volunteer</a><a href="https://360miracle.org/">360° Miracle</a><a href="https://miraclesforkids.org/our-partners/">Partners</a><a href="#events">Events</a></div>
