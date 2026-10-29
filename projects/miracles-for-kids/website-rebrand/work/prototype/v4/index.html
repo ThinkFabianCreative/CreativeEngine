@@ -351,6 +351,11 @@ footer p{font-size:14px;line-height:1.9}
   @keyframes px{from{translate:0 calc(var(--sp) * (50vh + 50%))}to{translate:0 calc(var(--sp) * -1 * (50vh + 50%))}}
  }
 }
+/* pop-out lines up with the nav's right edge (same gutter as the Donate button) */
+@media (min-width:1101px){.give{right:var(--gutter)}}
+/* collapsed drawer: hide its contents fully so the switch border can't peek out */
+.give-body>div{transition:visibility 0s}
+.give.mini .give-body>div{visibility:hidden;transition:visibility 0s .32s}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
