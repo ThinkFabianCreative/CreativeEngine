@@ -386,6 +386,15 @@ footer p{font-size:14px;line-height:1.9}
 .ev-link{font-weight:600;font-size:15px}
 @media (max-width:1100px){.ecards{grid-template-columns:1fr}.ev.feat{grid-template-columns:150px 1fr 170px}}
 @media (max-width:600px){.ev,.ev.next,.ev.feat{grid-template-columns:104px 1fr;min-height:150px}.ev .photo{display:none}.ev .date b{font-size:44px}.ev .body{padding:16px}.ev .h2{font-size:19px}}
+/* newsletter centered on mobile */
+@media (max-width:700px){
+ .news{flex-direction:column;align-items:center;text-align:center}
+ .news .h3{justify-content:center}
+ .news form{justify-content:center;padding-top:0;flex-direction:column;align-items:center}
+ .news-label{position:static;align-self:center}
+ .news-err{position:static;margin-top:-8px}
+ .news form .btn{align-self:center}
+}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
