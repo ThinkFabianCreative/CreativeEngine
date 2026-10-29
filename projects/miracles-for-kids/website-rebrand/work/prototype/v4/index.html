@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miracles for Kids · Landing v4</title>
+<!-- Prototype (design only). Built from Figma MFK-Andres page 154:236: desktop 154:936, mobile 154:625. Look A Saturated: Outfit + Caveat; white, royal, orange, sun. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@300..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#fff; --navy:#002855; --royal:#1B5FBF; --sky:#79BDE9; --sky-50:#F2F8FD;
+  --orange:#F99400; --orange-700:#BB6F00; --sun:#FFD23F; --sun-100:#FFF5D5; --grey:#5B6474; --line:#C7D0DA;
+  --sans:"Outfit",system-ui,sans-serif; --script:"Caveat",cursive;
+  --gutter:clamp(20px,8.3vw,120px); --spring:cubic-bezier(.34,1.56,.64,1); --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--navy);font:400 16px/1.5 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px;border-radius:12px}
+.wrap{padding-inline:var(--gutter)}
+section{position:relative}
+.eyebrow{font:600 14px/20px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--orange-700)}
+h1,h2,h3{font-family:var(--sans);letter-spacing:-.02em}
+.display{font-weight:850;font-size:clamp(44px,6.7vw,96px);line-height:1}
+.h1{font-weight:800;font-size:clamp(34px,4.4vw,64px);line-height:1.08}
+.h2{font-weight:750;font-size:clamp(24px,2.5vw,34px);line-height:1.15}
+.script{font-family:var(--script);font-weight:700;letter-spacing:0;color:var(--orange-700)}
+.display .script{font-size:1.15em;line-height:.9}
+.h1 .script,.h2 .script{font-size:1.15em}
+.lead{font-size:clamp(17px,1.4vw,20px);line-height:1.6;color:var(--grey)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:14px 28px;border-radius:999px;border:2px solid transparent;font:650 16px var(--sans);text-decoration:none;transition:transform .35s var(--spring),border-radius .35s var(--spring),background .2s}
+.btn:hover{transform:translateY(-2px);border-radius:18px}
+.btn:active{transform:scale(.97);border-radius:12px}
+.btn-orange{background:var(--orange);color:var(--navy)}
+.btn-sky{background:var(--sky);color:var(--navy)}
+.btn-ghost{border-color:currentColor;background:transparent}
+.chip{min-height:44px;padding:9px 18px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font:600 14px var(--sans);transition:border-radius .35s var(--spring),background .2s,color .2s}
+.chip[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff;border-radius:14px}
+.wave{position:absolute;left:0;width:100%;height:80px;display:block;pointer-events:none}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+/* nav */
+.nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px var(--gutter);background:rgba(255,255,255,.92);backdrop-filter:blur(8px);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 6px 24px rgba(0,40,85,.08)}
+.nav .logo{height:56px;width:auto}
+.nav-links{display:flex;align-items:center;gap:36px;font:600 16px var(--sans)}
+.nav-links a{text-decoration:none;position:relative}
+.nav-links a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:3px;border-radius:3px;background:var(--orange);transform:scaleX(0);transition:transform .35s var(--spring)}
+.nav-links a:not(.btn):hover::after{transform:scaleX(1)}
+.menu-btn{display:none;width:48px;height:48px;border-radius:50%;border:1.5px solid var(--line);background:#fff}
+@media (max-width:980px){
+ .nav-links{position:fixed;inset:88px 16px auto 16px;flex-direction:column;align-items:stretch;gap:4px;padding:16px;background:#fff;border-radius:24px;box-shadow:0 16px 40px rgba(0,40,85,.15);transform:translateY(-12px);opacity:0;pointer-events:none;transition:.3s var(--ease)}
+ .nav-links a{padding:12px 8px}
+ .nav.open .nav-links{transform:none;opacity:1;pointer-events:auto}
+ .menu-btn{display:grid;place-items:center}
+}
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:center;gap:32px;padding:48px 0 120px var(--gutter);min-height:880px}
+.hero-text{display:flex;flex-direction:column;gap:24px;max-width:600px}
+.video-chip{display:inline-flex;align-self:flex-start;align-items:center;gap:12px;padding:10px 20px 10px 10px;border-radius:999px;background:#fff;box-shadow:0 8px 28px rgba(0,40,85,.12);text-decoration:none}
+.play{width:44px;height:44px;border-radius:50%;background:var(--orange);display:grid;place-items:center;flex:none;transition:border-radius .45s var(--spring),transform .45s var(--spring)}
+.play svg{width:14px;margin-left:3px}
+a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale(1.06)}
+.cap{font:500 14px/1.35 var(--sans)}
+.hero-media{position:relative;height:760px}
+.hero-photo{position:absolute;left:24px;top:-20px;width:min(860px,64vw);height:720px;object-fit:cover;object-position:40% 30%;clip-path:url(#c-blob)}
+.hero-swoosh{position:absolute;left:-60px;top:400px;width:420px;color:var(--sun);animation:float 9s ease-in-out infinite}
+.hero-heart{position:absolute;left:60px;top:-12px;width:110px;color:var(--sun);animation:float 7s ease-in-out infinite reverse}
+@keyframes float{50%{transform:translateY(-14px) rotate(-3deg)}}
+.give{position:absolute;right:var(--gutter);bottom:40px;width:340px;padding:28px;border-radius:28px;background:var(--royal);color:#fff;box-shadow:0 20px 50px rgba(0,26,80,.3);display:flex;flex-direction:column;gap:16px;z-index:2}
+.give .h3{font:750 22px/1.2 var(--sans)}
+.give .script{color:var(--sun);font-size:34px;display:block}
+.toggle{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.toggle button{min-height:44px;border-radius:999px;border:2px solid #fff;background:transparent;color:#fff;font-weight:600;transition:.25s}
+.toggle button[aria-pressed=true]{background:var(--orange);border-color:var(--orange);color:var(--navy)}
+.amounts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.amounts button{min-height:44px;border-radius:12px;border:1.5px solid rgba(255,255,255,.7);background:transparent;color:#fff;font-weight:650;transition:border-radius .35s var(--spring),background .2s}
+.amounts button[aria-pressed=true]{border:3px solid #fff;background:rgba(255,255,255,.14);border-radius:16px}
+.give .btn{width:100%}
+@media (max-width:1100px){
+ .hero{grid-template-columns:1fr;padding:24px var(--gutter) 64px;min-height:0;gap:20px}
+ .hero-media{height:auto;aspect-ratio:1/1;margin-inline:calc(var(--gutter) * -0.5)}
+ .hero-photo{position:relative;left:0;top:0;width:100%;height:100%}
+ .hero-swoosh{width:200px;left:auto;right:-20px;top:auto;bottom:-10px}
+ .hero-heart{width:64px;left:-10px;top:40%}
+ .give{position:relative;right:auto;bottom:auto;width:100%;margin-top:12px}
+}
+/* truth */
+.truth{color:#fff;text-align:center;padding:200px var(--gutter);background:#0b2140}
+.truth .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42}
+.truth .inner{position:relative;max-width:880px;margin:auto;display:flex;flex-direction:column;align-items:center;gap:24px}
+.truth .script{color:var(--sun)}
+.truth p{font-size:20px}
+/* stories */
+.stories{padding:110px var(--gutter)}
+.stories-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.pager{display:flex;align-items:center;gap:12px}
+.pager .btn{min-height:46px;padding:10px 20px;border-color:var(--navy)}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 32px}
+.mosaic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.tile{position:relative;min-height:320px;border-radius:28px;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;overflow:hidden;text-decoration:none;transition:transform .45s var(--spring),opacity .3s,box-shadow .3s}
+.tile:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(0,40,85,.12)}
+.tile.hide{display:none}
+.tile.wide{grid-column:span 2}
+.tl{border-top-left-radius:140px}.tr{border-top-right-radius:140px}.br{border-bottom-right-radius:140px}
+.tile .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile .deco{position:absolute;pointer-events:none}
+.tile>*:not(.poster):not(.deco):not(.play){position:relative;z-index:1}
+.tile .play{position:absolute;top:24px;right:24px;width:64px;height:64px;z-index:2}
+.pill{align-self:flex-start;background:#fff;color:var(--navy);border-radius:999px;padding:6px 14px;font:600 13px var(--sans)}
+.quote{font-size:20px;line-height:1.5}
+@media (max-width:1000px){.mosaic{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.mosaic{grid-template-columns:1fr}.tile.wide{grid-column:auto}}
+/* programs */
+.programs{background:var(--sun-100);padding:160px var(--gutter) 120px}
+.pgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:48px 24px;margin-top:48px}
+.prog{grid-column:span 2;display:flex;flex-direction:column;gap:8px;text-decoration:none}
+.prog.big{grid-column:span 3}
+.prog .crop{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .5s var(--spring)}
+.prog.big .crop{aspect-ratio:16/10}
+.prog:hover .crop{transform:scale(1.03) rotate(-.6deg)}
+.prog .k{margin-top:16px;padding-inline:18px;font:600 13px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+.prog .h2,.prog p{padding-inline:18px}
+.prog p{color:var(--grey)}
+.prog .stat{padding-inline:18px;font:650 14px var(--sans);color:var(--navy)}
+@media (max-width:900px){.pgrid{grid-template-columns:1fr;gap:40px}.prog,.prog.big{grid-column:auto}}
+/* proof */
+.proof{background:var(--sky-50);padding:110px var(--gutter)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:40px 0 32px}
+.stat-card{background:#fff;border-radius:24px;padding:28px}
+.stat-card b{display:block;font:850 clamp(32px,3.4vw,48px)/1 var(--sans);letter-spacing:-.02em}
+.stat-card span{color:var(--grey);font-size:14px}
+.hosp{display:flex;flex-wrap:wrap;gap:14px 32px;font:600 14px var(--sans)}
+@media (max-width:900px){.stats{grid-template-columns:1fr 1fr}.hosp{flex-direction:column;gap:12px}}
+/* involve */
+.involve{padding:110px var(--gutter)}
+.igrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px}
+.icard{border-radius:28px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:transform .45s var(--spring),box-shadow .3s;box-shadow:0 2px 0 rgba(0,40,85,.06)}
+.icard:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(0,40,85,.12)}
+.icard .crop{width:100%;aspect-ratio:4/3;object-fit:cover}
+.icard .body{padding:24px 24px 28px;display:flex;flex-direction:column;gap:8px}
+.icard .go{font-weight:650;font-size:15px;margin-top:6px}
+@media (max-width:900px){.igrid{grid-template-columns:1fr}}
+/* events */
+.events{padding:40px var(--gutter) 140px}
+.ecards{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin:40px 0 32px}
+.ev{display:grid;grid-template-columns:180px 1fr 1fr;align-items:center;gap:24px;border-radius:32px;overflow:hidden;background:#fff;box-shadow:0 2px 12px rgba(0,40,85,.08);text-decoration:none;transition:transform .45s var(--spring)}
+.ev:hover{transform:translateY(-4px)}
+.ev .date{align-self:stretch;background:var(--royal);color:#fff;display:grid;place-items:center;text-align:center;padding:24px 12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+.ev .date b{display:block;font:850 56px/1 var(--sans);letter-spacing:-.02em}
+.ev img{width:calc(100% - 20px);aspect-ratio:4/3;object-fit:cover;border-radius:18px}
+@media (max-width:1100px){.ecards{grid-template-columns:1fr}}
+@media (max-width:600px){.ev{grid-template-columns:110px 1fr}.ev img{display:none}.ev .date b{font-size:40px}}
+/* close */
+.close{color:#fff;text-align:center;padding:220px var(--gutter) 120px;background:#0b2140;overflow:hidden}
+.close .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45}
+.close .inner{position:relative;display:flex;flex-direction:column;align-items:center;gap:32px}
+.close .script{color:var(--sun)}
+.close .circle{position:absolute;right:-160px;top:160px;width:420px;height:420px;border-radius:50%;background:var(--orange)}
+.close .heart{position:absolute;left:-30px;bottom:80px;width:130px;color:var(--sun)}
+.news{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:24px;padding-top:40px;border-top:1px solid rgba(255,255,255,.35);text-align:left;width:min(900px,100%)}
+.news .h3{font:750 24px var(--sans)}
+.news .script{font-size:34px}
+.news input{min-height:52px;width:320px;max-width:100%;border:0;border-radius:999px;padding:0 22px;font:400 16px var(--sans)}
+.news-ok{font-weight:650}
+@media (max-width:700px){.close .circle{width:180px;height:180px;right:-80px;top:40px}.close .heart{width:70px}.news input{width:100%}.news form{width:100%}}
+/* footer */
+footer{background:var(--navy);color:#fff;padding:72px var(--gutter);display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+footer h4{font:650 13px var(--sans);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+footer a{display:block;text-decoration:none;font-size:14px;line-height:2.1}
+footer a:hover{text-decoration:underline}
+footer p{font-size:14px;line-height:1.9}
+@media (max-width:900px){footer{grid-template-columns:1fr 1fr}footer>div:first-child{grid-column:1/-1}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <clipPath id="c-blob" clipPathUnits="objectBoundingBox"><path transform="scale(.0025)" d="M 220 8 C 330 20 396 110 380 220 C 364 330 270 398 170 386 C 70 374 4 290 14 180 C 24 70 110 -4 220 8 Z"/></clipPath>
+  <clipPath id="c-oval" clipPathUnits="objectBoundingBox"><ellipse cx=".5" cy=".5" rx=".5" ry=".5"/></clipPath>
+  <clipPath id="c-arch" clipPathUnits="objectBoundingBox"><path d="M0 1 V.5 A.5 .5 0 0 1 1 .5 V1 Z"/></clipPath>
+  <clipPath id="c-pebble" clipPathUnits="objectBoundingBox"><path transform="scale(.0025)" d="M 60 120 C 100 20 260 0 340 70 C 420 140 390 300 290 360 C 190 420 40 380 14 270 C -6 190 30 190 60 120 Z"/></clipPath>
+  <clipPath id="c-heart" clipPathUnits="objectBoundingBox"><path transform="scale(.0025)" d="M 200 380 C 120 320 10 250 10 140 C 10 70 65 20 130 20 C 165 20 190 40 200 65 C 210 40 235 20 270 20 C 335 20 390 70 390 140 C 390 250 280 320 200 380 Z"/></clipPath>
+  <clipPath id="c-scallop" clipPathUnits="objectBoundingBox"><path id="scallop-path"/></clipPath>
+  <symbol id="heart" viewBox="0 0 400 400"><path fill="currentColor" d="M 200 380 C 120 320 10 250 10 140 C 10 70 65 20 130 20 C 165 20 190 40 200 65 C 210 40 235 20 270 20 C 335 20 390 70 390 140 C 390 250 280 320 200 380 Z"/></symbol>
+  <symbol id="swoosh" viewBox="0 0 400 400"><path fill="currentColor" d="M 10 300 C 80 120 260 30 390 60 C 300 90 170 170 120 330 C 100 390 30 380 10 300 Z"/></symbol>
+  <symbol id="playtri" viewBox="0 0 22 26"><path d="M0 0 L22 13 L0 26 Z" fill="currentColor"/></symbol>
+ </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <a href="#top" aria-label="Miracles for Kids, home"><img class="logo" src="assets/logo.png" alt="Miracles for Kids"></a>
+  <button class="menu-btn" aria-expanded="false" aria-controls="navlinks" aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <nav class="nav-links" id="navlinks" aria-label="Main">
+    <a href="#stories">Family Stories</a>
+    <a href="#programs">Programs</a>
+    <a href="https://miraclesforkids.org/why-we-help/">About</a>
+    <a href="#events">Events</a>
+    <a href="#involve">Get Involved</a>
+    <a class="btn btn-orange" href="#give">Donate</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero-text reveal">
+    <span class="eyebrow">Miracles for Kids</span>
+    <h1 id="hero-h" class="display">Small miracles.<br><span class="script">Big difference.</span></h1>
+    <p class="lead">Bills paid, homes kept, kids being kids.</p>
+    <a class="video-chip" href="https://www.youtube.com/watch?v=GKu1Jh4S97M" aria-label="Watch William's story, 1 minute 43 seconds"><span class="play"><svg viewBox="0 0 22 26" style="color:var(--navy)"><use href="#playtri"/></svg></span><span class="cap">Watch William's story<br><span style="color:var(--grey)">1:43</span></span></a>
+  </div>
+  <div class="hero-media">
+    <svg class="hero-swoosh" aria-hidden="true"><use href="#swoosh"/></svg>
+    <img class="hero-photo" src="assets/hero.jpg" alt="A smiling girl walking with a purple walker">
+    <svg class="hero-heart" aria-hidden="true"><use href="#heart"/></svg>
+    <form class="give" id="give" aria-label="Quick donation (prototype, does not charge)" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thank you! (prototype)'">
+      <p class="h3">Become a monthly <span class="script">miracle.</span></p>
+      <div class="toggle" role="group" aria-label="Frequency"><button type="button" aria-pressed="true" data-freq="monthly">Monthly</button><button type="button" aria-pressed="false" data-freq="once">One-time</button></div>
+      <div class="amounts" role="group" aria-label="Amount">
+        <button type="button" aria-pressed="false">$25</button><button type="button" aria-pressed="true">$50</button><button type="button" aria-pressed="false">$100</button>
+        <button type="button" aria-pressed="false">$250</button><button type="button" aria-pressed="false">$300</button><button type="button" aria-pressed="false">$350</button>
+      </div>
+      <button class="btn btn-orange" type="submit">Give $50 monthly</button>
+    </form>
+  </div>
+  <svg class="wave" style="bottom:-1px;z-index:3" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M 0 80 L 1440 80 L 1440 50 C 1200 -10 960 70 720 40 C 480 10 240 -10 0 40 Z" fill="#0b2140"/></svg>
+</section>
+
+<section class="truth" aria-labelledby="truth-h">
+  <img class="bg" src="assets/balance.jpg" alt="">
+  <div class="inner reveal">
+    <h2 id="truth-h" class="display">Rent's due. <span class="script">Miracles</span> too.</h2>
+    <p>When a child is critically ill, the bills don't stop. We pay them.</p>
+    <a class="btn btn-ghost" href="#programs" style="color:#fff">How we help</a>
+  </div>
+  <svg class="wave" style="bottom:-1px" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M 0 80 L 1440 80 L 1440 50 C 1200 -10 960 70 720 40 C 480 10 240 -10 0 40 Z" fill="#fff"/></svg>
+</section>
+
+<section class="stories" id="stories" aria-labelledby="st-h">
+  <div class="stories-head reveal">
+    <div><span class="eyebrow">Family Stories</span><h2 id="st-h" class="h1"><span class="script">Meet</span> the miracles.</h2><p class="lead">Real families. Real kids. Their words.</p></div>
+    <div class="pager"><span class="cap" id="page-label" aria-live="polite">1 of 2</span><button class="btn btn-ghost" id="prev" aria-label="Previous stories">← Prev</button><button class="btn btn-ghost" id="next" aria-label="Next stories">Next →</button></div>
+  </div>
+  <div class="filters reveal" role="group" aria-label="Filter stories">
+    <button class="chip" aria-pressed="true" data-f="all">All</button><button class="chip" aria-pressed="false" data-f="video">Video</button><button class="chip" aria-pressed="false" data-f="read">Read</button><button class="chip" aria-pressed="false" data-f="wato">Where Are They Now?</button><button class="chip" aria-pressed="false" data-f="lifeline">Lifeline</button><button class="chip" aria-pressed="false" data-f="safe">Safe Haven</button><button class="chip" aria-pressed="false" data-f="balance">Balance</button><button class="chip" aria-pressed="false" data-f="boost">Boost</button><button class="chip" aria-pressed="false" data-f="pillars">Pillars</button>
+  </div>
+  <div class="mosaic" id="mosaic">
+    <a class="tile tl" data-t="video lifeline" data-page="1" style="background:var(--sun-100)" href="https://www.youtube.com/watch?v=GKu1Jh4S97M"><svg class="deco" viewBox="0 0 100 100" style="right:0;bottom:0;width:62%;color:var(--sun)" preserveAspectRatio="none"><path fill="currentColor" d="M0 45 L50 10 L100 45 V100 H0Z"/></svg><span class="play"><svg viewBox="0 0 22 26" style="width:18px;color:var(--navy)"><use href="#playtri"/></svg></span><span class="h2" style="font-size:22px">William's miracle</span><span class="pill">1:43</span></a>
+    <div class="tile tl" data-t="read lifeline" data-page="1" style="background:var(--royal);color:#fff"><p class="quote">“To have help from Miracles for Kids lifts a weight from us…”</p><span class="cap">Maribel, a Miracles for Kids mom</span></div>
+    <a class="tile tr" data-t="read lifeline" data-page="1" href="https://miraclesforkids.org/families-weve-helped/?fam=0"><img class="poster" src="assets/michelle.jpg" alt="Michelle with her mother and brother"><span class="pill">Michelle's miracle</span></a>
+    <a class="tile br" data-t="video boost" data-page="1" style="background:var(--sky-50)" href="https://www.youtube.com/watch?v=BFT26CmxsYY"><svg class="deco" viewBox="0 0 100 100" style="left:0;bottom:0;width:58%;height:60%;color:var(--orange)" preserveAspectRatio="none"><path fill="currentColor" d="M0 100 V40 A50 40 0 0 1 100 40 V100Z"/></svg><span class="play"><svg viewBox="0 0 22 26" style="width:18px;color:var(--navy)"><use href="#playtri"/></svg></span><span class="h2" style="font-size:22px">Willow's miracle</span><span class="pill">3:01</span></a>
+    <a class="tile wide tr" data-t="video wato safe" data-page="2" style="background:var(--orange)" href="https://www.youtube.com/watch?v=QAD2hSqy9oY"><svg class="deco" viewBox="0 0 100 100" style="right:0;top:0;width:60%;height:100%;color:#FBD7A6" preserveAspectRatio="none"><path fill="currentColor" d="M100 0 V100 H10 C10 40 50 0 100 0Z"/></svg><span class="play"><svg viewBox="0 0 22 26" style="width:18px;color:var(--navy)"><use href="#playtri"/></svg></span><span class="pill">Where Are They Now?</span><span class="h1" style="font-size:clamp(28px,2.6vw,38px)">Jeremiah's miracle</span><span>They kept their home through it all.</span></a>
+    <a class="tile tl" data-t="read lifeline" data-page="2" href="#programs"><img class="poster" src="assets/lifeline.jpg" alt="A mother laughing with her toddler"><span class="pill">Lifeline</span></a>
+    <div class="tile tl" data-t="read boost" data-page="2" style="background:var(--sun-100)"><p class="quote">“…thanks to you, many times my children was able to have snack at home.”</p><span class="cap" style="color:var(--grey)">The Madrid family</span></div>
+  </div>
+</section>
+
+<section class="programs" id="programs" aria-labelledby="pr-h">
+  <svg class="wave" style="top:-1px" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M 0 0 L 1440 0 L 1440 30 C 1200 90 960 10 720 40 C 480 70 240 90 0 40 Z" fill="#fff"/></svg>
+  <div class="reveal"><span class="eyebrow">How we help</span><h2 id="pr-h" class="h1">Five kinds of <span class="script">miracle.</span></h2><p class="lead">Each one takes a weight off a family.</p></div>
+  <div class="pgrid">
+    <a class="prog big reveal" href="https://miraclesforkids.org/pay-the-bills/"><img class="crop" style="clip-path:url(#c-oval)" src="assets/lifeline.jpg" alt="A mother laughing with her toddler"><span class="k">Lifeline</span><span class="h2">The <span class="script">lights-on</span> miracle</span><p>Up to $500 a month toward the bills.</p><span class="stat">230+ families every month</span></a>
+    <a class="prog big reveal" href="https://miraclesforkids.org/housing/"><img class="crop" style="clip-path:url(#c-arch);object-position:top" src="assets/safe-haven.jpg" alt="Miracle Manor, MFK's family housing"><span class="k">Safe Haven</span><span class="h2">The <span class="script">home</span> miracle</span><p>Miracle Manor, around the corner from CHOC.</p><span class="stat">22 families housed</span></a>
+    <a class="prog reveal" href="https://miraclesforkids.org/heal/"><img class="crop" style="clip-path:url(#c-heart)" src="assets/balance.jpg" alt="A mother hugging her daughter"><span class="k">Balance</span><span class="h2">The <span class="script">hard-day</span> miracle</span><p>Counseling for the whole family.</p><span class="stat">400+ people in therapy this year</span></a>
+    <a class="prog reveal" href="https://miraclesforkids.org/feed-and-clothe/"><img class="crop" style="clip-path:url(#c-pebble)" src="assets/boost.jpg" alt="A little girl sitting in a cardboard box"><span class="k">Boost</span><span class="h2">The <span class="script">full-fridge</span> miracle</span><p>Food, clothes and essentials, every month.</p><span class="stat">Box of Miracles monthly</span></a>
+    <a class="prog reveal" href="https://miraclesforkids.org/how-we-help-2/pillars/"><img class="crop" style="clip-path:url(#c-scallop)" src="assets/pillars.jpg" alt="A father and son blowing bubbles on the grass"><span class="k">Pillars</span><span class="h2">The <span class="script">what's-next</span> miracle</span><p>Jobs, school and a fresh start.</p><span class="stat">78% of those interviewed were hired</span></a>
+  </div>
+</section>
+
+<section class="proof" aria-labelledby="pf-h">
+  <h2 id="pf-h" class="h1 reveal">Trusted by the <span class="script">hospitals</span><br>that send us families.</h2>
+  <p class="lead reveal" style="margin-top:20px;color:var(--navy)">Every family is referred by a children's hospital.</p>
+  <div class="stats">
+    <div class="stat-card reveal"><b data-count="2100" data-suffix="+">2,100+</b><span>families helped</span></div>
+    <div class="stat-card reveal"><b>Up to $500</b><span>a month toward bills</span></div>
+    <div class="stat-card reveal"><b data-count="41437">41,437</b><span>nights of sleep at Miracle Manor</span></div>
+    <div class="stat-card reveal"><b data-count="88" data-suffix="¢">88¢</b><span>of every dollar to programs</span></div>
+  </div>
+  <div class="hosp reveal"><span>CHOC Children's</span><span>Children's Hospital Los Angeles</span><span>City of Hope</span><span>By the Bay Health</span><span>Loma Linda University Children's</span><span>Rady Children's</span><span>UCLA Mattel Children's</span><span>UCSF Benioff Children's</span><span>Phoenix Children's</span></div>
+  <p style="margin-top:28px;font-weight:650"><a href="https://miraclesforkids.org/financials/">Our financials</a></p>
+</section>
+
+<section class="involve" id="involve" aria-labelledby="in-h">
+  <h2 id="in-h" class="h1 reveal">More ways to make <span class="script">miracles.</span></h2>
+  <div class="igrid">
+    <a class="icard reveal" style="background:var(--sun-100)" href="https://360miracle.org/"><img class="crop" style="clip-path:url(#c-arch)" src="assets/involve-360.jpg" alt="Two MFK team members at an event"><div class="body"><p class="h2">Miracles, <span class="script">together.</span></p><p>A circle of women giving all year.</p><span class="go">Join 360° Miracle</span></div></a>
+    <a class="icard reveal" style="background:var(--sky-50)" href="https://miraclesforkids.volunteerhub.com/vv2/"><img class="crop" style="clip-path:url(#c-oval)" src="assets/involve-volunteer.jpg" alt="Volunteers in matching shirts, arms around each other"><div class="body"><p class="h2">Join <span class="script">Team</span> Miracles.</p><p>Wrap, pack, deliver, cheer.</p><span class="go">Volunteer</span></div></a>
+    <a class="icard reveal" style="background:var(--sun-100)" href="https://miraclesforkids.org/our-partners/"><img class="crop" style="clip-path:url(#c-heart)" src="assets/involve-partners.jpg" alt="A child at the MFK Birthday Bash"><div class="body"><p class="h2"><span class="script">Business</span> with a heart.</p><p>Give, sponsor, volunteer as a team.</p><span class="go">Partner with us</span></div></a>
+  </div>
+</section>
+
+<section class="events" id="events" aria-labelledby="ev-h">
+  <h2 id="ev-h" class="h1 reveal">Miracles, <span class="script">in person.</span></h2>
+  <p class="lead reveal">Galas, baskets and beach days.</p>
+  <div class="ecards">
+    <a class="ev reveal" href="https://miraclesforkids.org/take-action/our-events/"><div class="date"><div>Nov<b>18</b>to 24</div></div><div><p class="h2">Basket of Miracles</p><p class="cap" style="color:var(--grey)">Thanksgiving 2026</p></div><img src="assets/event-basket.jpg" alt=""></a>
+    <a class="ev reveal" href="https://miraclesforkids.org/take-action/our-events/"><div class="date"><div>Nov<b>14</b></div></div><div><p class="h2">Wellness Fun Fest</p><p class="cap" style="color:var(--grey)">Volunteers welcome</p></div><img src="assets/event-wellness.jpg" alt=""></a>
+  </div>
+  <a class="btn btn-sky" href="https://miraclesforkids.org/take-action/our-events/">See all events →</a>
+</section>
+
+<section class="close" aria-labelledby="cl-h">
+  <img class="bg" src="assets/pillars.jpg" alt="">
+  <svg class="wave" style="top:-1px;z-index:1" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M 0 0 L 1440 0 L 1440 30 C 1200 90 960 10 720 40 C 480 70 240 90 0 40 Z" fill="#fff"/></svg>
+  <span class="circle" aria-hidden="true"></span>
+  <svg class="heart" viewBox="0 0 400 400" aria-hidden="true"><use href="#heart"/></svg>
+  <div class="inner reveal">
+    <h2 id="cl-h" class="display">Make a <span class="script">Miracle</span> today.</h2>
+    <a class="btn btn-orange" href="#give">Give monthly</a>
+    <div class="news">
+      <div><p class="h3">Get the <span class="script">good</span> news.</p><p class="cap">Family stories and ways to help, once a month.</p></div>
+      <form onsubmit="event.preventDefault();this.innerHTML='<p class=news-ok>You\'re on the list. (prototype)</p>'" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+        <label class="cap" for="em" style="position:absolute;left:-9999px">Email address</label>
+        <input id="em" type="email" required placeholder="you@example.com">
+        <button class="btn btn-orange" type="submit">Sign up</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div><p style="font:750 22px/1.3 var(--sans);margin-bottom:16px">Helping the families who don't have time to ask for help.</p><p>17848 Sky Park Circle, Suite C, Irvine, CA 92614<br>(714) 730-3040<br>info@miraclesforkids.org<br>Miracles for Kids is a 501(c)(3) nonprofit. EIN 91-2160616.</p></div>
+  <div><h4>Programs</h4><a href="https://miraclesforkids.org/pay-the-bills/">Lifeline</a><a href="https://miraclesforkids.org/housing/">Safe Haven</a><a href="https://miraclesforkids.org/heal/">Balance</a><a href="https://miraclesforkids.org/feed-and-clothe/">Boost</a><a href="https://miraclesforkids.org/how-we-help-2/pillars/">Pillars</a></div>
+  <div><h4>About</h4><a href="https://miraclesforkids.org/why-we-help/our-story/">Our Story</a><a href="https://miraclesforkids.org/our-team/">Our Team</a><a href="https://miraclesforkids.org/financials/">Financials</a><a href="https://miraclesforkids.org/newsroom/">Newsroom</a><a href="https://miraclesforkids.org/careers/">Careers</a></div>
+  <div><h4>Get involved</h4><a href="#give">Donate</a><a href="https://miraclesforkids.volunteerhub.com/vv2/">Volunteer</a><a href="https://360miracle.org/">360° Miracle</a><a href="https://miraclesforkids.org/our-partners/">Partners</a><a href="#events">Events</a></div>
+</footer>
+
+<script>
+// Scalloped "flower" crop for Pillars (generated)
+(function(){let d='',n=12,a=.06;for(let i=0;i<=240;i++){const t=i/240*2*Math.PI;let r=.5*(1-a*Math.abs(Math.sin(n*t/2)))/(1);const x=.5+r*Math.cos(t),y=.5+r*Math.sin(t)*1;d+=(i?'L':'M')+x.toFixed(4)+' '+y.toFixed(4)+' ';}document.getElementById('scallop-path').setAttribute('d',d+'Z');})();
+// Sticky nav shadow + mobile menu
+const nav=document.getElementById('nav'),mb=nav.querySelector('.menu-btn');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>8),{passive:true});
+mb.addEventListener('click',()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o);});
+nav.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded',false);}));
+// Donation card: frequency + amount update the button label
+const give=document.getElementById('give'),gbtn=give.querySelector('.btn');let freq='monthly',amt='$50';
+const lbl=()=>gbtn.textContent='Give '+amt+(freq==='monthly'?' monthly':' today');
+give.querySelectorAll('.toggle button').forEach(b=>b.addEventListener('click',()=>{give.querySelectorAll('.toggle button').forEach(x=>x.setAttribute('aria-pressed',x===b));freq=b.dataset.freq;lbl();}));
+give.querySelectorAll('.amounts button').forEach(b=>b.addEventListener('click',()=>{give.querySelectorAll('.amounts button').forEach(x=>x.setAttribute('aria-pressed',x===b));amt=b.textContent;lbl();}));
+// Stories: filters + pager
+const tiles=[...document.querySelectorAll('#mosaic .tile')],label=document.getElementById('page-label');let filt='all',page=1;
+function render(){const pool=tiles.filter(t=>filt==='all'||t.dataset.t.split(' ').includes(filt));const paged=filt==='all';const pages=paged?2:1;page=Math.min(page,pages);
+ tiles.forEach(t=>t.classList.toggle('hide',!pool.includes(t)||(paged&&t.dataset.page!=String(page))));label.textContent=paged?page+' of '+pages:pool.length+' stor'+(pool.length===1?'y':'ies');
+ document.getElementById('prev').disabled=!paged||page===1;document.getElementById('next').disabled=!paged||page===pages;}
+document.querySelectorAll('.filters .chip').forEach(c=>c.addEventListener('click',()=>{document.querySelectorAll('.filters .chip').forEach(x=>x.setAttribute('aria-pressed',x===c));filt=c.dataset.f;page=1;render();}));
+document.getElementById('prev').onclick=()=>{page--;render();};document.getElementById('next').onclick=()=>{page++;render();};render();
+// Reveal on scroll + count-up stats
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);
+ const b=e.target.querySelector&&e.target.querySelector('[data-count]');if(b&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const n=+b.dataset.count,s=b.dataset.suffix||'',t0=performance.now();const step=t=>{const p=Math.min(1,(t-t0)/1200),v=Math.round(n*(1-Math.pow(1-p,3)));b.textContent=v.toLocaleString()+s;if(p<1)requestAnimationFrame(step);};requestAnimationFrame(step);}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
