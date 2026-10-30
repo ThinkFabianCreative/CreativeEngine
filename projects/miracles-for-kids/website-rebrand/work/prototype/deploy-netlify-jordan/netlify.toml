@@ -1,0 +1,6 @@
+# MFK v4 prototype for internal and NDA user testing. Keep out of search engines.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+    Referrer-Policy = "strict-origin-when-cross-origin"
