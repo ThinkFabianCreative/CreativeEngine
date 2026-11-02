@@ -68,7 +68,8 @@ nav a.nl img{width:10px;height:10px}
 .hero{position:relative;min-height:873px;overflow:hidden;display:grid;grid-template-columns:minmax(0,906px) 1fr;margin-top:-90px;padding-top:149px}
 .hero-bg{position:absolute;inset:0;overflow:hidden;z-index:0}
 .hero-photo{position:absolute;left:0;top:356px;width:min(1032px,64vw);aspect-ratio:1032/1000;-webkit-mask:url(assets/hero-mask.svg) center/100% 100% no-repeat;mask:url(assets/hero-mask.svg) center/100% 100% no-repeat}
-.hero-photo img{width:100%;height:66.6%;object-fit:cover;object-position:top}
+.hero-photo img,.hero-photo video{display:block;width:100%;height:66.6%;object-fit:cover;object-position:top}
+.hero-photo video{object-position:center}
 .hero h1{position:relative;z-index:2;padding:19px 0 0 68px;white-space:nowrap;font-family:var(--head);font-weight:800;font-size:clamp(40px,4.45vw,72px);line-height:1.2;max-width:790px}
 .hero h1 .script{display:inline-block;font-size:1.26em;line-height:.9;margin-left:.1em;transform:translateY(.08em)}
 .donate-wrap{position:relative;z-index:2;display:flex;justify-content:flex-end;padding:113px var(--pad) 60px}
@@ -282,7 +283,7 @@ dialog[open]{animation:pop .4s var(--ease)}
   .dk{display:none}
   .hero-photo{position:relative;top:auto;width:100%;max-width:640px;margin:20px auto 0}
   .hero-photo{aspect-ratio:1032/666;-webkit-mask-size:100% 150%;mask-size:100% 150%;-webkit-mask-position:top;mask-position:top}
-  .hero-photo img{height:100%}
+  .hero-photo img,.hero-photo video{height:100%}
   .hero-bg{position:absolute}
   .donate-wrap{justify-content:center;padding:32px var(--pad) 80px}
   .mission{flex-direction:column;padding:120px var(--pad)}
@@ -339,6 +340,7 @@ dialog[open]{animation:pop .4s var(--ease)}
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .rv,.stat b .roll{opacity:1;transform:none}
 }
+.story,.ev{position:relative}.card-link{color:inherit;text-decoration:none}.card-link::after{content:"";position:absolute;inset:0;z-index:1}.story-btn,.ics{position:relative;z-index:2}.card-link:focus-visible{outline:none}.story:has(.card-link:focus-visible),.pc:has(.card-link:focus-visible),.ev:has(.card-link:focus-visible){outline:3px solid var(--sky);outline-offset:3px}
 </style>
 </head>
 <body>
@@ -367,7 +369,7 @@ dialog[open]{animation:pop .4s var(--ease)}
   </div>
   <div>
     <h1 id="h1">Help families in crisis <br class="dk">to find <span class="script">Miracles</span></h1>
-    <div class="hero-photo"><img src="assets/hero-boy.jpg" alt="A boy running across a sunny park"></div>
+    <div class="hero-photo"><video src="assets/hero-loop.mp4" poster="assets/hero-boy.jpg" autoplay muted loop playsinline aria-label="A boy running across a sunny park"></video></div>
   </div>
   <div class="donate-wrap" id="give">
     <span class="star" style="left:calc(100% - 64px - 538px + 45px);top:67px;width:72px;height:72px;--r:-163deg"><img src="assets/star-hero.svg" alt=""></span>
@@ -424,9 +426,9 @@ dialog[open]{animation:pop .4s var(--ease)}
 <section class="stories" id="stories" aria-labelledby="sh">
   <h2 id="sh" class="sec-title rv">For critically-ill kids, relief <span class="sky">starts with you.</span></h2>
   <div class="track" id="story-track" tabindex="0" aria-label="Family stories">
-    <article class="story"><div class="ph"><img src="assets/story-willow.jpg" alt="Willow smiling"></div><div class="ct"><h3>Willow faces a rare disorder with a big smile</h3><p>Diagnosed with a rare genetic disorder as a baby, Willow faces daily therapies, her bright smile keeping her family strong.</p><a class="blob story-btn" href="#">Willow’s Story</a></div></article>
-    <article class="story"><div class="ph"><img src="assets/story-remington.jpg" alt="Remington with his family"></div><div class="ct"><h3>Remington is fighting cancer as a baby</h3><p>At one year old, Remington was diagnosed with aggressive cancer. His parents are stretched thin as Miracles helps cover the bills.</p><a class="blob story-btn" href="#">Remington’s Story</a></div></article>
-    <article class="story"><div class="ph"><img src="assets/story-darla.jpg" alt="Darla sitting in a clinic room"></div><div class="ct"><h3>Darla's brave journey through leukemia</h3><p>Enduring intense leukemia treatments, Darla relies on the love of her family to stay strong as they navigate overwhelming hardships together.</p><a class="blob story-btn" href="#">Darla’s Story</a></div></article>
+    <article class="story"><div class="ph"><img src="assets/story-willow.jpg" alt="Willow smiling in her wheelchair" style="object-position:50% 8%"></div><div class="ct"><h3><a class="card-link" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/willow" target="_blank" rel="noopener">Willow faces a rare disorder with a big smile</a></h3><p>Diagnosed with a rare genetic disorder as a baby, Willow faces daily therapies, her bright smile keeping her family strong.</p><a class="blob story-btn" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/willow" target="_blank" rel="noopener" tabindex="-1">Willow’s Story</a></div></article>
+    <article class="story"><div class="ph"><img src="assets/story-remington.jpg" alt="Remington with his family" style="object-position:50% 0%"></div><div class="ct"><h3><a class="card-link" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/remington" target="_blank" rel="noopener">Remington is fighting cancer as a baby</a></h3><p>At one year old, Remington was diagnosed with aggressive cancer. His parents are stretched thin as Miracles helps cover the bills.</p><a class="blob story-btn" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/remington" target="_blank" rel="noopener" tabindex="-1">Remington’s Story</a></div></article>
+    <article class="story"><div class="ph"><img src="assets/story-darla.jpg" alt="Darla sitting in a clinic room" style="object-position:50% 20%"></div><div class="ct"><h3><a class="card-link" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/darla" target="_blank" rel="noopener">Darla's brave journey through leukemia</a></h3><p>Enduring intense leukemia treatments, Darla relies on the love of her family to stay strong as they navigate overwhelming hardships together.</p><a class="blob story-btn" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/darla" target="_blank" rel="noopener" tabindex="-1">Darla’s Story</a></div></article>
   </div>
   <div class="arrows" data-for="story-track">
     <button class="pv" aria-label="Previous story"><img src="assets/arrow-btn.svg" alt=""></button>
@@ -459,15 +461,15 @@ dialog[open]{animation:pop .4s var(--ease)}
 <section class="programs" id="programs" aria-labelledby="ph">
   <h2 id="ph" class="sec-title rv">Our five <span class="sky">programs</span></h2>
   <div class="prog-row">
-    <article class="prog rv"><div class="pc"><h3><img src="assets/pi-lifeline.svg" alt="">Lifeline</h3><p>Rent, utilities, auto payments and groceries</p>
+    <article class="prog rv"><div class="pc"><h3><img src="assets/pi-lifeline.svg" alt=""><a class="card-link" href="https://miracles-for-kids-8843ee.webflow.io/programs/lifeline" target="_blank" rel="noopener">Lifeline</a></h3><p>Rent, utilities, auto payments and groceries</p>
       <div class="pi"><img src="assets/pb-lifeline.svg" alt="" style="left:66px;top:21px;width:190px;transform:rotate(7deg)"><img src="assets/p-lifeline.png" alt="A mother and son hugging" style="left:-20px;top:43px;width:304px;height:312px;object-fit:cover"></div></div></article>
-    <article class="prog d1 rv"><div class="pc sun"><h3><img src="assets/pi-safehaven.svg" alt="">Safe Haven</h3><p>A roof, a routine and a community</p>
+    <article class="prog d1 rv"><div class="pc sun"><h3><img src="assets/pi-safehaven.svg" alt=""><a class="card-link" href="https://miracles-for-kids-8843ee.webflow.io/programs/safe-haven" target="_blank" rel="noopener">Safe Haven</a></h3><p>A roof, a routine and a community</p>
       <div class="pi"><img src="assets/p-safehaven.png" alt="A smiling girl" style="left:0;top:10px;width:252px;height:auto"><img src="assets/ps-heart1.svg" alt="" style="left:32px;top:54px;width:24px;transform:rotate(-19deg)"><img src="assets/ps-heart2.svg" alt="" style="left:209px;top:28px;width:34px;transform:rotate(24deg)"><img src="assets/ps-star1.svg" alt="" class="tw" style="left:75px;top:31px;width:18px"><img src="assets/ps-star2.svg" alt="" class="tw" style="left:50px;top:5px;width:22px"><img src="assets/ps-star3.svg" alt="" class="tw" style="left:218px;top:86px;width:22px"></div></div></article>
-    <article class="prog rv"><div class="pc"><h3><img src="assets/pi-boost.svg" alt="">Boost</h3><p>Food, clothing, essential supplies and more</p>
+    <article class="prog rv"><div class="pc"><h3><img src="assets/pi-boost.svg" alt=""><a class="card-link" href="https://miracles-for-kids-8843ee.webflow.io/programs/boost" target="_blank" rel="noopener">Boost</a></h3><p>Food, clothing, essential supplies and more</p>
       <div class="pi"><img src="assets/pb-boost.svg" alt="" style="left:-29px;top:13px;width:157px;transform:rotate(38deg)"><img src="assets/pl-1.svg" alt="" style="left:5px;top:24px;width:16px;transform:rotate(-80deg)"><img src="assets/pl-2.svg" alt="" style="left:-25px;top:25px;width:16px;transform:rotate(-128deg)"><img src="assets/pl-3.svg" alt="" style="left:-35px;top:56px;width:16px;transform:rotate(165deg)"><img src="assets/p-boost.png" alt="A volunteer holding donation bags" style="left:0;top:18px;width:306px;height:258px;object-fit:cover"></div></div></article>
-    <article class="prog d2 rv"><div class="pc sun"><h3><img src="assets/pi-balance.svg" alt="">Balance</h3><p>Counseling, therapy and community events</p>
+    <article class="prog d2 rv"><div class="pc sun"><h3><img src="assets/pi-balance.svg" alt=""><a class="card-link" href="https://miracles-for-kids-8843ee.webflow.io/programs/balance" target="_blank" rel="noopener">Balance</a></h3><p>Counseling, therapy and community events</p>
       <div class="pi"><img src="assets/p-balance.png" alt="A child surfing" style="left:29px;top:-3px;width:189px;height:295px;object-fit:cover;object-position:bottom"><img src="assets/pb-heart1.svg" alt="" style="left:3px;top:70px;width:19px;transform:rotate(-19deg)"><img src="assets/pb-heart2.svg" alt="" style="left:140px;top:14px;width:23px;transform:rotate(10deg)"><img src="assets/pb-star1.svg" alt="" class="tw" style="left:37px;top:174px;width:36px"><img src="assets/pb-star2.svg" alt="" class="tw" style="left:14px;top:6px;width:22px"><img src="assets/pb-star3.svg" alt="" class="tw" style="left:190px;top:15px;width:29px"></div></div></article>
-    <article class="prog rv"><div class="pc"><h3><img src="assets/pi-pillars.svg" alt="">Pillars</h3><p>Education and employment resources</p>
+    <article class="prog rv"><div class="pc"><h3><img src="assets/pi-pillars.svg" alt=""><a class="card-link" href="https://miracles-for-kids-8843ee.webflow.io/programs/pillars" target="_blank" rel="noopener">Pillars</a></h3><p>Education and employment resources</p>
       <div class="pi"><img src="assets/pb-pillars.svg" alt="" style="left:-10px;top:17px;width:146px;transform:rotate(-12deg)"><img src="assets/p-pillars.png" alt="A family of four" style="left:10px;top:18px;width:244px;height:368px;object-fit:cover;object-position:bottom"></div></div></article>
   </div>
   <span class="star" style="right:20px;top:20px;width:53px;height:52px" aria-hidden="true"><img src="assets/heart-lg.svg" alt=""></span>
@@ -496,7 +498,7 @@ dialog[open]{animation:pop .4s var(--ease)}
       <button class="pv" aria-label="Previous event"><img src="assets/arrow-btn2.svg" alt=""></button>
       <button class="nx" aria-label="Next event"><img src="assets/arrow-btn2.svg" alt=""></button>
     </div>
-    <a class="blob see-all" href="#">See all events</a>
+    <a class="blob see-all" href="https://miracles-for-kids-8843ee.webflow.io/events" target="_blank" rel="noopener">See all events</a>
   </div>
   <span class="star" style="left:18px;bottom:40px;width:120px;height:118px" aria-hidden="true"><img src="assets/heart-lg.svg" alt=""></span>
 </section>
@@ -598,10 +600,10 @@ document.querySelectorAll('.arrows[data-for]').forEach(ctrl=>{
 
 // events (Jordan's four cards) + add to calendar
 const EV=[
- {t:'2026 Night of Miracles Gala: The Miracle of Tomorrow',loc:['Waldorf Astoria Monarch Beach Resort & Club'],d:'2026-10-17',img:'assets/ev-gala.jpg'},
- {t:'Wellness Fun Fest',loc:['Miracles for Kids, 17848 Sky Park','Cir, Ste C, Irvine, CA 92614'],d:'2026-11-14',img:'assets/ev-wellness.jpg'},
- {t:'2026 Thanksgiving Basket of Miracles',loc:['Miracles for Kids, 17848 Sky Park','Cir, Ste C, Irvine, CA 92614'],d:'2026-11-21',img:'assets/ev-thanksgiving.jpg'},
- {t:'2026 Holiday Basket of Miracles',loc:['Miracles for Kids, 17848 Sky Park','Cir, Ste C, Irvine, CA 92614'],d:'2026-12-12',img:'assets/ev-holiday.jpg'}];
+ {t:'2026 Night of Miracles Gala: The Miracle of Tomorrow',u:'https://miracles-for-kids-8843ee.webflow.io/events',loc:['Waldorf Astoria Monarch Beach Resort & Club'],d:'2026-10-17',img:'assets/ev-gala.jpg'},
+ {t:'Wellness Fun Fest',u:'https://miracles-for-kids-8843ee.webflow.io/events/wellness-fun-fest',loc:['Miracles for Kids, 17848 Sky Park','Cir, Ste C, Irvine, CA 92614'],d:'2026-11-14',img:'assets/ev-wellness.jpg'},
+ {t:'2026 Thanksgiving Basket of Miracles',u:'https://miracles-for-kids-8843ee.webflow.io/events/tbom26',loc:['Miracles for Kids, 17848 Sky Park','Cir, Ste C, Irvine, CA 92614'],d:'2026-11-21',img:'assets/ev-thanksgiving.jpg'},
+ {t:'2026 Holiday Basket of Miracles',u:'https://miracles-for-kids-8843ee.webflow.io/events/2026-holiday-basket-of-miracles',loc:['Miracles for Kids, 17848 Sky Park','Cir, Ste C, Irvine, CA 92614'],d:'2026-12-12',img:'assets/ev-holiday.jpg'}];
 const fmt=d=>new Date(d+'T12:00').toLocaleDateString('en-US',{month:'short',day:'numeric'});
 const ymd=d=>d.replace(/-/g,'');
 const next=d=>{const x=new Date(d+'T12:00');x.setDate(x.getDate()+1);return x.toISOString().slice(0,10)};
@@ -609,7 +611,7 @@ const esc=s=>s.replace(/[\\,;]/g,m=>'\\'+m);
 const track=document.getElementById('ev-track');
 const cal='<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M208 32h-24v-8a8 8 0 0 0-16 0v8H88v-8a8 8 0 0 0-16 0v8H48a16 16 0 0 0-16 16v160a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16ZM72 48v8a8 8 0 0 0 16 0v-8h80v8a8 8 0 0 0 16 0v-8h24v32H48V48Zm136 160H48V96h160v112Zm-48-56a8 8 0 0 1-8 8h-16v16a8 8 0 0 1-16 0v-16h-16a8 8 0 0 1 0-16h16v-16a8 8 0 0 1 16 0v16h16a8 8 0 0 1 8 8Z"/></svg>';
 EV.forEach((e,i)=>{const a=document.createElement('article');a.className='ev';
-  a.innerHTML=`<div class="ph"><img src="${e.img}" alt=""></div><div class="dt"><h3>${e.t}</h3><p class="loc">${e.loc.join('<br>')}</p><p class="date">${fmt(e.d)}</p><button class="ics" type="button" data-i="${i}">${cal}Add to calendar</button></div>`;
+  a.innerHTML=`<div class="ph"><img src="${e.img}" alt=""></div><div class="dt"><h3><a class="card-link" href="${e.u}" target="_blank" rel="noopener">${e.t}</a></h3><p class="loc">${e.loc.join('<br>')}</p><p class="date">${fmt(e.d)}</p><button class="ics" type="button" data-i="${i}">${cal}Add to calendar</button></div>`;
   track.append(a)});
 track.addEventListener('click',ev=>{const b=ev.target.closest('.ics');if(!b)return;const e=EV[b.dataset.i];
   const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Miracles for Kids//Events//EN','BEGIN:VEVENT',`UID:mfk-${ymd(e.d)}-${b.dataset.i}@miraclesforkids.org`,`DTSTAMP:${new Date().toISOString().replace(/[-:]/g,'').slice(0,15)}Z`,`DTSTART;VALUE=DATE:${ymd(e.d)}`,`DTEND;VALUE=DATE:${ymd(next(e.d))}`,`SUMMARY:${esc(e.t)}`,`LOCATION:${esc(e.loc.join(' '))}`,'END:VEVENT','END:VCALENDAR'].join('\r\n');
