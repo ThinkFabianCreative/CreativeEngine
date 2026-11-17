@@ -21,6 +21,11 @@
       "name": "mfk-prototype",
       "url": "http://localhost:8430",
       "port": 8430
+    },
+    {
+      "name": "mfk-bento",
+      "url": "http://localhost:8450",
+      "port": 8450
     }
   ]
 }

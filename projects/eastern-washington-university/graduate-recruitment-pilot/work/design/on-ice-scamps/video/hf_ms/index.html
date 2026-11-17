@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: 'Open Sans Variable'; src: url('assets/fonts/open-sans-latin-wght-normal.woff2') format('woff2-variations'); font-weight: 300 800; font-style: normal; }
+      @font-face { font-family: 'Open Sans Variable'; src: url('assets/fonts/open-sans-latin-wght-italic.woff2') format('woff2-variations'); font-weight: 300 800; font-style: italic; }
+      :root { --ground: #000; --ink: #fff; --eagle: #b7142e; --muted: #8a8a8a; --font-display: 'Open Sans Variable', Arial, sans-serif; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--ground); }
+      #root { position: relative; width: 1920px; height: 1080px; font-family: var(--font-display); }
+      video.clip { position: absolute; inset: 0; width: 1920px; height: 1080px; object-fit: cover; }
+      .cap { position: absolute; left: 0; right: 0; bottom: 150px; text-align: center; z-index: 5; }
+      .cap span { display: inline-block; padding: 10px 26px; background: rgba(0,0,0,0.62); color: var(--ink); font-size: 46px; font-weight: 500; }
+      .cap.hers span { font-style: italic; }
+      .cap.real span { font-weight: 700; }
+      .cap.narr { }
+      .cap.narr span { }
+      #endcard { position: absolute; inset: 0; z-index: 10; background: #000; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px; }
+      #endcard .line { color: var(--ink); font-size: 84px; font-weight: 600; letter-spacing: -0.02em; }
+      #endcard .brand { width: 420px; height: auto; }
+      #endcard .cta { color: var(--ink); font-size: 44px; }
+      #endcard .note { position: absolute; bottom: 48px; color: var(--muted); font-size: 22px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1920" data-height="1080">
+
+      <!-- PICTURE: one woman, one career (MS in Management) -->
+      <video id="r1" class="clip" src="assets/seg/v15_frozen.mp4" data-start="0" data-duration="3" data-media-start="0.5" data-track-index="0" data-has-audio="true" data-volume="0.4" playsinline></video>
+      <video id="r2" class="clip" src="assets/seg/r2_chisel.mp4" data-start="3" data-duration="3" data-media-start="0.3" data-track-index="0" data-has-audio="true" data-volume="0.7" playsinline></video>
+      <video id="sd" class="clip" src="assets/seg/v15_hand.mp4" data-start="6" data-duration="3" data-track-index="0" data-has-audio="true" data-volume="0.7" playsinline></video>
+      <video id="r3" class="clip" src="assets/seg/r3_impact_v15.mp4" data-start="9" data-duration="3" data-media-start="0" data-track-index="0" data-has-audio="false" data-volume="1.0" playsinline></video>
+      <video id="sc" class="clip" src="assets/seg/v_c_cracks.mp4" data-start="12" data-duration="1.5" data-media-start="0.5" data-track-index="0" data-has-audio="true" data-volume="0.9" playsinline></video>
+      <video id="r2b" class="clip" src="assets/seg/r2_chisel.mp4" data-start="13.5" data-duration="1.5" data-media-start="3.5" data-track-index="0" data-has-audio="true" data-volume="0.7" playsinline></video>
+      <video id="r4" class="clip" src="assets/seg/v15_reveal.mp4" data-start="15" data-duration="5" data-media-start="0.5" data-track-index="0" data-has-audio="true" data-volume="0.3" playsinline></video>
+      <video id="sh" class="clip" src="assets/seg/v_h_orbit.mp4" data-start="20" data-duration="1.5" data-track-index="0" data-has-audio="true" data-volume="0.5" playsinline></video>
+      <video id="sf" class="clip" src="assets/seg/v15_hips.mp4" data-start="21.5" data-duration="2" data-media-start="3.0" data-track-index="0" data-has-audio="true" data-volume="1.0" playsinline></video>
+      <video id="r5" class="clip" src="assets/seg/v15_walk.mp4" data-start="23.5" data-duration="2.4" data-media-start="0.5" data-track-index="0" data-has-audio="true" data-volume="0.9" playsinline></video>
+
+      <div id="endcard" class="clip" data-start="25.9" data-duration="4.1" data-track-index="1" data-track-kind="graphics">
+        <div class="line">Stop waiting to be chosen<span style="color:var(--eagle)">.</span></div>
+        <img class="brand" src="assets/ewu-logo.svg" alt="Eastern Washington University" />
+        <div class="cta">MS in Management. Applications are open.&nbsp; ewu.edu</div>
+        <div class="note">AI animatic · stand-ins · to be shot practically</div>
+      </div>
+
+      <div id="captions" data-track-kind="captions">
+        <div id="c01" class="cap clip" data-start="0.4" data-duration="3.9" data-track-index="2"><span>I'm so sorry… we went another direction. Next cycle, okay?</span></div>
+        <div id="c04" class="cap clip" data-start="4.3" data-duration="3.7" data-track-index="2"><span>Oh honey, I'm so sorry. Maybe next time.</span></div>
+        <div id="c03" class="cap clip" data-start="8.0" data-duration="4.2" data-track-index="2"><span>You're so close. Just give it a few more years.</span></div>
+        <div id="c07" class="cap hers clip" data-start="12.4" data-duration="1.3" data-track-index="2"><span>Maybe next year.</span></div>
+        <div id="c08" class="cap hers clip" data-start="13.7" data-duration="1.3" data-track-index="2"><span>When I'm ready.</span></div>
+        <div id="cn" class="cap narr clip" data-start="15.0" data-duration="5.6" data-track-index="2"><span>For many reasons, you've put your career on ice for way too long.</span></div>
+        <div id="c10" class="cap hers real clip" data-start="21.3" data-duration="1.5" data-track-index="2"><span>Not anymore.</span></div>
+      </div>
+
+      <audio id="a_wind" src="assets/sfx/wind_bed.wav" data-start="0" data-duration="30" data-track-index="10" data-volume="0.35"></audio>
+      <audio id="a_tick" src="assets/sfx/icetick.wav" data-start="0.3" data-duration="5" data-track-index="11" data-volume="0.7"></audio>
+
+      <!-- THE WORLD -->
+      <audio id="a_v01" src="assets/vo/k01.wav" data-start="0.4" data-duration="5.5" data-track-index="12" data-volume="0.75"></audio>
+      <audio id="a_v04" src="assets/vo/k02.wav" data-start="4.3" data-duration="4.75" data-track-index="13" data-volume="0.75"></audio>
+      <audio id="a_v03" src="assets/vo/k03.wav" data-start="8.0" data-duration="4.75" data-track-index="12" data-volume="0.75"></audio>
+      <!-- HER DOUBTS -->
+      <audio id="a_v07" src="assets/vo/m07.wav" data-start="12.4" data-duration="1.71" data-track-index="14" data-volume="0.75"></audio>
+      <audio id="a_v08" src="assets/vo/m08.wav" data-start="13.7" data-duration="2.28" data-track-index="15" data-volume="0.75"></audio>
+      <!-- NARRATOR names it at the reveal -->
+      <audio id="a_narr" src="assets/vo/narr.wav" data-start="15.0" data-duration="4.708980" data-track-index="16" data-volume="1.3"></audio>
+      <!-- HER REAL VOICE -->
+      <audio id="a_v10" src="assets/vo/v11_not-anymore.wav" data-start="21.3" data-duration="1.810612" data-track-index="17" data-volume="1.3"></audio>
+
+      <!-- SLAMS -->
+            <audio id="a_h1" src="assets/sfx/hammer_echo.wav" data-start="10.27" data-duration="3" data-track-index="20" data-volume="1"></audio>
+      <audio id="a_i1" src="assets/sfx/icechunk_echo.wav" data-start="10.49" data-duration="2.5" data-track-index="21" data-volume="1"></audio>
+      <audio id="a_i2" src="assets/sfx/icebreak_echo.wav" data-start="12.5" data-duration="3.5" data-track-index="21" data-volume="1"></audio>
+      <audio id="a_b2" src="assets/sfx/boom.wav" data-start="13.0" data-duration="2" data-track-index="22" data-volume="0.9"></audio>
+      <!-- REVEAL: low thud, then near silence -->
+      <audio id="a_b3" src="assets/sfx/boom.wav" data-start="14.5" data-duration="5" data-track-index="23" data-volume="0.45"></audio>
+      <!-- THE BREAK -->
+      <audio id="a_big" src="assets/sfx/bigbreak.wav" data-start="21.55" data-duration="4.3" data-track-index="24" data-volume="0.9"></audio>
+      <audio id="a_b4" src="assets/sfx/boom.wav" data-start="21.6" data-duration="5" data-track-index="22" data-volume="1"></audio>
+      <!-- WALK AWAY -->
+      <audio id="a_steps" src="assets/sfx/steps.wav" data-start="23.6" data-duration="2.3" data-track-index="25" data-volume="0.9"></audio>
+      <audio id="a_end" src="assets/sfx/icebreak_echo.wav" data-start="25.38" data-duration="3" data-track-index="21" data-volume="0.8"></audio>
+      <audio id="a_narr_end" src="assets/vo/narr_end.wav" data-start="26.0" data-duration="4.108980" data-track-index="18" data-volume="1.3"></audio>
+      <!-- THE KINDNESS FREEZES HER: frost forms under each polite rejection -->
+      <audio id="a_fz1" src="assets/sfx/freeze.wav" data-start="1.2" data-duration="4.2" data-track-index="26" data-volume="0.6"></audio>
+      <audio id="a_fz2" src="assets/sfx/freeze_b.wav" data-start="4.9" data-duration="4.2" data-track-index="27" data-volume="0.7"></audio>
+      <audio id="a_fz3" src="assets/sfx/freeze.wav" data-start="8.4" data-duration="4.2" data-track-index="26" data-volume="0.8"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.from("#cn span", { opacity: 0, scale: 1.04, duration: 0.5, ease: "power2.out" }, 15.0)
+        .from("#endcard .line", { opacity: 0, y: 14, duration: 0.25, ease: "power2.out" }, 25.9)
+        .from("#endcard .brand", { opacity: 0, duration: 0.3 }, 26.3)
+        .from("#endcard .cta", { opacity: 0, duration: 0.3 }, 26.7);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

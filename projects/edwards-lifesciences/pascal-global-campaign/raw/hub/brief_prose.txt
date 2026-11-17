@@ -1,0 +1,326 @@
+ Edwards Lifesciences PASCAL Global Campaign finalist brief 
+ Edwards' Transcatheter Mitral and Tricuspid Therapies (TMTT) team wants one agency partner to build a new, multi-year global campaign for PASCAL, its TEER platform for mitral and tricuspid repair. The goal: make PASCAL the brand operators think of first for TEER, in a category where Abbott's MitraClip is the habit. The proposal (PowerPoint) is due Mon Nov 10 . We present it to the TMTT team on Fri Nov 13 · 9:45 AM PT on Teams. Selection is the week of Nov 16, kickoff Nov 16, in market April 2027. Vanessa's invitation also says TMTT has two more global campaigns planned and the PASCAL partner may get those too. 
+ Fri Nov 13 · 9:45 AM PT Join Teams ↗ 45 minutes Invite from Vanessa Chavez, Global Brand Review our deck page by page 
+ 45 min Fri Nov 13, 9:45–10:30 AM PT on Teams · five Edwards people on the invite 
+ 100 pts Strategy 25 · creative 20 · healthcare/medtech 15 · global 15 · team 10 · budget 10 · collaboration 5 
+ $200–400K Budget range, fees only (no paid media). Show what $200K buys and what $400K adds 
+ Nov 16 → Apr Kickoff the week of Nov 16, 2026 · in market April 2027 · then evolve 
+ Checklist loads when this page is opened from its shared link. 
+ Wed Nov 4 Thu Nov 5 Fri Nov 6 Mon Nov 9 Tue Nov 10 Wed Nov 11 Thu Nov 12 Fri Nov 13 After the call Add 
+ + Team uploads anyone on the team can add files 
+ Drop files here or choose files 
+ Documents load when this page is opened from its shared link. 
+ Anyone can suggest a change to the hub: add something, fix something, update a section. Everyone sees every request, and you can edit or delete your own while it's waiting. Elijah reviews each one: approve it as is, edit it first, mark it done himself, or decline it. Claude only works on approved requests, when you say "check the hub requests" in chat, and replies here when each is done. 
+ All Waiting for Elijah Approved for Claude Done Declined 
+ Suggest a change to the presentation deck: a slide to add, copy to fix, a number to check, a visual to change. Add the slide number if you know it. Everyone sees every request, and you can edit or delete your own while it's waiting. Elijah reviews each one: approve it as is, edit it first, mark it done himself, or decline it. Claude only works on approved deck requests, when you say "check the deck requests" in chat, and replies here when each is done. 
+ All Waiting for Elijah Approved for Claude Done Declined 
+ Show it in Type Note Suggestion Context Posting as Post 
+ Team notes load when this page is opened from its shared link. 
+ Deck activity comments and speaker notes on the slides Show 
+ Comments and speaker notes left in the brief's slide-by-slide view, plus comment bubbles in Google Slides (refreshed hourly). Click any item to open that slide. 
+ Deck activity loads when this page is opened from its shared link. 
+ ⬇ RFP RFP Drive folder ↗ 
+ What Edwards sent · Nov 3–4, 2026 
+ Our past Edwards work · background (opens in Drive) 
+ 00 What they asked for, and our run of show 
+ Read this first. Edwards didn't send a separate agenda. The RFP's §9 lists what the proposal must cover, and the presentation walks through it. The invite gives us 45 minutes. Open the RFP · Open the invitation 
+ Their ask · RFP §9 “What to include in your proposal” 
+ Agency overview and one to two relevant case studies with results 
+ Your read on the challenge and what you'd want to explore further 
+ Your approach and phased plan, including timing 
+ Conflicts: any TEER or mitral/tricuspid device work in the past 24 months 
+ Early creative thinking (welcome, not required) 
+ “There is no slide limit, but we value clarity over volume.” 
+ The invite · Vanessa Chavez · Wed Nov 4, 11:25 AM 
+ “PASCAL Campaign | TRAFFIK Proposal” · Fri Nov 13, 9:45–10:30 AM PT · Microsoft Teams. 
+ Edwards on the invite Vanessa Chavez, Eric Lopez, Aiphi Hahn, Yash Simlote, Jackie Kan. See 08 . 
+ TRAFFIK on the invite Brent Shoji, Darcey O'Byrne, Jeremy Troutt, Amanda Moussiaux, plus our Admin inbox. 
+ What 45 minutes means Present in about 25, leave 15–20 for conversation. They wrote the RFP around “how you think,” so the conversation is the test. The deck closes on “What would you want to see more of as we build this with you?” 
+ Our run of show (45 minutes) 
+ Time Segment Who Deck RFP §9 item 
+ 2:00–7:00 Who we are: one firm, 12 years with Edwards, two case studies Darcey · Brent 4–14 1 
+ 7:00–13:00 Our read on the challenge: the habit, four beliefs, hypotheses, archetypes, questions Brent 15–21 2 
+ 13:00–20:00 Early creative thinking: three territories and how each grows in chapters Jeremy 22–32 7 
+ 24:00–26:00 Team, partners, global reach, ways of working (MLR) Darcey 41–46 4 
+ 28:00–45:00 Conversation and questions Brent routes 53 — 
+ Slide numbers follow the Nov 3 draft and will move as the deck changes. The live timer under Live uses this run of show. 
+ 00B Primer: Edwards, PASCAL and this project in plain words 
+ For anyone new to Edwards or heart devices. Read this before the rest of the brief. It covers what Edwards sells and to whom, what PASCAL does, the campaigns around it, and exactly what this project is asking us to build. 
+ Edwards Lifesciences is a medical device company headquartered at One Edwards Way in Irvine, a short drive from our office. It focuses on structural heart disease : problems with the heart's valves and structure rather than its arteries. 
+ Its history goes back to the first commercially successful artificial heart valve (Lowell Edwards and Dr. Albert Starr, 1960). It became an independent company when it spun off from Baxter in 2000. 
+ Today it has three main heart businesses, and we have worked in all three:
+ TAVR / THV (transcatheter heart valves): the SAPIEN family, which replaces a narrowed aortic valve through a catheter instead of open-heart surgery. This is Edwards' biggest business and where most of our past work sits (Lifetime Management, S3UR, Pulmonic, TCT, EuroPCR). 
+ Surgical: valves surgeons sew in during open-heart surgery (INSPIRIS RESILIA, MITRIS RESILIA, KONECT). We did the MITRIS brochure. 
+ TMTT (Transcatheter Mitral and Tricuspid Therapies): the newest and fastest-growing unit (+47% in Q2 2026). It treats the two valves that used to need surgery or had no good option. This pitch is for TMTT. 
+ 2 · The medical basics, in plain words 
+ The two valves The mitral valve sits on the left side of the heart, between the upper and lower chambers. The tricuspid valve is the same job on the right side. Each has flaps (leaflets) that open to let blood through and close to stop it flowing back. 
+ What goes wrong Regurgitation means the valve leaks: the leaflets don't close fully and blood flows backward. Mitral regurgitation is “MR,” tricuspid is “TR.” Patients get breathless, tired and swollen, and it can lead to heart failure. Many are older or too sick for open-heart surgery. 
+ Repair vs. replace Doctors can repair the patient's own valve or replace it with a new one. Both can now be done through a catheter, a thin tube that goes in through a vein in the leg and up to the heart, with no chest opening. 
+ What TEER is TEER (transcatheter edge-to-edge repair) is the main repair option. A small implant is guided up to the heart and grabs the two leaking leaflet edges and holds them together, so the leak gets smaller. “M-TEER” is mitral, “T-TEER” is tricuspid. 
+ 3 · Who actually chooses the device 
+ The operator: an interventional cardiologist who does the procedure in the cath lab. The RFP calls them “TEER operators.” They are the core audience. 
+ The imager: a cardiologist who reads the ultrasound images during the procedure and tells the operator whether the leaflets are grasped well. Their confidence matters a lot. 
+ The heart team: the operator, imager, cardiac surgeon, heart-failure doctor and nurse coordinator who decide together how to treat each patient. 
+ Who this campaign is not for: patients and consumers. Edwards sells the device to hospitals, and the doctors choose which system their program uses. Everything here is HCP (healthcare professional) marketing , and paid media isn't part of the budget. 
+ Product What it does Valve Main competitor 
+ PASCAL Precision (implants: PASCAL and the smaller PASCAL Ace) Repair (TEER). Grabs and holds the leaflets together. Each side can be grasped on its own, and a central spacer helps fill the gap. Capture Clarity adds markers on the X-ray that confirm when a leaflet has been grasped. Mitral and tricuspid Abbott MitraClip (mitral) and TriClip (tricuspid) 
+ EVOQUE Replacement (TTVR). A whole new tricuspid valve, delivered by catheter. Tricuspid No transcatheter tricuspid replacement from Abbott 
+ SAPIEN M3 Replacement (TMVR). A new mitral valve, delivered by catheter. Mitral — 
+ Edwards says it is the only company with both repair and replacement through a catheter for both the mitral and tricuspid valves in the US. That's why its campaigns never pit one Edwards device against another. 
+ 5 · The competitive picture 
+ Abbott got there first. MitraClip was the first TEER device and has been in US programs since 2013. TriClip was the first US tricuspid TEER device (2024). Many hospitals built their TEER program around Abbott, so MitraClip is the habit. 
+ What changed on Oct 21, 2026: the FDA approved PASCAL for tricuspid in the US and approved Capture Clarity for mitral. A next-generation system for both valves is coming. That's why Edwards wants a new campaign now. 
+ 6 · The Edwards campaigns around this one 
+ What each one sells and to whom, so the team knows where PASCAL fits. 
+ Campaign Unit What it sells, in one line Our role 
+ PASCAL Global Campaign (this pitch) TMTT Make PASCAL the first TEER brand operators think of, on both valves, for years. Pitching 
+ Two more TMTT global campaigns TMTT Not named yet. Vanessa says the PASCAL partner may be considered. Upside 
+ SAPIEN M3 pillars (Outcomes / Innovation / Legacy) TMTT The first catheter-delivered mitral replacement in the SAPIEN family. Live work with Hana Su 
+ Pulmonic Portfolio + Alterra (“Unique patients. Uniquely excellent outcomes.”) THV One story for congenital (pulmonic) valve patients worldwide. Ours (case study 1) 
+ TCT “NEW FRONTIERS” and EuroPCR Corporate / THV Edwards as the structural-heart innovator: innovation, evidence and partnership. Ours 
+ Innovation Story (“Leading a Revolution Together”) Corporate Edwards' overall story: pioneers who keep redefining heart valve therapy. Ours 
+ 7 · This project: goals and objectives 
+ The goal, in Edwards' words 
+ “Make PASCAL the brand operators think of first for TEER across mitral and tricuspid, today and moving forward.” Success means PASCAL becomes “the default, not just the alternative.” 
+ The four beliefs to change 
+ “Abbott is the established name in TEER” → “PASCAL is leading where TEER is going.” 
+ “PASCAL is the device for complex anatomy” → “PASCAL is my first choice for TEER.” 
+ “Treating the other valve means a new learning curve” → “My PASCAL experience carries across mitral and tricuspid.” 
+ “Changing my default costs my team time and effort” → “Edwards makes moving to PASCAL straightforward.” 
+ Where the growth is Mostly inside hospitals that already use PASCAL some of the time : move operators from occasional to routine use, and get accounts using it on one valve to use it on the other. Then select programs that are new to PASCAL. Focus markets: interventional cardiologists in the US and Europe , with Japan and other regions using the toolkit. 
+ $200–400K Agency work only, no paid media. Show what $200K buys and what $400K adds 
+ Apr 2027 In market, subject to approvals 
+ 4 phases Discover and define · Create · Build and launch · Evolve 
+ TEER · M-TEER · T-TEER Transcatheter edge-to-edge repair · on the mitral valve · on the tricuspid valve 
+ MR · TR · DMR Mitral regurgitation · tricuspid regurgitation · degenerative (primary) MR, where the valve itself is worn or damaged 
+ TMVR · TTVR · TAVR Transcatheter mitral / tricuspid / aortic valve replacement 
+ Operator · imager · heart team The doctor doing the procedure · the doctor reading the images · the group deciding treatment 
+ Leaflet grasp / capture The moment the implant catches the valve flaps. Capture Clarity confirms it on screen. 
+ CLASP IITR The tricuspid PASCAL trial whose one-year results came out at TCT 2026 
+ KCCQ A standard patient quality-of-life score for heart failure 
+ MLR · Vault · claims matrix Medical, legal and regulatory review · Edwards' review system · the list of approved claims and their references 
+ HCP · KOL · ABX Healthcare professional · key opinion leader · account-based experience (marketing aimed at specific hospitals) 
+ TCT · EuroPCR · ACC · London Valves The big interventional cardiology conferences where Edwards launches news 
+ CE Mark European approval. PASCAL has had it for tricuspid since 2020. 
+ Decision Our recommendation Owner · by 
+ Who presents The four on the invite: Brent (strategy, budget), Jeremy (creative), Darcey (who we are, team, ways of working), Amanda (plan, day-to-day). Decide whether Jeff Wicken, our current Edwards account lead, joins. He's on the team slide but not on the invite. Brent · Thu Nov 5 
+ Update the deck for the tricuspid news The FDA approved PASCAL Precision for tricuspid TEER on Oct 21, 2026, and PASCAL Ace with Capture Clarity for degenerative mitral TEER the same day. The RFP still calls tricuspid an upcoming indication. Our deck should say “now approved” and use the CLASP IITR TCT results only in Edwards' own approved language. Brent · Jeremy · Fri Nov 6 
+ Which territory we lead with Show all three as equals (the RFP asks how we think), and say which one we'd test hardest and why. Confidence, Captured lines up best with Capture Clarity, which is now approved. Jeremy · Mon Nov 9 
+ Recommend $200K or $400K The deck recommends the $398,680 full plan and shows the $199,600 foundation plan, built in modules. Keep both, and be ready to say what you'd cut first to get to ~$300K. Brent · Mon Nov 9 
+ Timeline window The RFP's at-a-glance table says the budget covers kickoff through Q2 2027 . §7 says through the end of 2027 . Our plan runs to Dec 2027. Say so plainly, and offer to shift Phase 4 if the window is Q2. Brent · in the proposal 
+ Advisory board slide Kelly Fidler (Director, THV, Edwards) is on our advisory board. That's a strength, but don't overplay it, and confirm she's comfortable being shown to TMTT. Brent · Fri Nov 6 
+ Submit Nov 10, then rehearse Nov 11–12 The proposal file goes to Vanessa and Eric by end of day Mon Nov 10 (PST). Present from the same file on the 13th. Elijah · Mon Nov 10 
+ 02 Our story in one breath 
+ PASCAL doesn't need to win an argument. It needs to become a habit. We're the partner already inside the Edwards brand, ready on November 16, with one lasting idea built in chapters so every piece of news makes it stronger. 
+ Beat 1 · The real competitor is a habit Abbott got there first. MitraClip is the reflex: the device the team sets up for, the one the imager knows how to read, the one nobody has to defend. Features rarely break a reflex. 
+ Beat 3 · One idea, built in chapters Chapters, not flights. The tricuspid indication, Capture Clarity, the next-generation system and new evidence each renew the same promise instead of replacing it. 
+ Beat 4 · No learning curve Twelve years with Edwards: the brand, MLR review (including VAULT), the congress calendar and the people. Our Irvine office is minutes from One Edwards Way. 
+ Beat 5 · Transparent and built to grow $200K foundation, $400K full, priced in modules, with fees separate from third-party costs and no markup. Ready to extend to TMTT's next two campaigns. 
+ RFP §10. Where we prove each one in the deck: 
+ Criterion Weight What they're looking for Where we prove it 
+ Budget and plan 10% Smart use of budget, transparent pricing Two plans, costs by phase, fees separate, hours and rates, no markup, change control 
+ Collaboration 5% Ways of working, partnership fit Working sessions, weekly status with Vanessa and Eric, minutes away 
+ Selection is the week of Nov 16, and the kickoff target is Nov 16, so a decision may come within days of the presentation. 
+ 04 Our proposal, at a glance 
+ 7 Sections, mirroring RFP §9: who we are, the challenge, early creative, approach, team, budget, conflicts 
+ 3 Territories: Confidence, Captured · Every Case · Fluent in Both 
+ 4 Phases: Discover and define (Nov 16 – Jan 22) · Create (Jan–Mar) · Build and launch (Mar–Apr) · Evolve (May–Dec 2027) 
+ $199,600 Foundation plan · $167,600 fees + $32,000 third party 
+ $398,680 Full plan (recommended) · $287,680 fees + $111,000 third party 
+ 976 / 1,702 Agency hours, foundation / full · blended rates $125–$225 
+ Status Draft dated Nov 10, 2026, built together on Nov 3. Final file due Mon Nov 10. 
+ 05 PASCAL, TMTT and the TEER market 
+ Oct 21 FDA approves PASCAL Precision for tricuspid TEER, and PASCAL Ace with Capture Clarity for degenerative mitral TEER 
+ 3 TMTT therapies: PASCAL Precision (TEER), EVOQUE (TTVR), SAPIEN M3 (TMVR) 
+ The tricuspid news landed after the RFP was written. On Oct 21, 2026 the FDA approved PASCAL Precision for T-TEER: symptomatic severe TR despite optimal medical therapy, intermediate or higher surgical risk, heart-team judged. The same day it approved PASCAL Ace with Capture Clarity for degenerative mitral TEER, which Edwards calls “the first FDA-approved TEER device with fluoroscopic indicators that confirm when valve leaflets have been grasped.” Edwards now says it is “the only company to provide a portfolio of repair and replacement transcatheter therapies for the mitral and tricuspid valves in the United States.” 
+ CLASP IITR one-year results (TCT, early Nov 2026): 80% of PASCAL patients at moderate or less TR at one year vs. 30% on medical therapy alone, with an 18-point quality-of-life gain on the KCCQ. Use only Edwards' approved wording in any creative. This is MLR territory. 
+ Abbott: MitraClip was first in mitral, and TriClip was first in US tricuspid TEER. US operators now have two T-TEER options. Abbott has no transcatheter tricuspid replacement. 
+ Leadership: Daveen Chopra is Corporate VP, TMTT, and was quoted on the approval. CEO Bernard Zovighian. Edwards expected the US tricuspid launch and Capture Clarity approval in Q4 (Q2 2026 results). 
+ EU: PASCAL has had CE Mark for TR since Oct 2020, so Europe already uses it on both valves. That's the RFP's “fresh news for established markets.” 
+ 05A Our Edwards history and what it tells us 
+ From the past Edwards files in our Drive (read Nov 4, 2026). Use this to answer “what do you already know about us?” and to keep the creative in bounds. 
+ Most important: TMTT already has a portfolio campaign 
+ 2027 plan in that deck: journeys orchestrated on Adobe across paid media, ABX, social, web and email between field visits. Edwards' own numbers: 2.7× more case volume in accounts with ABX engagement (2025), and ABX reached 85% of PASCAL and 87% of EVOQUE target accounts this year. Cite these only as Edwards' figures. 
+ We're already doing TMTT work 
+ SAPIEN M3 (live): on Oct 11, 2026 Hana Su (Edwards, SAPIEN M3) asked us for three pillar visuals (Outcomes / Innovation / Legacy), modeled on the EVOQUE “REVOLUTIONARY” approach, for an animation and HCP print by mid-November under a new SOW. The email went to Savannah, who is leaving TRAFFIK. Make sure someone owns it now. 
+ PASCAL has been on our creative already: the EuroPCR 2024 wall featured PASCAL Precision mitral and tricuspid and EVOQUE. Our TCT 2024 “NEW FRONTIERS” work (SLT-approved pillars Innovation / Evidence / Partnership) included PASCAL, PASCAL ACE and EVOQUE. 
+ Mitral: MITRIS surgical brochure and mitral valve-in-valve (MViV) work with SAPIEN. 
+ How Edwards builds a global campaign (EVOQUE and Pulmonic) 
+ Global sets a three-pillar platform with modular claims and pillar imagery. EVOQUE: Heart = Innovation, Dial = Evidence, Patient = Outcome. Its lockup can't be changed, and every claim is footnoted. 
+ Global writes the style guide and templates (Webdam / SharePoint). Regions adapt them, and translations go through Global. 
+ Separate executions for personal (rep) and non-personal channels, and separate US and EU legal versions (PP--US / PP--EU codes). 
+ EVOQUE messaging stays “without going head-to-head against T-TEER.” By extension, PASCAL creative should treat repair and replacement as working together and never undercut Edwards' own devices. 
+ How Edwards plans and positions (THV files from 2023–24) 
+ A launch and a platform, never merged. For S3UR and Lifetime Management, Edwards ran a product launch and an evergreen platform side by side: S3UR was “the proof point for a larger promise,” and the two would “never ‘integrate’ into one creative concept.” Rollout went region by region (US, Japan, EU, then the rest), timed to congresses and “depending on approval.” Our chapters model fits this: PASCAL news renews the platform instead of becoming a new campaign. 
+ Their own diagnosis of short flights: “Implanter campaigns are typically deployed in short flights with discrete messaging.” The fix they chose was a “surround sound” story with hand-offs from message to message. Quote it back when we say “chapters, not flights.” 
+ Positioning frame we've used with them: To / Who / Is / That / Because / So that, then a claims matrix, then “socialize final positioning statement with regions.” Recurring words: predictable, durable, partner of choice. 
+ Channels around the rep: Showpad, rep-triggered email, P2P, KOL video, podcasts, ABX pages by share level, and digital as “air cover” for the field. Congresses lead with the platform story to match the podium. 
+ How they review and what they push back on 
+ Process: working “cutting room floor” sessions, then R1 marketing reviewers, then R2 senior approver, then Vault MLR. Global campaigns need a global product and a global digital reviewer in Vault. Plan about 3 creative rounds plus 2 after Vault. TCT 2024 was scoped for 5 rounds with 2 held for Vault. 
+ What they liked: ideas they could approve and extend (the Pulmonic “Unique Heart”, NEW FRONTIERS, the S3UR style guide) and stories turned into sales tools. Senior approvers wanted “beyond what we've done”: classy and futuristic, “not sci-fi.” 
+ No TRAFFIK performance numbers on file. The orientation deck says there are “no verified booth traffic, lead or ROI measures.” Don't invent results. Use client quotes, approvals (SLT-approved), scale (70 × 70 ft booth, global rollout) and Edwards' own figures, attributed to them. 
+ 2024 notes record that “TMTT … used another agency” for its booth, and list other agencies around Edwards: IPG, Relevate, Evoke, Focus, Authentica, Herbst. Any of them could be pitching. Never name them in the room. 
+ None of our past files mention PASCAL's competitors: Abbott, MitraClip and TriClip never appear. The THV files are all about Medtronic (“keep Medtronic at bay”). Our Abbott read comes from the RFP and public sources. 
+ The THV planning files also name Evoke, HB and Relevate, and the 2024 media plan was IPG Health's. Other agencies are close to Edwards. 
+ Edwards names in our files 
+ None of the five people on the invite appear in our files. Names seen in past work, for context: 
+ TMTT: Hana Su (SAPIEN M3 pillar visuals and animation, Oct 2026). 
+ Other teams: Shannon and Jamie (events), Derek Goldstein, Jeremy Troung, Evan, Jo Evangelista (digital and patient), Stacia (patient/referrer), Nigel (ABX pilot), David S. (portfolio), Vivek, Christina, YJ (surgical), Sarah, Adrian (EU style guide), Colleen, Liz (lab videos). 
+ Phase Timing Key outputs Foundation Full 
+ Messaging framework Promise: PASCAL is leading where TEER is going, and the first choice for TEER on both valves. Pillars: Leading · Confident · Carries across · Straightforward. Tailored messages for occasional users, loyalists, tricuspid builders, one-valve programs and imagers. 
+ Measurement Business: PASCAL share in priority accounts by valve and region, occasional-to-routine use, second-valve adoption. Perception: first choice vs. complex-anatomy device. Engagement: toolkit use, congress, HCP email. Baseline in Phase 1, quarterly dashboard, pulses at six and twelve months. 
+ Global Pulmonic Portfolio + Alterra (case study 1): one portfolio story for pulmonic implanters worldwide, and a refreshed Alterra identity set apart from Medtronic's Harmony (“A design as unique as each story”). Position → message → create → roll out, plus a toolkit for local teams. The same chain PASCAL asks for. 
+ Congress: EuroPCR three years running, TCT and ACC multiple years, London Valves, the TCT Partner Investigator Event, KOL events. 
+ Medtech beyond Edwards: CathWorks FFRangio (coronary physiology for interventional specialists), Balt (neurovascular), Apria. 
+ Gap to close: the RFP asks for case studies “with results.” Our two case studies show process and craft but no numbers. Add any results we can cite (adoption, usage, engagement, award, client quote), or be ready to say why medtech results are confidential. 
+ Five Edwards people on the invite. Profiles come from public sources and are partly unverified (marked). Check each on LinkedIn before Friday. 
+ TMTT leadership: Daveen Chopra, Corporate VP, TMTT, was quoted on the Oct 21 approvals. Not on the invite. CEO Bernard Zovighian. 
+ Our existing TMTT contact: Hana Su (SAPIEN M3), who asked us for pillar visuals and an animation on Oct 11, 2026. Worth a quiet word that we're presenting to her colleagues. 
+ Two more global campaigns are planned, per Vanessa's invitation. The PASCAL partner may be considered for them. 
+ On our side of the invite: Brent Shoji, Darcey O'Byrne, Jeremy Troutt and Amanda Moussiaux, plus the TRAFFIK admin inbox. Jeff Wicken (our Edwards account lead) is on the team slide but not the invite. 
+ Foundation Full (recommended) 
+ Agency fees $167,600 · 976 hrs $287,680 · 1,702 hrs 
+ Third party (at cost, no markup) $32,000 $111,000 
+ Rates: executive sponsor / strategy $225 · creative director $210 · ACD copy $175 · account director $165 · measurement $165 · 3D/motion $160 · senior AD $150 · production $150 · PM $125. Rates are blended and held for the engagement. 
+ In the room: no new numbers. If they ask for ~$300K, name the modules we'd keep (tricuspid kit, Japan interviews, concept testing) and the ones we'd drop first. 
+ 29 questions in six levels, starting with strategy and the idea. Answers are hidden so the team can drill: read the question, answer out loud in under 60 seconds, then open it to check. Filter by person to drill your own. Every answer is from our proposal. 
+ Team's shaky questions Open a question and mark how you did. Shaky ones feed the mock interview. 
+ Team practice answers (0) Answers people chose to share from Mock interview, newest first. 
+ Presenter Everyone Brent Jeremy Darcey Amanda 
+ Show all answers Hide all 
+ Owner Brent Jeremy Darcey Amanda Team 
+ Strategy and the idea (8) Strategic thinking 25 and creative 20. Everyone should be able to answer these. 
+ 5 Walk us through the three territories. Jeremy Testing Creative 20. Answer Confidence, Captured: “The moment it holds, you know.” It owns the moment of capture, now made visible by Capture Clarity. Every Case: “From the hardest case to every case.” It turns the complex-anatomy label into a reason to choose PASCAL for everything. Fluent in Both: one platform and one skill set across mitral and tricuspid. Each one grows in chapters. Avoid Over-explaining the comps. 
+ PASCAL and TMTT specifics (5) The device, the indications, the portfolio campaign, the market. 
+ 10 How do you handle repair and replacement together? Jeremy Testing Portfolio sensitivity. Answer Edwards is the only company with both repair and replacement for mitral and tricuspid. PASCAL creative celebrates repair without ever undercutting EVOQUE or SAPIEN M3. The heart team picks the right therapy for the patient, and Edwards has it. Avoid Implying TEER beats replacement. 
+ By person in the room (5) What Vanessa, Eric, Yash, Ai Phi and Jackie are most likely to ask. 
+ 14 Vanessa: How would this grow when the next device arrives? Brent Testing Vanessa · brand lead. Answer It becomes the next chapter. The promise stays and the proof gets stronger, so the next-generation system arrives into a story people already know instead of starting over. Avoid A new campaign per device. 
+ 17 Ai Phi: How would regional teams adapt this without breaking it? Darcey Testing Ai Phi · marketing. Answer A style guide and templates with locked core elements and flexible local ones, plus regional sessions at launch. Translations go through Global, which is how Edwards already runs EVOQUE and Pulmonic. Avoid No guardrails. 
+ Know the numbers cold (3) Say these without looking. 
+ 19 Budget numbers? Brent Testing Budget 10. Answer Foundation $199,600 ($167,600 fees, 976 hours, $32,000 third party). Full $398,680 ($287,680 fees, 1,702 hours, $111,000 third party), recommended. Rates $125 to $225, blended and held. Avoid Rounding wrongly. 
+ Hard ones (5) The ones that could cost us. Stay calm and stay inside the proposal. 
+ 23 Have you worked with any TEER or mitral/tricuspid competitor? Brent Testing Conflicts. Answer No. No work for Abbott or any other TEER, mitral or tricuspid maker in the past 24 months. Our mitral valve-in-valve SAPIEN work is for Edwards. Avoid Hedging. 
+ 24 You do a lot of THV work. Is TMTT going to get your A-team? Brent Testing Team. Answer Yes. The people on the invite are the team, and Amanda runs it day to day. THV experience is an advantage: we know the brand, the MLR process and the congress calendar already. Avoid Overpromising headcount. 
+ Budget and ways of working (3) Brent leads. No new numbers in the room. 
+ 29 How do you bill? Brent Testing Transparency. Answer A signed estimate per phase, monthly invoices with hours by role, third-party costs at cost with the vendor invoice, and written change orders. No markup. Avoid Vague answers. 
+ Own questions (30 min). Filter to your name and answer every question out loud, timed. Anything over 60 seconds gets rewritten. 
+ Mock (45 min). Teammates play Vanessa Chavez (Global Brand), Eric Lopez (product), Yash Simlote (strategy), Ai Phi Hahn (marketing) and Jackie Kan (digital). Always ask one follow-up. 
+ operators, heart teams, imagers · TEER, M-TEER, T-TEER 
+ “first choice for TEER,” “the default, not the alternative” 
+ MLR, claims matrix, VAULT · “subject to Edwards medical, legal and regulatory review” 
+ “one firm with the capabilities of many” 
+ transcreated, verified · AI only with Edwards' approval 
+ clinical claims or trial numbers beyond Edwards' published wording 
+ knocking Abbott or MitraClip by name in creative (“confident without attacking anyone”) 
+ “complex anatomy device” as our own description of PASCAL 
+ “two companies” · overpromising specific results 
+ other clients' confidential numbers 
+ 45 minutes goes fast. Present in about 25 and hand the rest to them. Jeremy's territories are the part they'll remember, so protect that time. 
+ Current facts. Tricuspid is now approved (Oct 21), and Capture Clarity is approved for degenerative mitral TEER in the US. Don't present them as future. 
+ Results. They asked for case studies with results. Have one or two real numbers or client words ready. 
+ Timeline mismatch in the RFP (Q2 2027 vs. end of 2027). Name it, don't assume. 
+ Conflicts: none with Abbott or any TEER or mitral/tricuspid maker in 24 months. Our mitral valve-in-valve SAPIEN work is for Edwards. Say it plainly. 
+ Advisory board: Kelly Fidler is an Edwards THV director. Confirm she's comfortable before we show her to TMTT. 
+ Our proposal deck, page by page, with who presents each page and what to say. The viewer and timer run on it. 
+ TRAFFIK Drive: past Edwards files listed under Documents (TMTT portfolio campaign, EVOQUE style guide, Pulmonic, TCT, EuroPCR, orientation deck). 
+/* Shared edit/delete controls for anything saved to the team database */
+ Live interview Ask Claude ‹ 
+ Proposal deck · 56 slides (Nov 3 draft) How do you want to work on the deck? × 
+ Open the draft deck in Drive Opens the PASCAL draft presentation PDF in Drive. The hub shows the draft's text per slide until slide images are added. 
+ Review slide by slide Flip through every slide and leave notes, brainstorming and edit requests on each one. Leave notes and talking points on each slide to rehearse with. 
+ Slide 1 of 56 Run of show ▸ How this works Edit this slide in Google Slides ↗ × 
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 
+ Document Ask Claude about this Spreadsheet ↗ Open in new tab ↗ × 
+ New project intake Save draft Submit for Claude to build × 
+ Edwards PASCAL RFP · finalist hub 
+ Pick yourself so your notes, drill marks, read checks, votes, rehearsals and practice are saved under your name, and My prep opens to your view. You can switch anytime from the top bar. 
+ Rehearse my slides 0:00 Start timer Pause Finish × 
+ Group notes for this section Group notes for this segment Save note Saved for everyone. Listed below, under All group notes, in the saved walkthrough, and in Team notes on the brief (section 08). 
+ Run of show Walkthrough Live interview 0:00 Agenda Timer is shared with everyone who has the brief open. Start Pause ‹ Segment Segment › Finish run Reset Saved runs × 
+ Next Talking points for this section 
+ Slide 1 of 56 Same slide for everyone Jump to each segment's first slide 
+ Speaker notes · slide 1 
+ ← → or click the slide to tab through. Clicking into the next section's first slide moves the section bar, the agenda and the timing for everyone, so each section's real time is tracked as you go. 
+ Team backchannel Everyone sees this Clear 
+ Everyone Brent Jeremy Darcey Amanda Send 
+ Save run Discard Keep going 
+ Open the full Live interview panel ↗ 
+ Saved walkthroughs None saved yet. Start, move through the segments with Segment ›, then Finish run. 
+ Practice with Claude playing the committee 
+ Who's practicing Brent Jeremy Darcey Amanda Team 
+ Difficulty Realistic Easy warm-up Hostile 
+ How you'll answer Type Speak out loud 
+ Answer out loud with your computer's built-in dictation 
+ Mac: press the Fn / 🌐 key twice, or choose Edit → Start Dictation . First time: turn it on in System Settings → Keyboard → Dictation . 
+ Windows: press Windows + H . First time, Windows may ask you to turn on online speech recognition. 
+ Chromebook: Search + D . Phone or tablet: tap the microphone on the keyboard. 
+ Test it first. Click the box below, start dictation, and say: "We'll set a baseline for cost per application in the first thirty days." 
+ Waiting for your words… Not working? Switch to Type . Everything else works the same. 
+ Read each question out loud Play a sample 
+ Start mock interview Skip the test and start 
+ End and summarize New session 
+ Speaking mode · start dictation ( Fn twice on Mac · Windows + H on PC), answer out loud, then click Answer. Answer 
+ Questions they asked How it went Transcripts Claude's analysis 
+ Your name Asked by Unknown Vanessa Chavez Eric Lopez Yash Simlote Ai Phi Hahn Jackie Kan Other Answered by Brent Jeremy Darcey Amanda Several How it landed 5 · Nailed it 4 · Good 3 · OK 2 · Shaky 1 · Missed 
+ Your name Overall 5 · Great 4 · Good 3 · Mixed 2 · Rough 1 · Poor Post 
+ Your name Source Or upload a .txt, .vtt or .srt file Save transcript 
+ Your name Analyze with Claude 
+ Ask Claude · Live assist Ask anything ⤢ × 
+ Type the question the committee just asked, as close to their words as you can. You'll get a suggested answer to say, key points, proof and who should take it, in a few seconds. Which territory should we lead with? How does PASCAL fit under the TMTT portfolio campaign? Why is the Pulmonic campaign a fair comparison to PASCAL? 
+ What does the RFP ask us to include? How should Brent answer if they ask for $300K? What does slide 11 cover and who presents it? Quiz me on three stumpers Explain our budget in two sentences I can say out loud 
+ Who asked? You New chat Stop Ask 
+ // authors on added questions
+ // ---------- shared live board ----------
+ // ---------- modes ----------
+ // ---------- run of show ----------
+ // ---------- checklist ----------
+ // ---------- mock interview ----------
+ // ---------- debrief ----------
+ // ---------- calculators ----------
+ // ---------- wire db + sample ----------
+ // ===== speaker assignments =====
+ // ===== drill marks + practice =====
+ // ===== 5-minute version + reads =====
+ // ===== rehearse my slides =====
+ // ===== documents viewer =====
+ // ===== project switcher =====
+ // ===== intake form =====
+ New here? Want a quick tour? Two minutes: where everything lives in the brief, how prep, run of show and the backchannel work, and how to practice together. Take the tour Maybe later Skip 
+ // ---------- backchannel ----------
+ // ---------- tour ----------
+ // ---------- destinations ----------
+ // ---------- team notes composer ----------
+ // ---------- deck activity overview ----------
+ // hide old controls but keep ids for the existing code
+ // refresh when the Analysis tab opens
+/* ROS agenda toggle (Oct 12 cleanup) */
+/* Mock interview: Get ahead (flip it) practice */
+ ga.innerHTML=' Get ahead of the hard questions Claude hands you a question the committee is likely to ask. Instead of waiting for it, practice bringing it up yourself, on our terms, before anyone asks. Claude grades how well you got ahead of it and gives you a version you can say word for word. The regular mock interview is still one click away above. '+
+ ' Raise it yourself. How would you bring this up before they ask? (type, or dictate: Fn twice on Mac, Win+H on Windows) '+
+ ' Grade it and show me the get-ahead version Just show me the get-ahead version Different question '+
+ var p='You coach TRAFFIK, a finalist agency, for the Edwards finalist presentation (PASCAL RFP). The skill is getting ahead of a hard question: raising the concern ourselves, on our terms, before the committee asks, so it lands as confidence instead of defense.\n\n'+RULES+persona()+'\n\nLikely question: '+CUR.q+(CUR.a?'\nOur prepared material on it: '+CUR.a:'')+'\nPresenter: '+$('ga-me').value+'\n\n'+
+ (grade?'What the presenter would say to raise it first:\n"""'+mine+'"""\n\nGrade it A to D on: names the concern before they do, answers it with something concrete from our material, sounds confident not defensive, ties it to what Edwards gets, short enough to say in under 30 seconds.\n\nReply in exactly this format, plain text:\nGRADE: letter, then a one-line reason\nWHAT WORKED: one line\nTIGHTEN: one or two specific fixes\nSAY IT FIRST: the improved version, ready to read word for word, 40 to 80 words\nWHEN TO SAY IT: the moment in our presentation to drop it in (which section or slide topic), one line\nTURN IT BACK: one question we hand back to the committee'
+ // shared persona object: added Edwards people feed the mock interview, Get ahead and live-answer prompts
+ pop.innerHTML=' '+(ed?'Edit person':(side==='team'?'Add a TRAFFIK team member':'Add someone from Edwards'))+' '+
+ ' Side TRAFFIK team Edwards '+
+ ' What we know about them (optional, Claude uses this) '+
+/* Q&A bank: get-ahead versions shown under each question */
+ ‹ Back Flip Next › Got it Review again 
+/* Flashcards: Q&A bank, get-ahead (flipped), Oct 12 questions, who's in the room */
+/* Who's in the room: people the team adds */
+ // using the top bar while a full-screen panel is open closes the panel first
+ ← Back Saved runs Every saved walkthrough and the live interview, with timings, the questions asked, what we said and the grades. 
+/* Saved runs as its own view */
+/* Team documents (assets + db) and Requests for Claude */
+/* Debrief: 10-question "How it went" survey, optional anonymous */
+/* Hub requests & edits: everyone suggests, Elijah approves */
+/* Deck requests & edits: everyone suggests, Elijah approves */
+/* Run of show: same slide for everyone (toggle + who moved it) */
+/* Theme preview: only you see it */
+/* Fresh start: Clear / Reset / finishing a run hides older backchannel + live questions (saved runs keep theirs) */
+/* Mock sessions: auto-save every mock interview, list for the team and in My prep */
+ // hooks (capture phase so they run before the existing handlers)
+ // team list under the setup panel
+/* My prep: "Everything from " card */
+ // show team suggestions in the Q&A bank too
+ // jump link at top of the setup panel

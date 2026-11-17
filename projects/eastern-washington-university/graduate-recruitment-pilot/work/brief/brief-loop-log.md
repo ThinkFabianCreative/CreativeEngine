@@ -237,3 +237,8 @@ Net: one fix pass on readability (move every parenthetical source to the end lis
 ## v19 result (2026-10-26)
 - Strategy gate: v18 recheck ADVANCE (all 7 failed rows pass). Visual: SHOWABLE (MOT conditional on sim-lab or consenting clinical access by kickoff). Verbal: SHOWABLE except MOT THIN pending access (no rewrite can fix). Readability: v19 removes all source codes from the body; sources listed at the end.
 - Rendered EWU_Creative-Brief_v19.docx: body 3 pages + 1 page Sources appendix (Word). Brief ready for Andres; not approved by EWU.
+
+## v20 strategy realignment (2026-11-02, Andres request)
+- v19 still ran on the retired recognition strategy ("count them in", "in front of others"). v20 carries strategy v10: promise A2, CCI "Stories where people stop waiting to be chosen", line "Stop waiting to be chosen." with its three conditions, gap, hypothesis insight, new belief, per-program "her own move", reframed portrait, agency rules as mandatories.
+- Added production quantities from the account team's Oct 30 production brief (guides as offer, not idea); landing pages flagged as outside that brief, to confirm. NHS benchmark dropped (it was a recognition register).
+- Not re-run through the loop. Rendered EWU_Creative-Brief_v20.docx (first page previewed). Not approved by EWU.

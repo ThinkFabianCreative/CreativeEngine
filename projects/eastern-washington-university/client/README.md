@@ -23,3 +23,4 @@ None yet. Rules: [projects/README.md](../../README.md).
 | Folder | Project (handle) | Recorded |
 |---|---|---|
 | [`graduate-recruitment-pilot/`](../graduate-recruitment-pilot/README.md) | Graduate recruitment pilot (MS Management, MFA Creative Writing, MOT) | 2026-10-25 |
+- Raw: `raw/ewu-mission-vision-values.md` — official mission, vision, values (inside.ewu.edu), captured 2026-11-08, CLIENT-LEVEL.

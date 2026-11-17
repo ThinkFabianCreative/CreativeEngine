@@ -24,7 +24,8 @@ Labels: "(from …)" is a sourced fact; "(our synthesis)" is our reading of evid
 
 - **"The Region's Polytechnic"**: EWU's live positioning and campaign since September 2024 (idfive; anthem :30 on TV; Merit, 2026 Educational Advertising Awards). Proof device: "hands-on". (from our brand scan)
 - **"ALL IN"** creed: Grit, Grace, Gratitude, Greatness. Red #B7142E and white, Swoop, "Eags", #Eagle4Life. (from our brand scan)
-- **Mission and vision**: affordable academic excellence, applied learning in high-demand fields, upward social mobility; first-generation and low-income students named. (from EWU's RFP)
+- **Mission and vision**: affordable academic excellence, applied learning in high-demand fields, upward social mobility; first-generation and low-income students named. (from EWU's RFP; confirmed on EWU's official mission, vision and values page, client/raw/ewu-mission-vision-values.md, 2026-11-08)
+- **Values that back the CCI** (from the same page): Accessibility ("a more inclusive, obtainable, and equitable college education"); Student Success (first-generation, low-income, Pell-recipient and other structurally marginalized students). Watch Belonging ("seen, understood, and appreciated"): background only, never EWU as the one who finally sees her.
 - **Known tension**: a RANGE Media headline calls the polytechnic label "in name only"; faculty are skeptical that it misrepresents EWU or erodes the humanities. (from our brand scan)
 
 **Fit.** Everything below sits under The Region's Polytechnic as its graduate proof; it never replaces the line. A graduate idea that holds for writers as well as therapists helps answer the humanities worry. (assumption: EWU MarCom accepts a graduate story line under the master campaign)
@@ -52,7 +53,7 @@ Labels: "(from …)" is a sourced fact; "(our synthesis)" is our reading of evid
 | **Brand DNA (provable)** | Unchanged from v06: MS final portfolio with mandatory oral defense (MNGT 591); MFA 7–10 entering teaching awards a year, selective, plus four named paid second-year roles at *Willow Springs*, Willow Springs Books, Get Lit! and Writers in the Community; MOT 24 weeks supervised Level II fieldwork, Catalyst Building, Spokane; 36% first-generation, EWU-wide, scope unconfirmed; graduate tuition about $12,825 resident, tuition only, nine-month estimate; "Washington's only polytechnic" is EWU's own unverified claim. Sources as v06. |
 | **Functional benefit*** | She leaves with work of her own *("work that is yours to carry" removed: copy-like)*: a defended portfolio, editorial and publishing work done for others, or supervised clinical work, at a public price. |
 | **Emotional benefit*** | Briefed as tension, not a benefit line: from waiting to having started. (assumption) |
-| **Higher-order benefit** | Capable people get to rise where they live: upward mobility in EWU's own vision. (from EWU's RFP) |
+| **Higher-order benefit** | Capable people get to rise where they live: upward mobility in EWU's own vision. (from EWU's RFP and official vision statement) |
 | **Brand role*** | The means for a move she makes herself. (assumption) |
 | **Personality** | Everyman with Creator underneath. Is: direct, specific, warm, proud of the work, plain about cost. Is never: elitist, fluffy, condescending about who applies, apologetic about value, loud about rankings, **bitter at a person** (tension with the culture of waiting is welcome). (assumption) |
 

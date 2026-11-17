@@ -33,3 +33,16 @@ projects/miracles-for-kids/website-rebrand/raw/MiraclesForKids/
 
 # MFK production-site assets (downloaded for reference)
 projects/miracles-for-kids/website-rebrand/raw/production-site/
+
+# Audio and remaining video formats stay local (SFX, VO, music beds, renders).
+*.wav
+*.mp3
+*.aac
+*.m4a
+*.aif
+*.aiff
+*.flac
+*.ogg
+*.webm
+*.mkv
+*.avi

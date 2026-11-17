@@ -31,5 +31,23 @@ Summary extracted from the text layer; page images not reviewed. Check the PDF f
 - Official templates: Edwards_16x09_31Dec2021.potx and others. Don't move or resize master elements or remove the company name. Arial for all live text.
 - No rounded corners on rectangles; subtle or no drop shadows; simple charts in approved colors.
 
+## Campaigns (p. 9, read 2026-11-05)
+- Overall brand standards apply to all campaigns. Campaigns may use a common image if it meets corporate style.
+- Dedicated messaging and headlines may be created, but used as headlines only: **no taglines for individual campaigns.** Campaign messaging should ladder up to the corporate brand platform; Global Communications and Branding approves.
+- External campaigns: **no other logo, lockup or type treatment** (Edwards logo stays primary). Exception: clinical-trial branding (p. 12).
+- Divergence (OPEN): TRAFFIK's EVOQUE "REVOLUTIONARY" work used a locked lockup and campaign pillars; actual practice may be looser than V4.
+
+## Imagery (p. 31)
+- One look: light, bright, airy backgrounds. **Never dark or heavy.** Black-and-white allowed if it stays light. No deep blues, greens or blacks dominating.
+- Lifestyle imagery inclusive (race, gender, age, economic status).
+- Products on white or light neutral, subtle tone shifts or soft shadows; avoid dramatic lighting and saturated backgrounds. A product may be silhouetted on the red secondary graphic.
+- The secondary graphic should always be the dominant graphic element.
+
+## Posters (p. 88–89)
+- Fixed grids for 16×20 and 24×36 in posters; secondary graphic fixed size and position (may shift up/down, never left/right); logo scaled by E-symbol height; legal and address line at bottom margin.
+
+## Awareness (p. 10–11)
+- Patient awareness: same visual standards, one extra typeface allowed, may be less branded. Disease awareness: separate design that doesn't lead back to Edwards products.
+
 ## Credo
 - "Life is Now" and other Credo elements are for internal use only.

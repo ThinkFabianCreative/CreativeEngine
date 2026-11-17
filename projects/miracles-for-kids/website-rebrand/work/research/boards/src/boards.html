@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MFK blind boards</title>
+<!-- Blind type and color boards for the MFK preference test. Render one board per URL: boards.html?b=type1 ... color4.
+     KEY (do not show participants): see ../KEY.md -->
+<link rel="stylesheet" href="https://use.typekit.net/scu3oyi.css">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Outfit:wght@300..900&family=Caveat:wght@600;700&family=Poppins:wght@300;400;500&family=Cabin:wght@400;500;600&display=block" rel="stylesheet">
+<style>
+@font-face{font-family:jennasue;src:url(jennasue.woff2) format("woff2");font-display:block}
+html,body{margin:0}
+body{width:1600px;height:900px;overflow:hidden;background:#fff;color:#111;font-family:system-ui,sans-serif}
+.board{display:none;position:relative;width:1600px;height:900px;box-sizing:border-box;padding:110px 140px}
+.board.on{display:block}
+.tag{position:absolute;left:140px;bottom:56px;font:600 22px/1 system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#9a9a9a}
+.type h1{margin:0 0 56px;font-size:96px;line-height:1.08;color:#111;max-width:1300px}
+.type p{margin:0;font-size:32px;line-height:1.55;color:#111;max-width:1100px}
+/* E: live site */
+.tE h1{font-family:"Open Sans";font-weight:300}
+.tE h1 .s{font-family:jennasue;font-weight:400;font-size:1.6em;line-height:.6}
+.tE p{font-family:"Open Sans";font-weight:400}
+/* A: Version A */
+.tA h1{font-family:Outfit;font-weight:700;letter-spacing:-.01em}
+.tA h1 .s{font-family:Caveat;font-weight:700;font-size:1.15em}
+.tA p{font-family:Outfit;font-weight:400}
+/* W: Jordan Webflow */
+.tW h1{font-family:Poppins;font-weight:400;letter-spacing:-.02em}
+.tW h1 .s{font-family:Poppins;font-weight:400}
+.tW p{font-family:Poppins;font-weight:300}
+/* J: Jordan Figma build */
+.tJ h1{font-family:"haboro-soft";font-weight:700}
+.tJ h1 .s{font-family:"zooja-pro";font-weight:400;font-size:1.3em;line-height:.8}
+.tJ p{font-family:Cabin;font-weight:500}
+/* color */
+.color .bar{display:flex;height:560px;border-radius:24px;overflow:hidden;box-shadow:0 0 0 1px #e4e4e4}
+.color .bar i{display:block;height:100%}
+</style>
+</head>
+<body>
+
+<!-- Type boards: same text, black on white, same size. Order is shuffled; see KEY.md -->
+<section class="board type tJ" id="type1"><h1>Every family deserves a <span class="s">miracle</span>.</h1><p>Help is on the way. When a child is in the hospital, the bills don't stop. We help families keep a roof, food and hope.</p><span class="tag">Text style 1</span></section>
+<section class="board type tE" id="type2"><h1>Every family deserves a <span class="s">miracle</span>.</h1><p>Help is on the way. When a child is in the hospital, the bills don't stop. We help families keep a roof, food and hope.</p><span class="tag">Text style 2</span></section>
+<section class="board type tA" id="type3"><h1>Every family deserves a <span class="s">miracle</span>.</h1><p>Help is on the way. When a child is in the hospital, the bills don't stop. We help families keep a roof, food and hope.</p><span class="tag">Text style 3</span></section>
+<section class="board type tW" id="type4"><h1>Every family deserves a <span class="s">miracle</span>.</h1><p>Help is on the way. When a child is in the hospital, the bills don't stop. We help families keep a roof, food and hope.</p><span class="tag">Text style 4</span></section>
+
+<!-- Color boards: each site's palette as swatches sized by roughly how much of the page each color covers -->
+<section class="board color" id="color1"><div class="bar"><i style="flex:50;background:#FEFEFA"></i><i style="flex:15;background:#FBF6EE"></i><i style="flex:20;background:#003366"></i><i style="flex:8;background:#5DA7E5"></i><i style="flex:4;background:#9C528B"></i><i style="flex:3;background:#FFCC99"></i></div><span class="tag">Palette 1</span></section>
+<section class="board color" id="color2"><div class="bar"><i style="flex:45;background:#FEFEFA"></i><i style="flex:22;background:#003366"></i><i style="flex:12;background:#5DA7E5"></i><i style="flex:10;background:#FFCA6D"></i><i style="flex:8;background:#FF595E"></i><i style="flex:3;background:#FFF129"></i></div><span class="tag">Palette 2</span></section>
+<section class="board color" id="color3"><div class="bar"><i style="flex:50;background:#FFFFFF"></i><i style="flex:15;background:#F6F6F6"></i><i style="flex:15;background:#002855"></i><i style="flex:8;background:#27BBC9"></i><i style="flex:6;background:#F99400"></i><i style="flex:3;background:#31B744"></i><i style="flex:3;background:#A92061"></i></div><span class="tag">Palette 3</span></section>
+<section class="board color" id="color4"><div class="bar"><i style="flex:50;background:#FFFFFF"></i><i style="flex:12;background:#F2F8FD"></i><i style="flex:15;background:#002855"></i><i style="flex:12;background:#1B5FBF"></i><i style="flex:6;background:#F99400"></i><i style="flex:5;background:#FFD23F"></i></div><span class="tag">Palette 4</span></section>
+
+<script>
+const id=new URLSearchParams(location.search).get('b')||'type1';
+document.getElementById(id).classList.add('on');
+document.fonts.ready.then(()=>document.body.dataset.ready='1');
+</script>
+</body>
+</html>

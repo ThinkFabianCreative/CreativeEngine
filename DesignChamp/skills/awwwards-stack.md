@@ -10,7 +10,7 @@
 | `color-palette-extractor` | `onewave-ai/claude-skills` | `.claude/skills/color-palette-extractor/` | No |
 | `design-motion-principles` | `kylezantos/design-motion-principles` | `.claude/skills/design-motion-principles/` | No |
 | `remotion-best-practices` | `remotion-dev/skills` (official) | `.claude/skills/remotion-best-practices/` | No. Example `.tsx` only |
-| `impeccable` | `pbakaus/impeccable` v4.5 | **Not installed.** Install blocked by the permission check 2026-10-03; the user may run `npx -y impeccable install -y --providers=claude --scope=project --no-hooks` | Yes: launcher downloads a binary from GitHub releases (checksum-verified); writes `PRODUCT.md` / `DESIGN.md`; optional edit hook |
+| `impeccable` | `pbakaus/impeccable` v4.5 | `.claude/skills/impeccable/` (installed by the user 2026-11-16, `--no-hooks`; engine v0.1.24 in `~/.impeccable/bin/`). Installer also added 4 `impeccable-*` agents to `.claude/agents/`: tooling, not CreativeEngine department agents | Yes: launcher downloads a binary from GitHub releases (checksum-verified); writes `PRODUCT.md` / `DESIGN.md`; optional edit hook |
 
 | | |
 |---|---|
