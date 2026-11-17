@@ -333,6 +333,7 @@ Then select the smallest relevant framework stack.
 | Does the type deliver it? | `typography.md` | The type's job, hierarchy as reading order, survival in the real placement, and typographic tells |
 | Does the craft deliver it? | `visual-craft.md` | Focal point, structure, color jobs, imagery craft, visual codes, system coherence and craft-level visual tells |
 | Will it survive approval? | `selling-the-work.md` | The defense, the decision chain, objection diagnosis, what is load-bearing, and whether we pre-compromised |
+| Did the fix work, and is the lesson worth keeping? | `critique-learning-loop.md` | Max three prescribed fixes per round, v1/v2 comparison on the render, regression check, and when a recurring lesson may be promoted into shared method |
 | What is the call? | CreativeDirector | Synthesizes judgment by mode, brief, object and ambition |
 
 This is a relationship, not a pipeline. Use only the lenses the task needs; none is a mandatory checklist.

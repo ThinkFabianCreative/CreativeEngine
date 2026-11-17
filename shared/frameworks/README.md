@@ -18,6 +18,7 @@ Frameworks are shared CreativeEngine intellectual infrastructure: how we think a
 | `design-sprint.md` | Active |
 | `discovery-and-lean-loop.md` | Active |
 | `narrative-craft.md` | Active |
+| `critique-learning-loop.md` | Active |
 | `typography.md` | Active |
 | `visual-craft.md` | Active |
 | `editorial-presentation.md` | Active |

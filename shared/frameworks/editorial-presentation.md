@@ -34,6 +34,7 @@ Counted once, under the most specific framework:
 | Story shape, the turn | `narrative-craft.md` |
 | Recommending, what to show, honesty limits (no invented data, quotes, results) | `selling-the-work.md` |
 | Building the deck file | `frontend-slides` (HTML), `anthropic-skills:pptx`, `figma-use-slides`; see each skill record |
+| Slide shapes by asset format and content limits | `shared/knowledge/deck-layout-archetypes.md` (structure menu only, no look) |
 | Motion craft | planned `animation-craft.md`. Until then, §8 below |
 | Client look, products, category codes and banned tropes for one client | that client's `projects/<client>/client/knowledge/` |
 
