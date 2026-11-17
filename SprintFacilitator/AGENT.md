@@ -85,3 +85,7 @@ Andres (the user) is a creative director managing a team. Prefer plans he can ha
 - Skills: none owned yet. `SprintFacilitator/skills/` is the register for reviewed skills (Miro, FigJam, timers, recruiting tools). Candidate integrations: Figma and FigJam via the Figma connector for boards and prototypes. Add only after review under the root `CLAUDE.md` skills policy.
 - Knowledge: `SprintFacilitator/knowledge/` for reusable, client-free material such as agenda templates, exercise cards, interview-guide patterns and screener templates. No client facts.
 - Shared: `shared/frameworks/design-sprint.md`, `shared/frameworks/discovery-and-lean-loop.md`, `brief-normalization.md`, `selling-the-work.md`, `creative-object-taxonomy.md`.
+
+## Design teaching
+
+`art-teacher` (`ArtTeacher/AGENT.md`) is the department's design teacher. Ask it for a lesson when design matters to this role's work: how to run visual exercises so non-designers give usable design input. Lessons that recur or that Andres approves are proposed as edits to this file or the relevant framework, through `shared/frameworks/critique-learning-loop.md` §4.

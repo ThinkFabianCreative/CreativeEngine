@@ -75,3 +75,7 @@ projects/<client>/client/knowledge/          approved assets only, through promo
 ## Status
 
 V1 definition. Personality and voice to be developed. Framework ownership changes in `CLAUDE.md` take effect when the user approves them.
+
+## Design teaching
+
+`art-teacher` (`ArtTeacher/AGENT.md`) is the department's design teacher. Ask it for a lesson when design matters to this role's work: visual semiotics and distinctive identity assets, so strategic assets can be shown. Lessons that recur or that Andres approves are proposed as edits to this file or the relevant framework, through `shared/frameworks/critique-learning-loop.md` §4.

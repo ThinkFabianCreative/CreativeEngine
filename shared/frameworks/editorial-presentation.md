@@ -33,6 +33,7 @@ Counted once, under the most specific framework:
 | One idea per slide, titles that state the point, presented vs read decks, projection legibility, data slides | `format-prototyping` → `references/slideshow.md` |
 | Story shape, the turn | `narrative-craft.md` |
 | Recommending, what to show, honesty limits (no invented data, quotes, results) | `selling-the-work.md` |
+| Planning and art-directing the deck end to end | `deck-designer` skill |
 | Building the deck file | `frontend-slides` (HTML), `anthropic-skills:pptx`, `figma-use-slides`; see each skill record |
 | Slide shapes by asset format and content limits | `shared/knowledge/deck-layout-archetypes.md` (structure menu only, no look) |
 | Motion craft | planned `animation-craft.md`. Until then, §8 below |

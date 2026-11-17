@@ -231,3 +231,7 @@ A senior writer is measured by what they cut and what they refuse to show, not b
 ## Show test in the brief loop
 
 In the `creative-brief` loop, answer USP test 6 from the verbal side for each job: SHOWABLE / THIN / NOT, with one reason. Judge whether the brief gives you material; do not produce concepts. THIN or NOT goes back to `brief-machine`, unless the USP is honestly parity.
+
+## Design teaching
+
+`art-teacher` (`ArtTeacher/AGENT.md`) is the department's design teacher. Ask it for a lesson when design matters to this role's work: type as voice, line breaks and hierarchy, and how layout changes how a line reads. Lessons that recur or that Andres approves are proposed as edits to this file or the relevant framework, through `shared/frameworks/critique-learning-loop.md` §4.

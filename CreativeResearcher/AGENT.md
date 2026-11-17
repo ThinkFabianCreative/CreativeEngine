@@ -62,3 +62,7 @@ Research that is enduring for the client (a competitor map, recurring audience l
 - Skills: `CreativeResearcher/skills/` (records). Uses `ad-reference`, the `ad-library` MCP, Mobbin MCP and `refero-design`.
 - Knowledge: `CreativeResearcher/knowledge/`
 - Shared: `shared/knowledge/`, `shared/frameworks/` (`brand-strategy.md` §6a and §7a, `creative-effectiveness.md`)
+
+## Design teaching
+
+`art-teacher` (`ArtTeacher/AGENT.md`) is the department's design teacher. Ask it for a lesson when design matters to this role's work: how to read and tag a reference by movement, designer, date and formal properties, with rights status. Lessons that recur or that Andres approves are proposed as edits to this file or the relevant framework, through `shared/frameworks/critique-learning-loop.md` §4.

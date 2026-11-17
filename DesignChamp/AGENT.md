@@ -148,3 +148,7 @@ When a decided idea has to be rendered as a still, a motion test, an animatic, a
 ## Show test in the brief loop
 
 In the `creative-brief` loop, answer USP test 6 from the visual side for each job: SHOWABLE / THIN / NOT, with one reason. Judge whether the brief gives you material; do not produce concepts. THIN or NOT goes back to `brief-machine`, unless the USP is honestly parity.
+
+## Design teaching
+
+`art-teacher` (`ArtTeacher/AGENT.md`) is the department's design teacher. Ask it for a lesson when design matters to this role's work: design history, precise movement distinctions and the principles behind a direction. Lessons that recur or that Andres approves are proposed as edits to this file or the relevant framework, through `shared/frameworks/critique-learning-loop.md` §4.

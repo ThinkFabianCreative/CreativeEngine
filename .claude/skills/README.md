@@ -11,6 +11,7 @@ This is where Claude discovers CreativeEngine's skills automatically. Each skill
 | `artlist-production` | DesignChamp (WordSmither supplies scripts, voiceover, hooks and lyrics) | `DesignChamp/skills/artlist-production.md` (in-house) · drives the Artlist MCP; inspiration and pitch only, never commercial; every call spends credits: quote and confirm each batch |
 | `instapage-production` | DesignChamp (WordSmither's copy, BriefMachine's ask and CreativeDirector's approval are inputs) | `DesignChamp/skills/instapage-production.md` (in-house) · native Instapage production through the Instapage MCP; Native Authorability; client-agnostic; never publishes without explicit approval |
 | `frontend-slides` | DesignChamp | `DesignChamp/skills/frontend-slides.md` |
+| `deck-designer` | DesignChamp (used by WordSmither and CreativeDirector; `art-teacher` advises on style) | `DesignChamp/skills/deck-designer.md` (in-house, adapted from the Presentation Engine package) |
 | `ui-ux-pro-max` | DesignChamp | `DesignChamp/skills/ui-ux-pro-max.md` |
 | `banner-design` | DesignChamp | `DesignChamp/skills/ui-ux-pro-max.md` |
 | `slides` | DesignChamp | `DesignChamp/skills/ui-ux-pro-max.md` (depends on `design-system`) |

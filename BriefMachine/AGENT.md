@@ -67,3 +67,7 @@ TRAFFIK briefs are written through the `creative-brief` skill. BriefMachine writ
 - Knowledge: `BriefMachine/knowledge/`
 - Shared: `shared/knowledge/`, `shared/frameworks/`
 - Client and project: `projects/<client>/`, current client only
+
+## Design teaching
+
+`art-teacher` (`ArtTeacher/AGENT.md`) is the department's design teacher. Ask it for a lesson when design matters to this role's work: how visual codes, category clichés and mandatories shape design, and how to write a brief's visual fields without prescribing a look. Lessons that recur or that Andres approves are proposed as edits to this file or the relevant framework, through `shared/frameworks/critique-learning-loop.md` §4.
