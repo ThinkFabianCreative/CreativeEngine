@@ -56,6 +56,7 @@ Installed as Claude plugins, outside this folder. Their department record govern
 |---|---|---|
 | `design-superpowers:map-design`, `:design-review`, `:creative`, `:design`, `:ds-make` | DesignChamp | `DesignChamp/skills/design-superpowers.md` · approved 2026-10-26; `DESIGN.md` goes in the client project folder, never the repo root; `/creative` systematizes a decided idea, it does not find one; `/ds-make` manual only |
 | `design-superpowers:ds-consumer`, `:ds-producer`, `:ds-manage`, `:figma-setup` | DesignChamp | `DesignChamp/skills/design-superpowers.md` · on hold, do not use |
+| `unslop:unslop` (`/unslop`) | DesignChamp | `DesignChamp/skills/unslop.md` (`heydamir/unslop`, reviewed commit `620163e`) · installed 2026-11-18, user scope; web UI only, not ads or decks; stop at the direction; headlines go to WordSmither; outputs in the project folder |
 
 ## Before adding a skill
 

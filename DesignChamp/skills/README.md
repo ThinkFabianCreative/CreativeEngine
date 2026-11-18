@@ -20,6 +20,7 @@ Third-party skills must pass the review in the root `CLAUDE.md` before they are 
 | `ad-library` MCP server | `at-dan/ad-library-mcp` | Approved and installed outside the repo 2026-10-08 (reviewed commit `2da03c1`). Localhost only; user adds ScrapeCreators key and starts server | [ad-library-mcp.md](ad-library-mcp.md) |
 | design-superpowers plugin (`/map-design`, `/design-review`, `/creative`, `/design`, `/ds-make` approved; `/ds-consumer`, `/ds-producer`, `/ds-manage`, `/figma-setup` on hold) | `LSDimi/design-superpowers` v1.0.0 | Approved 2026-10-26. Installed as a Claude plugin, outside the repo | [design-superpowers.md](design-superpowers.md) |
 | `deck-designer` | CreativeEngine (in-house), adapted from the Presentation Engine package | Built at the user's request and installed in `.claude/skills/` 2026-11-17 | [deck-designer.md](deck-designer.md) |
+| `unslop` plugin | `heydamir/unslop` (CC BY 4.0) | Installed by the user as a Claude plugin 2026-11-18 (user scope, outside the repo); reviewed and approved with calibration the same day (commit `620163e`) | [unslop.md](unslop.md) |
 
 ## Reviewed and not installed
 
