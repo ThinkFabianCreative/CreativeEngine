@@ -118,3 +118,12 @@ Option 5 is the place for a bigger WebGL moment if Andres wants one, kept off th
 - A8 per client decides whether Option 2 can show real rule material.
 - GSAP licence terms and plugin availability: verify at build.
 - References are listed for study, not checked live today.
+
+## Prototype built – 2026-11-18
+
+- File: `work/develop/prototypes/option1_rule-to-idea_pih.html` (single HTML, GSAP 3.12.5 core + ScrollTrigger from cdnjs, manual word split, no SplitText).
+- Sequence: placeholder rule on cream panel → "Rule:" line arrives → on scroll (pinned) the rule fades and shrinks, "Idea:" line lands in red, the work placeholder scales past the rule → "Ideas that survive review." → proof row (77% counts up, yellow, UNV) → next step.
+- Static page is complete without JS; reduced motion skips all motion except instant figures. LCP is HTML text.
+- Checked in browser at 1440×900 and 375×812, no console errors. Mobile fix: line moves above the work so rule + line read in the first screen.
+- PIH rule shown at category level ("Medicare marketing limits what a plan can tell a senior."), per Andres 2026-11-18: verbatim wording belongs to new PIH work, not the website; Q1 closed for the site. Shipped work now the real PIH print ad (content inventory, /work/pih/ block 26). Still placeholder: Netwatch rule and figure, benchmark source for 77%. Fonts are stand-ins.
+- Not done: Lighthouse throttled-mobile run; Framer code component and Webflow Interactions versions (Q5).

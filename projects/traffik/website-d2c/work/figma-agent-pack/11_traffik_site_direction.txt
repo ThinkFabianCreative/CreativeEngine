@@ -28,7 +28,7 @@ HOMEPAGE ROUTE 1 · "The rule, first" on a Swiss evidence grid (leads with "appr
 - Lines (exact, do not change):
     Rule: you can’t tell seniors which plan to pick. Idea: tell them what to ask.
     Ideas that survive review.
-- The PIH rule wording is a PLACEHOLDER until confirmed: label it "RULE · PLACEHOLDER".
+- Show the PIH rule at category level: "Medicare marketing limits what a plan can tell a senior." No verbatim regulation (Andres, 2026-11-18).
 - Fix: the shipped work must be bigger than the rule by the first scroll.
 - Proof row: figures in yellow on grid columns, each with "unv".
 
