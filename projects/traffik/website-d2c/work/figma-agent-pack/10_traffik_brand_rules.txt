@@ -1,0 +1,43 @@
+10 · TRAFFIK BRAND RULES (client file, Traffik only)
+Client: Traffik (the agency itself). Project: website-d2c. Internal working file, 2026-11-18.
+Use only for Traffik. Never apply these rules, colors or words to another client.
+Sources: projects/traffik/website-d2c/normalized-brief.md §3a, §3b, §4.
+
+FIXED (do not change)
+- Logo: use the supplied Traffik logo component. If none is supplied, use a labelled
+  placeholder box "TRAFFIK LOGO". Never redraw it. White on dark is the observed use.
+- Colors, in flat fills only:
+    Black   #000000  dominant ground
+    Red     #D91F1F  accent for ONE thing per frame (one line, one figure, one word)
+    Yellow  #F4D803  evidence only: result figures and proof labels
+- White #FFFFFF: whether it is a fixed brand color is OPEN. Use it for text on black.
+  Do not build white-ground sections unless the request says "white test".
+- Yellow on white fails contrast as text. If a white test is requested, yellow
+  must be a filled block with black text, never yellow text.
+
+TYPE (may be tested; these are the current faces)
+- Headlines: Adobe Caslon Pro. In Figma use "Libre Caslon Display" and label the
+  layer "STAND-IN: Adobe Caslon Pro". Give Caslon ONE job per page (e.g. the rule,
+  or line 1 of a case headline), not every heading.
+- Body: Acumin Pro. Labels: Acumin Pro Wide (stand-in: Acumin Pro Semibold, tracked +4%).
+
+GUARDRAILS (hard prohibitions)
+- No traffic-signal imagery or words for approval: no traffic lights, cones, road
+  signs, "green light", "go", "stop", "yield", "cleared". The only exception is a
+  request explicitly labelled "Stop traffic territory".
+- No red-pen redlines and no APPROVED / REJECTED stamps as a house motif. Real review
+  markup from a case may appear only if the request supplies it.
+- No general "constraints breed creativity" messaging.
+- No stock agency clichés: laptop mockups, handshakes, abstract 3D blobs with no case
+  meaning, gradient meshes.
+- Never invent copy, client names, quotes or numbers.
+
+NUMBERS
+- Every result figure is UNVERIFIED until the request says otherwise. Show it with a
+  small label "unv" in muted grey beside the figure.
+- Never use the HCSC member figure.
+- Each result needs a source and year field, even if the value is "[source]".
+
+ACCESSIBILITY
+- Body text on black: white or #9E9E9E minimum for muted text (check 4.5:1).
+- Red on black as text only at large display sizes (it fails at body size).
