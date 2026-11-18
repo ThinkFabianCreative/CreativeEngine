@@ -112,7 +112,7 @@ One tool per job; the most specific wins.
 
 | Action | Why |
 |---|---|
-| First `impeccable context` on a machine without the engine | The launcher downloads a binary from GitHub Releases (checksum-verified against `engine-checksums.txt`) into `~/.impeccable/bin/<version>/`. On this machine no engine was found on 2026-11-18, despite the record |
+| First `impeccable context` on a machine without the engine | The launcher downloads a binary from GitHub Releases (checksum-verified against `engine-checksums.txt`) into `~/.impeccable/bin/<version>/`. On Andres's machine engine 0.1.24 was downloaded and verified 2026-11-18; a new engine version means a new download |
 | `npx impeccable install` / `update`, `link`, `agents`, `telemetry` | Installs or changes tooling and settings |
 | `/impeccable hooks on` (and `reset`) | Writes `.claude/settings.local.json`; the hook runs the engine unsandboxed with the agent's environment and network on every UI edit |
 | Writing a repo-root `.impeccable/config.json` (`projectRoots`, `telemetry: false`) | Persistent configuration |
