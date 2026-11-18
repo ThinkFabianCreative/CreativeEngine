@@ -10,7 +10,7 @@
 | `color-palette-extractor` | `onewave-ai/claude-skills` | `.claude/skills/color-palette-extractor/` | No |
 | `design-motion-principles` | `kylezantos/design-motion-principles` | `.claude/skills/design-motion-principles/` | No |
 | `remotion-best-practices` | `remotion-dev/skills` (official) | `.claude/skills/remotion-best-practices/` | No. Example `.tsx` only |
-| `impeccable` | `pbakaus/impeccable` v4.5 | `.claude/skills/impeccable/` (installed by the user 2026-11-16, `--no-hooks`; engine v0.1.24 in `~/.impeccable/bin/`). Installer also added 4 `impeccable-*` agents to `.claude/agents/`: tooling, not CreativeEngine department agents | Yes: launcher downloads a binary from GitHub releases (checksum-verified); writes `PRODUCT.md` / `DESIGN.md`; optional edit hook |
+| `impeccable` | `pbakaus/impeccable` skill v4.9.1 (checked 2026-11-18; latest upstream 4.9.2 / engine 0.1.25, 2026-11-15, unreviewed) | `.claude/skills/impeccable/` (installed by the user 2026-11-16, `--no-hooks`; engine pinned to v0.1.24 in `scripts/VERSION` but **not yet downloaded**: `~/.impeccable/` absent on 2026-11-18, so the first run fetches it and needs the user's confirmation). Use: `DesignChamp/knowledge/impeccable-playbook.md`. Installer also added 4 `impeccable-*` agents to `.claude/agents/`: tooling, not CreativeEngine department agents | Yes: launcher downloads a binary from GitHub releases (checksum-verified); writes `PRODUCT.md` / `DESIGN.md`; optional edit hook |
 
 | | |
 |---|---|
@@ -37,6 +37,7 @@
 | Prototypes | `format-prototyping` owns the format and context; `awwwards` raises the build. Prototypes only |
 | Email | `frontend-design` and `color-expert` only. Email clients do not run JS, WebGL or most CSS motion; no Three.js, Framer Motion or anime.js in email |
 | Video and motion pieces | `remotion-best-practices` (phase 7) |
+| Web design projects with `impeccable` (commands by stage, file locations, guardrails) | `DesignChamp/knowledge/impeccable-playbook.md` |
 | Color | `color-palette-extractor` for a client's real colors from their assets or site screenshots; `color-expert` for building or checking a palette |
 
 **Rules.**
