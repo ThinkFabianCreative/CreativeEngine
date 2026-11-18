@@ -1,0 +1,218 @@
+FIGMA SLIDES PROMPT · TRAFFIK → UNIVERSITY OF WYOMING · "TOO STUBBORN TO STOP?" · v08 (2026-09-14)
+Revises v07 after Andres: "for our slide deck, the brand is Traffik (our agency) --- we are presenting
+these ideas and bodies of work to the Client: The University of Wyoming, therefore we can style our
+slide however we want", plus https://wearetraffik.com/ and a capabilities-page screengrab.
+Deck styling follows Traffik's observed website identity (projects/traffik/client/sources/
+2026-09-14_wearetraffik-website-visual-identity-observation.md; observed, not approved guidelines):
+white editorial pages, Adobe Caslon Pro headlines, Acumin Pro body, Acumin Pro Wide caps labels,
+small red section labels, 50/50 image/text split rows, full-bleed photo hero, yellow closing block.
+UW brand rules apply only inside the ad frames and on the UW-color moments (slides 8, 9, 11).
+Content and slide order unchanged from v07. Internal work in progress. Placeholder imagery.
+Traffik yellow #F4D803 sits close to UW Gold #FFC425: it is used only on slide 13, where no UW work appears.
+
+======================================================================
+PASTE EVERYTHING BELOW INTO FIGMA SLIDES
+======================================================================
+
+Rebuild the deck as 13 slides, replacing the current version. This is a TRAFFIK agency presentation
+to our client, the University of Wyoming College of Business. The deck uses Traffik's style. UW's
+brand rules (10_uw_brand_rules.txt, 11_uw_campaign.txt, 12_uw_directions.txt) apply only to the ad
+frames and to slides 8, 9 and 11. Read 00_READ_FIRST.txt, 01_taste_standard.txt, 02_typography.txt
+and 03_layout_hierarchy_color.txt first. Run 06_self_check.txt on every slide before replying.
+Use the copy exactly. Do not add words.
+
+DESIGN SYSTEM · TRAFFIK
+Style: editorial and calm, like the Traffik website. White pages, big classic serif headlines,
+small wide caps labels, one small red label per slide, bold full-bleed color only where it earns it.
+Canvas: 1920 x 1080. Grid: 12 columns, 120 px outer margins, 24 px gutters. Flush left.
+
+Colors
+  WHITE        #FFFFFF  default background
+  BLACK        #000000  type on white; background on slide 6 left half
+  GREY         #7F7F7F  secondary text, page numbers, footer, captions
+  TRAFFIK RED  #D91F1F  section labels only (small caps). Never headlines, never large areas
+  TRAFFIK YELLOW #F4D803 slide 13 background only
+  UW BROWN     #492F24  slides 8 (left half), 9 (full bleed), 11 (left half) only
+  UW GOLD      #FFC425  only inside ad frames and on slide 9
+
+Type (Adobe Fonts; install locally through Creative Cloud so Figma can use them.
+If unavailable, use the Google stand-ins in brackets and say so in your report)
+  HEADLINE XL  Adobe Caslon Pro Regular [Libre Caslon Text], 120 px, line height 1.0, tracking -1%, sentence case
+  HEADLINE     Adobe Caslon Pro Regular [Libre Caslon Text], 80 px, line height 1.05, sentence case
+  HEADLINE S   Adobe Caslon Pro Regular [Libre Caslon Text], 48 px, line height 1.15
+  BODY         Acumin Pro Light [Archivo Light], 30 px, line height 1.45, max 3 lines per block, max 55 characters per line
+  LABEL        Acumin Pro Wide Bold [Archivo Expanded Bold], 20 px, ALL CAPS, tracking +6%
+  CAMPAIGN     Montserrat Bold: ONLY for campaign lines on slide 9, matching the ads
+Headlines are Regular weight, never bold. Emphasis in headlines is a line break or scale, not color.
+
+Page furniture (all slides except 1, 5, 9 and 13)
+  Section label: top-left, LABEL, TRAFFIK RED, e.g. "AUDIENCE"
+  Page number: top-right, LABEL, GREY, e.g. "04 / 13"
+  Footer: bottom-left, 18 px Acumin Pro Regular, GREY:
+    "TRAFFIK for the University of Wyoming College of Business · Work in progress · Placeholder imagery"
+  Traffik logo (T in a circle + TRAFFIK wordmark): black version top-left on slide 1, white on slide 5,
+    black on slide 13. Use the supplied logo file; if none is in the file, leave a labelled empty
+    frame "TRAFFIK LOGO" and ask for the file. Never redraw the logo.
+
+Split rows (Traffik signature layout)
+  Half the slide (960 px) is a full-bleed color or image field; the other half is white with the
+  headline and body set in columns 8–12 (or 1–5), vertically centered.
+
+Ad frames
+  Flat copies, never recolored, cropped, bordered, shadowed or rounded. On UW Brown fields, center them
+  with at least 96 px clear space. Never use FAR / FURTHER, RUNNER or MARGIN NOTES frames.
+Never: gradients, shadows, icons, emoji, symbol bullets, dividers, device mockups, stock photos,
+  rounded filled cards, animations, bold serif, red headlines.
+Space: at least 96 px between a headline and the body under it. When unsure, add space.
+
+----------------------------------------------------------------------
+SLIDE 1 · COVER
+----------------------------------------------------------------------
+Background White.
+Top-left: Traffik logo, black.
+Center-left, LABEL (Traffik Red): UNIVERSITY OF WYOMING COLLEGE OF BUSINESS
+Under it, HEADLINE XL, Black, 2 lines:
+  Not for
+  everyone.
+Bottom-left, BODY (Grey): Graduate programs · Meta campaign · Creative presentation
+
+----------------------------------------------------------------------
+SLIDE 2 · THE JOB
+----------------------------------------------------------------------
+Section label: THE JOB
+HEADLINE, columns 1–9:
+  One idea. Five programs. First contact.
+Lower third, three blocks, 4 columns each, each a LABEL (Black) then BODY:
+  THE GOAL       Application starts for five graduate business programs.
+  THE MOMENT     For many people, this ad is the first time they meet UW.
+  THE SYSTEM     The idea carries the ad. Program details live in the post text.
+
+----------------------------------------------------------------------
+SLIDE 3 · WHO WE'RE TALKING TO
+----------------------------------------------------------------------
+Section label: AUDIENCE
+HEADLINE XL, columns 1–10, vertically centered, Black:
+  They're not the boss yet.
+  They're the one holding it together.
+Nothing else.
+
+----------------------------------------------------------------------
+SLIDE 4 · THEIR WORLD
+----------------------------------------------------------------------
+Section label: AUDIENCE
+HEADLINE S, top-left: Where they work right now.
+Four columns across the middle, 3 grid columns each, no boxes. Each: LABEL (Black), then one line in
+HEADLINE S (48 px Caslon):
+  RESTAURANTS AND RETAIL     Closing shift, then the side project.
+  PLANT FLOORS               Two people short. Covered it.
+  BANK BRANCHES              Covering the branch this week.
+  9-TO-5 DESKS               Month-end close. Then the inventory count.
+Bottom-left, BODY (Grey), one line:
+  21 to 35. Wyoming, plus two Colorado counties for the Online MBA. Some still in college.
+
+----------------------------------------------------------------------
+SLIDE 5 · PATTERN BREAK (Traffik hero style)
+----------------------------------------------------------------------
+Full-bleed placeholder photo from the "Too stubborn to stop?" ads (the late-night table), filling
+1920 x 1080, table in the lower half. Darken the lamp if it is the brightest point. No color wash.
+Top-left: Traffik logo, white.
+Bottom-left, HEADLINE, White, like the Traffik website hero:
+  Nobody calls that leadership.
+Bottom-right, 18 px, White 70%: PLACEHOLDER IMAGE
+No section label, page number or footer.
+
+----------------------------------------------------------------------
+SLIDE 6 · WHAT THEY WANT (split)
+----------------------------------------------------------------------
+Section label: AUDIENCE (top-left, over the black half, in Traffik Red)
+Left half: Black field. Centered vertically, columns 1–5: LABEL (Grey) MOTIVATION ONE, then HEADLINE,
+  White: The promotion.
+Right half: White. Columns 8–12: LABEL (Grey) MOTIVATION TWO, then HEADLINE, Black: Their own boss.
+Under "Their own boss.", BODY (Black), 96 px below:
+  A master's is how they picture getting there.
+  The doubt is whether it fits into a life that's already full.
+
+----------------------------------------------------------------------
+SLIDE 7 · THE INSIGHT
+----------------------------------------------------------------------
+Section label: INSIGHT
+Columns 1–10, two stacked statements, 96 px apart:
+  LABEL (Grey): WHAT THEY BELIEVE
+  HEADLINE S (Grey): Grad school is for people with more time.
+  LABEL (Black): WHAT'S TRUE
+  HEADLINE XL (Black): The people with the least time are already doing the hardest part.
+Bottom-left LABEL (Grey): WORKING INSIGHT
+
+----------------------------------------------------------------------
+SLIDE 8 · WHERE IT COMES FROM (split, UW color)
+----------------------------------------------------------------------
+Section label: THE IDEA
+Left half: UW Brown field. Columns 1–5, vertically centered, HEADLINE, White:
+  A Cowboy isn't what you are, but who you are.
+  Under it, LABEL (White 70%): UW · THE WORLD NEEDS MORE COWBOYS
+Right half: White. Columns 8–12, vertically centered, BODY (Black), 2 short paragraphs:
+  We celebrate forging your own path against the odds.
+  That's leadership. That's entrepreneurial. That's the Code of the West.
+
+----------------------------------------------------------------------
+SLIDE 9 · THE IDEA (full UW color)
+----------------------------------------------------------------------
+Background UW Brown, full bleed. No section label, page number or footer.
+CAMPAIGN type (Montserrat Bold, as in the ads), left, columns 1–9:
+  TOO STUBBORN      (160 px, White, "STUBBORN" in UW Gold)
+  TO STOP?          (160 px, White)
+  SOUNDS LIKE A COWBOY.   (96 px, White, "COWBOY" in UW Gold)
+Bottom-right, BODY in Acumin Pro Light, White 70%, columns 9–12:
+  The thing they get teased for is the qualification.
+
+----------------------------------------------------------------------
+SLIDE 10 · HOW IT WORKS
+----------------------------------------------------------------------
+Section label: THE WORK
+HEADLINE S, top-left: The swipe is the story.
+Four carousel card copies in one row, equal size (about 380 x 380 px), on White.
+Under each: LABEL number (Traffik Red), then BODY (Black):
+  01  The week collides.
+  02  The question lands.
+  03  The answer flips it.
+  04  UW and the program.
+Bottom-left, 20 px Acumin Pro Regular, Grey:
+  Stimulus: Channel 4's Tokyo Paralympics line, "To be a Paralympian, there's got to be something wrong with you." We reclaimed the insult the same way.
+
+----------------------------------------------------------------------
+SLIDE 11 · THE WORK IN FEED (split, UW color)
+----------------------------------------------------------------------
+Section label: THE WORK
+Left half: UW Brown field holding the 4:5 static and the 9:16 static side by side, bottom-aligned,
+  at least 96 px clear space around them.
+Right half: White. Columns 8–12, vertically centered:
+  HEADLINE S: The work in feed.
+  LABELs (Grey), stacked, 48 px below: FEED 4:5 / STORIES AND REELS 9:16
+
+----------------------------------------------------------------------
+SLIDE 12 · FIVE PROGRAMS, FIVE WEEKS
+----------------------------------------------------------------------
+Section label: HOW IT RUNS
+HEADLINE S, top-left: Same question. Every program gets its own week.
+Five rows, 88 px apart, no lines. Each row: LABEL (Grey) in columns 1–3; the week line in Acumin Pro
+Wide Bold 30 px caps, Black, in columns 4–12.
+  ON-CAMPUS MBA               CLOSING SHIFT. PITCH DECK. BEST FRIEND'S WEDDING. SAME WEEK.
+  ONLINE MBA                  TWO PEOPLE SHORT. KID'S RECITAL. MOVING DAY. SAME WEEK.
+  M.S. IN ACCOUNTING          AUDIT INTERNSHIP. VOLUNTEER TAX NIGHT. SOFTBALL PLAYOFFS. SAME WEEK.
+  ONLINE M.S. IN ACCOUNTING   MONTH-END CLOSE. INVENTORY COUNT. REC LEAGUE FINAL. SAME WEEK.
+  ONLINE M.S. IN FINANCE      COVERING THE BRANCH. MARKET DIP. GRANDMA'S 90TH. SAME WEEK.
+
+----------------------------------------------------------------------
+SLIDE 13 · WHAT WE NEED (Traffik yellow close)
+----------------------------------------------------------------------
+Background Traffik Yellow #F4D803, full bleed, like the Traffik website's "Ready to work with us?" block.
+No section label, page number or footer.
+HEADLINE XL, Black, top-left, 2 lines:
+  What we need
+  from UW.
+Lower half, three blocks, 4 columns each: LABEL number (Black) then BODY (Black):
+  01  Approval to use Cowboys language and the Blackhawk font.
+  02  UW photography access, and a shoot with model releases.
+  03  Confirmed placements, landing pages and targeting.
+Bottom-left, 18 px Acumin Pro Regular, Black: 4:5 feed · 9:16 Stories and Reels · Carousel · 15-second video
+Bottom-right: Traffik logo, black.

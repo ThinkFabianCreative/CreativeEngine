@@ -1,0 +1,542 @@
+{
+  "format": "instapage-build-sheet/1",
+  "meta": {
+    "client": "SYNTHETIC · Fernwick Tool Library (fictional)",
+    "project": "card-drive (synthetic validation)",
+    "packet": "LP1",
+    "version": "v01",
+    "date": "2026-09-24",
+    "stage": "PLAN",
+    "workspace": {
+      "name": "OPEN: Instapage MCP not connected",
+      "id": "OPEN"
+    },
+    "spec": {
+      "figma": "https://www.figma.com/design/suQoQdAczG3IZRVMxooqpb?node-id=18-39",
+      "version": "v01 · 2026-09-24 · approved SYNTHETIC"
+    },
+    "copy_doc": {
+      "path": "validation/instapage-production-2026-09-24/02_approved-copy_SYNTHETIC.md",
+      "version": "v01"
+    },
+    "client_library": "Fernwick · Layer 2 client system (SYNTHETIC), kit node 18-19"
+  },
+  "ask": {
+    "cta_wording": "Get my card",
+    "destination": "Native form F01 on this page (B04); thank-you message, no redirect",
+    "success_event": "form_submission",
+    "conversion_goals": [
+      "form_submissions"
+    ]
+  },
+  "copy": {
+    "HERO-H": "Your garage is a museum of one-time jobs.",
+    "HERO-SUB": "Borrow the drill, the tile saw or the stud finder with a free library card. Keep it up to seven days. Bring it back.",
+    "STAMP": "Due back in 7 days",
+    "CTA": "Get my card",
+    "HOW-H": "How borrowing works",
+    "STEP1-H": "Reserve it online",
+    "STEP1-P": "Pick the tool from the catalog and choose a day.",
+    "STEP2-H": "Pick it up at the desk",
+    "STEP2-P": "Show your card. The tool is checked and charged.",
+    "STEP3-H": "Bring it back in seven days",
+    "STEP3-P": "Return it to the same desk, clean and complete.",
+    "PROOF-H": "Over 900 tools. Zero garages required.",
+    "PROOF-P": "Drills, sanders, ladders, pressure washers, sewing machines and the odd carpet cleaner.",
+    "FORM-H": "Get your card",
+    "FORM-P": "It’s free for Fernwick residents. We’ll email you when it’s ready to collect.",
+    "F-FIRST": "First name",
+    "F-EMAIL": "Email",
+    "F-ZIP": "ZIP code",
+    "F-CONSENT": "I agree to receive my card confirmation by email.",
+    "F-ARIA": "Submit your library card request",
+    "TY": "You’re in. We’ll email you when your card is ready.",
+    "FOOT": "Fernwick Tool Library is a program of Fernwick Public Library.",
+    "FOOT-LINK": "Privacy policy",
+    "ALT-HERO": "Shelves of power tools, each with a library tag, ready to borrow.",
+    "SEO-TITLE": "Borrow tools free with a Fernwick library card",
+    "SEO-DESC": "Drills, saws, ladders and more, free for Fernwick residents. Keep them up to seven days."
+  },
+  "mandatories": [
+    "FOOT",
+    "FOOT-LINK"
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "text": "More than 900 tools to borrow",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "id": "C2",
+      "text": "Membership is free for Fernwick residents",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "C3",
+      "text": "Tools can be borrowed for up to seven days",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "C4",
+      "text": "Members are emailed when their card is ready to collect",
+      "status": "VERIFIED"
+    }
+  ],
+  "styles": {
+    "brand_colors": [
+      "#F3EEE3",
+      "#1E2A22",
+      "#2F5D3A",
+      "#C8412B",
+      "#CFC6B4"
+    ],
+    "fonts": {
+      "headline": "Fraunces SemiBold",
+      "paragraph": "Work Sans Regular",
+      "button": "Courier Prime Bold"
+    }
+  },
+  "assets": [
+    {
+      "id": "IMG-01",
+      "description": "Hero photo: shelves of lendable power tools with library tags (production shoot pending)",
+      "status": "PLACEHOLDER",
+      "generated": false,
+      "provenance": "Flat labelled placeholder made by CreativeEngine",
+      "rights": "n/a (placeholder)",
+      "approved_by": "",
+      "alt_copy": "ALT-HERO"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "B01",
+      "name": "Hero",
+      "type": "fluid_grid",
+      "reuse": "my_block",
+      "client_component": "Fernwick / Hero / Split",
+      "saved_as": "Fernwick / Hero / Split · v01",
+      "grid": {
+        "columns": 12,
+        "rows": 3
+      },
+      "containers": [
+        {
+          "id": "B01.C1",
+          "span": "cols 1-7, row 1",
+          "mobile_order": 1,
+          "flow": "vertical"
+        },
+        {
+          "id": "B01.C2",
+          "span": "cols 8-12, rows 1-3",
+          "mobile_order": 4,
+          "flow": "vertical"
+        },
+        {
+          "id": "B01.C3",
+          "span": "cols 1-3, row 2",
+          "mobile_order": 2,
+          "flow": "vertical",
+          "border": "2 px #C8412B"
+        },
+        {
+          "id": "B01.C4",
+          "span": "cols 1-7, row 3",
+          "mobile_order": 3,
+          "flow": "vertical"
+        }
+      ],
+      "elements": [
+        {
+          "id": "E01",
+          "primitive": "headline",
+          "container": "B01.C1",
+          "copy": "HERO-H",
+          "text": "Your garage is a museum of one-time jobs.",
+          "level": 1
+        },
+        {
+          "id": "E02",
+          "primitive": "paragraph",
+          "container": "B01.C1",
+          "copy": "HERO-SUB",
+          "text": "Borrow the drill, the tile saw or the stud finder with a free library card. Keep it up to seven days. Bring it back.",
+          "claims": [
+            "C2",
+            "C3"
+          ]
+        },
+        {
+          "id": "E03",
+          "primitive": "paragraph",
+          "container": "B01.C3",
+          "copy": "STAMP",
+          "text": "Due back in 7 days",
+          "claims": [
+            "C3"
+          ]
+        },
+        {
+          "id": "E04",
+          "primitive": "button",
+          "container": "B01.C4",
+          "copy": "CTA",
+          "text": "Get my card",
+          "link": {
+            "type": "on_page",
+            "target": "B04"
+          }
+        },
+        {
+          "id": "E05",
+          "primitive": "image",
+          "container": "B01.C2",
+          "asset": "IMG-01"
+        }
+      ]
+    },
+    {
+      "id": "B02",
+      "name": "How it works",
+      "type": "fluid_grid",
+      "reuse": "page",
+      "grid": {
+        "columns": 12,
+        "rows": 2
+      },
+      "containers": [
+        {
+          "id": "B02.C1",
+          "span": "cols 1-12, row 1",
+          "mobile_order": 1,
+          "flow": "vertical"
+        },
+        {
+          "id": "B02.C2",
+          "span": "cols 1-4, row 2",
+          "mobile_order": 2,
+          "flow": "vertical"
+        },
+        {
+          "id": "B02.C3",
+          "span": "cols 5-8, row 2",
+          "mobile_order": 3,
+          "flow": "vertical"
+        },
+        {
+          "id": "B02.C4",
+          "span": "cols 9-12, row 2",
+          "mobile_order": 4,
+          "flow": "vertical"
+        }
+      ],
+      "elements": [
+        {
+          "id": "E06",
+          "primitive": "headline",
+          "container": "B02.C1",
+          "copy": "HOW-H",
+          "text": "How borrowing works",
+          "level": 2
+        },
+        {
+          "id": "E07",
+          "primitive": "headline",
+          "container": "B02.C2",
+          "copy": "STEP1-H",
+          "text": "Reserve it online",
+          "level": 3
+        },
+        {
+          "id": "E08",
+          "primitive": "paragraph",
+          "container": "B02.C2",
+          "copy": "STEP1-P",
+          "text": "Pick the tool from the catalog and choose a day."
+        },
+        {
+          "id": "E09",
+          "primitive": "headline",
+          "container": "B02.C3",
+          "copy": "STEP2-H",
+          "text": "Pick it up at the desk",
+          "level": 3
+        },
+        {
+          "id": "E10",
+          "primitive": "paragraph",
+          "container": "B02.C3",
+          "copy": "STEP2-P",
+          "text": "Show your card. The tool is checked and charged."
+        },
+        {
+          "id": "E11",
+          "primitive": "headline",
+          "container": "B02.C4",
+          "copy": "STEP3-H",
+          "text": "Bring it back in seven days",
+          "level": 3,
+          "claims": [
+            "C3"
+          ]
+        },
+        {
+          "id": "E12",
+          "primitive": "paragraph",
+          "container": "B02.C4",
+          "copy": "STEP3-P",
+          "text": "Return it to the same desk, clean and complete."
+        }
+      ]
+    },
+    {
+      "id": "B03",
+      "name": "Proof",
+      "type": "fluid_grid",
+      "reuse": "page",
+      "grid": {
+        "columns": 12,
+        "rows": 1
+      },
+      "containers": [
+        {
+          "id": "B03.C1",
+          "span": "cols 1-9",
+          "mobile_order": 1,
+          "flow": "vertical"
+        }
+      ],
+      "elements": [
+        {
+          "id": "E13",
+          "primitive": "headline",
+          "container": "B03.C1",
+          "copy": "PROOF-H",
+          "text": "Over 900 tools. Zero garages required.",
+          "level": 2,
+          "claims": [
+            "C1"
+          ]
+        },
+        {
+          "id": "E14",
+          "primitive": "paragraph",
+          "container": "B03.C1",
+          "copy": "PROOF-P",
+          "text": "Drills, sanders, ladders, pressure washers, sewing machines and the odd carpet cleaner."
+        }
+      ]
+    },
+    {
+      "id": "B04",
+      "name": "Form",
+      "type": "fluid_grid",
+      "reuse": "my_block",
+      "client_component": "Fernwick / Form / Card signup",
+      "saved_as": "Fernwick / Form / Card signup · v01",
+      "grid": {
+        "columns": 12,
+        "rows": 1
+      },
+      "containers": [
+        {
+          "id": "B04.C1",
+          "span": "cols 1-5",
+          "mobile_order": 1,
+          "flow": "vertical"
+        },
+        {
+          "id": "B04.C2",
+          "span": "cols 6-12",
+          "mobile_order": 2,
+          "flow": "vertical"
+        }
+      ],
+      "elements": [
+        {
+          "id": "E15",
+          "primitive": "headline",
+          "container": "B04.C1",
+          "copy": "FORM-H",
+          "text": "Get your card",
+          "level": 2
+        },
+        {
+          "id": "E16",
+          "primitive": "paragraph",
+          "container": "B04.C1",
+          "copy": "FORM-P",
+          "text": "It’s free for Fernwick residents. We’ll email you when it’s ready to collect.",
+          "claims": [
+            "C2",
+            "C4"
+          ]
+        },
+        {
+          "id": "E17",
+          "primitive": "form",
+          "container": "B04.C2",
+          "form": "F01"
+        }
+      ]
+    },
+    {
+      "id": "B05",
+      "name": "Footer",
+      "type": "fluid_grid",
+      "reuse": "global_block",
+      "global": {
+        "name": "GLOBAL · Fernwick / Footer / Legal · v01",
+        "reason": "The mandatory legal line and privacy link must stay identical on every Fernwick page",
+        "owner": "Fernwick communications office (synthetic)",
+        "approved_by": "Fernwick Library (synthetic), 2026-09-24"
+      },
+      "grid": {
+        "columns": 12,
+        "rows": 1
+      },
+      "containers": [
+        {
+          "id": "B05.C1",
+          "span": "cols 1-12",
+          "mobile_order": 1,
+          "flow": "vertical"
+        }
+      ],
+      "elements": [
+        {
+          "id": "E18",
+          "primitive": "paragraph",
+          "container": "B05.C1",
+          "copy": "FOOT",
+          "text": "Fernwick Tool Library is a program of Fernwick Public Library."
+        },
+        {
+          "id": "E19",
+          "primitive": "paragraph",
+          "container": "B05.C1",
+          "copy": "FOOT-LINK",
+          "text": "Privacy policy",
+          "text_link": {
+            "type": "outside_url",
+            "target": "https://fernwick.example/privacy",
+            "new_tab": true
+          }
+        }
+      ]
+    }
+  ],
+  "forms": [
+    {
+      "id": "F01",
+      "packet_fields": [
+        {
+          "label": "First name",
+          "type": "first_name",
+          "required": true
+        },
+        {
+          "label": "Email",
+          "type": "email",
+          "required": true
+        },
+        {
+          "label": "ZIP code",
+          "type": "single_line_text",
+          "required": true
+        },
+        {
+          "label": "I agree to receive my card confirmation by email.",
+          "type": "consent_checkbox",
+          "required": true
+        }
+      ],
+      "fields": [
+        {
+          "label_copy": "F-FIRST",
+          "label": "First name",
+          "type": "first_name",
+          "required": true
+        },
+        {
+          "label_copy": "F-EMAIL",
+          "label": "Email",
+          "type": "email",
+          "required": true
+        },
+        {
+          "label_copy": "F-ZIP",
+          "label": "ZIP code",
+          "type": "single_line_text",
+          "required": true
+        },
+        {
+          "label_copy": "F-CONSENT",
+          "label": "I agree to receive my card confirmation by email.",
+          "type": "consent_checkbox",
+          "required": true
+        }
+      ],
+      "submit": {
+        "copy": "CTA",
+        "text": "Get my card",
+        "aria_label_copy": "F-ARIA"
+      },
+      "after_submit": {
+        "type": "thank_you",
+        "copy": "TY",
+        "text": "You’re in. We’ll email you when your card is ready."
+      },
+      "integration": "OPEN (Q1): the library's email list",
+      "lead_notifications": "OPEN (Q2)"
+    }
+  ],
+  "code": [],
+  "exceptions": [],
+  "settings": {
+    "default_fonts": "headline Fraunces · paragraph Work Sans · button Courier Prime (client layer)",
+    "integrations": [
+      "GA4 through Marketing Tags & Pixels: native integration, not an exception; property ID OPEN (Q3)"
+    ],
+    "cookie_bar": "On (Scripts & Privacy); single processing purpose per the synthetic legal note",
+    "search_social": {
+      "title_copy": "SEO-TITLE",
+      "description_copy": "SEO-DESC",
+      "share_image": "IMG-01 (placeholder; blocks publishing)",
+      "indexing": "off (Instapage default)"
+    },
+    "sticky_bar": "none",
+    "popups": "none"
+  },
+  "constraints": [
+    {
+      "id": "CON-01",
+      "constraint": "Rotation is not a documented native control; the only known route is inline CSS (a component exception)",
+      "affects": "B01 stamp",
+      "route_to": "DesignChamp",
+      "material": false,
+      "status": "RESOLVED",
+      "resolution": "DesignChamp (synthetic), 2026-09-24: unrotated stamp in a bordered container"
+    },
+    {
+      "id": "CON-02",
+      "constraint": "Containers cannot nest, text has no native border, shapes are not allowed in Fluid Grid blocks",
+      "affects": "B01 stamp (drawn as a bordered frame inside B01.C1)",
+      "route_to": "DesignChamp",
+      "material": false,
+      "status": "RESOLVED",
+      "resolution": "DesignChamp (synthetic), 2026-09-24: stamp becomes its own container B01.C3 with a native border; spec updated"
+    },
+    {
+      "id": "CON-03",
+      "constraint": "Per-device font size (72 desktop, 40 mobile) depends on a limited-release setting",
+      "affects": "E01 on mobile",
+      "route_to": "DesignChamp",
+      "material": false,
+      "status": "OPEN",
+      "resolution": "Waiting for INSPECT of the workspace; options: confirm the setting, one size for both, or desktop-only and mobile-only headline copies"
+    }
+  ]
+}

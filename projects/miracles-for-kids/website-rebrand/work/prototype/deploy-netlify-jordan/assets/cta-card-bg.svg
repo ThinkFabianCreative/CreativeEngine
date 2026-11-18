@@ -1,0 +1,18 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="416" height="420.77" viewBox="0 0 416 420.77" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Rectangle 11">
+<use xlink:href="#stroke0_0_4" fill="white"/>
+<use xlink:href="#stroke0_0_4" fill="url(#paint0_radial_0_4)" fill-opacity="0.1"/>
+<use xlink:href="#stroke0_0_4" fill="url(#paint1_radial_0_4)" fill-opacity="0.2"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_0_4" cx="0" cy="0" r="1" gradientTransform="matrix(-126.651 194 -182.06 -98.9653 383.85 34)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF595E"/>
+<stop offset="1" stop-color="#FF595E" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint1_radial_0_4" cx="0" cy="0" r="1" gradientTransform="matrix(216.768 -173.5 171.439 225.671 22.4075 414)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#5DA7E5"/>
+<stop offset="1" stop-color="#5DA7E5" stop-opacity="0"/>
+</radialGradient>
+<path id="stroke0_0_4" d="M3.69694 21.5098C3.95779 13.2658 10.4239 6.65196 18.6597 6.20139C52.5395 4.3479 139.141 -1.89967e-10 206.012 0C273.093 1.90566e-10 362.866 4.37534 397.714 6.21883C406.04 6.65928 412.546 13.3924 412.72 21.7281C413.386 53.5037 414.94 132.685 415.817 218.751C416.675 302.925 414.299 374.128 413.078 404.082C412.73 412.593 405.73 419.244 397.212 419.244C363.063 419.244 277.615 419.244 206.012 419.244C135.094 419.244 52.4063 420.292 18.4414 420.769C9.67019 420.892 2.47728 413.993 2.27796 405.223C1.5447 372.96 0 296.255 0 222.614C0 146.368 2.60208 56.1116 3.69694 21.5098Z"/>
+</defs>
+</svg>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MFK landing v4 motion audit — 2026-10-29</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+ --ink:oklch(0.18 0.006 255);--ink-2:oklch(0.22 0.007 255);--line:oklch(0.32 0.008 255);
+ --paper:oklch(0.95 0.004 255);--paper-dim:oklch(0.72 0.008 255);
+ --accent:var(--paper);--accent-soft:var(--paper-dim);--accent-tint:oklch(0.95 0.004 255 / .06);
+ --crit:oklch(0.655 0.185 25);--imp:oklch(0.805 0.125 78);--opp:oklch(0.745 0.135 152);
+ --t-good:oklch(0.745 0.135 152);--t-mid:oklch(0.805 0.125 78);--t-slow:oklch(0.655 0.185 25);
+ --bg:var(--ink-2);--fg:var(--paper);--border:var(--line);--loop-dim:var(--paper-dim);
+ --display:"Familjen Grotesk",system-ui,sans-serif;--sans:"Public Sans",system-ui,sans-serif;--mono:"Geist Mono",ui-monospace,Menlo,monospace;
+}
+:root:has(#theme-light:checked){
+ --ink:oklch(0.985 0.002 255);--ink-2:oklch(0.955 0.004 255);--line:oklch(0.86 0.006 255);
+ --paper:oklch(0.22 0.008 255);--paper-dim:oklch(0.45 0.01 255);--accent-tint:oklch(0.22 0.008 255 / .05);
+ --crit:oklch(0.55 0.19 25);--imp:oklch(0.62 0.13 78);--opp:oklch(0.55 0.13 152);
+ --t-good:oklch(0.55 0.13 152);--t-mid:oklch(0.62 0.13 78);--t-slow:oklch(0.55 0.19 25);
+}
+*{box-sizing:border-box;margin:0}
+body{background:var(--ink);color:var(--paper);font:400 16px/1.6 var(--sans)}
+.wrap{max-width:1080px;margin:auto;padding:32px 16px 80px}
+.theme-switch{display:flex;justify-content:flex-end}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;font:500 12px var(--mono)}
+.seg input{position:absolute;opacity:0}.seg label{padding:4px 12px;border-radius:999px;cursor:pointer;color:var(--paper-dim)}
+.seg input:checked+label{background:var(--accent-tint);color:var(--paper);outline:1px solid var(--line)}
+.eyebrow,.mono-label{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--paper-dim)}
+.title{font:700 clamp(30px,5vw,48px)/1.08 var(--display);margin:12px 0}
+.lede{color:var(--paper-dim);max-width:720px}
+.meta-row{font:400 13px var(--mono);color:var(--paper-dim);margin-top:12px}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.stats a{display:flex;gap:8px;align-items:baseline;padding:12px 16px;border:1px solid var(--line);border-radius:12px;text-decoration:none;color:var(--paper)}
+.stats b{font:700 26px var(--display)}.stats span{font:500 12px var(--mono);color:var(--paper-dim)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.c{background:var(--crit)}.i{background:var(--imp)}.o{background:var(--opp)}
+section{margin-top:48px}
+h2{font:600 22px var(--display);margin:6px 0 16px}
+.assessment p{font:500 clamp(18px,2.2vw,22px)/1.5 var(--display)}
+table{width:100%;border-collapse:collapse;font-size:15px}
+td,th{text-align:left;padding:12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 12px var(--mono);color:var(--paper-dim);text-transform:uppercase}
+.chip{font:500 11px var(--mono);border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;color:var(--paper-dim)}
+.timing svg{width:100%;height:auto;display:block}
+.timing .z-g{fill:var(--t-good);opacity:.12}.timing .z-m{fill:var(--t-mid);opacity:.14}.timing .z-s{fill:var(--t-slow);opacity:.14}
+.timing .ax{stroke:var(--line)}.timing text{fill:var(--paper-dim);font:500 11px var(--mono)}
+.timing .d{stroke:var(--ink);stroke-width:2}.timing .d.g{fill:var(--t-good)}.timing .d.m{fill:var(--t-mid)}.timing .d.s{fill:var(--t-slow)}
+.timing .d.none{fill:none;stroke:var(--paper-dim);stroke-dasharray:3 2}
+.timing .n{fill:var(--ink);font:700 10px var(--mono);text-anchor:middle}
+.keylist{columns:2;column-gap:32px;font:400 13px var(--mono);color:var(--paper-dim);margin-top:12px;padding-left:18px}
+@media (max-width:700px){.keylist{columns:1}}
+.lens-sec{border-top:1px solid var(--line);padding-top:24px}
+.lens-sec__head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.lens-sec__head h3{font:600 22px var(--display)}
+.lens-block{margin-top:20px}.lens-block>h4{font:500 12px var(--mono);text-transform:uppercase;color:var(--paper-dim);margin-bottom:8px}
+.lens-list{list-style:none;padding:0}.lens-list li{padding:6px 0 6px 26px;position:relative}
+.lens-list.good li::before{content:"✓";position:absolute;left:4px;color:var(--opp)}
+.lens-list.opp li::before{content:"💡";position:absolute;left:0}
+code{font:400 13px var(--mono);background:var(--accent-tint);padding:1px 5px;border-radius:4px}
+.finding-row{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:20px;border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px;transition:border-color .2s ease}
+.finding-row:hover{border-color:var(--paper-dim)}
+@media (max-width:820px){.finding-row{grid-template-columns:1fr}}
+.finding-row h5{font:600 17px var(--display);margin-bottom:6px}
+.sev{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.sev.c{background:none;color:var(--crit)}.sev.i{background:none;color:var(--imp)}
+.rec{margin-top:10px;font-size:14px}.rec pre{white-space:pre-wrap;font:400 12.5px/1.5 var(--mono);background:var(--accent-tint);padding:10px;border-radius:8px;margin-top:6px}
+.where{font:400 12.5px var(--mono);color:var(--paper-dim)}
+.demo{border:1px solid var(--border);border-radius:12px;background:var(--bg);min-height:170px;display:grid;grid-template-rows:auto 1fr;overflow:hidden}
+.demo__bar{display:flex;justify-content:space-between;padding:8px 12px;border-bottom:1px solid var(--border);font:500 11px var(--mono);color:var(--loop-dim)}
+.demo__stage{display:grid;grid-template-columns:1fr 1fr;align-items:center;justify-items:center;padding:16px;gap:12px}
+.demo__col{display:grid;gap:8px;justify-items:center;font:500 11px var(--mono);color:var(--loop-dim)}
+.lens-take{margin-top:20px;padding:14px 16px;border-left:3px solid var(--line);background:var(--accent-tint);border-radius:0 10px 10px 0}
+.rec-table td:first-child{white-space:nowrap}
+footer{margin-top:64px;font:400 12px var(--mono);color:var(--paper-dim)}
+
+/* ---- per-finding demos (n = position across the report) ---- */
+/* 1: reduced-motion leak on page turn */
+.demo-card-1__motion-target{width:90px;height:56px;border-radius:12px;background:var(--fg);opacity:.85}
+.demo-card-1__motion-target.bad{animation:motion-1-bad 3s infinite}
+@keyframes motion-1-bad{0%{transform:none;opacity:.85}20%{transform:translateX(-24px);opacity:0}21%{transform:translateX(24px);opacity:0}45%,100%{transform:none;opacity:.85}}
+/* 2: filter snap vs fade */
+.demo-card-2__motion-target{display:grid;grid-template-columns:repeat(3,22px);gap:5px}
+.demo-card-2__motion-target i{height:22px;border-radius:6px;background:var(--fg);opacity:.8}
+.demo-card-2__motion-target.bad i:nth-child(2n){animation:motion-2-bad 3s infinite steps(1)}
+.demo-card-2__motion-target.good i:nth-child(2n){animation:motion-2-good 3s infinite}
+@keyframes motion-2-bad{0%{opacity:.8}33%{opacity:0}66%,100%{opacity:.8}}
+@keyframes motion-2-good{0%{opacity:.8;transform:none}22%,40%{opacity:0;transform:scale(.92)}62%,100%{opacity:.8;transform:none}}
+/* 3: amounts overshoot + flex-grow vs no-bounce transform */
+.demo-card-3__motion-target{width:54px;height:30px;border-radius:8px;background:var(--fg);opacity:.85}
+.demo-card-3__motion-target.bad{animation:motion-3-bad 3s infinite}
+.demo-card-3__motion-target.good{animation:motion-3-good 3s infinite}
+@keyframes motion-3-bad{0%{width:54px;border-radius:8px}10%{width:76px;border-radius:15px}14%{width:68px}18%{width:72px;border-radius:15px}66%{width:70px;border-radius:15px}100%{width:54px;border-radius:8px}}
+@keyframes motion-3-good{0%{transform:none;border-radius:8px}12%{transform:scaleX(1.12);border-radius:15px}66%{transform:scaleX(1.12);border-radius:15px}100%{transform:none;border-radius:8px}}
+/* 4: keyboard focus lift vs static ring */
+.demo-card-4__motion-target{width:80px;height:56px;border-radius:14px 14px 14px 30px;background:var(--fg);opacity:.85}
+.demo-card-4__motion-target.bad{animation:motion-4-bad 3s infinite}
+.demo-card-4__motion-target.good{animation:motion-4-good 3s infinite steps(1)}
+@keyframes motion-4-bad{0%{transform:none}20%,66%{transform:translateY(-6px)}100%{transform:none}}
+@keyframes motion-4-good{0%{outline:0 solid transparent}20%,66%{outline:3px solid var(--fg);outline-offset:3px}100%{outline:0 solid transparent}}
+/* 5: pop-out exit equal to enter vs quicker exit */
+.demo-card-5__motion-target{width:96px;height:44px;border-radius:14px;background:var(--fg);opacity:.85}
+.demo-card-5__motion-target.bad{animation:motion-5-bad 3s infinite}
+.demo-card-5__motion-target.good{animation:motion-5-good 3s infinite}
+@keyframes motion-5-bad{0%{transform:translateY(50px);opacity:0}20%,46%{transform:none;opacity:.85}66%{transform:translateY(50px);opacity:0}100%{transform:none;opacity:.85}}
+@keyframes motion-5-good{0%{transform:translateY(50px);opacity:0}20%,46%{transform:none;opacity:.85}53%{transform:translateY(12px);opacity:0}66%{transform:translateY(12px);opacity:0}100%{transform:none;opacity:.85}}
+/* 6: lightbox snap vs scale-in */
+.demo-card-6__motion-target{width:100px;height:58px;border-radius:12px;background:var(--fg);opacity:.85}
+.demo-card-6__motion-target.bad{animation:motion-6-bad 3s infinite steps(1)}
+.demo-card-6__motion-target.good{animation:motion-6-good 3s infinite}
+@keyframes motion-6-bad{0%,33%{opacity:0}34%,100%{opacity:.85}}
+@keyframes motion-6-good{0%,25%{opacity:0;transform:scale(.96)}36%,100%{opacity:.85;transform:none}}
+/* 7: mini to full snap vs height reveal */
+.demo-card-7__motion-target{width:110px;border-radius:12px;background:var(--fg);opacity:.85;height:24px}
+.demo-card-7__motion-target.bad{animation:motion-7-bad 3s infinite steps(1)}
+.demo-card-7__motion-target.good{animation:motion-7-good 3s infinite}
+@keyframes motion-7-bad{0%,33%{height:24px}34%,100%{height:64px}}
+@keyframes motion-7-good{0%,25%{clip-path:inset(0 0 62% 0 round 12px);height:64px}45%,100%{clip-path:inset(0 0 0 0 round 12px);height:64px}}
+/* 8: uniform reveal on text vs reveal on media only */
+.demo-card-8__motion-target{display:grid;gap:6px;width:110px}
+.demo-card-8__motion-target i{height:8px;border-radius:4px;background:var(--fg);opacity:.8}
+.demo-card-8__motion-target b{height:34px;border-radius:10px;background:var(--fg);opacity:.8}
+.demo-card-8__motion-target.bad>*{animation:motion-8 3s infinite}
+.demo-card-8__motion-target.good b{animation:motion-8 3s infinite}
+@keyframes motion-8{0%{opacity:0;transform:translateY(14px)}30%,100%{opacity:.8;transform:none}}
+@media (prefers-reduced-motion:reduce){[class*="__motion-target"],[class*="__motion-target"] *{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="theme-switch"><div class="seg" role="radiogroup" aria-label="Theme"><input type="radio" name="t" id="theme-dark" checked><label for="theme-dark">Dark</label><input type="radio" name="t" id="theme-light"><label for="theme-light">Light</label></div></div>
+
+<header>
+ <p class="eyebrow">Motion audit · design-motion-principles</p>
+ <h1 class="title">MFK landing v4: the personality is right, but the springs bounce in the wrong places</h1>
+ <p class="lede">Miracles for Kids charity landing prototype. Stories first, Donate and Volunteer as the calls to action, and components built on M3 Expressive. Audited in code with one browser pass, and nothing in the prototype was changed.</p>
+ <p class="meta-row">Static HTML/CSS/JS · CSS transitions, Web Animations API, scroll-linked JS parallax · <code>work/prototype/v4/index.html</code> · weighting: Jakub primary, Jhey secondary, Emil selective</p>
+ <nav class="stats" aria-label="Finding counts">
+  <a href="#rec-crit"><b>4</b><span><span class="dot c"></span>Critical</span></a>
+  <a href="#rec-imp"><b>4</b><span><span class="dot i"></span>Important</span></a>
+  <a href="#rec-opp"><b>6</b><span><span class="dot o"></span>Opportunities</span></a>
+ </nav>
+</header>
+
+<section class="assessment"><p class="mono-label">Overall</p>
+<p>The motion vocabulary fits the brand. Shapes that morph, a parallax that makes the blob and heart feel physical, and springy controls all suit a warm, kid-centred charity. Two things undercut it. First, the overshoot spring is used everywhere, including the donation controls people tap repeatedly, where bounce feels like wobble rather than joy. Second, the most important content changes snap with no transition: filtering stories, opening a video and expanding the donation form. One animation also ignores reduced motion. The fix is not less motion. Put the bounce where delight belongs, and smooth the transitions that are missing.</p></section>
+
+<section><p class="mono-label">01 · Lens summary</p><h2>Three readings</h2>
+<table><thead><tr><th>Lens</th><th>Verdict</th><th>One-line read</th></tr></thead><tbody>
+<tr><td>Jakub Krehel <span class="chip">Primary</span></td><td><span class="dot i"></span>Concern</td><td>The polish is there, but key state changes snap, exits are as loud as entrances, and every section fades in the same way.</td></tr>
+<tr><td>Jhey Tompkins <span class="chip">Secondary</span></td><td><span class="dot o"></span>Strong</td><td>The shapes, parallax and morphing give it real character. The best delight moments, a successful gift and a newsletter sign-up, have no motion yet.</td></tr>
+<tr><td>Emil Kowalski <span class="chip">Selective</span></td><td><span class="dot c"></span>Problem</td><td>The controls people use most bounce, animate layout and lift on keyboard focus. One animation runs even when reduced motion is on.</td></tr>
+</tbody></table></section>
+
+<section class="timing"><p class="mono-label">02 · Where the timings land</p><h2>Duration budget</h2>
+<svg viewBox="0 0 660 300" role="img" aria-label="Animation durations plotted on a 0 to 1200 millisecond scale">
+ <rect class="z-g" x="40" y="20" width="200" height="240"/><rect class="z-m" x="240" y="20" width="200" height="240"/><rect class="z-s" x="440" y="20" width="200" height="240"/>
+ <line class="ax" x1="40" y1="260" x2="640" y2="260"/>
+ <text x="40" y="280">0</text><text x="230" y="280">300ms</text><text x="430" y="280">600ms</text><text x="600" y="280">1200ms</text>
+ <text x="48" y="36">instant / responsive</text><text x="248" y="36">deliberate</text><text x="448" y="36">sluggish</text>
+ <!-- x: 0-300ms maps 40-240, 300-600 maps 240-440, 600-1200 maps 440-640 -->
+ <circle class="d none" cx="40" cy="70" r="10"/><text class="n" x="40" y="74" style="fill:var(--paper-dim)">1</text>
+ <circle class="d none" cx="40" cy="100" r="10"/><text class="n" x="40" y="104" style="fill:var(--paper-dim)">2</text>
+ <circle class="d none" cx="40" cy="130" r="10"/><text class="n" x="40" y="134" style="fill:var(--paper-dim)">3</text>
+ <circle class="d none" cx="40" cy="160" r="10"/><text class="n" x="40" y="164" style="fill:var(--paper-dim)">4</text>
+ <circle class="d g" cx="160" cy="70" r="10"/><text class="n" x="160" y="74">5</text>
+ <circle class="d g" cx="213" cy="100" r="10"/><text class="n" x="213" y="104">6</text>
+ <circle class="d m" cx="273" cy="70" r="10"/><text class="n" x="273" y="74">7</text>
+ <circle class="d m" cx="307" cy="130" r="10"/><text class="n" x="307" y="134">8</text>
+ <circle class="d m" cx="340" cy="100" r="10"/><text class="n" x="340" y="104">9</text>
+ <circle class="d m" cx="373" cy="160" r="10"/><text class="n" x="373" y="164">10</text>
+ <circle class="d m" cx="440" cy="190" r="10"/><text class="n" x="440" y="194">11</text>
+ <circle class="d s" cx="473" cy="220" r="10"/><text class="n" x="473" y="224">12</text>
+ <circle class="d s" cx="640" cy="190" r="10"/><text class="n" x="640" y="194">13</text>
+</svg>
+<ol class="keylist">
+ <li>Story filter show/hide · none</li><li>Video lightbox open/close · none</li><li>Pop-out mini → full · none</li><li>One-time heading swap · none</li>
+ <li>Mosaic page-out · 180ms ease-in</li><li>Mosaic page-in · 260ms</li><li>Button and chip morph · 350ms overshoot</li><li>Amounts flex-grow + morph · 400ms M3 spatial (overshoot)</li>
+ <li>Tile and card hover lift · 450ms overshoot</li><li>Switch thumb · 500ms M3 spatial</li><li>Pop-out enter and exit · 600ms M3 spatial (same both ways)</li><li>Section reveal · 700ms, 26 elements</li><li>Stat count-up · 1200ms</li>
+</ol>
+<p style="margin-top:14px"><b>What's off.</b> The four hollow dots at zero are the most important state changes on the page, and none of them has a transition. Meanwhile, the high-frequency controls (dots 7, 8 and 10) sit in the deliberate band with overshoot, so a single tap on an amount takes about half a second to settle. The section reveal (12) is long and applied to 26 elements, including headings and paragraphs. The count-up (13) is long, but it runs once per visit and is fine.</p>
+</section>
+
+<section class="lens-sec" id="jakub"><div class="lens-sec__head"><h3>Jakub Krehel — Production Polish</h3><span class="chip">Primary</span></div>
+<p class="lens-sec__verdict"><span class="dot i"></span>Concern: the polish is there, but uneven.</p>
+<div class="lens-block"><h4>What's working well</h4><ul class="lens-list good">
+ <li>The pop-out uses an effects curve for opacity and a spatial curve for position (<code>--m3-spring-effects</code> / <code>--m3-spring-spatial</code>). Splitting them like this is the right instinct.</li>
+ <li>The mosaic page turn has an asymmetric exit and enter (180ms ease-in out, 260ms decelerate in), with a direction-aware 24px shift.</li>
+ <li>The parallax uses <code>translate</code> on a rAF-throttled scroll and skips offscreen layers. It only moves compositor-friendly properties, and the background photos are oversized (<code>inset:-12% 0</code>) so no edges show.</li>
+ <li>Hover states all have transitions, with no instant colour flips.</li>
+</ul></div>
+<div class="lens-block"><h4>Issues to address</h4>
+ <div class="finding-row" id="f2"><div><p class="sev c">Critical · motion gap</p><h5>Story filters snap tiles in and out</h5><p>The primary content area changes with no transition. Choosing a filter sets <code>display:none</code> on tiles, so the grid reflows in one frame and the visitor loses track of which stories stayed.</p><p class="where">index.html · <code>.tile.hide{display:none}</code> · <code>render()</code></p>
+ <div class="rec">Wrap the change in a View Transition so the remaining tiles glide to their new positions, and fade the leaving tiles out with a slight scale.<pre>const swap=()=>render();
+document.startViewTransition ? document.startViewTransition(swap) : swap();
+/* CSS */ .tile{view-transition-name:var(--vt)}  /* set --vt per tile: t1…t7 */
+::view-transition-old(*){animation:180ms ease-in both fadeOut}
+::view-transition-group(*){animation-duration:320ms;animation-timing-function:cubic-bezier(.2,.7,.2,1)}</pre></div></div>
+ <div class="demo"><div class="demo__bar"><span>filter change</span><span>loop</span></div><div class="demo__stage"><div class="demo__col"><div class="demo-card-2__motion-target bad"><i></i><i></i><i></i><i></i><i></i><i></i></div>now</div><div class="demo__col"><div class="demo-card-2__motion-target good"><i></i><i></i><i></i><i></i><i></i><i></i></div>suggested</div></div></div></div>
+
+ <div class="finding-row" id="f5"><div><p class="sev i">Important · exits</p><h5>The pop-out leaves as loudly as it arrives</h5><p>Closing it replays the same 600ms spring in reverse, a full 100% + 48px drop. The visitor has decided to dismiss it, so the exit should get out of the way faster and travel less.</p><p class="where"><code>.give</code> and <code>.give.open</code> transitions</p>
+ <div class="rec">Keep the spring on enter. Use a short eased exit with a small drop.<pre>.give{transform:translateY(12px) scale(.98);opacity:0;visibility:hidden;
+ transition:transform .2s ease-in,opacity .16s ease-in,visibility 0s .2s}
+.give.open{transform:none;opacity:1;visibility:visible;
+ transition:transform .6s var(--m3-spring-spatial),opacity .25s var(--m3-spring-effects)}</pre></div></div>
+ <div class="demo"><div class="demo__bar"><span>enter, then dismiss</span><span>loop</span></div><div class="demo__stage"><div class="demo__col"><div class="demo-card-5__motion-target bad"></div>now</div><div class="demo__col"><div class="demo-card-5__motion-target good"></div>suggested</div></div></div></div>
+
+ <div class="finding-row" id="f6"><div><p class="sev i">Important · motion gap</p><h5>The video lightbox appears and disappears instantly</h5><p><code>showModal()</code> and <code>close()</code> have no transition, so the backdrop and player pop into place. It's the one moment where the page asks people to watch a story, and it arrives with a jolt.</p><p class="where"><code>.vbox</code> · <code>vbox.showModal()</code></p>
+ <div class="rec">Use <code>@starting-style</code> for a 220ms scale-and-fade in, with a 150ms exit.<pre>.vbox{opacity:0;transform:scale(.96);transition:opacity .15s ease-in,transform .15s ease-in,display .15s allow-discrete,overlay .15s allow-discrete}
+.vbox[open]{opacity:1;transform:none;transition-duration:.22s;transition-timing-function:cubic-bezier(.2,.7,.2,1)}
+@starting-style{.vbox[open]{opacity:0;transform:scale(.96)}}</pre></div></div>
+ <div class="demo"><div class="demo__bar"><span>open video</span><span>loop</span></div><div class="demo__stage"><div class="demo__col"><div class="demo-card-6__motion-target bad"></div>now</div><div class="demo__col"><div class="demo-card-6__motion-target good"></div>suggested</div></div></div></div>
+
+ <div class="finding-row" id="f7"><div><p class="sev i">Important · motion gap</p><h5>The donation bar jumps to full size</h5><p>Tapping "Choose an amount" swaps <code>display:none</code> on the switch, amounts and button, so the card grows about 110px in one frame. It is the conversion moment, and it should open like a drawer.</p><p class="where"><code>.give.mini>…{display:none}</code></p>
+ <div class="rec">Put the three rows in one wrapper and animate <code>grid-template-rows</code> from 0fr to 1fr. That transition is height-safe, can be interrupted, and needs no measuring.<pre>.give-body{display:grid;grid-template-rows:1fr;transition:grid-template-rows .32s cubic-bezier(.2,.7,.2,1)}
+.give.mini .give-body{grid-template-rows:0fr}
+.give-body>div{overflow:hidden;display:flex;flex-direction:column;gap:12px}</pre></div></div>
+ <div class="demo"><div class="demo__bar"><span>mini → full</span><span>loop</span></div><div class="demo__stage"><div class="demo__col"><div class="demo-card-7__motion-target bad"></div>now</div><div class="demo__col"><div class="demo-card-7__motion-target good"></div>suggested</div></div></div></div>
+
+ <div class="finding-row" id="f8"><div><p class="sev i">Important · uniformity</p><h5>Every block fades up the same way, headings and paragraphs included</h5><p>26 elements share one 700ms <code>opacity + translateY(24px)</code> reveal: the hero text, every <code>h2</code>, lead paragraphs, stat cards, the logo wall and every card. When everything moves, nothing is emphasised, and the text arrives later than it should.</p><p class="where"><code>.reveal</code> × 26</p>
+ <div class="rec">Remove the reveal from headings, lead paragraphs, the hero text and the filters. Keep it on media and cards, shortened to 500ms with a 12px rise, and stagger the four stat cards by 60ms as the one deliberate moment.</div></div>
+ <div class="demo"><div class="demo__bar"><span>section enters view</span><span>loop</span></div><div class="demo__stage"><div class="demo__col"><div class="demo-card-8__motion-target bad"><i></i><i style="width:70%"></i><b></b></div>now</div><div class="demo__col"><div class="demo-card-8__motion-target good"><i></i><i style="width:70%"></i><b></b></div>suggested</div></div></div></div>
+</div>
+<div class="lens-block"><h4>Opportunities</h4><ul class="lens-list opp">
+ <li>The one-time heading swap changes the text instantly. Crossfade only the words that change (120ms out, 180ms in), and let the script word <em>miracle.</em> stay put. · <code>give-h innerHTML</code></li>
+ <li>The empty-state panel for filters appears in one frame. Reusing the tile enter (fade plus 0.96 scale) would fix it. · <code>.empty</code></li>
+</ul></div>
+<p class="lens-take"><b>Through Jakub's lens:</b> the craft is good where it exists. Fill the four zero-duration gaps, quieten the exits, and stop animating text, and the page will feel considered rather than decorated.</p>
+</section>
+
+<section class="lens-sec" id="jhey"><div class="lens-sec__head"><h3>Jhey Tompkins — Experimentation &amp; Delight</h3><span class="chip">Secondary</span></div>
+<p class="lens-sec__verdict"><span class="dot o"></span>Strong: the personality is earned.</p>
+<div class="lens-block"><h4>What's working well</h4><ul class="lens-list good">
+ <li>Parallax on the hero blob, heart and close-section shapes, with layers moving at opposite speeds, makes the Figma shapes feel like objects rather than flat decoration.</li>
+ <li>The shape morph on press (pill to rounded square) and the play button turning into a squircle on hover are small, ownable signatures.</li>
+ <li>The M3 spring is written as a pure CSS <code>linear()</code> curve, with no JS physics library. That's exactly the right tool.</li>
+ <li>The asymmetric tile corners and two-tone shapes are left untouched by any motion, so the brand silhouette holds still while controls move.</li>
+</ul></div>
+<div class="lens-block"><h4>Opportunities</h4><ul class="lens-list opp">
+ <li><b>Celebrate the gift.</b> Submitting a donation is the rarest, most meaningful action on the page, and right now it only swaps text. A heart could pop out of the Give button and arc up with the M3 spring, with three small sun-coloured shapes scattering. Run it once, keep it under 900ms, and skip it under reduced motion. · <code>#give onsubmit</code></li>
+ <li><b>Newsletter success</b> is another rare moment. The orange close circle could drift slightly and the heart could beat once. · <code>.news form</code></li>
+ <li><b>Move the parallax to the compositor.</b> Use <code>animation-timeline: view()</code> with <code>@supports</code>, and keep the JS as a fallback. It's smoother on low-end phones and uses less code. · <code>[data-speed]</code></li>
+ <li><b>Morph the program crops on hover.</b> Each crop could ease its clip-path towards its neighbour's shape (oval to pebble, arch to heart). This uses M3's shape morph on content rather than controls, and it would be the most distinctive moment on the page. · <code>.prog .crop</code></li>
+</ul></div>
+<p class="lens-take"><b>Through Jhey's lens:</b> the page has a voice. Now give the two rare, emotional moments, giving and signing up, a moment of joy. That's where bounce belongs, not on the amount buttons.</p>
+</section>
+
+<section class="lens-sec" id="emil"><div class="lens-sec__head"><h3>Emil Kowalski — Restraint &amp; Speed</h3><span class="chip">Selective: forms, nav, frequent controls</span></div>
+<p class="lens-sec__verdict"><span class="dot c"></span>Problem, in a narrow scope.</p>
+<div class="lens-block"><h4>What's working well</h4><ul class="lens-list good">
+ <li>The global <code>prefers-reduced-motion</code> rule removes CSS animations and transitions, the parallax checks the media query itself, and the count-up is guarded.</li>
+ <li>Esc and the close button dismiss the pop-out, menu and lightbox instantly, without waiting for an animation.</li>
+ <li>All the motion uses transform, opacity, border-radius or clip-path, except one case (below).</li>
+</ul></div>
+<div class="lens-block"><h4>Issues to address</h4>
+ <div class="finding-row" id="f1"><div><p class="sev c">Critical · accessibility</p><h5>The story page turn ignores reduced motion</h5><p><code>turn()</code> calls <code>mosaic.animate()</code> directly. The Web Animations API isn't covered by the CSS kill-switch, so visitors who asked for reduced motion still see the grid slide sideways on every Prev/Next.</p><p class="where">index.html · <code>function turn(d)</code></p>
+ <div class="rec">Gate it like the count-up is gated, and change the content immediately.<pre>const still=matchMedia('(prefers-reduced-motion: reduce)');
+function turn(d){page+=d;if(still.matches){rotate(d);render();return;}
+ mosaic.animate(…)…}</pre></div></div>
+ <div class="demo"><div class="demo__bar"><span>reduced motion on · Next</span><span>loop</span></div><div class="demo__stage"><div class="demo__col"><div class="demo-card-1__motion-target bad"></div>now (still slides)</div><div class="demo__col"><div class="demo-card-1__motion-target"></div>suggested (static swap)</div></div></div></div>
+
+ <div class="finding-row" id="f3"><div><p class="sev c">Critical · high-frequency + layout</p><h5>The donation amounts bounce and animate flex-grow</h5><p>Every tap on an amount animates <code>flex-grow</code> (a layout property that reflows all six buttons) on the overshooting spatial spring, so the row wobbles for about 400ms. People tap several amounts while deciding, so the wobble repeats. The frequency switch thumb overshoots too.</p><p class="where"><code>.give .amounts button</code> · <code>.give .toggle::before</code></p>
+ <div class="rec">Drop <code>flex-grow</code>. Show the selection with fill, shape morph and a small <code>scale</code>, using a no-bounce curve at about 200ms. Keep the overshoot spring for rare moments.<pre>--m3-spring-fast:cubic-bezier(.2,.8,.2,1);
+.give .amounts button{transition:border-radius .2s var(--m3-spring-fast),transform .2s var(--m3-spring-fast),background .15s,color .15s}
+.give .amounts button[aria-pressed=true]{transform:scale(1.06);border-radius:999px}
+.give .toggle::before{transition:transform .24s var(--m3-spring-fast)}</pre></div></div>
+ <div class="demo"><div class="demo__bar"><span>select an amount</span><span>loop</span></div><div class="demo__stage"><div class="demo__col"><div class="demo-card-3__motion-target bad"></div>now</div><div class="demo__col"><div class="demo-card-3__motion-target good"></div>suggested</div></div></div></div>
+
+ <div class="finding-row" id="f4"><div><p class="sev c">Critical · keyboard-initiated</p><h5>Keyboard focus lifts tiles and cards</h5><p>The focus states added in the last pass mirror the hover lift (<code>translateY(-4px/-6px)</code> on <code>:focus-visible</code>). Tabbing through seven tiles and eight cards makes the page jump on every keystroke. Keyboard navigation should never animate.</p><p class="where"><code>.tile:focus-visible</code>, <code>.icard:focus-visible</code>, <code>.ev:focus-visible</code>, <code>.prog:focus-visible .crop</code></p>
+ <div class="rec">On focus, show the static outline with no transform, and keep the lift for the pointer only.<pre>.tile:focus-visible,.icard:focus-visible,.ev:focus-visible{transform:none;transition:none;box-shadow:none}
+@media (hover:hover){.tile:hover{transform:translateY(-4px)}}</pre></div></div>
+ <div class="demo"><div class="demo__bar"><span>tab onto a card</span><span>loop</span></div><div class="demo__stage"><div class="demo__col"><div class="demo-card-4__motion-target bad"></div>now</div><div class="demo__col"><div class="demo-card-4__motion-target good"></div>suggested</div></div></div></div>
+</div>
+<div class="lens-block"><h4>Opportunities</h4><ul class="lens-list opp">
+ <li>Use one spring vocabulary. The legacy <code>--spring</code> (a 1.56 overshoot cubic-bezier) still drives the nav underline, chips, play buttons and card lifts, beside the M3 spatial and effects curves. Define three tokens (spatial-playful, spatial-fast and effects) and map every transition to one of them. · <code>:root</code></li>
+ <li>Rapid Prev/Next clicks stack Web Animations and rotations. Cancel the in-flight animation before starting a new one so the turn can be interrupted. · <code>turn()</code></li>
+</ul></div>
+<p class="lens-take"><b>Through Emil's lens:</b> on a landing page, most motion can be generous. The donation controls and keyboard paths are the exceptions. Make them fast, flat and honest to reduced motion, and spend the bounce somewhere it won't be repeated.</p>
+</section>
+
+<section><p class="mono-label">06 · Recommendations</p><h2>All findings in one place</h2>
+<h3 id="rec-crit" style="font:600 16px var(--display);margin:18px 0 8px"><span class="dot c"></span>Critical</h3>
+<table class="rec-table"><tbody>
+<tr><td>1</td><td>Gate the <code>turn()</code> Web Animations behind <code>prefers-reduced-motion</code></td><td>Emil</td></tr>
+<tr><td>2</td><td>Animate story filtering, with remaining tiles gliding and leaving tiles fading out (View Transitions)</td><td>Jakub</td></tr>
+<tr><td>3</td><td>Amounts: drop the <code>flex-grow</code> animation and the overshoot, and use a 200ms no-bounce scale plus morph. Same for the switch thumb</td><td>Emil</td></tr>
+<tr><td>4</td><td>Remove the transform from <code>:focus-visible</code> on tiles, cards, events and program crops</td><td>Emil</td></tr>
+</tbody></table>
+<h3 id="rec-imp" style="font:600 16px var(--display);margin:18px 0 8px"><span class="dot i"></span>Important</h3>
+<table class="rec-table"><tbody>
+<tr><td>5</td><td>Pop-out exit: 200ms ease-in, 12px drop; keep the spring for the enter</td><td>Jakub</td></tr>
+<tr><td>6</td><td>Lightbox: scale-and-fade enter at 220ms and exit at 150ms, using <code>@starting-style</code></td><td>Jakub</td></tr>
+<tr><td>7</td><td>Mini to full donation card: a <code>grid-template-rows</code> drawer at 320ms</td><td>Jakub</td></tr>
+<tr><td>8</td><td>Reveal on media and cards only, at 500ms with a 12px rise; nothing on headings or paragraphs; one 60ms stagger on the stats</td><td>Jakub</td></tr>
+</tbody></table>
+<h3 id="rec-opp" style="font:600 16px var(--display);margin:18px 0 8px"><span class="dot o"></span>Opportunities</h3>
+<table class="rec-table"><tbody>
+<tr><td>9</td><td>A celebration when a donation is submitted (heart pop and sun shapes, once, under 900ms)</td><td>Jhey</td></tr>
+<tr><td>10</td><td>Newsletter success micro-moment</td><td>Jhey</td></tr>
+<tr><td>11</td><td>Program crops morph towards a neighbouring shape on hover</td><td>Jhey</td></tr>
+<tr><td>12</td><td>Scroll-driven CSS parallax (<code>animation-timeline</code>) with the JS as a fallback</td><td>Jhey</td></tr>
+<tr><td>13</td><td>One spring token system (spatial-playful, spatial-fast, effects)</td><td>Emil</td></tr>
+<tr><td>14</td><td>Interruptible page turn, plus a crossfade on the heading swap and empty state</td><td>Emil · Jakub</td></tr>
+</tbody></table>
+</section>
+
+<section><p class="mono-label">07 · Lens reference</p><h2>How each lens was used</h2>
+<table><tbody>
+<tr><td>Jakub Krehel</td><td>Production polish: subtle enters, subtler exits, no gaps in state changes. Primary, because this is client-facing work that has to read as trustworthy.</td></tr>
+<tr><td>Jhey Tompkins</td><td>Delight and experimentation: easing with personality, CSS-native techniques. Secondary, as the guardian of the page's whimsy, applied to rare moments.</td></tr>
+<tr><td>Emil Kowalski</td><td>Restraint and speed: the frequency gate and keyboard rules. Selective, applied to the donation form, nav, filters and pager only.</td></tr>
+</tbody></table>
+<p class="where" style="margin-top:10px">These lenses are this skill's reading of each designer's published work. They are not authored or endorsed by the designers.</p>
+</section>
+
+<footer>MFK · website-rebrand · motion audit of work/prototype/v4 · 2026-10-29 · CreativeEngine, design-motion-principles (audit mode) · prototype unchanged</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+# Shared knowledge
+
+Material useful across departments.
+
+| File | Holds |
+|---|---|
+| [`ANDRES_CREATIVE_OS.md`](ANDRES_CREATIVE_OS.md) | Andres's creative taste model: concept, visual and verbal craft, typography, interaction, critique, reference hypotheses and calibration. Read for creative development and review for Andres; personal preference, not client evidence or a universal scorecard. Not for filing, source extraction or technical checks. How each role uses it: its `AGENT.md`. |
+| [`creative-competency-map.md`](creative-competency-map.md) | Audit instrument: which creative competencies CreativeEngine covers, partly covers or lacks, and which file carries each. Referenced against the Miami Ad School 2026 catalog (topic taxonomy only). Read before designing a new framework, skill or capability; update when one is added. Not a framework or a to-do list. |
+| [`ad-reference/README.md`](ad-reference/README.md) | CreativeEngine's ad reference index: ads we have viewed (mainly from Ads of the World), tagged by mechanism, idea type, device, carrier and lens, with our own read. Maintained by the `ad-reference` skill. Links and our words only; no client facts; not evidence. |
+| [`barry-concept-book-reference.md`](barry-concept-book-reference.md) | Source reference from an OCR capture (partial) of Pete Barry's *The Advertising Concept Book*: OCR quality notes, principles, methods cited by page image, a develop/evaluate synthesis, original examples, and how it relates to existing frameworks. Not a framework. |
+| [`2026-11-18_transform-awards-na-2025-lessons.md`](2026-11-18_transform-awards-na-2025-lessons.md) | ArtTeacher's reading of the Transform Awards North America 2025 winners book: why each of the 112 winning branding projects won (entry and jury paraphrased, kept apart from our design reading), 13 recurring patterns, and what they mean for each role. Outside reference: candidate lessons, not method; results are entrant claims. No client facts. |
+| [`deck-layout-archetypes.md`](deck-layout-archetypes.md) | Slide structures chosen by asset format and content: asset-to-archetype table, content limits and fallbacks, candidate deck sequences. Structure only; no look, fonts or colors. Supports `editorial-presentation.md`. Mined 2026-11-17 from an outside Presentation Engine package (not installed). |
+| `channel-preferences.md` | The user's own channel workflow preference, and the channel / placement / format / goal / CTA / destination / measurement distinctions it must not collapse. Not client evidence, not a default for any assignment. |
+| [`meta-paid-ads/README.md`](meta-paid-ads/README.md) | Source-linked Meta paid-ad formats, placement specifications, technical requirements, creative practices and explicit gaps. Load only for relevant Meta work; account availability must be verified. |
+| [`video-production-handoff.md`](video-production-handoff.md) | The spec DesignChamp and WordSmither fill in to hand an approved video idea to a human editor or outside production partner (CreativeEngine has no video production role): hook, structure, on-screen text, audio, formats, cutdowns, variants, what must survive. Platform-neutral; filled specs live in the project. |
+| [`google-youtube-ads/README.md`](google-youtube-ads/README.md) | Source-linked Google Ads (Responsive Search, Responsive Display, Performance Max, Demand Gen) and YouTube video ad specifications, with open conflicts. Checked 2026-09-16. |
+| [`tiktok-ads/README.md`](tiktok-ads/README.md) | Source-linked TikTok In-Feed, Spark, TopView and carousel specifications, with open conflicts. Checked 2026-09-16. |
+| [`snapchat-ads/README.md`](snapchat-ads/README.md) | Source-linked Snapchat Single Image/Video, Story, Collection, Commercial and Sponsored Snap specifications and safe zones, with open conflicts. Checked 2026-09-16. |
+| [`linkedin-ads/README.md`](linkedin-ads/README.md) | Source-linked LinkedIn ad format specifications, separating truncation recommendations from hard maxima. Checked 2026-09-16. |
+| [`nextdoor-ads/README.md`](nextdoor-ads/README.md) | Source-linked Nextdoor ad specifications, kept separate by US and UK source pages. Checked 2026-09-16. |
+| [`ctv-programmatic-ads/README.md`](ctv-programmatic-ads/README.md) | IAB standards plus DSP and CTV seller specifications for programmatic display, video and CTV. Vendor-dependent; the media vendor's plan specs govern. Checked 2026-09-16. |
+| [`dooh-ads/README.md`](dooh-ads/README.md) | Digital out-of-home specifications by venue, network and media owner, with roadside and legibility guidance. Network-dependent; plan-specific specs govern. Checked 2026-09-16. |
+| [`ad-spec-sheet-audit/audit.md`](ad-spec-sheet-audit/audit.md) | Row-by-row audit of the external "Digital Ad Spec Sheet - Updated" (verdict: out of date), with its raw snapshot. Evidence for why the modules above replace it; not a spec source itself. |
+
+Department-specific material belongs in that department's `knowledge/` folder. Nothing here holds facts about a client or project.

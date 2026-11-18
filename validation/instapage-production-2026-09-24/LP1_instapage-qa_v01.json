@@ -1,0 +1,400 @@
+{
+  "format": "instapage-qa/1",
+  "meta": {
+    "client": "SYNTHETIC · Fernwick Tool Library (fictional)",
+    "project": "card-drive (synthetic validation)",
+    "packet": "LP1",
+    "stage": "PLAN",
+    "date": "2026-09-24",
+    "by": "Claude, instapage-production (validation run)",
+    "page": {
+      "workspace_id": "OPEN",
+      "page_id": null,
+      "name": "not built",
+      "version": null,
+      "url": null
+    },
+    "compared": {
+      "packet": "validation/instapage-production-2026-09-24/01_work-packet_SYNTHETIC.md",
+      "copy": "validation/instapage-production-2026-09-24/02_approved-copy_SYNTHETIC.md · v01",
+      "spec": "https://www.figma.com/design/suQoQdAczG3IZRVMxooqpb?node-id=18-39 · v01",
+      "build_sheet": "validation/instapage-production-2026-09-24/LP1_instapage-build-sheet_v01.json"
+    }
+  },
+  "checks": [
+    {
+      "id": "CF-01",
+      "status": "PASS",
+      "blocking": true,
+      "owner": "WS",
+      "evidence": "ip_check plan: 0 P11 findings; every placed string (19 elements, 4 form labels, submit, thank-you) matches 02_approved-copy v01 exactly"
+    },
+    {
+      "id": "CF-02",
+      "status": "PASS",
+      "blocking": true,
+      "owner": "BM",
+      "evidence": "Plan: mandatories FOOT (E18) and FOOT-LINK (E19) placed; CTA 'Get my card' exact on E04 and the F01 submit (P12, P13 clean)"
+    },
+    {
+      "id": "CF-03",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "DC",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT; IMG-01 is still a placeholder"
+    },
+    {
+      "id": "CF-04",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "DC",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "CF-05",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "DC",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT; plan holds three font roles and five colors (P09 clean)"
+    },
+    {
+      "id": "CF-06",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "DC",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "CF-07",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "DC",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "CF-08",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "DC",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "CF-09",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "DC",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT; CON-03 (per-device headline size) is open"
+    },
+    {
+      "id": "NA-01",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "NA-02",
+      "status": "PASS",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "Plan: no HTML elements; no integration embeds"
+    },
+    {
+      "id": "NA-03",
+      "status": "PASS",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "Plan: no page HTML/CSS or JavaScript; GA4 via the native Marketing Tags & Pixels integration"
+    },
+    {
+      "id": "NA-04",
+      "status": "PASS",
+      "blocking": true,
+      "owner": "DC",
+      "evidence": "Plan: no inline CSS; CON-01 resolved without it"
+    },
+    {
+      "id": "NA-05",
+      "status": "PASS",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "Plan: no workspace scripts; the Global Block holds only native text"
+    },
+    {
+      "id": "NA-06",
+      "status": "PASS",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "Plan: F01 is a native Form Library form with native fields"
+    },
+    {
+      "id": "NA-07",
+      "status": "PASS",
+      "blocking": true,
+      "owner": "DC",
+      "evidence": "Plan: B01 and B04 My Blocks; B05 Global Block with reason, owner and approver; placed once (P08 clean)"
+    },
+    {
+      "id": "NA-08",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT: the editor test needs a draft duplicate"
+    },
+    {
+      "id": "NA-09",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "NA-10",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT: no automated change has been made, so there is nothing to preserve yet"
+    },
+    {
+      "id": "FN-01",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "FN-02",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "BM",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "FN-03",
+      "status": "PASS",
+      "blocking": true,
+      "owner": "BM",
+      "evidence": "Plan: four fields in packet order, labels, types and required state match (P15 clean)"
+    },
+    {
+      "id": "FN-04",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "FN-05",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "Needs a published test environment and the agreed test identity; Q1 (list) and Q2 (recipients) are open. Not run; no page is published to obtain a pass"
+    },
+    {
+      "id": "FN-06",
+      "status": "PASS",
+      "blocking": true,
+      "owner": "BM",
+      "evidence": "Plan: measured event form_submission; conversion goals form_submissions only (P16 clean)"
+    },
+    {
+      "id": "FN-07",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT; GA4 property ID is open (Q3)"
+    },
+    {
+      "id": "FN-08",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "US",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT; cookie bar setting planned"
+    },
+    {
+      "id": "FN-09",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "RS-01",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "DC",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "RS-02",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "RS-03",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "DC",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "RS-04",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "RS-05",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "DC",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "RS-06",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "DC",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "RS-07",
+      "status": "NOT_RUN",
+      "blocking": false,
+      "owner": "DC",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "RS-08",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "DC",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "RS-09",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "DC",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "RS-10",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT"
+    },
+    {
+      "id": "GV-01",
+      "status": "FAIL",
+      "blocking": true,
+      "owner": "DC",
+      "evidence": "IMG-01 is a PLACEHOLDER: allowed in the draft; publishing is blocked until the production photo is PRODUCTION-APPROVED with provenance, rights and approver"
+    },
+    {
+      "id": "GV-02",
+      "status": "FAIL",
+      "blocking": true,
+      "owner": "BM",
+      "evidence": "PROOF-H (E13) uses claim C1, SOURCE-STATED: blocks publishing until VERIFIED, or until WordSmither supplies a replacement line approved by creative-engine-director (P25)"
+    },
+    {
+      "id": "GV-03",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "DC",
+      "evidence": "No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAFT; plan has one h1, ordered headings, approved alt text ALT-HERO and aria-label F-ARIA"
+    },
+    {
+      "id": "GV-04",
+      "status": "NOT_RUN",
+      "blocking": true,
+      "owner": "CD",
+      "evidence": "No page version exists to approve and no go-ahead is due at PLAN; the spec approval is synthetic"
+    },
+    {
+      "id": "GV-05",
+      "status": "PASS",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "Key-pattern scan of the validation folder, the skill and its record found no secrets; no Instapage key exists in this session"
+    },
+    {
+      "id": "GV-06",
+      "status": "PASS",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "Not applicable: no Instapage page was created, changed or published"
+    },
+    {
+      "id": "GV-07",
+      "status": "PASS",
+      "blocking": true,
+      "owner": "PR",
+      "evidence": "Synthetic client only; no other client's material, blocks, assets or Figma libraries used; the fixtures live on the kit's Validation page"
+    },
+    {
+      "id": "GV-08",
+      "status": "PASS",
+      "blocking": true,
+      "owner": "DC",
+      "evidence": "Plan: no exceptions; LP1_instapage-exceptions.md is empty by design"
+    }
+  ],
+  "blocking_issues": [
+    "CF-03: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "CF-04: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "CF-05: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "CF-06: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "CF-07: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "CF-08: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "CF-09: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "NA-01: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "NA-08: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "NA-09: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "NA-10: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "FN-01: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "FN-02: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "FN-04: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "FN-05: Needs a published test environment and the agreed test identity; Q1 (list) and Q2 (recipie",
+    "FN-07: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "FN-08: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "FN-09: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "RS-01: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "RS-02: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "RS-03: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "RS-04: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "RS-05: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "RS-06: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "RS-08: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "RS-09: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "RS-10: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "GV-01: IMG-01 is a PLACEHOLDER: allowed in the draft; publishing is blocked until the production ",
+    "GV-02: PROOF-H (E13) uses claim C1, SOURCE-STATED: blocks publishing until VERIFIED, or until Wor",
+    "GV-03: No Instapage page exists: the Instapage MCP is not connected in this session. Runs at DRAF",
+    "GV-04: No page version exists to approve and no go-ahead is due at PLAN; the spec approval is syn"
+  ],
+  "approvals": {
+    "creative": {
+      "by": null,
+      "date": null,
+      "evidence": null
+    },
+    "go_ahead": {
+      "by": null,
+      "date": null,
+      "evidence": null
+    }
+  },
+  "result": {
+    "pass": 14,
+    "fail": 2,
+    "warning": 0,
+    "not_run": 30,
+    "publish_allowed": false
+  }
+}

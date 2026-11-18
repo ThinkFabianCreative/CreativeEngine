@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="500" viewBox="0 0 1100 500">
+<rect width="1100" height="500" fill="#fffaf3"/>
+<g fill="#b91685">
+<path d="M202 178 C331 163 489 174 634 160 L795 163 L871 170 L846 177 L884 182 L860 189 L898 196 L868 203 L891 211 L874 221 L903 229 L878 239 L891 249 L865 260 L879 269 L854 278 L868 286 L826 294 L849 300 C697 308 544 295 405 310 L239 307 L197 299 L225 291 L186 283 L211 274 L180 266 L206 255 L185 246 L210 234 L189 225 L213 213 L193 205 L221 194 L191 188Z"/>
+<path d="M211 166 Q450 153 676 154 L826 158 L786 162 Q469 158 224 174Z" opacity=".72"/>
+<path d="M244 315 Q488 309 713 313 L817 307 L768 319 Q470 314 276 324Z" opacity=".64"/>
+<path d="M181 218 L216 207 L204 215 L179 224Z M178 277 L210 283 L198 287 L176 282Z M864 184 L909 192 L900 195 L867 189Z M878 277 L918 270 L903 277 L880 281Z" opacity=".7"/>
+</g>
+<g fill="#fffaf3" opacity=".72">
+<path d="M204 184 L315 178 L258 184 L207 188Z M195 246 L287 238 L251 245 L198 250Z M211 293 L349 291 L278 296Z M785 179 L876 182 L859 187Z M804 267 L876 260 L867 266Z M737 299 L858 290 L833 297Z"/>
+</g>
+<text x="548" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="white" transform="rotate(-1 548 250)">Make a miracle</text>
+<text x="550" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#00447c">One broad brushstroke · rough bristle edges · solid, readable center</text>
+</svg>

@@ -1,0 +1,57 @@
+10 · CLIENT: UNIVERSITY OF WYOMING (COLLEGE OF BUSINESS) · BRAND RULES
+Updated 2026-09-17.
+Attach only for University of Wyoming work. Internal comps; not client-approved.
+
+COLORS
+  UW Brown  #492F24   dominant color
+  UW Gold   #FFC425   accent only, used deliberately
+  White     #FFFFFF
+  Black     #000000
+- Brown and Gold must stay dominant in every design.
+- No other accent colors on these ads. Never use accent colors on the logo.
+- Flat fills. No gradients (an official campaign gradient exists but has not been supplied).
+
+FONTS
+- Official: Gotham (sans serif). If Gotham is not available, the ONLY approved substitute
+  is Montserrat. Do not use Inter, Helvetica, Arial or other lookalikes.
+- Blackhawk Italic is UW's licensed campaign headline font ("The World Needs More Cowboys").
+  Use its lowercase glyph setting. Headlines or single-word emphasis only, limited use.
+  Access is no longer an issue (Andres, 2026-09-17). Still use only the real font file;
+  never substitute a lookalike brush font on client-facing work.
+- Script or specialty fonts: limited, for emphasis only.
+
+LOGO
+- Use the supplied "UW Lockup Placeholder" component only. Never redraw or recreate the logo.
+- White logo on Brown; Brown logo on White.
+- One brand mark per frame: do not also type "UNIVERSITY OF WYOMING" next to the logo.
+
+PHOTOGRAPHY
+- Stock photography is strongly discouraged by UW. Real imagery comes from the UW photo
+  library or a new shoot with model releases.
+- For internal comps, a placeholder image is allowed only with a visible label:
+  "PLACEHOLDER IMAGE - not for external use".
+
+PROHIBITED ON THESE ADS
+gradients · decorative shadows · glass effects · device mockups · fake Meta UI ·
+drawn buttons · graduation caps · mountains · trails · roads · horizons · maps ·
+cowboy costumes, hats or horses · stock business meetings · heroic poses ·
+prices · rankings · testimonials (T2 and conversion frames; see below) · outcome claims ·
+unsupported program facts · STEM ·
+deadlines, dates or urgency language ("apply by", "last chance", "starts soon")
+
+T3 STUDENTS (client approval 2026-09-17, conditional; user-reported)
+- Real UW students only. No AI-generated people, faces, voices or quotes, ever, on T3.
+- Shot in Laramie. Current students and alumni, supplied by UW. Photo/video from that
+  shoot, with releases (who holds releases: confirm with UW).
+- Online-program variants: shoot in work/home settings, not campus exteriors or landmarks
+  (S1 p6 environment matches delivery format; Online MBA also runs in Colorado).
+- Lines are scripted, drawn from THAT student's real experience (Andres, 2026-09-17). Every
+  line must be true for the person saying it; never move a line to another student.
+  Student confirms, UW approves. No composites. Scripts: work/copy/…_t3-student-scripts_v01.md
+  No outcome, salary, placement or industry-access claims (C33, C57-C59) without approval.
+- Until the shoot exists, T3 comps use a grey frame labelled
+  "STUDENT FOOTAGE - LARAMIE SHOOT - PLACEHOLDER", never a generated person.
+
+ACCESSIBILITY
+Text must pass contrast at phone size. Gold text on White fails for small type: use Gold
+on Brown, or Brown/White for small text.

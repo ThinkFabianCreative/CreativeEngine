@@ -1,0 +1,732 @@
+{
+  "title": "Google Ads and YouTube ads: documented format specifications",
+  "checked_on": "2026-09-16",
+  "version": "1.0",
+  "scope": "Google Ads responsive search ads, responsive display ads, Performance Max, Demand Gen (image, carousel, video); YouTube skippable/non-skippable in-stream, bumper, in-feed, Shorts, masthead and video text fields. Public official Help pages only; not account-tested.",
+  "records": [
+    {
+      "id": "GOOG-001",
+      "platform": "Google Ads",
+      "campaign_type": "Search",
+      "format": "Responsive search ad",
+      "source_url": "https://support.google.com/google-ads/answer/7684791",
+      "checked_on": "2026-09-16",
+      "source_access": "Public Google Help page via web fetch; text content (images/templates not inspected)",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "headlines": {
+          "min": 3,
+          "max": 15,
+          "max_chars": 30
+        },
+        "descriptions": {
+          "min": 2,
+          "max": 4,
+          "max_chars": 90
+        },
+        "display_path_fields": {
+          "max": 2,
+          "max_chars_each": 15
+        },
+        "final_url": {
+          "count": 1,
+          "max_chars": 2048
+        },
+        "double_width_rule": "Each Chinese, Japanese or Korean character counts as 2"
+      },
+      "assets": {},
+      "recommendations": {
+        "pinning": "Not recommended for most advertisers; can lower Ad Strength. If pinning, pin 2-3 assets per position",
+        "ads_per_ad_group": "At least 2 RSAs with Good or Excellent Ad Strength (Google best practice)"
+      },
+      "technical_requirements": {
+        "headline_max_chars": 30,
+        "description_max_chars": 90,
+        "path_max_chars": 15,
+        "serving": "Up to 3 headlines and 2 descriptions show; position 3 headline and description 2 not guaranteed"
+      },
+      "notes": "Search campaigns spec page lists headlines 1-15 and descriptions 1-4, while About RSA says at least 3 headlines and 2 descriptions. Treat 3/2 as the practical minimum until confirmed in the account. Business name (25 chars) and square logo (min 128x128) appear on the Search spec page as business information.",
+      "additional_sources": [
+        "https://support.google.com/google-ads/answer/17092074"
+      ]
+    },
+    {
+      "id": "GOOG-002",
+      "platform": "Google Ads",
+      "campaign_type": "Display",
+      "format": "Responsive display ad",
+      "source_url": "https://support.google.com/google-ads/answer/17090561",
+      "checked_on": "2026-09-16",
+      "source_access": "Public Google Help page via web fetch; text content (images/templates not inspected)",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "headlines": {
+          "min": 1,
+          "max": 5,
+          "max_chars": 30
+        },
+        "long_headline": {
+          "min": 1,
+          "max": 1,
+          "max_chars": 90
+        },
+        "descriptions": {
+          "min": 1,
+          "max": 5,
+          "max_chars": 90
+        },
+        "business_name": {
+          "count": 1,
+          "max_chars": 25,
+          "required": true
+        },
+        "call_to_action": "Automated by default; selectable",
+        "double_width_rule": "—"
+      },
+      "assets": {
+        "landscape_image_1.91:1": {
+          "min": 1,
+          "max": 15,
+          "recommended_px": "1200x628",
+          "minimum_px": "600x314",
+          "required": true
+        },
+        "square_image_1:1": {
+          "min": 1,
+          "max": 15,
+          "recommended_px": "1200x1200 (spec page shows 600x600; see conflicts)",
+          "minimum_px": "300x300",
+          "required": true
+        },
+        "vertical_image_9:16": {
+          "max": 15,
+          "recommended_px": "900x1600",
+          "minimum_px": "600x1067",
+          "required": false,
+          "source": "best-practices page only"
+        },
+        "square_logo_1:1": {
+          "max": 5,
+          "recommended_px": "1200x1200",
+          "minimum_px": "128x128",
+          "required": false
+        },
+        "landscape_logo_4:1": {
+          "max": 5,
+          "recommended_px": "1200x300",
+          "minimum_px": "512x128",
+          "required": false
+        },
+        "videos": {
+          "max_per_orientation": 5,
+          "orientations": "16:9, 1:1, vertical (spec page says 2:3)",
+          "required": false
+        }
+      },
+      "recommendations": {
+        "images_per_ratio": "5-10",
+        "video_preferred_length": "30 seconds",
+        "safe_area": "Important content in center 80% of image",
+        "avoid": "Overlaid logos/text/buttons, collages, blank space, borders"
+      },
+      "technical_requirements": {
+        "image_max_file_size": "5120 KB",
+        "image_file_types": "JPG, PNG",
+        "text_overlays": "Not permitted on image assets (policy)"
+      },
+      "notes": "GIF is not listed as an accepted image asset type in the inspected official pages.",
+      "additional_sources": [
+        "https://support.google.com/google-ads/answer/7005917",
+        "https://support.google.com/google-ads/answer/9823397",
+        "https://support.google.com/adspolicy/answer/10347108"
+      ]
+    },
+    {
+      "id": "GOOG-003",
+      "platform": "Google Ads",
+      "campaign_type": "Performance Max",
+      "format": "Asset group",
+      "source_url": "https://support.google.com/google-ads/answer/17091269",
+      "checked_on": "2026-09-16",
+      "source_access": "Public Google Help page via web fetch; text content (images/templates not inspected)",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "headlines": {
+          "min": 3,
+          "max": 15,
+          "max_chars": 30,
+          "recommended_count": "11+",
+          "rule": "At least 1 headline 15 characters or fewer"
+        },
+        "long_headlines": {
+          "min": 1,
+          "max": 5,
+          "max_chars": 90
+        },
+        "descriptions": {
+          "min": 2,
+          "max": 5,
+          "max_chars": 90,
+          "recommended_count": "4+"
+        },
+        "business_name": {
+          "count": 1,
+          "max_chars": 25,
+          "required": true,
+          "rule": "Must match domain or legally verified business name"
+        },
+        "call_to_action": {
+          "count": 1,
+          "required": true,
+          "value": "Automated or selected from list"
+        },
+        "display_path": {
+          "max": 2,
+          "max_chars_each": 15,
+          "required": false
+        },
+        "double_width_rule": "Each Chinese, Japanese or Korean character counts as 2"
+      },
+      "assets": {
+        "landscape_image_1.91:1": {
+          "recommended_count": "4+",
+          "max": 20,
+          "recommended_px": "1200x628",
+          "minimum_px": "600x314",
+          "required": true
+        },
+        "square_image_1:1": {
+          "recommended_count": "4+",
+          "max": 20,
+          "recommended_px": "1200x1200",
+          "minimum_px": "300x300",
+          "required": true
+        },
+        "portrait_image_4:5": {
+          "recommended_count": "2+",
+          "max": 20,
+          "recommended_px": "960x1200",
+          "minimum_px": "480x600",
+          "required": false
+        },
+        "square_logo_1:1": {
+          "recommended_count": 1,
+          "max": 5,
+          "recommended_px": "1200x1200",
+          "minimum_px": "128x128",
+          "required": true
+        },
+        "landscape_logo_4:1": {
+          "max": 5,
+          "recommended_px": "1200x300",
+          "minimum_px": "512x128",
+          "required": false
+        },
+        "videos": {
+          "orientations": [
+            "16:9",
+            "1:1",
+            "9:16"
+          ],
+          "recommended": "1 per orientation",
+          "max": 15,
+          "min_length_s": 10,
+          "required": false
+        }
+      },
+      "recommendations": {
+        "safe_area": "Center 80% of image",
+        "overlays": "Allowed in PMax; use at least one image without overlays per ratio",
+        "vertical_video": "At least one vertical 10-60 s for Shorts",
+        "logo_background": "Transparent logos may render on white"
+      },
+      "technical_requirements": {
+        "image_max_file_size": "5 MB (5120 KB)",
+        "image_file_types": "JPG, PNG",
+        "video_file": "MPG recommended; <=256 GB; 1080p recommended",
+        "auto_generated_video": "Google may auto-generate video if none supplied"
+      },
+      "notes": "Exact minimum image count to publish is not stated numerically (column shows Recommended 4+ and Required tick). No official page inspected requires a description of 60 characters or fewer. The sheet's link 13676244 is now a general specs hub, not the PMax spec page.",
+      "additional_sources": [
+        "https://support.google.com/google-ads/answer/14528373",
+        "https://support.google.com/google-ads/answer/14530211",
+        "https://support.google.com/google-ads/answer/14528532",
+        "https://support.google.com/adspolicy/answer/10347108"
+      ]
+    },
+    {
+      "id": "GOOG-004",
+      "platform": "Google Ads",
+      "campaign_type": "Demand Gen",
+      "format": "Single image ad",
+      "source_url": "https://support.google.com/google-ads/answer/17140672",
+      "checked_on": "2026-09-16",
+      "source_access": "Public Google Help page via web fetch; text content (images/templates not inspected)",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "headlines": {
+          "min": 1,
+          "max": 5,
+          "max_chars": 40,
+          "rule": "At least one headline 30 characters or fewer to avoid Incomplete Ad Strength"
+        },
+        "descriptions": {
+          "min": 1,
+          "max": 5,
+          "max_chars": 90
+        },
+        "business_name": {
+          "count": 1,
+          "max_chars": 25,
+          "required": true
+        },
+        "call_to_action": "Automated",
+        "final_url_max_chars": 2048
+      },
+      "assets": {
+        "landscape_image_1.91:1": {
+          "max": 20,
+          "recommended_px": "1200x628",
+          "minimum_px": "600x314"
+        },
+        "square_image_1:1": {
+          "max": 20,
+          "recommended_px": "1200x1200",
+          "minimum_px": "300x300"
+        },
+        "portrait_image_4:5": {
+          "max": 20,
+          "recommended_px": "960x1200",
+          "minimum_px": "480x600"
+        },
+        "vertical_image_9:16": {
+          "recommended_px": "1080x1920",
+          "minimum_px": "600x1067",
+          "note": "Recommended for YouTube Shorts"
+        },
+        "square_logo_1:1": {
+          "max": 5,
+          "recommended_px": "1200x1200",
+          "minimum_px": "144x144",
+          "required": true
+        }
+      },
+      "recommendations": {
+        "headlines_count": "5",
+        "descriptions_count": "3 (spec page) / 3+ unique (image page)",
+        "images_per_ratio": "3",
+        "logo_crop": "About 21.46% cropped when shown as a circle in Gmail"
+      },
+      "technical_requirements": {
+        "image_max_file_size": "5 MB",
+        "logo_max_file_size": "150 KB",
+        "file_types": "JPG, PNG"
+      },
+      "notes": "Logo minimum differs across Demand Gen pages (144x144 vs 128x128). Logo file cap 150 KB differs from PMax/RDA 5120 KB.",
+      "additional_sources": [
+        "https://support.google.com/google-ads/answer/17091672",
+        "https://support.google.com/google-ads/answer/13704860"
+      ]
+    },
+    {
+      "id": "GOOG-005",
+      "platform": "Google Ads",
+      "campaign_type": "Demand Gen",
+      "format": "Carousel ad",
+      "source_url": "https://support.google.com/google-ads/answer/17140672",
+      "checked_on": "2026-09-16",
+      "source_access": "Public Google Help page via web fetch; text content (images/templates not inspected)",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "ad_headline": {
+          "count": 1,
+          "max_chars": 40,
+          "required": true
+        },
+        "ad_description": {
+          "count": 1,
+          "max_chars": 40,
+          "required": true
+        },
+        "card_headline": {
+          "max_chars": 40,
+          "per_card": 1
+        },
+        "business_name": {
+          "count": 1,
+          "max_chars": 25,
+          "required": true
+        }
+      },
+      "assets": {
+        "cards": {
+          "min": 2,
+          "max": 10,
+          "rule": "One image per card; all cards same aspect ratio"
+        },
+        "square_logo_1:1": {
+          "recommended_px": "1200x1200",
+          "minimum_px": "144x144"
+        }
+      },
+      "recommendations": {},
+      "technical_requirements": {
+        "logo_max_file_size": "150 KB",
+        "image_max_file_size": "5 MB"
+      },
+      "notes": "Carousel description limit is 40 characters, not 90."
+    },
+    {
+      "id": "GOOG-006",
+      "platform": "Google Ads",
+      "campaign_type": "Demand Gen",
+      "format": "Video ad",
+      "source_url": "https://support.google.com/google-ads/answer/17141078",
+      "checked_on": "2026-09-16",
+      "source_access": "Public Google Help page via web fetch; text content (images/templates not inspected)",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "headlines": {
+          "max_chars": 40,
+          "recommended": "3+ unique"
+        },
+        "long_headlines": {
+          "max_chars": 90,
+          "recommended": "3+ unique"
+        },
+        "descriptions": {
+          "max_chars": 90,
+          "recommended": "3+ unique"
+        },
+        "business_name": {
+          "count": 1,
+          "max_chars": 25,
+          "required": true
+        }
+      },
+      "assets": {
+        "videos": {
+          "orientations": {
+            "16:9": "1920x1080",
+            "1:1": "1080x1080",
+            "4:5": "1080x1350",
+            "9:16": "1080x1920"
+          },
+          "recommended_count_per_orientation": 3
+        },
+        "square_logo_1:1": {
+          "recommended_px": "1200x1200",
+          "minimum_px": "128x128"
+        }
+      },
+      "recommendations": {
+        "length": "15+ s (video page); 10-60 s (spec page)",
+        "vertical": "9:16 recommended for Shorts"
+      },
+      "technical_requirements": {
+        "min_length_s": 5,
+        "in_stream_eligibility": "Under 10 s ineligible for YouTube in-stream",
+        "file_types": "MPG (MPEG-2 or MPEG-4) recommended",
+        "max_file_size": "256 GB",
+        "logo_max_file_size": "150 KB"
+      },
+      "notes": "Video action campaigns were upgraded to Demand Gen as of May 2026 (answer 10147229). Inventory: YouTube in-stream, in-feed, Shorts, Discover, Gmail, GDN.",
+      "additional_sources": [
+        "https://support.google.com/google-ads/answer/17091672",
+        "https://support.google.com/google-ads/answer/10147229"
+      ]
+    },
+    {
+      "id": "YT-001",
+      "platform": "YouTube",
+      "campaign_type": "Video / all campaigns using YouTube video",
+      "format": "Video file, thumbnail and companion banner technical specs",
+      "source_url": "https://support.google.com/google-ads/answer/13547298",
+      "checked_on": "2026-09-16",
+      "source_access": "Public Google Help page via web fetch; text content (images/templates not inspected)",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {},
+      "assets": {
+        "thumbnail": {
+          "ratio": "16:9",
+          "recommended_px": "1280x720",
+          "minimum_px": "1280x640",
+          "file_types": "JPG, GIF, PNG",
+          "max_file_size": "2 MB"
+        },
+        "companion_banner": {
+          "ratio": "5:1",
+          "px": "300x60",
+          "file_types": "JPG, GIF, PNG",
+          "max_file_size": "150 KB",
+          "note": "Desktop only"
+        }
+      },
+      "recommendations": {
+        "resolution_1080p": {
+          "16:9": "1920x1080",
+          "9:16": "1080x1920",
+          "1:1": "1080x1080"
+        },
+        "aspect_ratios": [
+          "16:9",
+          "9:16",
+          "1:1"
+        ],
+        "file_type": "MPG (MPEG-2 or MPEG-4)",
+        "safe_zones": "Downloadable templates only; no numeric values published in page text"
+      },
+      "technical_requirements": {
+        "accepted_file_types": "WMV, AVI, MOV, FLV, MPEG-1, MP4, MPEGPS, 3GPP, WebM, DNxHR, ProRes, CineForm, HEVC (H.265); audio-only files not accepted",
+        "max_file_size": "256 GB (ads page); YouTube upload limit 256 GB or 12 hours, whichever is less",
+        "also_accepted_resolutions": "720p: 1280x720, 720x1280, 480x480 square; SD: 640x480, 480x640, 480x480 (not recommended)",
+        "also_accepted_ratios": "4:3 horizontal (SD); 2:3 and 4:5 vertical",
+        "hosting": "Videos must be uploaded to YouTube, public or unlisted (in-feed and Shorts pages)",
+        "upload_over_15_min": "Requires verified YouTube account"
+      },
+      "notes": "Sheet's 426x240-3840x2160 range is YouTube general upload guidance, not stated on the ad spec page.",
+      "additional_sources": [
+        "https://support.google.com/youtube/answer/71673",
+        "https://support.google.com/google-ads/answer/17091270"
+      ]
+    },
+    {
+      "id": "YT-002",
+      "platform": "YouTube",
+      "campaign_type": "Video",
+      "format": "Skippable in-stream",
+      "source_url": "https://support.google.com/google-ads/answer/2375464",
+      "checked_on": "2026-09-16",
+      "source_access": "Public Google Help page via web fetch; text content (images/templates not inspected)",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "see": "YT-007 for text fields"
+      },
+      "assets": {},
+      "recommendations": {
+        "length": "Under 3 minutes recommended; 15 s recommended on video spec page for in-video ads"
+      },
+      "technical_requirements": {
+        "max_length": "No maximum",
+        "skip_after_s": 5
+      },
+      "notes": "Serves on YouTube watch pages and Google video partners.",
+      "additional_sources": [
+        "https://support.google.com/google-ads/answer/17091270"
+      ]
+    },
+    {
+      "id": "YT-003",
+      "platform": "YouTube",
+      "campaign_type": "Video",
+      "format": "Non-skippable in-stream",
+      "source_url": "https://support.google.com/google-ads/answer/2375464",
+      "checked_on": "2026-09-16",
+      "source_access": "Public Google Help page via web fetch; text content (images/templates not inspected)",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "see": "YT-007 for text fields"
+      },
+      "assets": {},
+      "recommendations": {},
+      "technical_requirements": {
+        "max_length": "60 seconds or shorter (formats page); YouTube Help: 15-60 s depending on campaign subtype; video reach creation page: 7-15 s, and 16-30 s for 30-second non-skippable on CTV (horizontal only)"
+      },
+      "notes": "Length rule depends on campaign subtype; confirm in the campaign builder.",
+      "additional_sources": [
+        "https://support.google.com/youtube/answer/2375464",
+        "https://support.google.com/google-ads/answer/10510238"
+      ]
+    },
+    {
+      "id": "YT-004",
+      "platform": "YouTube",
+      "campaign_type": "Video",
+      "format": "Bumper",
+      "source_url": "https://support.google.com/google-ads/answer/2375464",
+      "checked_on": "2026-09-16",
+      "source_access": "Public Google Help page via web fetch; text content (images/templates not inspected)",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {},
+      "assets": {},
+      "recommendations": {
+        "length": "6 s"
+      },
+      "technical_requirements": {
+        "length": "Between 5 and 6 seconds",
+        "skippable": false
+      },
+      "notes": "Video reach creation page describes bumpers as up to 6 seconds.",
+      "additional_sources": [
+        "https://support.google.com/google-ads/answer/10510238"
+      ]
+    },
+    {
+      "id": "YT-005",
+      "platform": "YouTube",
+      "campaign_type": "Video",
+      "format": "In-feed video ad",
+      "source_url": "https://support.google.com/google-ads/answer/6227733",
+      "checked_on": "2026-09-16",
+      "source_access": "Public Google Help page via web fetch; text content (images/templates not inspected)",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "headline": {
+          "max_chars": 100,
+          "note": "Over 25 characters may be shortened on some devices"
+        },
+        "description": {
+          "max_lines": 2,
+          "max_chars_per_line": 35
+        }
+      },
+      "assets": {
+        "thumbnail": "Choose 1 of 4 auto thumbnails or custom via YouTube Studio"
+      },
+      "recommendations": {
+        "length": "15-20 s for awareness; 2-3 min for consideration"
+      },
+      "technical_requirements": {
+        "max_length": "No maximum",
+        "hosting": "Public or unlisted YouTube video"
+      },
+      "notes": "Video spec page 17091270 lists in-video headline as 2 lines x 40 chars; Demand Gen headline is 40 chars; video reach multi-format uses long headline 90. Field limits depend on campaign type.",
+      "additional_sources": [
+        "https://support.google.com/google-ads/answer/17091270"
+      ]
+    },
+    {
+      "id": "YT-006",
+      "platform": "YouTube",
+      "campaign_type": "Video / Demand Gen / PMax / App",
+      "format": "YouTube Shorts ad",
+      "source_url": "https://support.google.com/google-ads/answer/16041697",
+      "checked_on": "2026-09-16",
+      "source_access": "Public Google Help page via web fetch; text content (images/templates not inspected)",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "headline": {
+          "recommended_chars": 40
+        },
+        "description": {
+          "recommended_chars": 90
+        },
+        "truncation": "Beyond 1 line mobile / 2 lines desktop and TV is truncated"
+      },
+      "assets": {
+        "video": {
+          "ratio": "9:16",
+          "recommended_px": "1080x1920"
+        }
+      },
+      "recommendations": {
+        "length": "Under 60 s; action-oriented 10-30 s; video reach 6-60 s; other campaign types 10-60 s"
+      },
+      "technical_requirements": {
+        "ratio": "9:16 vertical; horizontal serves with blurred edges",
+        "upload_length": "Up to 3 minutes",
+        "hosting": "Public or unlisted YouTube video",
+        "cta_timing": "CTA appears at 3 s (PMax, App, Demand Gen) or 10 s (Video views, Video reach)",
+        "safe_zone": "—"
+      },
+      "notes": "Resolution taken from YT-001 general vertical recommendation.",
+      "additional_sources": [
+        "https://support.google.com/google-ads/answer/13547298"
+      ]
+    },
+    {
+      "id": "YT-007",
+      "platform": "YouTube",
+      "campaign_type": "Video reach",
+      "format": "Text fields for video reach ads (in-stream, in-feed, Shorts multi-format)",
+      "source_url": "https://support.google.com/google-ads/answer/10510238",
+      "checked_on": "2026-09-16",
+      "source_access": "Public Google Help page via web fetch; text content (images/templates not inspected)",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "call_to_action": {
+          "max_chars": 10
+        },
+        "cta_headline": {
+          "max_chars": 15,
+          "required": false,
+          "note": "Short headline accompanying the CTA"
+        },
+        "long_headline": {
+          "max_chars": 90,
+          "note": "Required for multi-format ads"
+        },
+        "description": {
+          "max_chars": 90,
+          "note": "Required for multi-format ads"
+        },
+        "display_url": {
+          "max_chars": 255
+        }
+      },
+      "assets": {
+        "companion_banner": "Auto-generated from channel videos (recommended) or uploaded image; see YT-001"
+      },
+      "recommendations": {
+        "lengths_efficient_reach": "Horizontal 15 s (skippable, in-feed), 6 s (bumper); vertical and square 6-60 s"
+      },
+      "technical_requirements": {},
+      "notes": "The legacy video action campaign fields (headline 30, long headline 90, description 90, CTA 10) now belong to Demand Gen after the May 2026 upgrade.",
+      "additional_sources": [
+        "https://support.google.com/google-ads/answer/17091270",
+        "https://support.google.com/google-ads/answer/10147229"
+      ]
+    },
+    {
+      "id": "YT-008",
+      "platform": "YouTube",
+      "campaign_type": "Masthead (reservation)",
+      "format": "Masthead",
+      "source_url": "https://support.google.com/google-ads/answer/17091270",
+      "checked_on": "2026-09-16",
+      "source_access": "Public Google Help page via web fetch; text content (images/templates not inspected)",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "headline": {
+          "max_chars": 40
+        },
+        "description": {
+          "max_chars": 60
+        },
+        "call_to_action": {
+          "max_chars": 15
+        }
+      },
+      "assets": {
+        "video": {
+          "ratio": "16:9",
+          "recommended_px": "1920x1080"
+        }
+      },
+      "recommendations": {
+        "length": "Over 10 s recommended"
+      },
+      "technical_requirements": {
+        "max_length": "No maximum"
+      },
+      "notes": "Masthead format requirements policy page (adspolicy 14540749) not inspected.",
+      "additional_sources": [
+        "https://support.google.com/google-ads/answer/2375464"
+      ]
+    }
+  ]
+}

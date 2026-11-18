@@ -1,0 +1,1015 @@
+{
+  "title": "LinkedIn ad specifications",
+  "checked_on": "2026-09-16",
+  "version": "1.0",
+  "scope": "14 LinkedIn Marketing Solutions formats: Sponsored Content (single image, carousel, video, document, event, Thought Leader, Article/Newsletter), Sponsored Messaging (conversation, message), Text ads, Lead Gen Forms, CTV, Dynamic Spotlight and Follower. Public documentation only; not account-validated.",
+  "records": [
+    {
+      "id": "LI-001",
+      "platform": "LinkedIn",
+      "format": "Single image ad (Sponsored Content)",
+      "placement": "LinkedIn feed (desktop + mobile; vertical mobile only); LinkedIn Audience Network where enabled",
+      "source_url": "https://www.linkedin.com/help/lms/answer/a426534",
+      "secondary_sources": [
+        "https://business.linkedin.com/advertise/ads/sponsored-content/single-image-ads-specs"
+      ],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "ad_name": {
+          "label": "Ad name (optional)",
+          "value": "255 characters",
+          "classification": "REQUIREMENT"
+        },
+        "introductory_text_recommended": {
+          "label": "Introductory text, to avoid truncation",
+          "value": "150 characters incl. spaces, emojis, punctuation",
+          "classification": "RECOMMENDATION"
+        },
+        "introductory_text_max": {
+          "label": "Introductory text, maximum",
+          "value": "3,000 characters; up to 10 emojis; URLs over 23 characters converted to short link",
+          "classification": "REQUIREMENT"
+        },
+        "headline_recommended": {
+          "label": "Headline, to avoid truncation",
+          "value": "70 characters",
+          "classification": "RECOMMENDATION"
+        },
+        "headline_max": {
+          "label": "Headline, maximum",
+          "value": "200 characters",
+          "classification": "REQUIREMENT"
+        },
+        "description_recommended": {
+          "label": "Description, to avoid truncation",
+          "value": "100 characters",
+          "classification": "RECOMMENDATION"
+        },
+        "description_max": {
+          "label": "Description, maximum",
+          "value": "300 characters; may vary on LinkedIn Audience Network (LAN)",
+          "classification": "REQUIREMENT"
+        },
+        "description_display": {
+          "label": "Description display condition",
+          "value": "Shown when image is under 200 px wide or ad serves beyond the feed via LAN",
+          "classification": "SOURCE_NOTE"
+        },
+        "cta": {
+          "label": "Call to action (optional)",
+          "value": "Choose from available CTAs",
+          "classification": "REQUIREMENT"
+        },
+        "image_alt_text": {
+          "label": "Image alt text (optional)",
+          "value": "Supported; only visible to screen-reader users",
+          "classification": "SOURCE_NOTE"
+        },
+        "destination_url": {
+          "label": "Destination URL",
+          "value": "http:// or https:// prefix; up to 2,000 characters (or Lead Gen Form)",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "recommendations": {
+        "horizontal": {
+          "label": "Horizontal 1.91:1 (recommended ratio)",
+          "value": "Recommended 1200 x 628 px",
+          "classification": "RECOMMENDATION"
+        },
+        "square": {
+          "label": "Square 1:1",
+          "value": "Recommended 1200 x 1200 px",
+          "classification": "RECOMMENDATION"
+        },
+        "vertical": {
+          "label": "Vertical 4:5 (recommended ratio)",
+          "value": "Recommended 720 x 900 px",
+          "classification": "RECOMMENDATION"
+        },
+        "vertical_note": {
+          "label": "Vertical delivery",
+          "value": "Vertical recommended, but paid vertical assets serve on mobile only. 1:1.91 vertical still supported but gets side borders; use 4:5 to avoid borders",
+          "classification": "RECOMMENDATION"
+        },
+        "thumbnail_ratio": {
+          "label": "Thumbnail rendering",
+          "value": "Aspect ratio between 3:2 and 16:9 for optimal thumbnail previews; square/vertical may be cropped when shared organically",
+          "classification": "RECOMMENDATION"
+        }
+      },
+      "technical_requirements": {
+        "file_types": {
+          "label": "File type",
+          "value": "JPG, PNG or GIF; animated GIF 250 frames or fewer",
+          "classification": "REQUIREMENT"
+        },
+        "file_size_max": {
+          "label": "File size",
+          "value": "5 MB",
+          "classification": "REQUIREMENT"
+        },
+        "image_size_max": {
+          "label": "Image size",
+          "value": "7680 x 4320 px; images under 401 px wide display as a thumbnail",
+          "classification": "REQUIREMENT"
+        },
+        "horizontal_range": {
+          "label": "Horizontal dimension range",
+          "value": "Min 640 x 360 px; max 7680 x 4320 px",
+          "classification": "REQUIREMENT"
+        },
+        "square_range": {
+          "label": "Square dimension range",
+          "value": "Min 360 x 360 px; max 4320 x 4320 px",
+          "classification": "REQUIREMENT"
+        },
+        "vertical_range": {
+          "label": "Vertical dimension range",
+          "value": "Min 360 x 640 px; max 2430 x 4320 px",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "notes": "Business page (single-image-ads-specs) still lists description 70 characters 'LAN only', vertical 1:1.91 at 628 x 1200 and 2:3 at 600 x 900, and no hard maximums for text. Help Center page is the more detailed and more recently maintained source; see source-conflicts.md LI-C1."
+    },
+    {
+      "id": "LI-002",
+      "platform": "LinkedIn",
+      "format": "Carousel image ad (Sponsored Content)",
+      "placement": "LinkedIn feed",
+      "source_url": "https://www.linkedin.com/help/lms/answer/a427022",
+      "secondary_sources": [
+        "https://business.linkedin.com/advertise/ads/sponsored-content/carousel-ads/specs"
+      ],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "ad_name": {
+          "label": "Ad name (optional)",
+          "value": "255 characters",
+          "classification": "REQUIREMENT"
+        },
+        "introductory_text_recommended": {
+          "label": "Introductory text, to avoid truncation on some devices",
+          "value": "150 characters",
+          "classification": "RECOMMENDATION"
+        },
+        "introductory_text_max": {
+          "label": "Introductory text, maximum",
+          "value": "255 characters",
+          "classification": "REQUIREMENT"
+        },
+        "card_headline": {
+          "label": "Card headline",
+          "value": "45-character limit (for URL destination and for Lead Gen Form CTA); truncates after two lines",
+          "classification": "REQUIREMENT"
+        },
+        "destination_url": {
+          "label": "Destination URL",
+          "value": "http:// or https://; up to 2,000 characters; cards may use different URLs, but Lead Gen Form applies to all cards",
+          "classification": "REQUIREMENT"
+        },
+        "cta": {
+          "label": "CTA button",
+          "value": "Only available for carousels using Lead Gen Forms (Sponsored Content overview page)",
+          "classification": "SOURCE_NOTE"
+        }
+      },
+      "recommendations": {
+        "image": {
+          "label": "Recommended card image",
+          "value": "1080 x 1080 px, 1:1; images scaled to 312 x 312 px",
+          "classification": "RECOMMENDATION"
+        }
+      },
+      "technical_requirements": {
+        "card_count": {
+          "label": "Cards",
+          "value": "Minimum 2, maximum 10",
+          "classification": "REQUIREMENT"
+        },
+        "file_size_max": {
+          "label": "File size per card",
+          "value": "10 MB",
+          "classification": "REQUIREMENT"
+        },
+        "image_size_max": {
+          "label": "Max image dimension",
+          "value": "4320 x 4320 px",
+          "classification": "REQUIREMENT"
+        },
+        "file_types": {
+          "label": "File types",
+          "value": "Help: JPG, PNG, GIF (non-animated only). Business page: JPG or PNG",
+          "classification": "REQUIREMENT"
+        },
+        "editing": {
+          "label": "Editing",
+          "value": "Cards cannot be edited after the ad is saved",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "notes": "Help page's '45-character limit' lines sit under 'Character limits' without naming the field; the business page names it card headline 45. Business page also says carousel ads do not support video. GIF support differs between the two official pages."
+    },
+    {
+      "id": "LI-003",
+      "platform": "LinkedIn",
+      "format": "Video ad (Sponsored Content)",
+      "placement": "LinkedIn feed; LinkedIn Audience Network; in-stream video (testing)",
+      "source_url": "https://www.linkedin.com/help/lms/answer/a424737",
+      "secondary_sources": [
+        "https://business.linkedin.com/advertise/ads/sponsored-content/video-ads/specs"
+      ],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "ad_name": {
+          "label": "Ad name (optional)",
+          "value": "255 characters",
+          "classification": "REQUIREMENT"
+        },
+        "introductory_text_recommended": {
+          "label": "Introductory text (optional), to avoid truncation",
+          "value": "150 characters",
+          "classification": "RECOMMENDATION"
+        },
+        "introductory_text_max": {
+          "label": "Introductory text, maximum",
+          "value": "Help: 3,000 characters, up to 10 emojis. Business page: 600 characters",
+          "classification": "REQUIREMENT"
+        },
+        "headline_recommended": {
+          "label": "Video headline, to avoid truncation",
+          "value": "70 characters",
+          "classification": "RECOMMENDATION"
+        },
+        "headline_max": {
+          "label": "Video headline, maximum",
+          "value": "200 characters",
+          "classification": "REQUIREMENT"
+        },
+        "non_standard_text": {
+          "label": "Non-standard text",
+          "value": "Ad might be rejected with more than four emojis, symbols or repeated characters",
+          "classification": "REQUIREMENT"
+        },
+        "destination_url": {
+          "label": "Destination URL",
+          "value": "http:// or https://; up to 2,000 characters",
+          "classification": "REQUIREMENT"
+        },
+        "cta": {
+          "label": "CTA",
+          "value": "Choose from available CTAs; in-stream placements may not show a CTA",
+          "classification": "SOURCE_NOTE"
+        }
+      },
+      "recommendations": {
+        "ratio_preferred": {
+          "label": "Recommended ratio",
+          "value": "4:5 vertical (0.80)",
+          "classification": "RECOMMENDATION"
+        },
+        "horizontal": {
+          "label": "16:9 (1.78)",
+          "value": "Recommended 1920 x 1080 or 1200 x 675 px; range 640 x 360 to 1920 x 1080",
+          "classification": "RECOMMENDATION"
+        },
+        "square": {
+          "label": "1:1",
+          "value": "No recommended size given; range 360 x 360 to 1920 x 1920",
+          "classification": "RECOMMENDATION"
+        },
+        "vertical_4_5": {
+          "label": "4:5 (0.80)",
+          "value": "Recommended 720 x 900 px; range 360 x 450 to 1080 x 1350",
+          "classification": "RECOMMENDATION"
+        },
+        "vertical_9_16": {
+          "label": "9:16 (0.56)",
+          "value": "Recommended 720 x 1280 px; range 360 x 640 to 1080 x 1920",
+          "classification": "RECOMMENDATION"
+        },
+        "duration": {
+          "label": "Recommended length",
+          "value": "15-30 seconds to qualify for all feed and Audience Network placements",
+          "classification": "RECOMMENDATION"
+        }
+      },
+      "technical_requirements": {
+        "ratio_bounds": {
+          "label": "Aspect ratio bounds",
+          "value": "Max 16:9 (1.777); business page: min 9:16 (0.563), 5% tolerance",
+          "classification": "REQUIREMENT"
+        },
+        "duration": {
+          "label": "Length",
+          "value": "3 seconds to 30 minutes; in-stream up to 90 seconds",
+          "classification": "REQUIREMENT"
+        },
+        "file_size": {
+          "label": "File size",
+          "value": "75 KB to 500 MB",
+          "classification": "REQUIREMENT"
+        },
+        "file_format": {
+          "label": "Format / codec",
+          "value": "MP4; H.264 or VP8; Apple ProRes not supported",
+          "classification": "REQUIREMENT"
+        },
+        "frame_rate": {
+          "label": "Frame rate",
+          "value": "Help: less than 30 fps. Business page: recommended 30 fps",
+          "classification": "REQUIREMENT"
+        },
+        "audio": {
+          "label": "Audio",
+          "value": "AAC or MPEG4; less than 64 kHz",
+          "classification": "REQUIREMENT"
+        },
+        "captions": {
+          "label": "Captions",
+          "value": "SRT, text only, no custom formatting",
+          "classification": "REQUIREMENT"
+        },
+        "thumbnail": {
+          "label": "Thumbnail (optional)",
+          "value": "JPG or PNG; max 2 MB; should match video ratio and resolution",
+          "classification": "REQUIREMENT"
+        },
+        "upload_limits": {
+          "label": "Upload limits",
+          "value": "Max 25 videos per 24 hours; desktop upload only; must be uploaded (no YouTube/Vimeo links)",
+          "classification": "REQUIREMENT"
+        },
+        "looping": {
+          "label": "Playback",
+          "value": "Videos under 30 s loop until at least 30 s of playback",
+          "classification": "SOURCE_NOTE"
+        }
+      },
+      "notes": "Introductory-text maximum (3,000 vs 600) and frame rate (<30 vs 30 recommended) differ between Help Center and business page. In-stream video ads are described as testing / gradual release."
+    },
+    {
+      "id": "LI-004",
+      "platform": "LinkedIn",
+      "format": "Document ad (Sponsored Content)",
+      "placement": "LinkedIn feed; LinkedIn Audience Network",
+      "source_url": "https://www.linkedin.com/help/lms/answer/a493903",
+      "secondary_sources": [
+        "https://business.linkedin.com/advertise/ads/sponsored-content/document-ads/specs"
+      ],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "ad_name": {
+          "label": "Ad name (optional)",
+          "value": "255 characters",
+          "classification": "REQUIREMENT"
+        },
+        "introductory_text_recommended": {
+          "label": "Introductory text, to avoid shortening",
+          "value": "150 characters",
+          "classification": "RECOMMENDATION"
+        },
+        "introductory_text_max": {
+          "label": "Introductory text, maximum",
+          "value": "3,000 characters",
+          "classification": "REQUIREMENT"
+        },
+        "headline_recommended": {
+          "label": "Headline, to avoid shortening (pre-filled with file name)",
+          "value": "70 characters",
+          "classification": "RECOMMENDATION"
+        },
+        "headline_max": {
+          "label": "Headline, maximum",
+          "value": "200 characters",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "recommendations": {
+        "pages": {
+          "label": "Page count",
+          "value": "Under 10 pages (business page)",
+          "classification": "RECOMMENDATION"
+        },
+        "layouts": {
+          "label": "Page layouts",
+          "value": "Standard PDF layouts (Letter, Tabloid, Legal, Statement, Executive, Folio, A3, A4, B4, B5); vertical, horizontal or square (business page)",
+          "classification": "RECOMMENDATION"
+        }
+      },
+      "technical_requirements": {
+        "file_size": {
+          "label": "File size / pages",
+          "value": "Max 100 MB and 300 pages; 1 million words",
+          "classification": "REQUIREMENT"
+        },
+        "file_types": {
+          "label": "File types",
+          "value": "PPT, PPTX, DOC, DOCX, PDF; lead generation objective: PDF only",
+          "classification": "REQUIREMENT"
+        },
+        "file_amount": {
+          "label": "Upload amount",
+          "value": "Up to five documents",
+          "classification": "REQUIREMENT"
+        },
+        "pdf": {
+          "label": "PDF preparation",
+          "value": "Flatten multi-layer PDFs; fit mixed page sizes to one size",
+          "classification": "REQUIREMENT"
+        },
+        "animation": {
+          "label": "Video/animation",
+          "value": "Not supported; renders as static images",
+          "classification": "REQUIREMENT"
+        },
+        "links": {
+          "label": "Hyperlinks",
+          "value": "Clickable only if the member downloads the document; keep links secure",
+          "classification": "SOURCE_NOTE"
+        }
+      },
+      "notes": "Business page lists the same text lengths without hard maximums."
+    },
+    {
+      "id": "LI-005",
+      "platform": "LinkedIn",
+      "format": "Event ad (Sponsored Content)",
+      "placement": "LinkedIn feed",
+      "source_url": "https://www.linkedin.com/help/lms/answer/a462024",
+      "secondary_sources": [
+        "https://business.linkedin.com/advertise/ads/sponsored-content/event-ads/specs"
+      ],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "ad_name": {
+          "label": "Ad name (optional)",
+          "value": "255 characters",
+          "classification": "REQUIREMENT"
+        },
+        "introductory_text_max": {
+          "label": "Introductory text (optional)",
+          "value": "Up to 600 characters; same text used before, during and after the event",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "recommendations": {},
+      "technical_requirements": {
+        "ad_image": {
+          "label": "Ad image",
+          "value": "Help: optional; upload or media library; replaces the LinkedIn Event cover image. Business page: 4:1 image pulled from the Event page",
+          "classification": "SOURCE_NOTE"
+        },
+        "video_preview": {
+          "label": "Video preview (optional)",
+          "value": "30-second preview of LinkedIn Live stream or recording",
+          "classification": "SOURCE_NOTE"
+        },
+        "destination": {
+          "label": "Event destination URL",
+          "value": "LinkedIn Event or off-platform event URL (business page: LinkedIn Event page URLs only, 2,000 characters)",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "notes": "Help Center now allows off-platform events and a custom ad image; the business page still describes LinkedIn Event pages only and a 4:1 pulled image. Business page's Help Center link points to the carousel spec page. No image dimensions published for the custom ad image."
+    },
+    {
+      "id": "LI-006",
+      "platform": "LinkedIn",
+      "format": "Thought Leader Ad",
+      "placement": "LinkedIn feed (sponsored member post)",
+      "source_url": "https://www.linkedin.com/help/lms/answer/a1399568",
+      "secondary_sources": [
+        "https://business.linkedin.com/advertise/ads/sponsored-content/thought-leader-ads/specs"
+      ],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "text": {
+          "label": "Headline / introductory text",
+          "value": "Cannot be added; edits must come from the post author",
+          "classification": "REQUIREMENT"
+        },
+        "cta": {
+          "label": "CTA",
+          "value": "Help: no CTA for single image or video; Event Thought Leader Ads include a CTA. Business page: no CTA buttons",
+          "classification": "REQUIREMENT"
+        },
+        "urls": {
+          "label": "URLs",
+          "value": "None added; URLs in the organic post stay hyperlinked",
+          "classification": "SOURCE_NOTE"
+        }
+      },
+      "recommendations": {},
+      "technical_requirements": {
+        "content_specs": {
+          "label": "Content specs",
+          "value": "Member post must meet single image (LI-001) or video (LI-003) specs",
+          "classification": "REQUIREMENT"
+        },
+        "eligible_posts": {
+          "label": "Eligible posts",
+          "value": "Public text, single image, video, article/newsletter posts; LinkedIn Live Event attendee posts. Not: celebrations, documents, polls, multi-image, reposts",
+          "classification": "REQUIREMENT"
+        },
+        "formats_objectives": {
+          "label": "Format / objective",
+          "value": "Single image or text: brand awareness, engagement. Video: + video views. Event, Article/Newsletter: brand awareness, engagement",
+          "classification": "REQUIREMENT"
+        },
+        "permissions": {
+          "label": "Permissions",
+          "value": "Author approval required; full name on profile; post public; cannot duplicate",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "notes": "CTA statement differs between the Help Center (event exception) and the business page."
+    },
+    {
+      "id": "LI-007",
+      "platform": "LinkedIn",
+      "format": "Article and Newsletter ad",
+      "placement": "LinkedIn feed",
+      "source_url": "https://business.linkedin.com/advertise/ads/sponsored-content/articles-and-newsletters-ads/specs",
+      "secondary_sources": [],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "text": {
+          "label": "Headline / introductory text",
+          "value": "Cannot be added; edits come from the original author",
+          "classification": "REQUIREMENT"
+        },
+        "cta": {
+          "label": "CTA",
+          "value": "Lead generation objective (Article Ads only): 'Unlock Article'; no CTA for other objectives",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "recommendations": {},
+      "technical_requirements": {
+        "content_specs": {
+          "label": "Content specs",
+          "value": "Same as single image ads (LI-001)",
+          "classification": "REQUIREMENT"
+        },
+        "destination": {
+          "label": "Destination",
+          "value": "No URL; click opens the organic Article or Newsletter",
+          "classification": "SOURCE_NOTE"
+        }
+      },
+      "notes": "Business marketing page only; linked Help Center article (a5966218) not retrieved in this pass."
+    },
+    {
+      "id": "LI-008",
+      "platform": "LinkedIn",
+      "format": "Conversation ad (Sponsored Messaging)",
+      "placement": "LinkedIn Messaging, desktop + mobile",
+      "source_url": "https://www.linkedin.com/help/lms/answer/a426057",
+      "secondary_sources": [
+        "https://business.linkedin.com/advertise/ads/sponsored-messaging/conversation-ads/specs"
+      ],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "ad_name": {
+          "label": "Ad name",
+          "value": "255 characters",
+          "classification": "REQUIREMENT"
+        },
+        "subject": {
+          "label": "Subject (optional)",
+          "value": "Up to 60 characters incl. macros; may truncate; short recommended",
+          "classification": "REQUIREMENT"
+        },
+        "intro_message": {
+          "label": "Intro message",
+          "value": "Up to 8,000 characters; up to 10 emojis; rich text counts toward limit",
+          "classification": "REQUIREMENT"
+        },
+        "message": {
+          "label": "Each message",
+          "value": "Up to 8,000 characters; 10 emojis per message layer",
+          "classification": "REQUIREMENT"
+        },
+        "cta_text": {
+          "label": "CTA button text",
+          "value": "25 characters",
+          "classification": "REQUIREMENT"
+        },
+        "cta_count": {
+          "label": "CTA buttons",
+          "value": "5 per message, 50 per conversation; 'Not Interested' required and auto-applied on intro",
+          "classification": "REQUIREMENT"
+        },
+        "footer": {
+          "label": "Custom footer and terms (optional)",
+          "value": "20,000 characters",
+          "classification": "REQUIREMENT"
+        },
+        "destination_url": {
+          "label": "Destination URL",
+          "value": "http:// or https://; up to 2,000 characters",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "recommendations": {
+        "message_length": {
+          "label": "Message length",
+          "value": "Feedback prompt above 500 characters; fewer characters can drive engagement",
+          "classification": "RECOMMENDATION"
+        }
+      },
+      "technical_requirements": {
+        "banner": {
+          "label": "Banner creative (optional)",
+          "value": "Max 300 x 250 px; desktop only; JPG or PNG; max 2 MB",
+          "classification": "REQUIREMENT"
+        },
+        "image": {
+          "label": "Image (optional)",
+          "value": "250 x 250 px; JPG or PNG; max 5 MB; mobile may render differently",
+          "classification": "REQUIREMENT"
+        },
+        "eea": {
+          "label": "EEA / Switzerland",
+          "value": "Delivered only to members who opted in to Sponsored Messaging",
+          "classification": "SOURCE_NOTE"
+        }
+      },
+      "notes": "Business page summarizes message text as 8,000 maximum and CTA 25 maximum, consistent with Help."
+    },
+    {
+      "id": "LI-009",
+      "platform": "LinkedIn",
+      "format": "Message ad (Sponsored Messaging)",
+      "placement": "LinkedIn Messaging, desktop + mobile",
+      "source_url": "https://www.linkedin.com/help/lms/answer/a425533",
+      "secondary_sources": [
+        "https://business.linkedin.com/advertise/ads/sponsored-messaging/message-ads/specs"
+      ],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "ad_name": {
+          "label": "Ad name",
+          "value": "255 characters",
+          "classification": "REQUIREMENT"
+        },
+        "subject": {
+          "label": "Subject",
+          "value": "Up to 60 characters incl. macros; may truncate",
+          "classification": "REQUIREMENT"
+        },
+        "message_text": {
+          "label": "Message text",
+          "value": "Help: up to 1,500 characters, 10 emojis. Business page: 8,000 maximum",
+          "classification": "REQUIREMENT"
+        },
+        "links": {
+          "label": "Clickable links",
+          "value": "Up to 3; hyperlinked text up to 70 characters",
+          "classification": "REQUIREMENT"
+        },
+        "cta": {
+          "label": "CTA",
+          "value": "Help: 20 characters, plus required 'Not Interested'. Business page: 25 maximum",
+          "classification": "REQUIREMENT"
+        },
+        "footer": {
+          "label": "Custom footer and T&Cs",
+          "value": "20,000 characters",
+          "classification": "REQUIREMENT"
+        },
+        "landing_url": {
+          "label": "Landing page URL",
+          "value": "Help: up to 1,024 characters. Business page: 2,000",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "recommendations": {},
+      "technical_requirements": {
+        "banner": {
+          "label": "Banner creative (optional)",
+          "value": "Max 300 x 250 px; desktop only; JPG, non-animated GIF or PNG; max 2 MB",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "notes": "Business message-ads page repeats conversation-ad values (8,000 / 25 / 2,000) and links its resources to single image ads, suggesting a copied template. Third-party reports claim Message Ads were sunset in 2023; the Help Center page is still live. Availability UNVERIFIED."
+    },
+    {
+      "id": "LI-010",
+      "platform": "LinkedIn",
+      "format": "Text ad",
+      "placement": "Right rail of LinkedIn desktop pages",
+      "source_url": "https://www.linkedin.com/help/lms/answer/a423705",
+      "secondary_sources": [
+        "https://business.linkedin.com/advertise/ads/text-ads/specs"
+      ],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "ad_name": {
+          "label": "Ad name (optional)",
+          "value": "255 characters",
+          "classification": "REQUIREMENT"
+        },
+        "headline": {
+          "label": "Headline",
+          "value": "25 characters incl. spaces",
+          "classification": "REQUIREMENT"
+        },
+        "description": {
+          "label": "Description",
+          "value": "75 characters incl. spaces",
+          "classification": "REQUIREMENT"
+        },
+        "destination_url": {
+          "label": "Destination URL",
+          "value": "Help: up to 500 characters. Business page: 2,000",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "recommendations": {},
+      "technical_requirements": {
+        "image": {
+          "label": "Ad image",
+          "value": "100 x 100 px; JPG or PNG; 2 MB or smaller",
+          "classification": "REQUIREMENT"
+        },
+        "sizes": {
+          "label": "Rendered sizes",
+          "value": "300 x 250, 700 x 17, 160 x 600, 728 x 90, 496 x 80",
+          "classification": "SOURCE_NOTE"
+        }
+      },
+      "notes": "Still listed in the Help Center and in the business ads guide as of the research date; no official retirement notice found. URL length differs between sources."
+    },
+    {
+      "id": "LI-011",
+      "platform": "LinkedIn",
+      "format": "Lead Gen Form",
+      "placement": "Attached to single image, carousel, video, event, message, document, conversation ads",
+      "source_url": "https://www.linkedin.com/help/lms/answer/a423364",
+      "secondary_sources": [
+        "https://business.linkedin.com/advertise/ads/sponsored-content/lead-gen-ads/specs"
+      ],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "headline": {
+          "label": "Form headline",
+          "value": "60 characters",
+          "classification": "REQUIREMENT"
+        },
+        "details": {
+          "label": "Details",
+          "value": "160 characters",
+          "classification": "REQUIREMENT"
+        },
+        "privacy_text": {
+          "label": "Privacy policy text (optional)",
+          "value": "2,000 characters; privacy policy URL required",
+          "classification": "REQUIREMENT"
+        },
+        "disclosures": {
+          "label": "Disclosure checkboxes (optional)",
+          "value": "Up to 5; 500 characters each",
+          "classification": "REQUIREMENT"
+        },
+        "confirmation": {
+          "label": "Confirmation message",
+          "value": "300 characters",
+          "classification": "REQUIREMENT"
+        },
+        "cta": {
+          "label": "CTA (business page)",
+          "value": "20 characters",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "recommendations": {
+        "form_image": {
+          "label": "Form image (optional)",
+          "value": "552 x 200 px",
+          "classification": "RECOMMENDATION"
+        },
+        "field_count": {
+          "label": "Field count",
+          "value": "3-4 fields (business page)",
+          "classification": "RECOMMENDATION"
+        }
+      },
+      "technical_requirements": {
+        "fields": {
+          "label": "Profile fields",
+          "value": "Up to 12 (custom questions count); at least one question",
+          "classification": "REQUIREMENT"
+        },
+        "custom_questions": {
+          "label": "Custom questions",
+          "value": "Up to 3; 100 characters each",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "notes": ""
+    },
+    {
+      "id": "LI-012",
+      "platform": "LinkedIn",
+      "format": "Connected TV (CTV) ad",
+      "placement": "Connected TV publisher inventory",
+      "source_url": "https://www.linkedin.com/help/lms/answer/a6282198",
+      "secondary_sources": [],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {},
+      "recommendations": {},
+      "technical_requirements": {
+        "dimensions": {
+          "label": "Dimensions",
+          "value": "1920 x 1080 or 1280 x 720 px; recommended 1920 x 1080",
+          "classification": "REQUIREMENT"
+        },
+        "ratio": {
+          "label": "Aspect ratio",
+          "value": "16:9",
+          "classification": "REQUIREMENT"
+        },
+        "duration": {
+          "label": "Duration",
+          "value": "6-60 s; recommended 6, 15, 30, 45 or 60 s; some inventory rejects 45/60 s",
+          "classification": "REQUIREMENT"
+        },
+        "format": {
+          "label": "Format / codec",
+          "value": "MP4; H.264",
+          "classification": "REQUIREMENT"
+        },
+        "bitrate": {
+          "label": "Bit rate",
+          "value": "1.2 Mbps or higher; recommended 15-40 Mbps",
+          "classification": "REQUIREMENT"
+        },
+        "audio": {
+          "label": "Audio",
+          "value": "2-channel, -23 LUFS integrated; PCM (preferred) or AAC; 192 kbps min; 48 kHz; must match video duration",
+          "classification": "REQUIREMENT"
+        },
+        "file_size": {
+          "label": "Max file size",
+          "value": "500 MB",
+          "classification": "REQUIREMENT"
+        },
+        "frame_rate": {
+          "label": "Frame rate",
+          "value": "Constant 23.98, 24, 25, 29.97 or 30 fps",
+          "classification": "REQUIREMENT"
+        },
+        "chroma": {
+          "label": "Chroma subsampling",
+          "value": "4:2:0; recommended 4:2:2",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "notes": "Meeting specs does not guarantee delivery to all publishers."
+    },
+    {
+      "id": "LI-013",
+      "platform": "LinkedIn",
+      "format": "Dynamic ad: Spotlight",
+      "placement": "Desktop",
+      "source_url": "https://www.linkedin.com/help/lms/answer/a425222",
+      "secondary_sources": [],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "description": {
+          "label": "Ad description (above images)",
+          "value": "70 characters",
+          "classification": "REQUIREMENT"
+        },
+        "headline": {
+          "label": "Ad headline (below images)",
+          "value": "50 characters",
+          "classification": "REQUIREMENT"
+        },
+        "ad_name": {
+          "label": "Ad name (optional)",
+          "value": "255 characters",
+          "classification": "REQUIREMENT"
+        },
+        "company_name": {
+          "label": "Company name",
+          "value": "25 characters",
+          "classification": "REQUIREMENT"
+        },
+        "cta": {
+          "label": "CTA button text",
+          "value": "18 characters",
+          "classification": "REQUIREMENT"
+        },
+        "url": {
+          "label": "Landing page URL",
+          "value": "Max 500 characters",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "recommendations": {},
+      "technical_requirements": {
+        "logo": {
+          "label": "Company image",
+          "value": "Min 100 x 100 px JPG or PNG; larger reduced to 100 x 100",
+          "classification": "REQUIREMENT"
+        },
+        "background": {
+          "label": "Custom background (optional)",
+          "value": "Exactly 300 x 250 px, 2 MB or less; white area 276 x 148 px; removes description and member photo",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "notes": "Not the same product as Nextdoor Spotlight."
+    },
+    {
+      "id": "LI-014",
+      "platform": "LinkedIn",
+      "format": "Dynamic ad: Follower",
+      "placement": "Desktop",
+      "source_url": "https://www.linkedin.com/help/lms/answer/a420350",
+      "secondary_sources": [],
+      "checked_on": "2026-09-16",
+      "source_access": "Public page retrieved without login (HTTP fetch of server-rendered HTML); main content transcribed",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {
+        "description": {
+          "label": "Ad description",
+          "value": "70 characters (custom text not translated)",
+          "classification": "REQUIREMENT"
+        },
+        "headline": {
+          "label": "Ad headline",
+          "value": "50 characters",
+          "classification": "REQUIREMENT"
+        },
+        "ad_name": {
+          "label": "Ad name (optional)",
+          "value": "255 characters",
+          "classification": "REQUIREMENT"
+        },
+        "company_name": {
+          "label": "Company name",
+          "value": "25 characters",
+          "classification": "REQUIREMENT"
+        },
+        "cta": {
+          "label": "CTA",
+          "value": "Pre-set (Visit company / jobs / life); non-followers see Follow",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "recommendations": {},
+      "technical_requirements": {
+        "logo": {
+          "label": "Ad image",
+          "value": "Min 100 x 100 px JPG or PNG",
+          "classification": "REQUIREMENT"
+        }
+      },
+      "notes": "No third-party tracking."
+    }
+  ]
+}

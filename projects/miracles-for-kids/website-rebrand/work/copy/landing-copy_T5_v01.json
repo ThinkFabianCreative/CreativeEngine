@@ -1,0 +1,155 @@
+{
+  "_meta": {
+    "client": "Miracles for Kids Charity",
+    "project": "website-rebrand",
+    "packet": "P1",
+    "territory": "T5 Everyday miracles (lead)",
+    "version": "v01",
+    "date": "2026-10-16",
+    "purpose": "Copy as variables, separate from layout, so every visual style exploration uses the same words. Change copy here, not in the designs.",
+    "conventions": {
+      "headline": "array of segments; {\"t\": text, \"hl\": true} is the one highlighted word (script). One highlight per headline.",
+      "placeholders": "[square brackets] = not confirmed (Q1 stats, Q2 family names and consent, Q6 amounts). Don't present as fact.",
+      "links": "existing MFK pages; the landing page supports existing content. Design only, not functional."
+    }
+  },
+
+  "nav": {
+    "logo_alt": "Miracles for Kids",
+    "items": [
+      { "label": "Family Stories", "href": "https://miraclesforkids.org/families-weve-helped/" },
+      { "label": "Programs", "href": "https://miraclesforkids.org/how-we-help-2/" },
+      { "label": "About", "href": "https://miraclesforkids.org/why-we-help/" },
+      { "label": "Events", "href": "https://miraclesforkids.org/take-action/our-events/" },
+      { "label": "Get Involved", "href": "https://miraclesforkids.org/take-action/" }
+    ],
+    "cta": { "label": "Donate", "href": "https://miraclesforkids.org/donate/" }
+  },
+
+  "hero": {
+    "eyebrow": "Miracles for Kids",
+    "headline": [ { "t": "Small miracles." }, { "t": " Big " }, { "t": "difference.", "hl": true } ],
+    "description": "Bills paid, homes kept, kids being kids.",
+    "cta_primary": { "label": "Give monthly", "href": "https://miraclesforkids.org/donate/?t=2" },
+    "cta_secondary": { "label": "Watch William's story", "href": "https://www.youtube.com/watch?v=GKu1Jh4S97M" },
+    "video": { "title": "The Story of William, Battling Leukemia", "duration": "1:43", "src": "https://www.youtube.com/watch?v=GKu1Jh4S97M", "poster_note": "Use a still from the video, child at eye level" }
+  },
+
+  "donation_card": {
+    "headline": [ { "t": "Be a " }, { "t": "monthly", "hl": true }, { "t": " miracle." } ],
+    "description": "$[25] a month keeps a family going.",
+    "toggle": [ "Monthly", "One-time" ],
+    "default": "Monthly",
+    "amounts": [ "$[25]", "$[50]", "$[100]", "$[250]" ],
+    "custom_placeholder": "Other amount",
+    "button": "Give monthly",
+    "trust": [ "Charity Navigator [4-star]", "Candid [Platinum]", "EIN 91-2160616" ],
+    "secondary_link": { "label": "Other ways to give", "href": "https://miraclesforkids.org/ways-to-give/" }
+  },
+
+  "truth": {
+    "headline": [ { "t": "Rent's due. " }, { "t": "Miracles", "hl": true }, { "t": " too." } ],
+    "description": "When a child is critically ill, the bills don't stop. We pay them.",
+    "link": { "label": "How we help", "href": "https://miraclesforkids.org/how-we-help-2/" }
+  },
+
+  "stories": {
+    "eyebrow": "Family Stories",
+    "headline": [ { "t": "Meet", "hl": true }, { "t": " the miracles." } ],
+    "description": "Real families. Real kids. Their words.",
+    "filters": [ "All", "Video", "Read", "Where Are They Now?", "Lifeline", "Safe Haven", "Balance", "Boost", "Pillars" ],
+    "watch_label": "Watch their story",
+    "read_label": "Read their story",
+    "all_link": { "label": "All family stories", "href": "https://miraclesforkids.org/families-weve-helped/" },
+    "cards": [
+      { "name": "William", "headline": [ { "t": "William's " }, { "t": "miracle", "hl": true } ], "line": "[Remission at seven. Lights on the whole time.]", "format": "Video", "duration": "1:43", "programs": [ "[Lifeline]" ], "href": "https://www.youtube.com/watch?v=GKu1Jh4S97M" },
+      { "name": "Willow", "headline": [ { "t": "Willow's " }, { "t": "miracle", "hl": true } ], "line": "[A rare disorder. A very big smile.]", "format": "Video", "duration": "3:01", "programs": [ "[Lifeline]", "[Boost]" ], "href": "https://www.youtube.com/watch?v=BFT26CmxsYY" },
+      { "name": "Jeremiah's family", "headline": [ { "t": "Jeremiah's " }, { "t": "miracle", "hl": true } ], "line": "[They kept their home through it all.]", "format": "Where Are They Now?", "duration": "2:26", "programs": [ "[Safe Haven]" ], "href": "https://www.youtube.com/watch?v=QAD2hSqy9oY" },
+      { "name": "Berenice and Mayte", "headline": [ { "t": "Berenice and Mayte's " }, { "t": "miracle", "hl": true } ], "line": "[Where they are now.]", "format": "Where Are They Now?", "duration": "2:28", "programs": [ "[TBC]" ], "href": "https://www.youtube.com/watch?v=zetiiZd1CUw" },
+      { "name": "Michelle", "headline": [ { "t": "Michelle's " }, { "t": "miracle", "hl": true } ], "line": "Almost three. A car payment covered, so every appointment happens.", "format": "Read", "programs": [ "Lifeline" ], "href": "https://miraclesforkids.org/families-weve-helped/?fam=0" },
+      { "name": "Kharter", "headline": [ { "t": "Kharter's " }, { "t": "miracle", "hl": true } ], "line": "[one line, TBC]", "format": "Video", "programs": [ "[TBC]" ], "href": "https://www.youtube.com/watch?v=bzdTWc-1CcA" }
+    ],
+    "consent_note": "All names, photos and diagnoses pending MFK consent (Q2)."
+  },
+
+  "programs": {
+    "eyebrow": "How we help",
+    "headline": [ { "t": "Five kinds of " }, { "t": "miracle.", "hl": true } ],
+    "description": "Each one takes a weight off a family.",
+    "items": [
+      { "key": "lifeline", "program": "Lifeline", "headline": [ { "t": "The " }, { "t": "lights-on", "hl": true }, { "t": " miracle" } ], "description": "Up to $500 a month toward the bills.", "stat": "[230+] families every month", "href": "https://miraclesforkids.org/pay-the-bills/" },
+      { "key": "safe_haven", "program": "Safe Haven", "headline": [ { "t": "The " }, { "t": "home", "hl": true }, { "t": " miracle" } ], "description": "Miracle Manor, around the corner from CHOC.", "stat": "[22] families housed", "href": "https://miraclesforkids.org/housing/" },
+      { "key": "balance", "program": "Balance", "headline": [ { "t": "The " }, { "t": "hard-day", "hl": true }, { "t": " miracle" } ], "description": "Counseling for the whole family.", "stat": "[400+] people in therapy this year", "href": "https://miraclesforkids.org/heal/" },
+      { "key": "boost", "program": "Boost", "headline": [ { "t": "The " }, { "t": "full-fridge", "hl": true }, { "t": " miracle" } ], "description": "Food, clothes and essentials, every month.", "stat": "[Box of Miracles monthly]", "href": "https://miraclesforkids.org/feed-and-clothe/" },
+      { "key": "pillars", "program": "Pillars", "headline": [ { "t": "The " }, { "t": "what's-next", "hl": true }, { "t": " miracle" } ], "description": "Jobs, school and a fresh start.", "stat": "[78%] of those interviewed were hired", "href": "https://miraclesforkids.org/how-we-help-2/pillars/" }
+    ]
+  },
+
+  "proof": {
+    "headline": [ { "t": "Trusted by the " }, { "t": "hospitals", "hl": true }, { "t": " that send us families." } ],
+    "description": "Every family is referred by a children's hospital.",
+    "hospitals": [ "CHOC Children's", "Children's Hospital Los Angeles", "City of Hope", "By the Bay Health", "Loma Linda University Children's", "Rady Children's", "UCLA Mattel Children's", "UCSF Benioff Children's", "Phoenix Children's" ],
+    "stats": [
+      { "value": "[2,100+]", "label": "families helped" },
+      { "value": "Up to $500", "label": "a month toward bills" },
+      { "value": "[41,437]", "label": "nights of sleep at Miracle Manor" },
+      { "value": "[88¢]", "label": "of every dollar to programs" }
+    ],
+    "stats_note": "All values pending Q1 and the 990 check.",
+    "link": { "label": "Our financials", "href": "https://miraclesforkids.org/financials/" }
+  },
+
+  "urgency": {
+    "headline": [ { "t": "[6+] families are " }, { "t": "waiting.", "hl": true } ],
+    "description": "Your monthly gift moves one off the list.",
+    "cta": { "label": "Give monthly", "href": "https://miraclesforkids.org/donate/?t=2" }
+  },
+
+  "get_involved": {
+    "headline": [ { "t": "More ways to make " }, { "t": "miracles.", "hl": true } ],
+    "items": [
+      { "key": "360", "headline": [ { "t": "Miracles, " }, { "t": "together.", "hl": true } ], "description": "A circle of women giving all year.", "label": "Join 360° Miracle", "href": "https://360miracle.org/" },
+      { "key": "volunteer", "headline": [ { "t": "Join " }, { "t": "Team", "hl": true }, { "t": " Miracles." } ], "description": "Wrap, pack, deliver, cheer.", "label": "Volunteer", "href": "https://miraclesforkids.volunteerhub.com/vv2/" },
+      { "key": "partners", "headline": [ { "t": "Business", "hl": true }, { "t": " with a heart." } ], "description": "Give, sponsor, volunteer as a team.", "label": "Partner with us", "href": "https://miraclesforkids.org/our-partners/" }
+    ]
+  },
+
+  "events": {
+    "headline": [ { "t": "Miracles, " }, { "t": "in person.", "hl": true } ],
+    "description": "Galas, baskets and beach days.",
+    "items": [
+      { "date": "Oct 17", "name": "Night of Miracles Gala", "note": "Waldorf Astoria Monarch Beach" },
+      { "date": "Nov 14", "name": "Wellness Fun Fest", "note": "Volunteers welcome" },
+      { "date": "Nov 18–24", "name": "Thanksgiving Basket of Miracles", "note": "Assembly day Nov 21" },
+      { "date": "Dec 7–16", "name": "Holiday Basket of Miracles", "note": "Wrapping party Dec 12" }
+    ],
+    "link": { "label": "All events", "href": "https://miraclesforkids.org/take-action/our-events/" }
+  },
+
+  "newsletter": {
+    "headline": [ { "t": "Get the " }, { "t": "good", "hl": true }, { "t": " news." } ],
+    "description": "Family stories and ways to help, once a month.",
+    "placeholder": "Email address",
+    "button": "Sign up"
+  },
+
+  "close": {
+    "headline": [ { "t": "Make a " }, { "t": "miracle", "hl": true }, { "t": " today." } ],
+    "description": "It's easier than it sounds.",
+    "cta": { "label": "Give monthly", "href": "https://miraclesforkids.org/donate/?t=2" }
+  },
+
+  "footer": {
+    "line": "Helping the families who don't have time to ask for help.",
+    "address": "17848 Sky Park Circle, Suite C, Irvine, CA 92614",
+    "phone": "(714) 730-3040",
+    "email": "info@miraclesforkids.org",
+    "legal": "Miracles for Kids is a 501(c)(3) nonprofit. EIN 91-2160616.",
+    "columns": {
+      "Programs": [ "Lifeline", "Safe Haven", "Balance", "Boost", "Pillars" ],
+      "About": [ "Our Story", "Our Team", "Financials", "Newsroom", "Careers" ],
+      "Get Involved": [ "Donate", "Volunteer", "360° Miracle", "Partners", "Events" ]
+    },
+    "social": [ "Instagram", "Facebook", "YouTube", "LinkedIn" ]
+  }
+}

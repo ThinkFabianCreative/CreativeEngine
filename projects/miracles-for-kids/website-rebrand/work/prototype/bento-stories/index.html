@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>MFK Family Stories: bento prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bento.css?v=1793608975">
+  <!-- PROTOTYPE ONLY: Webflow's runtime isn't on a local page. Finsweet queues its start on
+       window.Webflow; this stand-in runs that queue once the page is parsed. Do not copy to Webflow. -->
+  <script>
+    (() => {
+      const queue = [];
+      let ready = false;
+      window.Webflow = { push(fn) { ready ? fn() : queue.push(fn); } };
+      document.addEventListener('DOMContentLoaded', () => { ready = true; queue.splice(0).forEach((fn) => fn()); });
+    })();
+  </script>
+  <!-- Finsweet Attributes v2, list module. Pinned: latest on npm 2026-11-01. -->
+  <script async type="module" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes@2.7.1/attributes.js" fs-list></script>
+  <script defer src="bento-layout.js?v=1793608975"></script>
+</head>
+<body>
+  <aside class="proto-bar" aria-label="Prototype controls">
+    <strong>Prototype</strong> · merged direction · <strong>TEST DATA:</strong> programs and Where Are They Now? randomized; videos and quotes are real ·
+    <span>Hide fields:</span>
+    <label><input type="checkbox" data-hide="badge"> badges</label>
+    <label><input type="checkbox" data-hide="description"> descriptions</label>
+    <label><input type="checkbox" data-hide="photo"> photos</label>
+  </aside>
+
+  <section class="selected-work">
+    <header class="portfolio-header">
+      <p class="eyebrow">Family Stories</p>
+      <h1 class="section-title"><span class="highlight">Meet</span> the miracles.</h1>
+      <p class="section-description">Real families. Real kids. Their words.</p>
+      <p class="project-count" aria-live="polite">
+        <span fs-list-element="results-count">43</span> results
+      </p>
+    </header>
+
+    <div class="filter-slot">
+    <form class="filter-form" fs-list-element="filters" aria-label="Filter stories">
+      <div class="filter-chip-list" role="group" aria-label="Format">
+        <button type="button" class="filter-chip filter-all" fs-list-element="clear">All</button>
+        <label class="filter-chip w-checkbox">
+          <input type="checkbox" class="filter-input" name="format" fs-list-field="format" fs-list-operator="contain" fs-list-value="Video">
+          <span class="filter-label">Video</span>
+        </label><label class="filter-chip w-checkbox">
+          <input type="checkbox" class="filter-input" name="format" fs-list-field="format" fs-list-operator="contain" fs-list-value="Read">
+          <span class="filter-label">Read</span>
+        </label><label class="filter-chip w-checkbox">
+          <input type="checkbox" class="filter-input" name="format" fs-list-field="format" fs-list-operator="contain" fs-list-value="Where Are They Now?">
+          <span class="filter-label">Where Are They Now?</span>
+        </label>
+      </div>
+      <div class="filter-chip-list" role="group" aria-label="Program">
+        <label class="filter-chip w-checkbox">
+          <input type="checkbox" class="filter-input" name="program" fs-list-field="program" fs-list-operator="contain" fs-list-value="Lifeline">
+          <span class="filter-label">Lifeline</span>
+        </label><label class="filter-chip w-checkbox">
+          <input type="checkbox" class="filter-input" name="program" fs-list-field="program" fs-list-operator="contain" fs-list-value="Safe Haven">
+          <span class="filter-label">Safe Haven</span>
+        </label><label class="filter-chip w-checkbox">
+          <input type="checkbox" class="filter-input" name="program" fs-list-field="program" fs-list-operator="contain" fs-list-value="Balance">
+          <span class="filter-label">Balance</span>
+        </label><label class="filter-chip w-checkbox">
+          <input type="checkbox" class="filter-input" name="program" fs-list-field="program" fs-list-operator="contain" fs-list-value="Boost">
+          <span class="filter-label">Boost</span>
+        </label><label class="filter-chip w-checkbox">
+          <input type="checkbox" class="filter-input" name="program" fs-list-field="program" fs-list-operator="contain" fs-list-value="Pillars">
+          <span class="filter-label">Pillars</span>
+        </label>
+      </div>
+    </form>
+    </div>
+
+    <!-- Finsweet reads load + itemsperpage from the Collection List Wrapper (w-dyn-list). -->
+    <div class="portfolio-list-wrapper w-dyn-list" fs-list-load="pagination" fs-list-itemsperpage="12">
+      <div class="bento-grid w-dyn-items" role="list" fs-list-element="list">
+        
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/johann" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a99e5a94c4f1d23db6f5276_f05322fe-1866-4f5c-b191-07f0dc362122.jpg" alt="" loading="lazy"><span class="pill category-badge">Balance</span><h3 class="card-title">Finding strength in a brother&#x27;s bond</h3><p class="card-description">After months of confusing symptoms, Johann leans on his older brother&#x27;s steady support to navigate intense chemotherapy cycles.</p><div class="fs-field" fs-list-field="program">Balance</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/darla" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a99e4e74c4f1d23db6f0d4b_dde221db-3971-4adc-b2d5-6085c425f03b.jpg" alt="" loading="lazy"><span class="pill category-badge">Lifeline</span><h3 class="card-title">Darla&#x27;s brave journey through leukemia</h3><p class="card-description">Enduring intense leukemia treatments, Darla relies on the love of her family to stay strong as they navigate overwhelming hardships together.</p><div class="fs-field" fs-list-field="program">Lifeline, Safe Haven, Balance</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/alice" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a99e3c253da4fccfc75cc13_32cf91bd-6393-4cbf-b5ab-aa310510b7bb.jpg" alt="" loading="lazy"><span class="pill category-badge">Boost</span><h3 class="card-title">Alice&#x27;s brave fight against leukemia</h3><p class="card-description">Facing a difficult leukemia diagnosis, Alice works hard in therapy to regain her strength as her family navigates this challenging chapter.</p><div class="fs-field" fs-list-field="program">Boost, Pillars</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/marie" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a99ea12460d61f0c160f96d_69ada2ea-f93b-4c20-b698-517b9f2987dc.jpg" alt="" loading="lazy"><span class="pill category-badge">Lifeline</span><h3 class="card-title">Marie&#x27;s bright future after beating leukemia</h3><p class="card-description">After defeating leukemia, Marie is pursuing medicine in college as her family builds a stable, hopeful future in a new home.</p><div class="fs-field" fs-list-field="program">Lifeline, Safe Haven, Boost</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/greyson" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a99e1aac91840b67a78a77a_735975f5-8c8c-4091-ab89-38b9458a1b4c.jpg" alt="" loading="lazy"><span class="pill category-badge">Balance</span><h3 class="card-title">Greyson&#x27;s ongoing battle for every breath</h3><p class="card-description">After surviving 210 days in the NICU and a sudden cardiac arrest, baby Greyson and his parents continue their brave fight for his future.</p><div class="fs-field" fs-list-field="program">Balance</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single">
+        <figure class="bento-card" data-variant="quote-blue">
+          <blockquote class="quote-text">“To have help from Miracles for Kids lifts a weight from us…”</blockquote>
+          <figcaption class="quote-by">Maribel, a Miracles for Kids mom</figcaption>
+          <div class="fs-field" fs-list-field="program">Lifeline, Boost</div><div class="fs-field" fs-list-field="type">Quote</div>
+        </figure>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/benbarry" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a99e081b4779696955f7acb_barnbarry1.webp" alt="" loading="lazy"><span class="pill category-badge">Safe Haven</span><h3 class="card-title">Benbarry&#x27;s triumph over sickle cell</h3><p class="card-description">After battling sickle cell and a tough transplant recovery, Benbarry is now thriving as his family embraces a stable, hopeful future.</p><div class="fs-field" fs-list-field="program">Safe Haven, Boost</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/leonel" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a99de6b9d5f41f647d3bd43_leonel1.webp" alt="" loading="lazy"><span class="pill category-badge">Lifeline</span><h3 class="card-title">Leonel&#x27;s journey to save his vision</h3><p class="card-description">Now free from chemotherapy, Leonel faces a crucial surgery to save his sight as the Casillas family begins a hopeful new chapter.</p><div class="fs-field" fs-list-field="program">Lifeline, Boost</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="double"><a class="bento-card" href="https://www.youtube.com/watch?v=QAD2hSqy9oY" data-variant="feature"><svg class="deco" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" style="right:0;top:0;width:60%;height:100%;color:var(--mfk-peach)"><path fill="currentColor" d="M100 0 V100 H10 C10 40 50 0 100 0Z"/></svg><span class="play" aria-hidden="true"><svg viewBox="0 0 22 26"><path d="M0 0 L22 13 L0 26 Z" fill="currentColor"/></svg></span><span class="pill">Where Are They Now?</span><h3 class="card-title card-title--xl">Jeremiah&#x27;s miracle</h3><p class="card-description">Jeremiah has Langerhans Cell Histiocytosis. Facing eviction, his mother Maria received emergency rental assistance and kept their home.</p><div class="fs-field" fs-list-field="program">Pillars</div><div class="fs-field" fs-list-field="format">Read, Where Are They Now?, Video</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/abraham" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a94e79bf4ab7dc8c8a2c50b_Abraham-Alcantara_Family-Pic_2.png" alt="" loading="lazy"><span class="pill category-badge">Safe Haven</span><h3 class="card-title">Abraham is growing stronger toward a transplant</h3><p class="card-description">Born with renal failure and Potter sequence, 3-year-old Abraham is working toward a kidney transplant as his single mom raises three kids.</p><div class="fs-field" fs-list-field="program">Safe Haven, Boost</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://www.youtube.com/watch?v=GKu1Jh4S97M" data-variant="video-warm"><svg class="deco" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" style="right:0;bottom:0;width:62%;height:55%;color:var(--mfk-sun)"><path fill="currentColor" d="M0 45 L50 10 L100 45 V100 H0Z"/></svg><span class="play" aria-hidden="true"><svg viewBox="0 0 22 26"><path d="M0 0 L22 13 L0 26 Z" fill="currentColor"/></svg></span><span class="pill">Video Story</span><h3 class="card-title">William&#x27;s miracle</h3><span class="pill pill--time">1:43</span><div class="fs-field" fs-list-field="program">Lifeline, Balance, Pillars</div><div class="fs-field" fs-list-field="format">Read, Video</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single">
+        <figure class="bento-card" data-variant="quote-cream">
+          <blockquote class="quote-text">“…thanks to you, many times my children was able to have snack at home.”</blockquote>
+          <figcaption class="quote-by">The Madrid family</figcaption>
+          <div class="fs-field" fs-list-field="program">Lifeline, Boost</div><div class="fs-field" fs-list-field="type">Quote</div>
+        </figure>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/jaxxon" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a94e79bf4ab7dc8c8a2c51f_Jaxxon-Douangsouphonh-Johnson-1.png" alt="" loading="lazy"><span class="pill category-badge">Boost</span><h3 class="card-title">Jaxxon started school after a liver transplant</h3><p class="card-description">Born with biliary atresia, Jaxxon received a liver transplant at 2. Miracles covered the bills so his family of six could stay afloat.</p><div class="fs-field" fs-list-field="program">Boost, Pillars</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/julio2" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a94e774664227b25df2e5ea_Julio-Godoy-Jr.jpeg" alt="" loading="lazy"><span class="pill category-badge">Boost</span><h3 class="card-title">Julio is building his future after aplastic anemia</h3><p class="card-description">Diagnosed with Aplastic Anemia at 9, Julio is now 20 and back with Miracles for Kids, building a career through an apprenticeship.</p><div class="fs-field" fs-list-field="program">Boost, Pillars</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/alexander" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a94e774664227b25df2e5e6_Alexander_with-Family.png" alt="" loading="lazy"><span class="pill category-badge">Balance</span><h3 class="card-title">Alexander finished treatment for a rare cancer</h3><p class="card-description">At 15, Alexander completed chemo and radiation for Rhabdomyosarcoma. With his stepfather out of work, Miracles helps cover the bills.</p><div class="fs-field" fs-list-field="program">Balance, Boost, Pillars</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/mariah" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a94e774664227b25df2e5da_Mariah_768x432.png" alt="" loading="lazy"><span class="pill category-badge">Lifeline</span><h3 class="card-title">Mariah is fighting a tumor in her jaw</h3><p class="card-description">For two years Mariah’s mouth pain went unexplained, until a cancerous jaw tumor was found. Her single mom cut back work to care for her.</p><div class="fs-field" fs-list-field="program">Lifeline, Pillars</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/alexia" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a94e773664227b25df2e5cf_Alexia_Header_768x432.jpeg" alt="" loading="lazy"><span class="pill category-badge">Lifeline</span><h3 class="card-title">Alexia lives with severe epilepsy at ten</h3><p class="card-description">At 10, Alexia lives with a rare, severe epilepsy and receives palliative care. Her brother Javier has the same condition.</p><div class="fs-field" fs-list-field="program">Lifeline</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single">
+        <figure class="bento-card" data-variant="quote-blue">
+          <blockquote class="quote-text">“They genuinely care about the well-being of families like mine.”</blockquote>
+          <figcaption class="quote-by">Miranda M.</figcaption>
+          <div class="fs-field" fs-list-field="program">Pillars</div><div class="fs-field" fs-list-field="type">Quote</div>
+        </figure>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/isaias" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a397c3176be3e47eb039f18_Isaias-1.png" alt="" loading="lazy"><span class="pill category-badge">Safe Haven</span><h3 class="card-title">Isaias faces leukemia after losing his home</h3><p class="card-description">Days after the LA fires took their home, 7-year-old Isaias was diagnosed with leukemia. His single mom is fighting to keep going.</p><div class="fs-field" fs-list-field="program">Safe Haven, Boost</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/emerson" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a3976b8a6bc30633d8f9f35_2414_Emerson2.jpg" alt="" loading="lazy"><span class="pill category-badge">Lifeline</span><h3 class="card-title">Emerson has been in the hospital since birth</h3><p class="card-description">Born with a heart valve that would not shut, baby Emerson has been hospitalized since birth as his family holds on to hope.</p><div class="fs-field" fs-list-field="program">Lifeline</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/emiliano" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a39740c13cf6fd5259f733a_EmilianoCamarena-FamilyPhoto.jpeg" alt="" loading="lazy"><span class="pill category-badge">Balance</span><h3 class="card-title">Emiliano was born with a fragile heart</h3><p class="card-description">Born with four holes in his heart, baby Emiliano faces surgery, fighting with strength as his family stays close.</p><div class="fs-field" fs-list-field="program">Balance, Boost</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://www.youtube.com/watch?v=BFT26CmxsYY" data-variant="video-cool"><svg class="deco" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" style="left:0;bottom:0;width:58%;height:60%;color:var(--mfk-orange)"><path fill="currentColor" d="M0 100 V40 A50 40 0 0 1 100 40 V100Z"/></svg><span class="play" aria-hidden="true"><svg viewBox="0 0 22 26"><path d="M0 0 L22 13 L0 26 Z" fill="currentColor"/></svg></span><span class="pill">Video Story</span><h3 class="card-title">Willow&#x27;s miracle</h3><span class="pill pill--time">3:01</span><div class="fs-field" fs-list-field="program">Boost, Pillars</div><div class="fs-field" fs-list-field="format">Read, Video</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/john-b" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a3970134644c7b29457f606_John-B.png" alt="" loading="lazy"><span class="pill category-badge">Safe Haven</span><h3 class="card-title">John has fought for his heart for nine years</h3><p class="card-description">Born with half a working heart, 9-year-old John has spent 16 months in the hospital. Now in hospice, he&#x27;s surrounded by love.</p><div class="fs-field" fs-list-field="program">Safe Haven, Boost</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single">
+        <figure class="bento-card" data-variant="quote-cream">
+          <blockquote class="quote-text">“For my son and for me, Miracles for Kids has been of great mental health help, and we look forward to the boxes each month.”</blockquote>
+          <figcaption class="quote-by">Diego O.</figcaption>
+          <div class="fs-field" fs-list-field="program">Lifeline, Pillars</div><div class="fs-field" fs-list-field="type">Quote</div>
+        </figure>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/vincent-jr" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a396fb2ee23973f26e176a9_Vincent2.jpg" alt="" loading="lazy"><span class="pill category-badge">Pillars</span><h3 class="card-title">Vincent is battling rare Hunter syndrome</h3><p class="card-description">At six months old, Vincent was diagnosed with rare Hunter Syndrome. His first-time parents are fighting for his future.</p><div class="fs-field" fs-list-field="program">Pillars</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/amethyst" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a396f622c448988cf1a84fc_Amethyst2.jpg" alt="" loading="lazy"><span class="pill category-badge">Lifeline</span><h3 class="card-title">Amethyst&#x27;s family was reunited by hope</h3><p class="card-description">Diagnosed with leukemia at age three, Amethyst and her family were split apart, then reunited near her hospital through Miracles.</p><div class="fs-field" fs-list-field="program">Lifeline, Balance, Boost</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/christian" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a396e85ee3737a8c691fc5e_Christian2.jpg" alt="" loading="lazy"><span class="pill category-badge">Boost</span><h3 class="card-title">Christian lives with a rare genetic disorder</h3><p class="card-description">Six-year-old Christian lives with a rare genetic disorder and daily chemo. His dad leans on Miracles to keep the family afloat.</p><div class="fs-field" fs-list-field="program">Boost, Pillars</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/sebastian" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a396e1260766fd43cef77fd_Sebastian2.jpg" alt="" loading="lazy"><span class="pill category-badge">Lifeline</span><h3 class="card-title">Sebastian is fighting a brain tumor at 18</h3><p class="card-description">At 18, Sebastian lost his sight, hearing, and ability to walk to a brain tumor. His single mom now cares for him full-time.</p><div class="fs-field" fs-list-field="program">Lifeline, Safe Haven, Balance</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/dailani" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a396dc02c448988cf19fc20_Dailani2.jpg" alt="" loading="lazy"><span class="pill category-badge">Boost</span><h3 class="card-title">Dailani is fighting cancer at just two</h3><p class="card-description">At just two, Dailani is battling a rare cancer. After losing their home, her family is living in a shelter as she fights to heal.</p><div class="fs-field" fs-list-field="program">Boost</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single">
+        <figure class="bento-card" data-variant="quote-blue">
+          <blockquote class="quote-text">“We are infinitely grateful to all of you for your assistance, which does us so much good.”</blockquote>
+          <figcaption class="quote-by">Denise M.</figcaption>
+          <div class="fs-field" fs-list-field="program">Safe Haven, Boost</div><div class="fs-field" fs-list-field="type">Quote</div>
+        </figure>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/remington" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a396d4436efc92a01c67a8a_Remington1.jpg" alt="" loading="lazy"><span class="pill category-badge">Lifeline</span><h3 class="card-title">Remington is fighting cancer as a baby</h3><p class="card-description">At one year old, Remington was diagnosed with aggressive cancer. His parents are stretched thin as Miracles helps cover the bills.</p><div class="fs-field" fs-list-field="program">Lifeline, Boost</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/eren" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a396cdad0ee905a9b4e3dad_Efren1.jpg" alt="" loading="lazy"><span class="pill category-badge">Lifeline</span><h3 class="card-title">Efren had a brain tumor removed at age three</h3><p class="card-description">At three, Eren had a 5cm brain tumor removed and now faces chemo. Both parents paused work to stay by his hospital bed.</p><div class="fs-field" fs-list-field="program">Lifeline, Balance</div><div class="fs-field" fs-list-field="format">Read, Where Are They Now?</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/postino" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a396c794959f0160caa90ea_Postino-Webpage-Header2.jpg" alt="" loading="lazy"><span class="pill category-badge">Safe Haven</span><h3 class="card-title">Postino is waiting for a new heart</h3><p class="card-description">Seven-year-old Postino has lived in a hospital for five months, a machine keeping his heart beating as he awaits a transplant.</p><div class="fs-field" fs-list-field="program">Safe Haven, Boost</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/leonardo" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a396c0c6078291faf896035_Leo_768x432.png" alt="" loading="lazy"><span class="pill category-badge">Lifeline</span><h3 class="card-title">Leonardo was born with half a heart</h3><p class="card-description">Baby Leonardo was born with only half a working heart. After two surgeries, his single mom cares for him around the clock.</p><div class="fs-field" fs-list-field="program">Lifeline</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/alexa" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a396ab743a24b619a7eb2b8_Alexa_768x432.png" alt="" loading="lazy"><span class="pill category-badge">Lifeline</span><h3 class="card-title">Alexa is on a leukemia journey at 14</h3><p class="card-description">At 14, Alexa was diagnosed with leukemia. As her single mom of five focused on her care, Miracles helped ease the strain.</p><div class="fs-field" fs-list-field="program">Lifeline, Safe Haven, Pillars</div><div class="fs-field" fs-list-field="format">Read, Where Are They Now?</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single">
+        <figure class="bento-card" data-variant="quote-cream">
+          <blockquote class="quote-text">“Miracles for Kids has been a huge help to Miranda and our family.”</blockquote>
+          <figcaption class="quote-by">Miranda M.</figcaption>
+          <div class="fs-field" fs-list-field="program">Pillars</div><div class="fs-field" fs-list-field="type">Quote</div>
+        </figure>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/julio" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a39678f573f96c81e9ad50e_godoyfamily.jpg" alt="" loading="lazy"><span class="pill category-badge">Safe Haven</span><h3 class="card-title">Julio&#x27;s family of five fought through anemia</h3><p class="card-description">Seven-year-old Julio&#x27;s aplastic anemia overwhelmed his family of five, until Miracles helped with food, bills, and stability.</p><div class="fs-field" fs-list-field="program">Safe Haven, Balance</div><div class="fs-field" fs-list-field="format">Read, Where Are They Now?</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/jeremiah" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a39671f1c5aeb65f29cd79a_danielfamily.jpg" alt="" loading="lazy"><span class="pill category-badge">Balance</span><h3 class="card-title">Jeremiah is battling sickle cell anemia</h3><p class="card-description">Four-year-old Jeremiah and his mom both live with sickle cell anemia. On one minimum-wage income, Miracles helped them get by.</p><div class="fs-field" fs-list-field="program">Balance, Boost, Pillars</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/kimberly" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a3966de0338e07dcf37d038_Kimberly-Clements.jpg" alt="" loading="lazy"><span class="pill category-badge">Pillars</span><h3 class="card-title">Kimberly faced illness and homelessness</h3><p class="card-description">Born with Down syndrome and a fragile heart, 3-year-old Kimberly faced homelessness with her mom, until Miracles stepped in.</p><div class="fs-field" fs-list-field="program">Pillars</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/mason" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a3966802462d090119719f8_Mason-4.jpg" alt="" loading="lazy"><span class="pill category-badge">Lifeline</span><h3 class="card-title">Mason finds strength through chemo</h3><p class="card-description">Diagnosed with leukemia, young Mason dreads chemo, but our monthly Kindness Box reminds him how strong and brave he really is.</p><div class="fs-field" fs-list-field="program">Lifeline, Safe Haven, Balance</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/oziel" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a3965bb828312acc1743006_Oziel.jpg" alt="" loading="lazy"><span class="pill category-badge">Safe Haven</span><h3 class="card-title">Oziel is facing leukemia and autism</h3><p class="card-description">Oziel, who is on the autism spectrum, was diagnosed with leukemia. Miracles helped his family avoid losing their home.</p><div class="fs-field" fs-list-field="program">Safe Haven</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single">
+        <figure class="bento-card" data-variant="quote-blue">
+          <blockquote class="quote-text">“The support helped our whole family focus on being together through difficult days, with practical help and people who continued to show up for us.”</blockquote>
+          <figcaption class="quote-by">Maribel, a Miracles for Kids mom</figcaption>
+          <div class="fs-field" fs-list-field="program">Boost, Pillars</div><div class="fs-field" fs-list-field="type">Quote</div>
+        </figure>
+      </div>
+      <div class="bento-item w-dyn-item" role="listitem" fs-list-element="item" fs-list-stagger="35" data-size="single"><a class="bento-card" href="https://miracles-for-kids-8843ee.webflow.io/family-stories/kiara" data-variant="photo"><img class="poster" src="https://cdn.prod.website-files.com/6a32d801c4385d8a325f9838/6a39655c898078759f2dead4_KiaraSanchez.jpg" alt="" loading="lazy"><span class="pill category-badge">Safe Haven</span><h3 class="card-title">Kiara has had more surgeries than years</h3><p class="card-description">At just four, Kiara has had more heart surgeries than most people face in a lifetime. Miracles helps her parents focus on her.</p><div class="fs-field" fs-list-field="program">Safe Haven, Pillars</div><div class="fs-field" fs-list-field="format">Read</div></a>
+      </div>
+      </div>
+      <div class="no-results w-dyn-empty" fs-list-element="empty">
+        <p>No stories match those filters.</p>
+      </div>
+      <!-- Custom pagination (no native w-pagination-* classes): the Collection List shows all
+           items, Finsweet pages them client-side, so filters always search every story. -->
+      <nav class="pagination" aria-label="Story pages" fs-list-element="pagination-wrapper">
+        <a href="#" class="page-arrow" fs-list-element="pagination-previous">← Previous</a>
+        <div class="page-buttons">
+          <a href="#" class="page-button" fs-list-element="page-button">1</a>
+          <span class="page-dots" fs-list-element="page-dots">…</span>
+        </div>
+        <a href="#" class="page-arrow" fs-list-element="pagination-next">Next →</a>
+      </nav>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,61 @@
+09b · MOTION, GSAP AND 3D (how to design and annotate them in Figma)
+Global file. Read after 09a when the request includes scroll motion, transitions,
+kinetic type or 3D. Figma shows states; the build (Framer or Webflow) makes them move.
+Your job is to design the states and annotate the motion so a developer can build it.
+
+THE RULE
+Motion and 3D must carry the idea, not decorate it. If you cannot say in one sentence
+what the movement means ("the rule's words rebuild into the idea"), do not add it.
+
+HOW TO DESIGN MOTION IN FIGMA
+- Design every key state as its own frame: "[Section] · state 1 / 2 / 3".
+  Start state, end state, and any middle state where meaning changes.
+- Add a motion note beside each sequence as a text layer named "MOTION NOTE":
+    Trigger: on load / on scroll into view / scrubbed with scroll / on click / on hover
+    What moves: [layer names]
+    From > to: [position, scale, opacity, letters, order]
+    Duration and ease: e.g. 0.6 s, power3.out (enter); 0.3 s, power2.in (exit)
+    Stagger: e.g. 0.04 s per letter / 0.08 s per card
+    Pin: yes/no, for how much scroll (e.g. 150 percent of viewport)
+    GSAP tools: ScrollTrigger / SplitText / Flip / none
+    Reduced motion: [the static frame shown instead]
+- Use Figma Smart Animate prototypes only to show intent. The note is the spec.
+
+TIMING DEFAULTS (use unless the request says otherwise)
+- Small UI feedback: 150 to 250 ms. Section reveals: 400 to 700 ms.
+- Exits faster than entrances. One easing family across the site.
+- Never animate everything. One meaningful motion per section at most.
+
+KINETIC TYPE
+- Split type only where the words themselves change meaning (a line rebuilding,
+  a word replacing another). Not as a generic reveal on every heading.
+- The final state must be fully readable and meet contrast rules.
+
+3D
+- Name the technique in the layer: "3D · CSS (shallow layers)", "3D · Spline",
+  "3D · three.js (custom code)". Prefer the lightest one that carries the idea.
+- Build shallow 3D as stacked, slightly offset 2D layers in Figma (rotate and
+  offset values written in the note), so it can be made with CSS first.
+- 3D content should be the work or real material (documents, frames, products),
+  not abstract shapes with no meaning.
+- 3D loads after the first screen paints. Design the still poster frame that shows
+  before it loads, and label it "3D POSTER".
+- For CMS-driven 3D (one per case), build it from that item's own images; one
+  hand-made Spline scene does not scale to many items.
+
+PLATFORM NOTES (write the right one in the note)
+- Webflow: GSAP is built into Interactions (ScrollTrigger, SplitText available);
+  CSS 3D works natively; three.js needs a custom code embed; page transitions
+  between CMS pages need custom code.
+- Framer: native scroll, appear and page transitions; text splitting, number
+  counting, client-side filtering and three.js need small React code components.
+
+ACCESSIBILITY
+- Every motion sequence has a reduced-motion version: its final static frame.
+- No flashing more than 3 times a second. No motion that blocks reading or the next step.
+- Pinned scroll sections must be short; never trap the visitor.
+
+DO NOT
+- Do not add parallax, glows, particles or shader backgrounds unless requested.
+- Do not make 3D the only way to reach content or the next step.
+- Do not use motion to hide a weak layout.

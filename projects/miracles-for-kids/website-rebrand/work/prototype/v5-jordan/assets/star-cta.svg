@@ -1,0 +1,23 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="104.963" height="104.963" viewBox="0 0 104.963 104.963" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Star 14" filter="url(#filter0_d_0_7)">
+<use xlink:href="#stroke0_0_7" fill="#5DA7E5"/>
+<mask id="stroke1_0_7" maskUnits="userSpaceOnUse" x="8.77665" y="6.09268" width="87" height="87" fill="black">
+<rect fill="white" x="8.77665" y="6.09268" width="87" height="87"/>
+<use xlink:href="#stroke0_0_7"/>
+</mask>
+<path d="M39.5702 39.143L20.4577 46.2153C17.1322 47.4458 17.1322 52.1493 20.4577 53.3799L39.5702 60.4522C40.6157 60.839 41.4401 61.6634 41.827 62.7089L48.8992 81.8214C50.1298 85.1469 54.8333 85.1469 56.0639 81.8214L63.1361 62.7089C63.523 61.6634 64.3473 60.839 65.3929 60.4522L84.5054 53.3799C87.8309 52.1493 87.8309 47.4458 84.5054 46.2153L65.3929 39.143C64.3473 38.7561 63.523 37.9318 63.1361 36.8863L56.0639 17.7737C54.8333 14.4482 50.1298 14.4482 48.8992 17.7737L41.827 36.8863C41.4401 37.9318 40.6158 38.7561 39.5702 39.143Z" stroke-width="17.1394" stroke="white" mask="url(#stroke1_0_7)"/>
+</g>
+<defs>
+<filter id="filter0_d_0_7" x="0" y="0" width="104.963" height="104.963" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2.68396"/>
+<feGaussianBlur stdDeviation="4.69694"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_7"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_7" result="shape"/>
+</filter>
+<path id="stroke0_0_7" d="M48.8992 17.7737C50.1298 14.4482 54.8333 14.4482 56.0639 17.7737L63.1361 36.8863C63.523 37.9318 64.3473 38.7561 65.3929 39.143L84.5054 46.2153C87.8309 47.4458 87.8309 52.1493 84.5054 53.3799L65.3929 60.4522C64.3473 60.839 63.523 61.6634 63.1361 62.7089L56.0639 81.8214C54.8333 85.1469 50.1298 85.1469 48.8992 81.8214L41.827 62.7089C41.4401 61.6634 40.6157 60.839 39.5702 60.4522L20.4577 53.3799C17.1322 52.1493 17.1322 47.4458 20.4577 46.2153L39.5702 39.143C40.6158 38.7561 41.4401 37.9318 41.827 36.8863L48.8992 17.7737Z"/>
+</defs>
+</svg>

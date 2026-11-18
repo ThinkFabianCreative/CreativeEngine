@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TRAFFIK and Edwards</title>
+<!-- deck_v03 · first design pass · DEVELOP · 2026-10-03
+     Type: Adobe Caslon Pro + Acumin Pro / Acumin Pro Wide (Adobe Fonts, load locally or via kit). Fallbacks below. -->
+<style>
+:root{
+  --black:#000; --white:#fff; --red:#D91F1F; --yellow:#F4D803;
+  --grey:rgba(0,0,0,.5); --rule:rgba(0,0,0,.14); --slot:#EFEFEC;
+  --serif:"adobe-caslon-pro","Adobe Caslon Pro","Libre Caslon Text","Big Caslon","Georgia",serif;
+  --sans:"acumin-pro","Acumin Pro","Helvetica Neue","Arial",sans-serif;
+  --wide:"acumin-pro-wide","Acumin Pro Wide","Helvetica Neue","Arial",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#1a1a1a;overflow:hidden}
+body{font-family:var(--sans);color:var(--black)}
+#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:center center}
+.slide{position:absolute;inset:0;background:var(--white);padding:96px 120px;display:none;flex-direction:column}
+.slide.active{display:flex}
+.label{font-family:var(--wide);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:20px;color:var(--red)}
+.meta{font-family:var(--wide);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:16px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em}
+h1{font-size:148px;line-height:.98}
+h2{font-size:96px;line-height:1.02}
+h3{font-size:44px;line-height:1.1}
+p{font-weight:300;font-size:30px;line-height:1.4}
+.small{font-size:22px;line-height:1.4;font-weight:300}
+.grey{color:var(--grey)}
+.top{display:flex;justify-content:space-between;align-items:baseline}
+.foot{position:absolute;left:120px;right:120px;bottom:56px;display:flex;justify-content:space-between;align-items:center;color:var(--grey)}
+.wordmark{font-family:var(--wide);font-weight:700;letter-spacing:.12em;font-size:22px;color:var(--black);display:flex;align-items:center;gap:12px}
+.wordmark .dot{width:30px;height:30px;border-radius:50%;background:var(--black);color:#fff;font-size:16px;display:grid;place-items:center;letter-spacing:0}
+/* image slots: labelled placeholders naming the real asset */
+.slot{background:var(--slot);position:relative;display:flex;align-items:flex-end;padding:20px;overflow:hidden}
+.slot::before{content:"";position:absolute;inset:0;background:
+  linear-gradient(to top right,transparent calc(50% - .5px),var(--rule) 50%,transparent calc(50% + .5px));}
+.slot span{position:relative;font-family:var(--wide);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:rgba(0,0,0,.55);background:var(--slot);padding:4px 6px;max-width:90%}
+.ph{display:inline-block;font-family:var(--wide);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;background:var(--yellow);color:#000;padding:6px 10px}
+.hist{font-family:var(--wide);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey)}
+.notes{display:none}
+[contenteditable]:focus{outline:2px dashed var(--red);outline-offset:4px}
+
+/* 01 cover */
+.s1{justify-content:space-between}
+.s1 h1 em{font-style:italic;color:var(--red)}
+/* 02 about */
+.s2 .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:96px;margin-top:64px;flex:1}
+.s2 .num{display:flex;gap:72px;margin-top:56px;border-top:1px solid var(--black);padding-top:28px}
+.s2 .num b{font-family:var(--serif);font-weight:400;font-size:120px;line-height:1;display:block}
+.s2 .strip{display:grid;grid-template-rows:repeat(3,1fr);gap:16px}
+/* 03 work wall */
+.s3{padding-bottom:120px}
+.s3 .wall{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:48px;flex:1}
+.s3 .col{display:flex;flex-direction:column;gap:14px}
+.s3 .col h3{font-size:34px;border-top:1px solid #000;padding-top:16px}
+.s3 .col .slot{flex:1}
+.s3 .col .slot.short{flex:.6}
+.s3 .cap{display:flex;justify-content:space-between;gap:12px;font-size:19px;font-weight:300}
+.tag-c{color:var(--red)}
+/* 04 reel */
+.s4{background:var(--black);color:#fff;padding:0}
+.s4 .poster{position:absolute;inset:0;background:#141414;display:flex;align-items:center;justify-content:center}
+.s4 .poster::before{content:"";position:absolute;inset:0;background:linear-gradient(to top right,transparent calc(50% - .5px),rgba(255,255,255,.08) 50%,transparent calc(50% + .5px))}
+.s4 .play{width:160px;height:160px;border:2px solid #fff;border-radius:50%;display:grid;place-items:center;position:relative}
+.s4 .play::after{content:"";border-left:44px solid #fff;border-top:28px solid transparent;border-bottom:28px solid transparent;margin-left:12px}
+.s4 .over{position:absolute;left:120px;bottom:96px;right:120px;display:flex;justify-content:space-between;align-items:flex-end}
+.s4 .label{color:var(--red)}
+.s4 .slotnote{position:absolute;top:96px;right:120px;font-family:var(--wide);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55);text-align:right;max-width:560px;line-height:1.5}
+/* 05 bring */
+.s5 .row{display:grid;grid-template-columns:repeat(3,1fr);margin-top:72px;flex:1;border-top:1px solid #000}
+.s5 .cell{padding:36px 40px 0 0;display:flex;flex-direction:column;gap:20px;position:relative}
+.s5 .cell+.cell{padding-left:40px;border-left:1px solid var(--rule)}
+.s5 .n{font-family:var(--wide);font-weight:700;font-size:16px;color:var(--red);letter-spacing:.08em}
+.s5 .cell .slot{height:300px;margin-top:auto;margin-bottom:60px}
+.s5 .arrow{font-family:var(--serif);font-size:48px;position:absolute;right:-14px;top:24px;color:var(--red);background:#fff;line-height:1}
+/* 06-08 cases */
+.case .body{display:grid;grid-template-columns:1.5fr 1fr;gap:72px;margin-top:48px;flex:1}
+.case .imgs{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:16px}
+.case .imgs .hero{grid-row:1/3}
+.case dl{display:flex;flex-direction:column}
+.case dt{font-family:var(--wide);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:16px;color:var(--red);border-top:1px solid #000;padding-top:16px}
+.case dd{font-size:26px;font-weight:300;line-height:1.35;margin:10px 0 36px;color:var(--grey)}
+/* 09 how */
+.s9 .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:96px}
+.s9 .step{border-top:6px solid #000;padding:28px 36px 0 0}
+.s9 .step:last-child{border-top-color:var(--red)}
+.s9 .step b{font-family:var(--wide);font-size:16px;letter-spacing:.08em;color:var(--red);display:block;margin-bottom:20px}
+.s9 .step h3{font-size:42px;margin-bottom:18px}
+.s9 .you{margin-top:28px;font-family:var(--wide);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.s9 .you i{display:inline-block;width:12px;height:12px;background:var(--yellow);margin-right:10px;font-style:normal;vertical-align:-1px}
+/* 10 conversation */
+.s10{padding:0;flex-direction:row}
+.s10 .l{flex:1;padding:96px 120px;display:flex;flex-direction:column}
+.s10 .r{width:640px;background:var(--yellow);padding:96px 80px;display:flex;flex-direction:column;justify-content:space-between}
+.s10 ol{list-style:none;margin-top:64px;counter-reset:q}
+.s10 li{font-family:var(--serif);font-size:50px;line-height:1.15;padding:26px 0;border-top:1px solid var(--rule);counter-increment:q;display:flex;gap:32px}
+.s10 li::before{content:counter(q,decimal-leading-zero);font-family:var(--wide);font-weight:700;font-size:16px;color:var(--red);padding-top:16px;letter-spacing:.08em}
+.s10 .foot{right:760px}
+
+#hud{position:fixed;bottom:14px;right:18px;font:12px/1.4 -apple-system,sans-serif;color:#aaa;text-align:right}
+#notesPanel{position:fixed;left:0;right:0;bottom:0;max-height:34vh;overflow:auto;background:#111;color:#ddd;font:14px/1.5 -apple-system,sans-serif;padding:16px 24px;display:none;border-top:2px solid var(--red)}
+#notesPanel.on{display:block}
+#notesPanel h4{color:#F4D803;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+@media print{html,body{background:#fff;overflow:visible}#stage{position:static;transform:none!important}.slide{display:flex!important;position:relative;page-break-after:always}#hud,#notesPanel{display:none!important}}
+</style>
+</head>
+<body>
+<div id="stage">
+<!-- 01 COVER -->
+<section class="slide s1 active" data-title="Cover">
+  <div class="top">
+    <div class="wordmark" title="Placeholder: swap for the approved TRAFFIK logo file"><span class="dot">T</span>TRAFFIK</div>
+    <div class="meta grey" contenteditable>October 2026</div>
+  </div>
+  <div>
+    <div class="label" contenteditable>A conversation</div>
+    <h1 contenteditable style="margin-top:28px">TRAFFIK<br>and <em>Edwards</em></h1>
+    <p class="grey" contenteditable style="margin-top:40px;max-width:1100px">Who we are today, a look at our work, and where we can help next.</p>
+  </div>
+  <div class="foot" style="position:static"><span class="meta" contenteditable>Edwards identifier: placeholder</span><span class="meta" contenteditable>01</span></div>
+  <aside class="notes">Logo is a typographic placeholder: swap for the approved TRAFFIK mark (and health lockup if used). Edwards identifier: approved restrained mark only, or keep text. No work image on cover unless one verified, approved crop is chosen.</aside>
+</section>
+
+<!-- 02 ABOUT -->
+<section class="slide s2" data-title="Who we are">
+  <div class="label" contenteditable>Who we are</div>
+  <div class="grid">
+    <div>
+      <h2 contenteditable>Strategy, creative and digital in one room.</h2>
+      <p contenteditable style="margin-top:36px;max-width:820px">We bring strategy, creative and digital teams together to help brands tell a clear story and build useful experiences.</p>
+      <div class="num">
+        <div><b contenteditable>40</b><span class="meta" contenteditable>Full-time team members</span></div>
+        <div><b contenteditable>20</b><span class="meta" contenteditable>Seasonal team members</span></div>
+      </div>
+    </div>
+    <div class="strip">
+      <div class="slot"><span>Work strip 1 · real TRAFFIK work, range (approved)</span></div>
+      <div class="slot"><span>Work strip 2 · real TRAFFIK work, different medium</span></div>
+      <div class="slot"><span>Work strip 3 · real TRAFFIK work, different industry</span></div>
+    </div>
+  </div>
+  <div class="foot"><span class="wordmark" style="font-size:16px">TRAFFIK</span><span class="meta">02</span></div>
+  <aside class="notes">Team size confirmed by Brent (Oct 2026); confirm final wording and agency description before release. No staff names, tenure, partner badges or 2021 client logos.</aside>
+</section>
+
+<!-- 05 WHAT WE BRING -->
+<section class="slide s5" data-title="What we do">
+  <div class="label" contenteditable>What we do</div>
+  <h2 contenteditable style="margin-top:24px">From a clear story to a next step.</h2>
+  <div class="row">
+    <div class="cell"><span class="n">01</span><h3 contenteditable>A clear brand story</h3><p class="small grey" contenteditable>Positioning, messaging and campaigns that make a complex offer easy to understand.</p><div class="slot"><span>Crop · campaign work (real, approved)</span></div><span class="arrow">→</span></div>
+    <div class="cell"><span class="n">02</span><h3 contenteditable>Useful digital experiences</h3><p class="small grey" contenteditable>Sites, portals and tools designed around what people need to do.</p><div class="slot"><span>Crop · digital experience screen (real, approved)</span></div><span class="arrow">→</span></div>
+    <div class="cell"><span class="n">03</span><h3 contenteditable>Engagement that leads to a next step</h3><p class="small grey" contenteditable>Programs that move interest toward a clear action.</p><div class="slot"><span>Crop · engagement / activation work (real, approved)</span></div></div>
+  </div>
+  <div class="foot"><span class="wordmark" style="font-size:16px">TRAFFIK</span><span class="meta">03</span></div>
+  <aside class="notes">Brent to confirm current offer language. Support lines are proposed copy, no claims.</aside>
+</section>
+
+<!-- 04 REEL -->
+<section class="slide s4" data-title="Reel">
+  <div class="poster"><video src="https://www.dropbox.com/scl/fi/9hvx1c3upzyutlbxfm74q/TRAFFIK_Showrool_2027_4.mp4?rlkey=vp8zvzboqoj213hwx6tnnc8kg&raw=1" controls preload="metadata" playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000"></video></div>
+  <div class="slotnote">TRAFFIK showreel (Dropbox: TRAFFIK_Showrool_2027_4.mp4) · still-image fallback ready</div>
+  <div class="over">
+    <div><div class="label" contenteditable>Our reel</div><h2 contenteditable style="margin-top:20px;color:#fff">What TRAFFIK makes.</h2></div>
+    <span class="meta" style="color:rgba(255,255,255,.5)">04</span>
+  </div>
+  <aside class="notes">Reel: TRAFFIK agency showreel supplied by the user 2026-10-03 (Dropbox link, streams online). TRAFFIK owns this reel (user confirmed 2026-10-03). Contents and runtime not yet reviewed for this room; download a local copy for the meeting machine. Test audio/playback on the meeting machine. Keep a still fallback. Only real TRAFFIK work. This is the TRAFFIK agency reel, not the ELS × TRAFFIK reel; TRAFFIK owns the reel (user-confirmed). ELS × TRAFFIK showreel (1:08) remains an option for the Edwards section.</aside>
+</section>
+
+<!-- 03 HISTORY WALL -->
+<section class="slide s3" data-title="Relationship with Edwards">
+  <div class="top"><div class="label" contenteditable>Our relationship with Edwards</div><span class="hist">Selected historical Edwards work</span></div>
+  <h2 contenteditable style="margin-top:24px">We have done a lot together.</h2>
+  <div class="wall" style="grid-template-columns:repeat(4,1fr);gap:32px">
+    <div class="col">
+      <h3 contenteditable>Campaigns</h3>
+      <div class="slot"><span>Global Pulmonic Portfolio Campaign · key visual</span></div>
+      <div class="cap"><span contenteditable>Global Pulmonic Portfolio Campaign</span><span class="hist tag-c">Delivered</span></div>
+      <div class="slot short"><span>S3UR EU launch · launch execution + style guide spread</span></div>
+      <div class="cap"><span contenteditable>SAPIEN 3 Ultra RESILIA, European launch and style guide</span><span class="hist tag-c">Delivered</span></div>
+    </div>
+    <div class="col">
+      <h3 contenteditable>Education and sales tools</h3>
+      <div class="slot"><span>Tissue Is Trending · interactive sales infographic</span></div>
+      <div class="cap"><span contenteditable>Tissue Is Trending, tissue vs mechanical education</span><span class="hist">Historical</span></div>
+      <div class="slot short"><span>SAVR LMS / JAPAC sales training · screen</span></div>
+      <div class="cap"><span contenteditable>SAVR LMS and JAPAC sales training</span><span class="hist">Historical</span></div>
+    </div>
+    <div class="col">
+      <h3 contenteditable>Digital experiences</h3>
+      <div class="slot"><span>TAVR patient community · journey view (2021 deck s.14)</span></div>
+      <div class="cap"><span contenteditable>TAVR patient community journey</span><span class="hist">Historical</span></div>
+      <div class="slot short"><span>Community sign-in + admin portal (2021 deck s.15)</span></div>
+      <div class="cap"><span contenteditable>Sign-in and searchable admin portal</span><span class="hist">Historical</span></div>
+    </div>
+    <div class="col">
+      <h3 contenteditable>Film</h3>
+      <div class="slot" style="flex:1.6;padding:0"><video src="https://www.dropbox.com/scl/fi/m377s6641easxpkwehgud/ELS-x-TRAFFIK-Showreel-LT.mov?rlkey=gve6afuhzuul6jnc0zdy708j7&st=vf0nt23t&e=1&raw=1" controls preload="metadata" playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000"></video></div>
+      <div class="cap"><span contenteditable>ELS × TRAFFIK showreel, Edwards work (1:08)</span><span class="hist">Historical</span></div>
+    </div>
+  </div>
+  <div class="foot"><span class="wordmark" style="font-size:16px">TRAFFIK</span><span class="meta">05</span></div>
+  <aside class="notes">Status from traffik-work-history ledger: Global Pulmonic and S3UR EU = CONFIRMED DELIVERED. Tissue Is Trending, SAVR LMS/JAPAC, TAVR community = ARCHIVE EVIDENCE, labelled "Historical" (no usage or outcome claims). Do not use TAVR Talk (revamp is unsigned scope). No tenure number. Confirm "S3UR" client-facing name with Michael. Assets from Edwards Dropbox; check access. ELS × TRAFFIK showreel embedded (Dropbox .mov, raw=1): Edwards work; TRAFFIK owns this video (user-confirmed); no air/usage dates claimed. .mov may not play in Chrome: test in the presenting browser or transcode to MP4; bring a local copy.</aside>
+</section>
+
+<!-- 06 SAMPLE TMTT -->
+<section class="slide case" data-title="Sample work: TMTT">
+  <div class="top"><div class="label">Sample work · Transcatheter mitral and tricuspid</div><span class="ph">Placeholder · no delivered TMTT work confirmed</span></div>
+  <h2 contenteditable style="margin-top:24px">[Title once work is confirmed]</h2>
+  <div class="body">
+    <div class="imgs">
+      <div class="slot hero"><span>Hero · confirmed TRAFFIK work for transcatheter mitral or tricuspid, if any exists</span></div>
+      <div class="slot"><span>Supporting piece 1</span></div>
+      <div class="slot"><span>Supporting piece 2</span></div>
+    </div>
+    <dl>
+      <dt>The need</dt><dd contenteditable>[Plain sentence]</dd>
+      <dt>Our contribution</dt><dd contenteditable>[What TRAFFIK did]</dd>
+      <dt>Status</dt><dd contenteditable>[Delivered / Historical, per evidence]</dd>
+    </dl>
+  </div>
+  <div class="foot"><span class="meta">Mitral and tricuspid kept distinct</span><span class="meta">06</span></div>
+  <aside class="notes">Brent's "HVT" = TMTT (user-confirmed). Ledger has NO delivered mitral or tricuspid work. Only candidate: SAPIEN M3 RESILIA animation = PROPOSED SCOPE (2026, unsigned); not shown as sample work. If the user wants it, label "Proposed" and verify product naming first. Options if nothing is confirmed: cut this slide and say it in the room ("this is where we'd like to start"), or merge into slide 12. Ask Michael whether any TMTT work exists.</aside>
+</section>
+
+<!-- 07 SAMPLE SURGICAL -->
+<section class="slide s3" data-title="Sample work: Surgical">
+  <div class="top"><div class="label" contenteditable>Sample work · Surgical</div><span class="hist">Selected Edwards work</span></div>
+  <h2 contenteditable style="margin-top:24px">Making the surgical case clear.</h2>
+  <div class="wall">
+    <div class="col">
+      <h3 contenteditable>Evidence and education</h3>
+      <div class="slot"><span>Tissue Is Trending · interactive sales infographic (2021 deck s.13/15)</span></div>
+      <div class="cap"><span contenteditable>Tissue Is Trending, tissue vs mechanical</span><span class="hist">Historical</span></div>
+      <div class="slot short"><span>SAVR LMS · course screen</span></div>
+      <div class="cap"><span contenteditable>SAVR LMS and JAPAC sales training</span><span class="hist">Historical</span></div>
+    </div>
+    <div class="col">
+      <h3 contenteditable>Surgeon-facing campaign</h3>
+      <div class="slot"><span>INSPIRIS patient profiles · campaign spread (2021 deck s.16)</span></div>
+      <div class="cap"><span contenteditable>Inspiring Results, INSPIRIS patient profiles</span><span class="hist">Historical</span></div>
+      <div class="slot short"><span>INSPIRIS · supporting execution</span></div>
+      <div class="cap"><span contenteditable>Messaging and visual direction</span><span class="hist">Historical</span></div>
+    </div>
+    <div class="col">
+      <h3 contenteditable>Product marketing</h3>
+      <div class="slot"><span>KONECT RESILIA · brochure or landing page</span></div>
+      <div class="cap"><span contenteditable>KONECT RESILIA</span><span class="hist">To verify</span></div>
+      <div class="slot short"><span>KONECT · supporting piece</span></div>
+      <div class="cap"><span contenteditable>KONECT RESILIA brochure</span><span class="hist">To verify</span></div>
+    </div>
+  </div>
+  <div class="foot"><span class="wordmark" style="font-size:16px">TRAFFIK</span><span class="meta">07</span></div>
+  <aside class="notes">Statuses per ledger: Tissue Is Trending, INSPIRIS patient profiles, SAVR LMS/JAPAC = ARCHIVE EVIDENCE → "Historical". KONECT RESILIA = UNKNOWN → "To verify"; drop if not confirmed. Patient profiles: use only approved published layouts; no new patient imagery. RESILIA is surgical here; do not present it as TMTT.</aside>
+</section>
+
+<!-- 08 SAMPLE THV -->
+<section class="slide s3" data-title="Sample work: THV">
+  <div class="top"><div class="label" contenteditable>Sample work · THV</div><span class="hist">Selected Edwards work</span></div>
+  <h2 contenteditable style="margin-top:24px">Launching transcatheter valves.</h2>
+  <div class="wall">
+    <div class="col">
+      <h3 contenteditable>Launch</h3>
+      <div class="slot"><span>S3UR EU launch · hero execution</span></div>
+      <div class="cap"><span contenteditable>SAPIEN 3 Ultra RESILIA, European launch</span><span class="hist tag-c">Delivered</span></div>
+      <div class="slot short"><span>S3UR style guide · spread</span></div>
+      <div class="cap"><span contenteditable>S3UR style guide</span><span class="hist tag-c">Delivered</span></div>
+    </div>
+    <div class="col">
+      <h3 contenteditable>Film and animation</h3>
+      <div class="slot"><span>SAPIEN 3 Ultra RESILIA animation, director's cut (1:50) · still</span></div>
+      <div class="cap"><span contenteditable>SAPIEN 3 Ultra RESILIA animation</span><span class="hist">Historical</span></div>
+      <div class="slot short" style="padding:0"><video src="https://www.dropbox.com/scl/fi/i97ppl0c6bfdxbykqi7va/WallScreen_R4.4-Music_Final.mov?rlkey=qw7j11vrweje3qqsoc2gk1mw9&st=2oinmmb2&e=1&raw=1" controls preload="metadata" playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000"></video></div>
+      <div class="cap"><span contenteditable>SAPIEN Platform wall-screen film</span><span class="hist">Historical</span></div>
+    </div>
+    <div class="col">
+      <h3 contenteditable>Pulmonic portfolio</h3>
+      <div class="slot"><span>Global Pulmonic Portfolio Campaign · key visual</span></div>
+      <div class="cap"><span contenteditable>Global Pulmonic Portfolio Campaign</span><span class="hist tag-c">Delivered</span></div>
+      <div class="slot short"><span>Global Pulmonic · supporting execution</span></div>
+      <div class="cap"><span contenteditable>Pulmonic portfolio, supporting piece</span><span class="hist tag-c">Delivered</span></div>
+    </div>
+  </div>
+  <div class="foot"><span class="wordmark" style="font-size:16px">TRAFFIK</span><span class="meta">08</span></div>
+  <aside class="notes">S3UR EU launch + style guide and Global Pulmonic = CONFIRMED DELIVERED. Films: asset exists (CONFIRMED), air/usage dates not → "Historical". Global Pulmonic is pulmonary, shown as its own column, not as aortic; verify whether it belongs under THV or should stand alone. Verify exact product names before release. SAPIEN Platform wall-screen film (1:43, WallScreen_R4.4-Music_Final.mov) embedded: asset exists, TRAFFIK owns this video (user-confirmed); no air date or result claimed; .mov may not play in Chrome (test or transcode to MP4); bring a local copy. It is also a congress wall-screen piece and could double for slide 9 Events.</aside>
+</section>
+
+<!-- 09 SAMPLE EVENTS AND CONFERENCES -->
+<section class="slide s3" data-title="Sample work: Events and conferences">
+  <div class="top"><div class="label" contenteditable>Sample work · Events and conferences</div><span class="hist">Selected Edwards work</span></div>
+  <h2 contenteditable style="margin-top:24px">Where clinicians gather.</h2>
+  <div class="wall">
+    <div class="col">
+      <h3 contenteditable>Congress experiences</h3>
+      <div class="slot"><span>TCT · booth, meeting rooms, interactive screens, 3D product reveal</span></div>
+      <div class="cap"><span contenteditable>TCT conference experience</span><span class="hist">Historical</span></div>
+      <div class="slot short"><span>New Frontiers TCT film (2:20) · still</span></div>
+      <div class="cap"><span contenteditable>New Frontiers TCT film</span><span class="hist">Historical</span></div>
+    </div>
+    <div class="col">
+      <h3 contenteditable>Europe</h3>
+      <div class="slot"><span>EuroPCR · screens / booth work (archive 2023–25)</span></div>
+      <div class="cap"><span contenteditable>EuroPCR</span><span class="hist">Historical</span></div>
+      <div class="slot short"><span>EuroPCR · supporting piece</span></div>
+      <div class="cap"><span contenteditable>EuroPCR event screens</span><span class="hist">Historical</span></div>
+    </div>
+    <div class="col">
+      <h3 contenteditable>KOL and team events</h3>
+      <div class="slot"><span>ACC · event work</span></div>
+      <div class="cap"><span contenteditable>ACC</span><span class="hist">To verify</span></div>
+      <div class="slot short"><span>Huddle event and video / KOL event art</span></div>
+      <div class="cap"><span contenteditable>Huddle and KOL events</span><span class="hist">To verify</span></div>
+    </div>
+  </div>
+  <div class="foot"><span class="wordmark" style="font-size:16px">TRAFFIK</span><span class="meta">09</span></div>
+  <aside class="notes">TCT = ARCHIVE EVIDENCE, no traffic/lead/ROI data. EuroPCR: archive folders 2023–25; element detail is PROPOSED SCOPE, so show only archived executions, label "Historical". ACC, Huddle, KOL events = UNKNOWN → "To verify"; drop if unconfirmed. KOL events: no physician imagery without approval.</aside>
+</section>
+
+<!-- 10 OTHER CLIENTS -->
+<section class="slide s3" data-title="Other clients">
+  <div class="top"><div class="label" contenteditable>Beyond Edwards</div><span class="ph">Placeholder · cases to be selected</span></div>
+  <h2 contenteditable style="margin-top:24px">Work for other clients.</h2>
+  <div class="wall">
+    <div class="col">
+      <h3 contenteditable>Medical device</h3>
+      <div class="slot"><span>Hero · [client, project] · real approved asset</span></div>
+      <div class="cap"><span contenteditable>[Client] · [Need] · [Our contribution]</span><span class="hist">[Status]</span></div>
+      <p class="small grey" contenteditable>[Approved outcome with source, or remove]</p>
+    </div>
+    <div class="col">
+      <h3 contenteditable>Healthcare</h3>
+      <div class="slot"><span>Hero · [client, project] · real approved asset</span></div>
+      <div class="cap"><span contenteditable>[Client] · [Need] · [Our contribution]</span><span class="hist">[Status]</span></div>
+      <p class="small grey" contenteditable>[Approved outcome with source, or remove]</p>
+    </div>
+    <div class="col">
+      <h3 contenteditable>Other industries</h3>
+      <div class="slot"><span>Hero · [client, project] · real approved asset</span></div>
+      <div class="cap"><span contenteditable>[Client] · [Need] · [Our contribution]</span><span class="hist">[Status]</span></div>
+      <p class="small grey" contenteditable>[Approved outcome with source, or remove]</p>
+    </div>
+  </div>
+  <div class="foot"><span class="wordmark" style="font-size:16px">TRAFFIK</span><span class="meta">10</span></div>
+  <aside class="notes">User selects from TRAFFIK portfolio; each needs that client's permission. Do not invent clients or results. Other-industry pick should show a transferable mechanism (film, experiential, credible-voice programs), never "influencer marketing = physician advocacy".</aside>
+</section>
+
+<!-- 09 HOW WE WORK -->
+<section class="slide s9" data-title="How we work (optional)">
+  <div class="label" contenteditable>How we work with your team</div>
+  <h2 contenteditable style="margin-top:24px">It starts with your brief.</h2>
+  <div class="flow">
+    <div class="step"><b>01</b><h3 contenteditable>Agree on the audience and goal</h3><p class="small grey" contenteditable>One shared brief before any work starts.</p><div class="you"><i></i>You set direction</div></div>
+    <div class="step"><b>02</b><h3 contenteditable>Build the right team</h3><p class="small grey" contenteditable>Strategy, creative and digital, shaped to the job.</p></div>
+    <div class="step"><b>03</b><h3 contenteditable>Create and review together</h3><p class="small grey" contenteditable>Work shared early, with your review built in.</p><div class="you"><i></i>You review and decide</div></div>
+    <div class="step"><b>04</b><h3 contenteditable>Launch, learn and improve</h3><p class="small grey" contenteditable>We look at what happened and adjust.</p><div class="you"><i></i>You approve launch</div></div>
+  </div>
+  <div class="foot"><span class="wordmark" style="font-size:16px">TRAFFIK</span><span class="meta">11</span></div>
+  <aside class="notes">Proposed description; Brent to confirm it matches current practice. No fixed staffing, timeline or SLA implied. Edwards review/MLR steps may need naming once known.</aside>
+</section>
+
+<!-- 10 CONVERSATION -->
+<section class="slide s10" data-title="Conversation">
+  <div class="l">
+    <div class="label" contenteditable>Where could we help next?</div>
+    <ol>
+      <li contenteditable>What needs to be clearer, for physicians, referrers or patients, in mitral and tricuspid care?</li>
+      <li contenteditable>Where does the experience get harder than it should be?</li>
+      <li contenteditable>What action are you trying to increase this year?</li>
+    </ol>
+  </div>
+  <div class="r">
+    <div class="wordmark" title="Placeholder: swap for the approved TRAFFIK logo file"><span class="dot">T</span>TRAFFIK</div>
+    <h3 contenteditable style="font-size:56px">Let&rsquo;s talk.</h3>
+    <span class="meta" contenteditable>October 2026 · 12</span>
+  </div>
+  <aside class="notes">Questions lean toward TMTT without asserting problems. Q1 names mitral/tricuspid; verify terminology and audience naming before showing; remove if attendees are not TMTT. Agree a next step in the room.</aside>
+</section>
+
+</div>
+<div id="hud">← → navigate · N notes · E edit · P print</div>
+<div id="notesPanel"></div>
+<script>
+const slides=[...document.querySelectorAll('.slide')],stage=document.getElementById('stage'),np=document.getElementById('notesPanel');
+let i=0,edit=true;
+function fit(){const s=Math.min(innerWidth/1920,innerHeight/1080);stage.style.transform=`translate(-50%,-50%) scale(${s})`}
+function show(n){i=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+  const no=slides[i].querySelector('.notes');np.innerHTML=`<h4>Speaker notes · ${i+1} ${slides[i].dataset.title}</h4>`+(no?no.innerHTML:'');location.hash=i+1}
+addEventListener('resize',fit);fit();
+show((parseInt(location.hash.slice(1))||1)-1);
+addEventListener('keydown',e=>{
+  if(document.activeElement.isContentEditable){if(e.key==='Escape')document.activeElement.blur();return}
+  if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1)}
+  else if(['ArrowLeft','PageUp'].includes(e.key))show(i-1);
+  else if(e.key==='Home')show(0);else if(e.key==='End')show(slides.length-1);
+  else if(e.key==='n'||e.key==='N')np.classList.toggle('on');
+  else if(e.key==='e'||e.key==='E'){edit=!edit;document.querySelectorAll('[contenteditable]').forEach(el=>el.contentEditable=edit)}
+  else if(e.key==='p'||e.key==='P')print();
+});
+</script>
+</body>
+</html>

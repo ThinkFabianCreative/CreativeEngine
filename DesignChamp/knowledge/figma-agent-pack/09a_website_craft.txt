@@ -1,0 +1,76 @@
+09a · WEBSITE CRAFT (marketing and agency sites)
+Global file. Read after 08 when the request is a website, page or site section
+(not an ad). Client look always comes from the client files, never from here.
+
+BEFORE YOU BUILD
+The request must tell you: the page, its one job, who arrives and why, the next
+step the page asks for, the platform (Framer, Webflow or other), and which content
+is real versus placeholder. If any is missing, ask in your report.
+
+FRAMES
+- Desktop 1440 wide. Tablet 834. Mobile 390. Build desktop first, then mobile.
+  Mobile is a real layout, not desktop squeezed.
+- Name frames "[Page] · [Breakpoint] · v[n]", e.g. "Home · 1440 · v1".
+- Every page is a vertical stack of named sections: "01 Hero", "02 Proof", ...
+- Use auto layout for every section and every repeated item. No loose layers.
+
+GRID AND SPACING
+- Desktop: 12 columns, 24 px gutter, 80 px outer margin, unless the request says
+  otherwise. Mobile: 4 columns, 16 px gutter, 20 px margin.
+- One spacing scale, used everywhere: 4, 8, 16, 24, 32, 48, 64, 96, 128, 160.
+- Section padding top/bottom: 128 desktop, 64 mobile, unless a section must bleed.
+- Text measure for reading copy: 55 to 75 characters per line.
+
+THE FIRST SCREEN (HERO)
+- It must answer "who is this and what do they do" in one line a stranger understands.
+- One focal point: the line, the work, or one image. Not all three at equal weight.
+- Proof sits close under the hero (numbers, names, results) when the request supplies it.
+- One primary action. A second action, if any, is visibly quieter.
+- Do not fill the hero with decoration, badges, floating shapes or stock imagery.
+
+THE FIVE QUESTIONS
+Each page should let a visitor answer: who are you, what do you do, how do you do
+it, can we trust you, what do we do next. If a page skips one on purpose, the
+request will say so. Every page ends with a next step. No dead ends.
+
+TYPE ON THE WEB
+- Body text 16 to 18 px, line height 1.5. Never body text under 14 px.
+- Display type may be very large; set it in px for desktop and give the mobile
+  size explicitly (usually 45 to 60 percent of desktop).
+- Use the client faces only. If a face is missing in Figma, use the stated stand-in
+  and label the layer "STAND-IN: [real face]".
+- Create text styles for every role (Display, H1, H2, H3, Body, Small, Label) and
+  apply them. Do not hand-set sizes.
+
+COLOR ON THE WEB
+- Create color variables for every role (background, surface, text, muted text,
+  accent, line) and bind fills to them. No raw hex in layers.
+- Text contrast: at least 4.5:1 for body, 3:1 for large display. Check yellow and
+  light accents on white especially; they usually fail as text and must become a
+  filled block instead.
+
+COMPONENTS AND CMS
+- Anything that repeats or will come from a CMS is a component with properties:
+  case card, case page blocks, service item, person, filter chip, button, nav, footer.
+- Name properties after the CMS field they will hold ("Client", "Challenge",
+  "Result 1", "Result source"), so a developer can map them one to one.
+- Design the empty and long states: a card with no result, a title that runs to
+  three lines, a filter with zero matches. Never only the perfect case.
+- Lists of many items (a work page) need a filter, a count and a sensible order.
+
+INTERACTION STATES
+- Buttons, links, chips and cards get default, hover, focus and pressed variants.
+- Focus must be visible (2 px outline in the accent or text color). Never removed.
+- Touch targets at least 44 x 44 px on mobile.
+
+PERFORMANCE IN DESIGN
+- The largest thing on the first screen should be text or one still image, so the
+  page can load fast. Video or 3D may come in after, never as the only first paint.
+- Mark heavy media in the layer name: "VIDEO · autoplay muted · poster: [frame]".
+
+DO NOT
+- Do not invent copy, numbers, client names, logos or testimonials.
+- Do not use stock "agency" clichés: floating 3D blobs with no meaning, laptop
+  mockups, handshake photos, gradient mesh backgrounds, emoji, icon grids of services.
+- Do not center every section. Vary the composition with purpose.
+- Do not hide the next step below the fold on mobile.

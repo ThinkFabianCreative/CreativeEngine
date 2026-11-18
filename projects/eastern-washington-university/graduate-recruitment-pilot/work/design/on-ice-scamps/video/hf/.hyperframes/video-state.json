@@ -1,0 +1,408 @@
+{
+  "version": 1,
+  "historyId": "dc5d28a1-e81c-48ac-8212-96c509090abb",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "18bcca1593d1b29cd7442b3dc91d18ada440affb9b7acd577c1da57446f3d24f",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/18/18bcca1593d1b29cd7442b3dc91d18ada440affb9b7acd577c1da57446f3d24f"
+    },
+    "CLAUDE.md": {
+      "hash": "18bcca1593d1b29cd7442b3dc91d18ada440affb9b7acd577c1da57446f3d24f",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/18/18bcca1593d1b29cd7442b3dc91d18ada440affb9b7acd577c1da57446f3d24f"
+    },
+    "assets/seg/11.mp4": {
+      "hash": "76db656b223c8db95e24539341db6d3e20b48b0e2068f9c15afc37465ded99ce",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/76/76db656b223c8db95e24539341db6d3e20b48b0e2068f9c15afc37465ded99ce"
+    },
+    "assets/sfx/hammer_echo.wav": {
+      "hash": "beecc459e5291285d576d4490dbded74060e9744115ec513d62f555b3cad17bb",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/be/beecc459e5291285d576d4490dbded74060e9744115ec513d62f555b3cad17bb"
+    },
+    "assets/sfx/icechunk_echo.wav": {
+      "hash": "36d16ba3eabbdf69feac608de100c7b6267565ddd9aae07957d8e5d7bb27777a",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/36/36d16ba3eabbdf69feac608de100c7b6267565ddd9aae07957d8e5d7bb27777a"
+    },
+    "assets/vo/v01_next-cycle.wav": {
+      "hash": "00e3a538b742b9b38b1a5e64de8cf7a0a303b15fe2a17a971085bfe024117fdc",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/00/00e3a538b742b9b38b1a5e64de8cf7a0a303b15fe2a17a971085bfe024117fdc"
+    },
+    "assets/vo/v02_kids-older.wav": {
+      "hash": "27cb3378b1d4ba66f71462dfa2687eca051f20c59ee743401082b604c35c5ffd",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/27/27cb3378b1d4ba66f71462dfa2687eca051f20c59ee743401082b604c35c5ffd"
+    },
+    "assets/vo/v03_few-more-years.wav": {
+      "hash": "cb35b6d8674075c8e5230cbdddde3d412c5e9e70df714cd46975d1c514f868c4",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/cb/cb35b6d8674075c8e5230cbdddde3d412c5e9e70df714cd46975d1c514f868c4"
+    },
+    "assets/vo/v04_more-experience.wav": {
+      "hash": "6d74c65506c3e584645e56cc1105bf04f3d5c2deb316c437442c1fdea22874fc",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/6d/6d74c65506c3e584645e56cc1105bf04f3d5c2deb316c437442c1fdea22874fc"
+    },
+    "assets/vo/v05_no-living.wav": {
+      "hash": "dd73865b20ed7cf60d79384f91329b562f7801c7ce8c61e6fcc05f9b2c5e7217",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/dd/dd73865b20ed7cf60d79384f91329b562f7801c7ce8c61e6fcc05f9b2c5e7217"
+    },
+    "assets/vo/v06_doctorate.wav": {
+      "hash": "c1e5c027a8b7906f71c741af512413d03c3a38a1b3e4aa6723d3f4a7d50dbb90",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/c1/c1e5c027a8b7906f71c741af512413d03c3a38a1b3e4aa6723d3f4a7d50dbb90"
+    },
+    "assets/vo/v07_maybe-next-year.wav": {
+      "hash": "cab96cb5435ed6fcc9e3c663e3ab7e6037082b79772d545bbf6f40d1428676ac",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/ca/cab96cb5435ed6fcc9e3c663e3ab7e6037082b79772d545bbf6f40d1428676ac"
+    },
+    "assets/vo/v08_when-ready.wav": {
+      "hash": "7a4004ac985f23234f9327113cc5db2b4a529e4eebd6503af00a9788b8b94ec3",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/7a/7a4004ac985f23234f9327113cc5db2b4a529e4eebd6503af00a9788b8b94ec3"
+    },
+    "assets/vo/v09_someday.wav": {
+      "hash": "e80eff3e0c27b0cca2d6268a5dd392b5dc9d0d26accdde6ff016db1e2ddc136f",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/e8/e80eff3e0c27b0cca2d6268a5dd392b5dc9d0d26accdde6ff016db1e2ddc136f"
+    },
+    "assets/vo/v10_or-not.wav": {
+      "hash": "258e98019601edbcef94080421607ad8ce7695e0f1c5bdd664a2f7335ec06109",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/25/258e98019601edbcef94080421607ad8ce7695e0f1c5bdd664a2f7335ec06109"
+    },
+    "hyperframes.json": {
+      "hash": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/53/53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    "index.html": {
+      "hash": "cf2e78ea7491ce940d10d3966a149067e4706aeaa69d3b16e8368c4c4ceed124",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/cf/cf2e78ea7491ce940d10d3966a149067e4706aeaa69d3b16e8368c4c4ceed124"
+    },
+    "meta.json": {
+      "hash": "b44096e0bfcff25e73270e5af6b3f388e61492429bcff34b615a2965ac72017f",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/b4/b44096e0bfcff25e73270e5af6b3f388e61492429bcff34b615a2965ac72017f"
+    },
+    "package.json": {
+      "hash": "8719e4d437cef7697e4b084f577a9c50c611a831d91b56270ef094cd31575216",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/87/8719e4d437cef7697e4b084f577a9c50c611a831d91b56270ef094cd31575216"
+    },
+    "assets/seg/01.mp4": {
+      "hash": "f3ad591d6ccaede76aede90e4d1eabb4d168a205f454d1bc72e705a2e996bbf0",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/f3/f3ad591d6ccaede76aede90e4d1eabb4d168a205f454d1bc72e705a2e996bbf0"
+    },
+    "assets/seg/02.mp4": {
+      "hash": "a1302929a2ce7e7a93f082f5385ca28bef56ee0f1152ecce09b20f94de6ba71b",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/a1/a1302929a2ce7e7a93f082f5385ca28bef56ee0f1152ecce09b20f94de6ba71b"
+    },
+    "assets/seg/03.mp4": {
+      "hash": "ddc9ed66b732a6fa133154836edd3731dae0855da3d01ed2ebfdc6ff844dd66b",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/dd/ddc9ed66b732a6fa133154836edd3731dae0855da3d01ed2ebfdc6ff844dd66b"
+    },
+    "assets/seg/04.mp4": {
+      "hash": "d2df03da26ee63247acdd07b2e6b34b872bf15f240838a8d7e031890452072e1",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/d2/d2df03da26ee63247acdd07b2e6b34b872bf15f240838a8d7e031890452072e1"
+    },
+    "assets/seg/05.mp4": {
+      "hash": "016b360cc64600a9f06a0d961548b053e4965d79ffbe0123848f0f4773ff2fc2",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/01/016b360cc64600a9f06a0d961548b053e4965d79ffbe0123848f0f4773ff2fc2"
+    },
+    "assets/seg/06.mp4": {
+      "hash": "35e3fe47d5851f9c05d39ac4d3a7f69215801b912b0b96dff8b7ac441b00ce21",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/35/35e3fe47d5851f9c05d39ac4d3a7f69215801b912b0b96dff8b7ac441b00ce21"
+    },
+    "assets/seg/07.mp4": {
+      "hash": "d636f261da707bff63bc5fd72ab502f1682cf1ccf6c1d98f6da756714d7b246e",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/d6/d636f261da707bff63bc5fd72ab502f1682cf1ccf6c1d98f6da756714d7b246e"
+    },
+    "assets/seg/08.mp4": {
+      "hash": "55f67a5737ca00ba26da73f53f172e98b89745e433a0a27b2d31009893bf1e8a",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/55/55f67a5737ca00ba26da73f53f172e98b89745e433a0a27b2d31009893bf1e8a"
+    },
+    "assets/seg/09.mp4": {
+      "hash": "c323b7f671b8d86a815cb7ac11352bca663cb3edba82e74baf8b334745611196",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/c3/c323b7f671b8d86a815cb7ac11352bca663cb3edba82e74baf8b334745611196"
+    },
+    "assets/seg/10.mp4": {
+      "hash": "47c55a346b97c7e9aa5c573fdb223be3a9167cb4e1830c770539c80fda13418d",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/47/47c55a346b97c7e9aa5c573fdb223be3a9167cb4e1830c770539c80fda13418d"
+    },
+    "assets/sfx/bigbreak.wav": {
+      "hash": "21c4b6c0836bdc394a862c86a19f6bb924d9661abf16d00514226cce8b5cf5d9",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/21/21c4b6c0836bdc394a862c86a19f6bb924d9661abf16d00514226cce8b5cf5d9"
+    },
+    "assets/sfx/boom.wav": {
+      "hash": "14a4f416183f000c8dfb6b2db0c11f60883df6260874f023bcd702a85c30f9ec",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/14/14a4f416183f000c8dfb6b2db0c11f60883df6260874f023bcd702a85c30f9ec"
+    },
+    "assets/sfx/icebreak_echo.wav": {
+      "hash": "411867466ebeeb1c1940ec603da3ae78bd592ff1e8da9dd85a4fdaead9962b18",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/41/411867466ebeeb1c1940ec603da3ae78bd592ff1e8da9dd85a4fdaead9962b18"
+    },
+    "assets/sfx/icetick.wav": {
+      "hash": "89f2a06968d9887949afc9825db867706b62d0f60ba63114f3387c2484ae8b69",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/89/89f2a06968d9887949afc9825db867706b62d0f60ba63114f3387c2484ae8b69"
+    },
+    "assets/sfx/steps.wav": {
+      "hash": "afbaeef979fab303ed47cfba850b3bc2ac19f4ba7ce1ebbe7807edd1cb42945b",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/af/afbaeef979fab303ed47cfba850b3bc2ac19f4ba7ce1ebbe7807edd1cb42945b"
+    },
+    "assets/sfx/wind_bed.wav": {
+      "hash": "90acbdc85756d0a3b98e75ed34dc6506bbdbbcb64688019c6d9ab51334bc6fcf",
+      "content": "/Users/andresfabian/.cache/hyperframes/history/dc5d28a1-e81c-48ac-8212-96c509090abb/blobs/90/90acbdc85756d0a3b98e75ed34dc6506bbdbbcb64688019c6d9ab51334bc6fcf"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": {
+      "revision": null,
+      "id": "84cb98c5-7bd9-4cc8-be09-614555b117bd"
+    },
+    "revisions": {},
+    "unversioned": [
+      {
+        "id": "84cb98c5-7bd9-4cc8-be09-614555b117bd",
+        "scope": "project",
+        "report": "/Users/andresfabian/Documents/AI_Traffik_Projects/CreativeEngine/projects/eastern-washington-university/graduate-recruitment-pilot/work/design/on-ice-scamps/video/hf/.hyperframes/artifacts/checks/84cb98c5-7bd9-4cc8-be09-614555b117bd.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1794182357475,
+        "contentHash": "d0678d262e8a9798824a18372eb8ebe96fd0ca02f01e502dba581d4c623c5f04",
+        "revision": null,
+        "inputFingerprint": "9732a3cdfaa6cbff7104bfaf67d5defe77090e2da9ab6eb1e0e2c1d513edf269",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": {
+      "revision": null,
+      "id": "7a55e5ea-3c43-4c75-800d-386b91f5a512-9"
+    },
+    "revisions": {},
+    "unversioned": [
+      {
+        "scope": "full",
+        "id": "7a55e5ea-3c43-4c75-800d-386b91f5a512-0",
+        "image": "/Users/andresfabian/Documents/AI_Traffik_Projects/CreativeEngine/projects/eastern-washington-university/graduate-recruitment-pilot/work/design/on-ice-scamps/video/hf/.hyperframes/artifacts/snapshots/77158ffd-87c7-4351-9071-53e5863e1a29/frame-00-at-5s.png",
+        "time": 5,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1794182560627,
+        "contentHash": "85db551d20ed212d5d0f9b0b4a076ac641a358767206ee8b753edd74252d1000",
+        "revision": null,
+        "inputFingerprint": "9732a3cdfaa6cbff7104bfaf67d5defe77090e2da9ab6eb1e0e2c1d513edf269",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "7a55e5ea-3c43-4c75-800d-386b91f5a512-1",
+        "image": "/Users/andresfabian/Documents/AI_Traffik_Projects/CreativeEngine/projects/eastern-washington-university/graduate-recruitment-pilot/work/design/on-ice-scamps/video/hf/.hyperframes/artifacts/snapshots/77158ffd-87c7-4351-9071-53e5863e1a29/frame-01-at-13.8s.png",
+        "time": 13.8,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1794182560627,
+        "contentHash": "51c16b0f51bad800ea5d69bbee309c9f61377dfade89df56a22c3db34bf66dbc",
+        "revision": null,
+        "inputFingerprint": "9732a3cdfaa6cbff7104bfaf67d5defe77090e2da9ab6eb1e0e2c1d513edf269",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "7a55e5ea-3c43-4c75-800d-386b91f5a512-2",
+        "image": "/Users/andresfabian/Documents/AI_Traffik_Projects/CreativeEngine/projects/eastern-washington-university/graduate-recruitment-pilot/work/design/on-ice-scamps/video/hf/.hyperframes/artifacts/snapshots/77158ffd-87c7-4351-9071-53e5863e1a29/frame-02-at-24s.png",
+        "time": 24,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1794182560627,
+        "contentHash": "dd18d5b2110624789618a22cbec03a0a50e7636f5a73b3734d02809283ea538b",
+        "revision": null,
+        "inputFingerprint": "9732a3cdfaa6cbff7104bfaf67d5defe77090e2da9ab6eb1e0e2c1d513edf269",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "7a55e5ea-3c43-4c75-800d-386b91f5a512-3",
+        "image": "/Users/andresfabian/Documents/AI_Traffik_Projects/CreativeEngine/projects/eastern-washington-university/graduate-recruitment-pilot/work/design/on-ice-scamps/video/hf/.hyperframes/artifacts/snapshots/77158ffd-87c7-4351-9071-53e5863e1a29/frame-03-at-33s.png",
+        "time": 33,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1794182560627,
+        "contentHash": "353537266aba791248058084f6d6b3acfd9f3c33ce0675f0e634854fa6e94fc9",
+        "revision": null,
+        "inputFingerprint": "9732a3cdfaa6cbff7104bfaf67d5defe77090e2da9ab6eb1e0e2c1d513edf269",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "7a55e5ea-3c43-4c75-800d-386b91f5a512-4",
+        "image": "/Users/andresfabian/Documents/AI_Traffik_Projects/CreativeEngine/projects/eastern-washington-university/graduate-recruitment-pilot/work/design/on-ice-scamps/video/hf/.hyperframes/artifacts/snapshots/77158ffd-87c7-4351-9071-53e5863e1a29/frame-04-at-37s.png",
+        "time": 37,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1794182560627,
+        "contentHash": "70101b3498414d09a4f9f962bd9621f2e1e985586fd49a8b7448623f0aa492ef",
+        "revision": null,
+        "inputFingerprint": "9732a3cdfaa6cbff7104bfaf67d5defe77090e2da9ab6eb1e0e2c1d513edf269",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "7a55e5ea-3c43-4c75-800d-386b91f5a512-5",
+        "image": "/Users/andresfabian/Documents/AI_Traffik_Projects/CreativeEngine/projects/eastern-washington-university/graduate-recruitment-pilot/work/design/on-ice-scamps/video/hf/.hyperframes/artifacts/snapshots/77158ffd-87c7-4351-9071-53e5863e1a29/frame-05-at-44.6s.png",
+        "time": 44.6,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1794182560627,
+        "contentHash": "8ac6126e6e92c0d72c1ee5f72607bb2fe60fda9d96bb87d2c58793a4c64ef75e",
+        "revision": null,
+        "inputFingerprint": "9732a3cdfaa6cbff7104bfaf67d5defe77090e2da9ab6eb1e0e2c1d513edf269",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "7a55e5ea-3c43-4c75-800d-386b91f5a512-6",
+        "image": "/Users/andresfabian/Documents/AI_Traffik_Projects/CreativeEngine/projects/eastern-washington-university/graduate-recruitment-pilot/work/design/on-ice-scamps/video/hf/.hyperframes/artifacts/snapshots/77158ffd-87c7-4351-9071-53e5863e1a29/frame-06-at-46.2s.png",
+        "time": 46.2,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1794182560627,
+        "contentHash": "bacc7b937288429058bb10e9bcf091eb0c410632647eeaf69b7e72eb5726960a",
+        "revision": null,
+        "inputFingerprint": "9732a3cdfaa6cbff7104bfaf67d5defe77090e2da9ab6eb1e0e2c1d513edf269",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "7a55e5ea-3c43-4c75-800d-386b91f5a512-7",
+        "image": "/Users/andresfabian/Documents/AI_Traffik_Projects/CreativeEngine/projects/eastern-washington-university/graduate-recruitment-pilot/work/design/on-ice-scamps/video/hf/.hyperframes/artifacts/snapshots/77158ffd-87c7-4351-9071-53e5863e1a29/frame-07-at-51s.png",
+        "time": 51,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1794182560627,
+        "contentHash": "ec78316720f2473e1758005ca554d4be00479694f50e5d8184315fef1661c3c1",
+        "revision": null,
+        "inputFingerprint": "9732a3cdfaa6cbff7104bfaf67d5defe77090e2da9ab6eb1e0e2c1d513edf269",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "7a55e5ea-3c43-4c75-800d-386b91f5a512-8",
+        "image": "/Users/andresfabian/Documents/AI_Traffik_Projects/CreativeEngine/projects/eastern-washington-university/graduate-recruitment-pilot/work/design/on-ice-scamps/video/hf/.hyperframes/artifacts/snapshots/77158ffd-87c7-4351-9071-53e5863e1a29/frame-08-at-57.5s.png",
+        "time": 57.5,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1794182560627,
+        "contentHash": "614d7a72a840fac42a7e10dd3e9c571a8e991cb1b438dfeaededbbb6db9c2405",
+        "revision": null,
+        "inputFingerprint": "9732a3cdfaa6cbff7104bfaf67d5defe77090e2da9ab6eb1e0e2c1d513edf269",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "7a55e5ea-3c43-4c75-800d-386b91f5a512-9",
+        "image": "/Users/andresfabian/Documents/AI_Traffik_Projects/CreativeEngine/projects/eastern-washington-university/graduate-recruitment-pilot/work/design/on-ice-scamps/video/hf/.hyperframes/artifacts/snapshots/77158ffd-87c7-4351-9071-53e5863e1a29/frame-09-at-59.75s.png",
+        "time": 59.75,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1794182560627,
+        "contentHash": "614d7a72a840fac42a7e10dd3e9c571a8e991cb1b438dfeaededbbb6db9c2405",
+        "revision": null,
+        "inputFingerprint": "9732a3cdfaa6cbff7104bfaf67d5defe77090e2da9ab6eb1e0e2c1d513edf269",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "renders": {
+    "latest": {
+      "id": "a68f6565-4484-4408-b480-c98ee0857190",
+      "completedAt": 1794182408348,
+      "output": "/Users/andresfabian/Documents/AI_Traffik_Projects/CreativeEngine/projects/eastern-washington-university/graduate-recruitment-pilot/work/design/on-ice-scamps/video/EWU_OnIce_60s_animatic_v02_sound.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
+}

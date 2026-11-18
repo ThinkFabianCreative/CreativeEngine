@@ -1,0 +1,61 @@
+11 · TRAFFIK SITE DIRECTION (client file, Traffik only)
+Client: Traffik. Project: website-d2c. Internal working file, 2026-11-18. Status: DEVELOP.
+Positioning is WORKING (not leadership- or client-approved). Sources: normalized-brief.md,
+work/explore/2026-11-18_director_convergence.md, work/develop/2026-11-18_3d-gsap-options.md.
+
+WHAT THE SITE MUST DO
+- Win pitches and generate leads. Target: at least 2% conversion within 6 months of launch.
+- Three visitors: CMOs looking for an agency, CMOs checking a choice (validation),
+  and recruits.
+- Platform: Framer or Webflow (not final). Read 09a and 09b.
+
+SITEMAP (one site, eight sections)
+Home · Work · Services · Divisions (/health, /education, /unites) · Blog ·
+Contact (project scoping) · Careers · About.
+
+CASES
+- Home features 6 cases only: CMU Featherstone, Care1st, PIH Health,
+  WellCare / Easy Choice, Netwatch, SDSU Global Campus.
+- Work page holds all 39, filterable by division, service and industry, with a count.
+
+THE IDEA THE DESIGN MUST CARRY (not a line to print)
+Traffik gets brave work approved in categories built to say no. The rule everyone
+works around becomes the idea.
+
+HOMEPAGE ROUTE 1 · "The rule, first" on a Swiss evidence grid (leads with "approved")
+- First screen: the real rule a client worked under, set as source text on a cream
+  document panel (Libre Caslon, STAND-IN), the shipped work beside it, then the line.
+- Lines (exact, do not change):
+    Rule: you can’t tell seniors which plan to pick. Idea: tell them what to ask.
+    Ideas that survive review.
+- Show the PIH rule at category level: "Medicare marketing limits what a plan can tell a senior." No verbatim regulation (Andres, 2026-11-18).
+- Fix: the shipped work must be bigger than the rule by the first scroll.
+- Proof row: figures in yellow on grid columns, each with "unv".
+
+HOMEPAGE ROUTE 2 · Work first, full bleed (leads with "brave")
+- First screen: CMU Featherstone full bleed (placeholder image box labelled
+  "PLACEHOLDER · CMU Featherstone key visual"), a plain who-we-are line above it.
+- Line (exact): Half of what your category ‘can’t say’ is just what it hasn’t said.
+- PIH appears lower on the page as rule > idea > result.
+- No stop/go devices.
+
+CASE TEMPLATE · headline-led, three tiers (one CMS component, property "Tier")
+- Fields: Client · Division · Service · Industry · Challenge (2 lines) · What we did
+  (3 lines) · How / media · Results (0 to 3, each with Source and Year) · Quote ·
+  What review changed (Tier A only) · Team on the account (optional) · Related (3) ·
+  Next step.
+- Tier A hero: the two-line challenge carries the rule, set huge; one big result.
+- Tier B supporting: one result; unused result slots collapse.
+- Tier C regulated: one still and a quote; result slot reads
+  "Results not published at the client’s request" + "Ask us about this case".
+- Never show "N/A" or an empty box.
+
+MOTION (annotate per 09b; do not build)
+- Recommended: rule text rebuilds into the idea line on scroll (GSAP SplitText +
+  ScrollTrigger), then the work scales up; result figures count up with their source.
+- Optional: case as a shallow 3D stack of documents (rule, line, shipped work), CSS 3D first.
+- Optional, Work page only: opt-in 3D field of all 39 cases (three.js, custom code).
+- First paint is text or a still. 3D and video load after.
+
+REFERENCES (internal only, do not copy)
+See the Figma board "CreativeEngine · Traffik site work · 2026-11-18", rows 05 and 09.

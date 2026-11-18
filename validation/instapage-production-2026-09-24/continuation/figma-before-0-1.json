@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"page\":\"Cover\",\"components\":[],\"texts\":[{\"id\":\"2:3\",\"text\":\"CREATIVEENGINE · DESIGNCHAMP · GLOBAL METHOD · LAYER 1 OF 3\"},{\"id\":\"2:4\",\"text\":\"Instapage Native Kit\"},{\"id\":\"2:5\",\"text\":\"An implementation vocabulary for landing-page specifications that will be produced natively in Instapage. Every component here has a known native Instapage build, and none of them carries a style. It is not a template library and not a CreativeEngine design system: composition, hierarchy, type, color, imagery, rhythm and responsive intent come from the client's system and DesignChamp's judgment.\"},{\"id\":\"2:8\",\"text\":\"STATUS\"},{\"id\":\"2:9\",\"text\":\"v1 · built 2026-09-24\"},{\"id\":\"2:11\",\"text\":\"PLATFORM FACTS VERIFIED\"},{\"id\":\"2:12\",\"text\":\"2026-09-24 against Instapage Help Center, MCP guide, API reference\"},{\"id\":\"2:14\",\"text\":\"SOURCE OF TRUTH\"},{\"id\":\"2:15\",\"text\":\".claude/skills/instapage-production/references/\"},{\"id\":\"2:17\",\"text\":\"CLIENT FACTS\"},{\"id\":\"2:18\",\"text\":\"None. Each client's look lives in that client's own library (Layer 2)\"},{\"id\":\"2:20\",\"text\":\"CreativeEngine decides what should be made. Figma makes DesignChamp's visual intent explicit. instapage-production translates approved work into a native, client-authorable page. Instapage remains the production and publishing environment, not the creative brain.\"},{\"id\":\"2:21\",\"text\":\"Native Authorability: everything a visitor sees must be buildable with Instapage's own blocks, elements and forms, and editable afterwards by a competent non-developer.\"}],\"annotations\":[]}"
+    }
+  ],
+  "isError": false
+}

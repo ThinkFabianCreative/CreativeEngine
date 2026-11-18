@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>MFK Family Stories: bento prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bento.css?v={{BUILD}}">
+  <!-- PROTOTYPE ONLY: Webflow's runtime isn't on a local page. Finsweet queues its start on
+       window.Webflow; this stand-in runs that queue once the page is parsed. Do not copy to Webflow. -->
+  <script>
+    (() => {
+      const queue = [];
+      let ready = false;
+      window.Webflow = { push(fn) { ready ? fn() : queue.push(fn); } };
+      document.addEventListener('DOMContentLoaded', () => { ready = true; queue.splice(0).forEach((fn) => fn()); });
+    })();
+  </script>
+  <!-- Finsweet Attributes v2, list module. Pinned: latest on npm 2026-11-01. -->
+  <script async type="module" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes@2.7.1/attributes.js" fs-list></script>
+  <script defer src="bento-layout.js?v={{BUILD}}"></script>
+</head>
+<body>
+  <aside class="proto-bar" aria-label="Prototype controls">
+    <strong>Prototype</strong> · merged direction · <strong>TEST DATA:</strong> programs and Where Are They Now? randomized; videos and quotes are real ·
+    <span>Hide fields:</span>
+    <label><input type="checkbox" data-hide="badge"> badges</label>
+    <label><input type="checkbox" data-hide="description"> descriptions</label>
+    <label><input type="checkbox" data-hide="photo"> photos</label>
+  </aside>
+
+  <section class="selected-work">
+    <header class="portfolio-header">
+      <p class="eyebrow">Family Stories</p>
+      <h1 class="section-title"><span class="highlight">Meet</span> the miracles.</h1>
+      <p class="section-description">Real families. Real kids. Their words.</p>
+      <p class="project-count" aria-live="polite">
+        <span fs-list-element="results-count">{{TOTAL}}</span> results
+      </p>
+    </header>
+
+    <div class="filter-slot">
+    <form class="filter-form" fs-list-element="filters" aria-label="Filter stories">
+      <div class="filter-chip-list" role="group" aria-label="Format">
+        <button type="button" class="filter-chip filter-all" fs-list-element="clear">All</button>
+        {{FORMAT_CHIPS}}
+      </div>
+      <div class="filter-chip-list" role="group" aria-label="Program">
+        {{PROGRAM_CHIPS}}
+      </div>
+    </form>
+    </div>
+
+    <!-- Finsweet reads load + itemsperpage from the Collection List Wrapper (w-dyn-list). -->
+    <div class="portfolio-list-wrapper w-dyn-list" fs-list-load="pagination" fs-list-itemsperpage="12">
+      <div class="bento-grid w-dyn-items" role="list" fs-list-element="list">
+        {{CARDS}}
+      </div>
+      <div class="no-results w-dyn-empty" fs-list-element="empty">
+        <p>No stories match those filters.</p>
+      </div>
+      <!-- Custom pagination (no native w-pagination-* classes): the Collection List shows all
+           items, Finsweet pages them client-side, so filters always search every story. -->
+      <nav class="pagination" aria-label="Story pages" fs-list-element="pagination-wrapper">
+        <a href="#" class="page-arrow" fs-list-element="pagination-previous">← Previous</a>
+        <div class="page-buttons">
+          <a href="#" class="page-button" fs-list-element="page-button">1</a>
+          <span class="page-dots" fs-list-element="page-dots">…</span>
+        </div>
+        <a href="#" class="page-arrow" fs-list-element="pagination-next">Next →</a>
+      </nav>
+    </div>
+  </section>
+</body>
+</html>

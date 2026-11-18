@@ -1,0 +1,841 @@
+{
+  "policy": "explicit-repeat",
+  "fileKey": "suQoQdAczG3IZRVMxooqpb",
+  "checked": "2026-09-24",
+  "desktop": [
+    {
+      "node_id": "23:95",
+      "name": "B01 · Hero · Fluid Grid",
+      "annotations": [
+        {
+          "category": "1:7",
+          "label": "My Block · Fernwick / Hero / Split · v01"
+        }
+      ],
+      "text": "Your garage is a museum of one-time jobs.\nBorrow the drill, the tile saw or the stud finder with a free library card. Keep it up to seven days. Bring it back.\nPLACEHOLDER IMAGE · IMG-01 · not for external use\nDue back in 7 days\nGet my card"
+    },
+    {
+      "node_id": "23:96",
+      "name": "B01.C1 · m1",
+      "annotations": [],
+      "text": "Your garage is a museum of one-time jobs.\nBorrow the drill, the tile saw or the stud finder with a free library card. Keep it up to seven days. Bring it back."
+    },
+    {
+      "node_id": "23:100",
+      "name": "E01 · Headline h1",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "HERO-H"
+        }
+      ],
+      "text": "Your garage is a museum of one-time jobs."
+    },
+    {
+      "node_id": "23:102",
+      "name": "E02 · Paragraph",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "HERO-SUB"
+        }
+      ],
+      "text": "Borrow the drill, the tile saw or the stud finder with a free library card. Keep it up to seven days. Bring it back."
+    },
+    {
+      "node_id": "23:97",
+      "name": "B01.C2 · m4",
+      "annotations": [],
+      "text": "PLACEHOLDER IMAGE · IMG-01 · not for external use"
+    },
+    {
+      "node_id": "23:108",
+      "name": "E05 · Image · IMG-01",
+      "annotations": [
+        {
+          "category": "1:6",
+          "label": "IMG-01 · PLACEHOLDER · production photo pending · blocks publishing"
+        },
+        {
+          "category": "1:5",
+          "label": "Alt: ALT-HERO"
+        }
+      ],
+      "text": "PLACEHOLDER IMAGE · IMG-01 · not for external use"
+    },
+    {
+      "node_id": "23:98",
+      "name": "B01.C3 · m2 · stamp (native container border)",
+      "annotations": [
+        {
+          "category": "1:4",
+          "label": "Container border 2px stamp red (native container setting). CON-01 (resolved): the direction rotated the stamp; rotation is not a documented native control, so it is unrotated. CON-02 (resolved): the stamp was drawn as a bordered frame nested in C1; containers cannot nest and text has no native border, so the stamp is its own container."
+        }
+      ],
+      "text": "Due back in 7 days"
+    },
+    {
+      "node_id": "23:104",
+      "name": "E03 · Paragraph · stamp",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "STAMP"
+        }
+      ],
+      "text": "Due back in 7 days"
+    },
+    {
+      "node_id": "23:99",
+      "name": "B01.C4 · m3",
+      "annotations": [],
+      "text": "Get my card"
+    },
+    {
+      "node_id": "23:106",
+      "name": "E04 · Button · CTA",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "CTA"
+        },
+        {
+          "category": "1:4",
+          "label": "Link: on-page → B04 · conversion flag off (goal = form submissions)"
+        }
+      ],
+      "text": "Get my card"
+    },
+    {
+      "node_id": "18:54",
+      "name": "B02 · How it works · Fluid Grid",
+      "annotations": [
+        {
+          "category": "1:7",
+          "label": "Page-local"
+        }
+      ],
+      "text": "How borrowing works\nReserve it online\nPick the tool from the catalog and choose a day.\nPick it up at the desk\nShow your card. The tool is checked and charged.\nBring it back in seven days\nReturn it to the same desk, clean and complete."
+    },
+    {
+      "node_id": "18:55",
+      "name": "B02.C1 · m1",
+      "annotations": [],
+      "text": "How borrowing works"
+    },
+    {
+      "node_id": "18:56",
+      "name": "E06 · Headline h2",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "HOW-H"
+        }
+      ],
+      "text": "How borrowing works"
+    },
+    {
+      "node_id": "18:58",
+      "name": "B02.C2 · m2",
+      "annotations": [],
+      "text": "Reserve it online\nPick the tool from the catalog and choose a day."
+    },
+    {
+      "node_id": "18:59",
+      "name": "E07 · Headline h3",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "STEP1-H"
+        }
+      ],
+      "text": "Reserve it online"
+    },
+    {
+      "node_id": "18:61",
+      "name": "E08 · Paragraph",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "STEP1-P"
+        }
+      ],
+      "text": "Pick the tool from the catalog and choose a day."
+    },
+    {
+      "node_id": "18:63",
+      "name": "B02.C3 · m3",
+      "annotations": [],
+      "text": "Pick it up at the desk\nShow your card. The tool is checked and charged."
+    },
+    {
+      "node_id": "18:64",
+      "name": "E09 · Headline h3",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "STEP2-H"
+        }
+      ],
+      "text": "Pick it up at the desk"
+    },
+    {
+      "node_id": "18:66",
+      "name": "E10 · Paragraph",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "STEP2-P"
+        }
+      ],
+      "text": "Show your card. The tool is checked and charged."
+    },
+    {
+      "node_id": "18:68",
+      "name": "B02.C4 · m4",
+      "annotations": [],
+      "text": "Bring it back in seven days\nReturn it to the same desk, clean and complete."
+    },
+    {
+      "node_id": "18:69",
+      "name": "E11 · Headline h3",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "STEP3-H"
+        }
+      ],
+      "text": "Bring it back in seven days"
+    },
+    {
+      "node_id": "18:71",
+      "name": "E12 · Paragraph",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "STEP3-P"
+        }
+      ],
+      "text": "Return it to the same desk, clean and complete."
+    },
+    {
+      "node_id": "18:73",
+      "name": "B03 · Proof · Fluid Grid",
+      "annotations": [
+        {
+          "category": "1:7",
+          "label": "Page-local"
+        }
+      ],
+      "text": "Over 900 tools. Zero garages required.\nDrills, sanders, ladders, pressure washers, sewing machines and the odd carpet cleaner."
+    },
+    {
+      "node_id": "18:74",
+      "name": "B03.C1 · m1",
+      "annotations": [],
+      "text": "Over 900 tools. Zero garages required.\nDrills, sanders, ladders, pressure washers, sewing machines and the odd carpet cleaner."
+    },
+    {
+      "node_id": "18:75",
+      "name": "E13 · Headline h2 · claim C1",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "PROOF-H"
+        },
+        {
+          "category": "1:8",
+          "label": "Claim C1 \"over 900 tools\" is SOURCE-STATED: confirm before publishing (BriefMachine / client). Publishing is blocked until it is VERIFIED, or WordSmither supplies an approved replacement line and creative-engine-director approves it."
+        }
+      ],
+      "text": "Over 900 tools. Zero garages required."
+    },
+    {
+      "node_id": "18:77",
+      "name": "E14 · Paragraph",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "PROOF-P"
+        }
+      ],
+      "text": "Drills, sanders, ladders, pressure washers, sewing machines and the odd carpet cleaner."
+    },
+    {
+      "node_id": "18:79",
+      "name": "B04 · Form · Fluid Grid",
+      "annotations": [
+        {
+          "category": "1:7",
+          "label": "My Block · Fernwick / Form / Card signup · v01"
+        }
+      ],
+      "text": "Get your card\nIt’s free for Fernwick residents. We’ll email you when it’s ready to collect.\nFirst name\n* required\nEmail\n* required\nZIP code\n* required\nI agree to receive my card confirmation by email.\nGet my card"
+    },
+    {
+      "node_id": "18:80",
+      "name": "B04.C1 · m1",
+      "annotations": [],
+      "text": "Get your card\nIt’s free for Fernwick residents. We’ll email you when it’s ready to collect."
+    },
+    {
+      "node_id": "18:81",
+      "name": "E15 · Headline h2",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "FORM-H"
+        }
+      ],
+      "text": "Get your card"
+    },
+    {
+      "node_id": "18:83",
+      "name": "E16 · Paragraph",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "FORM-P"
+        }
+      ],
+      "text": "It’s free for Fernwick residents. We’ll email you when it’s ready to collect."
+    },
+    {
+      "node_id": "18:85",
+      "name": "B04.C2 · m2",
+      "annotations": [],
+      "text": "First name\n* required\nEmail\n* required\nZIP code\n* required\nI agree to receive my card confirmation by email.\nGet my card"
+    },
+    {
+      "node_id": "18:86",
+      "name": "E17 · Form · F01 (Form Library)",
+      "annotations": [
+        {
+          "category": "1:4",
+          "label": "Native form F01 from the Form Library · fields in packet order, all required · after submit: thank-you message TY (no redirect) · integration: OPEN (Q1) · lead notification recipients: OPEN (Q2) · conversion goal: Form submissions only"
+        }
+      ],
+      "text": "First name\n* required\nEmail\n* required\nZIP code\n* required\nI agree to receive my card confirmation by email.\nGet my card"
+    },
+    {
+      "node_id": "18:87",
+      "name": "Field · F-FIRST",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "F-FIRST"
+        }
+      ],
+      "text": "First name\n* required"
+    },
+    {
+      "node_id": "18:92",
+      "name": "Field · F-EMAIL",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "F-EMAIL"
+        }
+      ],
+      "text": "Email\n* required"
+    },
+    {
+      "node_id": "18:97",
+      "name": "Field · F-ZIP",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "F-ZIP"
+        }
+      ],
+      "text": "ZIP code\n* required"
+    },
+    {
+      "node_id": "18:102",
+      "name": "Field · F-CONSENT",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "F-CONSENT"
+        }
+      ],
+      "text": "I agree to receive my card confirmation by email."
+    },
+    {
+      "node_id": "18:105",
+      "name": "Submit · CTA",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "CTA · aria-label F-ARIA"
+        }
+      ],
+      "text": "Get my card"
+    },
+    {
+      "node_id": "18:107",
+      "name": "B05 · Footer · Fluid Grid",
+      "annotations": [
+        {
+          "category": "1:7",
+          "label": "Global Block · GLOBAL · Fernwick / Footer / Legal · v01 · reason: the legal line must match on every Fernwick page · owner: Fernwick communications office · approved: Fernwick Library (synthetic), 2026-09-24"
+        }
+      ],
+      "text": "Fernwick Tool Library is a program of Fernwick Public Library.\nPrivacy policy"
+    },
+    {
+      "node_id": "18:108",
+      "name": "B05.C1 · m1",
+      "annotations": [],
+      "text": "Fernwick Tool Library is a program of Fernwick Public Library.\nPrivacy policy"
+    },
+    {
+      "node_id": "18:109",
+      "name": "E18 · Paragraph · mandatory M1",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "FOOT (mandatory M1)"
+        }
+      ],
+      "text": "Fernwick Tool Library is a program of Fernwick Public Library."
+    },
+    {
+      "node_id": "18:111",
+      "name": "E19 · Paragraph · link",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "FOOT-LINK (mandatory M2)"
+        },
+        {
+          "category": "1:4",
+          "label": "Text link: outside URL · new tab · OPEN Q3: exact HTTPS privacy policy destination missing; blocks publishing."
+        }
+      ],
+      "text": "Privacy policy"
+    }
+  ],
+  "mobile": [
+    {
+      "node_id": "23:110",
+      "name": "B01 · Hero · Fluid Grid · mobile",
+      "annotations": [
+        {
+          "category": "1:7",
+          "label": "My Block · Fernwick / Hero / Split · v01"
+        }
+      ],
+      "text": "Your garage is a museum of one-time jobs.\nBorrow the drill, the tile saw or the stud finder with a free library card. Keep it up to seven days. Bring it back.\nDue back in 7 days\nGet my card\nPLACEHOLDER IMAGE · IMG-01 · not for external use"
+    },
+    {
+      "node_id": "23:111",
+      "name": "B01.C1 · m1",
+      "annotations": [],
+      "text": "Your garage is a museum of one-time jobs.\nBorrow the drill, the tile saw or the stud finder with a free library card. Keep it up to seven days. Bring it back."
+    },
+    {
+      "node_id": "23:115",
+      "name": "E01 · Headline h1",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "HERO-H"
+        },
+        {
+          "category": "1:4",
+          "label": "Mobile size 40 needs the per-device font size setting (limited release). CON-03 OPEN with DesignChamp until INSPECT confirms the workspace has it."
+        }
+      ],
+      "text": "Your garage is a museum of one-time jobs."
+    },
+    {
+      "node_id": "23:117",
+      "name": "E02 · Paragraph",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "HERO-SUB"
+        }
+      ],
+      "text": "Borrow the drill, the tile saw or the stud finder with a free library card. Keep it up to seven days. Bring it back."
+    },
+    {
+      "node_id": "23:113",
+      "name": "B01.C3 · m2 · stamp (native container border)",
+      "annotations": [
+        {
+          "category": "1:4",
+          "label": "Container border 2px stamp red (native container setting). CON-01 (resolved): the direction rotated the stamp; rotation is not a documented native control, so it is unrotated. CON-02 (resolved): the stamp was drawn as a bordered frame nested in C1; containers cannot nest and text has no native border, so the stamp is its own container."
+        }
+      ],
+      "text": "Due back in 7 days"
+    },
+    {
+      "node_id": "23:119",
+      "name": "E03 · Paragraph · stamp",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "STAMP"
+        }
+      ],
+      "text": "Due back in 7 days"
+    },
+    {
+      "node_id": "23:114",
+      "name": "B01.C4 · m3",
+      "annotations": [],
+      "text": "Get my card"
+    },
+    {
+      "node_id": "23:121",
+      "name": "E04 · Button · CTA",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "CTA"
+        },
+        {
+          "category": "1:4",
+          "label": "Link: on-page → B04 · conversion flag off (goal = form submissions)"
+        },
+        {
+          "category": "1:4",
+          "label": "Full width on mobile. Tap target 48 px high."
+        }
+      ],
+      "text": "Get my card"
+    },
+    {
+      "node_id": "23:112",
+      "name": "B01.C2 · m4",
+      "annotations": [],
+      "text": "PLACEHOLDER IMAGE · IMG-01 · not for external use"
+    },
+    {
+      "node_id": "23:123",
+      "name": "E05 · Image · IMG-01",
+      "annotations": [
+        {
+          "category": "1:6",
+          "label": "IMG-01 · PLACEHOLDER · production photo pending · blocks publishing"
+        },
+        {
+          "category": "1:5",
+          "label": "Alt: ALT-HERO"
+        }
+      ],
+      "text": "PLACEHOLDER IMAGE · IMG-01 · not for external use"
+    },
+    {
+      "node_id": "19:67",
+      "name": "B02 · How it works · Fluid Grid · mobile",
+      "annotations": [
+        {
+          "category": "1:7",
+          "label": "Page-local"
+        }
+      ],
+      "text": "How borrowing works\nReserve it online\nPick the tool from the catalog and choose a day.\nPick it up at the desk\nShow your card. The tool is checked and charged.\nBring it back in seven days\nReturn it to the same desk, clean and complete."
+    },
+    {
+      "node_id": "19:68",
+      "name": "B02.C1 · m1",
+      "annotations": [],
+      "text": "How borrowing works"
+    },
+    {
+      "node_id": "19:69",
+      "name": "E06 · Headline h2",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "HOW-H"
+        }
+      ],
+      "text": "How borrowing works"
+    },
+    {
+      "node_id": "19:71",
+      "name": "B02.C2 · m2",
+      "annotations": [],
+      "text": "Reserve it online\nPick the tool from the catalog and choose a day."
+    },
+    {
+      "node_id": "19:72",
+      "name": "E07 · Headline h3",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "STEP1-H"
+        }
+      ],
+      "text": "Reserve it online"
+    },
+    {
+      "node_id": "19:74",
+      "name": "E08 · Paragraph",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "STEP1-P"
+        }
+      ],
+      "text": "Pick the tool from the catalog and choose a day."
+    },
+    {
+      "node_id": "19:76",
+      "name": "B02.C3 · m3",
+      "annotations": [],
+      "text": "Pick it up at the desk\nShow your card. The tool is checked and charged."
+    },
+    {
+      "node_id": "19:77",
+      "name": "E09 · Headline h3",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "STEP2-H"
+        }
+      ],
+      "text": "Pick it up at the desk"
+    },
+    {
+      "node_id": "19:79",
+      "name": "E10 · Paragraph",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "STEP2-P"
+        }
+      ],
+      "text": "Show your card. The tool is checked and charged."
+    },
+    {
+      "node_id": "19:81",
+      "name": "B02.C4 · m4",
+      "annotations": [],
+      "text": "Bring it back in seven days\nReturn it to the same desk, clean and complete."
+    },
+    {
+      "node_id": "19:82",
+      "name": "E11 · Headline h3",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "STEP3-H"
+        }
+      ],
+      "text": "Bring it back in seven days"
+    },
+    {
+      "node_id": "19:84",
+      "name": "E12 · Paragraph",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "STEP3-P"
+        }
+      ],
+      "text": "Return it to the same desk, clean and complete."
+    },
+    {
+      "node_id": "19:86",
+      "name": "B03 · Proof · Fluid Grid · mobile",
+      "annotations": [
+        {
+          "category": "1:7",
+          "label": "Page-local"
+        }
+      ],
+      "text": "Over 900 tools. Zero garages required.\nDrills, sanders, ladders, pressure washers, sewing machines and the odd carpet cleaner."
+    },
+    {
+      "node_id": "19:87",
+      "name": "B03.C1 · m1",
+      "annotations": [],
+      "text": "Over 900 tools. Zero garages required.\nDrills, sanders, ladders, pressure washers, sewing machines and the odd carpet cleaner."
+    },
+    {
+      "node_id": "19:88",
+      "name": "E13 · Headline h2 · claim C1",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "PROOF-H"
+        },
+        {
+          "category": "1:8",
+          "label": "Claim C1 &quot;over 900 tools&quot; is SOURCE-STATED: confirm before publishing (BriefMachine / client). Publishing is blocked until it is VERIFIED, or WordSmither supplies an approved replacement line and creative-engine-director approves it."
+        }
+      ],
+      "text": "Over 900 tools. Zero garages required."
+    },
+    {
+      "node_id": "19:90",
+      "name": "E14 · Paragraph",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "PROOF-P"
+        }
+      ],
+      "text": "Drills, sanders, ladders, pressure washers, sewing machines and the odd carpet cleaner."
+    },
+    {
+      "node_id": "19:92",
+      "name": "B04 · Form · Fluid Grid · mobile",
+      "annotations": [
+        {
+          "category": "1:7",
+          "label": "My Block · Fernwick / Form / Card signup · v01"
+        }
+      ],
+      "text": "Get your card\nIt’s free for Fernwick residents. We’ll email you when it’s ready to collect.\nFirst name\n* required\nEmail\n* required\nZIP code\n* required\nI agree to receive my card confirmation by email.\nGet my card"
+    },
+    {
+      "node_id": "19:93",
+      "name": "B04.C1 · m1",
+      "annotations": [],
+      "text": "Get your card\nIt’s free for Fernwick residents. We’ll email you when it’s ready to collect."
+    },
+    {
+      "node_id": "19:94",
+      "name": "E15 · Headline h2",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "FORM-H"
+        }
+      ],
+      "text": "Get your card"
+    },
+    {
+      "node_id": "19:96",
+      "name": "E16 · Paragraph",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "FORM-P"
+        }
+      ],
+      "text": "It’s free for Fernwick residents. We’ll email you when it’s ready to collect."
+    },
+    {
+      "node_id": "19:98",
+      "name": "B04.C2 · m2",
+      "annotations": [],
+      "text": "First name\n* required\nEmail\n* required\nZIP code\n* required\nI agree to receive my card confirmation by email.\nGet my card"
+    },
+    {
+      "node_id": "19:99",
+      "name": "E17 · Form · F01 (Form Library)",
+      "annotations": [
+        {
+          "category": "1:4",
+          "label": "Native form F01 from the Form Library · fields in packet order, all required · after submit: thank-you message TY (no redirect) · integration: OPEN (Q1) · lead notification recipients: OPEN (Q2) · conversion goal: Form submissions only"
+        }
+      ],
+      "text": "First name\n* required\nEmail\n* required\nZIP code\n* required\nI agree to receive my card confirmation by email.\nGet my card"
+    },
+    {
+      "node_id": "19:100",
+      "name": "Field · F-FIRST",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "F-FIRST"
+        }
+      ],
+      "text": "First name\n* required"
+    },
+    {
+      "node_id": "19:105",
+      "name": "Field · F-EMAIL",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "F-EMAIL"
+        }
+      ],
+      "text": "Email\n* required"
+    },
+    {
+      "node_id": "19:110",
+      "name": "Field · F-ZIP",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "F-ZIP"
+        }
+      ],
+      "text": "ZIP code\n* required"
+    },
+    {
+      "node_id": "19:115",
+      "name": "Field · F-CONSENT",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "F-CONSENT"
+        }
+      ],
+      "text": "I agree to receive my card confirmation by email."
+    },
+    {
+      "node_id": "19:118",
+      "name": "Submit · CTA",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "CTA · aria-label F-ARIA"
+        }
+      ],
+      "text": "Get my card"
+    },
+    {
+      "node_id": "19:120",
+      "name": "B05 · Footer · Fluid Grid · mobile",
+      "annotations": [
+        {
+          "category": "1:7",
+          "label": "Global Block · GLOBAL · Fernwick / Footer / Legal · v01 · reason: the legal line must match on every Fernwick page · owner: Fernwick communications office · approved: Fernwick Library (synthetic), 2026-09-24"
+        }
+      ],
+      "text": "Fernwick Tool Library is a program of Fernwick Public Library.\nPrivacy policy"
+    },
+    {
+      "node_id": "19:121",
+      "name": "B05.C1 · m1",
+      "annotations": [],
+      "text": "Fernwick Tool Library is a program of Fernwick Public Library.\nPrivacy policy"
+    },
+    {
+      "node_id": "19:122",
+      "name": "E18 · Paragraph · mandatory M1",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "FOOT (mandatory M1)"
+        }
+      ],
+      "text": "Fernwick Tool Library is a program of Fernwick Public Library."
+    },
+    {
+      "node_id": "19:124",
+      "name": "E19 · Paragraph · link",
+      "annotations": [
+        {
+          "category": "1:5",
+          "label": "FOOT-LINK (mandatory M2)"
+        },
+        {
+          "category": "1:4",
+          "label": "Text link: outside URL · new tab · OPEN Q3: exact HTTPS privacy policy destination missing; blocks publishing."
+        }
+      ],
+      "text": "Privacy policy"
+    }
+  ]
+}

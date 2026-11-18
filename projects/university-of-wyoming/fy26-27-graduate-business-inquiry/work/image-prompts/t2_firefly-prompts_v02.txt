@@ -1,0 +1,289 @@
+T2 · "TOO STUBBORN TO STOP?" · ADOBE FIREFLY PROMPTS v02 · 2026-09-18
+University of Wyoming · FY26-27 Graduate Business Inquiry (internal comps only)
+Supersedes v01 for all new generations. v01 is kept unchanged. Built from v01 plus the v1
+set review (work/reviews/…_t2-still-life-comps-review_v01.md) and the fix prompts.
+
+WHAT CHANGED FROM v01
+- P1-B, P1-C, P2-C, P3-B, P5-C: rewritten (visor explicit; meet program added; fridge note
+  removed; one legible moving-out collision; gold champion rosette placed low).
+- Every prompt: "warm tungsten" grade and "no windows, no ceiling lights, no light fixtures
+  or bulbs visible in frame" (v1 put pendant bulbs and doorways in the type zone).
+- P2-B: the pendant lamp is gone from the prompt; the light is now a lamp out of frame.
+- Style reference: upload P3-A 3:4 v1 for every generation so the set keeps one grade.
+- Names may be added (optional line below).
+
+WHAT THESE ARE
+One person-free still life per week line (15 weeks: 5 programs x A/B/C).
+INTERNAL COMP PLACEHOLDERS ONLY, replaced by the Laramie shoot before anything runs.
+Label every image "PLACEHOLDER IMAGE - not for external use" in Figma.
+
+FIREFLY SETTINGS
+- Content type: Photo. Aspect ratio: Portrait 3:4 (crop to 4:5 and 1:1 in Figma).
+  Vertical 9:16 generated separately (see below).
+- STYLE REFERENCE: P3-A 3:4 v1, strength about 50-60%.
+- Visual intensity and style strength: low to medium. Effects: none.
+- Generate 4; pick the one with the darkest, emptiest top 40% (the type zone).
+
+OPTIONAL LINE (add to the end of any prompt to push the look)
+"In the style of Todd Hido and Stephen Shore."
+If Firefly refuses or ignores the names, remove the line; the look is already described.
+
+OPTIONAL FILM LINE (if the grade comes out too clean)
+"Shot on Kodak Portra 800, underexposed by about one stop, fine grain."
+
+9:16 VERSION OF ANY PROMPT
+Same prompt, Vertical 9:16, and replace the composition sentence with:
+"Vertical composition: the objects sit in the middle band of the frame, slightly closer;
+the top 40% and the bottom 30% are dark, plain shadow."
+
+NEVER GENERATE (regenerate if it appears; don't retouch it away)
+People, hands, faces · readable or fake text, numbers, logos, brand names · windows,
+ceiling lights, lamps or bulbs in frame · mountains, landscapes, cowboy imagery,
+graduation caps · money · glowing screens facing camera.
+
+AFTER GENERATING: grade to match P3-A and run the check list in
+t2_firefly-fix-prompts_v01.txt (Part A and the final check).
+
+====================================================================
+P1 · ON-CAMPUS MBA
+====================================================================
+P1-A · CLOSING SHIFT. PITCH DECK. BEST FRIEND'S WEDDING. SAME WEEK.
+A restaurant dining room an hour after closing. Chairs are turned upside down on every
+table except one. On that table: a black server's apron tossed across the chair back,
+a loose stack of printed presentation pages marked up with a pen, and a small wrapped
+wedding gift box with a cream ribbon. Wide shot at standing eye height, 35mm lens. The
+objects sit in the lower middle of the frame, slightly right of center. Warm light spills
+from a kitchen pass-through out of frame to the right. Warm tungsten documentary still-life photograph,
+35mm film look, fine grain, real and unposed. Deep warm brown shadows, cream highlights,
+low saturation, no blue cast. The top 40% of the frame is dark, plain and low in detail.
+No people, no hands, no faces. No readable text, numbers, logos or brand names.
+No windows, no ceiling lights, no light fixtures or bulbs visible in frame.
+
+P1-B · TWO FINALS. CLOSING SHIFT. LEASE RENEWAL. SAME WEEK.
+A small apartment kitchen table late in the evening. Two open study guides with yellow
+highlighter marks. Resting on top of them, a black food-service visor with a curved brim
+and an adjustable strap, clearly a visor. Beside them, lease papers folded in thirds with
+a pen on top, and a half-finished glass of water. Medium shot at seated eye height, 35mm
+lens at f/2.8, focus on the visor and the lease. Objects in the lower middle of the frame.
+A single warm table lamp out of frame to the left lights only the table. Warm tungsten
+documentary still-life photograph, 35mm film look, fine grain. Deep warm brown shadows,
+cream highlights, low saturation, no green or blue cast. The top 40% of the frame is dark,
+plain wall and cabinet fronts in shadow. No windows, no light fixtures or bulbs visible.
+No people, no hands, no faces. No readable text, numbers, logos or brand names.
+
+P1-C · QUARTER-END. TRAINING THE NEW HIRE. BROTHER'S STATE MEET. SAME WEEK.
+An office desk after hours in a windowless room. A worn brown leather work bag on the
+desk chair. On the desk, a closed laminated training binder with plain colored tab
+dividers, and on top of it a folded athletic meet program with a coiled lanyard and a
+spectator wristband. A coffee cup gone cold. Medium close-up at seated eye height, 50mm
+lens at f/2, shallow depth of field on the program and lanyard. Objects in the lower
+middle, slightly right. A single warm desk lamp out of frame to the right lights only
+the desk. Warm tungsten documentary still-life photograph, 35mm film look, fine grain.
+Deep warm brown shadows, cream highlights, low saturation. The top 40% of the frame is a
+dark, plain wall. No windows, no light fixtures or bulbs visible, no screens. No people,
+no hands, no faces. No readable text, diagrams, numbers, logos or brand names.
+
+
+====================================================================
+P2 · ONLINE MBA  (never campus)
+====================================================================
+P2-A · TWO PEOPLE SHORT. KID'S RECITAL. MOVING DAY. SAME WEEK.
+The break room of a manufacturing plant at shift change. A row of tall gray steel lockers;
+one locker door stands open. On the inside hook of the door hangs a small child's recital
+costume, a dusty-rose tulle skirt on a child-size hanger inside a clear dry-cleaning bag.
+Flattened brown moving boxes and a roll of packing tape lean against the next lockers. A
+scuffed white hard hat and work gloves on the table in the foreground. Medium shot at
+standing eye height, 35mm lens, focus on the costume. The costume sits in the lower middle,
+right of center. Warm light from a doorway out of frame to the right falls on the tulle.
+Warm tungsten documentary still-life photograph, 35mm film look, fine grain. Deep warm brown shadows,
+cream highlights, low saturation, no fluorescent green cast. The top 40% of the frame is
+dark locker tops and wall. No people, no hands, no faces. No readable text, numbers, logos,
+safety posters or brand names.
+No windows, no ceiling lights, no light fixtures or bulbs visible in frame.
+
+P2-B · DOUBLE SHIFT. SAFETY AUDIT. TRUCK IN THE SHOP. SAME WEEK.
+A kitchen table at night. A scuffed white hard hat, a clipboard with a blank checklist
+sheet, a folded repair-shop invoice, and a ring of pickup truck keys with a spare key on a
+paper tag. A thermos. Medium close-up from a high angle, about 40 degrees looking down onto the
+table, 50mm lens, focus on the hard hat and keys. Objects in the lower middle of the frame. A single warm lamp out of
+frame to the left lights only the table. Warm tungsten documentary still-life photograph, 35mm
+film look, fine grain. Deep warm brown shadows, cream highlights, low saturation. The top
+40% of the frame is dark, plain kitchen wall. No people, no hands, no faces. No readable
+text, numbers, logos or brand names.
+No windows, no ceiling lights, no light fixtures or bulbs visible in frame.
+
+P2-C · HOLIDAY RESET. TWO CALL-OUTS. TEE-BALL SIGNUPS. SAME WEEK.
+A home kitchen counter in the evening. A small child's leather baseball glove, a retail
+store lanyard with a blank white badge, and a rolled-up shelf layout sheet held with a
+rubber band. Leaning against the backsplash at counter height, a single blank signup form
+on a clipboard. Medium shot at standing eye height, 35mm lens at f/2.8, focus on the glove
+and the lanyard. Objects in the lower middle, slightly right. A warm under-cabinet light
+out of frame lights only the counter. Warm tungsten documentary still-life photograph,
+35mm film look, fine grain. Deep warm brown shadows, cream highlights, low saturation, no
+green cast. The top 40% of the frame is dark cabinet doors in deep shadow, with nothing on
+them. No refrigerator notes, no windows, no light fixtures or bulbs visible. No people, no
+hands, no faces. No readable text, numbers, logos or brand names.
+
+
+====================================================================
+P3 · M.S. IN ACCOUNTING  (on campus; scene is off campus)
+====================================================================
+P3-A · AUDIT INTERNSHIP. VOLUNTEER TAX NIGHT. SOFTBALL PLAYOFFS. SAME WEEK.
+A community-center folding table after a volunteer tax night. A squared stack of plain
+manila client folders, a printing calculator with a curl of paper tape, and an unzipped
+softball bat bag with a leather glove on top. Close-up at seated eye height, 50mm lens,
+shallow depth of field on the glove and folders. Objects in the lower middle of the frame.
+A warm clip-on table lamp out of frame to the left. Warm tungsten documentary still-life photograph,
+35mm film look, fine grain. Deep warm brown shadows, cream highlights, low saturation. The
+top 40% of the frame is dark, plain wall. No people, no hands, no faces. No readable text,
+numbers, logos or brand names.
+No windows, no ceiling lights, no light fixtures or bulbs visible in frame.
+
+P3-B · TWO FINALS. PART-TIME TAX PREP. ROOMMATE MOVES OUT. SAME WEEK.
+A shared apartment living room at night. In the foreground, a half-packed cardboard moving
+box with a desk lamp and a rolled-up poster sticking out of it, clearly someone moving out.
+Just behind it, a small desk with a ten-key adding machine trailing a curl of paper tape, a
+stack of tax forms turned face down, and an open textbook with a pencil. Medium shot at
+seated eye height, 35mm lens at f/2.8, focus on the moving box and the adding machine.
+Objects in the lower middle of the frame, box left, desk right. A single warm desk lamp
+out of frame to the right. Warm tungsten documentary still-life photograph, 35mm film look,
+fine grain. Deep warm brown shadows, cream highlights, low saturation. The top 40% of the
+frame is a dark, plain wall with no bookshelf and no bright patch. No windows, no light
+fixtures or bulbs visible. No people, no hands, no faces. No readable text, numbers, logos
+or brand names.
+
+P3-C · FIRST BUSY SEASON. BANK RECS DUE. BABY SHOWER. SAME WEEK.
+An office cubicle after hours. A tall stack of printed spreadsheets bristling with colored
+sticky flags, and on the desk chair a wrapped baby-shower gift with a pale ribbon. A cold
+coffee cup. Medium close-up from a high angle, about 30 degrees looking down, 50mm
+lens, shallow depth of field on the flagged stack and the gift. Objects in the lower middle, slightly right. A warm desk lamp
+out of frame to the left. Warm tungsten documentary still-life photograph, 35mm film look, fine grain.
+Deep warm brown shadows, cream highlights, low saturation. The top 40% of the frame is
+dark cubicle wall. No people, no hands, no faces. No readable text, numbers, logos or
+brand names.
+No windows, no ceiling lights, no light fixtures or bulbs visible in frame.
+
+
+====================================================================
+P4 · ONLINE M.S. IN ACCOUNTING  (never campus)
+====================================================================
+P4-A · MONTH-END CLOSE. INVENTORY COUNT. REC LEAGUE FINAL. SAME WEEK.
+A hardware-store stockroom at night during an annual inventory count. A long aisle of
+metal shelving with plain cardboard cartons. A rolling stock ladder halfway down the aisle,
+with a pair of hockey skates hanging by their laces from the top rail and a clipboard
+resting on a step. Wide shot at standing eye height, 35mm lens. The ladder and skates sit
+in the lower middle, right of center. A single portable work light out of frame lights the
+skates. Warm tungsten documentary still-life photograph, 35mm film look, fine grain. Deep warm brown
+shadows, cream highlights, low saturation, no fluorescent cast. The top 40% of the frame
+is dark shelving and ceiling. No people, no hands, no faces. No readable text, numbers,
+labels, logos or brand names on cartons.
+No windows, no ceiling lights, no light fixtures or bulbs visible in frame.
+
+P4-B · PAYROLL FRIDAY. QUARTERLY FILINGS. SCIENCE FAIR. SAME WEEK.
+A home office corner in the evening. A desk with plain file folders in a neat stack and an
+adding machine; leaning against the wall beside the desk, a blank trifold science-fair
+board with a small cardboard volcano model in front of it. Medium shot at seated eye
+height, 35mm lens, focus on the folders and the volcano. Objects in the lower middle. A
+warm desk lamp out of frame to the left. Warm tungsten documentary still-life photograph, 35mm film look,
+fine grain. Deep warm brown shadows, cream highlights, low saturation. The top 40% of the
+frame is dark, plain wall. No people, no hands, no faces. No readable text, numbers, logos
+or brand names.
+No windows, no ceiling lights, no light fixtures or bulbs visible in frame.
+
+P4-C · YEAR-END AUDIT. SYSTEM CONVERSION. HUNTING OPENER. SAME WEEK.
+A small office at an industrial company after hours. A blaze-orange hunting vest draped over
+the back of the desk chair. On the desk, a thick three-ring audit binder and a printed
+checklist held with a binder clip. Straight-on frontal view, camera level with the chair
+back, deadpan and symmetrical, 50mm lens, focus on the vest and binder. Chair and desk in
+the lower middle. A warm desk lamp out of
+frame to the right. Warm tungsten documentary still-life photograph, 35mm film look, fine grain. Deep
+warm brown shadows, cream highlights, low saturation. The top 40% of the frame is dark,
+plain wall. No people, no hands, no faces, no rifles, no animals or antlers. No readable
+text, numbers, logos or brand names.
+No windows, no ceiling lights, no light fixtures or bulbs visible in frame.
+
+
+====================================================================
+P5 · ONLINE M.S. IN FINANCE  (never campus)
+====================================================================
+P5-A · COVERING THE BRANCH. MARKET DIP. GRANDMA'S 90TH. SAME WEEK.
+A small-town bank branch lobby after closing. On the customer counter: a heavy ring of
+branch keys, a white bakery cake box tied with string, and a small bundle of party
+balloons tied to the counter, cream and gold. Medium shot at standing eye height, 35mm lens,
+focus on the keys and cake box. Objects in the lower middle, right of center. A warm
+teller-station task light out of frame lights the counter. Documentary still-life
+photograph, 35mm film look, fine grain. Deep warm brown shadows, cream highlights, low
+saturation. The top 40% of the frame is dark, plain wall. No people, no hands, no faces,
+no money, no vault. No readable text, numbers, logos or brand names.
+No windows, no ceiling lights, no light fixtures or bulbs visible in frame.
+
+P5-B · CLIENT REVIEWS. RATE CUT. CAR WON'T START. SAME WEEK.
+An advisor's office desk in the evening. A neat stack of plain navy client-review folders,
+a portable car jump starter with its red and black clamps on the floor beside the desk,
+and a cold cup of coffee. Medium shot at seated eye height, 35mm lens, focus on the folders
+and jump starter. Objects in the lower middle. A warm desk lamp out of frame to the left.
+Warm tungsten documentary still-life photograph, 35mm film look, fine grain. Deep warm brown shadows,
+cream highlights, low saturation. The top 40% of the frame is dark, plain wall. No people,
+no hands, no faces, no screens. No readable text, numbers, logos or brand names.
+No windows, no ceiling lights, no light fixtures or bulbs visible in frame.
+
+P5-C · LOAN COMMITTEE. HAIL CLAIMS. COUNTY FAIR. SAME WEEK.
+A credit-union office in a small town, after hours. Straight-on frontal view, camera level
+with the desk, deadpan and symmetrical, 50mm lens at f/4. On the desk: a thick committee
+packet held with a large black binder clip, and a stack of blank claim forms. Pinned low on
+a corkboard directly behind the desk, just above the desk surface, a gold and brown
+champion rosette ribbon with plain tails. Objects in the lower middle, centered. A warm
+desk lamp out of frame to the right lights the desk and the rosette. Warm tungsten
+documentary still-life photograph, 35mm film look, fine grain. Deep warm brown shadows,
+cream highlights, low saturation. The top 40% of the frame is dark wall and the upper
+corkboard edge in deep shadow, empty. No windows, no light fixtures or bulbs visible. No
+people, no hands, no faces. No readable text on the rosette, forms or packet. No numbers,
+logos or brand names.
+
+
+====================================================================
+NEW SCENE · P2-D · ONLINE MBA  (Andres, 2026-09-18; IN ROTATION, week line A chosen)
+====================================================================
+Idea (Andres): "an open laptop inside an old pickup truck, 4am before shift opened in the
+parking lot of an OEM plant, backpack, papers, post-its, study card stacks, he's been
+studying for exams from his car."
+Note: this is the first T2 scene with school in it (someone already enrolled). It relaxes
+the T2 "no school items" rule; the question "TOO STUBBORN TO STOP?" reads almost literally
+over it. Week line in use: A (options B and C kept for reference):
+  A  SIX A.M. SHIFT. EXAM FRIDAY. PARKING-LOT LIBRARY. SAME WEEK.
+  B  MANDATORY OVERTIME. FINANCE EXAM. TRUCK IN THE SHOP. SAME WEEK.  (echoes P2-B; pick one)
+  C  FOUR A.M. FLASHCARDS. SIX A.M. SHIFT. SAME WEEK.   (two items; breaks the three-item rule)
+
+P2-D · 3:4
+The cab of an old, well-used pickup truck parked in the employee lot of a manufacturing
+plant at four in the morning, before the first shift. The driver's seat is empty; he has
+just walked in to clock on. An open laptop rests on the steering wheel, its screen angled
+away from the camera and set to a warm night mode, casting a soft amber glow across the
+cab. On the dashboard, a row of yellow sticky notes along the bottom of the windshield.
+On the passenger seat, stacks of handwritten study flash cards held with rubber bands, a
+spiral notebook and loose papers, a steel thermos, and a folded high-visibility safety
+vest. A worn canvas backpack in the passenger footwell. Frost creeps in from the edges of
+the windshield; through it, far away and low, the plant's sodium-vapor lot lights make a
+few small warm orange points in the dark. Camera from the passenger door looking across
+the cab toward the driver's side, seated eye height, 35mm lens at f/2.8, focus on the
+flash cards and the laptop edge. Objects fill the lower middle of the frame. The top 40% of
+the frame is the dark cab roof and the upper windshield in near-black night. Warm tungsten
+documentary still-life photograph, 35mm film look, fine grain. Deep warm brown shadows,
+cream and amber highlights, low saturation, no blue light. No people, no hands, no faces.
+No readable text on the screen, cards, notes or papers. No clocks or dashboard numbers,
+no logos or badges on the steering wheel or truck, no brand names, no energy drinks.
+Optional: "In the style of Todd Hido and Gregory Crewdson."
+
+P2-D · 9:16
+Same prompt, Vertical 9:16, and replace the camera sentence with:
+"Camera from the passenger door, one step closer, looking across the cab: the laptop, the
+flash-card stacks and the sticky notes fill the middle band of the frame. The top 40% is
+the dark cab roof and upper windshield; the bottom 30% is the dark seat and footwell."
+
+Carousel crops: card 1 tight on the flash cards and sticky notes; card 2 the whole cab;
+card 3 the dark roof and upper windshield with the far plant lights at the bottom edge.
+
+Real shoot (Laramie): this scene is fully shootable for real: a borrowed older pickup,
+an employee lot with permission, before dawn, the laptop screen as the key light. If the
+T3 Online MBA student (script P2-A, shift worker) actually studies in their truck, this can
+be their truck, which links T2 and T3 directly.

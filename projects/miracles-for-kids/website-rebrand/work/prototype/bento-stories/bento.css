@@ -1,0 +1,189 @@
+/* MFK Family Stories bento, merged direction.
+   Look: Figma MFK-Andres Story Bento (node 193:1305) + Netlify v4. Behaviour: Finsweet + bento-layout.js.
+   Tokens: Look A Saturated, Figma frame 26:6; peach from Figma / v4 Feature card. */
+:root {
+  --mfk-royal: #1B5FBF;
+  --mfk-orange: #F99400;
+  --mfk-sun: #FFD23F;
+  --mfk-navy: #002855;
+  --mfk-orange-700: #BB6F00;
+  --mfk-sun-soft: #FFF5D5;
+  --mfk-sky-soft: #F2F8FD;
+  --mfk-peach: #FBD7A6;
+  --mfk-canvas: #FFFFFF;
+  --mfk-border: #C7D0DA;
+  --mfk-text-2: #5B6474;
+
+  --radius: 28px;
+  --radius-xl: 140px;
+  --pad: 24px;
+  --gap: 24px;
+  --row: 320px;
+  --spring: cubic-bezier(.34, 1.56, .64, 1);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--mfk-canvas);
+  color: var(--mfk-navy);
+  font: 400 16px/24px "Outfit", system-ui, sans-serif;
+}
+
+.proto-bar {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center;
+  padding: 8px 16px;
+  background: var(--mfk-navy); color: #fff; font-size: 13px;
+}
+.proto-bar label { display: inline-flex; gap: 4px; align-items: center; cursor: pointer; }
+
+.selected-work { max-width: 1280px; margin: 0 auto; padding: 56px 16px 80px; }
+
+/* Header */
+.eyebrow { margin: 0 0 8px; font-weight: 600; font-size: 14px; line-height: 20px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mfk-royal); }
+.section-title { margin: 0; font-weight: 800; font-size: clamp(40px, 6vw, 64px); line-height: 1.1; letter-spacing: -1px; }
+.highlight { font-family: "Caveat", cursive; font-weight: 700; font-size: 1.2em; color: var(--mfk-orange-700); letter-spacing: 0; }
+.section-description { margin: 12px 0 0; font-size: 20px; line-height: 32px; color: var(--mfk-text-2); }
+.project-count { margin: 16px 0 0; font-size: 14px; font-weight: 500; color: var(--mfk-text-2); }
+
+/* Filters */
+.filter-form { display: flex; flex-direction: column; gap: 10px; margin: 40px 0; }
+.filter-chip-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.filter-chip {
+  position: relative; display: inline-flex; align-items: center;
+  min-height: 44px; padding: 0 18px;
+  border: 1px solid var(--mfk-border); border-radius: 999px;
+  background: #fff; color: var(--mfk-navy);
+  font: 600 15px/1 "Outfit", sans-serif; cursor: pointer;
+  transition: background-color .2s, border-color .2s, color .2s, border-radius .35s var(--spring);
+}
+.filter-chip[hidden] { display: none; }
+.filter-input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.filter-chip:has(.filter-input:checked) { background: var(--mfk-navy); border-color: var(--mfk-navy); color: #fff; border-radius: 14px; }
+.filter-chip:has(.filter-input:checked) .filter-label::before { content: "✓ "; }
+.filter-chip:has(.filter-input:focus-visible), .filter-all:focus-visible { outline: 3px solid var(--mfk-royal); outline-offset: 2px; }
+.filter-all { background: var(--mfk-sun-soft); border-color: var(--mfk-sun); }
+
+/* Grid: 4 columns as spans of 3 on a 12-column track; a double card spans 6.
+   bento-layout.js sets --start / --span per card and the expressive corner. */
+.bento-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-rows: var(--row); gap: var(--gap); }
+.bento-item {
+  grid-column: var(--start, auto) / span var(--span, 3); min-width: 0;
+  transition: opacity .35s ease-out, transform .5s var(--spring);
+}
+/* Filter entrance. Finsweet adds this class to incoming items for one frame (staggered by
+   fs-list-stagger). Page turns are animated by bento-layout.js. */
+.bento-item.is-list-starting { opacity: 0; transform: translateY(16px); transition: none; }
+.fs-field { display: none; }
+
+/* Card */
+.bento-card {
+  position: relative; isolation: isolate; overflow: hidden; margin: 0;
+  display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: 10px;
+  height: 100%; padding: var(--pad);
+  border-radius: var(--radius);
+  background: var(--card-bg); color: var(--card-text);
+  text-decoration: none; text-align: left;
+  transition: transform .45s var(--spring), box-shadow .3s;
+}
+a.bento-card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0, 40, 85, .12); }
+a.bento-card:focus-visible { outline: 3px solid var(--mfk-navy); outline-offset: 3px; }
+
+/* Exactly one expressive corner, set by the layout script. Bottom-left never changes. */
+.bento-card[data-corner="tl"] { border-top-left-radius: var(--radius-xl); }
+.bento-card[data-corner="tr"] { border-top-right-radius: var(--radius-xl); }
+.bento-card[data-corner="br"] { border-bottom-right-radius: var(--radius-xl); }
+
+.bento-card > :not(.poster):not(.deco):not(.play):not(.fs-field) { position: relative; z-index: 1; }
+.deco { position: absolute; z-index: 0; pointer-events: none; }
+
+/* Variants */
+[data-variant="video-warm"] { --card-bg: var(--mfk-sun-soft); --card-text: var(--mfk-navy); }
+[data-variant="video-cool"] { --card-bg: var(--mfk-sky-soft); --card-text: var(--mfk-navy); }
+[data-variant="feature"]    { --card-bg: var(--mfk-orange);   --card-text: var(--mfk-navy); }
+[data-variant="photo"]      { --card-bg: var(--mfk-navy);     --card-text: #fff; }
+[data-variant="quote-blue"] { --card-bg: var(--mfk-royal);    --card-text: #fff; }
+[data-variant="quote-cream"]{ --card-bg: var(--mfk-sun-soft); --card-text: var(--mfk-navy); }
+
+.pill {
+  display: inline-flex; align-items: center;
+  padding: 6px 14px; border-radius: 999px;
+  background: #fff; color: var(--mfk-navy);
+  font: 600 12px/16px "Outfit", sans-serif;
+}
+.card-title { margin: 0; font-weight: 750; font-size: 24px; line-height: 1.15; text-wrap: balance; }
+.card-title--xl { font-size: clamp(28px, 2.6vw, 38px); font-weight: 800; letter-spacing: -.5px; }
+.card-description { margin: 0; max-width: 100%; font-size: 15px; line-height: 22px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Play button (v4): circle that squares off and tilts on hover. */
+.play {
+  position: absolute; top: var(--pad); right: var(--pad); z-index: 2;
+  display: grid; place-items: center; width: 64px; height: 64px;
+  border-radius: 50%; background: var(--mfk-orange); color: var(--mfk-navy);
+  transition: border-radius .45s var(--spring), transform .45s var(--spring);
+}
+.play svg { width: 18px; margin-left: 3px; }
+[data-variant="feature"] .play { background: #fff; width: 80px; height: 80px; }
+a.bento-card:hover .play { border-radius: 30%; transform: rotate(-8deg) scale(1.06); }
+
+/* Photo: full-bleed image, white text straight on it (Figma), one flat navy wash for contrast. */
+.poster { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--spring); }
+[data-variant="photo"]::after { content: ""; position: absolute; inset: 0; z-index: 0; background: rgba(0, 40, 85, .38); pointer-events: none; }
+[data-variant="photo"] .card-title, [data-variant="photo"] .card-description { text-shadow: 0 1px 2px rgba(0, 0, 0, .3); }
+a.bento-card[data-variant="photo"]:hover .poster { transform: scale(1.04); }
+
+/* Quote: its own content type. No title, badge or link; the quiet card is the point. */
+.quote-text { margin: 0; font-size: 20px; line-height: 1.5; }
+.quote-by { font-size: 14px; line-height: 20px; font-weight: 500; opacity: .85; }
+[data-variant="quote-cream"] .quote-by { color: var(--mfk-text-2); opacity: 1; }
+
+/* Hidden fields (prototype toggles stand in for CMS switches and empty fields). */
+.hide-badge .pill:not(.pill--time),
+.hide-description .card-description { display: none; }
+.hide-photo .poster, .hide-photo [data-variant="photo"]::after { display: none; }
+
+/* Empty state and pagination */
+.no-results { display: none; padding: 40px; border-radius: var(--radius); background: var(--mfk-sky-soft); color: var(--mfk-text-2); }
+.pagination { display: flex; align-items: center; gap: 12px; margin-top: 40px; font-weight: 600; }
+.page-buttons { display: flex; gap: 6px; }
+.page-button, .page-arrow {
+  display: inline-grid; place-items: center; min-width: 46px; height: 46px; padding: 0 16px;
+  border: 1px solid var(--mfk-navy); border-radius: 999px;
+  color: var(--mfk-navy); text-decoration: none;
+}
+.page-button.w--current, .page-button[aria-current="page"] { background: var(--mfk-navy); color: #fff; }
+.page-arrow.is-list-pagination-disabled { opacity: .35; pointer-events: none; }
+
+/* Tablet (2 per row) and phone (1 per row) keep the 12-column track; the script sets spans
+   and corners for the active breakpoint. */
+/* Phones (v4): chips become one sideways-scrolling row, and float at the bottom while you
+   read the stories (bento-layout.js toggles .is-floating). */
+@media (max-width: 700px) {
+  .filter-form {
+    flex-direction: row; gap: 8px; margin: 24px -16px;
+    padding: 4px 16px; overflow-x: auto; scrollbar-width: none;
+  }
+  .filter-form::-webkit-scrollbar { display: none; }
+  .filter-chip-list { display: contents; }
+  .filter-chip { flex: none; }
+  .filter-form.is-floating {
+    position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 20;
+    margin: 0; padding: 8px; border-radius: 999px;
+    background: #fff; box-shadow: 0 8px 28px rgba(0, 26, 51, .22);
+    animation: dock-in .4s var(--spring);
+  }
+  @keyframes dock-in { from { transform: translateY(90px); } }
+}
+@media (max-width: 600px) {
+  :root { --gap: 12px; --pad: 16px; --radius: 20px; --radius-xl: 90px; --row: 260px; }
+  .proto-bar { position: static; }
+  .play { width: 48px; height: 48px; }
+  .quote-text { font-size: 17px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bento-item, .bento-card, .play, .poster, .filter-chip { transition: none; }
+  .bento-item.is-list-starting { opacity: 1; transform: none; }
+  a.bento-card:hover, a.bento-card:hover .play, a.bento-card:hover .poster { transform: none; }
+}

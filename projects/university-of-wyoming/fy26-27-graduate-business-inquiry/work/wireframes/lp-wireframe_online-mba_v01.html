@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UW LP Wireframe – Online MBA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<!--
+  UW College of Business · Graduate Program Landing Pages · Round 1 wireframe
+  TEMPLATE: to make another program, copy this file and edit only the PROGRAM object below.
+  Spec: work/figma-agent-pack/14_figma-agent-prompt_landing-pages_v02-wireframe.txt
+  Everything is static (no sticky/fixed positioning) so it pastes cleanly into Figma.
+-->
+<style>
+  :root{
+    --w:#FFFFFF; --g05:#F4F4F4; --g15:#DADADA; --g40:#9A9A9A; --g70:#4D4D4D; --k:#1A1A1A;
+    --note:#E5484D;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,sans-serif;background:#EDEDED;color:var(--k);padding:80px 80px 80px 260px}
+  .canvas{display:flex;flex-direction:column;gap:160px}
+  .row{display:flex;gap:340px;align-items:flex-start;flex-wrap:nowrap}
+  .frame-title{font:700 20px/24px Inter;margin-bottom:16px;color:var(--g70)}
+  .artboard{position:relative;background:var(--w);overflow:visible;flex:none}
+  .d{width:1440px}.m{width:390px}
+  .wf-tag{position:absolute;top:-30px;right:0;font:700 11px/14px Inter;letter-spacing:.08em;
+    border:1px solid var(--g40);color:var(--g70);padding:4px 8px;background:var(--w);z-index:3}
+
+  /* annotations: always outside the artboard */
+  .note{position:absolute;left:calc(100% + 24px);width:280px;font:400 13px/18px Inter;color:var(--note);
+    border-left:2px solid var(--note);padding:4px 0 4px 10px}
+  .note b{font-weight:700}
+  .sec-label{position:absolute;right:calc(100% + 16px);top:24px;font:700 13px/16px Inter;color:var(--g70);
+    white-space:nowrap;letter-spacing:.06em}
+
+  /* type */
+  .label{font:700 13px/16px Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--g70)}
+  .h1{font:700 64px/68px Inter}.m .h1{font-size:36px;line-height:40px}
+  .h2{font:700 44px/48px Inter}.m .h2{font-size:28px;line-height:32px}
+  .h3{font:700 24px/30px Inter}.m .h3{font-size:20px;line-height:26px}
+  .body{font:400 18px/28px Inter;color:var(--g70)}.m .body{font-size:16px;line-height:24px}
+  .cap{font:400 12px/16px Inter;color:var(--g70)}
+
+  /* layout */
+  section{position:relative;border-bottom:1px solid var(--g15)}
+  .alt{background:var(--g05)}
+  .wrap{max-width:1200px;margin:0 auto;padding:96px 0}
+  .m .wrap{padding:48px 20px}
+  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+  .stack{display:flex;flex-direction:column;gap:16px}
+
+  /* elements */
+  .ph{background:var(--g15);position:relative;display:flex;align-items:center;justify-content:center;
+    overflow:hidden;border:1px solid var(--g40)}
+  .ph svg{position:absolute;inset:0;width:100%;height:100%}
+  .ph span{position:relative;background:var(--g15);padding:4px 8px;font:700 12px/16px Inter;
+    letter-spacing:.06em;color:var(--g70);text-transform:uppercase;text-align:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 24px;
+    background:var(--k);color:var(--w);font:700 14px/16px Inter;letter-spacing:.06em;border-radius:4px;white-space:nowrap}
+  .btn.sec{background:transparent;color:var(--k);border:1px solid var(--k)}
+  .btn.full{width:100%}
+  .link{font:700 14px/20px Inter;text-decoration:underline;color:var(--k)}
+  .logo{width:120px;height:40px}
+
+  .nav{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 120px;border-bottom:1px solid var(--g15)}
+  .m .nav{padding:0 20px}
+  .m .nav .btn{height:40px;padding:0 14px;font-size:12px}
+
+  .play{width:80px;height:80px;border-radius:50%;border:2px solid var(--k);background:var(--w);position:relative;z-index:1;
+    display:flex;align-items:center;justify-content:center}
+  .play:after{content:"";border-left:22px solid var(--k);border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:6px}
+  .video{aspect-ratio:16/9;width:100%;flex-direction:column;gap:12px}
+  .chip{position:absolute;right:12px;bottom:12px;background:var(--k);color:var(--w);font:700 12px/16px Inter;padding:4px 8px;z-index:1}
+
+  .form{background:var(--w);border:1px solid var(--g40);padding:28px;display:flex;flex-direction:column;gap:14px}
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field label{font:700 12px/16px Inter;color:var(--g70)}
+  .input{height:48px;border:1px solid var(--g40);background:var(--w);display:flex;align-items:center;justify-content:space-between;
+    padding:0 14px;font:400 15px/20px Inter;color:var(--g40)}
+  .input.filled{color:var(--k)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--g15)}
+  .stat{padding:28px 24px;border-right:1px solid var(--g15)}
+  .stat:last-child{border-right:0}
+  .stat .v{font:700 28px/34px Inter;margin-top:6px}
+  .val{display:inline-block;border:1px dashed var(--g40);padding:2px 6px;font:700 13px/18px Inter;color:var(--g70)}
+  .m .stats{display:flex;overflow:hidden;gap:0;border-top:0}
+  .m .stat{min-width:160px;border:1px solid var(--g15);margin-right:12px;padding:20px}
+  .m .stat .v{font-size:20px}
+
+  .car{display:flex;gap:24px;overflow:hidden}
+  .card{flex:none;border:1px solid var(--g15);background:var(--w);display:flex;flex-direction:column}
+  .card .in{padding:24px;display:flex;flex-direction:column;gap:10px}
+  .peek{opacity:.6}
+  .dots{display:flex;gap:8px;align-items:center}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--g15)}.dot.on{background:var(--k)}
+  .arrows{display:flex;gap:12px}
+  .arrow{width:48px;height:48px;border:1px solid var(--k);border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 18px Inter}
+  .cta-card{background:var(--g05);justify-content:center;align-items:flex-start;padding:32px;gap:16px}
+
+  .tabs{display:flex;border-bottom:1px solid var(--g15)}
+  .tab{padding:16px 24px;font:700 14px/16px Inter;letter-spacing:.06em;color:var(--g40);white-space:nowrap}
+  .tab.on{color:var(--k);border-bottom:3px solid var(--k);margin-bottom:-1px}
+  .m .tabs{overflow:hidden}.m .tab{padding:14px 14px;font-size:12px}
+  .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:48px}
+  .m .rows{grid-template-columns:1fr}
+  .rowi{padding:16px 0;border-bottom:1px solid var(--g15);display:flex;justify-content:space-between;font:400 16px/22px Inter}
+
+  .steps{display:flex;flex-direction:column}
+  .step{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--g15)}
+  .num{width:40px;height:40px;border-radius:50%;border:1px solid var(--k);display:flex;align-items:center;justify-content:center;font:700 16px Inter;flex:none}
+
+  .sidetab{position:absolute;right:0;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;background:var(--k);color:var(--w);
+    font:700 13px/16px Inter;letter-spacing:.1em;padding:20px 12px;z-index:2}
+  .sticky-bar{height:72px;background:var(--w);border-top:1px solid var(--g40);display:flex;align-items:center;justify-content:space-between;padding:0 20px;gap:12px}
+
+  .faq{border-bottom:1px solid var(--g15);padding:20px 0}
+  .faq-h{display:flex;justify-content:space-between;font:700 17px/24px Inter}
+  .icon{width:24px;height:24px;border:1px solid var(--g40);border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font:700 14px Inter;color:var(--g70)}
+
+  .footer{padding:48px 120px;display:flex;justify-content:space-between;align-items:center;background:var(--g05)}
+  .m .footer{padding:32px 20px;flex-direction:column;align-items:flex-start;gap:16px}
+
+  /* overlays */
+  .ov{position:relative;background:var(--g05);overflow:hidden}
+  .ov .ghost{position:absolute;inset:0;padding:40px;display:flex;flex-direction:column;gap:24px}
+  .ov .ghost div{background:var(--g15)}
+  .scrim{position:absolute;inset:0;background:rgba(26,26,26,.6)}
+  .modal{position:absolute;background:var(--w);display:flex;flex-direction:column;gap:20px;padding:40px}
+  .close{position:absolute;top:16px;right:16px;width:40px;height:40px;border:1px solid var(--k);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font:400 22px Inter}
+  .sheet-handle{width:48px;height:5px;border-radius:3px;background:var(--g40);margin:0 auto}
+  .strip{display:flex;gap:24px;padding:40px;background:var(--w)}
+</style>
+</head>
+<body>
+<div class="canvas" id="canvas"></div>
+
+<script>
+/* ============================================================
+   PROGRAM CONTENT — the only part that changes per program.
+   Bracketed text = slot description. Never invent facts.
+   ============================================================ */
+const PROGRAM = {
+  label: "ONLINE MBA",
+  file: "Online MBA",
+  headline: "[CAMPAIGN HEADLINE – FROM APPROVED AD LINE]",
+  sub: "[WHAT THE PROGRAM IS, IN ONE SENTENCE]",
+  video: "[WHAT THE VIDEO SHOWS]",
+  stats: [["FORMAT","[CLIENT TO SUPPLY]"],["CREDITS","[CLIENT TO SUPPLY]"],["LENGTH","[CLIENT TO SUPPLY]"],["START TERMS","[CLIENT TO SUPPLY]"]],
+  whyHeadline: "[WHY THIS PROGRAM – HEADLINE]",
+  reasons: ["[REASON 1]","[REASON 2]","[REASON 3]"],
+  voicesHeadline: "[STUDENT VOICES – HEADLINE]",
+  students: 3,
+  courses: 8,
+  closing: "[CLOSING LINE]",
+  steps: ["[STEP 1 – E.G. REQUEST INFO / TALK TO ADVISOR]","[STEP 2]","[STEP 3]"],
+  faqs: 5
+};
+
+/* ============================================================ helpers */
+const ph = (label, cls="", style="") =>
+  `<div class="ph ${cls}" style="${style}"><svg preserveAspectRatio="none" viewBox="0 0 100 100"><line x1="0" y1="0" x2="100" y2="100" stroke="#9A9A9A" stroke-width=".3" vector-effect="non-scaling-stroke"/><line x1="100" y1="0" x2="0" y2="100" stroke="#9A9A9A" stroke-width=".3" vector-effect="non-scaling-stroke"/></svg><span>${label}</span></div>`;
+const note = (html, top=24) => `<div class="note" style="top:${top}px">${html}</div>`;
+const lab = t => `<div class="sec-label">${t}</div>`;
+const wf = `<div class="wf-tag">WIREFRAME – NOT FINAL DESIGN</div>`;
+const logo = `${ph("UW LOGO","logo")}`;
+const dots = (n,on=0) => `<div class="dots">${Array.from({length:n},(_,i)=>`<div class="dot ${i===on?"on":""}"></div>`).join("")}</div>`;
+
+const formCard = (title="REQUEST INFO") => `
+  <div class="form">
+    <div class="h3">${title}</div>
+    <div class="cap">[ONE-LINE REASON TO FILL IT IN]</div>
+    <div class="two">
+      <div class="field"><label>First name</label><div class="input">First name</div></div>
+      <div class="field"><label>Last name</label><div class="input">Last name</div></div>
+    </div>
+    <div class="field"><label>Email</label><div class="input">name@email.com</div></div>
+    <div class="field"><label>Phone (optional)</label><div class="input">(000) 000-0000</div></div>
+    <div class="field"><label>Program of interest</label><div class="input filled">${PROGRAM.label}<span>▾</span></div></div>
+    <div class="btn full">REQUEST INFO</div>
+    <div class="cap">[PRIVACY / CONSENT LINE]</div>
+  </div>`;
+
+const video = (m) => `<div class="ph video">
+  <svg preserveAspectRatio="none" viewBox="0 0 100 100"><line x1="0" y1="0" x2="100" y2="100" stroke="#9A9A9A" stroke-width=".3" vector-effect="non-scaling-stroke"/><line x1="100" y1="0" x2="0" y2="100" stroke="#9A9A9A" stroke-width=".3" vector-effect="non-scaling-stroke"/></svg>
+  <div class="play"></div><span>VIDEO – UW FOOTAGE TBD</span><div class="chip">0:60</div></div>`;
+
+const reasonCard = (i,w) => `<div class="card" style="width:${w}px">${ph("IMAGE – "+PROGRAM.reasons[i].replace(/[\[\]]/g,""),"",`height:${Math.round(w*0.62)}px;border:0`)}
+  <div class="in"><div class="label">0${i+1}</div><div class="h3">${PROGRAM.reasons[i]}</div><div class="body">[TWO LINES THAT PROVE IT]</div></div></div>`;
+const ctaCard = (w,h) => `<div class="card cta-card" style="width:${w}px;min-height:${h}px"><div class="h3">[NUDGE LINE – E.G. SEE IF IT FITS YOU]</div><div class="btn">REQUEST INFO</div></div>`;
+const quoteCard = (i,w) => `<div class="card" style="width:${w}px"><div style="display:flex;gap:20px;padding:24px;align-items:flex-start">
+  ${ph("STUDENT PHOTO – TBD","",`width:${Math.round(w*0.32)}px;height:${Math.round(w*0.4)}px;flex:none`)}
+  <div class="stack" style="gap:12px"><div class="h3">“[REAL STUDENT QUOTE – SUPPLIED BY UW]”</div>
+  <div class="label">[FIRST NAME] · CURRENT STUDENT / ALUM</div>
+  <div class="link">▶ WATCH [NAME]’S STORY</div></div></div></div>`;
+
+const tabBar = (on) => `<div class="tabs">${["CURRICULUM","FACULTY","COST & AID","DEADLINES"].map((t,i)=>`<div class="tab ${i===on?"on":""}">${t}</div>`).join("")}</div>`;
+const tabBody = (on,m) => {
+  if(on===0) return `<div class="rows">${Array.from({length:m?5:PROGRAM.courses},(_,i)=>`<div class="rowi"><span>[COURSE NAME ${i+1}]</span><span class="cap">[CREDITS]</span></div>`).join("")}</div>
+     <div style="display:flex;gap:16px;margin-top:28px;flex-wrap:wrap"><div class="btn sec">SEE FULL CURRICULUM</div></div>`;
+  if(on===1) return `<div style="display:grid;grid-template-columns:repeat(${m?2:4},1fr);gap:24px">${Array.from({length:4},(_,i)=>`<div class="stack" style="gap:8px">${ph("PORTRAIT","",`aspect-ratio:1`)}<div class="h3" style="font-size:18px">[FACULTY NAME]</div><div class="cap">[TITLE / AREA]</div></div>`).join("")}</div>`;
+  if(on===2) return `<div style="display:grid;grid-template-columns:${m?"1fr":"1fr 1fr"};gap:24px">${["TUITION","FINANCIAL AID & SCHOLARSHIPS"].map(t=>`<div class="stack" style="border:1px solid var(--g15);padding:28px"><div class="label">${t}</div><div><span class="val">[CLIENT TO SUPPLY]</span></div><div class="body">[ONE LINE OF CONTEXT]</div></div>`).join("")}</div>`;
+  return `<div style="display:grid;grid-template-columns:${m?"1fr":"1fr 1fr 1fr"};gap:24px">${["[TERM]","[TERM]","[TERM]"].map(t=>`<div class="stack" style="border:1px solid var(--g15);padding:28px"><div class="label">${t} START</div><div>Apply by <span class="val">[CLIENT TO SUPPLY]</span></div></div>`).join("")}</div>`;
+};
+
+const faqRows = () => Array.from({length:PROGRAM.faqs},(_,i)=>`<div class="faq"><div class="faq-h"><span>[QUESTION ${i+1}]</span><span class="icon">${i===0?"–":"+"}</span></div>${i===0?`<div class="body" style="margin-top:10px">[ANSWER – TWO TO THREE LINES]</div>`:""}</div>`).join("");
+
+/* ============================================================ DESKTOP PAGE */
+const desktop = `
+<div><div class="frame-title">LP / ${PROGRAM.file} / Desktop 1440</div>
+<div class="artboard d">${wf}
+  <section style="border:0">${lab("00 NAV")}<div class="nav">${logo}<div class="btn">REQUEST INFO</div></div>
+    ${note("<b>Slim nav.</b> No anchor links: fewer exits from the form.",8)}</section>
+
+  <section>${lab("01 HERO + VIDEO")}<div class="wrap" style="padding-top:64px;padding-bottom:64px"><div class="grid">
+    <div style="grid-column:span 8" class="stack">
+      <div class="label">${PROGRAM.label}</div>
+      <div class="h1">${PROGRAM.headline}</div>
+      <div class="body">${PROGRAM.sub}</div>
+      <div style="margin-top:16px">${video()}</div>
+      <div class="cap">${PROGRAM.video}</div>
+    </div>
+    <div style="grid-column:span 4">${formCard()}</div>
+  </div></div>
+  ${note("<b>Above the fold at 1440×900:</b> headline, form and most of the video. Real headline must stay ≤2 lines.<br><br><b>Video</b> opens OVERLAY 01A (full-screen player).",40)}
+  ${note("<b>FORM – STICKY.</b> Stays in view in the right column on scroll. In 03–05 it collapses to the REQUEST INFO side tab (opens OVERLAY F).",360)}
+  </section>
+
+  <section>${lab("02 AT A GLANCE")}<div class="wrap" style="padding:0 0 0"><div class="stats">
+    ${PROGRAM.stats.map(([k,v])=>`<div class="stat"><div class="label">${k}</div><div class="v"><span class="val">${v}</span></div></div>`).join("")}
+  </div></div>${note("Strip, not a section. Values from UW only.",20)}</section>
+
+  <section class="alt">${lab("03 WHY – CAROUSEL")}<div class="sidetab">REQUEST INFO</div><div class="wrap"><div class="grid" style="align-items:start">
+    <div style="grid-column:span 4" class="stack"><div class="h2">${PROGRAM.whyHeadline}</div>
+      <div class="arrows" style="margin-top:24px"><div class="arrow">←</div><div class="arrow">→</div></div>${dots(4)}</div>
+    <div style="grid-column:span 8"><div class="car">${reasonCard(0,440)}<div class="peek">${reasonCard(1,440)}</div></div></div>
+  </div></div>
+  ${note("<b>CAROUSEL 03</b> – 4 cards. All cards: see strip below the page. Card 4 = REQUEST INFO.",40)}
+  ${note("<b>Side tab</b> = collapsed sticky form here. Opens OVERLAY F.",200)}</section>
+
+  <section>${lab("04 STUDENT VOICES – CAROUSEL")}<div class="sidetab">REQUEST INFO</div><div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:40px"><div class="h2" style="max-width:640px">${PROGRAM.voicesHeadline}</div>
+    <div class="arrows"><div class="arrow">←</div><div class="arrow">→</div></div></div>
+    <div class="car">${quoteCard(0,760)}<div class="peek">${quoteCard(1,760)}</div></div>
+    <div style="margin-top:24px">${dots(PROGRAM.students)}</div>
+  </div>${note("<b>CAROUSEL 04</b> – real UW students only, no AI people. “Watch story” opens OVERLAY 04A only if UW supplies student video.",40)}</section>
+
+  <section class="alt">${lab("05 PROGRAM DETAILS – TABS")}<div class="sidetab">REQUEST INFO</div><div class="wrap">
+    <div class="h2" style="margin-bottom:32px">[EVERYTHING YOU NEED TO DECIDE]</div>
+    ${tabBar(0)}<div style="padding-top:28px">${tabBody(0)}</div>
+  </div>${note("<b>TABS</b> – CURRICULUM shown active. Other tab states drawn beside the page.<br><br>SEE FULL CURRICULUM opens OVERLAY 05A.",40)}</section>
+
+  <section>${lab("06 HOW TO APPLY + FORM")}<div class="wrap"><div class="grid">
+    <div style="grid-column:span 7" class="stack"><div class="h2">${PROGRAM.closing}</div>
+      <div class="steps" style="margin-top:16px">${PROGRAM.steps.map((s,i)=>`<div class="step"><div class="num">${i+1}</div><div class="stack" style="gap:4px"><div class="h3" style="font-size:20px">${s}</div><div class="body">[ONE LINE]</div></div></div>`).join("")}</div>
+      <div class="link" style="margin-top:12px">QUESTIONS? READ THE FAQ</div></div>
+    <div style="grid-column:9 / span 4">${formCard()}</div>
+  </div></div>${note("<b>Final form</b> (sticky form lands here).<br><br>FAQ link opens OVERLAY 06A.",40)}</section>
+
+  <section style="border:0">${lab("07 FOOTER")}<div class="footer">${logo}<div class="cap">[LEGAL / ACCREDITATION LINE] · <u>Privacy</u></div></div></section>
+</div></div>`;
+
+/* ============================================================ MOBILE PAGE */
+const stickyBar = `<div class="sticky-bar"><div class="label" style="color:var(--k)">${PROGRAM.label}</div><div class="btn">REQUEST INFO</div></div>`;
+const mobile = `
+<div><div class="frame-title">LP / ${PROGRAM.file} / Mobile 390</div>
+<div class="artboard m">${wf}
+  <section style="border:0">${lab("00 NAV")}<div class="nav">${logo}<div class="btn">REQUEST INFO</div></div></section>
+  <section>${lab("01 HERO + VIDEO")}<div class="wrap stack" style="padding-top:32px">
+    <div class="label">${PROGRAM.label}</div><div class="h1">${PROGRAM.headline}</div><div class="body">${PROGRAM.sub}</div></div>
+    <div style="margin-top:-24px">${video(true)}</div>
+    ${note("<b>Video full width</b>, first thing after the headline. Opens OVERLAY 01A.",200)}</section>
+  <section>${lab("02 AT A GLANCE")}<div class="wrap" style="padding-top:24px;padding-bottom:24px"><div class="stats">
+    ${PROGRAM.stats.map(([k,v])=>`<div class="stat"><div class="label">${k}</div><div class="v"><span class="val">${v}</span></div></div>`).join("")}</div></div>
+    ${note("Horizontal swipe strip.",20)}</section>
+  <section>${lab("FORM (INLINE)")}<div class="wrap" style="padding-top:24px">${formCard()}</div>
+    ${note("Inline form after the video. The sticky bar opens the same form as a bottom sheet (OVERLAY F).",20)}</section>
+  <section class="alt">${lab("03 WHY – CAROUSEL")}<div class="wrap stack"><div class="h2">${PROGRAM.whyHeadline}</div>
+    <div class="car" style="margin-right:-20px">${reasonCard(0,300)}<div class="peek">${reasonCard(1,300)}</div></div>${dots(4)}</div>
+    ${note("<b>CAROUSEL 03</b> – swipe. Same 4 cards as desktop.",40)}</section>
+  <section>${lab("04 VOICES – CAROUSEL")}<div class="wrap stack"><div class="h2">${PROGRAM.voicesHeadline}</div>
+    <div class="car" style="margin-right:-20px"><div class="card" style="width:300px">${ph("STUDENT PHOTO – TBD","","height:220px;border:0")}<div class="in"><div class="h3">“[REAL STUDENT QUOTE – SUPPLIED BY UW]”</div><div class="label">[FIRST NAME] · STUDENT / ALUM</div><div class="link">▶ WATCH STORY</div></div></div><div class="peek card" style="width:300px">${ph("STUDENT PHOTO – TBD","","height:220px;border:0")}</div></div>${dots(PROGRAM.students)}</div></section>
+  <section class="alt">${lab("05 DETAILS – TABS")}<div class="wrap"><div class="h2" style="margin-bottom:20px">[EVERYTHING YOU NEED TO DECIDE]</div>
+    ${tabBar(0)}<div style="padding-top:20px">${tabBody(0,true)}</div></div>
+    ${note("Tab bar scrolls sideways.",40)}</section>
+  <section>${lab("06 HOW TO APPLY")}<div class="wrap stack"><div class="h2">${PROGRAM.closing}</div>
+    <div class="steps">${PROGRAM.steps.map((s,i)=>`<div class="step"><div class="num">${i+1}</div><div class="h3" style="font-size:17px">${s}</div></div>`).join("")}</div>
+    <div class="link">QUESTIONS? READ THE FAQ</div>${formCard()}</div></section>
+  <section style="border:0">${lab("07 FOOTER")}<div class="footer">${logo}<div class="cap">[LEGAL LINE] · <u>Privacy</u></div></div></section>
+  <section style="border:0">${lab("STICKY BAR")}${stickyBar}
+    ${note("<b>STICKY BAR – fixed to the bottom of every screen.</b> Drawn once here. Tap opens OVERLAY F (bottom sheet).",8)}</section>
+</div></div>`;
+
+/* ============================================================ CAROUSEL STRIPS + TAB STATES */
+const strips = `
+<div><div class="frame-title">CAROUSEL 03 – ALL CARDS</div><div class="strip">${[0,1,2].map(i=>reasonCard(i,360)).join("")}${ctaCard(360,420)}</div></div>
+<div><div class="frame-title">CAROUSEL 04 – ALL CARDS</div><div class="strip">${Array.from({length:PROGRAM.students},(_,i)=>quoteCard(i,620)).join("")}</div></div>
+<div><div class="frame-title">05 – TAB STATES (DESKTOP)</div><div class="row" style="gap:40px">${[1,2,3].map(t=>`<div class="artboard" style="width:1000px;padding:40px">${tabBar(t)}<div style="padding-top:28px">${tabBody(t)}</div></div>`).join("")}</div></div>`;
+
+/* ============================================================ OVERLAYS */
+const ghost = `<div class="ghost"><div style="height:64px"></div><div style="height:80px;width:60%"></div><div style="flex:1"></div></div>`;
+const dOv = (id, title, inner, w=880, h=640) => `<div><div class="frame-title">OVERLAY ${id} – ${title} / Desktop</div>
+  <div class="artboard ov d" style="height:900px">${ghost}<div class="scrim"></div>
+  <div class="modal" style="width:${w}px;min-height:${h}px;left:${(1440-w)/2}px;top:${(900-h)/2}px"><div class="close">×</div>${inner}</div></div></div>`;
+const mOv = (id, title, inner) => `<div><div class="frame-title">OVERLAY ${id} / Mobile</div>
+  <div class="artboard ov m" style="height:812px">${ghost}<div class="scrim"></div>
+  <div class="modal" style="left:0;right:0;bottom:0;top:72px;padding:20px 20px 28px;border-radius:16px 16px 0 0;gap:16px"><div class="sheet-handle"></div><div class="close" style="top:24px">×</div>${inner}</div></div></div>`;
+
+const ovVideo = `<div class="h3">${PROGRAM.video}</div>${video()}<div style="display:flex;justify-content:space-between;align-items:center"><div class="body">End state: [CLOSING LINE]</div><div class="btn">REQUEST INFO</div></div>`;
+const ovCurr = m => `<div class="h2">[FULL CURRICULUM]</div><div class="rows">${Array.from({length:m?6:12},(_,i)=>`<div class="rowi"><span>[COURSE ${i+1}]</span><span class="cap">[CREDITS]</span></div>`).join("")}</div><div style="display:flex;gap:16px;flex-wrap:wrap"><div class="btn">REQUEST INFO</div><div class="btn sec">DOWNLOAD PROGRAM GUIDE</div></div>`;
+const ovFaq = `<div class="h2">[FAQ]</div><div>${faqRows()}</div><div class="btn" style="align-self:flex-start">REQUEST INFO</div>`;
+const ovForm = `<div style="margin-top:8px">${formCard("REQUEST INFO – "+PROGRAM.label)}</div>`;
+const ovExit = `<div class="label">OPTIONAL – CLIENT TO DECIDE</div><div class="h2">[SHORT OFFER – E.G. GET THE PROGRAM GUIDE]</div><div class="field"><label>Email</label><div class="input">name@email.com</div></div><div class="btn">SEND IT</div><div class="cap">[PRIVACY LINE]</div>`;
+
+const overlays = `
+<div class="row">${dOv("01A","VIDEO",ovVideo,1040,700)}${mOv("01A","VIDEO",`<div style="margin-top:40px">${video()}</div><div class="body">End state: [CLOSING LINE]</div><div class="btn full">REQUEST INFO</div>`)}</div>
+<div class="row">${dOv("05A","FULL CURRICULUM",ovCurr(false),960,700)}${mOv("05A","FULL CURRICULUM",`<div style="margin-top:32px" class="stack">${ovCurr(true)}</div>`)}</div>
+<div class="row">${dOv("06A","FAQ",ovFaq,820,720)}${mOv("06A","FAQ",`<div style="margin-top:32px">${ovFaq}</div>`)}</div>
+<div class="row">${dOv("F","REQUEST-INFO FORM",ovForm,520,620)}${mOv("F","FORM (BOTTOM SHEET)",ovForm)}</div>
+<div class="row">${dOv("EXIT","EXIT INTENT (OPTIONAL)",ovExit,600,460)}</div>`;
+
+const cover = `<div class="artboard" style="width:1440px;padding:80px;background:var(--w)">
+  <div class="label">ROUND 1 · WIREFRAMES</div>
+  <div class="h1" style="margin-top:16px">UW College of Business · Graduate Program Landing Pages</div>
+  <div class="h3" style="margin-top:16px;color:var(--g70)">${PROGRAM.file} — template page. Structure for approval, not visual design.</div>
+  <div class="body" style="margin-top:24px;max-width:900px">Below: desktop and mobile page, carousel strips, tab states, and every overlay. Red notes sit outside the pages and explain behavior. Bracketed text = content still to be written or supplied by UW.</div></div>`;
+
+document.getElementById("canvas").innerHTML =
+  cover + `<div class="row">${desktop}${mobile}</div>` + strips + overlays;
+</script>
+</body>
+</html>

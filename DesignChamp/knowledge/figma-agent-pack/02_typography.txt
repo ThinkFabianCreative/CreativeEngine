@@ -1,0 +1,43 @@
+02 · TYPOGRAPHY
+
+TYPE IS NOT A LAYER ADDED LAST
+Ask what the typography does to the meaning. Scale, weight, color, spacing, line breaks
+and alignment can carry the idea. A dramatic font with no conceptual or compositional
+role is decoration.
+
+HIERARCHY
+- One element is clearly the biggest. It should be the word or line that carries the idea,
+  not the setup. Never let a supporting word outweigh the payoff.
+- Usually no more than three levels of size on a frame: headline, supporting line, label.
+- Size steps must be obvious (roughly 1.5x or more). Near-equal sizes look like mistakes.
+- Same size across a list is a deliberate choice: it makes lines read as equals.
+
+EMPHASIS
+- Emphasize at most one or two words per line, and only words that carry meaning.
+- Emphasis must MEAN something (for example: the kept promise, the key trait). If you
+  cannot say why a word is highlighted, do not highlight it.
+- Use one emphasis method at a time: color OR weight OR an underline stroke. Not all three.
+- Avoid dropping a script font word into a sans-serif line. It reads as a template trick.
+
+LINE BREAKS
+- Break lines where a person would pause when reading aloud.
+- Never leave a single short word alone on the last line (orphan).
+- Keep phrases together: "TOO STUBBORN / TO STOP" not "TOO / STUBBORN TO STOP".
+
+SPACING AND ALIGNMENT
+- Letterspacing on caps: small labels may be tracked 5-8%. Headlines tracked 0 to -2%.
+  Wide tracking on tiny text makes it illegible, not elegant.
+- Align optically, not just by bounding box. Punctuation and round letters may hang.
+- Leading for all-caps headlines: about 95-110% of font size.
+- Pick one alignment logic per frame (flush left OR centered). Do not mix without reason.
+
+LEGIBILITY AT REAL SIZE (mobile feed)
+- A 1080 px wide ad shows at roughly 375 pt on a phone: everything shrinks to about a third.
+- Minimum text size: 32 px on a 1080 wide canvas, 40 px on 1440 wide.
+- Check contrast: light text on dark or dark on light, never mid-tone on mid-tone.
+- Zoom the frame to phone size before handing back. If you squint, it fails.
+
+FONTS
+- Use only fonts the client allows (see client files). If a required font is missing,
+  use the client's approved substitute, and label the frame as a stand-in.
+- Never silently substitute a lookalike for a licensed brand font.

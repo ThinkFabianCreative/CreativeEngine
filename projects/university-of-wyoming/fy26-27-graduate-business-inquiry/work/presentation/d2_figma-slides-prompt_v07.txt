@@ -1,0 +1,191 @@
+FIGMA SLIDES PROMPT · UW GRADUATE BUSINESS · "TOO STUBBORN TO STOP?" · v07 (2026-09-14)
+Revises v06 (7 slides) after Andres: "lets update the slide deck - refine the design using slides
+skills - include additional slides for audience". 13 slides.
+Method (slides skill, approved 2026-09-14, applied selectively): Duarte sparkline arc (what they
+believe → what's true), pattern-break slides at about 1/3 and 2/3, one layout per slide goal, layout
+variety. Not used: the skill's gradient glows, animation classes, icon cards and "power word"
+headline formulas (conflict with UW brand rules and the anti-ad-speak rules in the pack).
+Audience facts: S5 Meta targeting (ages, "in college", individual contributors, own boss). Job types:
+Andres's working read (brief §11.4, unverified). Internal work in progress. Placeholder imagery.
+
+======================================================================
+PASTE EVERYTHING BELOW INTO FIGMA SLIDES
+======================================================================
+
+Rebuild the deck as 13 slides, replacing the current version. Before starting, read
+00_READ_FIRST.txt, 01_taste_standard.txt, 02_typography.txt, 03_layout_hierarchy_color.txt,
+10_uw_brand_rules.txt, 11_uw_campaign.txt and 12_uw_directions.txt. Run 06_self_check.txt on every
+slide before replying. Use the copy exactly. Do not add words.
+
+DESIGN SYSTEM (apply to every slide)
+Canvas: 1920 x 1080.
+Grid: 12 columns, 120 px outer margins, 24 px gutters. Everything aligns to the grid, flush left.
+Colors: UW Brown #492F24 (default background), White #FFFFFF (type; background on slide 9 only),
+  UW Gold #FFC425 (one emphasis per slide, never large areas), Black #000000 (not used unless stated).
+Type: Montserrat only.
+  DISPLAY  160 px Bold, line height 0.95, tracking -2%   (slide 9 only)
+  H1        88 px Bold, line height 1.0,  tracking -1%
+  H2        56 px Bold, line height 1.1
+  BODY      34 px Regular, line height 1.35, max 3 lines per block, max 60 characters per line
+  LABEL     22 px SemiBold, ALL CAPS, tracking +8%, White at 70%
+Section marker (top-left, every slide except 1 and 5): LABEL style, Gold, e.g. "02  AUDIENCE".
+Page number (top-right, every slide except 1 and 5): LABEL style, White 50%, e.g. "04 / 13".
+Footer (bottom-left, every slide except 1 and 5): 20 px, White 50%:
+  "UW College of Business · Graduate Meta campaign · Work in progress · Placeholder imagery"
+Space: minimum 96 px between any title and the body below it. When unsure, add space, not elements.
+Never: gradients, shadows, icons, emoji, bullets with symbols, rules or dividers (except the short
+  gold rule where stated), device mockups, stock photos, rounded cards with fills, animations.
+Images: only COPIES of existing "Too stubborn to stop?" ad frames and their placeholder photo. Never
+  redraw frames. Never use FAR / FURTHER, RUNNER or MARGIN NOTES frames.
+
+----------------------------------------------------------------------
+SLIDE 1 · COVER
+----------------------------------------------------------------------
+Background: UW Brown.
+Top-left LABEL (Gold): UW COLLEGE OF BUSINESS · GRADUATE PROGRAMS · META
+H1, bottom-left, 2 lines:
+  Not for
+  everyone.
+Under it, BODY (White 70%): Creative direction · Work in progress
+UW College of Business logo (white), bottom-right, from the logo component.
+
+----------------------------------------------------------------------
+SLIDE 2 · THE JOB
+----------------------------------------------------------------------
+Section marker: 01  THE JOB
+H1, top half, max 9 columns:
+  One idea. Five programs. First contact.
+Three BODY blocks in a row across the lower third, 4 columns each, each with a LABEL above:
+  LABEL: THE GOAL          BODY: Application starts for five graduate business programs.
+  LABEL: THE MOMENT        BODY: For many people, this ad is the first time they meet UW.
+  LABEL: THE SYSTEM        BODY: The idea carries the ad. Program details live in the post text.
+
+----------------------------------------------------------------------
+SLIDE 3 · WHO WE'RE TALKING TO
+----------------------------------------------------------------------
+Section marker: 02  AUDIENCE
+H1, left, max 9 columns, vertically centered (Gold on "holding it together"):
+  They're not the boss yet.
+  They're the one holding it together.
+Nothing else on the slide.
+
+----------------------------------------------------------------------
+SLIDE 4 · THEIR WORLD
+----------------------------------------------------------------------
+Section marker: 02  AUDIENCE
+H2, top-left: Where they work right now.
+Four columns across the middle, 3 grid columns each, no boxes or fills. Each column:
+  LABEL (Gold) on top, then one H2-weight line in 40 px Bold White, then nothing else.
+  RESTAURANTS AND RETAIL     Closing shift, then the side project.
+  PLANT FLOORS               Two people short. Covered it.
+  BANK BRANCHES              Covering the branch this week.
+  9-TO-5 DESKS               Month-end close. Then the inventory count.
+Bottom-left, BODY (White 70%), one line:
+  21 to 35. Wyoming, plus two Colorado counties for the Online MBA. Some still in college.
+
+----------------------------------------------------------------------
+SLIDE 5 · PATTERN BREAK
+----------------------------------------------------------------------
+Full-bleed: the placeholder photo from the "Too stubborn to stop?" ads (the late-night table),
+  scaled to fill 1920 x 1080, cropped so the table sits in the lower half. Darken the lamp area if it
+  is the brightest point. No overlay color wash.
+H1, White, top-left inside the dark area:
+  Nobody calls that leadership.
+Bottom-right, 20 px, White 70%: PLACEHOLDER IMAGE
+No section marker, page number or footer on this slide.
+
+----------------------------------------------------------------------
+SLIDE 6 · WHAT THEY WANT
+----------------------------------------------------------------------
+Section marker: 02  AUDIENCE
+Two halves, 6 columns each, top-aligned at the vertical center:
+  Left:  LABEL: MOTIVATION ONE     H1: The promotion.
+  Right: LABEL: MOTIVATION TWO     H1: Their own boss.
+Bottom-left, BODY, across 8 columns:
+  A master's is how they picture getting there.
+  The doubt is whether it fits into a life that's already full.
+
+----------------------------------------------------------------------
+SLIDE 7 · THE INSIGHT
+----------------------------------------------------------------------
+Section marker: 03  INSIGHT
+Two stacked statements, left, max 10 columns, 96 px apart:
+  LABEL: WHAT THEY BELIEVE
+  H2 (White 70%): Grad school is for people with more time.
+  LABEL: WHAT'S TRUE
+  H1 (White, Gold on "the hardest part"): The people with the least time are already doing the hardest part.
+Bottom-left LABEL: WORKING INSIGHT
+
+----------------------------------------------------------------------
+SLIDE 8 · WHERE IT COMES FROM
+----------------------------------------------------------------------
+Section marker: 04  THE IDEA
+H1, left, max 10 columns (Gold on "who you are"):
+  A Cowboy isn't what you are, but who you are.
+LABEL under it: UW · THE WORLD NEEDS MORE COWBOYS
+BODY block, lower left, 7 columns:
+  We celebrate forging your own path against the odds.
+  That's leadership. That's entrepreneurial. That's the Code of the West.
+
+----------------------------------------------------------------------
+SLIDE 9 · THE IDEA (PATTERN BREAK)
+----------------------------------------------------------------------
+Background: White. All type UW Brown. Section marker and page number in UW Brown at 60%.
+DISPLAY, left, 3 lines (Gold is not legible on White: set "STUBBORN" in UW Brown with the gold
+  dry-brush underline beneath it instead):
+  TOO STUBBORN
+  TO STOP?
+H1 under it, UW Brown (underline "COWBOY" the same way):
+  SOUNDS LIKE A COWBOY.
+Bottom-right, BODY, 4 columns, UW Brown:
+  The thing they get teased for is the qualification.
+
+----------------------------------------------------------------------
+SLIDE 10 · HOW IT WORKS
+----------------------------------------------------------------------
+Section marker: 05  THE WORK
+H2, top-left: The swipe is the story.
+Four carousel cards (copies) in one row, equal size (about 380 x 380 px), aligned to the grid.
+Under each card: a LABEL number (Gold) and a 28 px White line.
+  01  The week collides.
+  02  The question lands.
+  03  The answer flips it.
+  04  UW and the program.
+Bottom-left, 22 px, White 70%:
+  Stimulus: Channel 4's Tokyo Paralympics line, "To be a Paralympian, there's got to be something wrong with you." We reclaimed the insult the same way.
+
+----------------------------------------------------------------------
+SLIDE 11 · THE WORK IN FEED
+----------------------------------------------------------------------
+Section marker: 05  THE WORK
+Left, 5 columns: the 4:5 static (copy), as large as fits between top marker and footer.
+Right of it: the 9:16 static (copy), bottom-aligned with the 4:5.
+Far right, LABELs stacked, bottom-aligned:
+  FEED 4:5
+  STORIES AND REELS 9:16
+No other copy.
+
+----------------------------------------------------------------------
+SLIDE 12 · FIVE PROGRAMS, FIVE WEEKS
+----------------------------------------------------------------------
+Section marker: 06  HOW IT RUNS
+H2, top-left: Same question. Every program gets its own week.
+Five rows, full width, 88 px apart, no table lines. Each row:
+  LABEL (White 70%) in columns 1–3, the week line in 34 px Bold White in columns 4–12,
+  "SAME WEEK." in Gold.
+  ON-CAMPUS MBA               CLOSING SHIFT. PITCH DECK. BEST FRIEND'S WEDDING. SAME WEEK.
+  ONLINE MBA                  TWO PEOPLE SHORT. KID'S RECITAL. MOVING DAY. SAME WEEK.
+  M.S. IN ACCOUNTING          AUDIT INTERNSHIP. VOLUNTEER TAX NIGHT. SOFTBALL PLAYOFFS. SAME WEEK.
+  ONLINE M.S. IN ACCOUNTING   MONTH-END CLOSE. INVENTORY COUNT. REC LEAGUE FINAL. SAME WEEK.
+  ONLINE M.S. IN FINANCE      COVERING THE BRANCH. MARKET DIP. GRANDMA'S 90TH. SAME WEEK.
+
+----------------------------------------------------------------------
+SLIDE 13 · WHAT WE NEED
+----------------------------------------------------------------------
+Section marker: 07  NEXT
+H1, top-left: What we need from UW.
+Three numbered blocks in a row, 4 columns each. LABEL number in Gold, then BODY:
+  01  Approval to use Cowboys language and the Blackhawk font.
+  02  UW photography access, and a shoot with model releases.
+  03  Confirmed placements, landing pages and targeting.
+Bottom-left BODY (White 70%): 4:5 feed · 9:16 Stories and Reels · Carousel · 15-second video

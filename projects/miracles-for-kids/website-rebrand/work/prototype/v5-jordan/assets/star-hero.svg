@@ -1,0 +1,23 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="92.6296" height="92.6296" viewBox="0 0 92.6296 92.6296" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Star 9" filter="url(#filter0_d_0_31)">
+<use xlink:href="#stroke0_0_31" fill="#5DA7E5"/>
+<mask id="stroke1_0_31" maskUnits="userSpaceOnUse" x="16.1429" y="11.422" width="60" height="60" fill="black">
+<rect fill="white" x="16.1429" y="11.422" width="60" height="60"/>
+<use xlink:href="#stroke0_0_31"/>
+</mask>
+<path d="M37.3822 34.1047L23.3348 39.3027C21.2078 40.0898 21.2078 43.0981 23.3348 43.8851L37.3822 49.0831C38.0509 49.3306 38.5781 49.8578 38.8256 50.5265L44.0236 64.5739C44.8106 66.7009 47.8189 66.7009 48.606 64.5739L53.804 50.5265C54.0514 49.8578 54.5787 49.3306 55.2474 49.0831L69.2948 43.8851C71.4217 43.0981 71.4217 40.0898 69.2948 39.3027L55.2474 34.1047C54.5787 33.8573 54.0514 33.33 53.804 32.6613L48.606 18.6139C47.8189 16.487 44.8106 16.487 44.0236 18.6139L38.8256 32.6613C38.5781 33.33 38.0509 33.8573 37.3822 34.1047Z" stroke-width="10.4331" stroke="white" mask="url(#stroke1_0_31)"/>
+</g>
+<defs>
+<filter id="filter0_d_0_31" x="8.9407e-07" y="-5.96046e-08" width="92.6296" height="92.6296" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4.72086"/>
+<feGaussianBlur stdDeviation="8.26151"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_31"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_31" result="shape"/>
+</filter>
+<path id="stroke0_0_31" d="M44.0236 18.6139C44.8106 16.487 47.8189 16.487 48.606 18.6139L53.804 32.6613C54.0514 33.33 54.5787 33.8573 55.2474 34.1047L69.2948 39.3027C71.4217 40.0898 71.4217 43.0981 69.2948 43.8851L55.2474 49.0831C54.5787 49.3306 54.0514 49.8578 53.804 50.5265L48.606 64.5739C47.8189 66.7009 44.8106 66.7009 44.0236 64.5739L38.8256 50.5265C38.5781 49.8578 38.0509 49.3306 37.3822 49.0831L23.3348 43.8851C21.2078 43.0981 21.2078 40.0898 23.3348 39.3027L37.3822 34.1047C38.0509 33.8573 38.5781 33.33 38.8256 32.6613L44.0236 18.6139Z"/>
+</defs>
+</svg>

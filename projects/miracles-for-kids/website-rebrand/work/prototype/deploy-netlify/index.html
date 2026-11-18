@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>Miracles for Kids · Prototype for testing</title>
+<!-- Prototype (design only). Built from Figma MFK-Andres page 154:236: desktop 154:936, mobile 154:625. Look A Saturated: Outfit + Caveat; white, royal, orange, sun. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@300..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#fff; --navy:#002855; --royal:#1B5FBF; --sky:#79BDE9; --sky-50:#F2F8FD;
+  --orange:#F99400; --orange-700:#BB6F00; --sun:#FFD23F; --sun-100:#FFF5D5; --grey:#5B6474; --line:#C7D0DA; --orange-800:#8A5200;
+  --sans:"Outfit",system-ui,sans-serif; --script:"Caveat",cursive;
+  --gutter:clamp(20px,8.3vw,120px); --spring:cubic-bezier(.34,1.56,.64,1); --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--navy);font:400 16px/1.5 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--focus,var(--navy));outline-offset:3px;border-radius:12px}
+.truth,.close,.give,footer{--focus:var(--sun)}
+html{scroll-padding-top:120px}
+.wrap{padding-inline:var(--gutter)}
+section{position:relative}
+.eyebrow{font:600 12px/20px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--orange-800)}
+h1,h2,h3{font-family:var(--sans);letter-spacing:-.02em}
+.display{font-weight:850;font-size:clamp(44px,6.7vw,96px);line-height:1}
+.h1{font-weight:800;font-size:clamp(34px,4.4vw,64px);line-height:1.08}
+.h2{font-weight:750;font-size:clamp(24px,2.5vw,34px);line-height:1.15}
+.script{font-family:var(--script);font-weight:700;letter-spacing:0;color:var(--orange-700)}
+.display .script{font-size:1.15em;line-height:.9}
+.h1 .script,.h2 .script{font-size:1.15em}
+.lead{font-size:clamp(17px,1.4vw,20px);line-height:1.6;color:var(--grey)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:14px 28px;border-radius:999px;border:2px solid transparent;font:650 16px var(--sans);text-decoration:none;transition:transform .35s var(--spring),border-radius .35s var(--spring),background .2s}
+.btn:hover{transform:translateY(-2px);border-radius:18px}
+.btn:active{transform:scale(.97);border-radius:12px}
+.btn-orange{background:var(--orange);color:var(--navy)}
+.btn-sky{background:var(--sky);color:var(--navy)}
+.btn-ghost{border-color:currentColor;background:transparent}
+.chip{min-height:44px;padding:9px 18px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font:600 16px var(--sans);transition:border-radius .35s var(--spring),background .2s,color .2s}
+.chip[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff;border-radius:14px}
+.wave{position:absolute;left:0;width:100%;height:80px;display:block;pointer-events:none}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+/* nav */
+.nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px var(--gutter);background:rgba(255,255,255,.92);backdrop-filter:blur(8px);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 6px 24px rgba(0,40,85,.08)}
+.nav .logo{height:64px;width:auto}
+.nav-links{display:flex;align-items:center;gap:36px;font:600 16px var(--sans)}
+.nav-links a{text-decoration:none;position:relative}
+.nav-links a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:3px;border-radius:3px;background:var(--orange);transform:scaleX(0);transition:transform .35s var(--spring)}
+.nav-links a:not(.btn):hover::after{transform:scaleX(1)}
+.menu-btn{display:none;width:48px;height:48px;border-radius:50%;border:1.5px solid var(--line);background:#fff}
+@media (max-width:980px){
+ .nav-links{position:fixed;inset:104px 16px auto 16px;flex-direction:column;align-items:stretch;gap:4px;padding:16px;background:#fff;border-radius:24px;box-shadow:0 16px 40px rgba(0,40,85,.15);transform:translateY(-12px);opacity:0;pointer-events:none;transition:.3s var(--ease)}
+ .nav-links a{padding:12px 8px}
+ .nav-links{visibility:hidden}
+ .nav.open .nav-links{transform:none;opacity:1;pointer-events:auto;visibility:visible}
+ .menu-btn{display:grid;place-items:center}
+}
+/* hero: positions from Figma 154:947 (1440 x 896); media box 776x700 at x836 y56 */
+.hero{position:relative;display:flex;align-items:center;padding:56px 0 140px var(--gutter);min-height:896px;overflow:hidden}
+.hero-text{position:relative;z-index:2;display:flex;flex-direction:column;gap:28px;width:min(652px,45vw)}
+.hero .display{font-size:clamp(44px,6.67vw,96px);line-height:1;letter-spacing:-2px}
+.hero .display .script{font-size:1.1667em;line-height:.857}
+.video-chip{display:inline-flex;align-self:flex-start;align-items:center;gap:12px;padding:12px 20px 12px 12px;border-radius:999px;background:#fff;box-shadow:0 1px 2px rgba(0,40,85,.07),0 2px 4px rgba(0,40,85,.1);text-decoration:none}
+.play{width:48px;height:48px;border-radius:50%;background:var(--orange);display:grid;place-items:center;flex:none;transition:border-radius .45s var(--spring),transform .45s var(--spring)}
+.play svg{width:14px;margin-left:3px}
+a:hover .play,button:hover .play{border-radius:30%;transform:rotate(-8deg) scale(1.06)}
+.cap{font:500 16px/20px var(--sans)}
+.hero-media{position:absolute;left:58.06%;top:56px;width:53.89%;aspect-ratio:776/700}
+.hero-media>*{position:absolute}
+.hero-blob5{left:-29.64%;top:60%;width:56.7%;height:auto}
+.hero-photo{left:-20.88%;top:-8.29%;width:110.82%;height:111.43%;object-fit:cover;object-position:45% 30%;clip-path:url(#c-hero)}
+.hero-heart{left:-17.01%;top:-5.71%;width:15.46%;height:auto}
+.give{position:fixed!important;right:32px;bottom:32px;left:auto;top:auto;width:340px;transform:translateY(calc(100% + 48px)) scale(.92);opacity:0;visibility:hidden;transition:transform .55s var(--spring),opacity .3s,visibility 0s .55s;z-index:30;padding:32px;border-radius:32px;background:var(--royal);color:#fff;box-shadow:0 16px 40px rgba(0,26,51,.18);display:flex;flex-direction:column;gap:16px}
+.give .h3{font:700 24px/32px var(--sans);padding-bottom:8px}
+.give .script{color:var(--sun);font-size:48px;line-height:48px;display:block}
+.toggle{position:relative;display:grid;grid-template-columns:1fr 1fr;padding:4px;border-radius:999px;border:2px solid #fff;isolation:isolate}
+.toggle::before{content:"";position:absolute;z-index:-1;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:999px;background:var(--orange);transition:transform .45s var(--spring)}
+.toggle[data-on=once]::before{transform:translateX(100%)}
+.toggle button{min-height:40px;border-radius:999px;border:0;background:transparent;color:#fff;font:500 16px var(--sans);transition:color .25s}
+.toggle button[aria-pressed=true]{color:var(--navy)}
+.amounts{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.amounts button{min-height:44px;padding:12px 14px;border-radius:14px;border:1px solid #fff;background:transparent;color:#fff;font:600 16px/1 var(--sans);transition:border-radius .35s var(--spring),background .2s}
+.amounts button[aria-pressed=true]{border-width:3px;padding:10px 12px}
+.give .btn{width:100%}
+.give.open{transform:none;opacity:1;visibility:visible;transition:transform .55s var(--spring),opacity .3s}
+.give-x{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;display:grid;place-items:center;transition:background .2s,border-radius .35s var(--spring),transform .35s var(--spring)}
+.give-x:hover{background:rgba(255,255,255,.26);border-radius:14px;transform:rotate(90deg)}
+.give .h3{padding-right:40px}
+@media (max-width:1100px){
+ .hero{flex-direction:column;align-items:stretch;padding:16px var(--gutter) 64px;min-height:0;gap:8px}
+ .hero-text{gap:16px}
+ .hero-text{width:auto}
+ .hero-media{position:relative;left:auto;top:auto;width:100%;margin-top:8px}
+ .hero-photo{left:-6%;top:0;width:112%;height:auto;aspect-ratio:860/780}
+ .hero-heart{left:2%;top:-4%;width:18%}
+ .hero-blob5{left:-20%;top:38%;width:60%}
+ .give{right:12px;left:12px;bottom:12px;width:auto;max-height:calc(100vh - 24px);overflow:auto}
+ .hero-media{aspect-ratio:auto;display:flex;flex-direction:column}
+ .hero-media .hero-photo,.hero-media .hero-blob5,.hero-media .hero-heart{position:absolute}
+ .hero-media::before{content:"";display:block;aspect-ratio:776/700}
+}
+/* truth: Figma 154:995 (609 tall) */
+.truth{color:#fff;text-align:center;padding:200px var(--gutter);overflow:hidden;background:#242424}
+.pbg{position:absolute;inset:-12% 0;width:100%;height:124%;object-fit:cover;will-change:transform}
+.shade{position:absolute;inset:0}
+.truth .shade{background:rgba(36,36,36,.76)}
+.truth .inner{position:relative;max-width:880px;margin:auto;display:flex;flex-direction:column;align-items:center;gap:40px}
+.h1x{font:800 clamp(36px,4.44vw,64px)/72px var(--sans);letter-spacing:-1px}
+.h1x .script{font-size:1.1875em;color:var(--sun);margin-right:.12em}
+@media (max-width:700px){.h1x{line-height:1.1}}
+.truth p{font-size:20px;line-height:32px;max-width:720px}
+.truth .more{font-weight:600;text-decoration:none}
+.truth-ctas{display:flex;align-items:center;gap:28px;flex-wrap:wrap;justify-content:center}
+/* stories */
+.stories{padding:112px var(--gutter)}
+.stories-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.pager{display:flex;align-items:center;gap:12px}
+.pager .btn{min-height:46px;padding:10px 20px;border-color:var(--navy)}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:40px 0}
+@media (max-width:700px){.filters{flex-wrap:nowrap;overflow-x:auto;margin:24px calc(var(--gutter)*-1);padding:4px var(--gutter);scrollbar-width:none}.filters .chip{flex:none}}
+.empty{grid-column:1/-1;padding:40px;border-radius:28px;background:var(--sky-50);text-align:center;color:var(--grey)}
+.mosaic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-flow:dense;gap:24px}
+.tile{position:relative;min-height:320px;border-radius:28px;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;overflow:hidden;text-decoration:none;transition:transform .45s var(--spring),opacity .3s,box-shadow .3s}
+.tile:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(0,40,85,.12)}
+.tile.hide{display:none}
+.tile.wide{grid-column:span 2}
+.tl{border-top-left-radius:140px}.tr{border-top-right-radius:140px}.br{border-bottom-right-radius:140px}
+.tile .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile .deco{position:absolute;pointer-events:none}
+.tile>*:not(.poster):not(.deco):not(.play){position:relative;z-index:1}
+.tile .play{position:absolute;top:24px;right:24px;width:64px;height:64px;z-index:2}
+.pill{align-self:flex-start;background:#fff;color:var(--navy);border-radius:999px;padding:6px 14px;font:600 12px var(--sans)}
+.quote{font-size:20px;line-height:1.5}
+@media (max-width:1000px){.mosaic{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.mosaic{gap:12px}.tile{min-height:220px;padding:16px;border-radius:20px}.tl,.tr,.br{--r:90px}.tl{border-top-left-radius:90px}.tr{border-top-right-radius:90px}.br{border-bottom-right-radius:90px}.tile .play{width:48px;height:48px;top:14px;right:14px}.quote{font-size:16px}}
+/* programs */
+.programs{background:var(--sun-100);padding:180px var(--gutter) 112px}
+.pgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:52px 24px;margin-top:40px}
+.prog{grid-column:span 2;display:flex;flex-direction:column;gap:8px;text-decoration:none}
+.prog.big{grid-column:span 3}
+.prog .crop{width:100%;aspect-ratio:384/280;object-fit:cover;transition:transform .5s var(--spring)}
+.prog.big .crop{aspect-ratio:588/360}
+.prog:hover .crop{transform:scale(1.03) rotate(-.6deg)}
+.prog .k{margin-top:16px;padding-inline:18px;font:600 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+.prog .h2,.prog p{padding-inline:18px}
+.prog p{color:var(--grey)}
+.prog .stat{padding-inline:18px;font:650 16px var(--sans);color:var(--navy)}
+@media (max-width:900px){.pgrid{grid-template-columns:1fr;gap:40px}.prog,.prog.big{grid-column:auto}}
+/* proof */
+.proof{background:var(--sky-50);padding:110px var(--gutter)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin:40px 0 32px}
+.stat-card{background:#fff;border-radius:24px;padding:28px}
+.stat-card b{display:block;font:850 clamp(32px,3.4vw,48px)/1 var(--sans);letter-spacing:-.02em}
+.stat-card span{color:var(--grey);font-size:16px}
+.hosp{list-style:none;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.hosp li{background:#fff;border-radius:16px;height:88px;display:grid;place-items:center;padding:14px 20px}
+.hosp img{max-height:56px;max-width:100%;width:auto;object-fit:contain}
+@media (max-width:900px){.stats{grid-template-columns:1fr 1fr}.hosp{grid-template-columns:1fr 1fr}}
+/* involve */
+.involve{padding:110px var(--gutter)}
+.igrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px}
+.icard{border-radius:28px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:transform .45s var(--spring),box-shadow .3s;box-shadow:0 2px 0 rgba(0,40,85,.06)}
+.icard:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(0,40,85,.12)}
+.icard .crop{width:100%;aspect-ratio:4/3;object-fit:cover}
+.icard .body{padding:24px 24px 28px;display:flex;flex-direction:column;gap:8px}
+.icard .body{flex:1}
+.icard .go{align-self:flex-start;margin-top:auto;min-height:48px;padding:12px 24px;font:650 16px var(--sans)}
+.icard .btn-ghost.go{color:var(--navy);border-color:var(--navy)}
+.icard:hover .go{border-radius:16px}.icard:active .go{border-radius:10px;transform:scale(.97)}
+@media (max-width:900px){.igrid{grid-template-columns:1fr}}
+/* events */
+.events{padding:24px var(--gutter) 112px}
+.ecards{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin:40px 0 32px}
+.ev{min-height:267px;display:grid;grid-template-columns:180px 1fr 1fr;align-items:center;gap:24px;border-radius:32px;overflow:hidden;background:#fff;box-shadow:0 2px 12px rgba(0,40,85,.08);text-decoration:none;transition:transform .45s var(--spring)}
+.ev:hover{transform:translateY(-4px)}
+.ev .date{align-self:stretch;background:var(--royal);color:#fff;display:grid;place-items:center;text-align:center;padding:24px 12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+.ev .date b{display:block;font:850 56px/1 var(--sans);letter-spacing:-.02em}
+.ev img{width:calc(100% - 20px);aspect-ratio:4/3;object-fit:cover;border-radius:18px}
+@media (max-width:1100px){.ecards{grid-template-columns:1fr}}
+@media (max-width:600px){.ev{grid-template-columns:110px 1fr}.ev img{display:none}.ev .date b{font-size:40px}}
+/* close: Figma 154:1238 (629 tall) */
+.close{color:#fff;text-align:center;padding:200px var(--gutter) 112px;background:#000;overflow:hidden}
+.close .shade{background:rgba(0,0,0,.71)}
+.close .inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:40px}
+.close .display{font-size:clamp(44px,6.67vw,96px);line-height:1;letter-spacing:-2px}
+.close .display .script{color:var(--sun);font-size:1.1667em}
+.close .circle{position:absolute;left:83.33%;top:79px;width:min(535px,37.15vw);height:auto}
+.close .heart{position:absolute;left:-50px;top:420px;width:180px;height:auto;z-index:1}
+.news{display:flex;align-items:flex-end;justify-content:center;gap:24px;flex-wrap:wrap;padding:48px 60px 0;border-top:1px solid var(--orange);text-align:left}
+.news .h3{font:700 24px/32px var(--sans)}
+.news .script{font-size:48px;line-height:32px;color:var(--sun)}
+.news input{min-height:52px;width:320px;max-width:100%;border:0;border-radius:999px;padding:0 20px;font:400 16px var(--sans)}
+.news-ok{font-weight:650}
+@media (max-width:700px){.close .circle{width:200px;left:auto;right:-90px;top:40px}.close .heart{width:90px;top:auto;bottom:60px;left:-24px}.news{padding:32px 0 0}.news input{width:100%}.news form{width:100%}}
+/* footer */
+footer{background:var(--navy);color:#fff;padding:72px var(--gutter);display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+footer .fh{font:650 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+footer a{display:block;text-decoration:none;font-size:16px;line-height:2.1}
+footer a:hover{text-decoration:underline}
+footer p{font-size:16px;line-height:1.9}
+@media (max-width:900px){footer{grid-template-columns:1fr 1fr}footer>div:first-child{grid-column:1/-1}}
+/* condensed pop-out, on M3 Expressive foundations:
+   containment (extra-large corner container), connected button groups, shape morph on select/press,
+   spring motion (spatial = overshoot, effects = no overshoot), emphasized type, 48px touch targets */
+:root{
+ --m3-spring-spatial:linear(0,.009,.035 2.1%,.141 4.4%,.723 12.9%,.938 16.7%,1.017 20.3%,1.051 24.4%,1.059 28.6%,1.039 36.9%,1.003 50%,.996 63%,1);
+ --m3-spring-effects:cubic-bezier(.31,.94,.34,1);
+ --m3-xl:28px; --m3-inner:8px; --m3-full:999px;
+}
+.give{width:300px;padding:16px;gap:12px;border-radius:var(--m3-xl);transition:transform .6s var(--m3-spring-spatial),opacity .25s var(--m3-spring-effects),visibility 0s .6s}
+.give.open{transition:transform .6s var(--m3-spring-spatial),opacity .25s var(--m3-spring-effects)}
+.give .h3{font:800 16px/24px var(--sans);letter-spacing:-.01em;padding:0 40px 0 4px}
+.give .h3 .script{display:inline;font-size:28px;line-height:24px}
+/* icon button: 40 visual, 48 target, morphs round to square on hover/press */
+.give-x{top:12px;right:12px;width:36px;height:36px;border-radius:var(--m3-full);background:rgba(255,255,255,.16);transition:border-radius .35s var(--m3-spring-spatial),background .2s var(--m3-spring-effects),transform .35s var(--m3-spring-spatial)}
+.give-x:hover{border-radius:12px;transform:none}
+.give-x:active{border-radius:8px;transform:scale(.92)}
+.give-x svg{width:14px;height:14px}
+.give button{position:relative}
+.give .give-x{position:absolute}
+.give .toggle button::after,.give .amounts button::after,.give-x::after{content:"";position:absolute;inset:50% auto auto 50%;width:max(100%,48px);height:48px;transform:translate(-50%,-50%)}
+/* frequency: switch whose thumb is a spring */
+.give .toggle{padding:3px}
+.give .toggle::before{top:3px;bottom:3px;left:3px;width:calc(50% - 3px);transition:transform .5s var(--m3-spring-spatial)}
+.give .toggle button{min-height:32px;font:600 12px var(--sans)}
+.give .toggle button[aria-pressed=true]{font-weight:750}
+/* amounts: connected button group; inner corners small, outer ends full; selected morphs to a full pill */
+.give .amounts{display:flex;gap:2px}
+.give .amounts button{flex:1 1 0;min-width:0;min-height:36px;padding:0;border:0;border-radius:var(--m3-inner);background:rgba(255,255,255,.14);color:#fff;font:600 12px var(--sans);transition:border-radius .4s var(--m3-spring-spatial),flex-grow .4s var(--m3-spring-spatial),background .2s var(--m3-spring-effects),color .2s var(--m3-spring-effects)}
+.give .amounts button:first-child{border-radius:var(--m3-full) var(--m3-inner) var(--m3-inner) var(--m3-full)}
+.give .amounts button:last-child{border-radius:var(--m3-inner) var(--m3-full) var(--m3-full) var(--m3-inner)}
+.give .amounts button:hover{background:rgba(255,255,255,.24)}
+.give .amounts button:active{flex-grow:1.35;border-radius:4px}
+.give .amounts button[aria-pressed=true]{flex-grow:1.3;border-radius:var(--m3-full);background:#fff;color:var(--royal);font-weight:800;padding:0;border-width:0}
+/* primary action: emphasized label, morphs pill to rounded square on press */
+.give .btn{min-height:44px;padding:10px 16px;font:750 16px var(--sans);transition:border-radius .35s var(--m3-spring-spatial),transform .35s var(--m3-spring-spatial)}
+.give .btn:hover{transform:none;border-radius:16px}
+.give .btn:active{transform:scale(.97);border-radius:10px}
+@media (max-width:1100px){.give{width:auto}}
+.give-more{display:none}
+.give.mini>.toggle,.give.mini>.amounts,.give.mini>.btn{display:none}
+.give.mini .give-more{display:flex;align-items:center;justify-content:center;gap:6px;min-height:40px;border-radius:var(--m3-full);border:0;background:var(--orange);color:var(--navy);font:750 16px var(--sans);transition:border-radius .35s var(--m3-spring-spatial)}
+.give.mini .give-more:active{border-radius:10px}
+@media (min-width:1101px){.give.mini{width:260px}}
+.give.mini.tuck{transform:translateY(calc(100% + 48px));opacity:0;visibility:hidden}
+.vbox{width:min(960px,92vw);padding:0;border:0;border-radius:28px;background:#000;overflow:hidden}.vbox::backdrop{background:rgba(0,26,51,.72)}.vbox iframe{display:block;width:100%;aspect-ratio:16/9;border:0}.vbox .give-x{position:absolute;top:12px;right:12px;z-index:1;--focus:var(--sun)}
+.tile:focus-visible{transform:translateY(-4px);box-shadow:0 16px 32px rgba(0,40,85,.12)}.icard:focus-visible{transform:translateY(-6px);box-shadow:0 18px 36px rgba(0,40,85,.12)}.ev:focus-visible{transform:translateY(-4px)}.prog:focus-visible .crop{transform:scale(1.03) rotate(-.6deg)}
+.news form{position:relative;padding-top:24px}.news-label{position:absolute;top:0;left:20px;color:#fff}.news-err{position:absolute;left:20px;top:100%;margin-top:6px;font:600 12px var(--sans);color:var(--sun)}.news input[aria-invalid=true]{outline:3px solid var(--sun)}
+.btn:disabled{opacity:.38;cursor:default;transform:none!important;border-radius:999px!important}
+/* ?m3=1 : M3 Expressive controls pass. Controls only; containers keep their own corners and shapes. */
+.m3 .btn{position:relative;overflow:hidden;transition:border-radius .4s var(--m3-spring-spatial),background .2s var(--m3-spring-effects)}
+.m3 .btn::before{content:"";position:absolute;inset:0;background:currentColor;opacity:0;transition:opacity .2s var(--m3-spring-effects);pointer-events:none}
+.m3 .btn:hover{transform:none;border-radius:16px}.m3 .btn:hover::before{opacity:.08}
+.m3 .btn:focus-visible::before{opacity:.10}
+.m3 .btn:active{transform:none;border-radius:10px}.m3 .btn:active::before{opacity:.10}
+.m3 .chip{display:inline-flex;align-items:center;gap:6px;border-radius:8px;transition:border-radius .4s var(--m3-spring-spatial),background .2s var(--m3-spring-effects),color .2s var(--m3-spring-effects),padding .4s var(--m3-spring-spatial)}
+.m3 .chip[aria-pressed=true]{border-radius:999px;padding-left:12px}
+.m3 .chip[aria-pressed=true]::before{content:"";width:14px;height:14px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 12.5l5 5L20 6.5' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 12.5l5 5L20 6.5' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+.m3 .pager{gap:2px}.m3 .pager .cap{margin-right:10px}
+.m3 .pager .btn{border-width:0;background:var(--sky-50);color:var(--navy)}
+.m3 #prev{border-radius:999px 8px 8px 999px}.m3 #next{border-radius:8px 999px 999px 8px}
+.m3 .pager .btn:not(:disabled):hover{border-radius:999px}
+.m3 .pager .btn:not(:disabled):active{border-radius:6px}
+/* Phosphor duotone icons: the 20% fill echoes the duotone shape backgrounds */
+.ic{width:20px;height:20px;flex:none;vertical-align:-4px}
+.prog .k{display:flex;align-items:center;gap:8px}.prog .k .ic{width:24px;height:24px;color:var(--orange-700)}
+.ev-meta{display:flex;gap:6px;align-items:flex-start;color:var(--grey)}.ev-meta .ic{width:18px;height:18px;color:var(--royal);margin-top:1px}
+.ic-badge{display:grid;place-items:center;width:48px;height:48px;border-radius:16px 16px 16px 4px;background:#fff;color:var(--royal);margin-bottom:4px}.ic-badge .ic{width:28px;height:28px}
+.social{display:flex;gap:8px;margin-top:18px}.social a{display:grid;place-items:center;width:44px;height:44px;border-radius:999px;background:rgba(255,255,255,.1);color:#fff;line-height:1;transition:border-radius .3s var(--m3-spring-spatial),background .2s}.social a:hover{border-radius:14px;background:rgba(255,255,255,.2)}.social .ic{width:22px;height:22px}
+
+/* ===== Motion v2: motion-audit fixes + M3 Expressive personality (2026-10-29) ===== */
+:root{--spring:cubic-bezier(.2,.8,.2,1);--m3-spring-fast:cubic-bezier(.2,.8,.2,1)}
+/* playful containers keep the spatial spring; utility controls use the fast, no-bounce curve */
+.tile,.icard,.ev{transition:transform .45s var(--m3-spring-spatial),box-shadow .3s}
+.play{transition:border-radius .45s var(--m3-spring-spatial),transform .45s var(--m3-spring-spatial)}
+/* reveal: media and cards only, shorter, smaller rise; stats stagger */
+.reveal{transform:translateY(12px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.stats .reveal:nth-child(2){transition-delay:60ms}.stats .reveal:nth-child(3){transition-delay:120ms}.stats .reveal:nth-child(4){transition-delay:180ms}
+/* keyboard focus never moves things */
+.tile:focus-visible,.icard:focus-visible,.ev:focus-visible{transform:none;box-shadow:none}.prog:focus-visible .crop{transform:none}
+@media (hover:none){.tile:hover,.icard:hover,.ev:hover{transform:none}}
+/* donation controls: fast, flat, no layout animation */
+.give .amounts button{flex-grow:1!important;transition:border-radius .2s var(--m3-spring-fast),transform .2s var(--m3-spring-fast),background .15s,color .15s}
+.give .amounts button[aria-pressed=true]{transform:scale(1.06);z-index:1}
+.give .amounts button:active{transform:scale(.96);border-radius:6px}
+.give .toggle::before{transition:transform .24s var(--m3-spring-fast)}
+/* pop-out: springy enter, quick quiet exit */
+.give{transform:translateY(12px) scale(.98);transition:transform .2s ease-in,opacity .16s ease-in,visibility 0s .2s}
+.give.open{transition:transform .6s var(--m3-spring-spatial),opacity .25s var(--m3-spring-effects)}
+.give.mini.tuck{transform:translateY(12px) scale(.98)}
+/* mini -> full as a drawer */
+.give.mini>.toggle,.give.mini>.amounts,.give.mini>.btn{display:revert}
+.give-body{display:grid;grid-template-rows:1fr;transition:grid-template-rows .32s var(--ease);margin:-4px}
+.give.mini .give-body{grid-template-rows:0fr}
+.give-body>div{overflow:hidden;min-height:0;display:flex;flex-direction:column;gap:12px;padding:4px}
+.give:not(.mini) .give-more{display:none}
+.give .btn.sent{background:var(--sun)}
+/* lightbox in and out */
+.vbox{opacity:0;transform:scale(.96);transition:opacity .15s ease-in,transform .15s ease-in,display .15s allow-discrete,overlay .15s allow-discrete}
+.vbox[open]{opacity:1;transform:none;transition:opacity .22s var(--ease),transform .22s var(--ease),display .22s allow-discrete,overlay .22s allow-discrete}
+@starting-style{.vbox[open]{opacity:0;transform:scale(.96)}}
+.vbox::backdrop{transition:background .22s,display .22s allow-discrete,overlay .22s allow-discrete}
+@starting-style{.vbox[open]::backdrop{background:rgba(0,26,51,0)}}
+/* MFK loading indicator: M3E-style shape-morphing loader in brand shapes */
+.mfk-loader{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;transition:opacity .2s}
+.mfk-loader svg{width:72px;height:72px;color:var(--sun);animation:mfk-spin 2.4s linear infinite}
+.mfk-loader path{fill:currentColor}
+.vbox.loaded .mfk-loader{opacity:0}
+@keyframes mfk-spin{to{transform:rotate(360deg)}}
+.btn .mfk-loader{position:static;display:inline-grid}.btn .mfk-loader svg{width:22px;height:22px;color:var(--navy)}
+/* emphasized type: supporting lines lighter, closing headline gains weight as it arrives */
+.lead{font-weight:350}
+.close .display{font-weight:700;transition:font-weight 1.4s var(--ease)}
+.close .display.heavy{font-weight:900}
+/* containment: the 88c card leads the proof band; the next event leads the list */
+.hero-stat{background:var(--royal);color:#fff;border-radius:24px 24px 24px 72px}.hero-stat span{color:rgba(255,255,255,.85)!important}
+.ev.next{background:var(--sun-100)}
+.next-pill{display:inline-block;margin-bottom:6px;padding:3px 10px;border-radius:999px;background:var(--orange);color:var(--navy);font:700 12px var(--sans)}
+/* celebration: heart burst on a gift, heartbeat on newsletter */
+.burst{position:fixed;z-index:60;pointer-events:none;width:0;height:0}
+.burst i{position:absolute;left:-10px;top:-10px;width:20px;height:20px;color:var(--sun)}
+.burst i svg{width:100%;height:100%}
+@keyframes beat{0%,100%{transform:scale(1)}30%{transform:scale(1.14)}55%{transform:scale(.96)}75%{transform:scale(1.05)}}
+.close .heart.beat{animation:beat .9s var(--ease)}
+.close .circle.drift{transition:translate 1.2s var(--m3-spring-spatial)}
+/* mobile: extended Donate FAB replaces the mini bar; shrinks on scroll down */
+.fab{display:none}
+@media (max-width:700px){
+ .fab{position:fixed;right:16px;bottom:16px;z-index:29;display:inline-flex;align-items:center;gap:10px;height:56px;padding:0 20px 0 16px;border:0;border-radius:16px;background:var(--orange);color:var(--navy);font:750 16px var(--sans);box-shadow:0 6px 18px rgba(0,26,51,.25);transform:translateY(120px);transition:transform .5s var(--m3-spring-spatial),padding .3s var(--m3-spring-fast),border-radius .3s var(--m3-spring-fast)}
+ .fab .ic{width:24px;height:24px}
+ .fab-label{max-width:90px;overflow:hidden;white-space:nowrap;transition:max-width .3s var(--m3-spring-fast),opacity .2s}
+ .fab.on{transform:none}
+ .fab.shrink{padding:0 16px;border-radius:18px}.fab.shrink .fab-label{max-width:0;opacity:0}
+ .fab.tuck{transform:translateY(120px)}
+ .give.mini{display:none}
+ /* stories: filters float as a toolbar while you read */
+ .filters.float{position:fixed;left:12px;right:12px;bottom:12px;z-index:28;margin:0;padding:8px;border-radius:999px;background:#fff;box-shadow:0 8px 28px rgba(0,26,51,.22);animation:tb-in .4s var(--m3-spring-spatial)}
+ @keyframes tb-in{from{transform:translateY(90px)}}
+}
+/* scroll-driven parallax where supported (JS fallback otherwise) */
+@supports (animation-timeline:view()){
+ @media (prefers-reduced-motion:no-preference){
+  [data-speed]{animation:px linear both;animation-timeline:view()}
+  @keyframes px{from{translate:0 calc(var(--sp) * (50vh + 50%))}to{translate:0 calc(var(--sp) * -1 * (50vh + 50%))}}
+ }
+}
+/* pop-out lines up with the nav's right edge (same gutter as the Donate button) */
+@media (min-width:1101px){.give{right:var(--gutter)}}
+/* collapsed drawer: hide its contents fully so the switch border can't peek out */
+.give-body>div{transition:visibility 0s}
+.give.mini .give-body>div{visibility:hidden;transition:visibility 0s .32s}
+/* ===== Events v2: duotone date blocks, emphasized dates, 4 visible + reveal (data: 2026 calendar PDF) ===== */
+.ecards{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:40px 0 0}
+.ev,.ev.next{grid-template-columns:176px 1fr;min-height:200px;gap:0;background:#fff;border-radius:32px;box-shadow:0 1px 2px rgba(0,40,85,.07),0 2px 4px rgba(0,40,85,.1)}
+.ev.feat{grid-template-columns:176px 1fr 200px;background:var(--sun-100)}
+.ev .date{position:relative;overflow:hidden;isolation:isolate;background:var(--c);color:var(--on);border-radius:32px 8px 8px 32px;place-items:center;padding:20px 12px;text-transform:uppercase}
+.ev .date::after{content:none}
+.ev .date svg.duo{position:absolute;z-index:-1;width:150%;height:auto;left:var(--sx,-30%);top:var(--sy,35%);color:var(--tint);transition:transform .6s var(--m3-spring-spatial)}
+.ev:hover .date svg.duo{transform:rotate(-12deg) scale(1.08)}
+@media (hover:none){.ev:hover .date svg.duo{transform:none}}
+.ev .m{display:block;font:500 16px/1 var(--sans);letter-spacing:.14em}
+.ev .date b{font:900 64px/.95 var(--sans);letter-spacing:-.04em;margin:6px 0 4px}
+.ev .to{display:block;font:400 12px/1 var(--sans);letter-spacing:.06em;opacity:.85}
+.ev .body{padding:22px 24px;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.ev .h2{font-size:24px}
+.ev .photo{width:calc(100% - 20px);height:calc(100% - 20px);margin:10px;aspect-ratio:auto;object-fit:cover;border-radius:22px 22px 22px 6px}
+.ev .tag{display:inline-block;padding:3px 10px;border-radius:999px;font:700 12px var(--sans)}
+.tag.next{background:var(--orange);color:var(--navy)}.tag.now{background:var(--royal);color:#fff}.tag.held{background:var(--sky-50);color:var(--grey)}.tag.tent{background:#fff;border:1px solid var(--line);color:var(--grey)}
+.ev.past{background:#fff}.ev.past .date{filter:saturate(.55)}.ev.past .body{opacity:.8}
+.ev.drive .date b{font-size:0}.ev.drive .date .ic{width:56px;height:56px}
+.ecards-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
+.ecards-more>div{overflow:hidden;min-height:0;padding:0 4px;margin:0 -4px}
+.ecards-more.open{grid-template-rows:1fr}
+.ecards-more #ecards-rest{margin:24px 0 4px}
+.ecards-more.open .ev{animation:ev-in .45s var(--ease) both}
+@keyframes ev-in{from{opacity:0;transform:translateY(10px)}}
+.ev-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:32px}
+.ev-link{font-weight:600;font-size:16px}
+@media (max-width:1100px){.ecards{grid-template-columns:1fr}.ev.feat{grid-template-columns:150px 1fr 170px}}
+@media (max-width:600px){.ev,.ev.next,.ev.feat{grid-template-columns:104px 1fr;min-height:150px}.ev .photo{display:none}.ev .date b{font-size:44px}.ev .body{padding:16px}.ev .h2{font-size:20px}}
+/* newsletter centered on mobile */
+@media (max-width:700px){
+ .news{flex-direction:column;align-items:center;text-align:center}
+ .news .h3{justify-content:center}
+ .news form{justify-content:center;padding-top:0;flex-direction:column;align-items:center}
+ .news-label{position:static;align-self:center}
+ .news-err{position:static;margin-top:-8px}
+ .news form .btn{align-self:center}
+}
+/* Type scale on a 4px grid: fixed steps per breakpoint instead of fluid clamps */
+:root{--fs-display:96px;--fs-display-s:112px;--fs-h1:64px;--fs-h1-s:76px;--fs-h2:32px;--fs-h2-s:36px;--fs-lead:20px;--fs-stat:48px;--fs-tile:36px}
+@media (max-width:1300px){:root{--fs-display:80px;--fs-display-s:92px}}
+@media (max-width:1100px){:root{--fs-display:64px;--fs-display-s:76px;--fs-h1:48px;--fs-h1-s:56px;--fs-stat:40px}}
+@media (max-width:700px){:root{--fs-display:44px;--fs-display-s:52px;--fs-h1:36px;--fs-h1-s:44px;--fs-h2:24px;--fs-h2-s:28px;--fs-lead:16px;--fs-stat:32px;--fs-tile:28px}}
+.display,.hero .display,.close .display{font-size:var(--fs-display)}
+.display .script,.hero .display .script,.close .display .script{font-size:var(--fs-display-s)}
+.h1,.h1x{font-size:var(--fs-h1)}
+.h1 .script,.h1x .script{font-size:var(--fs-h1-s)}
+.h2{font-size:var(--fs-h2)}
+.h2 .script{font-size:var(--fs-h2-s)}
+.lead{font-size:var(--fs-lead)}
+.stat-card b{font-size:var(--fs-stat)}
+.tile.wide .h1{font-size:var(--fs-tile)!important}
+.prog .h2,.icard .h2{font-size:var(--fs-h2)}
+.ev .h2{font-size:24px}
+@media (max-width:600px){.ev .h2{font-size:20px}}
+/* event cards: title link + tertiary "Add to calendar" button (downloads .ics) */
+.ev{position:relative}
+.ev .h2 a{text-decoration:none;color:inherit}.ev .h2 a:hover{text-decoration:underline;text-underline-offset:3px}
+.ev .h2 a::after{content:"";position:absolute;inset:0;border-radius:inherit}
+.btn-text{position:relative;z-index:1;display:inline-flex;align-items:center;gap:8px;min-height:40px;margin:4px 0 0 -12px;padding:8px 12px;border:0;border-radius:999px;background:transparent;color:var(--royal);font:400 16px var(--sans);transition:background .2s,border-radius .3s var(--m3-spring-fast)}
+.btn-text .ic{width:20px;height:20px}
+.btn-text:hover{background:rgba(27,95,191,.08);border-radius:12px}.btn-text:active{background:rgba(27,95,191,.14);border-radius:8px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <clipPath id="c-blob" clipPathUnits="objectBoundingBox"><path transform="scale(.0025)" d="M 220 8 C 330 20 396 110 380 220 C 364 330 270 398 170 386 C 70 374 4 290 14 180 C 24 70 110 -4 220 8 Z"/></clipPath>
+  <clipPath id="c-hero" clipPathUnits="objectBoundingBox"><path transform="scale(0.0011628 0.0012821)" d="M481.944 2.60929C738.051 27.1995 891.715 211.626 854.463 437.036C817.212 662.446 598.357 801.79 365.532 777.2C132.708 752.61 -20.9562 580.478 2.32624 355.068C25.6087 129.659 225.838 -21.9809 481.944 2.60929Z"/></clipPath>
+  <clipPath id="c-oval" clipPathUnits="objectBoundingBox"><ellipse cx=".5" cy=".5" rx=".5" ry=".5"/></clipPath>
+  <clipPath id="c-arch" clipPathUnits="objectBoundingBox"><path d="M0 1 V.5 A.5 .5 0 0 1 1 .5 V1 Z"/></clipPath>
+  <clipPath id="c-pebble" clipPathUnits="objectBoundingBox"><path transform="scale(.0025)" d="M 60 120 C 100 20 260 0 340 70 C 420 140 390 300 290 360 C 190 420 40 380 14 270 C -6 190 30 190 60 120 Z"/></clipPath>
+  <clipPath id="c-heart" clipPathUnits="objectBoundingBox"><path transform="scale(.0025)" d="M 200 380 C 120 320 10 250 10 140 C 10 70 65 20 130 20 C 165 20 190 40 200 65 C 210 40 235 20 270 20 C 335 20 390 70 390 140 C 390 250 280 320 200 380 Z"/></clipPath>
+  <clipPath id="c-scallop" clipPathUnits="objectBoundingBox"><path id="scallop-path"/></clipPath>
+  <symbol id="heart" viewBox="0 0 400 400"><path fill="currentColor" d="M 200 380 C 120 320 10 250 10 140 C 10 70 65 20 130 20 C 165 20 190 40 200 65 C 210 40 235 20 270 20 C 335 20 390 70 390 140 C 390 250 280 320 200 380 Z"/></symbol>
+  <symbol id="swoosh" viewBox="0 0 400 400"><path fill="currentColor" d="M 10 300 C 80 120 260 30 390 60 C 300 90 170 170 120 330 C 100 390 30 380 10 300 Z"/></symbol>
+  <symbol id="playtri" viewBox="0 0 22 26"><path d="M0 0 L22 13 L0 26 Z" fill="currentColor"/></symbol>
+<!-- Phosphor Icons, duotone (MIT), @phosphor-icons/core 2.1.1 -->
+  <symbol id="ph-basket" viewBox="0 0 256 256" fill="currentColor"><path d="M232,88,216.93,201.06A8,8,0,0,1,209,208H47a8,8,0,0,1-7.93-6.94L24,88Z" opacity="0.2"/><path d="M136,120v56a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm36.84-.8-5.6,56A8,8,0,0,0,174.4,184a7.32,7.32,0,0,0,.81,0,8,8,0,0,0,7.95-7.2l5.6-56a8,8,0,0,0-15.92-1.6Zm-89.68,0a8,8,0,0,0-15.92,1.6l5.6,56a8,8,0,0,0,8,7.2,7.32,7.32,0,0,0,.81,0,8,8,0,0,0,7.16-8.76ZM239.93,89.06,224.86,202.12A16.06,16.06,0,0,1,209,216H47a16.06,16.06,0,0,1-15.86-13.88L16.07,89.06A8,8,0,0,1,24,80H68.37L122,18.73a8,8,0,0,1,12,0L187.63,80H232a8,8,0,0,1,7.93,9.06ZM89.63,80h76.74L128,36.15ZM222.86,96H33.14L47,200H209Z"/></symbol>
+  <symbol id="ph-calendar-plus" viewBox="0 0 256 256" fill="currentColor"><path d="M216,48V88H40V48a8,8,0,0,1,8-8H208A8,8,0,0,1,216,48Z" opacity="0.2"/><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-48-56a8,8,0,0,1-8,8H136v16a8,8,0,0,1-16,0V160H104a8,8,0,0,1,0-16h16V128a8,8,0,0,1,16,0v16h16A8,8,0,0,1,160,152Z"/></symbol>
+  <symbol id="ph-calendar-dots" viewBox="0 0 256 256" fill="currentColor"><path d="M216,48V88H40V48a8,8,0,0,1,8-8H208A8,8,0,0,1,216,48Z" opacity="0.2"/><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-68-76a12,12,0,1,1-12-12A12,12,0,0,1,140,132Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,132ZM96,172a12,12,0,1,1-12-12A12,12,0,0,1,96,172Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,140,172Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,172Z"/></symbol>
+  <symbol id="ph-facebook-logo" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/></symbol>
+  <symbol id="ph-graduation-cap" viewBox="0 0 256 256" fill="currentColor"><path d="M216,113.07v53.22a8,8,0,0,1-2,5.31c-11.3,12.59-38.9,36.4-86,36.4s-74.68-23.81-86-36.4a8,8,0,0,1-2-5.31V113.07L128,160Z" opacity="0.2"/><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"/></symbol>
+  <symbol id="ph-hand-heart" viewBox="0 0 256 256" fill="currentColor"><path d="M16,152H48v56H16a8,8,0,0,1-8-8V160A8,8,0,0,1,16,152ZM192.54,40A39.12,39.12,0,0,0,156,64a39.12,39.12,0,0,0-36.54-24C97.67,40,80,58.31,80,80c0,14.56,7,27.71,16.73,40H140a20,20,0,0,1,0,40h4l37.78-8.68C203.82,135.07,232,109.23,232,80,232,58.31,214.33,40,192.54,40Z" opacity="0.2"/><path d="M230.33,141.06a24.34,24.34,0,0,0-18.61-4.77C230.5,117.33,240,98.48,240,80c0-26.47-21.29-48-47.46-48A47.58,47.58,0,0,0,156,48.75,47.58,47.58,0,0,0,119.46,32C93.29,32,72,53.53,72,80c0,11,3.24,21.69,10.06,33a31.87,31.87,0,0,0-14.75,8.4L44.69,144H16A16,16,0,0,0,0,160v40a16,16,0,0,0,16,16H120a7.93,7.93,0,0,0,1.94-.24l64-16a6.94,6.94,0,0,0,1.19-.4L226,182.82l.44-.2a24.6,24.6,0,0,0,3.93-41.56ZM119.46,48A31.15,31.15,0,0,1,148.6,67a8,8,0,0,0,14.8,0,31.15,31.15,0,0,1,29.14-19C209.59,48,224,62.65,224,80c0,19.51-15.79,41.58-45.66,63.9l-11.09,2.55A28,28,0,0,0,140,112H100.68C92.05,100.36,88,90.12,88,80,88,62.65,102.41,48,119.46,48ZM16,160H40v40H16Zm203.43,8.21-38,16.18L119,200H56V155.31l22.63-22.62A15.86,15.86,0,0,1,89.94,128H140a12,12,0,0,1,0,24H112a8,8,0,0,0,0,16h32a8.32,8.32,0,0,0,1.79-.2l67-15.41.31-.08a8.6,8.6,0,0,1,6.3,15.9Z"/></symbol>
+  <symbol id="ph-handshake" viewBox="0 0 256 256" fill="currentColor"><path d="M200,152l-40,40L96,176,40,136,72.68,70.63,128,56l55.32,14.63L183.6,72H144L98.34,116.29a8,8,0,0,0,1.38,12.42C117.23,139.9,141,139.13,160,120Z" opacity="0.2"/><path d="M254.3,107.91,228.78,56.85a16,16,0,0,0-21.47-7.15L182.44,62.13,130.05,48.27a8.14,8.14,0,0,0-4.1,0L73.56,62.13,48.69,49.7a16,16,0,0,0-21.47,7.15L1.7,107.9a16,16,0,0,0,7.15,21.47l27,13.51,55.49,39.63a8.06,8.06,0,0,0,2.71,1.25l64,16a8,8,0,0,0,7.6-2.1l55.07-55.08,26.42-13.21a16,16,0,0,0,7.15-21.46Zm-54.89,33.37L165,113.72a8,8,0,0,0-10.68.61C136.51,132.27,116.66,130,104,122L147.24,80h31.81l27.21,54.41ZM41.53,64,62,74.22,36.43,125.27,16,115.06Zm116,119.13L99.42,168.61l-49.2-35.14,28-56L128,64.28l9.8,2.59-45,43.68-.08.09a16,16,0,0,0,2.72,24.81c20.56,13.13,45.37,11,64.91-5L188,152.66Zm62-57.87-25.52-51L214.47,64,240,115.06Zm-87.75,92.67a8,8,0,0,1-7.75,6.06,8.13,8.13,0,0,1-1.95-.24L80.41,213.33a7.89,7.89,0,0,1-2.71-1.25L51.35,193.26a8,8,0,0,1,9.3-13l25.11,17.94L126,208.24A8,8,0,0,1,131.82,217.94Z"/></symbol>
+  <symbol id="ph-heart" viewBox="0 0 256 256" fill="currentColor"><path d="M232,102c0,66-104,122-104,122S24,168,24,102A54,54,0,0,1,78,48c22.59,0,41.94,12.31,50,32,8.06-19.69,27.41-32,50-32A54,54,0,0,1,232,102Z" opacity="0.2"/><path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40a62.07,62.07,0,0,0-62,62c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40ZM128,214.8C109.74,204.16,32,155.69,32,102A46.06,46.06,0,0,1,78,56c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,155.61,146.24,204.15,128,214.8Z"/></symbol>
+  <symbol id="ph-house-line" viewBox="0 0 256 256" fill="currentColor"><path d="M216,116.69V216H152V152H104v64H40V116.69l82.34-82.35a8,8,0,0,1,11.32,0Z" opacity="0.2"/><path d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z"/></symbol>
+  <symbol id="ph-instagram-logo" viewBox="0 0 256 256" fill="currentColor"><path d="M176,32H80A48,48,0,0,0,32,80v96a48,48,0,0,0,48,48h96a48,48,0,0,0,48-48V80A48,48,0,0,0,176,32ZM128,168a40,40,0,1,1,40-40A40,40,0,0,1,128,168Z" opacity="0.2"/><path d="M176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm64-84a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></symbol>
+  <symbol id="ph-lightbulb" viewBox="0 0 256 256" fill="currentColor"><path d="M208,104a79.86,79.86,0,0,1-30.59,62.92A24.29,24.29,0,0,0,168,186v6a8,8,0,0,1-8,8H96a8,8,0,0,1-8-8v-6a24.11,24.11,0,0,0-9.3-19A79.87,79.87,0,0,1,48,104.45C47.76,61.09,82.72,25,126.07,24A80,80,0,0,1,208,104Z" opacity="0.2"/><path d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z"/></symbol>
+  <symbol id="ph-linkedin-logo" viewBox="0 0 256 256" fill="currentColor"><path d="M224,40V216a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V40a8,8,0,0,1,8-8H216A8,8,0,0,1,224,40Z" opacity="0.2"/><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"/></symbol>
+  <symbol id="ph-pinterest-logo" viewBox="0 0 256 256" fill="currentColor"><path d="M216,112c0,44.18-32,72-64,72s-41.63-21.07-41.63-21.07h0L128,88l13.14-55.83h0A80,80,0,0,1,216,112Z" opacity="0.2"/><path d="M224,112c0,22.57-7.9,43.2-22.23,58.11C188.39,184,170.25,192,152,192c-17.88,0-29.82-5.86-37.43-12l-10.78,45.82A8,8,0,0,1,96,232a8.24,8.24,0,0,1-1.84-.21,8,8,0,0,1-6-9.62l32-136a8,8,0,0,1,15.58,3.66l-16.9,71.8C122,166,131.3,176,152,176c27.53,0,56-23.94,56-64A72,72,0,1,0,73.63,148a8,8,0,0,1-13.85,8A88,88,0,1,1,224,112Z"/></symbol>
+  <symbol id="ph-users-three" viewBox="0 0 256 256" fill="currentColor"><path d="M168,144a40,40,0,1,1-40-40A40,40,0,0,1,168,144ZM64,56A32,32,0,1,0,96,88,32,32,0,0,0,64,56Zm128,0a32,32,0,1,0,32,32A32,32,0,0,0,192,56Z" opacity="0.2"/><path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1,0-16,24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.85,8,57,57,0,0,0-98.15,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"/></symbol>
+  <symbol id="ph-x-logo" viewBox="0 0 256 256" fill="currentColor"><path d="M208,216H160L48,40H96Z" opacity="0.2"/><path d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z"/></symbol>
+  <symbol id="ph-youtube-logo" viewBox="0 0 256 256" fill="currentColor"><path d="M226.59,71.53a16,16,0,0,0-9.63-11C183.48,47.65,128,48,128,48s-55.48-.35-89,12.58a16,16,0,0,0-9.63,11C27.07,80.54,24,98.09,24,128s3.07,47.46,5.41,56.47A16,16,0,0,0,39,195.42C72.52,208.35,128,208,128,208s55.48.35,89-12.58a16,16,0,0,0,9.63-10.95c2.34-9,5.41-26.56,5.41-56.47S228.93,80.54,226.59,71.53ZM112,160V96l48,32Z" opacity="0.2"/><path d="M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-15.49,113a8,8,0,0,1-4.77,5.49c-31.65,12.22-85.48,12-86.12,12s-54.37.18-86-12a8,8,0,0,1-4.77-5.49C34.8,173.39,32,156.57,32,128s2.8-45.39,5.16-54.47A8,8,0,0,1,41.93,68C73.58,55.82,127.4,56,128.05,56s54.37-.18,86,12a8,8,0,0,1,4.77,5.49C221.2,82.61,224,99.43,224,128S221.2,173.39,218.84,182.47Z"/></symbol>
+ </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <a href="#top" aria-label="Miracles for Kids, home"><img class="logo" src="assets/logo.png" alt="Miracles for Kids"></a>
+  <button class="menu-btn" aria-expanded="false" aria-controls="navlinks" aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <nav class="nav-links" id="navlinks" aria-label="Main">
+    <a href="#stories">Family Stories</a>
+    <a href="#programs">Programs</a>
+    <a href="https://miraclesforkids.org/why-we-help/">About</a>
+    <a href="#events">Events</a>
+    <a href="#involve">Get Involved</a>
+    <a class="btn btn-orange" href="#give">Donate</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero-text">
+    <span class="eyebrow">Miracles for Kids</span>
+    <h1 id="hero-h" class="display">Small miracles.<br><span class="script">Big difference.</span></h1>
+    <p class="lead">Bills paid, homes kept, kids being kids.</p>
+    <a class="video-chip" href="https://www.youtube.com/watch?v=GKu1Jh4S97M" aria-label="Watch William's story, 1 minute 43 seconds"><span class="play"><svg viewBox="0 0 22 26" style="color:var(--navy)"><use href="#playtri"/></svg></span><span class="cap">Watch William's story<br><span style="color:var(--grey)">1:43</span></span></a>
+  </div>
+  <div class="hero-media">
+    <img class="hero-blob5" data-speed="-0.18" src="assets/shape-blob5.svg" alt="" aria-hidden="true">
+    <img class="hero-photo" data-speed="0.06" src="assets/hero.jpg" alt="A smiling girl walking with a purple walker">
+    <img class="hero-heart" data-speed="-0.32" src="assets/shape-heart1.svg" alt="" aria-hidden="true">
+  </div>
+</section>
+
+<section class="truth" aria-labelledby="truth-h">
+  <img class="pbg" data-speed="0.25" src="assets/truth-bg.png" alt="">
+  <span class="shade"></span>
+  <div class="inner">
+    <h2 id="truth-h" class="h1x">Rent's due. <span class="script">Miracles</span> too.</h2>
+    <p>When a child is critically ill, the bills don't stop. We pay them.</p>
+    <div class="truth-ctas"><a class="video-chip" href="https://www.youtube.com/watch?v=ctB_Ko2Xvlk" aria-label="Watch 20 years of miracles, a video compilation"><span class="play"><svg viewBox="0 0 22 26" style="color:var(--navy)"><use href="#playtri"/></svg></span><span class="cap" style="color:var(--navy)">Watch 20 years of miracles</span></a>
+    <a class="more" href="#programs">How we help</a></div>
+  </div>
+  <img class="wave" style="top:-1px" src="assets/wave-top.svg" alt="" aria-hidden="true">
+  <img class="wave" style="bottom:-1px" src="assets/wave-bottom.svg" alt="" aria-hidden="true">
+</section>
+
+<section class="stories" id="stories" aria-labelledby="st-h">
+  <div class="stories-head">
+    <div><span class="eyebrow">Family Stories</span><h2 id="st-h" class="h1"><span class="script">Meet</span> the miracles.</h2><p class="lead">Real families. Real kids. Their words.</p></div>
+    <div class="pager"><span class="cap" id="page-label" aria-live="polite">1 of 2</span><button class="btn btn-ghost" id="prev" aria-label="Previous stories">← Prev</button><button class="btn btn-ghost" id="next" aria-label="Next stories">Next →</button></div>
+  </div>
+  <div class="filters-slot"><div class="filters" role="group" aria-label="Filter stories">
+    <button class="chip" aria-pressed="true" data-f="all">All</button><button class="chip" aria-pressed="false" data-f="video">Video</button><button class="chip" aria-pressed="false" data-f="read">Read</button><button class="chip" aria-pressed="false" data-f="wato">Where Are They Now?</button><button class="chip" aria-pressed="false" data-f="lifeline">Lifeline</button><button class="chip" aria-pressed="false" data-f="safe">Safe Haven</button><button class="chip" aria-pressed="false" data-f="balance">Balance</button><button class="chip" aria-pressed="false" data-f="boost">Boost</button><button class="chip" aria-pressed="false" data-f="pillars">Pillars</button>
+  </div></div>
+  <div class="mosaic" id="mosaic"><p class="empty" hidden>No stories in this group yet. <button class="chip" type="button" data-reset>See all stories</button></p>
+    <a class="tile tl" data-t="video lifeline" data-page="1" style="background:var(--sun-100)" href="https://www.youtube.com/watch?v=GKu1Jh4S97M"><svg class="deco" viewBox="0 0 100 100" style="right:0;bottom:0;width:62%;color:var(--sun)" preserveAspectRatio="none"><path fill="currentColor" d="M0 45 L50 10 L100 45 V100 H0Z"/></svg><span class="play"><svg viewBox="0 0 22 26" style="width:18px;color:var(--navy)"><use href="#playtri"/></svg></span><span class="h2" style="font-size:24px">William's miracle</span><span class="pill">1:43</span></a>
+    <div class="tile tl qt" data-t="read lifeline" data-page="1" style="background:var(--royal);color:#fff"><p class="quote">“To have help from Miracles for Kids lifts a weight from us…”</p><span class="cap">Maribel, a Miracles for Kids mom</span></div>
+    <a class="tile tr" data-t="read lifeline" data-page="1" href="https://miraclesforkids.org/families-weve-helped/?fam=0"><img class="poster" src="assets/michelle.jpg" alt="Michelle with her mother and brother"><span class="pill">Michelle's miracle</span></a>
+    <a class="tile br" data-t="video boost" data-page="1" style="background:var(--sky-50)" href="https://www.youtube.com/watch?v=BFT26CmxsYY"><svg class="deco" viewBox="0 0 100 100" style="left:0;bottom:0;width:58%;height:60%;color:var(--orange)" preserveAspectRatio="none"><path fill="currentColor" d="M0 100 V40 A50 40 0 0 1 100 40 V100Z"/></svg><span class="play"><svg viewBox="0 0 22 26" style="width:18px;color:var(--navy)"><use href="#playtri"/></svg></span><span class="h2" style="font-size:24px">Willow's miracle</span><span class="pill">3:01</span></a>
+    <a class="tile wide tr" data-t="video wato safe" data-page="2" style="background:var(--orange)" href="https://www.youtube.com/watch?v=QAD2hSqy9oY"><svg class="deco" viewBox="0 0 100 100" style="right:0;top:0;width:60%;height:100%;color:#FBD7A6" preserveAspectRatio="none"><path fill="currentColor" d="M100 0 V100 H10 C10 40 50 0 100 0Z"/></svg><span class="play"><svg viewBox="0 0 22 26" style="width:18px;color:var(--navy)"><use href="#playtri"/></svg></span><span class="pill">Where Are They Now?</span><span class="h1" style="font-size:clamp(28px,2.6vw,38px)">Jeremiah's miracle</span><span>They kept their home through it all.</span></a>
+    <a class="tile tl" data-t="read lifeline" data-page="2" href="https://miraclesforkids.org/families-weve-helped/"><img class="poster" src="assets/kiara.jpg" alt="Kiara and her family"><span class="pill">Kiara's miracle</span></a>
+    <div class="tile tl qt" data-t="read boost" data-page="2" style="background:var(--sun-100)"><p class="quote">“…thanks to you, many times my children was able to have snack at home.”</p><span class="cap" style="color:var(--grey)">The Madrid family</span></div>
+  </div>
+</section>
+
+<section class="programs" id="programs" aria-labelledby="pr-h">
+  <svg class="wave" style="top:-1px" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M 0 0 L 1440 0 L 1440 30 C 1200 90 960 10 720 40 C 480 70 240 90 0 40 Z" fill="#fff"/></svg>
+  <div><span class="eyebrow">How we help</span><h2 id="pr-h" class="h1">Five kinds of <span class="script">miracle.</span></h2><p class="lead">Each one takes a weight off a family.</p></div>
+  <div class="pgrid">
+    <a class="prog big reveal" href="https://miraclesforkids.org/pay-the-bills/"><img class="crop" style="clip-path:url(#c-oval)" src="assets/lifeline-stock.jpg" alt="A mother and daughter hugging outdoors"><span class="k"><svg class="ic" aria-hidden="true"><use href="#ph-lightbulb"/></svg>Lifeline</span><span class="h2">The <span class="script">lights-on</span> miracle</span><p>Up to $500 a month toward the bills.</p><span class="stat">230+ families every month</span></a>
+    <a class="prog big reveal" href="https://miraclesforkids.org/housing/"><img class="crop" style="clip-path:url(#c-arch)" src="assets/safe-haven-manor.jpg" alt="Miracle Manor, MFK's family housing"><span class="k"><svg class="ic" aria-hidden="true"><use href="#ph-house-line"/></svg>Safe Haven</span><span class="h2">The <span class="script">home</span> miracle</span><p>Miracle Manor, around the corner from CHOC.</p><span class="stat">22 families housed</span></a>
+    <a class="prog reveal" href="https://miraclesforkids.org/heal/"><img class="crop" style="clip-path:url(#c-heart);object-position:40% 35%" src="assets/balance-stock.jpg" alt="A counselor working with a young child"><span class="k"><svg class="ic" aria-hidden="true"><use href="#ph-heart"/></svg>Balance</span><span class="h2">The <span class="script">hard-day</span> miracle</span><p>Counseling for the whole family.</p><span class="stat">400+ people in therapy this year</span></a>
+    <a class="prog reveal" href="https://miraclesforkids.org/feed-and-clothe/"><img class="crop" style="clip-path:url(#c-pebble)" src="assets/boost-box.jpg" alt="A volunteer handing a Box of Miracles to a family at their door"><span class="k"><svg class="ic" aria-hidden="true"><use href="#ph-basket"/></svg>Boost</span><span class="h2">The <span class="script">full-fridge</span> miracle</span><p>Food, clothes and essentials, every month.</p><span class="stat">Box of Miracles monthly</span></a>
+    <a class="prog reveal" href="https://miraclesforkids.org/how-we-help-2/pillars/"><img class="crop" style="clip-path:url(#c-scallop)" src="assets/pillars.jpg" alt="A father and son blowing bubbles on the grass"><span class="k"><svg class="ic" aria-hidden="true"><use href="#ph-graduation-cap"/></svg>Pillars</span><span class="h2">The <span class="script">what's-next</span> miracle</span><p>Jobs, school and a fresh start.</p><span class="stat">78% of those interviewed were hired</span></a>
+  </div>
+</section>
+
+<section class="proof" aria-labelledby="pf-h">
+  <h2 id="pf-h" class="h1">Trusted by the <span class="script">hospitals</span><br>that send us families.</h2>
+  <p class="lead" style="margin-top:20px;color:var(--navy)">Every family is referred by a children's hospital.</p>
+  <div class="stats">
+    <div class="stat-card reveal" role="group" aria-label="2,100+ families helped"><b aria-hidden="true" data-count="2100" data-suffix="+">2,100+</b><span aria-hidden="true">families helped</span></div>
+    <div class="stat-card reveal"><b>Up to $500</b><span>a month toward bills</span></div>
+    <div class="stat-card reveal" role="group" aria-label="41,437 nights of sleep at Miracle Manor"><b aria-hidden="true" data-count="41437">41,437</b><span aria-hidden="true">nights of sleep at Miracle Manor</span></div>
+    <div class="stat-card hero-stat reveal" role="group" aria-label="88¢ of every dollar to programs"><b aria-hidden="true" data-count="88" data-suffix="¢">88¢</b><span aria-hidden="true">of every dollar to programs</span></div>
+  </div>
+  <ul class="hosp reveal" aria-label="Referring hospitals"><li><img src="assets/h-logo-choc.png" alt="CHOC Children's" loading="lazy"></li><li><img src="assets/h-logo-chla.png" alt="Children's Hospital Los Angeles" loading="lazy"></li><li><img src="assets/h-cityofhopelogo2020.png" alt="City of Hope" loading="lazy"></li><li><img src="assets/h-by-the-bay-health-logo.png" alt="By the Bay Health" loading="lazy"></li><li><img src="assets/h-loma-linda.png" alt="Loma Linda University Children's Hospital" loading="lazy"></li><li><img src="assets/h-kisspng-rady-children-s-hospital.png" alt="Rady Children's Hospital San Diego" loading="lazy"></li><li><img src="assets/h-logo-mattel.png" alt="UCLA Mattel Children's Hospital" loading="lazy"></li><li><img src="assets/h-logo-ucsf2.png" alt="UCSF Benioff Children's Hospital Oakland" loading="lazy"></li><li><img src="assets/h-pc-phoenix-childrens-hosp-logo.png" alt="Phoenix Children's Hospital" loading="lazy"></li><li><img src="assets/h-texas-childrens-hospital.png" alt="Texas Children's Hospital" loading="lazy"></li></ul>
+  <p style="margin-top:28px;font-weight:650"><a href="https://miraclesforkids.org/financials/">Our financials</a></p>
+</section>
+
+<section class="involve" id="involve" aria-labelledby="in-h">
+  <h2 id="in-h" class="h1">More ways to make <span class="script">miracles.</span></h2>
+  <div class="igrid">
+    <a class="icard reveal" style="background:var(--sun-100)" href="https://360miracle.org/"><img class="crop" src="assets/involve-360-stock.jpg" alt="Two MFK team members at an event"><div class="body"><span class="ic-badge"><svg class="ic" aria-hidden="true"><use href="#ph-users-three"/></svg></span><p class="h2">Miracles, <span class="script">together.</span></p><p>A circle of women giving all year.</p><span class="btn btn-orange go">Join 360° Miracle</span></div></a>
+    <a class="icard reveal" style="background:var(--sky-50)" href="https://miraclesforkids.volunteerhub.com/vv2/"><img class="crop" src="assets/involve-volunteer-4x3.jpg" alt="Volunteers in matching shirts, arms around each other"><div class="body"><span class="ic-badge"><svg class="ic" aria-hidden="true"><use href="#ph-hand-heart"/></svg></span><p class="h2">Join <span class="script">Team</span> Miracles.</p><p>Wrap, pack, deliver, cheer.</p><span class="btn btn-orange go">Volunteer</span></div></a>
+    <a class="icard reveal" style="background:var(--sun-100)" href="https://miraclesforkids.org/our-partners/"><img class="crop" src="assets/partners-hands.jpg" alt="Many hands joined together"><div class="body"><span class="ic-badge"><svg class="ic" aria-hidden="true"><use href="#ph-handshake"/></svg></span><p class="h2"><span class="script">Business</span> with a heart.</p><p>Give, sponsor, volunteer as a team.</p><span class="btn btn-orange go">Partner with us</span></div></a>
+  </div>
+</section>
+
+<section class="events" id="events" aria-labelledby="ev-h">
+  <h2 id="ev-h" class="h1">Miracles, <span class="script">in person.</span></h2>
+  <p class="lead">Galas, baskets and beach days.</p>
+  <div class="ecards" id="ecards"></div>
+  <div class="ecards-more" id="ecards-more"><div><div class="ecards" id="ecards-rest"></div></div></div>
+  <div class="ev-actions"><button type="button" class="btn btn-sky" id="ev-toggle" aria-expanded="false" aria-controls="ecards-more">See the full 2026 calendar</button><a class="ev-link" href="https://miraclesforkids.org/take-action/our-events/">Event details on miraclesforkids.org</a></div>
+</section>
+
+<section class="close" aria-labelledby="cl-h">
+  <img class="pbg" data-speed="0.25" src="assets/close-bg.png" alt="">
+  <span class="shade"></span>
+  <img class="wave" style="top:-1px;z-index:1" src="assets/close-wave-top.svg" alt="" aria-hidden="true">
+  <img class="circle" data-speed="-0.2" src="assets/shape-circle.svg" alt="" aria-hidden="true">
+  <img class="heart" data-speed="-0.35" src="assets/shape-heart2.svg" alt="" aria-hidden="true">
+  <div class="inner">
+    <h2 id="cl-h" class="display">Make a <span class="script">Miracle</span> today.</h2>
+    <a class="btn btn-orange" href="#give">Give monthly</a>
+    <div class="news">
+      <div><p class="h3">Get the <span class="script">good</span> news.</p><p class="cap">Family stories and ways to help, once a month.</p></div>
+      <form id="news" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+        <label class="cap news-label" for="em">Email address</label>
+        <input id="em" type="email" required placeholder="you@example.com" aria-describedby="em-err"><span class="news-err" id="em-err" aria-live="polite"></span>
+        <button class="btn btn-orange" type="submit">Sign up</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div><p style="font:750 24px/1.3 var(--sans);margin-bottom:16px">Helping the families who don't have time to ask for help.</p><p>17848 Sky Park Circle, Suite C, Irvine, CA 92614<br>(714) 730-3040<br>info@miraclesforkids.org<br>Miracles for Kids is a 501(c)(3) nonprofit. EIN 91-2160616.</p><div class="social" aria-label="Miracles for Kids on social media"><a href="#" data-todo="social URL" aria-label="Facebook"><svg class="ic" aria-hidden="true"><use href="#ph-facebook-logo"/></svg></a><a href="#" data-todo="social URL" aria-label="Instagram"><svg class="ic" aria-hidden="true"><use href="#ph-instagram-logo"/></svg></a><a href="#" data-todo="social URL" aria-label="LinkedIn"><svg class="ic" aria-hidden="true"><use href="#ph-linkedin-logo"/></svg></a><a href="#" data-todo="social URL" aria-label="YouTube"><svg class="ic" aria-hidden="true"><use href="#ph-youtube-logo"/></svg></a><a href="#" data-todo="social URL" aria-label="Pinterest"><svg class="ic" aria-hidden="true"><use href="#ph-pinterest-logo"/></svg></a><a href="#" data-todo="social URL" aria-label="X"><svg class="ic" aria-hidden="true"><use href="#ph-x-logo"/></svg></a></div></div>
+  <div><h3 class="fh">Programs</h3><a href="https://miraclesforkids.org/pay-the-bills/">Lifeline</a><a href="https://miraclesforkids.org/housing/">Safe Haven</a><a href="https://miraclesforkids.org/heal/">Balance</a><a href="https://miraclesforkids.org/feed-and-clothe/">Boost</a><a href="https://miraclesforkids.org/how-we-help-2/pillars/">Pillars</a></div>
+  <div><h3 class="fh">About</h3><a href="https://miraclesforkids.org/why-we-help/our-story/">Our Story</a><a href="https://miraclesforkids.org/our-team/">Our Team</a><a href="https://miraclesforkids.org/financials/">Financials</a><a href="https://miraclesforkids.org/newsroom/">Newsroom</a><a href="https://miraclesforkids.org/careers/">Careers</a></div>
+  <div><h3 class="fh">Get involved</h3><a href="#give">Donate</a><a href="https://miraclesforkids.volunteerhub.com/vv2/">Volunteer</a><a href="https://360miracle.org/">360° Miracle</a><a href="https://miraclesforkids.org/our-partners/">Partners</a><a href="#events">Events</a></div>
+</footer>
+
+    <form class="give" id="give" role="region" aria-labelledby="give-h">
+  <button type="button" class="give-x" aria-label="Close donation"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <p class="h3" id="give-h">Become a monthly <span class="script">miracle.</span></p>
+  <button type="button" class="give-more" aria-expanded="false">Choose an amount</button>
+  <div class="give-body"><div>
+  <div class="toggle" role="group" aria-label="Frequency"><button type="button" aria-pressed="true" data-freq="monthly">Monthly</button><button type="button" aria-pressed="false" data-freq="once">One-time</button></div>
+  <div class="amounts" role="group" aria-label="Amount">
+    <button type="button" aria-pressed="false">$25</button><button type="button" aria-pressed="true">$50</button><button type="button" aria-pressed="false">$100</button>
+    <button type="button" aria-pressed="false">$250</button><button type="button" aria-pressed="false">$300</button><button type="button" aria-pressed="false">$350</button>
+  </div>
+  <button class="btn btn-orange" type="submit">Give $50 monthly</button>
+  </div></div>
+</form>
+<button type="button" class="fab" id="fab" aria-label="Donate"><svg class="ic" aria-hidden="true"><use href="#ph-heart"/></svg><span class="fab-label">Donate</span></button>
+<dialog class="vbox" id="vbox" aria-label="Video"><button type="button" class="give-x" aria-label="Close video"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button><span class="mfk-loader" aria-hidden="true"><svg viewBox="0 0 1 1"><path/></svg></span><iframe title="Video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></dialog>
+<div class="proto-flag" role="note">Prototype for testing. Forms and donations don't send anything.</div>
+<style>.proto-flag{position:fixed;left:16px;bottom:16px;z-index:40;padding:6px 12px;border-radius:999px;background:var(--navy);color:#fff;font:400 12px/16px var(--sans);opacity:.85;pointer-events:none}@media (max-width:700px){.proto-flag{left:12px;bottom:84px}}</style>
+<script>
+if(new URLSearchParams(location.search).get("m3")==="1")document.documentElement.classList.add("m3");
+// Scalloped "flower" crop for Pillars (generated)
+(function(){let d='',n=12,a=.06;for(let i=0;i<=240;i++){const t=i/240*2*Math.PI;let r=.5*(1-a*Math.abs(Math.sin(n*t/2)))/(1);const x=.5+r*Math.cos(t),y=.5+r*Math.sin(t)*1;d+=(i?'L':'M')+x.toFixed(4)+' '+y.toFixed(4)+' ';}document.getElementById('scallop-path').setAttribute('d',d+'Z');})();
+// Sticky nav shadow + mobile menu
+const nav=document.getElementById('nav'),mb=nav.querySelector('.menu-btn');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>8),{passive:true});
+const setMenu=o=>{nav.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Close menu':'Open menu');if(o)nav.querySelector('.nav-links a').focus();};
+mb.addEventListener('click',()=>setMenu(!nav.classList.contains('open')));
+addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){setMenu(false);mb.focus();}});
+nav.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded',false);}));
+// Donation card: frequency + amount update the button label
+const give=document.getElementById('give'),gbtn=give.querySelector('.btn');let freq='monthly',amt='$50';
+const lbl=()=>gbtn.textContent='Give '+amt+(freq==='monthly'?' monthly':' today');
+give.querySelectorAll('.toggle button').forEach(b=>b.addEventListener('click',()=>{give.querySelectorAll('.toggle button').forEach(x=>x.setAttribute('aria-pressed',x===b));freq=b.dataset.freq;b.parentElement.dataset.on=freq;document.getElementById('give-h').innerHTML=freq==='monthly'?'Become a monthly <span class="script">miracle.</span>':'Be today\'s <span class="script">miracle.</span>';lbl();}));
+give.querySelectorAll('.amounts button').forEach(b=>b.addEventListener('click',()=>{give.querySelectorAll('.amounts button').forEach(x=>x.setAttribute('aria-pressed',x===b));amt=b.textContent;lbl();}));
+// Donation pop-out: appears once the visitor scrolls past 35% of the hero; X or Esc closes it for the session; Donate links reopen it
+const gx=give.querySelector('.give-x');let dismissed=false;try{dismissed=sessionStorage.getItem('mfk-give-x')==='1'}catch(e){}
+let opener=null;const more=give.querySelector('.give-more');
+const openGive=(f,from)=>{give.classList.add('open');if(f){give.classList.remove('mini');more.setAttribute('aria-expanded','true');opener=from||null;give.querySelector('.toggle button[aria-pressed=true]').focus();}else if(!give.classList.contains('full'))give.classList.add('mini');};
+more.addEventListener('click',()=>{give.classList.remove('mini');give.classList.add('full');more.setAttribute('aria-expanded','true');give.querySelector('.toggle button[aria-pressed=true]').focus();});
+const closeGive=()=>{give.classList.remove('open');if(opener){opener.focus();opener=null;}dismissed=true;try{sessionStorage.setItem('mfk-give-x','1')}catch(e){}};
+gx.addEventListener('click',closeGive);addEventListener('keydown',e=>{if(e.key==='Escape'&&give.classList.contains('open'))closeGive();});
+addEventListener('scroll',()=>{if(!dismissed&&scrollY>innerHeight*.35)openGive(false);},{passive:true});
+document.querySelectorAll('a[href="#give"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openGive(true,a);}));
+// Client testimonials (raw/R6). Quote tiles step through them with the pager.
+const QUOTES=[["“To have help from Miracles for Kids lifts a weight from us…”","Maribel, a Miracles for Kids mom"],["“…thanks to you, many times my children was able to have snack at home.”","The Madrid family"],["“They genuinely care about the well-being of families like mine.”","Miranda M."],["“For my son and for me, Miracles for Kids has been of great mental health help, and we look forward to the boxes each month.”","Diego O."],["“We are infinitely grateful to all of you for your assistance, which does us so much good.”","Denise M."],["“Miracles for Kids has been a huge help to Miranda and our family.”","Miranda M."]];
+const setQuotes=pg=>document.querySelectorAll('.qt').forEach((t,i)=>{const q=QUOTES[(2*(pg-1)+i)%QUOTES.length];t.querySelector('.quote').textContent=q[0];t.querySelector('.cap').textContent=q[1];});
+new IntersectionObserver(es=>es.forEach(e=>give.classList.toggle('tuck',e.isIntersecting))).observe(document.querySelector('.stories-head'));
+// Videos play in a lightbox instead of leaving the page
+const vbox=document.getElementById('vbox'),vframe=vbox.querySelector('iframe');
+document.querySelectorAll('a[href*="youtube.com/watch"]').forEach(a=>{const id=new URL(a.href).searchParams.get('v');a.setAttribute('aria-haspopup','dialog');a.addEventListener('click',e=>{if(e.metaKey||e.ctrlKey)return;e.preventDefault();vframe.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0';vbox.showModal();});});
+vbox.querySelector('.give-x').onclick=()=>vbox.close();vbox.addEventListener('close',()=>{vframe.src='';});vbox.addEventListener('click',e=>{if(e.target===vbox)vbox.close();});
+// Newsletter inline validation
+const em=document.getElementById('em');em.addEventListener('invalid',e=>{e.preventDefault();em.setAttribute('aria-invalid','true');document.getElementById('em-err').textContent='Please enter an email like name@example.com';});em.addEventListener('input',()=>{if(em.validity.valid){em.removeAttribute('aria-invalid');document.getElementById('em-err').textContent='';}});
+// Stories: filters + pager (Figma shows "1 of 6"; each page rotates the mosaic)
+const mosaic=document.getElementById('mosaic'),tiles=[...mosaic.querySelectorAll('.tile')],label=document.getElementById('page-label');let filt='all',page=1;const PAGES=Math.ceil(QUOTES.length/2);
+function render(){const pool=tiles.filter(t=>filt==='all'||t.dataset.t.split(' ').includes(filt));const paged=filt==='all';
+ tiles.forEach(t=>t.classList.toggle('hide',!pool.includes(t)));mosaic.querySelector('.empty').hidden=pool.length>0;label.textContent=paged?page+' of '+PAGES:pool.length+' stor'+(pool.length===1?'y':'ies');
+ document.getElementById('prev').disabled=!paged||page===1;document.getElementById('next').disabled=!paged||page===PAGES;}
+const RM=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;let turning=null;
+function rotate(d){setQuotes(page);const small=tiles.filter(t=>!t.classList.contains('wide')&&!t.classList.contains('qt'));const first=small[d>0?0:small.length-1];d>0?mosaic.appendChild(first):mosaic.insertBefore(first,mosaic.firstChild);render();}
+function turn(d){page+=d;if(RM()){rotate(d);return;}mosaic.getAnimations().forEach(a=>a.cancel());turning=mosaic.animate([{opacity:1,transform:'none'},{opacity:0,transform:'translateX('+(-d*24)+'px)'}],{duration:180,easing:'ease-in'}).onfinish=()=>{setQuotes(page);const small=tiles.filter(t=>!t.classList.contains('wide')&&!t.classList.contains('qt'));const first=small[d>0?0:small.length-1];d>0?mosaic.appendChild(first):mosaic.insertBefore(first,mosaic.firstChild);render();mosaic.animate([{opacity:0,transform:'translateX('+(d*24)+'px)'},{opacity:1,transform:'none'}],{duration:260,easing:'cubic-bezier(.2,.7,.2,1)'});};}
+document.querySelectorAll('.filters .chip').forEach(c=>c.addEventListener('click',()=>{document.querySelectorAll('.filters .chip').forEach(x=>x.setAttribute('aria-pressed',x===c));filt=c.dataset.f;page=1;if(document.startViewTransition&&!RM())document.startViewTransition(render);else render();}));
+tiles.forEach((t,i)=>t.style.viewTransitionName='tile-'+i);
+mosaic.querySelector('[data-reset]').onclick=()=>document.querySelector('.filters .chip[data-f=all]').click();
+document.getElementById('prev').onclick=()=>turn(-1);document.getElementById('next').onclick=()=>turn(1);render();
+// Parallax: [data-speed] layers drift against scroll (off for reduced motion)
+const layers=[...document.querySelectorAll('[data-speed]')];
+layers.forEach(el=>el.style.setProperty('--sp',el.dataset.speed));
+if(!RM()&&!CSS.supports('animation-timeline','view()')){let tick=false;const run=()=>{const vh=innerHeight;layers.forEach(el=>{const r=el.parentElement.getBoundingClientRect();if(r.bottom<-200||r.top>vh+200)return;const off=(r.top+r.height/2-vh/2)*+el.dataset.speed;el.style.translate='0 '+off.toFixed(1)+'px';});tick=false;};
+ addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(run);}},{passive:true});addEventListener('resize',run);run();}
+// Reveal on scroll + count-up stats
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);
+ const b=e.target.querySelector&&e.target.querySelector('[data-count]');if(b&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const n=+b.dataset.count,s=b.dataset.suffix||'',t0=performance.now();const step=t=>{const p=Math.min(1,(t-t0)/1200),v=Math.round(n*(1-Math.pow(1-p,3)));b.textContent=v.toLocaleString()+s;b.style.fontWeight=Math.round(500+350*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step);};requestAnimationFrame(step);}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// ---- Shape morph engine (M3 Expressive shape morphing with MFK shapes) ----
+const N=96;
+const polar=f=>Array.from({length:N},(_,i)=>{const t=-Math.PI/2+i/N*2*Math.PI,r=f(t);return[.5+r*Math.cos(t),.5+r*Math.sin(t)];});
+const SHAPES={
+ cookie:polar(t=>.5-.035*(1+Math.cos(9*(t+Math.PI/2)))),
+ flower:polar(t=>.5-.09*(1+Math.cos(6*(t+Math.PI/2)))/1),
+ clover:polar(t=>.5-.11*(1-Math.abs(Math.cos(2*(t+Math.PI/2)+Math.PI/2)))*1.6+.04),
+ burst:polar(t=>.5-.06*Math.abs(Math.sin(6*(t+Math.PI/2)))),
+ oval:polar(()=>.5)};
+const ns='http://www.w3.org/2000/svg',probe=document.createElementNS(ns,'svg');probe.style.cssText='position:absolute;width:0;height:0';document.body.appendChild(probe);
+function sample(d){const el=document.createElementNS(ns,'path');el.setAttribute('d',d);probe.appendChild(el);const L=el.getTotalLength(),pts=[];for(let i=0;i<N;i++){const q=el.getPointAtLength(i/N*L);pts.push([q.x,q.y]);}el.remove();
+ const xs=pts.map(p=>p[0]),ys=pts.map(p=>p[1]),x0=Math.min(...xs),y0=Math.min(...ys),w=Math.max(...xs)-x0,h=Math.max(...ys)-y0;let P=pts.map(([x,y])=>[(x-x0)/w,(y-y0)/h]);
+ let a=0;P.forEach((p,i)=>{const q=P[(i+1)%N];a+=p[0]*q[1]-q[0]*p[1];});if(a<0)P.reverse();
+ let k=0,best=9;P.forEach(([x,y],i)=>{const d2=Math.abs(Math.atan2(y-.5,x-.5)+Math.PI/2);if(d2<best){best=d2;k=i;}});return P.slice(k).concat(P.slice(0,k));}
+const toD=P=>'M'+P.map(p=>p[0].toFixed(4)+' '+p[1].toFixed(4)).join('L')+'Z';
+const mix=(A,B,t)=>A.map((p,i)=>[p[0]+(B[i][0]-p[0])*t,p[1]+(B[i][1]-p[1])*t]);
+const springT=t=>1-Math.exp(-7*t)*Math.cos(9*t);
+function tween(path,from,to,ms,done){if(RM()){path.setAttribute('d',toD(to));return;}const t0=performance.now();path._raf&&cancelAnimationFrame(path._raf);const step=n=>{const p=Math.min(1,(n-t0)/ms);path.setAttribute('d',toD(mix(from,to,springT(p))));path._cur=mix(from,to,springT(p));if(p<1)path._raf=requestAnimationFrame(step);else{path._cur=to;done&&done();}};path._raf=requestAnimationFrame(step);}
+// Hero: the Figma blob morphs toward a cookie as you scroll past
+(()=>{const cp=document.querySelector('#c-hero path');if(!cp)return;const blob=sample(cp.getAttribute('d'));cp.removeAttribute('transform');cp.setAttribute('d',toD(blob));if(RM())return;
+ const hero=document.querySelector('.hero');let tk=false;const run=()=>{const p=Math.max(0,Math.min(1,scrollY/(hero.offsetHeight*.9)));cp.setAttribute('d',toD(mix(blob,SHAPES.cookie,p*.85)));tk=false;};
+ addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(run);}},{passive:true});})();
+// Programs: each crop gets its own clip and morphs to a sibling M3 shape on pointer hover
+(()=>{const map={'c-oval':'cookie','c-arch':'clover','c-heart':'flower','c-pebble':'burst','c-scallop':'oval'};const defs=document.querySelector('svg defs');
+ document.querySelectorAll('.prog .crop').forEach((img,i)=>{const id=(img.style.clipPath.match(/#([\w-]+)/)||[])[1];const src=document.getElementById(id);if(!src)return;
+  let base;const pth=src.querySelector('path');if(pth&&pth.getAttribute('d')){const tmp=pth.getAttribute('d');base=sample(tmp);}else base=SHAPES.oval;
+  const cp=document.createElementNS(ns,'clipPath');cp.id='c-prog-'+i;cp.setAttribute('clipPathUnits','objectBoundingBox');const path=document.createElementNS(ns,'path');path.setAttribute('d',toD(base));path._cur=base;cp.appendChild(path);defs.appendChild(cp);img.style.clipPath='url(#c-prog-'+i+')';
+  const target=SHAPES[map[id]]||SHAPES.cookie,card=img.closest('.prog');
+  card.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')tween(path,path._cur,target,650);});
+  card.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse')tween(path,path._cur,base,500);});});})();
+// MFK loading indicator: morphs heart -> cookie -> flower -> clover while it spins
+const HEART=sample(document.querySelector('#c-heart path').getAttribute('d'));const LOOP=[HEART,SHAPES.cookie,SHAPES.flower,SHAPES.clover];
+function runLoader(path){let k=0;path.setAttribute('d',toD(LOOP[0]));path._cur=LOOP[0];if(RM())return()=>{};let on=true;const next=()=>{if(!on)return;const a=LOOP[k%4],b=LOOP[(k+1)%4];k++;tween(path,a,b,700,()=>setTimeout(next,180));};next();return()=>{on=false;path._raf&&cancelAnimationFrame(path._raf);};}
+// Lightbox uses the loader until the video is ready
+(()=>{const lp=vbox.querySelector('.mfk-loader path');let stop=null;const iframe=vbox.querySelector('iframe');
+ new MutationObserver(()=>{if(vbox.open){vbox.classList.remove('loaded');stop=runLoader(lp);}else{stop&&stop();}}).observe(vbox,{attributes:true,attributeFilter:['open']});
+ iframe.addEventListener('load',()=>{if(iframe.src){vbox.classList.add('loaded');stop&&stop();}});})();
+// Gift: loader in the button, then a heart burst
+function heartBurst(x,y){if(RM())return;const b=document.createElement('div');b.className='burst';b.style.left=x+'px';b.style.top=y+'px';
+ for(let i=0;i<9;i++){const h=document.createElement('i');h.innerHTML='<svg><use href="#ph-heart"/></svg>';if(i%3==1)h.style.color='#fff';if(i%3==2)h.style.color='var(--orange)';b.appendChild(h);
+  const a=-Math.PI/2+(i-4)*.32,dist=70+Math.random()*50;h.animate([{transform:'translate(0,0) scale(.4)',opacity:1},{transform:`translate(${Math.cos(a)*dist}px,${Math.sin(a)*dist}px) scale(1)`,opacity:1,offset:.6},{transform:`translate(${Math.cos(a)*dist*1.1}px,${Math.sin(a)*dist*1.1+30}px) scale(.8)`,opacity:0}],{duration:900,easing:'cubic-bezier(.2,.7,.2,1)',fill:'forwards'});}
+ document.body.appendChild(b);setTimeout(()=>b.remove(),950);}
+give.addEventListener('submit',e=>{e.preventDefault();const btn=give.querySelector('.btn');const label=btn.textContent;btn.disabled=true;btn.innerHTML='<span class="mfk-loader"><svg viewBox="0 0 1 1"><path/></svg></span>';const stop=runLoader(btn.querySelector('path'));
+ setTimeout(()=>{stop();btn.disabled=false;btn.classList.add('sent');btn.textContent='Thank you! You made a miracle. (prototype)';const r=btn.getBoundingClientRect();heartBurst(r.left+r.width/2,r.top);},RM()?0:900);});
+// Newsletter success: heart beats, circle drifts
+document.getElementById('news').addEventListener('submit',e=>{e.preventDefault();e.target.innerHTML="<p class=news-ok>You're on the list. (prototype)</p>";const h=document.querySelector('.close .heart'),c=document.querySelector('.close .circle');if(RM())return;h.classList.remove('beat');void h.offsetWidth;h.classList.add('beat');c.classList.add('drift');c.style.translate='-24px -18px';});
+// Emphasized type: closing headline gains weight as it arrives
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('heavy');}),{threshold:.6}).observe(document.querySelector('.close .display'));
+// Heading swap crossfade
+document.querySelectorAll('.give .toggle button').forEach(b=>b.addEventListener('click',()=>{if(!RM())document.getElementById('give-h').animate([{opacity:0,transform:'translateY(4px)'},{opacity:1,transform:'none'}],{duration:200,easing:'cubic-bezier(.2,.7,.2,1)'});}));
+// Mobile: extended FAB for Donate; shrinks on scroll down, extends on scroll up
+(()=>{const fab=document.getElementById('fab'),mq=matchMedia('(max-width:700px)');let last=scrollY;
+ fab.addEventListener('click',()=>openGive(true,fab));
+ addEventListener('scroll',()=>{if(!mq.matches)return;fab.classList.toggle('on',scrollY>innerHeight*.35&&!give.classList.contains('full')||scrollY>innerHeight*.35&&!give.classList.contains('open'));const dn=scrollY>last+4,up=scrollY<last-4;if(dn)fab.classList.add('shrink');if(up)fab.classList.remove('shrink');last=scrollY;},{passive:true});
+ // floating stories toolbar
+ const slot=document.querySelector('.filters-slot'),fl=slot.querySelector('.filters'),st=document.getElementById('stories');let inStories=false,slotGone=false;
+ const sync=()=>{const on=mq.matches&&inStories&&slotGone;if(on&&!fl.classList.contains('float'))slot.style.minHeight=slot.offsetHeight+'px';fl.classList.toggle('float',on);fab.classList.toggle('tuck',on);};
+ const check=()=>{const sr=st.getBoundingClientRect(),lr=slot.getBoundingClientRect();inStories=sr.top<innerHeight*.6&&sr.bottom>innerHeight*.4;slotGone=lr.bottom<120;sync();};addEventListener('scroll',check,{passive:true});addEventListener('resize',check);check();})();
+// ---- Events: 2026 calendar (from MFK's 2026 Calendar of Events PDF). Next four visible, the rest on reveal ----
+(()=>{const Y=2026,E=[
+ ['Spring Basket of Miracles','03-23','03-31','Assembly Day Mar 28'],
+ ['Miracles Golf Invitational','04-13','04-13',''],
+ ['360° Miracles in Bloom Tea','04-30','04-30',''],
+ ['Paddle Summer Camp','06-18','06-18','','tentative'],
+ ['Stars & Stripes Tournament','06-25','06-28',''],
+ ['Surf Summer Camp','07-10','07-31','July 10 & 31','tentative'],
+ ['Back-to-School Basket of Miracles','07-13','07-22','Assembly Day Jul 18'],
+ ['Night of Miracles Gala','10-17','10-17',''],
+ ['Boo Fest','10-28','10-28',''],
+ ['Thanksgiving Basket of Miracles','11-18','11-24','Assembly Day Nov 21. Pack meals, essentials and gifts for hundreds of families.','','assets/event-thanksgiving.jpg'],
+ ['Miracle Manor Holiday Decorating','12-05','12-05','Deck the halls for families staying at Miracle Manor.'],
+ ['Holiday Basket of Miracles','12-07','12-16','Wrapping party Dec 12. Adopt a family, host a drive or volunteer.','','assets/event-holiday.jpg']
+].map(([t,a,b,n,tent,img])=>({t,a:new Date(Y+'-'+a+'T00:00'),b:new Date(Y+'-'+b+'T23:59'),n,tent,img}));
+ const M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+ const PAL=[['var(--royal)','#fff','rgba(255,255,255,.2)'],['var(--orange)','var(--navy)','rgba(255,255,255,.32)'],['var(--sun)','var(--navy)','rgba(249,148,0,.35)'],['var(--sky)','var(--navy)','rgba(255,255,255,.4)']];
+ const SH=['<svg class="duo" viewBox="0 0 288 288" aria-hidden="true"><path fill="currentColor" d="M47.4 162C15.7 147 5.5 111.7 28.4 92c39.2-33.6 98.2-9.2 139.9-25.3 23.4-9 52.5-16.1 76.2-3.9 18 9.3 33.8 29.2 25.1 56.6-8.7 27.4-27.1 33.1-19.5 64.3 5.7 23.4 6.2 32.8-2.7 42-19.3 19.7-63.4-13.6-80-26.8-34.4-27.3-81.9-18.9-120-36.9Z"/></svg>',
+  '<svg class="duo" viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" d="M0 100V50a50 50 0 0 1 100 0v50Z"/></svg>',
+  '<svg class="duo" viewBox="0 0 288 288" aria-hidden="true"><path fill="currentColor" d="M272 98.3C272 61 242.6 31.7 206.4 31.7c-29.2 0-54 20.1-62.4 47.3-8.5-27.2-33.2-46.6-62.4-46.6C45.3 32.4 16 60.9 16 98.1c0 18.8 7.5 32.1 19.6 46.4L144 256.3l108.4-111.8c12.1-14.2 19.6-27.4 19.6-46.2Z"/></svg>',
+  '<svg class="duo" viewBox="0 0 100 100" aria-hidden="true"><circle fill="currentColor" cx="50" cy="50" r="50"/></svg>'];
+ const now=new Date(),url='https://miraclesforkids.org/take-action/our-events/';
+ const card=(e,i,feat)=>{const [c,on,tint]=PAL[i%4],sx=[-40,-20,-35,5][i%4],sy=[38,48,30,52][i%4];
+  const state=now>e.b?'past':now>=e.a?'now':'';const single=+e.a.toDateString===+e.b.toDateString||e.a.toDateString()===e.b.toDateString();
+  const span=single||/&/.test(e.n)?'':(e.a.getMonth()===e.b.getMonth()?'to '+e.b.getDate():'to '+M[e.b.getMonth()]+' '+e.b.getDate());
+  const tag=feat&&!state?'<span class="tag next">Next up</span>':state==='now'?'<span class="tag now">Happening now</span>':state==='past'?'<span class="tag held">Held '+M[e.a.getMonth()]+' '+e.a.getDate()+'</span>':e.tent?'<span class="tag tent">Tentative</span>':'';
+  const meta=e.n?'<p class="cap ev-meta">'+e.n+'</p>':'';
+  return '<div class="ev'+(feat?' feat':'')+(state==='past'?' past':'')+' reveal in" data-i="'+E.indexOf(e)+'" style="--c:'+c+';--on:'+on+';--tint:'+tint+';--sx:'+sx+'%;--sy:'+sy+'%"><div class="date">'+SH[i%4]+'<div><span class="m">'+M[e.a.getMonth()]+'</span><b>'+e.a.getDate()+'</b>'+(span?'<span class="to">'+span+'</span>':'')+'</div></div><div class="body"><p class="h2"><a href="'+url+'">'+e.t+'</a></p>'+meta+(state==='past'?'':'<button type="button" class="btn-text ics" data-i="'+E.indexOf(e)+'"><svg class="ic" aria-hidden="true"><use href="#ph-calendar-plus"/></svg>Add to calendar</button>')+'</div>'+(feat&&e.img?'<img class="photo" src="'+e.img+'" alt="" loading="lazy">':'')+'</div>';};
+ const drive='<a class="ev drive reveal in" href="https://miraclesforkids.org/take-action/" style="--c:var(--royal);--on:#fff;--tint:rgba(255,255,255,.2);--sx:-35%;--sy:40%"><div class="date">'+SH[2]+'<div><svg class="ic" aria-hidden="true"><use href="#ph-hand-heart"/></svg><b>.</b></div></div><div class="body"><p class="h2">Host your own drive</p><p class="cap ev-meta">Adopt a family or rally your team, school or office.</p></div></a>';
+ const pad=n=>String(n).padStart(2,'0'),d8=d=>d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate());
+ const ics=e=>{const days=/&/.test(e.n)?[e.a,e.b].map(d=>[d,d]):[[e.a,e.b]];const stamp=new Date().toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
+  const ev=days.map(([a,b],k)=>{const end=new Date(b);end.setDate(end.getDate()+1);return['BEGIN:VEVENT','UID:mfk-'+d8(a)+'-'+k+'-'+e.t.replace(/\W+/g,'-').toLowerCase()+'@miraclesforkids.org','DTSTAMP:'+stamp,'DTSTART;VALUE=DATE:'+d8(a),'DTEND;VALUE=DATE:'+d8(end),'SUMMARY:'+e.t.replace(/[,;]/g,'\\$&')+' (Miracles for Kids)','DESCRIPTION:'+((e.n?e.n+' ':'')+'Volunteers register in advance. Details: '+url).replace(/[,;]/g,'\\$&'),'URL:'+url,'END:VEVENT'].join('\r\n');}).join('\r\n');
+  return['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Miracles for Kids//Events 2026//EN','CALSCALE:GREGORIAN',ev,'END:VCALENDAR'].join('\r\n');};
+
+ document.getElementById('events').addEventListener('click',ev=>{const b=ev.target.closest('.ics');if(!b)return;const e=E[+b.dataset.i];const blob=new Blob([ics(e)],{type:'text/calendar;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=e.t.replace(/[^\w]+/g,'-').replace(/-+$/,'')+'.ics';document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},500);});
+ const up=E.filter(e=>e.b>=now),past=E.filter(e=>e.b<now).reverse();
+ const vis=up.slice(0,4),rest=up.slice(4).concat(past);
+ let html=vis.map((e,i)=>card(e,i,i===0)).join('');if(vis.length<4)html+=drive;
+ document.getElementById('ecards').innerHTML=html;
+ document.getElementById('ecards-rest').innerHTML=rest.map((e,i)=>card(e,i+vis.length,false)).join('');
+ const more=document.getElementById('ecards-more'),btn=document.getElementById('ev-toggle');
+ if(!rest.length)btn.hidden=true;
+ btn.addEventListener('click',()=>{const o=more.classList.toggle('open');btn.setAttribute('aria-expanded',o);btn.textContent=o?'Show fewer':'See the full 2026 calendar';if(o)setTimeout(()=>more.querySelector('.ev a')?.focus({preventScroll:true}),0);});
+ more.querySelectorAll('.ev').forEach((el,i)=>el.style.animationDelay=(i*40)+'ms');
+ const restFoc=()=>document.querySelectorAll('#ecards-rest a,#ecards-rest button').forEach(el=>el.tabIndex=more.classList.contains('open')?0:-1);restFoc();
+ btn.addEventListener('click',restFoc);
+})();
+</script>
+</body>
+</html>

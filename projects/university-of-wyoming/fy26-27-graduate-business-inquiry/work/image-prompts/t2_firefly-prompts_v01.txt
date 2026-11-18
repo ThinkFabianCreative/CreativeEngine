@@ -1,0 +1,310 @@
+T2 · "TOO STUBBORN TO STOP?" · ADOBE FIREFLY PROMPTS v01 · 2026-09-17
+University of Wyoming · FY26-27 Graduate Business Inquiry (internal comps only)
+
+WHAT THESE ARE
+One person-free still life per week line (15 weeks: 5 programs x A/B/C).
+INTERNAL COMP PLACEHOLDERS ONLY. They are replaced by the Laramie shoot before anything
+runs. Label every image "PLACEHOLDER IMAGE - not for external use" in Figma.
+Source: work/concepts/…_t2-executions_v01.md (weeks and scenes), work/image-prompts/
+d2_program-imagery_v02.md (grade, light, zones), visual-craft.md §5.
+
+NEVER GENERATE
+- People, hands, faces or body parts. T2 is person-free by design.
+- Readable text, numbers, logos or brand names. Firefly garbles text, and the week line
+  is set in Figma, not in the photo.
+- Mountains, landscapes, windows to the outdoors, cowboy imagery, graduation caps,
+  money, glowing screens facing the camera.
+If Firefly adds any of these, regenerate. Do not fix it by retouching.
+- Light fixtures, bulbs, lamps or windows in frame. The light source is always out of frame
+  (lesson from the v1 set: pendant bulbs and doorways landed in the type zone).
+
+FIXES AFTER THE v1 REVIEW (2026-09-18): use t2_firefly-fix-prompts_v01.txt. It has the
+regeneration prompts for P1-B, P1-C, P2-C, P3-B and P5-C (they replace the versions below),
+the Photoshop fixes and the grade match to P3-A. For any new generation, upload P3-A as the
+style reference.
+
+FIREFLY SETTINGS (use what your version offers)
+- Content type: Photo.
+- Aspect ratio: Portrait 3:4 for the main image (crop to 4:5 feed and 1:1 carousel in
+  Figma). Vertical 9:16 for the Stories and Reels version. Generate each ratio separately;
+  don't crop 9:16 out of 3:4.
+- Visual intensity and style strength: low to medium. Effects: none.
+- If photo settings are available: shallow depth of field, eye-level camera.
+- Generate 4, pick the one whose TOP THIRD is darkest and emptiest. That is the type area.
+
+PHOTOGRAPHIC STYLE: DOCUMENTARY STILL LIFE
+The evidence of a week, minutes after someone left it. Objects mid-use, not arranged for a
+shop window: a bag half unzipped, papers out of line, a cold cup. One practical light source
+just out of frame, low and to the side, as if it's the lamp or doorway in the room. Low-key:
+deep shadows at roughly 8:1 against the lit objects. Grade "Brown hour": shadows in UW Brown
+(about #2A1C15 to #492F24), warm cream highlights (about #F3E6CF), saturation down about a
+quarter, fine 35mm film grain, no bloom or vignette. Nothing glossy, nothing styled.
+Not editorial product still life, not a flat lay, not a mood-board "cozy desk".
+
+CAMERA PLAN (varied across the set; horizon level everywhere)
+  Scene  Shot        Angle                         Lens / focus
+  P1-A   Wide        Eye level, standing           35mm, f/4 (room reads)
+  P1-B   Medium      Eye level, seated             35mm, f/2.8
+  P1-C   Close       Eye level, seated             50mm, f/2
+  P2-A   Medium      Eye level, standing           35mm, f/2.8
+  P2-B   Med-close   High angle, ~40 deg down      50mm, f/2.8
+  P2-C   Medium      Eye level, standing           35mm, f/2.8
+  P3-A   Close       Eye level, seated             50mm, f/2
+  P3-B   Medium      Eye level, seated             35mm, f/2.8
+  P3-C   Med-close   High angle, ~30 deg down      50mm, f/2
+  P4-A   Wide        Eye level, standing           35mm, f/4
+  P4-B   Medium      Eye level, seated             35mm, f/2.8
+  P4-C   Medium      Straight-on frontal, deadpan  50mm, f/4
+  P5-A   Medium      Eye level, standing           35mm, f/2.8
+  P5-B   Medium      Eye level, seated             35mm, f/2.8
+  P5-C   Medium      Straight-on frontal, deadpan  50mm, f/4
+Never: overhead flat lay, low angle, worm's eye, Dutch tilt, wide-angle distortion.
+Each program's A, B and C weeks mix shot sizes and angles, so its three ads don't look
+like one photo re-dressed.
+
+REFERENCES BEHIND THIS SET (names can be added to any prompt)
+Add a line such as "in the style of Stephen Shore and Todd Hido" to push the look. If
+Firefly refuses or ignores a name, the translation below is already in the prompts.
+  Reference                   What we borrow                     In the prompt as
+  Stephen Shore               deadpan frontal attention to the   "straight-on frontal view,
+                              ordinary (P4-C, P5-C)              deadpan", level horizon
+  Todd Hido                   interiors at night, lit only by    "single warm practical light
+                              practicals                         from out of frame"
+  Bradford Young (DP)         underexposed, rich low light       "deep warm brown shadows",
+                                                                 low-key, soft contrast
+  Roger Deakins (DP)          every light has a motivated source "light spills from a kitchen
+                                                                 pass-through / desk lamp"
+  Harris Savides (DP)         soft, quiet, slightly underexposed low saturation, no glow
+  Edward Hopper (painter)     raking light across a sparse room  "low and to the side"
+  Irving Penn                 restraint: nothing extra in frame  specific objects only, plain
+                                                                 dark wall above
+Contrast references, what we're NOT doing: editorial product still life on a seamless,
+Wes Anderson-style pastel symmetry (except the two deadpan frontal frames, which stay dark
+and warm), teal-and-orange cinema grade, direct-flash rawness.
+
+OPTIONAL FILM-STOCK LINE (add to the end of any prompt if the grade comes out too clean)
+"Shot on Kodak Portra 800, underexposed by about one stop, fine grain."
+Portra's warmth sits with UW Brown. Don't use CineStill 800T (red halation) or Ektachrome
+(too cool and clean) on this set.
+
+MODEL CHOICE
+- Adobe Firefly for the whole set. One model for all 15 scenes keeps the grade and the
+  "hand" consistent; mixing models makes a set look assembled.
+- If a 9:16 comes out with the objects too high, open the 3:4 in Photoshop and use
+  Generative Expand upward to add dark wall, instead of regenerating.
+- If Firefly can't place the objects as described after 3 to 4 attempts, a model that
+  follows long prompts more literally (for example OpenAI's image generation, used for
+  earlier UW comps) can make that one scene. Put the model in the file name and match the
+  grade in Photoshop.
+- Never a stylized model (for example Midjourney) for this set: it must read as
+  documentary, not art-directed.
+- Model characteristics: DesignChamp/knowledge/image-direction-reference.md section 6.
+  These are comps only. The UW brief requires real UW photography for release, so no
+  generated image here is proposed for external use.
+
+HOW EACH IMAGE IS USED (carousel)
+Card 1: tight crop on the key object. Card 2: the whole scene. Card 3: the dark top of the
+same image. Generate at the highest resolution available so the tight crop holds.
+
+9:16 VERSION OF ANY PROMPT
+Paste the same prompt, set Vertical 9:16, and replace the composition sentence with:
+"Vertical composition: the objects sit in the middle band of the frame, slightly closer;
+the top 40% and the bottom 30% are dark, plain shadow."
+
+====================================================================
+SHARED STYLE (already included at the end of every prompt below)
+====================================================================
+Documentary still-life photograph, 35mm film look, fine grain, real and unposed.
+A single warm practical light from out of frame, low and to the side. Deep warm brown
+shadows, cream highlights, low saturation, no blue or green cast, no pure white. The top
+40% of the frame is dark, plain and low in detail. No people, no hands, no faces. No
+readable text, numbers, logos or brand names. No lens flare, glow or heavy vignette. No
+windows, no light fixtures or bulbs visible in frame. Warm tungsten grade.
+
+====================================================================
+P1 · ON-CAMPUS MBA
+====================================================================
+P1-A · CLOSING SHIFT. PITCH DECK. BEST FRIEND'S WEDDING. SAME WEEK.
+A restaurant dining room an hour after closing. Chairs are turned upside down on every
+table except one. On that table: a black server's apron tossed across the chair back,
+a loose stack of printed presentation pages marked up with a pen, and a small wrapped
+wedding gift box with a cream ribbon. Wide shot at standing eye height, 35mm lens. The
+objects sit in the lower middle of the frame, slightly right of center. Warm light spills
+from a kitchen pass-through out of frame to the right. Documentary still-life photograph,
+35mm film look, fine grain, real and unposed. Deep warm brown shadows, cream highlights,
+low saturation, no blue cast. The top 40% of the frame is dark, plain and low in detail.
+No people, no hands, no faces. No readable text, numbers, logos or brand names.
+
+P1-B · TWO FINALS. CLOSING SHIFT. LEASE RENEWAL. SAME WEEK.
+A small apartment kitchen table late in the evening. Two open study guides with yellow
+highlighter marks, a folded food-service visor resting on top of them, and a set of
+lease papers folded in thirds with a pen on top. A half-finished glass of water. Medium
+shot at seated eye height, 35mm lens, shallow depth of field on the visor and papers. The
+objects sit in the lower middle of the frame. A single warm table lamp out of frame to the
+left. Documentary still-life photograph, 35mm film look, fine grain. Deep warm brown
+shadows, cream highlights, low saturation. The top 40% of the frame is dark, plain wall.
+No people, no hands, no faces. No readable text, numbers, logos or brand names.
+
+P1-C · QUARTER-END. TRAINING THE NEW HIRE. BROTHER'S STATE MEET. SAME WEEK.
+An office desk after hours. A leather work bag on the chair, an open laminated training
+binder with tabbed dividers, and a folded athletic meet program with a lanyard coiled on
+top. A coffee cup gone cold. Medium close-up at seated eye height, 50mm lens, shallow
+depth of field on the binder and program. Objects in the lower middle, slightly right.
+A warm desk lamp out of frame to the right. Documentary still-life photograph, 35mm film
+look, fine grain. Deep warm brown shadows, cream highlights, low saturation. The top 40%
+of the frame is dark, plain wall. No people, no hands, no faces. No readable text,
+numbers, logos or brand names.
+
+====================================================================
+P2 · ONLINE MBA  (never campus)
+====================================================================
+P2-A · TWO PEOPLE SHORT. KID'S RECITAL. MOVING DAY. SAME WEEK.
+The break room of a manufacturing plant at shift change. A row of tall gray steel lockers;
+one locker door stands open. On the inside hook of the door hangs a small child's recital
+costume, a dusty-rose tulle skirt on a child-size hanger inside a clear dry-cleaning bag.
+Flattened brown moving boxes and a roll of packing tape lean against the next lockers. A
+scuffed white hard hat and work gloves on the table in the foreground. Medium shot at
+standing eye height, 35mm lens, focus on the costume. The costume sits in the lower middle,
+right of center. Warm light from a doorway out of frame to the right falls on the tulle.
+Documentary still-life photograph, 35mm film look, fine grain. Deep warm brown shadows,
+cream highlights, low saturation, no fluorescent green cast. The top 40% of the frame is
+dark locker tops and wall. No people, no hands, no faces. No readable text, numbers, logos,
+safety posters or brand names.
+
+P2-B · DOUBLE SHIFT. SAFETY AUDIT. TRUCK IN THE SHOP. SAME WEEK.
+A kitchen table at night. A scuffed white hard hat, a clipboard with a blank checklist
+sheet, a folded repair-shop invoice, and a ring of pickup truck keys with a spare key on a
+paper tag. A thermos. Medium close-up from a high angle, about 40 degrees looking down onto the
+table, 50mm lens, focus on the hard hat and keys. Objects in the lower middle of the frame. A warm pendant light out of frame
+above and to the left, hitting only the table. Documentary still-life photograph, 35mm
+film look, fine grain. Deep warm brown shadows, cream highlights, low saturation. The top
+40% of the frame is dark, plain kitchen wall. No people, no hands, no faces. No readable
+text, numbers, logos or brand names.
+
+P2-C · HOLIDAY RESET. TWO CALL-OUTS. TEE-BALL SIGNUPS. SAME WEEK.
+A home kitchen counter in the evening. A retail store lanyard with a blank badge, a
+rolled-up shelf layout sheet held with a rubber band, and a small child's baseball glove.
+On the refrigerator behind, a single sheet held by a magnet. Medium shot at standing eye
+height, 35mm lens, focus on the glove and lanyard. Objects in the lower middle, slightly
+right. A warm under-cabinet light out of frame. Documentary still-life photograph, 35mm
+film look, fine grain. Deep warm brown shadows, cream highlights, low saturation. The top
+40% of the frame is dark cabinets. No people, no hands, no faces. No readable text,
+numbers, logos or brand names.
+
+====================================================================
+P3 · M.S. IN ACCOUNTING  (on campus; scene is off campus)
+====================================================================
+P3-A · AUDIT INTERNSHIP. VOLUNTEER TAX NIGHT. SOFTBALL PLAYOFFS. SAME WEEK.
+A community-center folding table after a volunteer tax night. A squared stack of plain
+manila client folders, a printing calculator with a curl of paper tape, and an unzipped
+softball bat bag with a leather glove on top. Close-up at seated eye height, 50mm lens,
+shallow depth of field on the glove and folders. Objects in the lower middle of the frame.
+A warm clip-on table lamp out of frame to the left. Documentary still-life photograph,
+35mm film look, fine grain. Deep warm brown shadows, cream highlights, low saturation. The
+top 40% of the frame is dark, plain wall. No people, no hands, no faces. No readable text,
+numbers, logos or brand names.
+
+P3-B · TWO FINALS. PART-TIME TAX PREP. ROOMMATE MOVES OUT. SAME WEEK.
+A shared apartment living room at night. A desk with a ten-key adding machine, a stack of
+tax forms turned face down, and an open textbook. Behind, a half-empty bookshelf with a
+packed cardboard box on the floor beside it. Medium shot at seated eye height, 35mm lens,
+focus on the desk. Desk objects in the lower middle, box soft in the background. A warm
+desk lamp out of frame to the right. Documentary still-life photograph, 35mm film look,
+fine grain. Deep warm brown shadows, cream highlights, low saturation. The top 40% of the
+frame is dark, plain wall. No people, no hands, no faces. No readable text, numbers, logos
+or brand names.
+
+P3-C · FIRST BUSY SEASON. BANK RECS DUE. BABY SHOWER. SAME WEEK.
+An office cubicle after hours. A tall stack of printed spreadsheets bristling with colored
+sticky flags, and on the desk chair a wrapped baby-shower gift with a pale ribbon. A cold
+coffee cup. Medium close-up from a high angle, about 30 degrees looking down, 50mm
+lens, shallow depth of field on the flagged stack and the gift. Objects in the lower middle, slightly right. A warm desk lamp
+out of frame to the left. Documentary still-life photograph, 35mm film look, fine grain.
+Deep warm brown shadows, cream highlights, low saturation. The top 40% of the frame is
+dark cubicle wall. No people, no hands, no faces. No readable text, numbers, logos or
+brand names.
+
+====================================================================
+P4 · ONLINE M.S. IN ACCOUNTING  (never campus)
+====================================================================
+P4-A · MONTH-END CLOSE. INVENTORY COUNT. REC LEAGUE FINAL. SAME WEEK.
+A hardware-store stockroom at night during an annual inventory count. A long aisle of
+metal shelving with plain cardboard cartons. A rolling stock ladder halfway down the aisle,
+with a pair of hockey skates hanging by their laces from the top rail and a clipboard
+resting on a step. Wide shot at standing eye height, 35mm lens. The ladder and skates sit
+in the lower middle, right of center. A single portable work light out of frame lights the
+skates. Documentary still-life photograph, 35mm film look, fine grain. Deep warm brown
+shadows, cream highlights, low saturation, no fluorescent cast. The top 40% of the frame
+is dark shelving and ceiling. No people, no hands, no faces. No readable text, numbers,
+labels, logos or brand names on cartons.
+
+P4-B · PAYROLL FRIDAY. QUARTERLY FILINGS. SCIENCE FAIR. SAME WEEK.
+A home office corner in the evening. A desk with plain file folders in a neat stack and an
+adding machine; leaning against the wall beside the desk, a blank trifold science-fair
+board with a small cardboard volcano model in front of it. Medium shot at seated eye
+height, 35mm lens, focus on the folders and the volcano. Objects in the lower middle. A
+warm desk lamp out of frame to the left. Documentary still-life photograph, 35mm film look,
+fine grain. Deep warm brown shadows, cream highlights, low saturation. The top 40% of the
+frame is dark, plain wall. No people, no hands, no faces. No readable text, numbers, logos
+or brand names.
+
+P4-C · YEAR-END AUDIT. SYSTEM CONVERSION. HUNTING OPENER. SAME WEEK.
+A small office at an industrial company after hours. A blaze-orange hunting vest draped over
+the back of the desk chair. On the desk, a thick three-ring audit binder and a printed
+checklist held with a binder clip. Straight-on frontal view, camera level with the chair
+back, deadpan and symmetrical, 50mm lens, focus on the vest and binder. Chair and desk in
+the lower middle. A warm desk lamp out of
+frame to the right. Documentary still-life photograph, 35mm film look, fine grain. Deep
+warm brown shadows, cream highlights, low saturation. The top 40% of the frame is dark,
+plain wall. No people, no hands, no faces, no rifles, no animals or antlers. No readable
+text, numbers, logos or brand names.
+
+====================================================================
+P5 · ONLINE M.S. IN FINANCE  (never campus)
+====================================================================
+P5-A · COVERING THE BRANCH. MARKET DIP. GRANDMA'S 90TH. SAME WEEK.
+A small-town bank branch lobby after closing. On the customer counter: a heavy ring of
+branch keys, a white bakery cake box tied with string, and a small bundle of party
+balloons tied to the counter, cream and gold. Medium shot at standing eye height, 35mm lens,
+focus on the keys and cake box. Objects in the lower middle, right of center. A warm
+teller-station task light out of frame lights the counter. Documentary still-life
+photograph, 35mm film look, fine grain. Deep warm brown shadows, cream highlights, low
+saturation. The top 40% of the frame is dark, plain wall. No people, no hands, no faces,
+no money, no vault. No readable text, numbers, logos or brand names.
+
+P5-B · CLIENT REVIEWS. RATE CUT. CAR WON'T START. SAME WEEK.
+An advisor's office desk in the evening. A neat stack of plain navy client-review folders,
+a portable car jump starter with its red and black clamps on the floor beside the desk,
+and a cold cup of coffee. Medium shot at seated eye height, 35mm lens, focus on the folders
+and jump starter. Objects in the lower middle. A warm desk lamp out of frame to the left.
+Documentary still-life photograph, 35mm film look, fine grain. Deep warm brown shadows,
+cream highlights, low saturation. The top 40% of the frame is dark, plain wall. No people,
+no hands, no faces, no screens. No readable text, numbers, logos or brand names.
+
+P5-C · LOAN COMMITTEE. HAIL CLAIMS. COUNTY FAIR. SAME WEEK.
+A credit-union office in a small town, after hours. On the desk: a thick committee packet
+held with a large binder clip and a stack of blank claim forms. Pinned to a corkboard
+behind the desk, a blue county-fair ribbon rosette. Straight-on frontal view, camera level
+with the desk, deadpan, 50mm lens, focus on the packet and the ribbon. Objects in the lower
+middle, centered. A
+warm desk lamp out of frame to the right. Documentary still-life photograph, 35mm film
+look, fine grain. Deep warm brown shadows, cream highlights, low saturation. The top 40% of
+the frame is dark wall and corkboard edge. No people, no hands, no faces. No readable text,
+numbers, logos or brand names.
+
+====================================================================
+OPTIONAL · VIDEO PULL-OUT (only if your Firefly plan includes image-to-video)
+====================================================================
+Upload the chosen 9:16 or 3:4 image, then:
+"A slow, continuous camera pull-back, starting close on the [key object] and ending on the
+whole scene. Smooth, steady, no shake. Nothing in the scene moves. No people appear. The
+light stays warm and constant. 5 seconds."
+The T2 video is a single camera pull-out (pack 12). If the generated motion adds anything
+that moves, a person or a flicker, discard it and animate the still in After Effects or
+Figma instead.
+
+AFTER GENERATING
+- Check each image at phone size: the key object reads in under a second.
+- Reject: plastic textures, impossible objects, garbled paper, extra limbs or hands
+  anywhere, anything that looks like a real brand.
+- File the chosen images in Figma, labelled, with the prompt ID (for example P2-A 3:4 v1).

@@ -1,0 +1,24 @@
+--- before/shared/frameworks/creative-direction-audit.md
++++ after/shared/frameworks/creative-direction-audit.md
+@@ -123,14 +123,16 @@
+ 
+ ### Current altitude and reachable altitude
+ 
+-Name two things, and keep them apart:
++When useful, distinguish current altitude from a conditional estimate of reachable altitude:
+ 
+ ```
+ CURRENT ALTITUDE:    where the work stands as it actually exists now
+-REACHABLE ALTITUDE:  the highest altitude this idea could truthfully reach
+-```
+-
+-The distance between them is the subject of sections 4 and 5. When they are the same, the idea is at its natural ceiling and the honest output is that it needs execution, not escalation.
++REACHABLE ALTITUDE:  a plausible development potential, conditional on stated evidence and changes
++```
++
++The distance between them is the subject of sections 4 and 5. Reachable altitude is a creative judgment, not a prediction or a proven maximum. State its conditions; if the supplied work is too limited, leave it undetermined.
++
++When the idea is at its natural ceiling, use PUSH NONE if it is appropriate in its current form. Use PUSH EXECUTION only when a specific execution gap remains. Do not invent more work merely because no conceptual escalation is needed.
+ 
+ Judge current altitude on the work as presented, not on its description, its ambition or what it could become.
+ 

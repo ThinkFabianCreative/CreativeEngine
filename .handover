@@ -1,0 +1,78 @@
+# CreativeEngine — handover to Claude
+
+Prepared: 2026-10-14 (America/Los_Angeles). Replaces the 2026-09-12 handover.
+Workspace: `~/Documents/AI_experiments/CreativeEngine` (cloned from GitHub on 2026-10-14; the older `~/Documents/AI_Traffik_Projects/CreativeEngine` path is no longer the working copy).
+
+## Purpose and limits of this handover
+
+This file orients a new session. It is a snapshot reconstructed from the repository and its git history, not a memory of earlier conversations. It authorizes no edit, selection, delivery or publishing on its own. If the user's message names a task, that wins; if it doesn't, ask which piece of work they want next.
+
+## Start here
+
+1. Check the branch: `git switch creative-engine-v1 && git pull`. `main` holds only a `.gitignore` (the initial commit); all the work is on `creative-engine-v1`.
+2. Read `CLAUDE.md` (constitution and routing) and `WORKING-PREFERENCES.md` (Andres's standing rules). Both apply to every role on every machine.
+3. For client work, read `projects/README.md`, then that client's `client/README.md`, then the project's `README.md` and its normalized brief, if there is one.
+4. Run `git status` and `git log -5` before editing: another machine or session may have pushed since this snapshot.
+
+## Repository state
+
+- GitHub: private repo `CreativeEngine`. Branches: `main` (empty), `creative-engine-v1` (current work, 66 commits, 2026-09-10 to 2026-10-14), `handoff` (see below).
+- Latest commit on `creative-engine-v1`: `9fd8e01 Task Hub: Claude builder prompt for Leo` (2026-10-14).
+- It is a Markdown creative operating system and client-work archive, not a software application. There is no build or test command. HTML files are hi-fi prototypes.
+- Large media stays out of git (`.gitignore`): `*.mp4`, `*.mov`, `*.zip`, generated media under `projects/**/work/generated/` (only the Markdown logs are committed), and `projects/**/assets/video/`. Where a project has large originals, its `raw/LARGE-FILES.md` says where they live (client Drive or Dropbox).
+- `handoff` branch: `creative-engine-v1` plus a `handoff/` folder, a shared inbox so two Claude sessions on different machines can pass work through GitHub (`to-A.md`, `to-B.md`, append-only). Read `handoff/README.md` on that branch only when the user asks to "check the handoff".
+
+## Architecture (short version; `CLAUDE.md` is the authority)
+
+- Five roles, each defined in `<Role>/AGENT.md`, with thin wrappers in `.claude/agents/`: BriefMachine (`brief-machine`), DesignChamp (`design-champ`), WordSmither (`word-smither`), SprintFacilitator (`sprint-facilitator`), CreativeDirector (`creative-engine-director`).
+- Status: CreativeDirector, WordSmither and SprintFacilitator are full V1 definitions. BriefMachine and DesignChamp are still placeholders.
+- Modes: EXPLORE, DEVELOP, JUDGE. Verdicts: KILL, REWORK, ADVANCE, BET THE PITCH.
+- Frameworks: 15 active in `shared/frameworks/`, registered in `CLAUDE.md` (the registry is the only list of what exists). `animation-craft.md` is planned, not written. Barry's *The Advertising Concept Book* is the default working approach.
+- Skills: about 40 approved skills in `.claude/skills/`, listed with owners in `.claude/skills/README.md`. A department's skill record governs how that skill is used (for example `WordSmither/skills/humanizer.md`). No third-party skill is added without the review in `CLAUDE.md` and the user's approval.
+- Knowledge: global method in `shared/` and department `knowledge/`; client facts only in `projects/<client>/`. One client's workspace is never evidence for another's. Raw sources are never edited.
+
+## Standing rules worth repeating
+
+From `WORKING-PREFERENCES.md`; read the file for the full list and dates.
+
+- Humanize anything that goes out under Andres's name.
+- Never remove Andres's own design work; flag and propose instead.
+- "Elevate this deck" means slide text stays verbatim; copy ideas go in speaker notes as suggestions.
+- Hi-fi prototypes, never production code (the one exception is native Instapage pages through `instapage-production`).
+- Global kits stay client-agnostic.
+
+## Client workspaces
+
+Last-touched dates are from git. Statuses are as recorded in each project README, not rechecked against the client.
+
+| Client | Project | Last touched | Recorded state |
+|---|---|---|---|
+| Traffik | `task-hub-board` | 2026-10-14 | **Most recent work.** Spec and prototype for Leo M's internal Task Hub. Delivered to Leo 2026-10-12, updated 2026-10-14 (side nav as a must-have, Hot Sheet Weekly UX audit, `CLAUDE-PROMPT.md` builder prompt). Brief not normalized; the specs carry the requirements |
+| Traffik | `culture-reset-playbook` | 2026-10-12 | The Standard and The Craft decks; workflow reset for the creative and account teams. Working record: `work/strategy/decisions.md` |
+| Traffik | `website-d2c` | 2026-09-17 | Name only; everything OPEN |
+| Colorado Mesa University | `featherstone-phase-2` | 2026-10-12 | IN DEVELOPMENT: P1 in DEVELOP on directions A–D; Q6 blocks completion |
+| Colorado Mesa University | `instapage-handoff-review` | 2026-10-12 | Review of a supplied landing-page handoff archive (historical source) |
+| Grand Junction Airport | `ski-aspen-itinerary-ads` | 2026-10-09 | Normalized brief v03 (2026-10-08), work packets in `packets/`. Source due date was 2026-10-14 |
+| Edwards Lifesciences | `tmtt-xlt-deck` | 2026-10-09 | Deck elevation for Yash Simlote, due 2026-10-09; aesthetic only, text verbatim |
+| Edwards Lifesciences | `tmtt-capabilities-pitch` | 2026-10-05 | Credentials pitch, possible AOR; no normalized brief yet |
+| Burgers 99 | `goes-ghost` | 2026-10-03 | BRIEFING; normalized brief DRAFT |
+| BALT | `website-redesign-pitch` | 2026-09-29 | `outputs/` only |
+| University of Wyoming | `fy26-27-graduate-business-inquiry` | 2026-09-24 | DEVELOP, internal review; normalized brief DRAFT rev 5. Its README records the restored directions, Meta-native v02 roughs and Figma file state |
+| Champlain University, Miracles for Kids | — | — | Client records only, no projects |
+
+### Traffik notes
+
+- The team running CreativeEngine is Traffik's creative team, and Traffik is also filed as a client. Its knowledge stays in `projects/traffik/` like any other client's.
+- The Task Hub prototype's Completed view embeds Traffik's own Task Hub export, which names Traffik's clients. Treat it as internal; don't publish it.
+- Leo's package: `projects/traffik/task-hub-board/outputs/delivered/2026-10-12/leo-handoff/`. Start with its `README.md`. Changes made after delivery are mirrored in both `work/interaction/` and the delivered folder; keep them in step.
+
+## Other shared material
+
+- `shared/knowledge/`: Andres's creative OS (`ANDRES_CREATIVE_OS.md`), channel preferences, the Barry reference, the creative competency map, the ad-reference index and platform spec libraries (Meta, Google/YouTube, TikTok, LinkedIn, Snapchat, Nextdoor, DOOH, CTV/programmatic). Spec libraries are references; verify against the platform before production.
+- `validation/`: earlier framework audit evidence. Historical, not tests to rerun.
+- `skill-drafts/ad-repository-research/`: a skill in draft, not installed.
+- `briefs/` and `outputs/` at the root are superseded by the client workspaces and hold no material.
+
+## Practical continuation
+
+Make the smallest relevant edit, preserve Andres's work and client boundaries, keep earlier versions beside new ones, and update the project README when a new version or delivery is created. When the system itself changes, keep `CLAUDE.md`, the role `AGENT.md`, its wrapper and the framework registry consistent only where the change requires it. Commit with a short message that names the client and project, and push so the other machine stays in sync.

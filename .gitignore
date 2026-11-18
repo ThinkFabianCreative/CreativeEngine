@@ -4,3 +4,45 @@
 node_modules/
 __pycache__/
 *.pyc
+
+# Generated media (Artlist and other generators) stays local.
+# Only the Markdown logs in work/generated/ are committed; they reference the files.
+projects/**/work/generated/**
+!projects/**/work/generated/**/
+!projects/**/work/generated/**/*.md
+
+# Local source photos (copyrighted book pages and LUMA cards); summarized in shared/frameworks
+SprintFacilitator/SprintBook_Design_thinking/
+
+# Large video files stay local (re-downloadable from Dropbox sources).
+projects/**/assets/video/**
+
+# Large client media stays out of git (GitHub's 100 MB limit, repo size).
+# Keep originals in the client's Drive/Dropbox folder; each project's raw/LARGE-FILES.md says where.
+*.mp4
+*.mov
+*.zip
+projects/colorado-mesa-university/featherstone-phase-2/raw/CMU-Brand-Guidelines_Sep2025.pdf
+
+# Team member HR data (reviews, salary, leave) stays local. See CreativeAdmin/AGENT.md.
+projects/traffik/people/**
+!projects/traffik/people/README.md
+
+# MFK reference folder (large photo set, kept local only)
+projects/miracles-for-kids/website-rebrand/raw/MiraclesForKids/
+
+# MFK production-site assets (downloaded for reference)
+projects/miracles-for-kids/website-rebrand/raw/production-site/
+
+# Audio and remaining video formats stay local (SFX, VO, music beds, renders).
+*.wav
+*.mp3
+*.aac
+*.m4a
+*.aif
+*.aiff
+*.flac
+*.ogg
+*.webm
+*.mkv
+*.avi

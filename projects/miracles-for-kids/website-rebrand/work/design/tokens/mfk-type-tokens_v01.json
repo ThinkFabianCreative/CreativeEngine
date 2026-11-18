@@ -1,0 +1,586 @@
+{
+ "_meta": {
+  "client": "Miracles for Kids",
+  "project": "website-rebrand",
+  "version": "v01",
+  "date": "2026-10-16",
+  "note": "Typography tokens. Primitives hold raw values; semantic roles alias primitives per look (mode). Switch the 'MFK Type' mode in Figma to switch looks. Exploration only; fonts are candidates, not brand-approved.",
+  "looks": {
+   "A Saturated": {
+    "display": "Outfit",
+    "body": "Outfit",
+    "highlight": "Caveat"
+   },
+   "B Blocks": {
+    "display": "Fredoka",
+    "body": "Nunito",
+    "highlight": "Caveat Brush"
+   },
+   "C Pastel": {
+    "display": "Nunito",
+    "body": "Nunito",
+    "highlight": "Dancing Script"
+   },
+   "D System": {
+    "display": "Lexend",
+    "body": "Lexend",
+    "highlight": "Kalam"
+   },
+   "P2 Storybook": {
+    "display": "Bogart",
+    "body": "Outfit (stand-in for Filson Soft, not visible to Figma)",
+    "highlight": "Playpen Sans"
+   }
+  }
+ },
+ "primitives": {
+  "font/family/caveat": "Caveat",
+  "font/family/caveat-brush": "Caveat Brush",
+  "font/family/dancing-script": "Dancing Script",
+  "font/family/fredoka": "Fredoka",
+  "font/family/kalam": "Kalam",
+  "font/family/lexend": "Lexend",
+  "font/family/nunito": "Nunito",
+  "font/family/outfit": "Outfit",
+  "font/letter-spacing/0": 0,
+  "font/letter-spacing/0_2": 0.2,
+  "font/letter-spacing/0_3": 0.3,
+  "font/letter-spacing/1": 1,
+  "font/letter-spacing/1_5": 1.5,
+  "font/letter-spacing/2": 2,
+  "font/letter-spacing/n0_5": -0.5,
+  "font/letter-spacing/n1": -1,
+  "font/letter-spacing/n1_5": -1.5,
+  "font/letter-spacing/n2": -2,
+  "font/line-height/20": 20,
+  "font/line-height/24": 24,
+  "font/line-height/26": 26,
+  "font/line-height/28": 28,
+  "font/line-height/32": 32,
+  "font/line-height/40": 40,
+  "font/line-height/48": 48,
+  "font/line-height/56": 56,
+  "font/line-height/64": 64,
+  "font/line-height/72": 72,
+  "font/line-height/80": 80,
+  "font/line-height/88": 88,
+  "font/line-height/92": 92,
+  "font/line-height/96": 96,
+  "font/size/104": 104,
+  "font/size/112": 112,
+  "font/size/14": 14,
+  "font/size/16": 16,
+  "font/size/17": 17,
+  "font/size/18": 18,
+  "font/size/20": 20,
+  "font/size/24": 24,
+  "font/size/32": 32,
+  "font/size/36": 36,
+  "font/size/40": 40,
+  "font/size/48": 48,
+  "font/size/54": 54,
+  "font/size/56": 56,
+  "font/size/64": 64,
+  "font/size/66": 66,
+  "font/size/68": 68,
+  "font/size/72": 72,
+  "font/size/76": 76,
+  "font/size/80": 80,
+  "font/size/88": 88,
+  "font/size/96": 96,
+  "font/style/bold": "Bold",
+  "font/style/extrabold": "ExtraBold",
+  "font/style/light": "Light",
+  "font/style/medium": "Medium",
+  "font/style/regular": "Regular",
+  "font/style/semibold": "SemiBold",
+  "font/family/bogart": "Bogart",
+  "font/style/black": "Black",
+  "font/line-height/100": 100,
+  "font/line-height/68": 68,
+  "font/family/playpen-sans": "Playpen Sans"
+ },
+ "semantic": {
+  "display": {
+   "A Saturated": {
+    "family": "font/family/outfit",
+    "style": "font/style/extrabold",
+    "size": "font/size/96",
+    "line-height": "font/line-height/96",
+    "letter-spacing": "font/letter-spacing/n2"
+   },
+   "B Blocks": {
+    "family": "font/family/fredoka",
+    "style": "font/style/semibold",
+    "size": "font/size/88",
+    "line-height": "font/line-height/92",
+    "letter-spacing": "font/letter-spacing/n1"
+   },
+   "C Pastel": {
+    "family": "font/family/nunito",
+    "style": "font/style/extrabold",
+    "size": "font/size/80",
+    "line-height": "font/line-height/88",
+    "letter-spacing": "font/letter-spacing/n1_5"
+   },
+   "D System": {
+    "family": "font/family/lexend",
+    "style": "font/style/semibold",
+    "size": "font/size/72",
+    "line-height": "font/line-height/80",
+    "letter-spacing": "font/letter-spacing/n1_5"
+   },
+   "P2 Storybook": {
+    "family": "font/family/bogart",
+    "style": "font/style/black",
+    "size": "font/size/104",
+    "line-height": "font/line-height/100",
+    "letter-spacing": "font/letter-spacing/n2"
+   }
+  },
+  "h1": {
+   "A Saturated": {
+    "family": "font/family/outfit",
+    "style": "font/style/extrabold",
+    "size": "font/size/64",
+    "line-height": "font/line-height/72",
+    "letter-spacing": "font/letter-spacing/n1"
+   },
+   "B Blocks": {
+    "family": "font/family/fredoka",
+    "style": "font/style/semibold",
+    "size": "font/size/56",
+    "line-height": "font/line-height/64",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "C Pastel": {
+    "family": "font/family/nunito",
+    "style": "font/style/extrabold",
+    "size": "font/size/56",
+    "line-height": "font/line-height/64",
+    "letter-spacing": "font/letter-spacing/n1"
+   },
+   "D System": {
+    "family": "font/family/lexend",
+    "style": "font/style/semibold",
+    "size": "font/size/48",
+    "line-height": "font/line-height/56",
+    "letter-spacing": "font/letter-spacing/n1"
+   },
+   "P2 Storybook": {
+    "family": "font/family/bogart",
+    "style": "font/style/bold",
+    "size": "font/size/64",
+    "line-height": "font/line-height/68",
+    "letter-spacing": "font/letter-spacing/n1_5"
+   }
+  },
+  "h2": {
+   "A Saturated": {
+    "family": "font/family/outfit",
+    "style": "font/style/bold",
+    "size": "font/size/40",
+    "line-height": "font/line-height/48",
+    "letter-spacing": "font/letter-spacing/n0_5"
+   },
+   "B Blocks": {
+    "family": "font/family/fredoka",
+    "style": "font/style/semibold",
+    "size": "font/size/40",
+    "line-height": "font/line-height/48",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "C Pastel": {
+    "family": "font/family/nunito",
+    "style": "font/style/extrabold",
+    "size": "font/size/40",
+    "line-height": "font/line-height/48",
+    "letter-spacing": "font/letter-spacing/n0_5"
+   },
+   "D System": {
+    "family": "font/family/lexend",
+    "style": "font/style/semibold",
+    "size": "font/size/32",
+    "line-height": "font/line-height/40",
+    "letter-spacing": "font/letter-spacing/n0_5"
+   },
+   "P2 Storybook": {
+    "family": "font/family/outfit",
+    "style": "font/style/bold",
+    "size": "font/size/40",
+    "line-height": "font/line-height/48",
+    "letter-spacing": "font/letter-spacing/n1"
+   }
+  },
+  "h3": {
+   "A Saturated": {
+    "family": "font/family/outfit",
+    "style": "font/style/bold",
+    "size": "font/size/24",
+    "line-height": "font/line-height/32",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "B Blocks": {
+    "family": "font/family/fredoka",
+    "style": "font/style/semibold",
+    "size": "font/size/24",
+    "line-height": "font/line-height/32",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "C Pastel": {
+    "family": "font/family/nunito",
+    "style": "font/style/bold",
+    "size": "font/size/24",
+    "line-height": "font/line-height/32",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "D System": {
+    "family": "font/family/lexend",
+    "style": "font/style/medium",
+    "size": "font/size/24",
+    "line-height": "font/line-height/32",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "P2 Storybook": {
+    "family": "font/family/outfit",
+    "style": "font/style/bold",
+    "size": "font/size/24",
+    "line-height": "font/line-height/32",
+    "letter-spacing": "font/letter-spacing/n0_5"
+   }
+  },
+  "stat": {
+   "A Saturated": {
+    "family": "font/family/outfit",
+    "style": "font/style/extrabold",
+    "size": "font/size/48",
+    "line-height": "font/line-height/48",
+    "letter-spacing": "font/letter-spacing/n1"
+   },
+   "B Blocks": {
+    "family": "font/family/fredoka",
+    "style": "font/style/bold",
+    "size": "font/size/48",
+    "line-height": "font/line-height/48",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "C Pastel": {
+    "family": "font/family/nunito",
+    "style": "font/style/extrabold",
+    "size": "font/size/48",
+    "line-height": "font/line-height/48",
+    "letter-spacing": "font/letter-spacing/n1"
+   },
+   "D System": {
+    "family": "font/family/lexend",
+    "style": "font/style/semibold",
+    "size": "font/size/40",
+    "line-height": "font/line-height/40",
+    "letter-spacing": "font/letter-spacing/n1"
+   },
+   "P2 Storybook": {
+    "family": "font/family/bogart",
+    "style": "font/style/bold",
+    "size": "font/size/56",
+    "line-height": "font/line-height/56",
+    "letter-spacing": "font/letter-spacing/n1"
+   }
+  },
+  "eyebrow": {
+   "A Saturated": {
+    "family": "font/family/outfit",
+    "style": "font/style/semibold",
+    "size": "font/size/14",
+    "line-height": "font/line-height/20",
+    "letter-spacing": "font/letter-spacing/1_5"
+   },
+   "B Blocks": {
+    "family": "font/family/nunito",
+    "style": "font/style/bold",
+    "size": "font/size/14",
+    "line-height": "font/line-height/20",
+    "letter-spacing": "font/letter-spacing/1"
+   },
+   "C Pastel": {
+    "family": "font/family/nunito",
+    "style": "font/style/bold",
+    "size": "font/size/14",
+    "line-height": "font/line-height/20",
+    "letter-spacing": "font/letter-spacing/1"
+   },
+   "D System": {
+    "family": "font/family/lexend",
+    "style": "font/style/medium",
+    "size": "font/size/14",
+    "line-height": "font/line-height/20",
+    "letter-spacing": "font/letter-spacing/2"
+   },
+   "P2 Storybook": {
+    "family": "font/family/outfit",
+    "style": "font/style/bold",
+    "size": "font/size/14",
+    "line-height": "font/line-height/20",
+    "letter-spacing": "font/letter-spacing/1_5"
+   }
+  },
+  "body-lg": {
+   "A Saturated": {
+    "family": "font/family/outfit",
+    "style": "font/style/regular",
+    "size": "font/size/20",
+    "line-height": "font/line-height/32",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "B Blocks": {
+    "family": "font/family/nunito",
+    "style": "font/style/regular",
+    "size": "font/size/20",
+    "line-height": "font/line-height/32",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "C Pastel": {
+    "family": "font/family/nunito",
+    "style": "font/style/regular",
+    "size": "font/size/20",
+    "line-height": "font/line-height/32",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "D System": {
+    "family": "font/family/lexend",
+    "style": "font/style/light",
+    "size": "font/size/20",
+    "line-height": "font/line-height/32",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "P2 Storybook": {
+    "family": "font/family/outfit",
+    "style": "font/style/regular",
+    "size": "font/size/20",
+    "line-height": "font/line-height/32",
+    "letter-spacing": "font/letter-spacing/0"
+   }
+  },
+  "body": {
+   "A Saturated": {
+    "family": "font/family/outfit",
+    "style": "font/style/regular",
+    "size": "font/size/16",
+    "line-height": "font/line-height/24",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "B Blocks": {
+    "family": "font/family/nunito",
+    "style": "font/style/regular",
+    "size": "font/size/18",
+    "line-height": "font/line-height/28",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "C Pastel": {
+    "family": "font/family/nunito",
+    "style": "font/style/regular",
+    "size": "font/size/18",
+    "line-height": "font/line-height/28",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "D System": {
+    "family": "font/family/lexend",
+    "style": "font/style/light",
+    "size": "font/size/16",
+    "line-height": "font/line-height/26",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "P2 Storybook": {
+    "family": "font/family/outfit",
+    "style": "font/style/regular",
+    "size": "font/size/16",
+    "line-height": "font/line-height/26",
+    "letter-spacing": "font/letter-spacing/0_2"
+   }
+  },
+  "caption": {
+   "A Saturated": {
+    "family": "font/family/outfit",
+    "style": "font/style/medium",
+    "size": "font/size/14",
+    "line-height": "font/line-height/20",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "B Blocks": {
+    "family": "font/family/nunito",
+    "style": "font/style/semibold",
+    "size": "font/size/14",
+    "line-height": "font/line-height/20",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "C Pastel": {
+    "family": "font/family/nunito",
+    "style": "font/style/semibold",
+    "size": "font/size/14",
+    "line-height": "font/line-height/20",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "D System": {
+    "family": "font/family/lexend",
+    "style": "font/style/regular",
+    "size": "font/size/14",
+    "line-height": "font/line-height/20",
+    "letter-spacing": "font/letter-spacing/0_2"
+   },
+   "P2 Storybook": {
+    "family": "font/family/outfit",
+    "style": "font/style/regular",
+    "size": "font/size/14",
+    "line-height": "font/line-height/20",
+    "letter-spacing": "font/letter-spacing/0_2"
+   }
+  },
+  "button": {
+   "A Saturated": {
+    "family": "font/family/outfit",
+    "style": "font/style/semibold",
+    "size": "font/size/16",
+    "line-height": "font/line-height/24",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "B Blocks": {
+    "family": "font/family/nunito",
+    "style": "font/style/bold",
+    "size": "font/size/17",
+    "line-height": "font/line-height/24",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "C Pastel": {
+    "family": "font/family/nunito",
+    "style": "font/style/extrabold",
+    "size": "font/size/16",
+    "line-height": "font/line-height/24",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "D System": {
+    "family": "font/family/lexend",
+    "style": "font/style/medium",
+    "size": "font/size/16",
+    "line-height": "font/line-height/24",
+    "letter-spacing": "font/letter-spacing/0_3"
+   },
+   "P2 Storybook": {
+    "family": "font/family/outfit",
+    "style": "font/style/bold",
+    "size": "font/size/16",
+    "line-height": "font/line-height/24",
+    "letter-spacing": "font/letter-spacing/0_3"
+   }
+  },
+  "highlight-display": {
+   "A Saturated": {
+    "family": "font/family/caveat",
+    "style": "font/style/bold",
+    "size": "font/size/112",
+    "line-height": "font/line-height/96",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "B Blocks": {
+    "family": "font/family/caveat-brush",
+    "style": "font/style/regular",
+    "size": "font/size/104",
+    "line-height": "font/line-height/92",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "C Pastel": {
+    "family": "font/family/dancing-script",
+    "style": "font/style/bold",
+    "size": "font/size/96",
+    "line-height": "font/line-height/88",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "D System": {
+    "family": "font/family/kalam",
+    "style": "font/style/bold",
+    "size": "font/size/80",
+    "line-height": "font/line-height/80",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "P2 Storybook": {
+    "family": "font/family/playpen-sans",
+    "style": "font/style/bold",
+    "size": "font/size/96",
+    "line-height": "font/line-height/96",
+    "letter-spacing": "font/letter-spacing/n1"
+   }
+  },
+  "highlight-h1": {
+   "A Saturated": {
+    "family": "font/family/caveat",
+    "style": "font/style/bold",
+    "size": "font/size/76",
+    "line-height": "font/line-height/72",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "B Blocks": {
+    "family": "font/family/caveat-brush",
+    "style": "font/style/regular",
+    "size": "font/size/68",
+    "line-height": "font/line-height/64",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "C Pastel": {
+    "family": "font/family/dancing-script",
+    "style": "font/style/bold",
+    "size": "font/size/66",
+    "line-height": "font/line-height/64",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "D System": {
+    "family": "font/family/kalam",
+    "style": "font/style/bold",
+    "size": "font/size/54",
+    "line-height": "font/line-height/56",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "P2 Storybook": {
+    "family": "font/family/playpen-sans",
+    "style": "font/style/semibold",
+    "size": "font/size/56",
+    "line-height": "font/line-height/56",
+    "letter-spacing": "font/letter-spacing/n0_5"
+   }
+  },
+  "highlight-h2": {
+   "A Saturated": {
+    "family": "font/family/caveat",
+    "style": "font/style/bold",
+    "size": "font/size/48",
+    "line-height": "font/line-height/48",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "B Blocks": {
+    "family": "font/family/caveat-brush",
+    "style": "font/style/regular",
+    "size": "font/size/48",
+    "line-height": "font/line-height/48",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "C Pastel": {
+    "family": "font/family/dancing-script",
+    "style": "font/style/bold",
+    "size": "font/size/48",
+    "line-height": "font/line-height/48",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "D System": {
+    "family": "font/family/kalam",
+    "style": "font/style/bold",
+    "size": "font/size/36",
+    "line-height": "font/line-height/40",
+    "letter-spacing": "font/letter-spacing/0"
+   },
+   "P2 Storybook": {
+    "family": "font/family/playpen-sans",
+    "style": "font/style/semibold",
+    "size": "font/size/36",
+    "line-height": "font/line-height/40",
+    "letter-spacing": "font/letter-spacing/0"
+   }
+  }
+ }
+}

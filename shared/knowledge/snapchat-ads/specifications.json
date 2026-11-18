@@ -1,0 +1,371 @@
+{
+  "title": "Snapchat paid advertising: documented format specifications",
+  "checked_on": "2026-09-16",
+  "version": "1.0",
+  "scope": "Single Image or Video, Story Ads, Collection Ads, Commercials, Sponsored Snaps and cross-format safe zones, with CTA options by attachment. Public official documentation only; not account-tested.",
+  "records": [
+    {
+      "id": "SNAP-001",
+      "platform": "Snapchat",
+      "format": "Single Image or Video (full-screen Snap Ad)",
+      "placement": "Between/after User, Publisher, Creator and Our Stories; Spotlight",
+      "source_url": "https://businesshelp.snapchat.com/s/article/top-snap-specs?language=en_US",
+      "checked_on": "2026-09-16",
+      "source_access": "Live public browser DOM (JavaScript-rendered Help Center article); no last-updated date shown",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "brand_name_max": "32 characters with spaces (Help Center); 25 (forbusiness ad formats page)",
+        "brand_name_rules": "Must reflect paying advertiser; cannot equal headline; required",
+        "headline_max": "34 characters with spaces; required",
+        "cta_options_by_attachment": {
+          "website": [
+            "Apply Now",
+            "Book Now",
+            "Buy Tickets",
+            "Get Now",
+            "Listen",
+            "More",
+            "Order Now",
+            "Play",
+            "Read",
+            "Shop Now",
+            "Show",
+            "Showtimes",
+            "Sign Up",
+            "View",
+            "Watch",
+            "Donate"
+          ],
+          "app_install": [
+            "Book Now",
+            "Download",
+            "Get Now",
+            "Install Now",
+            "Order Now",
+            "Play",
+            "Shop Now",
+            "Sign Up",
+            "Use App"
+          ],
+          "lead_form": [
+            "Apply Now",
+            "Book Now",
+            "Claim Sample",
+            "Free Trial",
+            "Get Coupon",
+            "Get Now",
+            "More",
+            "Request Appointment",
+            "Request Quote",
+            "Sign Up",
+            "Test Drive"
+          ],
+          "deep_link": [
+            "More",
+            "Open App",
+            "Play",
+            "Shop Now",
+            "Sign Up",
+            "Try",
+            "Use App"
+          ],
+          "ar_lens": [
+            "Book Now",
+            "Directions",
+            "Download",
+            "Get Now",
+            "Install Now",
+            "Order Now",
+            "Play",
+            "Play Game",
+            "Shop Now",
+            "Try",
+            "Use App",
+            "Vote",
+            "Watch"
+          ],
+          "source": "https://businesshelp.snapchat.com/s/article/attachment-ctas?language=en_US"
+        }
+      },
+      "recommendations": {
+        "canvas_px": "1080x1920",
+        "length": "3-5 s (About page, best practices); 'around 5-6 seconds' (best practices)",
+        "creative": "Hero message in opening frame; branding before 0:02 without static logo opener; offer message around 2-3 s; native/UGC style"
+      },
+      "technical_requirements": {
+        "aspect_ratio": "9:16",
+        "image_minimum_px": "720x1280",
+        "length": "3 s to 30 minutes if <=1 GB (Help Center specs); up to 3 minutes (About page); 3-180 s (formats page); <3 s looped to 3 s",
+        "file_types": {
+          "video": ".mp4/.mov H.264",
+          "image": ".jpg/.png (Ads Manager only)"
+        },
+        "sar_dar_par": "SAR 9:16; DAR 9:16; PAR 1:1",
+        "file_size_max": {
+          "video": "1 GB",
+          "image": "5 MB",
+          "dynamic_ads": "6 MB"
+        },
+        "audio": "2 channels (L/R) balanced; target -16 LUFS; PCM or AAC; >=192 kbps; 16 or 24 bit",
+        "image_conversion": "Still converted to 5-second video",
+        "other": "13+ audience; Sponsored Creative Tool ads need persistent branding and actionable overlay"
+      },
+      "safe_zone": {
+        "source": "https://businesshelp.snapchat.com/s/article/safe-zones?language=en_US",
+        "top_pct": 10,
+        "bottom_pct": 35,
+        "sides_pct_each": 6,
+        "lower_right_column": "15% width x bottom 45% height",
+        "calculated_px_at_1080x1920": {
+          "top": 192,
+          "bottom": 672,
+          "sides_each": 65,
+          "lower_right_column": "162 x 864"
+        },
+        "classification": "Guidance; percentages from diagram, pixels calculated"
+      },
+      "notes": "Best-practices page still states top 150 px / bottom 330 px. Additional sources: https://businesshelp.snapchat.com/s/article/image-video-ads?language=en_US ; https://businesshelp.snapchat.com/s/article/snap-ads-practices?language=en_US ; https://forbusiness.snapchat.com/advertising/ad-formats"
+    },
+    {
+      "id": "SNAP-002",
+      "platform": "Snapchat",
+      "format": "Story Ads",
+      "placement": "Discover Feed tile and/or between content",
+      "source_url": "https://businesshelp.snapchat.com/s/article/story-ad-specs?language=en_US",
+      "checked_on": "2026-09-16",
+      "source_access": "Live public browser DOM (JavaScript-rendered Help Center article); no last-updated date shown",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "tile_headline_max": "55 characters with spaces; emojis allowed and counted",
+        "snap_brand_name_max": "32 characters (formats page: 25)",
+        "snap_headline_max": "34 characters",
+        "headline_behaviour": "Create-flow headline applies to all Snaps; 'Use Existing Creative' keeps sub-creative headlines"
+      },
+      "recommendations": {
+        "tile_white_background": "Add gradient toward bottom behind headline"
+      },
+      "technical_requirements": {
+        "tile_logo": "993x284 px PNG transparent; fill full height, or full width and >=50% height",
+        "tile_image": "360x600 px .png up to 2 MB, 8-bit or lower",
+        "tile_buffers": "175 px top; with CTA 175 px top and 269 px bottom; text within 300x128 px",
+        "tile_required": "Required for automatic or Discover Feed placement",
+        "snaps": "1-10 Single Image or Video ads meeting SNAP-001",
+        "snap_length_max": "180 s",
+        "attachments": [
+          "WebView",
+          "App Install",
+          "Deep Link"
+        ]
+      },
+      "safe_zone": {
+        "source": "https://businesshelp.snapchat.com/s/article/safe-zones?language=en_US",
+        "top_pct": 10,
+        "bottom_pct": 35,
+        "sides_pct_each": 6,
+        "lower_right_column": "15% width x bottom 45% height",
+        "calculated_px_at_1080x1920": {
+          "top": 192,
+          "bottom": 672,
+          "sides_each": 65,
+          "lower_right_column": "162 x 864"
+        },
+        "classification": "Guidance; percentages from diagram, pixels calculated"
+      },
+      "notes": "Per-Snap visible branding not required."
+    },
+    {
+      "id": "SNAP-003",
+      "platform": "Snapchat",
+      "format": "Collection Ads",
+      "placement": "Full-screen with 2-4 product thumbnails",
+      "source_url": "https://businesshelp.snapchat.com/s/article/collection-ad-specs?language=en_US",
+      "checked_on": "2026-09-16",
+      "source_access": "Live public browser DOM (JavaScript-rendered Help Center article); no last-updated date shown",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "brand_name_max": "25 (formats page) / 32 (SNAP-001)",
+        "headline_max": "34",
+        "cta": "Applied by Snap at upper left of thumbnail area, chosen from Ads Manager list"
+      },
+      "recommendations": {
+        "length": "3-5 s",
+        "branding": "Before 0:02",
+        "thumbnails": "One product per thumbnail, filling frame, little or no text"
+      },
+      "technical_requirements": {
+        "main_media": "Per SNAP-001",
+        "thumbnails": "2, 3 or 4 square static .jpg/.png",
+        "thumbnail_min_px": "160x160",
+        "thumbnail_file_size_max": "2 MB each",
+        "urls": "One per thumbnail plus required main click URL"
+      },
+      "safe_zone": {
+        "source": "https://businesshelp.snapchat.com/s/article/safe-zones?language=en_US",
+        "top_pct": 10,
+        "bottom_pct": 35,
+        "sides_pct_each": 6,
+        "lower_right_column": "15% width x bottom 45% height",
+        "calculated_px_at_1080x1920": {
+          "top": 192,
+          "bottom": 672,
+          "sides_each": 65,
+          "lower_right_column": "162 x 864"
+        },
+        "classification": "Guidance; percentages from diagram, pixels calculated",
+        "page_specific": "Collection page: keep bottom ~450 px clear (conflicts with 35%)"
+      },
+      "notes": "Manual or dynamic from product catalog. 'AD' slug upper right of thumbnail area."
+    },
+    {
+      "id": "SNAP-004",
+      "platform": "Snapchat",
+      "format": "Commercials (Standard and Extended Play)",
+      "placement": "Snap curated content",
+      "source_url": "https://businesshelp.snapchat.com/s/article/commercial-specs?language=en_US",
+      "checked_on": "2026-09-16",
+      "source_access": "Live public browser DOM (JavaScript-rendered Help Center article); no last-updated date shown",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {},
+      "recommendations": {
+        "creative": "Single-minded message; clear branding; purposeful sound; quick hook; reveal/payoff around 0:05"
+      },
+      "technical_requirements": {
+        "canvas_px": "1080x1920 (formats page: 720x1280)",
+        "aspect_ratio": "9:16",
+        "creatives": "Video only; must include audio",
+        "length": {
+          "standard": "3-6 s, fully non-skippable",
+          "extended_play": "7-180 s, first 6 s non-skippable"
+        },
+        "file_types": ".mp4/.mov H.264",
+        "sar_dar_par": "SAR 9:16; DAR 9:16; PAR 1:1",
+        "file_size_max": "1 GB",
+        "audio": "2 channels (L/R) balanced; target -16 LUFS; PCM or AAC; >=192 kbps; 16 or 24 bit; 48 kHz",
+        "attachments": [
+          "Web View",
+          "AR Lens"
+        ],
+        "markets": [
+          "AE",
+          "AU",
+          "AT",
+          "BE",
+          "BH",
+          "CA",
+          "CH",
+          "DE",
+          "DK",
+          "FI",
+          "FR",
+          "IE",
+          "IN",
+          "IQ",
+          "JO",
+          "KW",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "QA",
+          "SA",
+          "SE",
+          "UK",
+          "US"
+        ]
+      },
+      "safe_zone": {
+        "source": "https://businesshelp.snapchat.com/s/article/safe-zones?language=en_US",
+        "top_pct": 10,
+        "bottom_pct": 35,
+        "sides_pct_each": 6,
+        "lower_right_column": "15% width x bottom 45% height",
+        "calculated_px_at_1080x1920": {
+          "top": 192,
+          "bottom": 672,
+          "sides_each": 65,
+          "lower_right_column": "162 x 864"
+        },
+        "classification": "Guidance; percentages from diagram, pixels calculated",
+        "page_specific": "Commercial page: no logos/graphics within 150 px of top and bottom; 6-second ticker at top; 'AD' slug lower right"
+      },
+      "notes": ""
+    },
+    {
+      "id": "SNAP-005",
+      "platform": "Snapchat",
+      "format": "Sponsored Snaps",
+      "placement": "Chat Feed",
+      "source_url": "https://businesshelp.snapchat.com/s/article/ads-in-chat?language=en_US",
+      "checked_on": "2026-09-16",
+      "source_access": "Live public browser DOM (JavaScript-rendered Help Center article); no last-updated date shown",
+      "account_availability": "NOT_TESTED",
+      "status": "SOURCE_ISSUE",
+      "copy": {
+        "brand_name": "From Public Profile; up to 25 characters (formats page)",
+        "headline": "Aim for 25-28 characters; 34 max (formats page)",
+        "chat_message_max": "500 characters (optional)",
+        "auto_response_max": "500 characters or video (optional)"
+      },
+      "recommendations": {
+        "length": "Under 10 s",
+        "branded_chat_background_px": "1080x1920",
+        "auto_response_video_px": "1080x1920"
+      },
+      "technical_requirements": {
+        "eligible_creatives": [
+          "Single Image or Video",
+          "Story Ads",
+          "Static Collection"
+        ],
+        "not_eligible": [
+          "Commercials",
+          "Dynamic Collection",
+          "Dynamic Product Ads",
+          "Offer Details/Ad Disclaimer enabled",
+          "Deep Link attachment"
+        ],
+        "media": ".mp4/.mov/.jpg/.png; 9:16; 720x1280; 180 s max (formats page)",
+        "branded_chat_background": "PNG or JPEG",
+        "auto_response_video": "H.264, <180 s",
+        "public_profile": "Required, with profile photo"
+      },
+      "safe_zone": "Full-screen creative follows SNAP-006",
+      "notes": "EU/Norway availability stated inconsistently in same article. Chat Feed auto-bundled with Discover Feed for some objectives. Formats page: https://forbusiness.snapchat.com/advertising/ad-formats"
+    },
+    {
+      "id": "SNAP-006",
+      "platform": "Snapchat",
+      "format": "Safe zones (all major formats)",
+      "placement": "Stories, Spotlight, Commercials; Single Image/Video, Story, Collection (incl. Dynamic), Commercials",
+      "source_url": "https://businesshelp.snapchat.com/s/article/safe-zones?language=en_US",
+      "checked_on": "2026-09-16",
+      "source_access": "Live public browser DOM (JavaScript-rendered Help Center article); no last-updated date shown",
+      "account_availability": "NOT_TESTED",
+      "status": "DOCUMENTED",
+      "copy": {},
+      "recommendations": {
+        "practices": "Keep logos, taglines, disclaimers and CTAs inside safe area; legible fonts, strong contrast; disclaimers well above bottom buffer; use Ads Manager Safe Zone toggle (Dynamic CTA variants not shown in preview)"
+      },
+      "technical_requirements": {},
+      "safe_zone": {
+        "source": "https://businesshelp.snapchat.com/s/article/safe-zones?language=en_US",
+        "top_pct": 10,
+        "bottom_pct": 35,
+        "sides_pct_each": 6,
+        "lower_right_column": "15% width x bottom 45% height",
+        "calculated_px_at_1080x1920": {
+          "top": 192,
+          "bottom": 672,
+          "sides_each": 65,
+          "lower_right_column": "162 x 864"
+        },
+        "classification": "Guidance; percentages from diagram, pixels calculated"
+      },
+      "notes": "Percentages read from diagram image; pixel values calculated, not published."
+    }
+  ]
+}

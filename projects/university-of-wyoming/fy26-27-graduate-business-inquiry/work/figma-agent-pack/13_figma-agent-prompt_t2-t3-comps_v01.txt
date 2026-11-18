@@ -1,0 +1,78 @@
+Build internal comps for the University of Wyoming College of Business graduate Meta campaign. Internal only, not for release. Follow the attached files 10_uw_brand_rules, 11_uw_campaign and 12_uw_directions exactly; if anything below conflicts with them, the attached files win. Do not change any words. Use typographic apostrophes (’), never straight quotes.
+
+SET UP
+- Create a new page "UW T2 + T3 Comps 2026-09-17".
+- Brand: UW Brown #492F24 (dominant), UW Gold #FFC425 (one word per card only), White #FFFFFF. Flat fills only: no gradients, shadows, glass, textures, contour lines, dotted lines or drawn buttons.
+- Type: Montserrat Bold (Gotham stand-in). Flush left, deadpan, no exclamation marks. Label every frame "Montserrat stand-in".
+- Logo: use the "UW Lockup Placeholder" component only. White logo on Brown. Never type "UNIVERSITY OF WYOMING" beside it.
+- Program label next to the logo on every card, at least 32 px tall on a 1080-wide frame.
+- Apply Now is Meta’s button. Never draw a button.
+
+PART 1 · T2 CAROUSELS (5 programs × 5 cards, 1080 × 1080, TYPE ONLY on flat UW Brown)
+One row per program. Card structure, identical for every program:
+  Card 1  WEEK LINE (below). Gold on "SAME WEEK." only.
+  Card 2  TOO STUBBORN TO STOP?  Gold on "STUBBORN" only. Largest type in the set.
+  Card 3  YOU SOUND LIKE A COWBOY.  Gold on "COWBOY" only.
+  Card 4  GRADUATE PROGRAMS THAT WORK AS HARD AS YOU DO.  No Gold word.
+  Card 5  PROOF LINE (below), a short Gold rule under it, no Gold word.
+          Online programs: flat Brown. On-Campus MBA and M.S. in Accounting: grey box in the top 670 px labelled "UW CAMPUS PHOTO - PLACEHOLDER", flat Brown band below.
+Logo + program label on all five cards.
+
+Row 1 · Label: ON-CAMPUS MBA
+  Week:  CLOSING SHIFT. PITCH DECK. BEST FRIEND’S WEDDING. SAME WEEK.
+  Proof: ONE-YEAR MBA.
+Row 2 · Label: ONLINE MBA
+  Week:  TWO PEOPLE SHORT. KID’S RECITAL. MOVING DAY. SAME WEEK.
+  Proof: 100% ONLINE. ASYNCHRONOUS.
+Row 3 · Label: M.S. IN ACCOUNTING
+  Week:  AUDIT INTERNSHIP. VOLUNTEER TAX NIGHT. SOFTBALL PLAYOFFS. SAME WEEK.
+  Proof: CPA EXAM PREPARATION.
+Row 4 · Label: ONLINE M.S. IN ACCOUNTING
+  Week:  MONTH-END CLOSE. INVENTORY COUNT. REC LEAGUE FINAL. SAME WEEK.
+  Proof: CPA EXAM PREPARATION.
+Row 5 · Label: ONLINE M.S. IN FINANCE
+  Week:  COVERING THE BRANCH. MARKET DIP. GRANDMA’S 90TH. SAME WEEK.
+  Proof: CFP® BOARD REGISTERED.
+
+Rules for Part 1:
+- Break week lines only at full stops, one item per line.
+- The proof line is a single text layer named "PROOF SLOT", always one line. Make it a component with variants so lines can be swapped later.
+- Keep generous, purposeful space. Headline type must read at phone size.
+
+PART 2 · PROOF SLOT TEST (Online M.S. in Accounting card 5 only)
+Duplicate Row 4 card 5 twice and swap the proof line to:
+  NON-ACCOUNTING DEGREE? THERE’S A PATHWAY.
+  PATHWAY FOR NON-ACCOUNTING GRADS.
+Tell me whether the first one fits on one line at the same size as "CPA EXAM PREPARATION." Do not shrink it to make it fit.
+
+PART 3 · T2 EMPHASIS VARIANTS (Online MBA, cards 2 and 3 only)
+  Version A: STUBBORN / COWBOY in UW Gold (as built).
+  Version B: those words in White with a rough dry-brush UW Gold underline, slightly wider than the word, slight tilt, not touching the letters.
+  Version C: COWBOY in Blackhawk Italic, lowercase glyph setting. Only if the real Blackhawk font is installed. If it isn’t, skip Version C and say so. Never use a lookalike brush font.
+
+PART 4 · T2 VIDEO STORYBOARD (Online MBA, 4:5 1440 × 1800 and 9:16 1080 × 1920)
+Six key frames per ratio, left to right, each labelled with its time:
+  0.0–4.0   Week line building. Show the frame at the moment "SAME WEEK." lands. Grey photo area labelled "PLACEHOLDER IMAGE - not for external use", with a note "camera pulls out from the first object to the whole scene".
+  4.0–7.0   TOO STUBBORN TO STOP?
+  7.0–7.6   Same image, no type. Note: "silence, camera stops".
+  7.6–10.0  YOU SOUND LIKE A COWBOY.
+  10.0–12.5 Flat Brown: GRADUATE PROGRAMS THAT WORK AS HARD AS YOU DO. + label
+  12.5–15.0 Flat Brown: 100% ONLINE. ASYNCHRONOUS. + logo + label
+Logo + label on every frame from the first. In 9:16, keep all type and the logo inside the Stories/Reels safe zone (attached 05_meta_ad_craft, if present).
+
+PART 5 · T3 STUDENT VIDEO TEMPLATE (Online MBA, 4:5 and 9:16)
+Three key frames per ratio:
+  0–3s    Grey frame labelled "STUDENT FOOTAGE - LARAMIE SHOOT - PLACEHOLDER". Super in T2 week style: SWING SHIFT. KID’S RECITAL. GROUP PROJECT DUE. SAME WEEK. (Gold on SAME WEEK.) Logo + label.
+  3–10s   Same grey frame. Fact super: 100% ONLINE. ASYNCHRONOUS. Add a caption bar placeholder near the bottom (captions transcribe speech) and keep the super clear of it.
+  10–15s  End frame on Brown: logo, ONLINE MBA, and "[FIRST NAME] · CURRENT STUDENT".
+Never generate or insert a person, face or AI image in T3. No "YOU SOUND LIKE A COWBOY." and no tagline on T3.
+
+DO NOT
+- Build a single-image static.
+- Use any old lines: "SAID FRIDAY. FRIDAY.", "REAL COWBOYS NEVER QUIT.", "NOT AFRAID TO FORGE YOUR OWN PATH?", "NOT WAITING ON OTHERS TO MAKE IT HAPPEN?"
+- Use cowboy imagery, hats, horses, mountains, landmarks, maps or graduation caps.
+- Put STEM, cost, rankings, salaries, placement rates, dates or deadlines on any frame.
+- Build anything from "You don’t have to go far to get further" (not selected).
+
+WHEN DONE
+List what you built, anything you skipped and why, and any line that didn’t fit.

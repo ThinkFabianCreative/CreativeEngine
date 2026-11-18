@@ -1,0 +1,155 @@
+T2 · "TOO STUBBORN TO STOP?" · FIX PROMPTS FOR THE 15 STILL LIFES · v01 · 2026-09-18
+University of Wyoming · internal comp placeholders only · follows review of the 3:4 v1 set
+
+ORDER OF WORK
+  1. Regenerate the 5 weak images (Part C) with P3-A as the style reference.
+  2. Spot-fix 4 images in Photoshop with Generative Fill / Expand (Part B).
+  3. Grade ALL 15 to match P3-A (Part A), last, so the set is one family.
+  4. Re-export as "Px-X 3:4 v2" and keep the v1 files.
+
+Summary
+  Keep as is ............. P3-A (the grade reference)
+  Grade only ............. P3-C, P4-B, P4-C, P5-A, P5-B
+  Generative Fill/Expand . P1-A, P2-A, P2-B, P4-A   (+ grade)
+  Regenerate ............. P1-B, P1-C, P2-C, P3-B, P5-C   (+ grade)
+
+====================================================================
+PART A · GRADE ALL 15 TO MATCH P3-A
+====================================================================
+Reference: P3-A 3:4 v1 (warm tungsten, deep brown shadows, cream highlights).
+
+Option 1 (fastest): Photoshop > Filter > Neural Filters > Color Transfer, target image
+P3-A, strength about 60%, then tune by eye. Or Image > Adjustments > Match Color,
+source P3-A, fade about 30%.
+
+Option 2 (Camera Raw, per image, match by eye to P3-A):
+  White balance   warmer until whites read cream, never pure white
+                  (the cool ones, P1-B, P1-C, P2-A, P2-C, need the most)
+  Tint            slightly toward magenta to remove the green cast (lockers, kitchen)
+  Color Grading   Shadows: hue about 25-30 (brown), saturation 15-20
+                  Highlights: hue about 40 (cream), saturation 8-12
+  Saturation      down about 20-25 overall
+  HSL             Orange saturation down 20-30 on P4-C (blaze vest) so it doesn't fight
+                  UW Gold; keep P2-A's tulle a muted dusty rose
+  Grain           amount about 15, size 25 (fine 35mm)
+  Target          shadows in the #2A1C15 to #492F24 range; highlights near #F3E6CF;
+                  no blue-black blacks; nothing brighter than the lit objects in the
+                  top 40% of the frame
+
+P4-B only: the upper wall is a little lit. In Camera Raw add a Linear Gradient mask from the
+top edge down to about 40%, exposure -0.7 to -1.0. It must look like natural light
+falloff in the photo, not a graphic overlay.
+
+====================================================================
+PART B · PHOTOSHOP GENERATIVE FILL / EXPAND (then grade, Part A)
+====================================================================
+Select the area with the Lasso tool, generous edges, then Generative Fill with the
+prompt below. Pick the variation that best matches the surrounding light.
+
+P1-A · bright doorway strip at the upper right
+  Select: the lit doorway / light strip at the top right edge.
+  Prompt: dark restaurant wall in deep warm shadow, no doorway, no light, no fixtures
+
+P2-A · costume sits a little high in the frame
+  Canvas: Image > Canvas Size, add about 15% to the TOP (anchor bottom), then
+  Generative Expand (or select the empty band and Generative Fill).
+  Prompt: dark tops of gray steel lockers and a dark ceiling in deep shadow, no lights,
+          no signs, no vents
+  Then crop back to 3:4 from the bottom so the costume sits lower in the frame.
+
+P2-B · pendant bulb in the top center
+  Select: the hanging lamp and its glow.
+  Prompt: dark kitchen ceiling and wall in deep shadow, no light fixture, no lamp
+
+P4-A · pendant bulb in the top center of the aisle
+  Select: the hanging light and its glow (keep the shelving lines on either side).
+  Prompt: dark warehouse ceiling with metal shelving fading into deep shadow, no lights,
+          no fixtures
+
+====================================================================
+PART C · REGENERATE IN FIREFLY (5 images)
+====================================================================
+Firefly settings for every prompt below:
+  Content type: Photo · Aspect ratio: Portrait 3:4 · Visual intensity: low to medium
+  STYLE REFERENCE: upload P3-A 3:4 v1, strength about 50-60%. This locks the grade and
+  "hand" of the set.
+  Generate 4; pick the one with the darkest, emptiest top third.
+  Optional line to add at the end of any prompt:
+  "In the style of Todd Hido and Stephen Shore."
+
+P1-C · QUARTER-END. TRAINING THE NEW HIRE. BROTHER'S STATE MEET. SAME WEEK.
+(missing the meet; window in frame; fake diagram text; cool grade)
+An office desk after hours in a windowless room. A worn brown leather work bag on the
+desk chair. On the desk, a closed laminated training binder with plain colored tab
+dividers, and on top of it a folded athletic meet program with a coiled lanyard and a
+spectator wristband. A coffee cup gone cold. Medium close-up at seated eye height, 50mm
+lens at f/2, shallow depth of field on the program and lanyard. Objects in the lower
+middle, slightly right. A single warm desk lamp out of frame to the right lights only
+the desk. Warm tungsten documentary still-life photograph, 35mm film look, fine grain.
+Deep warm brown shadows, cream highlights, low saturation. The top 40% of the frame is a
+dark, plain wall. No windows, no light fixtures or bulbs visible, no screens. No people,
+no hands, no faces. No readable text, diagrams, numbers, logos or brand names.
+
+P1-B · TWO FINALS. CLOSING SHIFT. LEASE RENEWAL. SAME WEEK.
+(visor didn't read; cool grade)
+A small apartment kitchen table late in the evening. Two open study guides with yellow
+highlighter marks. Resting on top of them, a black food-service visor with a curved brim
+and an adjustable strap, clearly a visor. Beside them, lease papers folded in thirds with
+a pen on top, and a half-finished glass of water. Medium shot at seated eye height, 35mm
+lens at f/2.8, focus on the visor and the lease. Objects in the lower middle of the frame.
+A single warm table lamp out of frame to the left lights only the table. Warm tungsten
+documentary still-life photograph, 35mm film look, fine grain. Deep warm brown shadows,
+cream highlights, low saturation, no green or blue cast. The top 40% of the frame is dark,
+plain wall and cabinet fronts in shadow. No windows, no light fixtures or bulbs visible.
+No people, no hands, no faces. No readable text, numbers, logos or brand names.
+
+P2-C · HOLIDAY RESET. TWO CALL-OUTS. TEE-BALL SIGNUPS. SAME WEEK.
+(fridge sheet in the type zone with fake text; cool grade)
+A home kitchen counter in the evening. A small child's leather baseball glove, a retail
+store lanyard with a blank white badge, and a rolled-up shelf layout sheet held with a
+rubber band. Leaning against the backsplash at counter height, a single blank signup form
+on a clipboard. Medium shot at standing eye height, 35mm lens at f/2.8, focus on the glove
+and the lanyard. Objects in the lower middle, slightly right. A warm under-cabinet light
+out of frame lights only the counter. Warm tungsten documentary still-life photograph,
+35mm film look, fine grain. Deep warm brown shadows, cream highlights, low saturation, no
+green cast. The top 40% of the frame is dark cabinet doors in deep shadow, with nothing on
+them. No refrigerator notes, no windows, no light fixtures or bulbs visible. No people, no
+hands, no faces. No readable text, numbers, logos or brand names.
+
+P3-B · TWO FINALS. PART-TIME TAX PREP. ROOMMATE MOVES OUT. SAME WEEK.
+(weakest image: the collision didn't read)
+A shared apartment living room at night. In the foreground, a half-packed cardboard moving
+box with a desk lamp and a rolled-up poster sticking out of it, clearly someone moving out.
+Just behind it, a small desk with a ten-key adding machine trailing a curl of paper tape, a
+stack of tax forms turned face down, and an open textbook with a pencil. Medium shot at
+seated eye height, 35mm lens at f/2.8, focus on the moving box and the adding machine.
+Objects in the lower middle of the frame, box left, desk right. A single warm desk lamp
+out of frame to the right. Warm tungsten documentary still-life photograph, 35mm film look,
+fine grain. Deep warm brown shadows, cream highlights, low saturation. The top 40% of the
+frame is a dark, plain wall with no bookshelf and no bright patch. No windows, no light
+fixtures or bulbs visible. No people, no hands, no faces. No readable text, numbers, logos
+or brand names.
+
+P5-C · LOAN COMMITTEE. HAIL CLAIMS. COUNTY FAIR. SAME WEEK.
+(ribbon in the type zone with fake text; blue off-palette)
+A credit-union office in a small town, after hours. Straight-on frontal view, camera level
+with the desk, deadpan and symmetrical, 50mm lens at f/4. On the desk: a thick committee
+packet held with a large black binder clip, and a stack of blank claim forms. Pinned low on
+a corkboard directly behind the desk, just above the desk surface, a gold and brown
+champion rosette ribbon with plain tails. Objects in the lower middle, centered. A warm
+desk lamp out of frame to the right lights the desk and the rosette. Warm tungsten
+documentary still-life photograph, 35mm film look, fine grain. Deep warm brown shadows,
+cream highlights, low saturation. The top 40% of the frame is dark wall and the upper
+corkboard edge in deep shadow, empty. No windows, no light fixtures or bulbs visible. No
+people, no hands, no faces. No readable text on the rosette, forms or packet. No numbers,
+logos or brand names.
+
+====================================================================
+CHECK BEFORE FILING v2 (every image)
+====================================================================
+[ ] Nothing bright and no objects in the top 40% (squint test).
+[ ] Key week objects read at thumbnail size.
+[ ] No readable or fake text anywhere at 100% zoom (papers can show illegible texture only).
+[ ] Grade matches P3-A side by side: brown shadows, cream highlights, no green or blue.
+[ ] No people, hands or faces.
+[ ] Labelled "PLACEHOLDER IMAGE - not for external use" in Figma.

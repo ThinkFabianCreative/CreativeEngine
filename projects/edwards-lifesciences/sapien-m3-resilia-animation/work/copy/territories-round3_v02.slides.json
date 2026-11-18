@@ -1,0 +1,386 @@
+{
+  "intro": {
+    "title": "Three routes. One heart moving forward.",
+    "body": "Round 3 slate, in recommended order: Footing (BET THE PITCH, conditional on a cold-read test for cute and stepping stones), The Gather (ADVANCE) and The Second Look (ADVANCE). Every route is built on a beige/tan ground with one red, text on screen only, and the dock and valve shown only as Edwards-approved animation placeholders [APPROVED-REF]. Flag Q40: R1 specifies a beige ground while R4 shows grey; we have built on beige until Edwards confirms."
+  },
+  "territories": [
+    {
+      "id": "R3-2",
+      "number": "04",
+      "name": "Footing",
+      "verdict": "BET THE PITCH (conditional)",
+      "headline": "Different ground every time. The same footing every time.",
+      "premise": "The heart is always moving forward, but the ground ahead is never the same twice. Before each move, the ground draws in from its own edges and becomes the same level footing, so every landing is the one you planned. That is what the dock does for the valve.",
+      "glassVariant": "Labelled variant: the heart is the glass heart, gliding in profile at small scale; on the final footing the camera pushes into it and the [APPROVED-REF] dock and valve are visible inside, sitting on the same footing.",
+      "claimNotes": "Claims noted, not gated: standardized landing zone, reproducible, RESILIA tissue, fully transseptal. Heartbeat is sound only, never an ECG line. Conditional BET: if the cold read fails on cute, Footing drops to ADVANCE and The Gather leads.",
+      "scenes30": [
+        {
+          "n": "01",
+          "time": "0–4s",
+          "direction": "Low side angle, beige. Small red heart at left, still. Ahead, uneven tan ground with a dip. No limbs, no face.",
+          "onscreen": "No two mitral anatomies are the same.",
+          "sound": "Room tone, one soft heartbeat"
+        },
+        {
+          "n": "02",
+          "time": "4–9s",
+          "direction": "The dip draws in from its edges and levels into a flat footing, no rim. The heart glides on at an even, weighted pace and settles onto it.",
+          "onscreen": "—",
+          "sound": "Soft thud on the beat"
+        },
+        {
+          "n": "03",
+          "time": "9–14s",
+          "direction": "Next patch, a ridge: draws in, levels, the heart settles. Then a gap: same. Trail behind sinks back flush. Line lands after the second footing.",
+          "onscreen": "Different ground. The same footing.",
+          "sound": "Heartbeat, tighter"
+        },
+        {
+          "n": "04",
+          "time": "14–20s",
+          "direction": "Match-cut from the next footing forming to [APPROVED-REF] dock capturing leaflets and drawing inward; valve lands.",
+          "onscreen": "The dock draws the anatomy in.",
+          "sound": "Low tone under the beat"
+        },
+        {
+          "n": "05",
+          "time": "20–26s",
+          "direction": "Wide: the heart travels at a steady glide. Only one footing formed just ahead; the levelled trail behind lies flush. Never a row of discs.",
+          "onscreen": "Fully transseptal. RESILIA tissue.",
+          "sound": "Steady beat"
+        },
+        {
+          "n": "06",
+          "time": "26–30s",
+          "direction": "End card on beige, the last footing flush under the SAPIEN M3 RESILIA lockup, ENCIRCLE logo, footnote zone.",
+          "onscreen": "Same footing. Every step forward.",
+          "sound": "Last beat, out"
+        }
+      ],
+      "scenes60": [
+        {
+          "n": "01",
+          "time": "0–5s",
+          "direction": "Beige, low side angle. Red heart still at left. Ahead, ground uneven in every direction.",
+          "onscreen": "Every mitral anatomy is different.",
+          "sound": "Room tone, one heartbeat"
+        },
+        {
+          "n": "02",
+          "time": "5–11s",
+          "direction": "Abstract outward force presses the first patch: ground buckles, cracks at the edges. No device, no ring shape. The heart stays still.",
+          "onscreen": "Force doesn't make footing.",
+          "sound": "Crack, silence"
+        },
+        {
+          "n": "03",
+          "time": "11–17s",
+          "direction": "Rewind. The patch draws in from its edges and settles level, no rim. The heart glides on and settles onto it.",
+          "onscreen": "So we draw it in.",
+          "sound": "Soft thud"
+        },
+        {
+          "n": "04",
+          "time": "17–24s",
+          "direction": "Two more patches (ridge, gap), each different, each drawing in to the same level footing. The heart travels onto each; trail sinks flush.",
+          "onscreen": "Different ground. The same footing.",
+          "sound": "Beat, beat"
+        },
+        {
+          "n": "05",
+          "time": "24–31s",
+          "direction": "[APPROVED-REF] dock encircles and captures the leaflets, draws the apparatus inward. Match to footing forming.",
+          "onscreen": "The dock captures the leaflets and draws the anatomy in.",
+          "sound": "Low tone"
+        },
+        {
+          "n": "06",
+          "time": "31–37s",
+          "direction": "[APPROVED-REF] valve deploys into the dock. Match to the heart settling onto the footing.",
+          "onscreen": "A standardized landing zone for the valve.",
+          "sound": "Beat lands with the valve"
+        },
+        {
+          "n": "07",
+          "time": "37–43s",
+          "direction": "Close on the heart at rest on the footing, slow beat. No leaflet render.",
+          "onscreen": "Next-generation valve. RESILIA tissue.†",
+          "sound": "Slow beat"
+        },
+        {
+          "n": "08",
+          "time": "43–50s",
+          "direction": "The heart glides on; three footings form one at a time just ahead, each carrying one line as it settles. Trail flush behind.",
+          "onscreen": "Reproducible. Fully transseptal. Built on the SAPIEN platform.",
+          "sound": "Steady beat"
+        },
+        {
+          "n": "09",
+          "time": "50–55s",
+          "direction": "Wide: the heart travels at pace and exits frame. One footing formed ahead at a time; levelled trail behind, never a row of discs.",
+          "onscreen": "Different ground. One place to land.",
+          "sound": "Beat lifts"
+        },
+        {
+          "n": "10",
+          "time": "55–60s",
+          "direction": "End card, last footing flush under the lockup, ENCIRCLE logo, footnote zone.",
+          "onscreen": "Same footing. Every step forward.",
+          "sound": "Out"
+        }
+      ]
+    },
+    {
+      "id": "R3-1",
+      "number": "05",
+      "name": "The Gather",
+      "verdict": "ADVANCE",
+      "headline": "Nothing pushed. Everything drawn in.",
+      "premise": "A film made of one motion. Irregular grain on a beige ground comes straight inward toward a single red heart and settles, without anything pulling, tying or turning it. Once it has settled, the heart moves forward, and the mechanism shows us why.",
+      "glassVariant": "Labelled variant: the red point is the glass heart, seen small from above; grains settle around it, then it rises and moves toward camera, [APPROVED-REF] dock and valve visible inside at the end card.",
+      "claimNotes": "Headline is title-slide only: it carries the Q38 comparison, flagged. Claims noted: standardized landing zone, reproducible, RESILIA tissue, fully transseptal. No rotation anywhere: grains come in straight.",
+      "scenes30": [
+        {
+          "n": "01",
+          "time": "0–4s",
+          "direction": "Top-down, beige. Tan grain scattered unevenly; one small red point at centre, still.",
+          "onscreen": "Every mitral anatomy is different.",
+          "sound": "Low room tone, faint granular hiss"
+        },
+        {
+          "n": "02",
+          "time": "4–9s",
+          "direction": "Abstract counter-beat: grains pushed outward from centre, ground cracks into a hard edge. No ring, no radial frame. Cut short.",
+          "onscreen": "Pushing against it isn't the answer.",
+          "sound": "Dry scrape, stops dead"
+        },
+        {
+          "n": "03",
+          "time": "9–15s",
+          "direction": "Grains slide straight inward on invisible lines, no rotation, and settle soft around the red point. It leans forward, barely perceptibly.",
+          "onscreen": "We draw it in.",
+          "sound": "Grain settling, a soft exhale"
+        },
+        {
+          "n": "04",
+          "time": "15–21s",
+          "direction": "Match-cut from the settled bed to [APPROVED-REF] dock capturing the leaflets, then valve deploying.",
+          "onscreen": "Fully transseptal. RESILIA tissue.",
+          "sound": "Single low tone"
+        },
+        {
+          "n": "05",
+          "time": "21–26s",
+          "direction": "Back to grain: the red point moves forward, the settled form following it in one piece.",
+          "onscreen": "A standardized landing zone.",
+          "sound": "Tone rises slightly"
+        },
+        {
+          "n": "06",
+          "time": "26–30s",
+          "direction": "End card on beige: SAPIEN M3 RESILIA lockup, ENCIRCLE logo, safety/footnote zone.",
+          "onscreen": "Drawn in. Moving forward.",
+          "sound": "Out"
+        }
+      ],
+      "scenes60": [
+        {
+          "n": "01",
+          "time": "0–5s",
+          "direction": "Beige, top-down. Grain scattered; red point still at centre.",
+          "onscreen": "Every mitral anatomy is different.",
+          "sound": "Room tone"
+        },
+        {
+          "n": "02",
+          "time": "5–11s",
+          "direction": "Three different grain fields in quick succession, each irregular in a new way.",
+          "onscreen": "Different size. Different shape. Different patient.",
+          "sound": "Three soft granular cues"
+        },
+        {
+          "n": "03",
+          "time": "11–17s",
+          "direction": "Abstract outward force: grains shoved to the edge, ground hardens and fractures. Kept abstract: no ring, no radial shape, no device.",
+          "onscreen": "Not by forcing a fit.",
+          "sound": "Scrape, cut"
+        },
+        {
+          "n": "04",
+          "time": "17–24s",
+          "direction": "Reverse: grains drawn straight in, no rotation, settle around the red point, which leans barely forward. Nothing encircles.",
+          "onscreen": "We draw it in.",
+          "sound": "Settling, exhale"
+        },
+        {
+          "n": "05",
+          "time": "24–31s",
+          "direction": "[APPROVED-REF] dock captures the leaflets, draws the apparatus inward; match to settled grain.",
+          "onscreen": "The dock captures the leaflets and draws the anatomy in.",
+          "sound": "Low tone"
+        },
+        {
+          "n": "06",
+          "time": "31–38s",
+          "direction": "[APPROVED-REF] valve lands in dock. Grain-side: red point sits in its bed.",
+          "onscreen": "A standardized landing zone for the valve.",
+          "sound": "Tone holds"
+        },
+        {
+          "n": "07",
+          "time": "38–45s",
+          "direction": "Macro of grain settling with slow, even rhythm. No leaflet render.",
+          "onscreen": "Next-generation valve. RESILIA tissue.†",
+          "sound": "Breath-like pulse"
+        },
+        {
+          "n": "08",
+          "time": "45–52s",
+          "direction": "Three lines appear one at a time over the still, settled form. The red point begins to move only after the third line.",
+          "onscreen": "Reproducible. Built on the SAPIEN platform. Engineered for mitral.",
+          "sound": "Rising"
+        },
+        {
+          "n": "09",
+          "time": "52–56s",
+          "direction": "The heart crosses frame and exits forward; the ground behind it is calm and even.",
+          "onscreen": "A heart moving forward.",
+          "sound": "Swell, release"
+        },
+        {
+          "n": "10",
+          "time": "56–60s",
+          "direction": "End card: lockup, ENCIRCLE logo, footnote zone.",
+          "onscreen": "Drawn in. Moving forward.",
+          "sound": "Out"
+        }
+      ]
+    },
+    {
+      "id": "R3-3",
+      "number": "06",
+      "name": "The Second Look",
+      "verdict": "ADVANCE",
+      "headline": "The case you closed. Look again.",
+      "premise": "Every heart team remembers the mitral cases it worked up and ruled out because the anatomy fit no option. This film takes a second look at one of them, on the team's own case-review sheet. The reason is a dock that draws the anatomy in, so the heart can move forward.",
+      "glassVariant": "Labelled variant: the reopened sheet holds the glass heart, small and flat-lit; it lifts off the sheet and the camera moves into it, [APPROVED-REF] dock and valve inside.",
+      "claimNotes": "Highest exposure. \"The anatomy didn't change. The answer did.\" implies newly eligible patients (Q5, Q36, Q42): kept for presentation, claim flagged; lower-exposure alt \"Same anatomy. A different way in.\" Verdict lines carry the anatomy-ruled-out register (Q29, Q38).",
+      "scenes30": [
+        {
+          "n": "01",
+          "time": "0–5s",
+          "direction": "Beige ground. Case-review sheets cascade in, one per beat: each a single tan line contour (anatomy as line) with a typeset conference-note verdict. No stamps, manila or desk.",
+          "onscreen": "Anatomy unsuitable. No option. Not a candidate.",
+          "sound": "Soft sheet sounds, one per sheet"
+        },
+        {
+          "n": "02",
+          "time": "5–10s",
+          "direction": "The sheets settle in a loose stack. Hold. One sheet near the bottom slides out.",
+          "onscreen": "Every team remembers these.",
+          "sound": "Silence, one sheet slide"
+        },
+        {
+          "n": "03",
+          "time": "10–16s",
+          "direction": "On the sheet the irregular tan contour draws in from its edges into a standard form; a small, flat-lit red heart sits in it.",
+          "onscreen": "The anatomy didn't change. The answer did.",
+          "sound": "Soft sheet turn, low tone"
+        },
+        {
+          "n": "04",
+          "time": "16–22s",
+          "direction": "Match-cut from the contour to [APPROVED-REF] dock capturing leaflets and drawing inward; valve lands.",
+          "onscreen": "The dock draws the anatomy in.",
+          "sound": "Low tone holds"
+        },
+        {
+          "n": "05",
+          "time": "22–26s",
+          "direction": "The red heart lifts off the sheet and travels forward out of frame. Stack behind it, still.",
+          "onscreen": "Fully transseptal.",
+          "sound": "Rising"
+        },
+        {
+          "n": "06",
+          "time": "26–30s",
+          "direction": "End card on beige: lockup, ENCIRCLE logo, footnote zone.",
+          "onscreen": "Look again.",
+          "sound": "Out"
+        }
+      ],
+      "scenes60": [
+        {
+          "n": "01",
+          "time": "0–6s",
+          "direction": "Case-review sheets cascade onto beige, one per beat: tan line contour, typeset verdict as a conference note. No stamps, manila or desk props.",
+          "onscreen": "Anatomy unsuitable. No option. Not a candidate.",
+          "sound": "Soft sheet sounds"
+        },
+        {
+          "n": "02",
+          "time": "6–12s",
+          "direction": "Slow push along the stack's edge; verdicts read like case-conference notes.",
+          "onscreen": "Every mitral case is different.",
+          "sound": "Room tone, held"
+        },
+        {
+          "n": "03",
+          "time": "12–18s",
+          "direction": "One sheet slides out. Irregular tan line contour on it.",
+          "onscreen": "The anatomy you ruled out.",
+          "sound": "Sheet slide"
+        },
+        {
+          "n": "04",
+          "time": "18–24s",
+          "direction": "Abstract outward force tries to fit the contour: it strains and cracks. No ring shape. Rewind.",
+          "onscreen": "Not by forcing a fit.",
+          "sound": "Crack, rewind"
+        },
+        {
+          "n": "05",
+          "time": "24–31s",
+          "direction": "Contour draws in from its edges into a standard form; match to [APPROVED-REF] dock capturing leaflets.",
+          "onscreen": "By drawing the anatomy in.",
+          "sound": "Low tone"
+        },
+        {
+          "n": "06",
+          "time": "31–37s",
+          "direction": "[APPROVED-REF] valve deploys into the dock. Sheet-side: the small red heart sits in the standard form.",
+          "onscreen": "A standardized landing zone for the valve.",
+          "sound": "Tone holds"
+        },
+        {
+          "n": "07",
+          "time": "37–43s",
+          "direction": "Next sheet: RESILIA beat in type only.",
+          "onscreen": "Next-generation valve. RESILIA tissue.†",
+          "sound": "Soft sheet sound"
+        },
+        {
+          "n": "08",
+          "time": "43–50s",
+          "direction": "Three more sheets slide out, each contour different, each drawing in to the same form. One line per sheet.",
+          "onscreen": "Reproducible. Fully transseptal. Built on the SAPIEN platform.",
+          "sound": "Three sheet sounds"
+        },
+        {
+          "n": "09",
+          "time": "50–55s",
+          "direction": "The red heart lifts off the sheet and travels forward, out of frame.",
+          "onscreen": "A heart moving forward.",
+          "sound": "Rising"
+        },
+        {
+          "n": "10",
+          "time": "55–60s",
+          "direction": "End card on beige.",
+          "onscreen": "Look again.",
+          "sound": "Out"
+        }
+      ]
+    }
+  ]
+}

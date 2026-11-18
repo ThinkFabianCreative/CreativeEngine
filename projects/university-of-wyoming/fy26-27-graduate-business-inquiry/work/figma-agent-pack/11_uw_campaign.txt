@@ -1,0 +1,62 @@
+11 · CLIENT: UNIVERSITY OF WYOMING · THE CAMPAIGN
+Updated 2026-09-17.
+
+WHAT IT IS
+Meta ads (Facebook and Instagram) for UW College of Business graduate programs.
+Goal: application starts. The action is "Apply Now", which is the Meta CTA button set in
+Ads Manager. Do not draw it in the ad.
+
+The ad may be the viewer's FIRST exposure to UW. UW branding and the program name must be
+clear and legible on every ad.
+
+ONE CAMPAIGN IDEA, FIVE PROGRAM VERSIONS
+The same creative runs for five programs. Only the program label changes:
+  ON-CAMPUS MBA
+  ONLINE MBA
+  M.S. IN ACCOUNTING
+  ONLINE M.S. IN ACCOUNTING
+  ONLINE M.S. IN FINANCE
+Use "ONLINE MBA" as the sample label in comps unless told otherwise.
+The label is restrained but must be readable at phone size (min 32 px on 1080 wide).
+Program facts go in the post text, EXCEPT one proof line per ad (T2: card 5 / last video
+frame; T3: one fact super), chosen from the PROOF LINES list in 12_uw_directions.txt.
+One line only. Never bullet points.
+
+VOICE
+Confident, direct, credible. Never "unlock your potential" or "take your future to the
+next level".
+
+DO NOT PUT ON ANY FRAME
+- Any claim about rankings, cost, salary, careers, outcomes, job placement, pass rates.
+- Any claim that the programs are hard to get into, or that students drop out.
+- Any schedule or flexibility claim ("fits your schedule") on a shared frame.
+- Any date, deadline or urgency. EXCEPTION: conversion-layer frames (retargeting) may carry
+  marked placeholder slots "[DEADLINE: CLIENT TO SUPPLY]" etc. inside a dashed box, per
+  work/concepts/…_conversion-layer-design_v01.md. Never a real-looking date, never relative time
+  ("today", "days left"), never gold, never the largest element.
+- "STEM" on any frame, any program (UW sources disagree on which formats are STEM).
+- Laramie, campus buildings or state imagery on shared or online frames (Online MBA also runs
+  in Colorado). EXCEPTION: On-Campus MBA and M.S. in Accounting (on campus) end cards use a UW
+  campus photograph (people in action, no exteriors or landmarks); these two target Wyoming only.
+
+FORMATS (Andres, 2026-09-17: each post is a carousel OR an animated video; no single static)
+  T2 carousel  1080 x 1080, 5 cards
+  T2 video 15s 4:5 1440 x 1800 and 9:16 1080 x 1920, camera pull-out, no voiceover
+  T3 video 15s 4:5 and 9:16, student to camera, captions required
+  Safe zones per 05_meta_ad_craft.txt
+Placements are not final (Q18).
+
+END CARD (T2 card 5 / last video frame; T3 last frame)
+UW College of Business logo + program label. T2 adds the proof line; T3 adds the student's
+first name and CURRENT STUDENT or ALUM. No button. No typed university name.
+- Online programs: solid UW Brown.
+- On-campus programs: UW campus photograph in the top 670 px (1080x1080 card), flat UW Brown band
+  below holding the white logo and program label. Photo from the UW Photo Database only.
+
+CONVERSION LAYER (retargeting frames)
+- The stage line is the largest type; the prospecting headline is not repeated.
+- ONE GOLD EVENT PER FRAME. It may be a word (STARTED, PAPERWORK, DAY ONE) or the highlighter stripe
+  under the untouched planner line — never both. When the stripe is in frame, the words stay White.
+  "SAME WEEK." is White.
+- Logo and program label on every carousel card; no separate end card.
+- Never state or imply the viewer's status ("your application", "you started", "admitted").

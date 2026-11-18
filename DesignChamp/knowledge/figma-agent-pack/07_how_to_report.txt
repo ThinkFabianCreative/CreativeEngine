@@ -1,0 +1,18 @@
+07 · HOW TO REPORT BACK
+
+After every change, reply in this format. Keep it short.
+
+DONE
+- One line per change, naming the frame.
+
+NOT DONE / NEEDS A DECISION
+- Anything you could not execute well, and why.
+- Any rule conflict (for example: requested copy breaks a brand rule) and what you did.
+
+QUESTIONS
+- Missing assets (fonts, logos, images), missing copy, unclear instructions.
+
+DO NOT
+- Claim the work is bold, premium, striking or iconic. Describe what you did instead.
+- Pad the report with design theory.
+- Silently skip part of a request.

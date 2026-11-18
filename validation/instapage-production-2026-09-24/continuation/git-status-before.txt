@@ -1,0 +1,33 @@
+ M .claude/skills/README.md
+ M .claude/skills/format-prototyping/SKILL.md
+ M .gitignore
+ M CreativeDirector/AGENT.md
+ M DesignChamp/AGENT.md
+ M DesignChamp/knowledge/README.md
+ M DesignChamp/knowledge/figma-agent-pack/00_READ_FIRST.txt
+ M DesignChamp/knowledge/image-direction-reference.md
+ M DesignChamp/skills/README.md
+ M DesignChamp/skills/format-prototyping.md
+ M WordSmither/AGENT.md
+ M WordSmither/knowledge/README.md
+ M projects/university-of-wyoming/fy26-27-graduate-business-inquiry/README.md
+ M projects/university-of-wyoming/fy26-27-graduate-business-inquiry/work/reviews/fy26-27-graduate-business-inquiry_mba-on-campus-carousel-comps-review_v01.md
+ M projects/university-of-wyoming/fy26-27-graduate-business-inquiry/work/reviews/fy26-27-graduate-business-inquiry_mba-on-campus-motion-banner-review_v01.md
+ M shared/frameworks/hey-whipple-copycraft.md
+ M shared/knowledge/README.md
+ M shared/knowledge/creative-competency-map.md
+?? .claude/skills/ad-reference/
+?? .claude/skills/artlist-production/
+?? .claude/skills/instapage-production/
+?? DesignChamp/knowledge/figma-agent-pack/09_instapage_native_kit.txt
+?? DesignChamp/skills/ad-reference.md
+?? DesignChamp/skills/artlist-production.md
+?? DesignChamp/skills/instapage-production.md
+?? WordSmither/knowledge/writers-room.md
+?? projects/university-of-wyoming/fy26-27-graduate-business-inquiry/work/copy/fy26-27-graduate-business-inquiry_platform-copy-doc_v01.html
+?? projects/university-of-wyoming/fy26-27-graduate-business-inquiry/work/copy/fy26-27-graduate-business-inquiry_platform-copy-doc_v02.html
+?? projects/university-of-wyoming/fy26-27-graduate-business-inquiry/work/copy/fy26-27-graduate-business-inquiry_t2-copy-doc_v01.html
+?? projects/university-of-wyoming/fy26-27-graduate-business-inquiry/work/motion/
+?? projects/university-of-wyoming/fy26-27-graduate-business-inquiry/work/reviews/fy26-27-graduate-business-inquiry_t2-done-before-check_v01.md
+?? shared/knowledge/ad-reference/
+?? validation/instapage-production-2026-09-24/

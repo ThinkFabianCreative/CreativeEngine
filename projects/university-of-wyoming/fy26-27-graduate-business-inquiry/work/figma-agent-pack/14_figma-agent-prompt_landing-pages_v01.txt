@@ -1,0 +1,139 @@
+14 · FIGMA CANVAS AGENT PROMPT · UW GRADUATE PROGRAM LANDING PAGES · v01
+Created 2026-10-14. CLIENT: University of Wyoming (College of Business)
+PROJECT: fy26-27-graduate-business-inquiry · Round 1 client approval · STATIC HI-FI MOCK
+Attach with: 10_uw_brand_rules.txt (brand rules win on color, type, logo, photography).
+11_uw_campaign.txt is for the Meta ads; from it, only the program labels and the
+"do not claim" list apply here.
+
+======================================================================
+ROLE AND GOAL
+======================================================================
+You are building static, high-fidelity landing page mockups in Figma for five University
+of Wyoming College of Business graduate programs. The pages exist to drive inquiries
+(request-info form submissions) from people who arrived from Meta ads.
+
+This is a round-1 approval mock. It is NOT a prototype and NOT production. No
+interactions, no prototype links, no variants beyond what is asked. The pages will later
+be rebuilt natively in Instapage, so build structure Instapage can reproduce: stacked
+full-width sections, simple 12-column grid, no effects Instapage can't make.
+
+STRUCTURAL REFERENCE (structure only, never its look)
+The section rhythm of the Miami Ad School Art Direction Master's page: a long scroll of
+full-bleed color-blocked sections, each one job, each with a big stacked uppercase
+headline, a short paragraph and at most one action. Borrow that rhythm and modularity.
+Do NOT borrow its pinks, purples, collage art, playful illustration or type. The look
+is UW: Brown dominant, Gold as accent, Gotham/Montserrat, flat fills.
+
+======================================================================
+BUILD ORDER (do it in this order, stop and report after step 3)
+======================================================================
+1. Page "UW LP – Foundations": color styles (UW Brown #492F24, UW Gold #FFC425, White,
+   Black, plus two tints: Brown 90 #5B3E31 and Cream #F6F1E7 for alternate sections),
+   text styles (below), 12-col grid styles for 1440 and 390.
+2. Page "UW LP – Components": build every section below as a component with auto layout,
+   plus: Form Card, Sticky Mobile CTA Bar, Video Player, FAQ Row, Stat Slot, Quote Card,
+   Button (Primary Gold/Brown text, Secondary White outline), Nav Bar, Footer.
+3. Page "UW LP – Master": ONE full desktop page (1440 wide) and ONE mobile page (390 wide)
+   for ONLINE MBA, assembled from instances. STOP. Report the frame links for review.
+4. Only after approval: duplicate the master for the other four programs, swapping
+   content only (labels, copy slots, imagery). Never change structure between programs
+   unless told.
+
+Programs (exact labels):
+  ON-CAMPUS MBA · ONLINE MBA · M.S. IN ACCOUNTING · ONLINE M.S. IN ACCOUNTING ·
+  ONLINE M.S. IN FINANCE
+
+======================================================================
+TYPE
+======================================================================
+Gotham; if unavailable, Montserrat only. Never Inter/Helvetica/Arial.
+  Display XL   Gotham Black/Montserrat ExtraBold, uppercase, 96/88 desktop, 44/42 mobile,
+               tracking -1%. Section headlines, 2–4 short stacked lines (Miami-style).
+  Display L    64/60 desktop, 34/34 mobile, uppercase.
+  Eyebrow      14/16, Bold, uppercase, tracking +12%, Gold on Brown / Brown on light.
+  Body L       20/30 Book. Body 17/26 Book. Caption 13/18.
+Blackhawk Italic (real file only, lowercase): at most ONE word per page as emphasis,
+in the hero. If the font file isn't in the file, skip it; never substitute.
+
+======================================================================
+THE TWO NON-NEGOTIABLES
+======================================================================
+A) VIDEO IS PROMINENT
+- The video player sits directly under the hero, full content width (desktop: 8 cols,
+  form occupies the right 4), 16:9, large play button (Gold circle, Brown triangle),
+  duration chip "0:60 PLACEHOLDER", caption line under it.
+- Poster frame: grey fill labelled "VIDEO POSTER – UW FOOTAGE PLACEHOLDER". No
+  AI-generated people, faces or students, ever.
+- On mobile the video is the first thing after the hero headline, full bleed.
+
+B) THE FORM IS PERSISTENT
+Static mock, so show persistence explicitly:
+- Desktop: Form Card pinned in the right 4 columns from the hero down. Show it in the hero
+  frame AND repeat it, identical, beside the curriculum section and in the final CTA
+  section, with a small annotation outside the artboard: "STICKY – stays in view on
+  scroll (Instapage sticky block)". Put a red dashed annotation line showing its scroll
+  range.
+- Mobile: form inline after the video, PLUS a Sticky Mobile CTA Bar fixed at the bottom of
+  every mobile screen-height section ("REQUEST INFO" Gold button, program label left).
+  Annotate: "Sticky bar opens/jumps to form".
+- Form Card fields (keep it short, max 5): First name · Last name · Email · Phone
+  (optional) · Program of interest (dropdown, pre-filled with this page's program) ·
+  Button "REQUEST INFO" · micro-line "We'll send program details. No spam." in Caption.
+  White card on Brown, 24px radius max 8, no shadow, Brown labels, 1px Brown 30% field
+  borders, 56px fields.
+- Field values are placeholders. No real personal data.
+
+======================================================================
+SECTIONS (top to bottom; alternate backgrounds Brown / Cream / White / Brown 90)
+======================================================================
+Each section = one job, one big stacked headline, ≤60 words body, ≤1 action.
+Copy is placeholder: write [BRACKETED SLOT DESCRIPTIONS] unless approved copy is supplied.
+Never invent program facts, costs, rankings, salaries, outcomes, deadlines or "STEM".
+
+01 NAV (Brown): UW lockup placeholder component left; anchor links (Program · Curriculum ·
+   Faculty · Admissions · FAQ); Gold "REQUEST INFO" button right.
+02 HERO (Brown): eyebrow = program label; Display XL headline [CAMPAIGN HEADLINE – FROM
+   APPROVED AD LINE] 3 stacked lines; one sentence sub; form card right. Image slot
+   (labelled placeholder) optional behind left half, never mountains, horizons, caps.
+03 VIDEO (Brown 90): Video Player as above, + one-line caption [WHAT THE VIDEO SHOWS].
+04 PROGRAM AT A GLANCE (Cream): 4 Stat Slots in a row: [FORMAT] [CREDITS] [LENGTH]
+   [START TERMS] — big numerals area, label under. Values = "[CLIENT TO SUPPLY]".
+05 WHY THIS PROGRAM (White): Display L headline + 3 short reason blocks, left-aligned
+   numbered 01/02/03, thin Brown rule above each.
+06 STUDENT VOICE (Brown): one large Quote Card: grey photo slot "STUDENT PHOTO – LARAMIE
+   SHOOT – PLACEHOLDER", quote "[REAL STUDENT QUOTE – SUPPLIED BY UW]", first name +
+   CURRENT STUDENT/ALUM. Gold quotation mark is the single Gold moment of the section.
+07 CURRICULUM (Cream): headline + 2-column course list (8 slots "[COURSE NAME]") +
+   secondary button "DOWNLOAD PROGRAM GUIDE". Form card repeats on the right (desktop).
+08 FACULTY (White): 3 portrait slots (grey, labelled), name/title slots.
+09 HOW TO APPLY (Brown): 3 numbered steps in a vertical stepper (Miami's "three steps"
+   pattern): Step 1/2/3 with [STEP] text. Gold step numbers.
+10 DEADLINES & COST (Cream): two cards. All values in dashed boxes "[CLIENT TO SUPPLY]".
+    Not gold, not the largest element.
+11 FAQ (White): 5 FAQ Rows, collapsed state, + / – icon. First one shown open.
+12 FINAL CTA (Brown): Display XL [CLOSING LINE], Form Card centered (mobile) / right
+    (desktop).
+13 FOOTER (Black or Brown 90): lockup, address slot, legal slot, social icons.
+
+Section padding: 160px top/bottom desktop, 80px mobile. Content max 1200px.
+
+======================================================================
+PROHIBITED
+======================================================================
+gradients · drop shadows · glass/blur · device mockups · stock business meetings ·
+graduation caps · mountains, trails, roads, horizons, maps · cowboy hats/horses ·
+AI-generated people · invented facts, numbers, rankings, prices, outcomes · STEM ·
+real-looking dates or urgency · more than one Gold "event" per section · typing
+"UNIVERSITY OF WYOMING" next to the logo · the Miami Ad School color palette or art.
+
+======================================================================
+FILE HYGIENE
+======================================================================
+- Name every layer and frame ("LP / Online MBA / Desktop", "Section 06 / Student Voice").
+- Auto layout everywhere; no absolute-positioned text.
+- Annotations live OUTSIDE the artboards, in a red #E5484D annotation style, so the client
+  can view the clean page and the build notes separately.
+- Add a cover frame: "UW College of Business · Graduate Program Landing Pages · Round 1 ·
+  Internal draft – placeholders marked".
+- When done with step 3, report: frame links, any brand rule you could not satisfy and why,
+  any font missing.
