@@ -17,7 +17,7 @@ Access to look is not a right to reuse. For every reference record the source UR
 | CARI (Consumer Aesthetics Research Institute) | https://cari.institute/ · taxonomy: https://cari.institute/aesthetics | Consumer aesthetic taxonomy, 1970s to now | Site warns against redistribution and commercial use of its images |
 | Design Reviewed | https://designreviewed.com/archive/ · Swiss style: https://designreviewed.com/design-movement/international-typographic-style/ | Posters, movements, designers, decades, print formats | Research access is not reproduction rights |
 | Artvee | https://artvee.com/ | Historical fine art and illustration for period moodboards | Check each work's public-domain status; the package couldn't fully inspect the site |
-| eMuseum Zürich | https://emuseum.ch/start | Swiss graphic design and posters (Museum für Gestaltung collection) | Reproduction may need permission or fees; not fully inspected |
+| eMuseum Zürich | https://emuseum.ch/start | Swiss graphic design and posters (Museum für Gestaltung collection) | Inspected 2026-11-18 (sample of the poster collection: `ArtTeacher/knowledge/2026-11-18_emuseum-poster-collection-lessons.md`). Images are a catalogue for illustration only; publishing or commercial use needs the rights holders' permission (tag `permission-needed`). Curated themes at /themes, designers at /people. Bot check: browse normally, do not scrape |
 | Gurafiku | https://gurafiku.tumblr.com/ | Japanese graphic design and poster history | Credit original designers; verify rights per item |
 
 Movements are not interchangeable. Name the movement, period and designer precisely, and separate documented fact from our reinterpretation.
