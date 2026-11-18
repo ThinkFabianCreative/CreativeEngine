@@ -57,4 +57,10 @@ No dates supplied.
 
 ## Contents
 
-Only this README exists. Other folders are created when they hold material ([projects/README.md](../../README.md)).
+- [work/research/2026-11-17_case-inventory.md](work/research/2026-11-17_case-inventory.md): every case on wearetraffik.com, traffikedu.com and traffikhealth.com, with keep / rewrite / archive recommendations. Working draft. The working assumption from conversation (2026-11-17), not yet a normalized brief: consolidate the three sites into one and present the work as an agency that leads.
+
+- [work/research/2026-11-17_case-pipeline-scan.md](work/research/2026-11-17_case-pipeline-scan.md): current clients' work in progress across CreativeEngine workspaces (names and stages only), as future case candidates. A labeled cross-workspace scan, requested by Andres.
+
+- [work/2026-11-18_website-content-inventory.xlsx](work/2026-11-18_website-content-inventory.xlsx): the text, image links and video links of every landing page and case study on the three current sites, extracted 2026-11-18. Uploaded to Google Drive as the Google Sheet "Traffik Website: Content Inventory (landing pages + case studies)". Tier and note columns come from the case inventory and are recommendations.
+
+Other folders are created when they hold material ([projects/README.md](../../README.md)).
