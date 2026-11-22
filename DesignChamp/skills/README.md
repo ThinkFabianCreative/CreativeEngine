@@ -21,6 +21,7 @@ Third-party skills must pass the review in the root `CLAUDE.md` before they are 
 | design-superpowers plugin (`/map-design`, `/design-review`, `/creative`, `/design`, `/ds-make` approved; `/ds-consumer`, `/ds-producer`, `/ds-manage`, `/figma-setup` on hold) | `LSDimi/design-superpowers` v1.0.0 | Approved 2026-10-26. Installed as a Claude plugin, outside the repo | [design-superpowers.md](design-superpowers.md) |
 | `deck-designer` | CreativeEngine (in-house), adapted from the Presentation Engine package | Built at the user's request and installed in `.claude/skills/` 2026-11-17 | [deck-designer.md](deck-designer.md) |
 | `unslop` plugin | `heydamir/unslop` (CC BY 4.0) | Installed by the user as a Claude plugin 2026-11-18 (user scope, outside the repo); reviewed and approved with calibration the same day (commit `620163e`) | [unslop.md](unslop.md) |
+| Jakub Krehel skills (5 of 15) | `jakubkrehel/skills` | Approved and installed in `.claude/skills/` 2026-11-18 (reviewed commit `547d415`) | [jakub-krehel-skills.md](jakub-krehel-skills.md) |
 
 ## Reviewed and not installed
 

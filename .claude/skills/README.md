@@ -76,3 +76,4 @@ The full review policy is in the root `CLAUDE.md`.
 `BriefMachine/skills/`, `DesignChamp/skills/` and `WordSmither/skills/` are organizational and registry areas. They record which department owns a skill and hold evaluation notes. Claude does not discover skills from them.
 
 When we approve an executable Claude skill, we will decide how to expose it here without creating confusing duplicate copies.
+| `better-typography`, `better-colors`, `better-layout`, `better-accessibility`, `better-interface` | DesignChamp | `DesignChamp/skills/jakub-krehel-skills.md` (`jakubkrehel/skills`, reviewed commit `547d415`) · installed 2026-11-18; craft checks on rendered web work only, never the verdict on the idea; values come from project tokens; `better-interface` skips its writing and UI-polish passes (not installed); no gate in EXPLORE |
