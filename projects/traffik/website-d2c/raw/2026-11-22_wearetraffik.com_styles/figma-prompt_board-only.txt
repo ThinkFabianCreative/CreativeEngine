@@ -1,0 +1,76 @@
+Continue the wearetraffik.com style board. Steps 1 and 2 are already done: the "wearetraffik.com Tokens" collection (34 variables) and 12 text styles (Display … Button) exist. Do not create them again. Use them.
+
+Your only job now is Step 3: build the board frame and all 9 sections on the page "Wearetraffik.com Styles.".
+- First delete the stray text layer named "title" on this page.
+- Leave the uploaded images where they are until you place them. Move each one into its section; don't duplicate them.
+- Fonts in this file: Adobe Caslon Pro and Acumin Pro Wide are NOT available. Use Libre Caslon Text and Archivo Expanded (as the text styles already do), and note the substitution in Section 6. Acumin Pro IS available.
+- Work section by section. Don't stop until all 9 sections exist. If you can't finish one, build a placeholder frame named "TODO — Section N" and keep going, then say which ones in your report.
+- Before you report, screenshot the board and check it.
+
+STEP 3 — THE BOARD
+A frame named "wearetraffik.com — Style Documentation": 1440 wide, white, vertical auto layout, height hugs content. The board's own labels use Inter. The Traffik fonts appear only in sections 5 and 6.
+At the top, a status bar 64px tall with 32px side padding: "WEARETRAFFIK.COM" on the left, today's date on the right, 13px Inter Regular, uppercase, with a 1px divider below.
+Between sections, a 1px divider in black at 10%.
+
+Every section:
+- Horizontal auto layout, full width, fixed height of at least 400px (never hug), 64px side padding, 32px top and bottom, 128px gap, clip content.
+- Left column, max 320px wide: title in 18px Inter Medium, black 90%. Description in 13px Inter Regular, black 60%, 22px line height.
+- Right column (the example area): fills the remaining width and the full height, fill #F5F5F5, 13px corner radius.
+- Every color swatch is filled with its variable, not a typed hex.
+
+Section 1 — "wearetraffik.com"
+Description: "Visual identity extracted from https://wearetraffik.com/. Colors and font sizes are Figma variables, and the text styles are bound to them."
+Example: the logos in a centered row, 32px apart, max 280px wide, aspect ratio kept. Under each, an 11px Inter label at black 40%: Primary Logo (logo-traffik), Footer Logo (logo-tfkfooter), Menu Logo White (logomenu-white, on a black tile), Icon Mark (logo), Icon Mark White (logo-white, on a black tile), Favicon, Touch Icon.
+
+Section 2 — "Brand Colors"
+Description: "The core palette: Traffik red for links, labels and calls to action, with black and white."
+Example: 88×88 swatches with 8px radius, 16px apart. Under each, the hex (11px, black 60%) and the variable name (11px, black 35%). Give the white swatch a 1px border at black 10%.
+
+Section 3 — "Neutrals"
+Description: "The gray ramp for surfaces, rules and dark sections, from lightest to darkest."
+Example: five equal-width swatches filling the area's height, 8px radius, light to dark. At the bottom of each, a label like "50 · #FAFAFA": white text on dark swatches, dark text on light ones.
+
+Section 4 — "Accent & Semantic Colors"
+Description: "Accent and system feedback colors. The site defines none."
+Example: an "Accents" row with "Not found". Then Success, Error, Warning and Info, each labeled above in 13px Inter Medium at black 60%, each an 88×88 empty square with a 1px dashed border, labeled "Not found".
+
+Section 5 — "Type Scale"
+Description: "Headings in Adobe Caslon Pro, body in Acumin Pro, labels and navigation in Acumin Pro Wide. Sizes run from 10px to 70px. Display and Heading 2 are inferred from the site's CSS."
+Example: a vertical list, 24px apart, 32px padding. One row per style, baseline aligned, 24px gap: the size (11px Inter, black 35%, 48px wide), the style's name set in its own text style, then the weight (e.g. "Regular 400"). Add a final row: "Heading 5–6 · Not found".
+
+Section 6 — "Font Families"
+Description: "The typefaces on wearetraffik.com, all served from Adobe Fonts. Substitutions are noted where a font isn't available in Figma."
+Example: a vertical list of white cards, 16px apart (8px radius, 24px padding, shadow: black 6%, y 2, blur 8). Each card: the family name (18px in that font), its role (13px Inter, black 50%), "The quick brown fox jumps over the lazy dog. 0123456789" (16px in that font), and the weights (11px Inter, black 35%). If substituted, add "Substituted: [original] → [replacement]" in 11px amber.
+- Adobe Caslon Pro: Headings, links, buttons. Regular
+- Acumin Pro: Body. ExtraLight, Light, Regular, Bold
+- Acumin Pro Wide: Labels, navigation. ExtraLight, Light, Bold
+- Maiola: One button. Regular, Medium, Bold
+
+Section 7 — "Icons"
+Description: "3 icons from wearetraffik.com in PNG."
+Example: a wrapping row, 20px gaps, 24px padding: arrow, arrow-prev, icn-close. Scale each to 32px tall, aspect kept. Put the white icons on black tiles.
+
+Section 8 — "Brand Imagery"
+Description: "The share image and key photography from the homepage."
+Example: a wrapping row, 16px gaps, 24px padding: sharetfk, homeabout512, wp-capabilities. Max 320px wide, aspect kept, 8px radius.
+
+Section 9 — "Tokens Created"
+Description: "Every variable and text style created from this extraction."
+Example: a vertical list, 12px apart, 24px padding. One row per group (Brand Colors 3, Neutrals 5, Type sizes, Line heights, Letter spacing), each with a 12px colored dot, the name (14px Inter Medium), the count (14px Inter Regular, black 50%) and up to four 16px sample dots for color groups, with a 1px bottom border at black 6%. Then "Text Styles" (14px Inter Medium) and one row per style, e.g. "Heading 1 — Adobe Caslon Pro Regular 64px". Last: "wearetraffik.com Tokens" in 13px Inter, black 40%.
+
+CONSTRUCTION RULES
+- Section frames are fixed height on the cross axis. Hug collapses the example area to zero.
+- Set Fill sizing only after a layer is inside its parent.
+- Resize with resize, never by setting width or height directly.
+- Load Inter Regular, Inter Medium and every Traffik font (or its substitute) before creating any text.
+- Build in steps: variables, then styles, then the board a few sections at a time.
+
+CHECK
+Screenshot the board and compare it with this prompt: every color, style and asset present, nothing collapsed, clipped or overflowing, all labels readable. Up to 3 passes. Stop early, and fix only the layers that are wrong.
+
+REPORT
+- Variables created by group
+- Text styles created, and any font substitutions
+- Assets placed by category
+- Everything shown as "Not found"
+- Anything you couldn't build or had to approximate

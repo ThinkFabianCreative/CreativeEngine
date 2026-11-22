@@ -1,0 +1,1272 @@
+body.home {
+	background: #fff; 
+}
+
+#homebanner {
+	background: #000;
+	position: relative;
+	/*height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);*/
+	height: 178.13333333333335vw;
+}
+
+.swiper-container {
+    width: 100vw;
+    /*height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);*/
+    height: 178.13333333333335vw;
+}
+
+.swiper-slide > .swiper-slide-cover {
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	background: transparent no-repeat 50% 50% /cover;
+}
+
+.swiper-slide .slide1 {
+	background-image: url(img/newbanner-sm2.jpg);
+}
+
+/*.swiper-slide .slide2 {
+	background-image: url(https://d16gj6x6z9lz1w.cloudfront.net/homebanner-jwa-sm.jpg);
+}*/
+
+.swiper-slide .slide3 {
+	background-image: url(img/homebanner-uber-sm.jpg);
+}
+
+.swiper-scale-effect .swiper-slide .swiper-slide-cover {
+	transition: transform 10s ease-in-out;
+}
+
+.swiper-scale-effect .swiper-slide.swiper-slide-active .swiper-slide-cover,
+.swiper-scale-effect .swiper-slide.swiper-slide-duplicate-active .swiper-slide-cover {
+	transform: scale(1.05);
+}
+
+#homebanner a, #homebanner a:hover {
+	color: #fff;
+}
+
+a.slidecopy, div.slidecopy {
+	display: block; position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	z-index: 10;
+}
+
+.banneritem-inner {
+	position: absolute; color: #fff;
+	left: 4vw; font-size: 3.5vw;
+	bottom: 18vw;
+	z-index: 10;
+}
+
+img.bi-logo {
+	height: 8.5vw; width: auto;
+	margin-bottom: 5.5vw;
+}
+
+img.bi-logo.bi-jwa {
+	height: 28vw;
+}
+
+img.bi-logo.bi-gg {
+	height: 21.3vw;
+}
+
+.banneritem-inner h1 {
+	font-family: adobe-caslon-pro, serif;
+	font-size: 6vw; font-weight: 400;
+	line-height: 1.25; margin-bottom: 1.5vw;
+}
+
+.mainbadge {
+	width: 22vw;
+	margin-bottom: 5vw;
+}
+
+.banneritem-inner h1#mainintro {
+	font-size: 9.3334vw;
+	line-height: 1.2; margin-bottom: 1.5vw;
+}
+
+.submain {
+	font-size: 4.25vw; font-weight: 300;
+	line-height: 1.2; margin-bottom: 1.5vw;
+}
+
+/*.swiper-pagination-progressbar {
+	background: rgba(255,255,255,0.25);
+}
+
+.swiper-container-horizontal > .swiper-pagination-progressbar {
+	height: 1px; top: auto; bottom: 4.5vw; left: 6.25vw;
+	width: 93.75vw;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+	background: #fff;
+	-webkit-transition: -webkit-transform 7000ms linear;
+	transition: -webkit-transform 7000ms linear;
+	transition: transform 7000ms linear;
+	transition: transform 7000ms linear, -webkit-transform 7000ms linear;
+}*/
+
+.swiper-pagination {
+	text-align: left;
+	background: rgba(255,255,255,0.25);
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+	bottom: 13vw; left: 8vw; min-height: 1px;
+	width: 92vw; font-size: 0;
+}
+
+.spbg, .safe-area {
+	display: none;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+	display: block; border-radius: 0; margin: 0; 
+	opacity: 1; background: none; height: 1px;
+	position: absolute; top: 0; left: 0;
+	width: 100%;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:before {
+	display: block; content: "";
+	position: absolute; top: 0; left: 0;
+	height: 1px; width: 100%; background: #fff;
+	visibility: hidden;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
+	visibility: visible; transform-origin: top left;
+	-webkit-animation: progressbar 7s linear;
+	        animation: progressbar 7s linear;
+}
+
+@-webkit-keyframes progressbar{
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes progressbar{
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+	#homebanner {
+		height: 56.25vw;
+	}
+
+	.swiper-container {
+	    height: 56.25vw;
+	}
+	
+	.swiper-slide .slide1 {
+		background-image: url(https://d16gj6x6z9lz1w.cloudfront.net/newbanner.jpg);
+	}
+	
+	/*.swiper-slide .slide2 {
+		background-image: url(https://d16gj6x6z9lz1w.cloudfront.net/homebanner-jwa.jpg);
+	}*/
+	
+	.swiper-slide .slide3 { 
+		background-image: url(img/homebanner-uber.jpg);
+	}
+
+	.banneritem-inner {
+		left: 6.25vw; right: 6.25vw; 
+		font-size: 1.75vw;
+		bottom: 8.85vw;
+	}
+
+	.banneritem-inner h1 {
+		font-size: 3.5vw;
+		line-height: 1.1; margin-bottom: 0.75vw;
+	}
+
+	.banneritem-inner {
+		font-size: 1.2vw;
+	}
+
+	.banneritem-inner h1 {
+		font-size: 2.34375vw;
+		margin-bottom: 0;
+		line-height: 1.4;
+	}
+
+	.mainbadge {
+		width: 10.15625vw;
+		margin-bottom: 3.02vw;
+	}
+
+	.banneritem-inner h1#mainintro {
+		font-size: 4.427083vw;
+		margin-bottom: 0.75vw;
+	}
+
+	.submain {
+		font-size: 1.05vw;
+		margin-bottom: 0.5vw;
+	}
+
+	img.bi-logo {
+		top: 0.75vw; height: 3.25vw;
+		margin-bottom: 2vw;
+	}
+	
+	img.bi-logo.bi-edc {
+		height: 2.5vw;
+	}
+
+	img.bi-logo.bi-jwa {
+		height: 10.26vw;
+	}
+
+	img.bi-logo.bi-gg {
+		height: 10.15625vw;
+	}
+
+	.swiper-container-horizontal > .swiper-pagination-bullets {
+		bottom: 4vw; left: 6.25vw;
+		width: 93.75vw;
+	}
+
+	/*.swiper-container-horizontal > .swiper-pagination-bullets:before {
+		display: block; content: "";
+		position: absolute; height: 41px; top: -20px; left: -20px; right: 0;
+		z-index: -1;
+	}*/
+
+	.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+		display: inline-block;
+		position: relative; 
+		width: 33%;
+		width: calc(100% / 3);
+	}
+
+	.spbg {
+		display: block;
+		position: absolute;
+		bottom: 4vw; left: 6.25vw;
+		width: 93.75vw; font-size: 0;
+		height: 1px; z-index: 9;
+	}
+
+	.spbg-progress {
+		height: 1px; width: 0; background: #fff;
+	}
+
+	.safe-area {
+		display: block;
+		position: absolute;
+		bottom: 2.8vw; left: 6vw;
+		width: 94vw; font-size: 0;
+		height: 49px; z-index: 8;
+	}
+
+	.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:after {
+		display: block; content: ""; background: rgba(255,255,255,0.25);
+		position: absolute; top: -1px; left: 0;
+		height: 3px; width: 3px; border-radius: 50%;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active:after,
+	.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.wasactive:after {
+		background: rgba(255,255,255,1);
+	}
+
+	.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:hover:after,
+	.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.bullethover:after {
+		transform: scale(3.5); background: rgba(255,255,255,1);
+	}
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+	/*#homebanner, .swiper-container {
+		height: 100vh;
+		height: calc(var(--vh, 1vh) * 100);
+	}*/
+
+}
+
+/*-----------------------------------*\
+  HOME CONTENT WRAP
+\*-----------------------------------*/
+
+.homecontent {
+	margin: 0 auto; background: #fff;
+}
+
+.homecontent h2 {
+	font-size: 4rem; line-height: 1.2;
+	font-weight: 400; 
+}
+
+.hgsec {
+	position: relative;
+}
+
+.hgs-full a.hglink {
+	color: #fff;
+}
+
+.hg-overlay {
+	position: absolute; left: 0;
+	right: 0; bottom: 0;
+}
+
+.hgo-inner {
+	padding: 0 8vw 8vw;
+}
+
+.hgo-logo {
+	margin-bottom: 5vw;
+}
+
+.hgo-headline {
+	font-family: adobe-caslon-pro, serif;
+	font-size: 5.2vw; font-weight: 400;
+	line-height: 1.25;
+}
+
+.hgo-label {
+	font-family: "acumin-pro-wide",sans-serif;
+	font-weight: 700; letter-spacing: 0.06em;
+	text-transform: uppercase; font-size: 2.4vw;
+	line-height: 1.1;
+}
+
+.homepreviewfull {
+	height: 100%;
+}
+
+/*SPLIT*/
+
+.hgs-split {
+	display: flex;
+}
+
+.halfsec {
+	width: 50%;
+	border-bottom: 0.25px solid rgba(0,0,0,0.25);
+}
+
+a.hglink .halfbox-headline,
+a.hglink .halfbox-title {
+	color: #000;
+}
+
+.halfbox-headline br {
+	display: none;
+}
+
+.halfbox-img {
+	overflow: hidden; position: relative;
+}
+
+.halfbox-img .halfbox-featured {
+	position: relative;
+	height: 80vw; width: auto;
+	left: 50%;
+ 	transform: translateX(-50%);
+}
+
+.halfbox-logo {
+	position: absolute;
+	left: 6.4vw; bottom: 6.4vw;
+	z-index: 2;
+}
+
+.hg-netwatch .halfbox-logo {
+	width: 32vw;
+}
+
+.halfbox-caption {
+	height: 40vw;
+	position: relative;
+	padding: 6.4vw 6.4vw 0;
+}
+
+.halfsec:first-of-type .halfbox-caption {
+	border-right: 0.25px solid rgba(0,0,0,0.25);
+}
+
+.halfsec:last-of-type .halfbox-caption {
+	border-left: 0.25px solid rgba(0,0,0,0.25);
+}
+
+.halfbox-title, .halfbox-headline {
+	font-family: adobe-caslon-pro, serif;
+	font-size: 3.9vw; font-weight: 400;
+	line-height: 1.4;
+}
+
+.halfbox-overlaylogo, .halfbox-caption-type {
+	display: none;
+}
+
+.halfbox-label {
+	font-family: "acumin-pro-wide",sans-serif;
+	position: absolute; bottom: 6.4vw;
+	left: 6.4vw; color: rgba(0,0,0,0.25); font-weight: 700; 
+	letter-spacing: 0.06em; font-size: 2.4vw;
+	text-transform: uppercase; line-height: 1.1;
+}
+
+a.hglink .halfbox-img-type {
+	font-family: "acumin-pro-wide",sans-serif;
+	position: absolute; z-index: 2;
+	left: 6.4vw; bottom: 6.4vw;
+	color: #fff; font-weight: 700; 
+	letter-spacing: 0.06em;
+	text-transform: uppercase; font-size: 2.4vw;
+	line-height: 2; background: #D91F1F;
+	padding: 0 1.3vw;
+	box-shadow: 0px 3px 6px rgba(0,0,0,0.25);
+}
+
+.ttlogowrap {
+	position: absolute; z-index: 2;
+	left: 0; right: 0; top: 5.867vw;
+	text-align: center;
+}
+
+.ttlogo {
+	display: inline-block; width: 71%;
+}
+
+/*LOGOS*/
+
+.hg-vandutch .hgo-logo {
+	width: 36vw;
+}
+
+.hg-lito .hgo-logo {
+	width: 38vw;
+}
+
+.hg-balt .hgo-logo {
+	width: 30vw;
+}
+
+.hg-uber .hgo-logo {
+	width: 30vw;
+}
+
+.hg-edwards-lifesciences .hgo-logo {
+	width: 27.7vw;
+}
+
+.hg-blackberry-cylance .hgo-logo {
+	width: 34vw;
+}
+
+.hg-pioneer-dj .hgo-logo {
+	width: 21vw;
+}
+
+.hg-apria .hgo-logo {
+	width: 26.6vw;
+	-webkit-filter: brightness(0) invert(1);
+	filter: brightness(0) invert(1);
+}
+
+.hg-blue-cross-and-blue-shield-of-vermont .hgo-logo {
+	width: 46.6vw;
+}
+
+.hg-entrust-datacard .hgo-logo {
+	width: 44vw;
+}
+
+.hg-blue-cross-blue-shield-of-rhode-island .hgo-logo {
+	width: 36.5vw;
+}
+
+.hg-hid-touchless .hgo-logo {
+	width: 24vw;
+}
+
+.hg-carefirst .hgo-logo {
+	width: 32vw;
+	-webkit-filter: brightness(0) invert(1);
+	filter: brightness(0) invert(1);
+}
+
+.hg-holiday-inn .halfbox-logo {
+    display: none;
+}
+
+.hg-pacific-life .halfbox-logo {
+	width: 20vw;
+}
+
+.hg-bobbis-hallmark .halfbox-logo {
+	display: none;
+}
+
+.hg-harvest .halfbox-logo {
+    width: 30vw;
+}
+
+@media only screen and (min-width: 768px) {
+
+	#homegrid {
+		display: flex; flex-wrap: wrap;
+	}
+
+	.hgsec {
+		width: 50%;
+	}
+
+	.hg-overlay {
+		background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	}
+
+	.hgo-inner {
+		padding: 3vw 2.6vw 2.3vw 2.6vw;
+	}
+
+	.hgo-logo {
+		margin-bottom: 1.5vw;
+	}
+
+	.hgo-headline {
+		font-size: 2.4vw; margin-bottom: 1vw;
+	}
+
+	.hgo-label {
+		font-size: 1vw;
+	}
+
+	/*SPLIT*/
+
+	.halfbox-img .halfbox-featured {
+		height: 28.08988764044944vw;
+	}
+
+	.halfbox-logo {
+		left: 2vw; bottom: 2.5vw;
+	}
+
+	.halfbox-caption {
+		height: 11.235955056179774vw;
+		position: relative;
+		padding: 2vw 2vw 0;
+	}
+
+	.halfbox-title, .halfbox-headline {
+		font-size: 1.3vw;
+	}
+
+	.bigtitle {
+		display: none;
+	}
+
+	a.hglink .halfbox-img-type {
+		left: 2vw; bottom: 2.5vw;
+		font-size: 1vw;
+		padding: 0 1vw;
+	}
+
+	.halfbox-label {
+		bottom: 2vw; left: 2vw;
+		font-size: 1vw;
+	}
+
+	.ttlogowrap {
+		top: 2.474vw;
+	}
+
+	.ttlogo {
+		width: 69%;
+	}
+
+	/*LOGOS*/
+
+	.hg-pioneer-dj .hgo-logo {
+		width: 8vw;
+	}
+
+	.hg-vandutch .hgo-logo {
+		height: auto; width: 12vw;
+	}
+
+	.hg-lito .hgo-logo {
+		width: 15vw;
+	}
+
+	.hg-edwards-lifesciences .hgo-logo {
+		height: auto; width: 11.3vw;
+	}
+
+	.hg-blackberry-cylance .hgo-logo {
+		height: auto; width: 15vw;
+	}
+
+	.hg-blue-cross-and-blue-shield-of-vermont .hgo-logo {
+		width: 17.8125vw;
+	}
+
+	.hg-pacific-life .halfbox-logo {
+		width: 9vw;
+	}
+
+	.hg-entrust-datacard .hgo-logo {
+		width: 16vw;
+	}
+
+	.hg-blue-cross-blue-shield-of-rhode-island .hgo-logo {
+		height: auto; width: 17.03125vw;
+	}
+	
+	.hg-harvest .halfbox-logo {
+        width: 13vw;
+    }
+
+	/*APRIA*/
+
+	.hg-apria .hgo-logo {
+		height: auto; width: 14.0625vw;
+	}
+
+	.hg-hid-touchless .hgo-logo {
+		width: 9vw;
+	}
+
+	.hg-carefirst .hgo-logo {
+		width: 15vw;
+	}
+
+	.hg-balt .hgo-logo {
+		width: 12.5vw;
+	}
+
+	.hg-netwatch .hgo-logo {
+		width: 12.5vw;
+	}
+
+	.hg-uber .hgo-logo {
+		width: 14vw;
+	}
+	
+}
+
+@media only screen and (min-width: 1024px) {
+
+	.hsc-copy {
+		font-size: 1.5rem;
+	}
+
+}
+
+@media only screen and (min-width: 1025px) {
+
+	.homecontent {
+		/*margin: 0 auto; width: 92.7%;
+		max-width: 1780px;
+		box-shadow: 30px 0 30px -4px rgba(0,0,0,0.08), -30px 0 30px -4px rgba(0,0,0,0.08);*/
+	}
+
+	.hg-overlay {
+		top: 0; background: #000;
+		display: flex; align-items: center;
+		justify-content: center;
+		opacity: 0;
+		transition: all 0.25s linear;
+	}
+
+	a.hglink:hover .hg-overlay {
+		opacity: 1;
+	}
+
+	.hgo-inner {
+		padding: 0; text-align: center;
+	}
+
+	.hgo-logo {
+		display: inline-block;
+		margin-bottom: 3.25vw;
+	}
+
+	.hgo-headline {
+		font-size: 2.083vw;
+		line-height: 1.2; margin-bottom: 1.5vw;
+	}
+
+	.hgo-label {
+		font-size: 0.78125vw;
+	}
+
+	/*SPLIT*/
+
+	.halfsec {
+		border-bottom: 0;
+		position: relative;
+	}
+
+	a.hglink .halfbox-headline,
+	a.hglink .halfbox-title {
+		color: #fff;
+	}
+
+	.halfbox-img .halfbox-featured {
+		height: 39.39962476547842vw;
+		transition: all 0.25s linear;
+	}
+
+	.halfbox-img-type {
+		display: none;
+	}
+
+	.halfbox-logo {
+		display: none;
+	}
+
+	.halfbox-caption {
+		height: auto;
+		position: absolute; bottom: 0;
+		right: 0; left: 0; padding: 3vw 2.5vw 3.125vw;
+		background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+		opacity: 0;
+		transition: all 0.25s linear;
+	}
+
+	.halfbox-caption-type {
+		display: inline-block;
+		font-family: "acumin-pro-wide",sans-serif;
+		color: #fff; font-weight: 700; 
+		letter-spacing: 0.06em;
+		text-transform: uppercase; font-size: 0.78125vw;
+		line-height: 2; background: #D91F1F;
+		padding: 0 1vw; margin-bottom: 1.875vw;
+		box-shadow: 0px 3px 6px rgba(0,0,0,0.25);
+	}
+
+	.halfbox-title {
+		font-size: 1.05vw;
+	}
+
+	.bigtitle {
+		display: inline;
+	}
+
+	.smalltitle {
+		display: none;
+	}
+
+	.halfbox-caption.case-caption {
+		height: auto; top: 0;
+		padding: 0 2vw; background: #000;
+		display: flex; align-items: center;
+		justify-content: center; 
+	}
+
+	a.hglink:hover .halfbox-caption {
+		opacity: 1;
+	}
+
+	a.hglink:hover .halfbox-img .halfbox-featured.convopic {
+		transform: translateX(-50%) scale(1.1);
+	}
+
+	.case-caption-inner {
+		text-align: center;
+	}
+
+	.halfbox-overlaylogo {
+		display: inline-block;
+		width: 10vw;
+		margin-bottom: 2vw;
+	}
+
+	.halfbox-headline {
+		font-size: 1.9vw;
+		line-height: 1.25;
+		margin-bottom: 1.5vw;
+	}
+
+	.halfbox-label {
+		position: static;
+		color: #fff; font-size: 0.78125vw;
+	}
+
+	.hg-pioneer-dj .hgo-logo {
+		width: 10.25vw;
+	}
+
+	.hg-vandutch .hgo-logo {
+		width: 16.77vw;
+	}
+
+	.hg-hid-touchless .hgo-logo {
+		width: 12vw;
+	}
+
+	.hg-carefirst .hgo-logo {
+		width: 14vw;
+	}
+
+	.hg-holiday-inn .halfbox-overlaylogo {
+		width: 12.5vw;
+	}
+
+	.hg-pacific-life .halfbox-overlaylogo {
+		width: 13.3vw;
+	}
+
+	.hg-bobbis-hallmark .halfbox-overlaylogo {
+		width: 13vw;
+	}
+
+	.ttlogowrap {
+		top: 2.8vw;
+	}
+	
+	.hg-harvest .halfbox-overlaylogo {
+        width: 14vw;
+    }
+
+    .hg-netwatch .halfbox-overlaylogo {
+		width: 14vw;
+	}
+
+	/*BACKGROUNDS*/
+
+	.hg-pioneer-dj .hg-overlay {
+		background: url(img/grad-pdj2.jpg);
+		background-size: cover;
+	}
+
+	.hg-vandutch .hg-overlay {
+		background: url(img/grad-vandutch.jpg);
+		background-size: cover;
+	}
+
+	.hg-lito .hg-overlay {
+		background: url(img/grad-lito.jpg);
+		background-size: cover;
+	}
+
+	.hg-blue-cross-blue-shield-of-rhode-island .hg-overlay {
+		background: url(img/grad-ri.jpg);
+		background-size: cover;
+	}
+
+	.hg-edwards-lifesciences .hg-overlay {
+		background: url(img/grad-els.jpg);
+		background-size: cover;
+	}
+
+	.hg-hid-touchless .hg-overlay {
+		background: url(img/grad-hid.jpg);
+		background-size: cover;
+	}
+
+	.hg-carefirst .hg-overlay {
+		background: url(img/grad-cf.jpg);
+		background-size: cover;
+	}
+
+	.hg-balt .hg-overlay {
+		background: url(img/grad-balt2.png);
+		background-size: cover;
+	}
+
+	.hg-uber .hg-overlay {
+		background: url(img/grad-uber.jpg);
+		background-size: cover;
+	}
+
+	/*APRIA*/
+
+	.hg-apria .hg-overlay {
+		background: url(img/grad-apria.jpg);
+		background-size: cover;
+	}
+
+	.hg-blue-cross-and-blue-shield-of-vermont .hg-overlay {
+		background: url(img/grad-vt.jpg);
+		background-size: cover;
+	}
+
+	.hg-blackberry-cylance .hg-overlay {
+		background: url(img/grad-bb.jpg);
+		background-size: cover;
+	}
+
+	.hg-holiday-inn .halfbox-caption.case-caption {
+		background: url(img/grad-holiday.jpg);
+		background-size: cover;
+	}
+
+	.hg-pacific-life .halfbox-caption.case-caption {
+		background: url(img/grad-pac.jpg);
+		background-size: cover;
+	}
+
+	.hg-bobbis-hallmark .halfbox-caption.case-caption {
+		background: url(img/grad-bobbis.jpg);
+		background-size: cover;
+	}
+	
+	.hg-harvest .halfbox-caption.case-caption {
+		background: url(img/grad-harvest.jpg);
+		background-size: cover;
+	}
+
+	.hg-netwatch .halfbox-caption.case-caption {
+		background: url(img/grad-netwatch.jpg);
+		background-size: cover;
+	}
+
+}
+
+@media only screen and (min-width: 1280px) {
+
+	.homecontent h2 {
+		font-size: 7rem;
+	}
+
+}
+
+@media only screen and (min-width: 1923px) {
+
+	.hgo-logo {
+		margin-bottom: 72px;
+	}
+
+	.hgo-headline {
+		font-size: 4rem;
+		margin-bottom: 30px;
+	}
+
+	.hgo-label {
+		font-size: 1.5rem;
+	}
+
+	/*SPLIT*/
+	
+	.halfbox-img .halfbox-featured {
+		/*height: 700px;*/
+	}
+
+	.halfbox-caption {
+		padding: 54px 48px 60px;
+	}
+
+	.halfbox-caption-type {
+		font-size: 1.5rem;
+		padding: 0 12px; margin-bottom: 36px;
+	}
+
+	.halfbox-title {
+		font-size: 2rem;
+	}
+
+	.halfbox-caption.case-caption {
+		padding: 0 40px;
+	}
+
+	.halfbox-overlaylogo {
+		margin-bottom: 50px;
+	}
+
+	.hg-holiday-inn .halfbox-overlaylogo {
+		width: 240px;
+	}
+
+	.hg-pacific-life .halfbox-overlaylogo {
+		width: 256px;
+	}
+
+	.hg-pioneer-dj .halfbox-overlaylogo {
+		height: 28px;
+	}
+
+	.hg-bobbis-hallmark .halfbox-overlaylogo {
+		width: 248px;
+	}
+
+	.halfbox-headline {
+		font-size: 4rem;
+		margin-bottom: 30px;
+	}
+
+	.halfbox-label {
+		font-size: 1.5rem;
+	}
+
+	/*LOGOS*/
+
+	.hg-pioneer-dj .hgo-logo {
+		width: 197px;
+	}
+
+	.hg-vandutch .hgo-logo {
+		width: 240px;
+	}
+
+	.hg-edwards-lifesciences .hgo-logo {
+		width: 217px;
+	}
+
+	.hg-blackberry-cylance .hgo-logo {
+		width: 234px;
+	}
+
+	.hg-blue-cross-and-blue-shield-of-vermont .hgo-logo {
+		width: 342px;
+	}
+
+	.hg-pacific-life .hgo-logo {
+		width: 232px;
+	}
+
+	.hg-entrust-datacard .hgo-logo {
+		width: 308px;
+	}
+
+	.hg-blue-cross-blue-shield-of-rhode-island .hgo-logo {
+		width: 327px;
+	}
+
+	.hg-apria .hgo-logo {
+		width: 270px;
+	}
+
+}
+
+
+/*-----------------------------------*\
+  HOME ABOUT
+\*-----------------------------------*/
+
+#homeabout {
+	padding: 60px 32px 36px;
+}
+
+#homeabout .smallintro {
+	margin-bottom: 30px;
+}
+
+#homeabout h2 {
+	margin-bottom: 44px;
+	font-size: 3.85rem;
+	line-height: 1.2;
+}
+
+#homeabout p {
+	margin-bottom: 34px;
+}
+
+.ha-badges {
+	font-size: 0;
+	padding-top: 76px;
+}
+
+#mbebadge {
+	display: inline-block;
+	vertical-align: top;
+	width: 72px;
+}
+
+#forbesbadge {
+	display: inline-block;
+	vertical-align: top;
+	width: 72px;
+	margin-left: 24px;
+}
+
+#incbadge {
+	display: inline-block;
+	vertical-align: top;
+	width: 72px;
+	margin-left: 24px;
+}
+
+.ha-image {
+	display: none;
+}
+
+@media only screen and (min-width: 375px) {
+
+	#homeabout {
+		padding: 60px 40px 36px;
+	}
+
+}
+
+@media only screen and (min-width: 768px) {
+
+	#homeabout {
+		padding: 0; display: flex;
+	}
+
+	.ha-copy {
+		position: relative; display: flex;
+		width: 50%; align-items: center;
+		padding: 0 36px; justify-content: center;
+	}
+
+	.hac-inner {
+		width: 90%;
+		max-width: 670px;
+	}
+
+	#homeabout h2 {
+		margin-bottom: 10px;
+		line-height: 1.1;
+	}
+
+	#homeabout p {
+		margin-bottom: 20px;
+		font-size: 1.4rem;
+	}
+
+	.ha-badges {
+		position: absolute; right: 8px;
+		padding-top: 0; bottom: 24px;
+		width: 40px;
+	}
+
+	.homebadge {
+		margin-bottom: 8px;
+	}
+
+	.homebadge:last-of-type {
+		margin-bottom: 0;
+	}
+
+	#mbebadge {
+		display: block;
+		width: 100%;
+	}
+
+	#forbesbadge {
+		display: block;
+		width: 100%;
+		margin-left: 0;
+	}
+
+	#incbadge {
+		display: block;
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.ha-image {
+		display: block;
+		width: 50%;
+	}
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+	.ha-badges {
+		right: 20px; width: 60px;
+		bottom: 40px;
+	}
+
+	.homebadge {
+		margin-bottom: 12px;
+	}
+
+	#homeabout h2 {
+		margin-bottom: 30px;
+		line-height: 1.2;
+		font-size: 4.8rem;
+	}
+
+	#homeabout p {
+		font-size: 1.6rem;
+	}
+
+}
+
+@media only screen and (min-width: 1280px) {
+
+	#homeabout .smallintro {
+		margin-bottom: 48px;
+	}
+
+	#homeabout h2 {
+		margin-bottom: 32px;
+		/*max-width: 440px;*/
+		font-size: 5.6rem;
+	}
+
+	#homeabout p {
+		margin-bottom: 36px;
+		font-size: 2rem;
+	}
+
+}
+
+@media only screen and (min-width: 1340px) {
+
+	.ha-badges {
+		width: 72px; right: 30px;
+	}
+
+	.homebadge {
+		margin-bottom: 16px;
+	}
+
+}
+
+@media only screen and (min-width: 1540px) {
+
+	#homeabout h2 {
+		margin-bottom: 48px;
+		font-size: 6.8rem;
+	}
+
+	#homeabout p {
+		margin-bottom: 48px;
+		line-height: 1.65;
+	}
+
+}
+
+@media only screen and (min-width: 1680px) {
+
+	.ha-badges {
+		width: 96px; right: 40px;
+	}
+
+	.homebadge {
+		margin-bottom: 24px;
+	}
+
+}
+
+.capslider-controls {
+	height: 80px; display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ctrl-arrow {
+	display: inline-block; vertical-align: top;
+	width: 46px; margin: 0 16px; padding: 14px 0;
+}
