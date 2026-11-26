@@ -46,3 +46,6 @@ projects/miracles-for-kids/website-rebrand/raw/production-site/
 *.webm
 *.mkv
 *.avi
+
+# Blender autosave backups
+*.blend1
