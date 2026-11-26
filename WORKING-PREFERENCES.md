@@ -36,3 +36,4 @@ These apply to every role, on every machine. Each rule records when and why Andr
 ## Accounts and tools
 
 - Each person connects their own Google Drive, Figma, Slack and other accounts on their own machine. Don't store sign-ins here.
+- **GitHub is the one CreativeEngine.** Pull from GitHub at the start of every session (`git switch handoff && git pull`), and commit and push at the end of every session, so GitHub always holds the fresh version. (2026-11-26)
