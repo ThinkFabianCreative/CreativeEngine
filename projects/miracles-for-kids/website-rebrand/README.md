@@ -4,6 +4,7 @@
 CLIENT:   Miracles for Kids Charity
 PROJECT:  Website rebranding and pivot. "Rebranding" = Jordan's rebrand landing page (round 1, then a round 2 refinement), which got pushback. "Pivot" = CreativeEngine's new approach to it
 OPENED:   2026-10-16
+BUILD:    Webflow (confirmed by Andres 2026-11-25). Design for Webflow: native Interactions/GSAP, embeds where needed; not the Instapage path
 ```
 
 - Figma working file (where the new design lives): https://www.figma.com/design/9tYtPFq2Nek4tzaz5NOVq8/MFK-Andres

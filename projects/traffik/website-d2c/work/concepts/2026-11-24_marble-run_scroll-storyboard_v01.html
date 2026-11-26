@@ -1,0 +1,390 @@
+<title>Marble Run Storyboard</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a production storyboard. Frames run down the page in scroll order, each with a drawn panel left and its shot notes right. Single dark look on purpose: the site ground is black. */
+:root{
+  --ground:#000; --panel:#0d0c0a; --line:#2a2722; --paper:#F1EBDD; --muted:#a39c8e;
+  --red:#d91f1f; --yellow:#f4d803; --bronze:#c98a3e; --steel:#b9bdc2; --wood:#7a4e2a; --patina:#6b7558;
+  --display:"Barlow Condensed","Acumin Pro Condensed","Arial Narrow",sans-serif;
+  --body:"IBM Plex Sans",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+body{background:var(--ground);color:var(--paper);font-family:var(--body);font-size:15px;line-height:1.55;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:48px 80px}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;letter-spacing:.01em;text-wrap:balance;margin:0}
+h1{font-size:clamp(44px,8vw,96px);font-weight:800;line-height:.9}
+h2{font-size:30px;font-weight:700;line-height:1}
+h3{font-size:13px;font-family:var(--mono);font-weight:500;letter-spacing:.12em;color:var(--muted)}
+p{margin:0;max-width:65ch}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.intro{display:grid;gap:20px;margin-bottom:48px}
+.intro p{color:var(--muted)}
+.intro strong{color:var(--paper);font-weight:500}
+.red{color:var(--red)} .yel{color:var(--yellow)}
+
+.grammar{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:56px}
+.grammar div{background:var(--panel);padding:18px;display:grid;gap:8px;align-content:start;min-width:0}
+.grammar b{font-family:var(--display);font-size:20px;text-transform:uppercase;font-weight:700}
+.grammar span{color:var(--muted);font-size:14px}
+.swatch{width:28px;height:28px;border-radius:50%}
+
+.timeline{margin-bottom:56px;display:grid;gap:10px}
+.bar{display:flex;height:34px;border:1px solid var(--line)}
+.bar a{flex:var(--w);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:var(--muted);text-decoration:none;border-right:1px solid var(--line);min-width:0;overflow:hidden;white-space:nowrap}
+.bar a:last-child{border-right:0}
+.bar a:hover,.bar a:focus-visible{background:var(--panel);color:var(--paper);outline:none}
+
+.frame{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px;padding-block:36px;border-top:1px solid var(--line);scroll-margin-top:16px}
+.frame svg{width:100%;height:auto;display:block;background:var(--panel);border:1px solid var(--line)}
+.cap{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:8px;gap:12px}
+.notes{display:grid;gap:14px;align-content:start;min-width:0}
+.notes .head{display:grid;gap:6px}
+.idea{font-family:var(--display);font-size:22px;line-height:1.1;text-transform:uppercase;font-weight:500;color:var(--paper)}
+dl{display:grid;grid-template-columns:96px minmax(0,1fr);gap:8px 14px;margin:0}
+dt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+dd{margin:0;font-size:14px}
+.copy{border-left:2px solid var(--red);padding-left:12px;font-family:var(--display);font-size:20px;text-transform:uppercase;line-height:1.1}
+.copy small{display:block;font-family:var(--mono);font-size:11px;color:var(--muted);text-transform:none;margin-top:4px}
+
+.section-block{border-top:1px solid var(--line);padding-top:36px;margin-top:20px;display:grid;gap:20px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.cols div{display:grid;gap:8px;align-content:start;min-width:0}
+.cols b{font-family:var(--display);font-size:19px;text-transform:uppercase;font-weight:700}
+.cols p{color:var(--muted);font-size:14px}
+ol.q{margin:0;padding-left:20px;display:grid;gap:8px;color:var(--muted)}
+ol.q li{max-width:75ch}
+ol.q b{color:var(--paper);font-weight:500}
+
+@media (max-width:760px){
+  .frame{grid-template-columns:1fr}
+  dl{grid-template-columns:80px minmax(0,1fr)}
+  .bar a{font-size:9px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .drawn{stroke-dasharray:6 6;animation:march 1.6s linear infinite}
+  @keyframes march{to{stroke-dashoffset:-24}}
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="bronze" cx=".5" cy=".5" r=".55" fx=".34" fy=".3">
+      <stop offset="0" stop-color="#fff1cf"/><stop offset=".18" stop-color="#e7b46a"/>
+      <stop offset=".55" stop-color="#a8692b"/><stop offset=".85" stop-color="#4f2e10"/><stop offset="1" stop-color="#2a1806"/>
+    </radialGradient>
+    <radialGradient id="patina" cx=".5" cy=".5" r=".55" fx=".38" fy=".34">
+      <stop offset="0" stop-color="#a4ad92"/><stop offset=".45" stop-color="#64705a"/>
+      <stop offset=".85" stop-color="#2f352a"/><stop offset="1" stop-color="#1a1d16"/>
+    </radialGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9a6a3e"/><stop offset=".5" stop-color="#6e4422"/><stop offset="1" stop-color="#4a2c14"/>
+    </linearGradient>
+    <linearGradient id="plate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16140f"/><stop offset="1" stop-color="#050505"/>
+    </linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="1.6"/></filter>
+    <filter id="blurx"><feGaussianBlur stdDeviation="5 0"/></filter>
+  </defs>
+</svg>
+
+<div class="wrap">
+
+<header class="intro">
+  <span class="eyebrow">Traffik · website-d2c · DesignChamp · EXPLORE → DEVELOP · 2026-11-24 · v01</span>
+  <h1>Marble run<br>scroll storyboard</h1>
+  <p><strong>One bronze marble lays its own road while the category rolls down the same wooden grooves.</strong> Eight frames, one continuous run from hero to call to action. Scroll is the clock: the page never fakes a section break, the camera follows the marble from one section into the next.</p>
+  <p>The fix the director asked for on Nov 22 is built in: our marble is not a body falling down someone else's course. It decides. Its steel rail draws itself ahead of it, and switches throw before it arrives. That is what "We control the road ahead" looks like.</p>
+</header>
+
+<section class="grammar" aria-label="Material grammar">
+  <div><svg class="swatch" viewBox="0 0 28 28" style="border:0;background:none"><circle cx="14" cy="14" r="13" fill="url(#bronze)"/></svg><b>Polished bronze</b><span>Traffik. One marble, mirror finish, warm specular. The only object on the page that catches a highlight.</span></div>
+  <div><svg class="swatch" viewBox="0 0 28 28" style="border:0;background:none"><circle cx="14" cy="14" r="13" fill="url(#patina)"/></svg><b>Patinated bronze</b><span>The category. Same metal, same size, gone dull with verdigris. Not losers, just carried along. Rough, so no reflections.</span></div>
+  <div><svg class="swatch" viewBox="0 0 28 28" style="border:0;background:none"><rect x="1" y="9" width="26" height="10" fill="url(#wood)"/></svg><b>Wood channels</b><span>The road everyone shares: oiled walnut grooves, fixed, heavy, built by someone else. Lanes, funnels, loops.</span></div>
+  <div><svg class="swatch" viewBox="0 0 28 28" style="border:0;background:none"><path d="M1 11 H27 M1 17 H27" stroke="var(--steel)" stroke-width="1.6"/></svg><b>Steel wire rail</b><span>Traffik's own line. Two thin brushed rails, bent by hand. It appears just ahead of our marble and nowhere else.</span></div>
+  <div><svg class="swatch" viewBox="0 0 28 28" style="border:0;background:none"><path d="M1 14 H27" stroke="var(--red)" stroke-width="2" stroke-dasharray="4 3"/></svg><b>Red</b><span>Only the road ahead: the rail while it is still being drawn. Once the marble passes, it cools to steel.</span></div>
+</section>
+
+<section class="timeline" aria-label="Scroll map">
+  <h3>SCROLL MAP · 0–100% OF PAGE</h3>
+  <nav class="bar">
+    <a href="#f1" style="--w:10">00 Hero</a><a href="#f2" style="--w:12">01 Traffic</a><a href="#f3" style="--w:12">02 Lane</a><a href="#f4" style="--w:12">03 Blocked</a><a href="#f5" style="--w:12">04 Fast</a><a href="#f6" style="--w:14">05 Stand out</a><a href="#f7" style="--w:13">06 Ahead</a><a href="#f8" style="--w:15">07 Arrive</a>
+  </nav>
+</section>
+
+<!-- F1 HERO -->
+<article class="frame" id="f1">
+  <div>
+    <svg viewBox="0 0 400 225" role="img" aria-label="A single polished bronze marble rests on a steel wire rail; the rail ahead is drawn in red dashes.">
+      <text x="22" y="46" fill="var(--paper)" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="800" font-size="30">WE CONTROL</text>
+      <text x="22" y="76" fill="var(--paper)" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="800" font-size="30">THE ROAD AHEAD.</text>
+      <path d="M0 168 C60 168 90 160 120 156" fill="none" stroke="var(--steel)" stroke-width="1.6"/>
+      <path d="M0 174 C60 174 90 166 120 162" fill="none" stroke="var(--steel)" stroke-width="1.6"/>
+      <path class="drawn" d="M120 156 C190 146 230 170 300 178 S370 160 400 140" fill="none" stroke="var(--red)" stroke-width="1.6"/>
+      <path class="drawn" d="M120 162 C190 152 230 176 300 184 S370 166 400 146" fill="none" stroke="var(--red)" stroke-width="1.6" opacity=".5"/>
+      <ellipse cx="108" cy="170" rx="16" ry="3" fill="#000" opacity=".7"/>
+      <circle cx="108" cy="148" r="15" fill="url(#bronze)"/>
+      <circle cx="102" cy="142" r="3" fill="#fff" opacity=".8"/>
+      <text x="300" y="214" fill="var(--muted)" font-family="IBM Plex Mono,monospace" font-size="9">MACRO · 85mm · f/2</text>
+    </svg>
+    <div class="cap"><span>F1 · HERO</span><span>SCROLL 0–10%</span></div>
+  </div>
+  <div class="notes">
+    <div class="head"><h3>00 · HERO · "MOVING FIRST"</h3><h2>The marble waits for you</h2></div>
+    <p class="idea">One marble, one rail, the rest of the road not built yet.</p>
+    <dl>
+      <dt>What moves</dt><dd>At rest the marble sits still with a slow specular shimmer. First scroll tick releases it. As it rolls, the red rail draws itself 1.5 marble-lengths ahead, never further. Behind it the red cools to steel.</dd>
+      <dt>Camera</dt><dd>Low macro, near the rail, shallow depth of field. The marble fills a fifth of the frame so the bronze reads as real metal, not a 3D ball.</dd>
+      <dt>Physics</dt><dd>None live. Hand-authored spline, scroll-scrubbed and reversible.</dd>
+      <dt>Mobile</dt><dd>Headline on top, marble lower third. Rail exits bottom right so the eye follows it down.</dd>
+    </dl>
+    <div class="copy">We control the road ahead.<small>Working line, Andres, Nov 22</small></div>
+  </div>
+</article>
+
+<!-- F2 TRAFFIC -->
+<article class="frame" id="f2">
+  <div>
+    <svg viewBox="0 0 400 225" role="img" aria-label="Pull-out to a wide wooden board with parallel grooves crowded with dull patinated marbles; the bronze marble drops in from above on its rail.">
+      <g transform="rotate(-6 200 140)">
+        <rect x="-20" y="88" width="440" height="140" fill="url(#wood)"/>
+        <g fill="#2b190a">
+          <rect x="-20" y="98" width="440" height="12"/><rect x="-20" y="122" width="440" height="12"/><rect x="-20" y="146" width="440" height="12"/><rect x="-20" y="170" width="440" height="12"/><rect x="-20" y="194" width="440" height="12"/>
+        </g>
+        <g fill="url(#patina)">
+          <circle cx="30" cy="104" r="6"/><circle cx="44" cy="104" r="6"/><circle cx="58" cy="104" r="6"/><circle cx="140" cy="104" r="6"/><circle cx="154" cy="104" r="6"/><circle cx="290" cy="104" r="6"/>
+          <circle cx="70" cy="128" r="6"/><circle cx="84" cy="128" r="6"/><circle cx="98" cy="128" r="6"/><circle cx="112" cy="128" r="6"/><circle cx="250" cy="128" r="6"/><circle cx="264" cy="128" r="6"/>
+          <circle cx="20" cy="152" r="6"/><circle cx="180" cy="152" r="6"/><circle cx="194" cy="152" r="6"/><circle cx="208" cy="152" r="6"/><circle cx="330" cy="152" r="6"/>
+          <circle cx="110" cy="176" r="6"/><circle cx="124" cy="176" r="6"/><circle cx="300" cy="176" r="6"/><circle cx="314" cy="176" r="6"/><circle cx="328" cy="176" r="6"/>
+          <circle cx="60" cy="200" r="6"/><circle cx="210" cy="200" r="6"/><circle cx="224" cy="200" r="6"/><circle cx="238" cy="200" r="6"/>
+        </g>
+      </g>
+      <path d="M150 0 C170 30 200 40 236 54" fill="none" stroke="var(--steel)" stroke-width="1.4"/>
+      <path class="drawn" d="M236 54 C262 64 290 76 320 92" fill="none" stroke="var(--red)" stroke-width="1.4"/>
+      <circle cx="226" cy="44" r="8" fill="url(#bronze)"/><circle cx="223" cy="41" r="1.8" fill="#fff" opacity=".8"/>
+      <text x="22" y="34" fill="var(--paper)" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="700" font-size="17">EVERY CATEGORY IS TRAFFIC.</text>
+    </svg>
+    <div class="cap"><span>F2 · POSITIONING</span><span>SCROLL 10–22%</span></div>
+  </div>
+  <div class="notes">
+    <div class="head"><h3>01 · CATEGORY · "THE PACK"</h3><h2>Everyone on the same road</h2></div>
+    <p class="idea">Pull back and the category appears: a board of grooves, packed with marbles that all look alike.</p>
+    <dl>
+      <dt>What moves</dt><dd>Camera pulls out fast. Thirty to sixty patina marbles roll in their grooves at roughly the same speed, bunching and clicking. Our rail runs above the board, not in it.</dd>
+      <dt>Camera</dt><dd>Macro to a three-quarter top view in one move. Depth of field opens so the crowd reads as a pattern.</dd>
+      <dt>Physics</dt><dd>Live but cheap: marbles confined to 1D grooves, so the solver only handles contact along each lane. Sound-off clicks shown as tiny contact flashes, optional.</dd>
+      <dt>Section</dt><dd>Positioning statement. Body copy sits in the empty band above the board.</dd>
+    </dl>
+    <div class="copy">Every category is traffic. Someone decides where it goes.<small>Working line, WordSmither pass, Nov 22</small></div>
+  </div>
+</article>
+
+<!-- F3 LANE -->
+<article class="frame" id="f3">
+  <div>
+    <svg viewBox="0 0 400 225" role="img" aria-label="A wooden groove reaches a fork. A brass switch has already flipped up. The bronze marble climbs onto a steel rail; patinated marbles follow the default groove down into a loop.">
+      <path d="M0 110 L150 110" stroke="url(#wood)" stroke-width="16"/>
+      <path d="M150 110 C200 112 220 150 250 170" fill="none" stroke="url(#wood)" stroke-width="16"/>
+      <circle cx="300" cy="178" r="34" fill="none" stroke="url(#wood)" stroke-width="12"/>
+      <path d="M250 170 C262 176 270 180 270 180" fill="none" stroke="url(#wood)" stroke-width="16"/>
+      <g fill="url(#patina)"><circle cx="40" cy="110" r="6"/><circle cx="54" cy="110" r="6"/><circle cx="218" cy="138" r="6"/><circle cx="300" cy="144" r="6"/><circle cx="332" cy="186" r="6"/><circle cx="276" cy="205" r="6"/></g>
+      <rect x="140" y="92" width="34" height="5" rx="2" fill="#b88b3e" transform="rotate(-22 150 96)"/>
+      <circle cx="150" cy="99" r="3" fill="#e2c07a"/>
+      <path d="M158 102 C200 84 250 70 290 60" fill="none" stroke="var(--steel)" stroke-width="1.4"/>
+      <path d="M158 108 C200 90 250 76 290 66" fill="none" stroke="var(--steel)" stroke-width="1.4"/>
+      <path class="drawn" d="M290 60 C330 50 370 46 400 44" fill="none" stroke="var(--red)" stroke-width="1.4"/>
+      <circle cx="258" cy="64" r="9" fill="url(#bronze)"/><circle cx="255" cy="61" r="2" fill="#fff" opacity=".8"/>
+      <text x="138" y="80" fill="var(--yellow)" font-family="IBM Plex Mono,monospace" font-size="9">SWITCH THROWN T–0.4s</text>
+    </svg>
+    <div class="cap"><span>F3 · HOW WE THINK</span><span>SCROLL 22–34%</span></div>
+  </div>
+  <div class="notes">
+    <div class="head"><h3>02 · PICKING THE RIGHT LANE · "FORESIGHT"</h3><h2>The switch throws before we get there</h2></div>
+    <p class="idea">Decision, not luck: you see the switch flip before the marble arrives.</p>
+    <dl>
+      <dt>What moves</dt><dd>A brass flipper at the fork snaps up a beat before our marble reaches it. Our marble rides up onto the rail. The pack takes the default groove down into a long wooden loop and circles.</dd>
+      <dt>Camera</dt><dd>Side elevation, locked off, so the fork reads like a diagram. This is the frame to keep legible at 390px.</dd>
+      <dt>Physics</dt><dd>Flipper is animated, not simulated. Loop marbles can be live: gravity plus a wooden channel collider.</dd>
+      <dt>Section</dt><dd>Strategy / how we think. Three short decision points could each be one switch if the page needs a process list.</dd>
+    </dl>
+    <div class="copy">[Lane line: WordSmither]<small>Brief: foresight as a skill, the client's rules stay intact</small></div>
+  </div>
+</article>
+
+<!-- F4 BLOCKED -->
+<article class="frame" id="f4">
+  <div>
+    <svg viewBox="0 0 400 225" role="img" aria-label="A wooden funnel jammed with a pile of patinated marbles. A steel rail arcs over the jam with the bronze marble at its top.">
+      <path d="M40 120 L180 200 M360 120 L220 200" stroke="url(#wood)" stroke-width="16" stroke-linecap="round"/>
+      <rect x="180" y="196" width="40" height="29" fill="url(#wood)"/>
+      <g fill="url(#patina)">
+        <circle cx="194" cy="188" r="7"/><circle cx="208" cy="188" r="7"/><circle cx="182" cy="176" r="7"/><circle cx="196" cy="175" r="7"/><circle cx="210" cy="175" r="7"/><circle cx="224" cy="177" r="7"/>
+        <circle cx="168" cy="163" r="7"/><circle cx="182" cy="162" r="7"/><circle cx="196" cy="161" r="7"/><circle cx="211" cy="161" r="7"/><circle cx="226" cy="163" r="7"/><circle cx="240" cy="165" r="7"/>
+        <circle cx="152" cy="150" r="7"/><circle cx="175" cy="148" r="7"/><circle cx="204" cy="147" r="7"/><circle cx="232" cy="150" r="7"/><circle cx="252" cy="153" r="7"/>
+        <circle cx="120" cy="134" r="7"/><circle cx="282" cy="140" r="7"/>
+      </g>
+      <path d="M20 100 C120 40 280 40 380 100" fill="none" stroke="var(--steel)" stroke-width="1.4"/>
+      <path d="M20 106 C120 46 280 46 380 106" fill="none" stroke="var(--steel)" stroke-width="1.4"/>
+      <path class="drawn" d="M248 58 C300 66 350 84 380 100" fill="none" stroke="var(--red)" stroke-width="1.4"/>
+      <circle cx="200" cy="44" r="10" fill="url(#bronze)"/><circle cx="197" cy="41" r="2.2" fill="#fff" opacity=".8"/>
+      <text x="22" y="28" fill="var(--muted)" font-family="IBM Plex Mono,monospace" font-size="9">LIVE RIGID BODY · 19 BODIES · SLEEP ON SETTLE</text>
+    </svg>
+    <div class="cap"><span>F4 · PROCESS / REGULATED WORK</span><span>SCROLL 34–46%</span></div>
+  </div>
+  <div class="notes">
+    <div class="head"><h3>03 · NOT GETTING BLOCKED · "THE JAM"</h3><h2>Everyone jams at the funnel</h2></div>
+    <p class="idea">The one place real physics earns its cost: a true pile-up you can feel.</p>
+    <dl>
+      <dt>What moves</dt><dd>The loop feeds a narrowing funnel. Marbles stack, wedge and stall: an honest rigid-body jam with mass and friction. Our rail lifts over the top in one arc. Nothing gets knocked off; we go over, not through.</dd>
+      <dt>Camera</dt><dd>Straight on, slightly below, so the pile looks heavy. Hold for a beat at the apex.</dd>
+      <dt>Physics</dt><dd>Live simulation in Rapier, started when the frame enters view and put to sleep once it settles. Because live physics can't run backwards, scrolling up crossfades to a baked state.</dd>
+      <dt>Section</dt><dd>Process, especially regulated categories. The jam stands for review cycles and same-again briefs, not the client's legal team: the rail goes around the obstacle, it never removes it.</dd>
+    </dl>
+    <div class="copy">[Unblocked line: WordSmither]<small>Avoid "control" here; regulated buyers hear it as overriding their reviewers</small></div>
+  </div>
+</article>
+
+<!-- F5 FAST -->
+<article class="frame" id="f5">
+  <div>
+    <svg viewBox="0 0 400 225" role="img" aria-label="A steep diagonal steel rail. Wooden support posts streak past in motion blur. The bronze marble streaks down with a short trail. A yellow figure placeholder sits on the right.">
+      <g fill="url(#wood)" filter="url(#blurx)" opacity=".75">
+        <rect x="40" y="0" width="10" height="225"/><rect x="120" y="0" width="10" height="225"/><rect x="200" y="0" width="10" height="225"/><rect x="280" y="0" width="10" height="225"/><rect x="360" y="0" width="10" height="225"/>
+      </g>
+      <path d="M0 20 L400 200" stroke="var(--steel)" stroke-width="1.6"/>
+      <path d="M0 28 L400 208" stroke="var(--steel)" stroke-width="1.6"/>
+      <path class="drawn" d="M260 145 L400 208" stroke="var(--red)" stroke-width="1.6"/>
+      <path d="M150 88 L232 125" stroke="url(#bronze)" stroke-width="16" stroke-linecap="round" opacity=".35" filter="url(#soft)"/>
+      <circle cx="240" cy="128" r="10" fill="url(#bronze)"/><circle cx="237" cy="125" r="2.2" fill="#fff" opacity=".9"/>
+      <text x="280" y="64" fill="var(--yellow)" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="800" font-size="40">+00%</text>
+      <text x="282" y="80" fill="var(--muted)" font-family="IBM Plex Mono,monospace" font-size="9">REAL FIGURE TBD</text>
+    </svg>
+    <div class="cap"><span>F5 · RESULTS IN NUMBERS</span><span>SCROLL 46–58%</span></div>
+  </div>
+  <div class="notes">
+    <div class="head"><h3>04 · MOVING FAST · "THE DROP"</h3><h2>Your scroll is the speed</h2></div>
+    <p class="idea">A long straight descent where the reader's scroll speed becomes the marble's speed.</p>
+    <dl>
+      <dt>What moves</dt><dd>Scroll velocity maps to marble speed and motion blur, with a cap so fast flicks don't turn into a smear. Wooden posts streak past. At each post a yellow result figure ticks up, one per post.</dd>
+      <dt>Camera</dt><dd>Tracking shot alongside, the marble locked in frame and the world moving. The only frame where the camera rides with the marble.</dd>
+      <dt>Physics</dt><dd>None. Spline plus velocity blur. Cheapest frame, so it can carry the stat counters.</dd>
+      <dt>Section</dt><dd>Results / proof numbers. Figures are evidence yellow and come only from reviewed client results.</dd>
+    </dl>
+    <div class="copy">Traffic drivers. Not traffic driven.<small>Belief line, Andres. Pair it with results, per the Nov 22 review</small></div>
+  </div>
+</article>
+
+<!-- F6 STAND OUT -->
+<article class="frame" id="f6">
+  <div>
+    <svg viewBox="0 0 400 225" role="img" aria-label="The bronze marble sits in a brass cup on a polished black plate, sharply lit and reflected. Patinated marbles sit blurred in the background. A case-study card rises beside it.">
+      <rect x="0" y="140" width="400" height="85" fill="url(#plate)"/>
+      <g fill="url(#patina)" filter="url(#soft)" opacity=".45"><circle cx="40" cy="128" r="9"/><circle cx="70" cy="132" r="9"/><circle cx="330" cy="126" r="9"/><circle cx="362" cy="132" r="9"/><circle cx="300" cy="134" r="7"/></g>
+      <ellipse cx="150" cy="152" rx="30" ry="7" fill="none" stroke="#b88b3e" stroke-width="2"/>
+      <circle cx="150" cy="124" r="26" fill="url(#bronze)"/><circle cx="141" cy="114" r="5" fill="#fff" opacity=".85"/>
+      <circle cx="150" cy="182" r="22" fill="url(#bronze)" opacity=".18"/>
+      <g transform="translate(214 46)">
+        <rect width="150" height="92" fill="var(--paper)"/>
+        <text x="12" y="26" fill="#000" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="800" font-size="18">CASE · CLIENT NAME</text>
+        <rect x="12" y="38" width="126" height="34" fill="#cfc6b3"/>
+        <text x="12" y="86" fill="#000" font-family="IBM Plex Mono,monospace" font-size="8">PLATE TRIGGERED → CARD RISES</text>
+      </g>
+    </svg>
+    <div class="cap"><span>F6 · WORK / CASE STUDIES</span><span>SCROLL 58–72%</span></div>
+  </div>
+  <div class="notes">
+    <div class="head"><h3>05 · STANDING OUT · "THE CUP"</h3><h2>One marble catches the light</h2></div>
+    <p class="idea">Everything goes quiet. Our marble drops into a cup and is the only lit thing on the page.</p>
+    <dl>
+      <dt>What moves</dt><dd>The marble drops into a brass cup on a black mirror plate. The impact presses a plate and a case-study card rises. Further scroll rolls it to the next cup: one cup per case, three to five cases.</dd>
+      <dt>Camera</dt><dd>Product shot. Single key light, deep black, mirror reflection. The pack sits out of focus behind.</dd>
+      <dt>Physics</dt><dd>Small, real moment: the settle in the cup (two bounces, a wobble) is a short baked clip so it lands the same every time.</dd>
+      <dt>Section</dt><dd>Selected work. Cards are HTML over the canvas, not textures, so they stay crisp, searchable and accessible.</dd>
+    </dl>
+    <div class="copy">[Work intro line: WordSmither]<small>Standing out comes from the material, not a red glow</small></div>
+  </div>
+</article>
+
+<!-- F7 AHEAD -->
+<article class="frame" id="f7">
+  <div>
+    <svg viewBox="0 0 400 225" role="img" aria-label="Top-down view: several wooden lanes end at a wall with patinated marbles queued against it; one steel rail continues past the wall with the bronze marble far ahead.">
+      <g stroke="url(#wood)" stroke-width="14"><path d="M0 50 H230"/><path d="M0 82 H230"/><path d="M0 146 H230"/><path d="M0 178 H230"/></g>
+      <rect x="230" y="34" width="14" height="160" fill="#3a2410"/>
+      <g fill="url(#patina)">
+        <circle cx="222" cy="50" r="6"/><circle cx="209" cy="50" r="6"/><circle cx="196" cy="50" r="6"/>
+        <circle cx="222" cy="82" r="6"/><circle cx="209" cy="82" r="6"/>
+        <circle cx="222" cy="146" r="6"/><circle cx="209" cy="146" r="6"/><circle cx="196" cy="146" r="6"/><circle cx="183" cy="146" r="6"/>
+        <circle cx="222" cy="178" r="6"/>
+      </g>
+      <path d="M0 111 H340" stroke="var(--steel)" stroke-width="1.4"/><path d="M0 117 H340" stroke="var(--steel)" stroke-width="1.4"/>
+      <path class="drawn" d="M340 114 H400" stroke="var(--red)" stroke-width="1.4"/>
+      <circle cx="326" cy="114" r="8" fill="url(#bronze)"/><circle cx="323" cy="111" r="1.8" fill="#fff" opacity=".85"/>
+      <text x="22" y="214" fill="var(--muted)" font-family="IBM Plex Mono,monospace" font-size="9">TOP DOWN · ORTHOGRAPHIC</text>
+    </svg>
+    <div class="cap"><span>F7 · CLIENTS / CAPABILITIES</span><span>SCROLL 72–85%</span></div>
+  </div>
+  <div class="notes">
+    <div class="head"><h3>06 · GETTING AHEAD · "THE WALL"</h3><h2>Their road ends. Ours keeps going.</h2></div>
+    <p class="idea">From above, the race reads at a glance: the shared lanes stop, our rail doesn't.</p>
+    <dl>
+      <dt>What moves</dt><dd>Camera tilts up to a flat top view. The wooden lanes run into a wall and the pack queues against it. Our rail passes through a gap only it has and carries on. No crash, no gloating.</dd>
+      <dt>Camera</dt><dd>Orthographic top view: the page turns briefly into a diagram, which makes room for a capability or client list running along the rail.</dd>
+      <dt>Physics</dt><dd>Queue settles live (1D again, cheap). Our marble scripted.</dd>
+      <dt>Section</dt><dd>Clients and capabilities. Client logos can sit as small stations along the rail, as in a transit map.</dd>
+    </dl>
+    <div class="copy">Every marble gets the same track. Ours takes the line that arrives.<small>Run line, WordSmither, Nov 22 (pre-"road" decision)</small></div>
+  </div>
+</article>
+
+<!-- F8 ARRIVE -->
+<article class="frame" id="f8">
+  <div>
+    <svg viewBox="0 0 400 225" role="img" aria-label="The rail ends over a brass ring set into the page. The bronze marble drops into it. Below, the button reads Start the run.">
+      <path d="M0 40 C100 40 160 60 196 96" fill="none" stroke="var(--steel)" stroke-width="1.4"/>
+      <path d="M0 46 C100 46 160 66 192 100" fill="none" stroke="var(--steel)" stroke-width="1.4"/>
+      <circle cx="200" cy="118" r="11" fill="url(#bronze)"/><circle cx="197" cy="115" r="2.4" fill="#fff" opacity=".85"/>
+      <ellipse cx="200" cy="140" rx="32" ry="8" fill="none" stroke="#b88b3e" stroke-width="2.5"/>
+      <ellipse cx="200" cy="140" rx="38" ry="10" fill="none" stroke="var(--red)" stroke-width="1" class="drawn"/>
+      <rect x="130" y="166" width="140" height="34" fill="var(--paper)"/>
+      <text x="200" y="189" text-anchor="middle" fill="#000" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="800" font-size="17">START THE RUN</text>
+    </svg>
+    <div class="cap"><span>F8 · CONTACT / CTA</span><span>SCROLL 85–100%</span></div>
+  </div>
+  <div class="notes">
+    <div class="head"><h3>07 · ARRIVAL · "THE CUP IS THE BUTTON"</h3><h2>The run ends at the CTA</h2></div>
+    <p class="idea">The rail's last bend drops the marble into a ring that sits on the call to action.</p>
+    <dl>
+      <dt>What moves</dt><dd>Marble lands in the brass ring and settles. Hovering the button sends a small wobble through the marble. Clicking lifts it back up the rail out of frame: a reset, and a hint that the next run is the reader's.</dd>
+      <dt>Camera</dt><dd>Returns to the hero's macro lens, so the page closes the way it opened.</dd>
+      <dt>Physics</dt><dd>Baked settle. Hover wobble is a spring, not a sim.</dd>
+      <dt>Section</dt><dd>Contact / footer. The button is real HTML; the ring is decoration and never blocks the click.</dd>
+    </dl>
+    <div class="copy">[CTA label: WordSmither]<small>"Start the run" is a placeholder</small></div>
+  </div>
+</article>
+
+<section class="section-block">
+  <h2>How it holds together</h2>
+  <div class="cols">
+    <div><b>One continuous run</b><p>Sections are camera moves, not page breaks. The canvas stays pinned behind the HTML, and each section's copy scrolls over a quiet zone of the frame. If any frame needs a hard cut, the idea has broken there.</p></div>
+    <div><b>Scripted hero, live crowd</b><p>Scroll-scrubbed motion has to run backwards, and live physics can't. So our marble always rides a hand-authored spline, and real rigid-body physics is spent on the pack (F2, F3, F4, F7), where messiness is the point. Simulate offline and bake wherever a moment must land the same every time.</p></div>
+    <div><b>Refined, not toy</b><p>Restraint keeps it premium: one key light, a real bronze material with a roughness map, oiled walnut with visible grain, brushed steel. No neon, no bloom on the pack, no confetti on arrival. The bronze highlight is the page's one luxury.</p></div>
+    <div><b>Mobile and reduced motion</b><p>At 390px each frame gets a fixed camera and the marble moves in one direction only. With reduced motion, show eight stills that crossfade per section: the storyboard itself becomes the fallback.</p></div>
+  </div>
+</section>
+
+<section class="section-block">
+  <h2>Open questions before the build</h2>
+  <ol class="q">
+    <li><b>Flat 2D or 3D.</b> The Nov 22 style options assumed flat 2D on Webflow. Bronze, wood and rigid bodies mean three.js and real materials. Confirm the switch, and whether it still has to live inside Webflow as an embed.</li>
+    <li><b>Where red lives.</b> This board keeps red only for the road ahead. The alternative, a red-lacquered hero marble, is louder and loses the bronze. My pick is bronze.</li>
+    <li><b>Section order.</b> The frame order assumes positioning → how we think → process → results → work → clients → contact. If the IA differs, the concepts can re-order, except F1 and F8, which bookend.</li>
+    <li><b>Lines.</b> Four slots need WordSmither (F3, F4, F6, F8). F7's run line predates the "road" decision and may need a pass.</li>
+    <li><b>Proof.</b> F5 depends on real, reviewed results. Without them, F5 becomes a speed beat with no numbers, which is weaker.</li>
+  </ol>
+</section>
+
+</div>

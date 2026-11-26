@@ -41,7 +41,7 @@ Hero film + cutdowns · paid & organic social · OOH / DOOH · owned + PR / stun
 | Proof candidates digest | `work/strategy/cmu-proof-candidates_v01.md` | One line per client-published candidate | 2026-09-18 |
 | Concepts | `work/concepts/` | EXPLORE round 1 (WordSmither, DesignChamp, director convergence) | 2026-09-18 |
 | Platform line | `raw/2026-09-18_andres_platform-line_user-message.md` | S6, user direction on the Phase 2 line | 2026-09-18 |
-| Figma | None supplied | | |
+| Figma | https://www.figma.com/design/g4G1C068PseD5DEmo3gznT/CMU-%7C-FY27--brand | "CMU – FY27 brand". Where the FY27 thinking is captured as slide decks (user, 2026-11-22). Empty at check: one blank page | 2026-11-22 |
 | Adobe | None supplied | | |
 | Client design library | `../client/design-library.md` | Does not exist yet | |
 

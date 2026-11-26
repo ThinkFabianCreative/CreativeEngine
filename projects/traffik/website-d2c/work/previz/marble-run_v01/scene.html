@@ -1,0 +1,216 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Marble Run Previz</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+html,body{margin:0;background:#000;overflow:hidden;width:1920px;height:1080px}
+canvas{display:block}
+#ov{position:absolute;inset:0;pointer-events:none;font-family:"Barlow Condensed","Arial Narrow",sans-serif;color:#F1EBDD}
+.line{position:absolute;left:120px;bottom:130px;font-weight:800;font-size:112px;line-height:.9;text-transform:uppercase;letter-spacing:.005em;opacity:0;max-width:1300px}
+.tag{position:absolute;left:124px;top:96px;font-family:"IBM Plex Mono",monospace;font-size:22px;letter-spacing:.16em;color:#a39c8e;opacity:0}
+.tag b{color:#d91f1f;font-weight:500}
+#cta{position:absolute;left:50%;top:760px;transform:translateX(-50%);background:#F1EBDD;color:#000;font-weight:800;font-size:44px;padding:18px 44px;opacity:0;letter-spacing:.02em}
+#vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.65) 100%)}
+#grain{position:absolute;inset:-50%;opacity:.07;mix-blend-mode:screen}
+</style></head><body>
+<div id="ov">
+  <canvas id="grain" width="512" height="512"></canvas>
+  <div id="vig"></div>
+  <div class="tag" id="tag"></div>
+  <div class="line" id="l0">We control<br>the road ahead.</div>
+  <div class="line" id="l1">Every category<br>is traffic.</div>
+  <div class="line" id="l2">Someone decides<br>where it goes.</div>
+  <div class="line" id="l3" style="left:50%;transform:translateX(-50%);text-align:center;bottom:auto;top:150px;font-size:120px;max-width:1700px">Traffic drivers.<br>Not traffic driven.</div>
+  <div id="cta">START THE RUN</div>
+</div>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+// ---------- seeded rng ----------
+function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const R = rng(7);
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const smooth=x=>{x=clamp(x);return x*x*(3-2*x)};
+const expo=x=>{x=clamp(x);return x<.5?Math.pow(2,20*x-10)/2:(2-Math.pow(2,-20*x+10))/2};
+const lerp=(a,b,x)=>a+(b-a)*x;
+
+// ---------- renderer ----------
+const W=1920,H=1080;
+const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});
+renderer.setSize(W,H); renderer.setPixelRatio(1);
+renderer.toneMapping=THREE.NeutralToneMapping; renderer.toneMappingExposure=1.05;
+renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+document.body.prepend(renderer.domElement);
+const scene=new THREE.Scene(); scene.background=new THREE.Color(0x000000);
+scene.fog=new THREE.Fog(0x000000,9,34);
+const pmrem=new THREE.PMREMGenerator(renderer);
+scene.environment=pmrem.fromScene(new RoomEnvironment(),0.04).texture;
+scene.environmentIntensity=0.55;
+const camera=new THREE.PerspectiveCamera(35,W/H,0.02,200);
+
+// lights
+scene.add(new THREE.AmbientLight(0xffffff,0.05));
+const key=new THREE.SpotLight(0xfff1dc,260,30,0.55,0.6,1.6); key.castShadow=true; key.shadow.mapSize.set(2048,2048); key.shadow.bias=-0.0004;
+scene.add(key,key.target);
+const rim=new THREE.DirectionalLight(0x9fb3ff,0.25); rim.position.set(-4,3,-6); scene.add(rim);
+
+// ---------- textures ----------
+function woodTex(){const c=document.createElement('canvas');c.width=1024;c.height=256;const g=c.getContext('2d');const r=rng(3);
+  g.fillStyle='#5e3a1d';g.fillRect(0,0,1024,256);
+  for(let i=0;i<180;i++){const y=r()*256,h=.6+r()*2.4;g.fillStyle=`rgba(${30+r()*40|0},${15+r()*20|0},${5+r()*8|0},${.25+r()*.4})`;
+    g.beginPath();g.moveTo(0,y);for(let x=0;x<=1024;x+=32)g.lineTo(x,y+Math.sin(x*.004+i)*4*r());g.lineTo(1024,y+h);g.lineTo(0,y+h);g.fill();}
+  for(let i=0;i<60;i++){g.fillStyle=`rgba(190,130,70,${.05+r()*.08})`;g.fillRect(0,r()*256,1024,1);}
+  const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=8;return t;}
+function noiseTex(seed,s=256){const c=document.createElement('canvas');c.width=c.height=s;const g=c.getContext('2d');const r=rng(seed);const d=g.createImageData(s,s);
+  for(let i=0;i<d.data.length;i+=4){const v=r()*255;d.data[i]=d.data[i+1]=d.data[i+2]=v;d.data[i+3]=255;}g.putImageData(d,0,0);const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;return t;}
+
+// ---------- materials ----------
+const M={
+  bronze:new THREE.MeshPhysicalMaterial({color:0xd29a52,metalness:1,roughness:0.16,clearcoat:0.6,clearcoatRoughness:0.08,envMapIntensity:1.6}),
+  patina:new THREE.MeshPhysicalMaterial({color:0x5c6a52,metalness:0.55,roughness:0.78,roughnessMap:noiseTex(11),envMapIntensity:0.5}),
+  wood:new THREE.MeshStandardMaterial({map:woodTex(),roughness:0.62,metalness:0,envMapIntensity:0.6}),
+  woodDark:new THREE.MeshStandardMaterial({color:0x24150a,roughness:0.8}),
+  steel:new THREE.MeshStandardMaterial({color:0xc9ccd0,metalness:1,roughness:0.32,envMapIntensity:1.4}),
+  brass:new THREE.MeshStandardMaterial({color:0xb88b3e,metalness:1,roughness:0.25,envMapIntensity:1.4}),
+  red:new THREE.MeshBasicMaterial({color:0xd91f1f,toneMapped:false}),
+  plate:new THREE.MeshPhysicalMaterial({color:0x0b0a09,metalness:0.9,roughness:0.06,envMapIntensity:1}),
+};
+const MR=0.16; // marble radius
+const sphere=new THREE.SphereGeometry(MR,64,48);
+
+// ---------- the road (our rail) ----------
+const P=[[-3,10.4,0],[0,10,0],[3,9.6,0],[6,8.9,0],[9,8.5,0.2],[12,8.2,0],[14.5,7.6,0],[17,8.1,0],[19.5,8.6,0],[22,9.6,0],[24,10,0],[26,9.6,0],[28,8.6,0],[30,7.2,0],[33,5.2,0],[36,3.2,0],[38.5,2.0,0],[40.5,1.45,0],[42,1.17,0]];
+const path=new THREE.CatmullRomCurve3(P.map(p=>new THREE.Vector3(...p)),false,'centripetal');
+const L=path.getLength();
+const UP=new THREE.Vector3(0,1,0);
+function frameAt(u){const p=path.getPointAt(u),tg=path.getTangentAt(u);const lat=new THREE.Vector3().crossVectors(tg,UP).normalize();const nrm=new THREE.Vector3().crossVectors(lat,tg).normalize();return{p,tg,lat,nrm};}
+function railCurve(side){const pts=[];for(let i=0;i<=600;i++){const f=frameAt(i/600);pts.push(f.p.clone().addScaledVector(f.lat,side*0.095).addScaledVector(f.nrm,-0.12));}return new THREE.CatmullRomCurve3(pts);}
+const SEG=1600,RAD=8;
+function tube(curve,r,mat){const g=new THREE.TubeGeometry(curve,SEG,r,RAD,false);const m=new THREE.Mesh(g,mat);m.castShadow=true;scene.add(m);return m;}
+const rails=[tube(railCurve(1),0.012,M.steel),tube(railCurve(-1),0.012,M.steel)];
+const reds=[tube(railCurve(1),0.014,M.red),tube(railCurve(-1),0.014,M.red)];
+// support struts every so often (steel)
+for(let i=1;i<40;i++){const u=i/40;const f=frameAt(u);const s=new THREE.Mesh(new THREE.BoxGeometry(0.012,0.012,0.24),M.steel);s.position.copy(f.p).addScaledVector(f.nrm,-0.12);s.lookAt(s.position.clone().add(f.lat));s.userData.u=u;scene.add(s);rails.push(s);}
+function setRoad(u,ahead){const segs=Math.floor(u*SEG);const segA=Math.floor(clamp(u+ahead)*SEG);
+  for(const r of rails.slice(0,2)) r.geometry.setDrawRange(0,segs*RAD*6);
+  for(const r of reds) r.geometry.setDrawRange(segs*RAD*6,Math.max(0,segA-segs)*RAD*6);
+  for(const s of rails.slice(2)) s.visible=s.userData.u<=u;}
+
+// ---------- hero marble ----------
+const hero=new THREE.Mesh(sphere,M.bronze);hero.castShadow=true;scene.add(hero);
+
+// ---------- set piece: the board (category) ----------
+const board=new THREE.Group();scene.add(board);
+const boardBase=new THREE.Mesh(new THREE.BoxGeometry(12,0.35,5),M.wood);boardBase.receiveShadow=true;board.add(boardBase);
+const lanesZ=[-2,-1.2,-0.4,0.4,1.2,2];
+for(const z of lanesZ){const gr=new THREE.Mesh(new THREE.BoxGeometry(12,0.06,0.2),M.woodDark);gr.position.set(0,0.16,z);board.add(gr);}
+board.position.set(9,6.2,0);board.rotation.z=-0.05;
+const packBoard=[];
+for(let i=0;i<54;i++){const m=new THREE.Mesh(sphere,M.patina);m.castShadow=true;m.receiveShadow=true;board.add(m);
+  packBoard.push({m,z:lanesZ[i%6],x0:R()*12,v:1.1+R()*0.25});}
+
+// ---------- set piece: fork + loop + switch ----------
+const forkG=new THREE.Group();scene.add(forkG);
+const chanMat=M.wood;
+function channel(a,b,w=0.34){const d=new THREE.Vector3().subVectors(b,a);const len=d.length();const g=new THREE.Group();
+  const base=new THREE.Mesh(new THREE.BoxGeometry(len,0.08,w),chanMat);base.receiveShadow=true;g.add(base);
+  for(const s of [-1,1]){const wl=new THREE.Mesh(new THREE.BoxGeometry(len,0.14,0.05),chanMat);wl.position.set(0,0.07,s*(w/2));wl.castShadow=true;g.add(wl);}
+  g.position.copy(a).add(b).multiplyScalar(.5);g.rotation.z=Math.atan2(d.y,d.x);forkG.add(g);return g;}
+channel(new THREE.Vector3(10,7.35,0),new THREE.Vector3(14.6,7.25,0));
+channel(new THREE.Vector3(14.6,7.25,0),new THREE.Vector3(17.6,5.6,0));
+const loopC=new THREE.Vector3(18.6,4.3,0),loopR=1.35;
+const loop=new THREE.Mesh(new THREE.TorusGeometry(loopR,0.09,16,120),M.wood);loop.position.copy(loopC);loop.castShadow=true;forkG.add(loop);
+const flip=new THREE.Mesh(new THREE.BoxGeometry(0.9,0.06,0.3),M.brass);flip.castShadow=true;
+const flipPivot=new THREE.Group();flipPivot.position.set(14.55,7.3,0);flipPivot.add(flip);flip.position.x=0.45;forkG.add(flipPivot);
+const packLoop=[];for(let i=0;i<9;i++){const m=new THREE.Mesh(sphere,M.patina);m.castShadow=true;forkG.add(m);packLoop.push({m,a0:i*0.55+R()*.2});}
+const packChan=[];for(let i=0;i<7;i++){const m=new THREE.Mesh(sphere,M.patina);m.castShadow=true;forkG.add(m);packChan.push({m,o:i*0.62});}
+
+// ---------- set piece: funnel jam ----------
+const jam=new THREE.Group();scene.add(jam);
+const fx=24,fy=5.6;
+for(const s of [-1,1]){const p=new THREE.Mesh(new THREE.BoxGeometry(3.4,0.22,1.2),M.wood);p.position.set(fx+s*1.45,fy+0.9,0);p.rotation.z=s*0.62;p.castShadow=p.receiveShadow=true;jam.add(p);}
+const neck=new THREE.Mesh(new THREE.BoxGeometry(0.5,1,1.2),M.woodDark);neck.position.set(fx,fy-0.3,0);jam.add(neck);
+const packJam=[];
+{const rows=[3,4,5,6,7,8];let y=fy+0.32;y=fy+0.12;rows.forEach((n,ri)=>{for(let i=0;i<n;i++){for(const z of [-0.2,0.2]){const m=new THREE.Mesh(sphere,M.patina);m.castShadow=m.receiveShadow=true;
+  const x=fx+(i-(n-1)/2)*MR*2.02+(ri%2?MR*0.4:0);m.position.set(x,y+ (z>0?0.03:0),z+ (R()-.5)*0.05);jam.add(m);packJam.push({m,base:m.position.clone(),ph:R()*6});}}y+=MR*1.72;});}
+
+// ---------- set piece: speed posts ----------
+const posts=new THREE.Group();scene.add(posts);
+for(let i=0;i<9;i++){const x=28.6+i*1.25;const u=x;const p=new THREE.Mesh(new THREE.BoxGeometry(0.16,9,0.16),M.wood);p.position.set(x,3,-1.1);p.castShadow=true;posts.add(p);
+  const p2=p.clone();p2.position.z=1.4;posts.add(p2);}
+
+// ---------- set piece: the cup on the mirror plate ----------
+const plate=new THREE.Mesh(new THREE.CylinderGeometry(9,9,0.1,96),M.plate);plate.position.set(42,0.96,0);plate.receiveShadow=true;scene.add(plate);
+const cup=new THREE.Mesh(new THREE.TorusGeometry(0.2,0.035,24,96),M.brass);cup.rotation.x=Math.PI/2;cup.position.set(42,1.02,0);cup.castShadow=true;scene.add(cup);
+const ring=new THREE.Mesh(new THREE.TorusGeometry(0.27,0.006,12,128),M.red);ring.rotation.x=Math.PI/2;ring.position.set(42,1.0,0);scene.add(ring);
+const packFar=[];for(let i=0;i<14;i++){const m=new THREE.Mesh(sphere,M.patina);const a=-2.4+R()*1.8;m.position.set(42+Math.cos(a)*(3+R()*3),1.17,Math.sin(a)*(3+R()*3));m.castShadow=true;scene.add(m);packFar.push(m);}
+
+// ---------- timeline ----------
+// u keyframes for hero (time -> fraction along road)
+const uk=[[0,0.035],[1.0,0.035],[2.2,0.12],[4.2,0.285],[6.4,0.44],[8.6,0.58],[10.6,0.85],[11.6,0.965],[12.2,1.0],[15,1.0]];
+function heroU(t){for(let i=0;i<uk.length-1;i++){const[a,ua]=uk[i],[b,ub]=uk[i+1];if(t<=b){const x=(t-a)/(b-a);
+  // speed up through the drop, ease elsewhere
+  const e=(i===5)?x*x*(1.4-0.4*x):smooth(x)*0.5+x*0.5; return lerp(ua,ub,e);}}return 1;}
+// camera beats: [tStart, offset(x,y,z) relative to hero, lookOffset, fov]
+const beats=[
+  [0,   [-0.5,0.22,1.9],[-0.42,-0.08,0],24],   // hero macro
+  [2.0, [0.5,3.2,8.5],[1.5,-1.4,0],34],     // pull out: the pack
+  [4.0, [0.3,0.5,7.2],[1.8,-1.4,0],34],     // fork side elevation
+  [6.3, [0,0.2,7.4],[0,-1.9,0],34],         // jam straight on
+  [8.7, [-1.4,0.45,1.6],[0.6,-0.2,0],30],   // tracking drop
+  [11.0,[0.55,0.42,1.35],[0,-0.06,0],26],   // product shot in cup
+  [12.9,[0,1.6,4.6],[0,0.2,0],32],          // end card wide
+];
+const WHIP=0.7;
+const tmpA=new THREE.Vector3(),tmpB=new THREE.Vector3();
+function camAt(t,hp){let i=0;for(let k=0;k<beats.length;k++)if(t>=beats[k][0])i=k;
+  const cur=beats[i],prev=beats[Math.max(0,i-1)];const x=i===0?1:expo((t-cur[0])/WHIP);
+  const drift=(t-cur[0])*0.06;
+  const off=tmpA.set(...prev[1]).lerp(new THREE.Vector3(...cur[1]),x);off.x+=drift*0.6;off.z+=drift*0.3;
+  const look=tmpB.set(...prev[2]).lerp(new THREE.Vector3(...cur[2]),x);
+  // end card: stop following, settle on cup
+  camera.fov=lerp(prev[3],cur[3],x);camera.updateProjectionMatrix();
+  camera.position.copy(hp).add(off);camera.lookAt(hp.clone().add(look));}
+
+const labels=[[0,'01','THE ROAD AHEAD'],[2.0,'02','EVERY CATEGORY IS TRAFFIC'],[4.0,'03','PICKING THE RIGHT LANE'],[6.3,'04','NOT GETTING BLOCKED'],[8.7,'05','MOVING FAST'],[11.0,'06','STANDING OUT'],[12.9,'07','ARRIVAL']];
+const $=id=>document.getElementById(id);
+function fade(t,a,b,f=0.35){return clamp(Math.min((t-a)/f,(b-t)/f));}
+const gctx=$('grain').getContext('2d');const gimg=gctx.createImageData(512,512);
+
+window.renderAt=function(t){
+  // hero
+  let u=heroU(t);const f=frameAt(Math.min(u,0.9999));
+  const hp=f.p.clone().addScaledVector(f.nrm,-0.12+0.0+MR*0.72);
+  // settle bounce in cup
+  if(t>12.2){const s=t-12.2;hp.y+=Math.abs(Math.sin(s*9))*0.09*Math.exp(-s*4);}
+  if(t<1.0){hp.y+=Math.sin(t*3)*0.0015;}
+  hero.position.copy(hp);
+  hero.rotation.set(0,0,-(u*L)/MR);
+  // road: steel behind, red ahead
+  const ahead=t>12.2?0:0.022;setRoad(u,ahead);
+  ring.visible=t>12.5;
+  // the pack on the board
+  for(const p of packBoard){const x=((p.x0+p.v*t)%12)-6;p.m.position.set(x,0.17+MR*0.55,p.z);p.m.rotation.z=-x/MR;}
+  // fork switch: throws at 3.9s, our marble arrives ~4.6s
+  const fl=smooth((t-3.75)/0.18);flipPivot.rotation.z=lerp(-0.55,0.42,fl);
+  for(const p of packLoop){const a=p.a0+t*2.2;p.m.position.set(loopC.x+Math.cos(a)*(loopR-0.02),loopC.y+Math.sin(a)*(loopR-0.02)-0.0,0);}
+  for(const p of packChan){const s=((p.o+t*0.9)%4.3);let pos;
+    if(s<2.0){pos=new THREE.Vector3(11.5+s*1.55,7.25+0.12+0.02-s*0.02,0);} else {const k=(s-2.0)/2.3;pos=new THREE.Vector3(14.6+k*3,7.25-k*1.65+0.12,0);} p.m.position.copy(pos);}
+  // jam: tiny settling jitter, decaying
+  for(const p of packJam){const j=0.006*Math.sin(t*14+p.ph)*Math.exp(-Math.max(0,t-6.3)*0.8);p.m.position.set(p.base.x+j,p.base.y+Math.abs(j)*0.5,p.base.z);}
+  // lights follow
+  key.position.set(hp.x+1.6,hp.y+4.2,hp.z+2.4);key.target.position.copy(hp);
+  key.intensity=t>11?340:260;
+  camAt(t,hp);
+  // overlay
+  let li=0;for(let k=0;k<labels.length;k++)if(t>=labels[k][0])li=k;const lb=labels[li];
+  $('tag').innerHTML=`<b>${lb[1]}</b> &nbsp;${lb[2]}`;$('tag').style.opacity=fade(t,lb[0]+0.25,(labels[li+1]?.[0]??15.4)-0.05,0.25)*(t>12.9?0:1);
+  $('l0').style.opacity=fade(t,0.3,2.05);$('l1').style.opacity=fade(t,2.5,4.05);$('l2').style.opacity=fade(t,4.5,6.3);
+  $('l3').style.opacity=smooth((t-13.2)/0.5);$('cta').style.opacity=smooth((t-13.8)/0.4);
+  // grain (deterministic per frame)
+  const r=rng(Math.floor(t*60)+1);for(let i=0;i<gimg.data.length;i+=4){const v=r()*255;gimg.data[i]=gimg.data[i+1]=gimg.data[i+2]=v;gimg.data[i+3]=255;}gctx.putImageData(gimg,0,0);
+  renderer.render(scene,camera);
+};
+await document.fonts.ready; window.renderAt(0); window.ready=true;
+</script></body></html>

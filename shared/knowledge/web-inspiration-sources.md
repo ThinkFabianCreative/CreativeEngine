@@ -26,6 +26,9 @@ How to use: pick sources by the job, screenshot what works, and note what is goo
 | [Httpster](https://httpster.net/), [Seesaw](https://www.seesaw.website/), [recent.design](https://recent.design/), [Landdding](https://landdding.com/) | Fresh and bold work |
 | [Saaspo](https://saaspo.com/) | SaaS landing pages |
 | [Designeer](https://www.designeer.xyz/) | Directory of galleries and tools |
+| [Cosmos](https://www.cosmos.so/) | Visual moodboards, a calmer and more design-led Pinterest |
+| [Framer showcase](https://www.framer.com/showcase/) | Live Framer sites, motion-heavy marketing pages |
+| [React Bits](https://reactbits.dev/), [21st.dev](https://21st.dev/) | Animated components and backgrounds (prototype and motion reference) |
 
 ## Sections
 

@@ -1,0 +1,140 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Marble Run Previz v02</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>html,body{margin:0;background:#000;overflow:hidden;width:1920px;height:1080px}canvas{display:block}</style>
+</head><body><canvas id="c" width="1920" height="1080"></canvas>
+<script>
+// Flat graphic previz. Every frame is a pure function of t. Physics is simulated once at load with a fixed step, so renders are identical.
+const W=1920,H=1080,FPS=60,DT=1/240,SUB=4;
+const C={ground:'#000000',paper:'#F1EBDD',red:'#d91f1f',dim:'#6f6a60',line:'#F1EBDD'};
+function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const smooth=x=>{x=clamp(x);return x*x*(3-2*x)};
+
+// ---------- tiny 2D rigid-circle solver ----------
+function World(o={}){return{g:o.g??2600,damp:o.damp??0,e:o.e??0.25,bodies:[],segs:[],t:0,cell:o.cell??60}}
+function body(w,x,y,r,o={}){const b={x,y,vx:o.vx||0,vy:o.vy||0,r,red:!!o.red,kin:o.kin||null,dead:false,m:r*r};w.bodies.push(b);return b}
+function seg(w,ax,ay,bx,by,o={}){const s={ax,ay,bx,by,only:o.only||null,active:o.active||null,draw:o.draw!==false,w:o.w||4};w.segs.push(s);return s}
+function step(w){
+  w.t+=DT;
+  for(const b of w.bodies){if(b.dead)continue;
+    if(b.kin){const p=b.kin(w.t);b.vx=(p[0]-b.x)/DT;b.vy=(p[1]-b.y)/DT;b.x=p[0];b.y=p[1];continue;}
+    b.vy+=w.g*DT; if(w.damp){const k=Math.exp(-w.damp*DT);b.vx*=k;b.vy*=k;}
+    b.x+=b.vx*DT;b.y+=b.vy*DT;
+    if(b.x<-400||b.x>W+400||b.y>H+300)b.dead=true;}
+  const live=w.bodies.filter(b=>!b.dead);
+  for(let it=0;it<4;it++){
+    // circle vs segment
+    for(const s of w.segs){ if(s.active&&!s.active(w))continue;
+      const dx=s.bx-s.ax,dy=s.by-s.ay,l2=dx*dx+dy*dy;
+      for(const b of live){ if(b.kin)continue; if(s.only==='red'&&!b.red)continue; if(s.only==='paper'&&b.red)continue;
+        const u=clamp(((b.x-s.ax)*dx+(b.y-s.ay)*dy)/l2);const cx=s.ax+dx*u,cy=s.ay+dy*u;let nx=b.x-cx,ny=b.y-cy;const d=Math.hypot(nx,ny);
+        const rr=b.r+s.w/2; if(d<rr&&d>1e-6){nx/=d;ny/=d;b.x+=nx*(rr-d);b.y+=ny*(rr-d);const vn=b.vx*nx+b.vy*ny;if(vn<0){b.vx-=(1+w.e)*vn*nx;b.vy-=(1+w.e)*vn*ny;}}}}
+    // circle vs circle with a spatial hash
+    const grid=new Map(),cs=w.cell;
+    for(const b of live){const k=((b.x/cs)|0)*73856093^((b.y/cs)|0)*19349663;let a=grid.get(k);if(!a)grid.set(k,a=[]);a.push(b);}
+    for(const a of live){const gx=(a.x/cs)|0,gy=(a.y/cs)|0;
+      for(let ox=-1;ox<=1;ox++)for(let oy=-1;oy<=1;oy++){const arr=grid.get((gx+ox)*73856093^(gy+oy)*19349663);if(!arr)continue;
+        for(const b of arr){if(b===a||a.x>b.x||(a.x===b.x&&a.y>=b.y))continue;
+          let nx=b.x-a.x,ny=b.y-a.y;const d=Math.hypot(nx,ny),R=a.r+b.r;if(d>=R||d<1e-6)continue;nx/=d;ny/=d;
+          const ia=a.kin?0:1/a.m,ib=b.kin?0:1/b.m,is=ia+ib;if(is===0)continue;const o=(R-d)/is;
+          a.x-=nx*o*ia;a.y-=ny*o*ia;b.x+=nx*o*ib;b.y+=ny*o*ib;
+          const vr=(b.vx-a.vx)*nx+(b.vy-a.vy)*ny;if(vr<0){const j=-(1+w.e)*vr/is;a.vx-=j*nx*ia;a.vy-=j*ny*ia;b.vx+=j*nx*ib;b.vy+=j*ny*ib;}}}}
+  }
+}
+// run a world from t0 to t1 (local seconds), recording a frame every 1/60s from 0
+function record(w,t0,t1,spawn){const frames=[];w.t=t0;let n=0;const total=Math.round((t1-t0)/DT);
+  for(let i=0;i<=total;i++){ if(spawn)spawn(w); if(w.t>=-1e-9&&i%SUB===0){frames.push(w.bodies.filter(b=>!b.dead).map(b=>[b.x,b.y,b.r,b.red?1:0]));} step(w);}
+  return frames;}
+
+// ---------- scenes ----------
+const R=rng(11);
+const scenes=[];
+function scene(t0,dur,build){scenes.push({t0,dur,...build()});}
+
+// S1 0–2.5: the hero. One marble. The road draws itself ahead of it.
+scene(0,2.5,()=>{const w=World({e:0.1});const y0=700;
+  seg(w,-200,y0,2200,y0+260,{w:6,draw:false});
+  const red=body(w,560,y0+16-130,120,{red:true});red.kin=t=>[560,y0+260*(760/2400)-124];
+  // release: switch kinematic off at 1.2
+  const frames=[];w.t=-0.001;const total=Math.round(2.5/DT);const roadAhead=[];
+  for(let i=0;i<=total;i++){ if(w.t>=1.2&&red.kin){red.kin=null;red.vx=0;red.vy=0;}
+    if(i%SUB===0){frames.push([[red.x,red.y,red.r,1]]);roadAhead.push(red.x);} step(w);}
+  return{frames,draw(ctx,lt,fi){const x=roadAhead[fi]+190+Math.min(1,lt/0.6)*0;const yAt=X=>y0+260*(X+200)/2400;
+      ctx.strokeStyle=C.line;ctx.lineWidth=6;ctx.beginPath();ctx.moveTo(-10,yAt(-10));ctx.lineTo(Math.min(W+10,x),yAt(Math.min(W+10,x)));ctx.stroke();},
+    text:[{s:'WE CONTROL\nTHE ROAD AHEAD.',x:120,y:250,a:0.25,b:2.35,size:150}]};});
+
+// S2 2.5–5: every category is traffic. Three shared lanes, packed. The red one drops in.
+scene(2.5,2.5,()=>{const w=World({e:0.15});const lanes=[330,560,790];
+  for(const y of lanes)seg(w,-400,y,2400,y+150,{w:5});
+  let next=[0,0,0];const r=26;let redIn=false;
+  const spawn=w=>{lanes.forEach((y,i)=>{if(w.t>=next[i]){body(w,-60,y+150*(340/2800)-r-6,r,{vx:300+R()*120});next[i]=w.t+0.13+R()*0.12;}});
+    if(!redIn&&w.t>=0.7){redIn=true;body(w,980,140,r,{red:true,vx:120,vy:0});}};
+  const frames=record(w,-3,2.5,spawn);
+  return{frames,draw(ctx){ctx.strokeStyle=C.line;ctx.lineWidth=5;for(const y of lanes){ctx.beginPath();ctx.moveTo(0,y+150*(400/2800));ctx.lineTo(W,y+150*(2320/2800));ctx.stroke();}},
+    text:[{s:'EVERY CATEGORY\nIS TRAFFIC.',x:120,y:175,a:0.2,b:2.4,size:96,top:true}]};});
+
+// S3 5–7.5: picking the right lane. A trapdoor drops the pack; it closes only for us, just before we arrive.
+scene(5,2.5,()=>{const w=World({e:0.12});const r=26;let red=null;
+  seg(w,-400,430,980,530,{w:5});                 // feed
+  const door={open:true};
+  seg(w,980,530,1180,544,{w:5,active:()=>!door.open,draw:false});  // trapdoor
+  seg(w,1180,544,2400,630,{w:5});                // the line that arrives
+  seg(w,900,680,2300,1300,{w:5});                // the default lane, down and out
+  let next=0;const spawn=w=>{if(w.t>=next&&w.t<2.2){if(Math.abs(w.t-0.55)<0.2&&!red){red=body(w,-60,430-r-4,r,{red:true,vx:420});next=w.t+0.3;}else{body(w,-60,430-r-4,r,{vx:420});next=w.t+0.2+R()*0.05;}}
+    door.open=!(red&&red.x>790&&red.x<1240);};
+  // record with door state
+  const frames=[],doors=[];w.t=-2;const total=Math.round(4.5/DT);
+  for(let i=0;i<=total;i++){spawn(w);if(w.t>=-1e-9&&i%SUB===0){frames.push(w.bodies.filter(b=>!b.dead).map(b=>[b.x,b.y,b.r,b.red?1:0]));doors.push(door.open?1:0);}step(w);}
+  const dAng=doors.map((d,i)=>{let s=0,n=0;for(let k=Math.max(0,i-6);k<=i;k++){s+=doors[k];n++;}return s/n;});
+  return{frames,draw(ctx,lt,fi){ctx.strokeStyle=C.line;ctx.lineWidth=5;ctx.lineCap='round';
+      const L=(a,b,c,d)=>{ctx.beginPath();ctx.moveTo(a,b);ctx.lineTo(c,d);ctx.stroke();};
+      L(-10,430+100*(390/1380),980,530);L(1180,544,W+10,544+86*(W+10-1180)/1220);L(900,680,1500,680+620*(600/1400));
+      const op=dAng[Math.min(fi,dAng.length-1)];const ang=op*1.25;   // hinge at 980,530
+      L(980,530,980+200*Math.cos(0.07+ang),530+200*Math.sin(0.07+ang));
+      ctx.fillStyle=C.paper;ctx.beginPath();ctx.arc(980,530,9,0,7);ctx.fill();},
+    text:[{s:'SOMEONE DECIDES\nWHERE IT GOES.',x:120,y:175,a:0.2,b:2.4,size:96,top:true}]};});
+
+// S4 7.5–10: not getting blocked. The funnel jams. Our line runs over it.
+scene(7.5,2.5,()=>{const w=World({e:0.05});const r=24;
+  seg(w,420,330,930,800,{w:6,only:'paper'});seg(w,1500,330,990,800,{w:6,only:'paper'});
+  seg(w,-300,170,2300,300,{w:5,only:'red',draw:false});
+  for(let i=0;i<130;i++){body(w,560+R()*800,-600+i*-22+R()*10,r);}  // prefill, falls and jams
+  const spawn=w=>{if(w.t>=0.25&&!w._red){w._red=1;body(w,-50,170+130*(250/2600)-r-4,r,{red:true,vx:700});}};
+  const frames=record(w,-4,2.5,spawn);
+  return{frames,draw(ctx){ctx.strokeStyle=C.line;ctx.lineWidth=6;ctx.lineCap='round';
+      ctx.beginPath();ctx.moveTo(420,330);ctx.lineTo(930,800);ctx.moveTo(1500,330);ctx.lineTo(990,800);ctx.stroke();
+      ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(-10,170+130*(290/2600));ctx.lineTo(W+10,170+130*(2220/2600));ctx.stroke();},
+    text:[]};});
+
+// S5 10–12.5: moving fast / standing out. Scale shift: hundreds of dots from above, one cuts straight through.
+scene(10,2.5,()=>{const w=World({g:0,damp:2.2,e:0.2,cell:40});const r=15;
+  for(let y=-20;y<H+20;y+=31)for(let x=-20;x<W+20;x+=31){if(R()<0.22)continue;body(w,x+(R()-.5)*8+((y/31)%2?15:0),y+(R()-.5)*8,r);}
+  body(w,-80,540,34,{red:true,kin:t=>[-80+Math.max(0,t-0.35)*1250,540+Math.sin(Math.max(0,t-0.35)*2)*20]});
+  const frames=record(w,-0.5,2.5);return{frames,draw(){},text:[]};});
+
+// S6 12.5–15: arrival. One marble lands in the cup. End line.
+scene(12.5,2.5,()=>{const w=World({e:0.35});const cx=W/2,cy=760;
+  seg(w,cx-170,cy-110,cx-40,cy,{w:8});seg(w,cx+170,cy-110,cx+40,cy,{w:8});seg(w,cx-40,cy,cx+40,cy,{w:8});
+  body(w,cx+4,-80,56,{red:true,vy:200});
+  const frames=record(w,0,2.5);
+  return{frames,draw(ctx){ctx.strokeStyle=C.line;ctx.lineWidth=8;ctx.lineCap='round';ctx.lineJoin='round';ctx.beginPath();ctx.moveTo(cx-170,cy-110);ctx.lineTo(cx-40,cy);ctx.lineTo(cx+40,cy);ctx.lineTo(cx+170,cy-110);ctx.stroke();},
+    text:[{s:'TRAFFIC DRIVERS.\nNOT TRAFFIC DRIVEN.',x:W/2,y:190,a:0.9,b:9,size:120,center:true},{cta:'START THE RUN',x:W/2,y:900,a:1.5,b:9}]};});
+
+// ---------- draw ----------
+const ctx=document.getElementById('c').getContext('2d');
+function drawText(o,lt){const op=Math.min(smooth((lt-o.a)/0.25),smooth((o.b-lt)/0.2));if(op<=0)return;ctx.globalAlpha=op;
+  if(o.cta){ctx.font='800 46px "Barlow Condensed","Arial Narrow",sans-serif';const tw=ctx.measureText(o.cta).width;ctx.fillStyle=C.paper;ctx.fillRect(o.x-tw/2-44,o.y-38,tw+88,76);ctx.fillStyle='#000';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(o.cta,o.x,o.y+2);ctx.globalAlpha=1;return;}
+  ctx.font=`800 ${o.size}px "Barlow Condensed","Arial Narrow",sans-serif`;ctx.fillStyle=C.paper;ctx.textAlign=o.center?'center':'left';ctx.textBaseline='alphabetic';
+  o.s.split('\n').forEach((l,i)=>ctx.fillText(l,o.x,o.y+i*o.size*0.9));ctx.globalAlpha=1;}
+window.renderAt=function(t){
+  let s=scenes[0];for(const sc of scenes)if(t>=sc.t0)s=sc;const lt=t-s.t0;const fi=Math.min(s.frames.length-1,Math.round(lt*FPS));
+  ctx.fillStyle=C.ground;ctx.fillRect(0,0,W,H);
+  s.draw(ctx,lt,fi);
+  const fr=s.frames[fi];
+  for(const b of fr){if(b[3])continue;ctx.fillStyle=C.paper;ctx.beginPath();ctx.arc(b[0],b[1],b[2],0,6.2832);ctx.fill();}
+  for(const b of fr){if(!b[3])continue;ctx.fillStyle=C.red;ctx.beginPath();ctx.arc(b[0],b[1],b[2],0,6.2832);ctx.fill();}
+  for(const o of s.text)drawText(o,lt);
+};
+Promise.all([document.fonts.load('800 100px "Barlow Condensed"')]).finally(()=>{window.renderAt(0);window.ready=true;});
+</script></body></html>

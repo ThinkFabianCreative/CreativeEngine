@@ -39,8 +39,12 @@ No Figma links or Adobe files yet.
 
 | Responsibility | Person or role | Source |
 |---|---|---|
-| Project owner | OPEN (proposed: Andres; confirm) | |
-| Approver | Leadership (who exactly: OPEN) | Intake answers, 2026-11-18 |
+| Project owner / creative director | Andres | User instruction, 2026-11-23 |
+| UX/UI designer | Jordan (reports to Andres) | User instruction, 2026-11-23 |
+| Writer / content design | Debbie Puentes | User instruction, 2026-11-23 |
+| Webflow developer | Matt Bynon | User instruction, 2026-11-23 |
+| PM / scrum master | Mikayla Grad | User instruction, 2026-11-23 |
+| Approver | Anthony Trimino | User instruction, 2026-11-23 |
 
 ## Status and key dates
 
