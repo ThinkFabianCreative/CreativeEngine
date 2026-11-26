@@ -1,6 +1,6 @@
 # CreativeEngine — handover to Claude
 
-Prepared: 2026-11-26 (America/Los_Angeles). Replaces the 2026-10-14 handover, which sent sessions to the `creative-engine-v1` branch. That branch is now out of date; see "Branches".
+Prepared: 2026-11-26 (America/Los_Angeles). Replaces the 2026-10-14 handover, which sent sessions to the `creative-engine-v1` branch. That branch was deleted on 2026-11-26; its work is in `main` and `handoff`.
 
 ## Purpose and limits of this handover
 
@@ -8,7 +8,7 @@ This file orients a new session. It is a snapshot reconstructed from the reposit
 
 ## Start here
 
-1. Pull from GitHub before anything else: `git switch handoff && git pull`. There is one CreativeEngine, the GitHub repo; a local folder is only a working copy of it, current only once it has been pulled. Current work lands on `handoff`, and `main` catches up from it. Don't start work on `creative-engine-v1`.
+1. Pull from GitHub before anything else: `git switch handoff && git pull`. There is one CreativeEngine, the GitHub repo; a local folder is only a working copy of it, current only once it has been pulled. Current work lands on `handoff`, and `main` catches up from it.
 2. Read `CLAUDE.md` (constitution and routing) and `WORKING-PREFERENCES.md` (Andres's standing rules). Both apply to every role on every machine.
 3. For client work, read `projects/README.md`, then that client's `client/README.md`, then the project's `README.md` and its normalized brief, if there is one. Some projects keep their own handover (see "Client workspaces").
 4. Run `git status` and `git log -5` before editing: another machine or session may have pushed since this snapshot.
@@ -18,8 +18,7 @@ This file orients a new session. It is a snapshot reconstructed from the reposit
 | Branch | State on 2026-11-26 | Use |
 |---|---|---|
 | `handoff` | Latest work: `83c35f4 Ignore Blender .blend1 backups` (2026-11-26) | **Work here.** Also carries the `handoff/` cross-machine inbox |
-| `main` | `9dafbe4` (2026-11-22), 2 commits behind `handoff` | GitHub's default branch; updated from `handoff` |
-| `creative-engine-v1` | `03cd8c6` (2026-10-15), 69 commits behind `handoff` | **Stale.** Everything on it is already in `main` and `handoff`. Don't commit to it |
+| `main` | `9dafbe4` (2026-11-22), behind `handoff` | GitHub's default branch; updated from `handoff` |
 
 ## Workspaces and repository
 
